@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap");
+
+@layer base {
+  @media (pointer: fine) {
+    * {
+      cursor: none !important;
+    }
+  }
+  body {
+    @apply bg-carbon-500 text-gray-100 antialiased;
+  }
+  ::selection {
+    @apply bg-circuit-500/30 text-circuit-300;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-carbon-400;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-circuit-700 rounded-full;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.06] rounded-2xl;
+  }
+  .glass-card-hover {
+    @apply glass-card hover:bg-white/[0.06] hover:border-circuit-500/20 transition-all duration-500;
+  }
+  .glow-text {
+    text-shadow: 0 0 40px rgba(0, 230, 138, 0.3), 0 0 80px rgba(0, 230, 138, 0.1);
+  }
+  .glow-border {
+    box-shadow: 0 0 20px rgba(0, 230, 138, 0.1), inset 0 0 20px rgba(0, 230, 138, 0.05);
+  }
+  .glow-border-intense {
+    box-shadow: 0 0 40px rgba(0, 230, 138, 0.15), 0 0 80px rgba(0, 230, 138, 0.05), inset 0 0 20px rgba(0, 230, 138, 0.05);
+  }
+  .circuit-line {
+    background: linear-gradient(90deg, transparent, rgba(0, 230, 138, 0.5), transparent);
+    height: 1px;
+  }
+  .dot-grid {
+    background-image: radial-gradient(rgba(0, 230, 138, 0.15) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .gradient-mask {
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  }
+  .noise-bg {
+    position: relative;
+  }
+  .noise-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+  .shimmer {
+    background: linear-gradient(
+      110deg,
+      transparent 25%,
+      rgba(0, 230, 138, 0.05) 37%,
+      transparent 63%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-circuit-400 via-circuit-300 to-circuit-500;
+  }
+  .text-gradient-subtle {
+    @apply bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400;
+  }
+  .border-gradient {
+    border-image: linear-gradient(to right, transparent, rgba(0, 230, 138, 0.3), transparent) 1;
+  }
+  .hover-lift {
+    @apply transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_60px_-15px_rgba(0,230,138,0.15)];
+  }
+  .card-spotlight {
+    position: relative;
+    overflow: hidden;
+  }
+  .card-spotlight::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0,230,138,0.06), transparent 40%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .card-spotlight:hover::after {
+    opacity: 1;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(1deg); }
+  66% { transform: translateY(5px) rotate(-1deg); }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #00e68a; }
+}
+
+@keyframes counter-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
