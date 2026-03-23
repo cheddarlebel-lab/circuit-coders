@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { getDb } from "@/lib/db";
 
 export const dynamic = "force-dynamic";
 
@@ -8,9 +9,22 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { name, email, company, projectType, budget, timeline, description, components } = body;
 
-    const componentList = components?.length
-      ? components.join(", ")
-      : "None selected";
+    // Save to database — create customer if new, then create project + initial message
+    const db = getDb();
+    let customer = db.prepare('SELECT id FROM customers WHERE email = ?').get(email) as { id: number } | undefined;
+    if (!customer) {
+      const result = db.prepare('INSERT INTO customers (name, email, company) VALUES (?, ?, ?)').run(name, email, company);
+      customer = { id: Number(result.lastInsertRowid) };
+    }
+    const projectResult = db.prepare(
+      'INSERT INTO projects (customer_id, title, description, project_type, status, budget, timeline) VALUES (?, ?, ?, ?, ?, ?, ?)'
+    ).run(customer.id, `${projectType} project — ${name}`, description, projectType, 'inquiry', budget, timeline);
+    const projectId = Number(projectResult.lastInsertRowid);
+
+    const componentList = components?.length ? components.join(", ") : "None selected";
+    const msgContent = `New inquiry:\n${description}\n\nComponents: ${componentList}\nBudget: ${budget}\nTimeline: ${timeline || 'Not specified'}`;
+    db.prepare('INSERT INTO messages (project_id, customer_id, sender, content) VALUES (?, ?, ?, ?)')
+      .run(projectId, customer.id, 'customer', msgContent);
 
     const htmlContent = `
       <h2>New Project Inquiry from CircuitCoders.com</h2>
@@ -30,7 +44,7 @@ export async function POST(req: Request) {
     const resend = new Resend(process.env.RESEND_API_KEY);
     await resend.emails.send({
       from: "CircuitCoders <onboarding@resend.dev>",
-      to: process.env.CONTACT_EMAIL || "hello@circuitcoders.com",
+      to: process.env.CONTACT_EMAIL || "admin@circuitcoders.com",
       replyTo: email,
       subject: `New Inquiry: ${projectType} project from ${name}`,
       html: htmlContent,
