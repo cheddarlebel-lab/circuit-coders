@@ -3,10 +3,16 @@ import { createClient, type Client } from '@libsql/client/web';
 let client: Client;
 let initialized = false;
 
+function getTursoUrl(): string {
+  const url = process.env.TURSO_DATABASE_URL || '';
+  // @libsql/client/web needs https://, convert libsql:// if needed
+  return url.replace(/^libsql:\/\//, 'https://');
+}
+
 export function getDb(): Client {
   if (!client) {
     client = createClient({
-      url: process.env.TURSO_DATABASE_URL || 'file:data/circuit-coders.db',
+      url: getTursoUrl(),
       authToken: process.env.TURSO_AUTH_TOKEN,
     });
   }
