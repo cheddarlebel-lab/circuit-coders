@@ -4,9 +4,10 @@ let client: Client;
 let initialized = false;
 
 function getTursoUrl(): string {
-  const url = process.env.TURSO_DATABASE_URL || '';
+  const raw = process.env.TURSO_DATABASE_URL || '';
   // @libsql/client/web needs https://, convert libsql:// if needed
-  return url.replace(/^libsql:\/\//, 'https://');
+  const url = raw.replace(/^libsql:\/\//, 'https://').trim();
+  return url;
 }
 
 export function getDb(): Client {

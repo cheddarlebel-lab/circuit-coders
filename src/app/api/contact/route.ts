@@ -15,7 +15,9 @@ export async function POST(req: Request) {
       db = await ensureDb();
     } catch (dbErr) {
       const msg = dbErr instanceof Error ? dbErr.message : String(dbErr);
-      return NextResponse.json({ error: "DB init failed", detail: msg, stack: dbErr instanceof Error ? dbErr.stack?.split('\n').slice(0, 3) : undefined });
+      const raw = process.env.TURSO_DATABASE_URL || '(empty)';
+      const converted = raw.replace(/^libsql:\/\//, 'https://').trim();
+      return NextResponse.json({ error: "DB init failed", detail: msg, rawUrl: raw.slice(0, 40), convertedUrl: converted.slice(0, 40) });
     }
     let customer: { id: number } | undefined;
     const existingRow = (await db.execute({ sql: 'SELECT id FROM customers WHERE email = ?', args: [email] })).rows[0];
