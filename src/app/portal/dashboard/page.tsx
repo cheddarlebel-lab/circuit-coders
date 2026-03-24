@@ -42,24 +42,24 @@ export default function PortalDashboard() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-carbon-900 flex items-center justify-center">
+      <div className="min-h-screen bg-carbon-500 flex items-center justify-center">
         <div className="animate-spin w-8 h-8 border-2 border-circuit-400 border-t-transparent rounded-full" />
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-carbon-900 text-white">
-      <header className="border-b border-carbon-700 px-6 py-4 flex items-center justify-between">
+    <div className="min-h-screen bg-carbon-500 text-white">
+      <header className="border-b border-white/10 px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <Link href="/" className="text-xl font-bold font-mono">
             Circuit<span className="text-circuit-400">Coders</span>
           </Link>
-          <span className="text-carbon-500 text-sm">My Projects</span>
+          <span className="text-gray-500 text-sm">My Projects</span>
         </div>
         <button
           onClick={() => { document.cookie = 'cc_customer=; Max-Age=0; path=/'; window.location.href = '/portal'; }}
-          className="text-sm text-carbon-400 hover:text-white transition"
+          className="text-sm text-gray-400 hover:text-white transition"
         >
           Sign Out
         </button>
@@ -70,7 +70,7 @@ export default function PortalDashboard() {
           <div className="text-center py-20">
             <p className="text-4xl mb-4">&#128640;</p>
             <h2 className="text-xl font-semibold mb-2">No projects yet</h2>
-            <p className="text-carbon-400 mb-6">Once you submit an inquiry, your project will appear here.</p>
+            <p className="text-gray-400 mb-6">Once you submit an inquiry, your project will appear here.</p>
             <Link href="/#contact" className="bg-circuit-500 hover:bg-circuit-400 text-carbon-900 font-semibold px-6 py-2.5 rounded-lg transition inline-block">
               Start a Project
             </Link>
@@ -87,7 +87,7 @@ export default function PortalDashboard() {
                     <div className="flex items-start justify-between mb-4">
                       <div>
                         <h3 className="text-lg font-semibold text-white group-hover:text-circuit-400 transition">{p.title}</h3>
-                        <p className="text-sm text-carbon-400 mt-0.5">{p.project_type} &middot; {p.budget || 'TBD'}</p>
+                        <p className="text-sm text-gray-400 mt-0.5">{p.project_type} &middot; {p.budget || 'TBD'}</p>
                       </div>
                       <div className="flex items-center gap-2">
                         {p.unread_replies > 0 && (
@@ -108,14 +108,14 @@ export default function PortalDashboard() {
                           <div
                             key={step}
                             className={`h-1.5 flex-1 rounded-full transition ${
-                              i <= stepIndex ? 'bg-circuit-400' : 'bg-carbon-700'
+                              i <= stepIndex ? 'bg-circuit-400' : 'bg-white/10'
                             }`}
                           />
                         ))}
                       </div>
                     )}
 
-                    <div className="flex items-center gap-4 mt-3 text-xs text-carbon-500">
+                    <div className="flex items-center gap-4 mt-3 text-xs text-gray-500">
                       <span>{p.update_count} update{p.update_count !== 1 ? 's' : ''}</span>
                       <span>Started {new Date(p.created_at).toLocaleDateString()}</span>
                       <span>Last activity {new Date(p.updated_at).toLocaleDateString()}</span>

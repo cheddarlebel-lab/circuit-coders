@@ -101,6 +101,7 @@ export default function AdminDashboard() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [messages, setMessages] = useState<Message[]>([]);
   const [customers, setCustomers] = useState<Customer[]>([]);
+  const [loading, setLoading] = useState(true);
   const [leads, setLeads] = useState<Lead[]>([]);
   const [leadSearch, setLeadSearch] = useState('');
   const [editingLead, setEditingLead] = useState<{ id: number; area_code: string; city: string } | null>(null);
@@ -137,6 +138,7 @@ export default function AdminDashboard() {
     if (cRes.ok) setCustomers(await cRes.json());
     if (sRes.ok) setSeoCampaigns(await sRes.json());
     fetchLeads();
+    setLoading(false);
   }, [fetchLeads]);
 
   useEffect(() => { fetchAll(); }, [fetchAll]);
@@ -260,33 +262,93 @@ export default function AdminDashboard() {
   }
 
   const unreadCount = messages.filter(m => !m.read && m.sender === 'customer').length;
+  const activeProjects = projects.filter(p => p.status === 'in_progress').length;
+  const activeCampaigns = seoCampaigns.filter(c => c.status === 'active').length;
+
+  async function handleLogout() {
+    document.cookie = 'admin_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+    window.location.href = '/admin';
+  }
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-carbon-500 flex items-center justify-center admin-page">
+        <div className="text-center">
+          <div className="w-12 h-12 border-2 border-circuit-500/30 border-t-circuit-500 rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-gray-400 text-sm font-mono">Loading dashboard...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-carbon-500 text-gray-100 admin-page">
       {/* Header */}
-      <header className="border-b border-white/10 px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <Link href="/" className="text-xl font-bold font-mono">
-            Circuit<span className="text-circuit-400">Coders</span>
-          </Link>
-          <span className="text-gray-500 text-sm">Admin</span>
-        </div>
-        <div className="flex items-center gap-3">
-          <button onClick={() => setShowNewCampaign(true)} className="text-sm bg-blue-600 hover:bg-blue-500 px-3 py-1.5 rounded-lg transition">
-            + SEO Campaign
-          </button>
-          <button onClick={() => setShowNewCustomer(true)} className="text-sm bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-lg transition">
-            + Customer
-          </button>
-          <button onClick={() => setShowNewProject(true)} className="text-sm bg-circuit-500 hover:bg-circuit-400 text-carbon-900 font-semibold px-3 py-1.5 rounded-lg transition">
-            + Project
-          </button>
+      <header className="border-b border-white/10 px-6 py-4">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <Link href="/" className="text-xl font-bold font-mono">
+              Circuit<span className="text-circuit-400">Coders</span>
+            </Link>
+            <span className="text-xs font-mono bg-circuit-500/15 text-circuit-400 px-2 py-0.5 rounded-full border border-circuit-500/20">ADMIN</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <button onClick={() => setShowNewCampaign(true)} className="text-sm bg-blue-600 hover:bg-blue-500 px-3 py-1.5 rounded-lg transition font-medium">
+              + Campaign
+            </button>
+            <button onClick={() => setShowNewCustomer(true)} className="text-sm bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-lg transition font-medium">
+              + Customer
+            </button>
+            <button onClick={() => setShowNewProject(true)} className="text-sm bg-circuit-500 hover:bg-circuit-400 text-carbon-900 font-semibold px-3 py-1.5 rounded-lg transition">
+              + Project
+            </button>
+            <div className="w-px h-6 bg-white/10 mx-1"></div>
+            <button onClick={handleLogout} className="text-sm text-gray-400 hover:text-white px-2 py-1.5 transition" title="Sign out">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3-3l3-3m0 0l-3-3m3 3H9" /></svg>
+            </button>
+          </div>
         </div>
       </header>
 
+      {/* KPI Cards */}
+      <div className="border-b border-white/10 px-6 py-5">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          <div className="glass-card rounded-xl p-4 hover:border-circuit-500/20 transition-all">
+            <p className="text-xs text-gray-500 font-medium uppercase tracking-wider">Leads</p>
+            <p className="text-2xl font-bold text-white mt-1">{leads.length}</p>
+            <p className="text-xs text-yellow-400 mt-1">inquiry stage</p>
+          </div>
+          <div className="glass-card rounded-xl p-4 hover:border-circuit-500/20 transition-all">
+            <p className="text-xs text-gray-500 font-medium uppercase tracking-wider">Active Projects</p>
+            <p className="text-2xl font-bold text-white mt-1">{activeProjects}</p>
+            <p className="text-xs text-circuit-400 mt-1">in progress</p>
+          </div>
+          <div className="glass-card rounded-xl p-4 hover:border-circuit-500/20 transition-all">
+            <p className="text-xs text-gray-500 font-medium uppercase tracking-wider">Customers</p>
+            <p className="text-2xl font-bold text-white mt-1">{customers.length}</p>
+            <p className="text-xs text-gray-500 mt-1">total</p>
+          </div>
+          <div className="glass-card rounded-xl p-4 hover:border-circuit-500/20 transition-all">
+            <p className="text-xs text-gray-500 font-medium uppercase tracking-wider">Unread</p>
+            <p className="text-2xl font-bold text-white mt-1">{unreadCount}</p>
+            <p className="text-xs text-red-400 mt-1">{unreadCount > 0 ? 'needs attention' : 'all caught up'}</p>
+          </div>
+          <div className="glass-card rounded-xl p-4 hover:border-circuit-500/20 transition-all">
+            <p className="text-xs text-gray-500 font-medium uppercase tracking-wider">SEO Campaigns</p>
+            <p className="text-2xl font-bold text-white mt-1">{activeCampaigns}</p>
+            <p className="text-xs text-blue-400 mt-1">active</p>
+          </div>
+          <div className="glass-card rounded-xl p-4 hover:border-circuit-500/20 transition-all">
+            <p className="text-xs text-gray-500 font-medium uppercase tracking-wider">Total Projects</p>
+            <p className="text-2xl font-bold text-white mt-1">{projects.length}</p>
+            <p className="text-xs text-gray-500 mt-1">all time</p>
+          </div>
+        </div>
+      </div>
+
       {/* Tabs */}
       <div className="border-b border-white/10 px-6">
-        <div className="flex gap-6">
+        <div className="max-w-7xl mx-auto flex gap-6">
           {(['leads', 'seo', 'projects', 'messages', 'customers'] as const).map(t => (
             <button
               key={t}
@@ -311,7 +373,7 @@ export default function AdminDashboard() {
       </div>
 
       {/* Content */}
-      <div className="p-6 max-w-6xl mx-auto">
+      <div className="p-6 max-w-7xl mx-auto">
         {/* Leads Tab */}
         {tab === 'leads' && (
           <div className="space-y-4">
@@ -923,11 +985,13 @@ export default function AdminDashboard() {
 
 function Modal({ children, onClose, title }: { children: React.ReactNode; onClose: () => void; title: string }) {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4" onClick={onClose}>
-      <div className="bg-carbon-400 border border-white/15 rounded-2xl glow-border p-6 w-full max-w-md" onClick={e => e.stopPropagation()}>
-        <div className="flex items-center justify-between mb-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-md px-4 animate-[fadeIn_150ms_ease-out]" onClick={onClose}>
+      <div className="bg-carbon-400 border border-white/15 rounded-2xl glow-border p-6 w-full max-w-lg shadow-2xl shadow-black/50 animate-[scaleIn_200ms_ease-out] admin-page" onClick={e => e.stopPropagation()}>
+        <div className="flex items-center justify-between mb-5 pb-4 border-b border-white/10">
           <h2 className="text-lg font-semibold text-white">{title}</h2>
-          <button onClick={onClose} className="text-gray-400 hover:text-white text-xl">&times;</button>
+          <button onClick={onClose} className="text-gray-400 hover:text-white w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white/10 transition">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+          </button>
         </div>
         {children}
       </div>

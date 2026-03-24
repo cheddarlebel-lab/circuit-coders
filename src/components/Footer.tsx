@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Zap, Github, Twitter, Mail, ArrowUpRight } from "lucide-react";
+import { Zap, Github, Twitter, Mail, ArrowUpRight, Linkedin, MessageCircle } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -33,13 +33,16 @@ export default function Footer() {
             </p>
             <div className="flex gap-2">
               {[
-                { icon: Github, label: "GitHub" },
-                { icon: Twitter, label: "Twitter" },
-                { icon: Mail, label: "Email" },
-              ].map(({ icon: Icon, label }) => (
+                { icon: Github, label: "GitHub", href: "https://github.com/circuitcoders" },
+                { icon: Twitter, label: "Twitter", href: "https://x.com/circuitcoders" },
+                { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/company/circuitcoders" },
+                { icon: MessageCircle, label: "Discord", href: "https://discord.gg/circuitcoders" },
+              ].map(({ icon: Icon, label, href }) => (
                 <a
                   key={label}
-                  href="#"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={label}
                   className="group w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.06] flex items-center justify-center text-gray-500 hover:text-circuit-400 hover:border-circuit-500/20 hover:bg-circuit-500/5 transition-all duration-300"
                 >

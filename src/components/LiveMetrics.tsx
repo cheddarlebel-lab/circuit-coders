@@ -2,15 +2,15 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Activity, GitCommit, Cpu, Globe, Zap, Clock } from "lucide-react";
+import { Activity, Rocket, Cpu, Globe, Zap, Users } from "lucide-react";
 
 const metrics = [
-  { icon: GitCommit, label: "Commits This Year", target: 4800, suffix: "+", color: "text-circuit-400" },
-  { icon: Cpu, label: "Hardware Units Shipped", target: 340, suffix: "+", color: "text-blue-400" },
-  { icon: Globe, label: "API Requests Served", target: 2.4, suffix: "M", color: "text-purple-400", decimals: 1 },
-  { icon: Clock, label: "Avg. Response Time", target: 12, suffix: "ms", color: "text-amber-400" },
-  { icon: Activity, label: "Uptime (12mo)", target: 99.97, suffix: "%", color: "text-emerald-400", decimals: 2 },
-  { icon: Zap, label: "Deploys This Month", target: 47, suffix: "", color: "text-pink-400" },
+  { icon: Rocket, label: "Deployments", target: 12000, suffix: "+", color: "text-circuit-400" },
+  { icon: Cpu, label: "Systems Delivered", target: 850, suffix: "+", color: "text-blue-400" },
+  { icon: Globe, label: "API Calls Processed", target: 15, suffix: "M+", color: "text-purple-400" },
+  { icon: Zap, label: "Components Designed", target: 500, suffix: "+", color: "text-amber-400" },
+  { icon: Activity, label: "Uptime SLA", target: 99.99, suffix: "%", color: "text-emerald-400", decimals: 2 },
+  { icon: Users, label: "Enterprise Clients", target: 120, suffix: "+", color: "text-pink-400" },
 ];
 
 function MetricCard({ metric, index }: { metric: typeof metrics[0]; index: number }) {

@@ -87,7 +87,7 @@ export default function ProjectDetail({ params }: { params: Promise<{ id: string
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-carbon-900 flex items-center justify-center">
+      <div className="min-h-screen bg-carbon-500 flex items-center justify-center">
         <div className="animate-spin w-8 h-8 border-2 border-circuit-400 border-t-transparent rounded-full" />
       </div>
     );
@@ -95,7 +95,7 @@ export default function ProjectDetail({ params }: { params: Promise<{ id: string
 
   if (!project) {
     return (
-      <div className="min-h-screen bg-carbon-900 flex items-center justify-center text-white">
+      <div className="min-h-screen bg-carbon-500 flex items-center justify-center text-white">
         <p>Project not found.</p>
       </div>
     );
@@ -104,10 +104,10 @@ export default function ProjectDetail({ params }: { params: Promise<{ id: string
   const statusInfo = STATUS_LABELS[project.status] || STATUS_LABELS.inquiry;
 
   return (
-    <div className="min-h-screen bg-carbon-900 text-white">
-      <header className="border-b border-carbon-700 px-6 py-4 flex items-center justify-between">
+    <div className="min-h-screen bg-carbon-500 text-white">
+      <header className="border-b border-white/10 px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <Link href="/portal/dashboard" className="text-carbon-400 hover:text-white transition">
+          <Link href="/portal/dashboard" className="text-gray-400 hover:text-white transition">
             &larr; Back
           </Link>
           <Link href="/" className="text-xl font-bold font-mono">
@@ -125,8 +125,8 @@ export default function ProjectDetail({ params }: { params: Promise<{ id: string
               {statusInfo.label}
             </span>
           </div>
-          {project.description && <p className="text-carbon-300 mb-4">{project.description}</p>}
-          <div className="flex gap-6 text-sm text-carbon-400">
+          {project.description && <p className="text-gray-300 mb-4">{project.description}</p>}
+          <div className="flex gap-6 text-sm text-gray-400">
             <span>Type: <span className="text-white capitalize">{project.project_type}</span></span>
             {project.budget && <span>Budget: <span className="text-white">{project.budget}</span></span>}
             {project.timeline && <span>Timeline: <span className="text-white">{project.timeline}</span></span>}
@@ -140,7 +140,7 @@ export default function ProjectDetail({ params }: { params: Promise<{ id: string
             <h2 className="text-lg font-semibold mb-4">Project Updates</h2>
             {updates.length === 0 ? (
               <div className="glass-card rounded-xl p-8 text-center">
-                <p className="text-carbon-500">No updates yet. We&apos;ll post updates here as work progresses.</p>
+                <p className="text-gray-500">No updates yet. We&apos;ll post updates here as work progresses.</p>
               </div>
             ) : (
               <div className="space-y-3">
@@ -149,10 +149,10 @@ export default function ProjectDetail({ params }: { params: Promise<{ id: string
                     <div className="flex items-center gap-2 mb-2">
                       <span dangerouslySetInnerHTML={{ __html: UPDATE_ICONS[u.update_type] || UPDATE_ICONS.progress }} />
                       <h3 className="font-medium text-white">{u.title}</h3>
-                      <span className="text-xs text-carbon-500 capitalize px-2 py-0.5 rounded bg-carbon-800">{u.update_type}</span>
+                      <span className="text-xs text-gray-500 capitalize px-2 py-0.5 rounded bg-white/10">{u.update_type}</span>
                     </div>
-                    <p className="text-sm text-carbon-300 whitespace-pre-wrap">{u.content}</p>
-                    <p className="text-xs text-carbon-500 mt-2">{new Date(u.created_at).toLocaleString()}</p>
+                    <p className="text-sm text-gray-300 whitespace-pre-wrap">{u.content}</p>
+                    <p className="text-xs text-gray-500 mt-2">{new Date(u.created_at).toLocaleString()}</p>
                   </div>
                 ))}
               </div>
@@ -165,17 +165,17 @@ export default function ProjectDetail({ params }: { params: Promise<{ id: string
             <div className="glass-card rounded-xl overflow-hidden flex flex-col" style={{ maxHeight: '500px' }}>
               <div className="flex-1 overflow-y-auto p-4 space-y-3">
                 {messages.length === 0 && (
-                  <p className="text-carbon-500 text-sm text-center py-4">No messages yet. Send one below!</p>
+                  <p className="text-gray-500 text-sm text-center py-4">No messages yet. Send one below!</p>
                 )}
                 {messages.map(m => (
                   <div key={m.id} className={`flex ${m.sender === 'customer' ? 'justify-end' : 'justify-start'}`}>
                     <div className={`max-w-[85%] rounded-xl px-3 py-2 text-sm ${
                       m.sender === 'customer'
                         ? 'bg-circuit-500/20 text-circuit-100'
-                        : 'bg-carbon-700 text-carbon-200'
+                        : 'bg-white/10 text-gray-200'
                     }`}>
                       <p>{m.content}</p>
-                      <p className={`text-xs mt-1 ${m.sender === 'customer' ? 'text-circuit-500/60' : 'text-carbon-500'}`}>
+                      <p className={`text-xs mt-1 ${m.sender === 'customer' ? 'text-circuit-500/60' : 'text-gray-500'}`}>
                         {m.sender === 'admin' ? 'Circuit Coders' : 'You'} &middot; {new Date(m.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                       </p>
                     </div>
@@ -183,12 +183,12 @@ export default function ProjectDetail({ params }: { params: Promise<{ id: string
                 ))}
               </div>
 
-              <form onSubmit={sendMessage} className="border-t border-carbon-700 p-3 flex gap-2">
+              <form onSubmit={sendMessage} className="border-t border-white/10 p-3 flex gap-2">
                 <input
                   type="text"
                   value={newMessage}
                   onChange={e => setNewMessage(e.target.value)}
-                  className="flex-1 bg-carbon-800 border border-carbon-700 rounded-lg px-3 py-2 text-sm text-white placeholder-carbon-500 focus:border-circuit-400 focus:outline-none"
+                  className="flex-1 bg-white/10 border border-white/15 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 caret-circuit-500 focus:border-circuit-400 focus:outline-none"
                   placeholder="Type a message..."
                 />
                 <button

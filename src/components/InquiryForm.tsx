@@ -57,9 +57,24 @@ export default function InquiryForm() {
     }));
   };
 
+  const [fileError, setFileError] = useState("");
+
   const handleFiles = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
-      setFiles((prev) => [...prev, ...Array.from(e.target.files!)]);
+      const MAX_SIZE = 10 * 1024 * 1024; // 10MB
+      const incoming = Array.from(e.target.files!);
+      const oversized = incoming.filter((f) => f.size > MAX_SIZE);
+      if (oversized.length > 0) {
+        const names = oversized.map((f) => f.name).join(", ");
+        setFileError(`File(s) exceed 10MB limit: ${names}`);
+        const valid = incoming.filter((f) => f.size <= MAX_SIZE);
+        if (valid.length > 0) setFiles((prev) => [...prev, ...valid]);
+      } else {
+        setFileError("");
+        setFiles((prev) => [...prev, ...incoming]);
+      }
+      // Reset input so the same file can be re-selected
+      e.target.value = "";
     }
   };
 
@@ -308,6 +323,9 @@ export default function InquiryForm() {
                   className="hidden"
                   accept=".pdf,.kicad_pcb,.brd,.sch,.gbr,.zip,.png,.jpg"
                 />
+                {fileError && (
+                  <p className="mt-2 text-sm text-red-400">{fileError}</p>
+                )}
                 {files.length > 0 && (
                   <div className="mt-3 space-y-2">
                     {files.map((file, i) => (

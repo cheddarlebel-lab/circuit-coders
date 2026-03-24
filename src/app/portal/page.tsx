@@ -30,25 +30,25 @@ export default function PortalLogin() {
   }
 
   return (
-    <div className="min-h-screen bg-carbon-900 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-carbon-500 flex items-center justify-center px-4">
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
           <Link href="/" className="text-2xl font-bold font-mono text-white">
             Circuit<span className="text-circuit-400">Coders</span>
           </Link>
-          <p className="text-carbon-400 text-sm mt-2">Client Portal</p>
+          <p className="text-gray-400 text-sm mt-2">Client Portal</p>
         </div>
 
         {sent ? (
           <div className="glass-card p-6 rounded-xl text-center">
             <div className="text-3xl mb-3">&#9889;</div>
             <h2 className="text-lg font-semibold text-white mb-2">Check your email</h2>
-            <p className="text-sm text-carbon-400">
+            <p className="text-sm text-gray-400">
               We sent a login link to <span className="text-circuit-400">{email}</span>. Click it to access your portal.
             </p>
             <button
               onClick={() => { setSent(false); setEmail(''); }}
-              className="text-sm text-carbon-500 hover:text-white mt-4 transition"
+              className="text-sm text-gray-500 hover:text-white mt-4 transition"
             >
               Use a different email
             </button>
@@ -56,12 +56,12 @@ export default function PortalLogin() {
         ) : (
           <form onSubmit={handleSubmit} className="glass-card p-6 rounded-xl space-y-4">
             <div>
-              <label className="text-sm text-carbon-300 block mb-1">Email Address</label>
+              <label className="text-sm text-gray-300 block mb-1">Email Address</label>
               <input
                 type="email"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
-                className="w-full bg-carbon-800 border border-carbon-700 rounded-lg px-4 py-2.5 text-white placeholder-carbon-500 focus:border-circuit-400 focus:outline-none transition"
+                className="w-full bg-white/10 border border-white/15 rounded-lg px-4 py-2.5 text-white placeholder-gray-500 caret-circuit-500 focus:border-circuit-400 focus:outline-none transition"
                 placeholder="your@email.com"
                 required
                 autoFocus
@@ -78,7 +78,7 @@ export default function PortalLogin() {
               {loading ? 'Sending...' : 'Send Login Link'}
             </button>
 
-            <p className="text-xs text-carbon-500 text-center">
+            <p className="text-xs text-gray-500 text-center">
               No password needed. We&apos;ll email you a secure login link.
             </p>
           </form>
