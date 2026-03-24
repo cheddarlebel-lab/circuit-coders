@@ -10,25 +10,17 @@ export async function POST(req: Request) {
     const { name, email, company, projectType, budget, timeline, description, components } = body;
 
     // Save to database — create customer if new, then create project + initial message
-    let db;
-    try {
-      db = await ensureDb();
-    } catch (dbErr) {
-      const msg = dbErr instanceof Error ? dbErr.message : String(dbErr);
-      const raw = process.env.TURSO_DATABASE_URL || '(empty)';
-      const converted = raw.replace(/^libsql:\/\//, 'https://').trim();
-      return NextResponse.json({ error: "DB init failed", detail: msg, rawUrl: raw.slice(0, 40), convertedUrl: converted.slice(0, 40) });
-    }
+    const db = await ensureDb();
     let customer: { id: number } | undefined;
     const existingRow = (await db.execute({ sql: 'SELECT id FROM customers WHERE email = ?', args: [email] })).rows[0];
     if (existingRow) customer = { id: Number(existingRow.id) };
     if (!customer) {
-      const result = await db.execute({ sql: 'INSERT INTO customers (name, email, company) VALUES (?, ?, ?)', args: [name, email, company] });
+      const result = await db.execute({ sql: 'INSERT INTO customers (name, email, company) VALUES (?, ?, ?)', args: [name, email, company ?? null] });
       customer = { id: Number(result.lastInsertRowid) };
     }
     const projectResult = await db.execute({
       sql: 'INSERT INTO projects (customer_id, title, description, project_type, status, budget, timeline) VALUES (?, ?, ?, ?, ?, ?, ?)',
-      args: [customer.id, `${projectType} project — ${name}`, description, projectType, 'inquiry', budget, timeline]
+      args: [customer.id, `${projectType} project — ${name}`, description ?? null, projectType, 'inquiry', budget ?? null, timeline ?? null]
     });
     const projectId = Number(projectResult.lastInsertRowid);
 
@@ -73,7 +65,7 @@ export async function POST(req: Request) {
     console.error("Contact form error:", error);
     const message = error instanceof Error ? error.message : String(error);
     return NextResponse.json(
-      { error: "Failed to send inquiry", detail: message, dbUrl: (process.env.TURSO_DATABASE_URL || '').slice(0, 30), hasToken: !!process.env.TURSO_AUTH_TOKEN },
+      { error: "Failed to send inquiry" },
       { status: 500 }
     );
   }

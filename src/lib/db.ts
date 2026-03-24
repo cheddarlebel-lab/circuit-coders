@@ -67,6 +67,24 @@ export async function ensureDb(): Promise<Client> {
         update_type TEXT NOT NULL DEFAULT 'progress',
         created_at TEXT DEFAULT (datetime('now'))
       );
+
+      CREATE TABLE IF NOT EXISTS seo_campaigns (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL,
+        client_name TEXT,
+        website_url TEXT,
+        target_keywords TEXT,
+        status TEXT NOT NULL DEFAULT 'planning',
+        monthly_budget TEXT,
+        start_date TEXT,
+        notes TEXT,
+        da_score INTEGER,
+        organic_traffic INTEGER,
+        keywords_ranked INTEGER,
+        backlinks INTEGER,
+        created_at TEXT DEFAULT (datetime('now')),
+        updated_at TEXT DEFAULT (datetime('now'))
+      );
     `);
     // Migrations for existing tables
     try { await db.execute('ALTER TABLE customers ADD COLUMN area_code TEXT'); } catch { /* already exists */ }
