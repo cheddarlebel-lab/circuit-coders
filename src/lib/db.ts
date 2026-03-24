@@ -68,6 +68,16 @@ export async function ensureDb(): Promise<Client> {
         created_at TEXT DEFAULT (datetime('now'))
       );
 
+      CREATE TABLE IF NOT EXISTS target_pins (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        label TEXT NOT NULL,
+        lat REAL NOT NULL,
+        lng REAL NOT NULL,
+        pin_type TEXT NOT NULL DEFAULT 'target',
+        notes TEXT,
+        created_at TEXT DEFAULT (datetime('now'))
+      );
+
       CREATE TABLE IF NOT EXISTS seo_campaigns (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         name TEXT NOT NULL,

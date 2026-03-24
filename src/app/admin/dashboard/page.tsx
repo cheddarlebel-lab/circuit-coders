@@ -1,7 +1,10 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
+
+const LeadMap = dynamic(() => import('@/components/LeadMap'), { ssr: false });
 
 interface Project {
   id: number;
@@ -427,6 +430,12 @@ export default function AdminDashboard() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Target Map */}
+            <div className="mt-6">
+              <h2 className="text-lg font-semibold text-white mb-3">Target Map</h2>
+              <LeadMap leads={leads.map(l => ({ id: l.id, name: l.name, email: l.email, company: l.company, city: l.city, area_code: l.area_code, project_type: l.project_type, budget: l.budget }))} />
             </div>
           </div>
         )}
