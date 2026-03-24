@@ -53,24 +53,39 @@ export default function Footer() {
           {[
             {
               title: "Services",
-              links: ["Hardware Design", "Firmware Engineering", "Software Integration", "IoT Platforms"],
+              links: [
+                { label: "Hardware Design", href: "/#services" },
+                { label: "Firmware Engineering", href: "/#services" },
+                { label: "Software Integration", href: "/#services" },
+                { label: "IoT Platforms", href: "/#services" },
+              ],
             },
             {
               title: "Resources",
-              links: ["Case Studies", "Blog", "FAQs", "Changelog"],
+              links: [
+                { label: "Portfolio", href: "/#portfolio" },
+                { label: "Mockup Studio", href: "/#mockup" },
+                { label: "Our Process", href: "/#process" },
+                { label: "Metrics", href: "/#metrics" },
+              ],
             },
             {
               title: "Company",
-              links: ["About Us", "Our Process", "Portfolio", "Contact"],
+              links: [
+                { label: "Contact", href: "/#contact" },
+                { label: "Start a Project", href: "/#contact" },
+                { label: "Admin Portal", href: "/admin" },
+                { label: "Client Portal", href: "/portal" },
+              ],
             },
           ].map((col) => (
             <div key={col.title}>
               <h4 className="text-xs font-mono text-gray-500 tracking-widest uppercase mb-5">{col.title}</h4>
               <ul className="space-y-3">
                 {col.links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="group text-sm text-gray-500 hover:text-circuit-400 transition-colors flex items-center gap-1">
-                      {link}
+                  <li key={link.label}>
+                    <a href={link.href} className="group text-sm text-gray-500 hover:text-circuit-400 transition-colors flex items-center gap-1">
+                      {link.label}
                       <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </a>
                   </li>

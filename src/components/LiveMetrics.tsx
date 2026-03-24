@@ -66,7 +66,7 @@ function MetricCard({ metric, index }: { metric: typeof metrics[0]; index: numbe
 
 export default function LiveMetrics() {
   return (
-    <section className="relative py-24 px-4">
+    <section id="metrics" className="relative py-24 px-4">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0 }}

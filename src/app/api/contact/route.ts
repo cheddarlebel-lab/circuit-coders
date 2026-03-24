@@ -41,14 +41,19 @@ export async function POST(req: Request) {
       <p style="white-space:pre-wrap;background:#f9f9f9;padding:16px;border-radius:8px;">${description}</p>
     `;
 
-    const resend = new Resend(process.env.RESEND_API_KEY);
-    await resend.emails.send({
-      from: "CircuitCoders <onboarding@resend.dev>",
-      to: process.env.CONTACT_EMAIL || "admin@circuitcoders.com",
-      replyTo: email,
-      subject: `New Inquiry: ${projectType} project from ${name}`,
-      html: htmlContent,
-    });
+    // Try to send notification email (non-blocking — inquiry is already saved to DB)
+    try {
+      const resend = new Resend(process.env.RESEND_API_KEY);
+      await resend.emails.send({
+        from: "CircuitCoders <onboarding@resend.dev>",
+        to: process.env.CONTACT_EMAIL || "admin@circuitcoders.com",
+        replyTo: email,
+        subject: `New Inquiry: ${projectType} project from ${name}`,
+        html: htmlContent,
+      });
+    } catch (emailError) {
+      console.error("Email notification failed (inquiry still saved):", emailError);
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {
