@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getDb } from '@/lib/db';
+import { ensureDb } from '@/lib/db';
 import { generateMagicToken, signToken } from '@/lib/auth';
 import { Resend } from 'resend';
 
@@ -12,16 +12,15 @@ export async function POST(req: NextRequest) {
     const { email } = await req.json();
     if (!email) return NextResponse.json({ error: 'Email required' }, { status: 400 });
 
-    const db = getDb();
-    const customer = db.prepare('SELECT * FROM customers WHERE email = ?').get(email) as Record<string, unknown> | undefined;
+    const db = await ensureDb();
+    const customer = (await db.execute({ sql: 'SELECT * FROM customers WHERE email = ?', args: [email] })).rows[0] as Record<string, unknown> | undefined;
     if (!customer) {
       return NextResponse.json({ error: 'No account found with that email. Contact us to get started.' }, { status: 404 });
     }
 
     const token = generateMagicToken();
     const expiresAt = Date.now() + 15 * 60 * 1000; // 15 min
-    db.prepare('UPDATE customers SET magic_token = ?, token_expires_at = ? WHERE id = ?')
-      .run(token, expiresAt, customer.id);
+    await db.execute({ sql: 'UPDATE customers SET magic_token = ?, token_expires_at = ? WHERE id = ?', args: [token, expiresAt, customer.id as string] });
 
     const baseUrl = process.env.NEXT_PUBLIC_URL || 'https://circuitcoders.com';
     const magicLink = `${baseUrl}/portal/verify?token=${token}&email=${encodeURIComponent(email)}`;

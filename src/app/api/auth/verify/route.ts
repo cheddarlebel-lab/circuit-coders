@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getDb } from '@/lib/db';
+import { ensureDb } from '@/lib/db';
 import { signToken } from '@/lib/auth';
 
 export async function GET(req: NextRequest) {
@@ -10,20 +10,20 @@ export async function GET(req: NextRequest) {
     return NextResponse.redirect(new URL('/portal?error=invalid', req.url));
   }
 
-  const db = getDb();
-  const customer = db.prepare(
-    'SELECT * FROM customers WHERE email = ? AND magic_token = ? AND token_expires_at > ?'
-  ).get(email, token, Date.now()) as Record<string, unknown> | undefined;
+  const db = await ensureDb();
+  const customer = (await db.execute({
+    sql: 'SELECT * FROM customers WHERE email = ? AND magic_token = ? AND token_expires_at > ?',
+    args: [email, token, Date.now()]
+  })).rows[0] as Record<string, unknown> | undefined;
 
   if (!customer) {
     return NextResponse.redirect(new URL('/portal?error=expired', req.url));
   }
 
   // Clear token
-  db.prepare('UPDATE customers SET magic_token = NULL, token_expires_at = NULL WHERE id = ?')
-    .run(customer.id);
+  await db.execute({ sql: 'UPDATE customers SET magic_token = NULL, token_expires_at = NULL WHERE id = ?', args: [customer.id as string] });
 
-  const jwt = signToken({ role: 'customer', customerId: customer.id, email: customer.email }, '7d');
+  const jwt = signToken({ role: 'customer', customerId: customer.id as number, email: customer.email as string }, '7d');
   const res = NextResponse.redirect(new URL('/portal/dashboard', req.url));
   res.cookies.set('cc_customer', jwt, {
     httpOnly: true,

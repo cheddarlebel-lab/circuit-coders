@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
-import { getDb } from "@/lib/db";
+import { ensureDb } from "@/lib/db";
 
 export const dynamic = "force-dynamic";
 
@@ -10,21 +10,26 @@ export async function POST(req: Request) {
     const { name, email, company, projectType, budget, timeline, description, components } = body;
 
     // Save to database — create customer if new, then create project + initial message
-    const db = getDb();
-    let customer = db.prepare('SELECT id FROM customers WHERE email = ?').get(email) as { id: number } | undefined;
+    const db = await ensureDb();
+    let customer: { id: number } | undefined;
+    const existingRow = (await db.execute({ sql: 'SELECT id FROM customers WHERE email = ?', args: [email] })).rows[0];
+    if (existingRow) customer = { id: Number(existingRow.id) };
     if (!customer) {
-      const result = db.prepare('INSERT INTO customers (name, email, company) VALUES (?, ?, ?)').run(name, email, company);
+      const result = await db.execute({ sql: 'INSERT INTO customers (name, email, company) VALUES (?, ?, ?)', args: [name, email, company] });
       customer = { id: Number(result.lastInsertRowid) };
     }
-    const projectResult = db.prepare(
-      'INSERT INTO projects (customer_id, title, description, project_type, status, budget, timeline) VALUES (?, ?, ?, ?, ?, ?, ?)'
-    ).run(customer.id, `${projectType} project — ${name}`, description, projectType, 'inquiry', budget, timeline);
+    const projectResult = await db.execute({
+      sql: 'INSERT INTO projects (customer_id, title, description, project_type, status, budget, timeline) VALUES (?, ?, ?, ?, ?, ?, ?)',
+      args: [customer.id, `${projectType} project — ${name}`, description, projectType, 'inquiry', budget, timeline]
+    });
     const projectId = Number(projectResult.lastInsertRowid);
 
     const componentList = components?.length ? components.join(", ") : "None selected";
     const msgContent = `New inquiry:\n${description}\n\nComponents: ${componentList}\nBudget: ${budget}\nTimeline: ${timeline || 'Not specified'}`;
-    db.prepare('INSERT INTO messages (project_id, customer_id, sender, content) VALUES (?, ?, ?, ?)')
-      .run(projectId, customer.id, 'customer', msgContent);
+    await db.execute({
+      sql: 'INSERT INTO messages (project_id, customer_id, sender, content) VALUES (?, ?, ?, ?)',
+      args: [projectId, customer.id, 'customer', msgContent]
+    });
 
     const htmlContent = `
       <h2>New Project Inquiry from CircuitCoders.com</h2>

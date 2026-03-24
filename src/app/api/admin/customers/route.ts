@@ -1,19 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getDb } from '@/lib/db';
+import { ensureDb } from '@/lib/db';
 import { getSession } from '@/lib/auth';
 
 export async function GET() {
   const session = await getSession('admin');
   if (!session) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-  const db = getDb();
-  const customers = db.prepare(`
+  const db = await ensureDb();
+  const customers = (await db.execute({
+    sql: `
     SELECT c.*,
       (SELECT COUNT(*) FROM projects p WHERE p.customer_id = c.id) as project_count,
       (SELECT COUNT(*) FROM messages m WHERE m.customer_id = c.id AND m.read = 0 AND m.sender = 'customer') as unread_messages
     FROM customers c
     ORDER BY c.created_at DESC
-  `).all();
+  `, args: []
+  })).rows;
 
   return NextResponse.json(customers);
 }
@@ -25,11 +27,10 @@ export async function POST(req: NextRequest) {
   const { name, email, company } = await req.json();
   if (!name || !email) return NextResponse.json({ error: 'Name and email required' }, { status: 400 });
 
-  const db = getDb();
+  const db = await ensureDb();
   try {
-    const result = db.prepare('INSERT INTO customers (name, email, company) VALUES (?, ?, ?)')
-      .run(name, email, company);
-    return NextResponse.json({ id: result.lastInsertRowid });
+    const result = await db.execute({ sql: 'INSERT INTO customers (name, email, company) VALUES (?, ?, ?)', args: [name, email, company] });
+    return NextResponse.json({ id: Number(result.lastInsertRowid) });
   } catch {
     return NextResponse.json({ error: 'Customer with that email already exists' }, { status: 409 });
   }
