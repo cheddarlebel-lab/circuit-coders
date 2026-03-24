@@ -63,8 +63,9 @@ export async function POST(req: Request) {
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Contact form error:", error);
+    const message = error instanceof Error ? error.message : String(error);
     return NextResponse.json(
-      { error: "Failed to send inquiry" },
+      { error: "Failed to send inquiry", detail: message },
       { status: 500 }
     );
   }
