@@ -15,7 +15,7 @@ import PageLoader from "@/components/PageLoader";
 
 export default function Home() {
   return (
-    <>
+    <div className="custom-cursor-page">
       <SmoothScroll />
       <CustomCursor />
       <PageLoader />
@@ -32,6 +32,6 @@ export default function Home() {
         <InquiryForm />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

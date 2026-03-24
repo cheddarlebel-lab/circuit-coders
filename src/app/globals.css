@@ -6,7 +6,8 @@
 
 @layer base {
   @media (pointer: fine) {
-    * {
+    .custom-cursor-page,
+    .custom-cursor-page * {
       cursor: none !important;
     }
   }
