@@ -11,6 +11,20 @@
       cursor: none !important;
     }
   }
+  .admin-page,
+  .admin-page * {
+    cursor: auto !important;
+  }
+  .admin-page input,
+  .admin-page textarea,
+  .admin-page select {
+    cursor: text !important;
+  }
+  .admin-page button,
+  .admin-page a,
+  .admin-page [role="button"] {
+    cursor: pointer !important;
+  }
   body {
     @apply bg-carbon-500 text-gray-100 antialiased;
   }

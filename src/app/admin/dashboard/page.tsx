@@ -259,7 +259,7 @@ export default function AdminDashboard() {
   const unreadCount = messages.filter(m => !m.read && m.sender === 'customer').length;
 
   return (
-    <div className="min-h-screen bg-carbon-500 text-gray-100">
+    <div className="min-h-screen bg-carbon-500 text-gray-100 admin-page">
       {/* Header */}
       <header className="border-b border-white/10 px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
