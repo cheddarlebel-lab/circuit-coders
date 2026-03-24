@@ -10,7 +10,13 @@ export async function POST(req: Request) {
     const { name, email, company, projectType, budget, timeline, description, components } = body;
 
     // Save to database — create customer if new, then create project + initial message
-    const db = await ensureDb();
+    let db;
+    try {
+      db = await ensureDb();
+    } catch (dbErr) {
+      const msg = dbErr instanceof Error ? dbErr.message : String(dbErr);
+      return NextResponse.json({ error: "DB init failed", detail: msg, stack: dbErr instanceof Error ? dbErr.stack?.split('\n').slice(0, 3) : undefined });
+    }
     let customer: { id: number } | undefined;
     const existingRow = (await db.execute({ sql: 'SELECT id FROM customers WHERE email = ?', args: [email] })).rows[0];
     if (existingRow) customer = { id: Number(existingRow.id) };
