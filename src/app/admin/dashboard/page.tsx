@@ -259,20 +259,20 @@ export default function AdminDashboard() {
   const unreadCount = messages.filter(m => !m.read && m.sender === 'customer').length;
 
   return (
-    <div className="min-h-screen bg-carbon-900 text-white">
+    <div className="min-h-screen bg-carbon-500 text-gray-100">
       {/* Header */}
-      <header className="border-b border-carbon-700 px-6 py-4 flex items-center justify-between">
+      <header className="border-b border-white/10 px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <Link href="/" className="text-xl font-bold font-mono">
             Circuit<span className="text-circuit-400">Coders</span>
           </Link>
-          <span className="text-carbon-500 text-sm">Admin</span>
+          <span className="text-gray-500 text-sm">Admin</span>
         </div>
         <div className="flex items-center gap-3">
           <button onClick={() => setShowNewCampaign(true)} className="text-sm bg-blue-600 hover:bg-blue-500 px-3 py-1.5 rounded-lg transition">
             + SEO Campaign
           </button>
-          <button onClick={() => setShowNewCustomer(true)} className="text-sm bg-carbon-700 hover:bg-carbon-600 px-3 py-1.5 rounded-lg transition">
+          <button onClick={() => setShowNewCustomer(true)} className="text-sm bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-lg transition">
             + Customer
           </button>
           <button onClick={() => setShowNewProject(true)} className="text-sm bg-circuit-500 hover:bg-circuit-400 text-carbon-900 font-semibold px-3 py-1.5 rounded-lg transition">
@@ -282,14 +282,14 @@ export default function AdminDashboard() {
       </header>
 
       {/* Tabs */}
-      <div className="border-b border-carbon-700 px-6">
+      <div className="border-b border-white/10 px-6">
         <div className="flex gap-6">
           {(['leads', 'seo', 'projects', 'messages', 'customers'] as const).map(t => (
             <button
               key={t}
               onClick={() => setTab(t)}
               className={`py-3 text-sm font-medium border-b-2 transition capitalize ${
-                tab === t ? 'border-circuit-400 text-circuit-400' : 'border-transparent text-carbon-400 hover:text-white'
+                tab === t ? 'border-circuit-400 text-circuit-400' : 'border-transparent text-gray-400 hover:text-white'
               }`}
             >
               {t === 'seo' ? 'SEO' : t}
@@ -319,17 +319,17 @@ export default function AdminDashboard() {
                   value={leadSearch}
                   onChange={e => handleLeadSearch(e.target.value)}
                   placeholder="Search by area code, city, name, or company..."
-                  className="w-full bg-carbon-800 border border-carbon-700 rounded-lg px-4 py-2.5 text-white placeholder-carbon-500 focus:border-circuit-400 focus:outline-none transition pl-10"
+                  className="w-full bg-white/10 border border-white/15 rounded-lg px-4 py-2.5 text-gray-100 placeholder-gray-500 focus:border-circuit-500 focus:outline-none caret-circuit-500 transition pl-10"
                 />
-                <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-carbon-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </div>
-              <span className="text-sm text-carbon-500">{leads.length} lead{leads.length !== 1 ? 's' : ''}</span>
+              <span className="text-sm text-gray-500">{leads.length} lead{leads.length !== 1 ? 's' : ''}</span>
             </div>
 
             {leads.length === 0 && (
-              <p className="text-carbon-500 text-center py-12">
+              <p className="text-gray-500 text-center py-12">
                 {leadSearch ? 'No leads match your search' : 'No inquiry leads yet'}
               </p>
             )}
@@ -342,7 +342,7 @@ export default function AdminDashboard() {
                       <div className="flex items-center gap-3 mb-2">
                         <h3 className="font-semibold text-white text-lg">{lead.name}</h3>
                         {lead.company && (
-                          <span className="text-sm text-carbon-400">({lead.company})</span>
+                          <span className="text-sm text-gray-400">({lead.company})</span>
                         )}
                         <span className="text-xs px-2 py-0.5 rounded-full bg-yellow-500/20 text-yellow-400 font-medium">
                           {lead.project_type}
@@ -350,26 +350,26 @@ export default function AdminDashboard() {
                       </div>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1 text-sm mb-3">
-                        <div className="flex items-center gap-2 text-carbon-300">
-                          <span className="text-carbon-500">Email:</span>
+                        <div className="flex items-center gap-2 text-gray-300">
+                          <span className="text-gray-500">Email:</span>
                           <a href={`mailto:${lead.email}`} className="text-circuit-400 hover:underline">{lead.email}</a>
                         </div>
-                        <div className="flex items-center gap-2 text-carbon-300">
-                          <span className="text-carbon-500">Budget:</span>
+                        <div className="flex items-center gap-2 text-gray-300">
+                          <span className="text-gray-500">Budget:</span>
                           <span>{lead.budget || 'Not specified'}</span>
                         </div>
-                        <div className="flex items-center gap-2 text-carbon-300">
-                          <span className="text-carbon-500">Timeline:</span>
+                        <div className="flex items-center gap-2 text-gray-300">
+                          <span className="text-gray-500">Timeline:</span>
                           <span>{lead.timeline || 'Not specified'}</span>
                         </div>
-                        <div className="flex items-center gap-2 text-carbon-300">
-                          <span className="text-carbon-500">Inquiry:</span>
+                        <div className="flex items-center gap-2 text-gray-300">
+                          <span className="text-gray-500">Inquiry:</span>
                           <span>{new Date(lead.inquiry_date).toLocaleDateString()}</span>
                         </div>
                       </div>
 
                       {lead.description && (
-                        <p className="text-sm text-carbon-400 bg-carbon-800/50 rounded-lg p-3 mb-3 line-clamp-3">
+                        <p className="text-sm text-gray-400 bg-white/5 rounded-lg p-3 mb-3 line-clamp-3">
                           {lead.description}
                         </p>
                       )}
@@ -382,7 +382,7 @@ export default function AdminDashboard() {
                             value={editingLead.area_code}
                             onChange={e => setEditingLead({ ...editingLead, area_code: e.target.value })}
                             placeholder="Area code"
-                            className="w-28 bg-carbon-800 border border-carbon-600 rounded px-3 py-1.5 text-sm text-white placeholder-carbon-500 focus:border-circuit-400 focus:outline-none"
+                            className="w-28 bg-white/10 border border-white/20 rounded px-3 py-1.5 text-sm text-gray-100 placeholder-gray-500 focus:border-circuit-500 focus:outline-none caret-circuit-500"
                             autoFocus
                           />
                           <input
@@ -390,7 +390,7 @@ export default function AdminDashboard() {
                             value={editingLead.city}
                             onChange={e => setEditingLead({ ...editingLead, city: e.target.value })}
                             placeholder="City"
-                            className="w-40 bg-carbon-800 border border-carbon-600 rounded px-3 py-1.5 text-sm text-white placeholder-carbon-500 focus:border-circuit-400 focus:outline-none"
+                            className="w-40 bg-white/10 border border-white/20 rounded px-3 py-1.5 text-sm text-gray-100 placeholder-gray-500 focus:border-circuit-500 focus:outline-none caret-circuit-500"
                           />
                           <button
                             onClick={() => saveLeadLocation(lead.id, editingLead.area_code, editingLead.city)}
@@ -400,7 +400,7 @@ export default function AdminDashboard() {
                           </button>
                           <button
                             onClick={() => setEditingLead(null)}
-                            className="text-xs text-carbon-400 hover:text-white px-2 py-1.5 transition"
+                            className="text-xs text-gray-400 hover:text-white px-2 py-1.5 transition"
                           >
                             Cancel
                           </button>
@@ -408,12 +408,12 @@ export default function AdminDashboard() {
                       ) : (
                         <div className="flex items-center gap-3 mt-2">
                           {(lead.area_code || lead.city) ? (
-                            <span className="text-sm text-carbon-300">
-                              <span className="text-carbon-500">Location:</span>{' '}
+                            <span className="text-sm text-gray-300">
+                              <span className="text-gray-500">Location:</span>{' '}
                               {[lead.area_code, lead.city].filter(Boolean).join(' — ')}
                             </span>
                           ) : (
-                            <span className="text-sm text-carbon-500 italic">No location set</span>
+                            <span className="text-sm text-gray-500 italic">No location set</span>
                           )}
                           <button
                             onClick={() => setEditingLead({ id: lead.id, area_code: lead.area_code || '', city: lead.city || '' })}
@@ -436,11 +436,11 @@ export default function AdminDashboard() {
           <div className="space-y-4">
             <div className="flex items-center justify-between">
               <h2 className="text-lg font-semibold">SEO Campaigns</h2>
-              <span className="text-sm text-carbon-500">{seoCampaigns.length} campaign{seoCampaigns.length !== 1 ? 's' : ''}</span>
+              <span className="text-sm text-gray-500">{seoCampaigns.length} campaign{seoCampaigns.length !== 1 ? 's' : ''}</span>
             </div>
 
             {seoCampaigns.length === 0 && (
-              <p className="text-carbon-500 text-center py-12">No SEO campaigns yet. Click &quot;+ SEO Campaign&quot; to create one.</p>
+              <p className="text-gray-500 text-center py-12">No SEO campaigns yet. Click &quot;+ SEO Campaign&quot; to create one.</p>
             )}
 
             <div className="grid gap-4">
@@ -453,7 +453,7 @@ export default function AdminDashboard() {
                         <select
                           value={c.status}
                           onChange={e => updateCampaign(c.id, { status: e.target.value })}
-                          className={`text-xs px-2 py-0.5 rounded-full font-medium border-0 cursor-pointer ${SEO_STATUS_COLORS[c.status] || 'bg-carbon-700 text-carbon-300'}`}
+                          className={`text-xs px-2 py-0.5 rounded-full font-medium border-0 cursor-pointer ${SEO_STATUS_COLORS[c.status] || 'bg-white/10 text-gray-300'}`}
                         >
                           {Object.keys(SEO_STATUS_COLORS).map(s => (
                             <option key={s} value={s}>{s}</option>
@@ -463,26 +463,26 @@ export default function AdminDashboard() {
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1 text-sm mb-3">
                         {c.client_name && (
-                          <div className="flex items-center gap-2 text-carbon-300">
-                            <span className="text-carbon-500">Client:</span>
+                          <div className="flex items-center gap-2 text-gray-300">
+                            <span className="text-gray-500">Client:</span>
                             <span>{c.client_name}</span>
                           </div>
                         )}
                         {c.website_url && (
-                          <div className="flex items-center gap-2 text-carbon-300">
-                            <span className="text-carbon-500">Website:</span>
+                          <div className="flex items-center gap-2 text-gray-300">
+                            <span className="text-gray-500">Website:</span>
                             <a href={c.website_url.startsWith('http') ? c.website_url : `https://${c.website_url}`} target="_blank" rel="noopener noreferrer" className="text-circuit-400 hover:underline truncate">{c.website_url}</a>
                           </div>
                         )}
                         {c.monthly_budget && (
-                          <div className="flex items-center gap-2 text-carbon-300">
-                            <span className="text-carbon-500">Budget:</span>
+                          <div className="flex items-center gap-2 text-gray-300">
+                            <span className="text-gray-500">Budget:</span>
                             <span>{c.monthly_budget}/mo</span>
                           </div>
                         )}
                         {c.start_date && (
-                          <div className="flex items-center gap-2 text-carbon-300">
-                            <span className="text-carbon-500">Started:</span>
+                          <div className="flex items-center gap-2 text-gray-300">
+                            <span className="text-gray-500">Started:</span>
                             <span>{new Date(c.start_date).toLocaleDateString()}</span>
                           </div>
                         )}
@@ -490,7 +490,7 @@ export default function AdminDashboard() {
 
                       {c.target_keywords && (
                         <div className="mb-3">
-                          <span className="text-xs text-carbon-500">Keywords:</span>
+                          <span className="text-xs text-gray-500">Keywords:</span>
                           <div className="flex flex-wrap gap-1.5 mt-1">
                             {c.target_keywords.split(',').map((kw, i) => (
                               <span key={i} className="text-xs bg-blue-500/15 text-blue-400 px-2 py-0.5 rounded-full">{kw.trim()}</span>
@@ -503,20 +503,20 @@ export default function AdminDashboard() {
                       {editingMetrics?.id === c.id ? (
                         <div className="flex items-center gap-2 flex-wrap mt-2">
                           <div className="flex items-center gap-1">
-                            <span className="text-xs text-carbon-500">DA:</span>
-                            <input type="number" value={editingMetrics.da_score} onChange={e => setEditingMetrics({ ...editingMetrics, da_score: e.target.value })} className="w-16 bg-carbon-800 border border-carbon-600 rounded px-2 py-1 text-xs text-white focus:border-circuit-400 focus:outline-none" />
+                            <span className="text-xs text-gray-500">DA:</span>
+                            <input type="number" value={editingMetrics.da_score} onChange={e => setEditingMetrics({ ...editingMetrics, da_score: e.target.value })} className="w-16 bg-white/10 border border-white/20 rounded px-2 py-1 text-xs text-gray-100 focus:border-circuit-500 focus:outline-none caret-circuit-500" />
                           </div>
                           <div className="flex items-center gap-1">
-                            <span className="text-xs text-carbon-500">Traffic:</span>
-                            <input type="number" value={editingMetrics.organic_traffic} onChange={e => setEditingMetrics({ ...editingMetrics, organic_traffic: e.target.value })} className="w-20 bg-carbon-800 border border-carbon-600 rounded px-2 py-1 text-xs text-white focus:border-circuit-400 focus:outline-none" />
+                            <span className="text-xs text-gray-500">Traffic:</span>
+                            <input type="number" value={editingMetrics.organic_traffic} onChange={e => setEditingMetrics({ ...editingMetrics, organic_traffic: e.target.value })} className="w-20 bg-white/10 border border-white/20 rounded px-2 py-1 text-xs text-gray-100 focus:border-circuit-500 focus:outline-none caret-circuit-500" />
                           </div>
                           <div className="flex items-center gap-1">
-                            <span className="text-xs text-carbon-500">Keywords:</span>
-                            <input type="number" value={editingMetrics.keywords_ranked} onChange={e => setEditingMetrics({ ...editingMetrics, keywords_ranked: e.target.value })} className="w-16 bg-carbon-800 border border-carbon-600 rounded px-2 py-1 text-xs text-white focus:border-circuit-400 focus:outline-none" />
+                            <span className="text-xs text-gray-500">Keywords:</span>
+                            <input type="number" value={editingMetrics.keywords_ranked} onChange={e => setEditingMetrics({ ...editingMetrics, keywords_ranked: e.target.value })} className="w-16 bg-white/10 border border-white/20 rounded px-2 py-1 text-xs text-gray-100 focus:border-circuit-500 focus:outline-none caret-circuit-500" />
                           </div>
                           <div className="flex items-center gap-1">
-                            <span className="text-xs text-carbon-500">Backlinks:</span>
-                            <input type="number" value={editingMetrics.backlinks} onChange={e => setEditingMetrics({ ...editingMetrics, backlinks: e.target.value })} className="w-16 bg-carbon-800 border border-carbon-600 rounded px-2 py-1 text-xs text-white focus:border-circuit-400 focus:outline-none" />
+                            <span className="text-xs text-gray-500">Backlinks:</span>
+                            <input type="number" value={editingMetrics.backlinks} onChange={e => setEditingMetrics({ ...editingMetrics, backlinks: e.target.value })} className="w-16 bg-white/10 border border-white/20 rounded px-2 py-1 text-xs text-gray-100 focus:border-circuit-500 focus:outline-none caret-circuit-500" />
                           </div>
                           <button
                             onClick={() => updateCampaign(c.id, {
@@ -529,22 +529,22 @@ export default function AdminDashboard() {
                           >
                             Save
                           </button>
-                          <button onClick={() => setEditingMetrics(null)} className="text-xs text-carbon-400 hover:text-white transition">Cancel</button>
+                          <button onClick={() => setEditingMetrics(null)} className="text-xs text-gray-400 hover:text-white transition">Cancel</button>
                         </div>
                       ) : (
                         <div className="flex items-center gap-4 mt-2">
                           <div className="flex items-center gap-4 text-sm">
                             {c.da_score != null && (
-                              <span className="text-carbon-300"><span className="text-carbon-500">DA:</span> {c.da_score}</span>
+                              <span className="text-gray-300"><span className="text-gray-500">DA:</span> {c.da_score}</span>
                             )}
                             {c.organic_traffic != null && (
-                              <span className="text-carbon-300"><span className="text-carbon-500">Traffic:</span> {c.organic_traffic.toLocaleString()}</span>
+                              <span className="text-gray-300"><span className="text-gray-500">Traffic:</span> {c.organic_traffic.toLocaleString()}</span>
                             )}
                             {c.keywords_ranked != null && (
-                              <span className="text-carbon-300"><span className="text-carbon-500">Ranked:</span> {c.keywords_ranked}</span>
+                              <span className="text-gray-300"><span className="text-gray-500">Ranked:</span> {c.keywords_ranked}</span>
                             )}
                             {c.backlinks != null && (
-                              <span className="text-carbon-300"><span className="text-carbon-500">Backlinks:</span> {c.backlinks.toLocaleString()}</span>
+                              <span className="text-gray-300"><span className="text-gray-500">Backlinks:</span> {c.backlinks.toLocaleString()}</span>
                             )}
                           </div>
                           <button
@@ -563,14 +563,14 @@ export default function AdminDashboard() {
                       )}
 
                       {c.notes && (
-                        <p className="text-sm text-carbon-400 mt-2 italic">{c.notes}</p>
+                        <p className="text-sm text-gray-400 mt-2 italic">{c.notes}</p>
                       )}
                     </div>
 
                     <div className="flex flex-col gap-2">
                       <button
                         onClick={() => setEditingCampaign(c)}
-                        className="text-xs bg-carbon-700 hover:bg-carbon-600 px-3 py-1.5 rounded-lg transition"
+                        className="text-xs bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-lg transition"
                       >
                         Edit
                       </button>
@@ -591,7 +591,7 @@ export default function AdminDashboard() {
         {/* Projects Tab */}
         {tab === 'projects' && (
           <div className="space-y-3">
-            {projects.length === 0 && <p className="text-carbon-500 text-center py-12">No projects yet</p>}
+            {projects.length === 0 && <p className="text-gray-500 text-center py-12">No projects yet</p>}
             {projects.map(p => (
               <div key={p.id} className="glass-card rounded-xl p-5 flex items-start justify-between gap-4">
                 <div className="flex-1 min-w-0">
@@ -602,7 +602,7 @@ export default function AdminDashboard() {
                         value={statusEdit.status}
                         onChange={e => setStatusEdit({ ...statusEdit, status: e.target.value })}
                         onBlur={() => updateStatus(p.id, statusEdit.status)}
-                        className="bg-carbon-800 border border-carbon-600 text-sm rounded px-2 py-0.5 text-white"
+                        className="bg-white/10 border border-white/20 text-sm rounded px-2 py-0.5 text-gray-100"
                         autoFocus
                       >
                         {Object.keys(STATUS_COLORS).map(s => (
@@ -612,7 +612,7 @@ export default function AdminDashboard() {
                     ) : (
                       <button
                         onClick={() => setStatusEdit({ id: p.id, status: p.status })}
-                        className={`text-xs px-2 py-0.5 rounded-full font-medium ${STATUS_COLORS[p.status] || 'bg-carbon-700 text-carbon-300'}`}
+                        className={`text-xs px-2 py-0.5 rounded-full font-medium ${STATUS_COLORS[p.status] || 'bg-white/10 text-gray-300'}`}
                       >
                         {p.status.replace('_', ' ')}
                       </button>
@@ -623,14 +623,14 @@ export default function AdminDashboard() {
                       </span>
                     )}
                   </div>
-                  <p className="text-sm text-carbon-400">
+                  <p className="text-sm text-gray-400">
                     {p.customer_name} {p.company && `(${p.company})`} &middot; {p.project_type} &middot; {p.budget || 'No budget'} &middot; {p.timeline || 'No timeline'}
                   </p>
-                  <p className="text-xs text-carbon-500 mt-1">Updated {new Date(p.updated_at).toLocaleDateString()}</p>
+                  <p className="text-xs text-gray-500 mt-1">Updated {new Date(p.updated_at).toLocaleDateString()}</p>
                 </div>
                 <button
                   onClick={() => setShowUpdateModal(p.id)}
-                  className="text-sm bg-carbon-700 hover:bg-carbon-600 px-3 py-1.5 rounded-lg transition whitespace-nowrap"
+                  className="text-sm bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-lg transition whitespace-nowrap"
                 >
                   Post Update
                 </button>
@@ -642,7 +642,7 @@ export default function AdminDashboard() {
         {/* Messages Tab */}
         {tab === 'messages' && (
           <div className="space-y-2">
-            {messages.length === 0 && <p className="text-carbon-500 text-center py-12">No messages yet</p>}
+            {messages.length === 0 && <p className="text-gray-500 text-center py-12">No messages yet</p>}
             {messages.map(m => (
               <div
                 key={m.id}
@@ -654,14 +654,14 @@ export default function AdminDashboard() {
                       {m.sender}
                     </span>
                     <span className="text-sm font-medium text-white">{m.customer_name}</span>
-                    {m.project_title && <span className="text-xs text-carbon-500">re: {m.project_title}</span>}
+                    {m.project_title && <span className="text-xs text-gray-500">re: {m.project_title}</span>}
                   </div>
-                  <p className="text-sm text-carbon-300 line-clamp-2">{m.content}</p>
-                  <p className="text-xs text-carbon-500 mt-1">{new Date(m.created_at).toLocaleString()}</p>
+                  <p className="text-sm text-gray-300 line-clamp-2">{m.content}</p>
+                  <p className="text-xs text-gray-500 mt-1">{new Date(m.created_at).toLocaleString()}</p>
                 </div>
                 <div className="flex gap-2">
                   {!m.read && m.sender === 'customer' && (
-                    <button onClick={() => markRead([m.id])} className="text-xs text-carbon-400 hover:text-white transition">
+                    <button onClick={() => markRead([m.id])} className="text-xs text-gray-400 hover:text-white transition">
                       Mark read
                     </button>
                   )}
@@ -679,16 +679,16 @@ export default function AdminDashboard() {
         {/* Customers Tab */}
         {tab === 'customers' && (
           <div className="space-y-3">
-            {customers.length === 0 && <p className="text-carbon-500 text-center py-12">No customers yet</p>}
+            {customers.length === 0 && <p className="text-gray-500 text-center py-12">No customers yet</p>}
             {customers.map(c => (
               <div key={c.id} className="glass-card rounded-xl p-4 flex items-center justify-between">
                 <div>
                   <div className="flex items-center gap-2">
                     <h3 className="font-medium text-white">{c.name}</h3>
-                    {c.company && <span className="text-xs text-carbon-500">({c.company})</span>}
+                    {c.company && <span className="text-xs text-gray-500">({c.company})</span>}
                   </div>
-                  <p className="text-sm text-carbon-400">{c.email}</p>
-                  <p className="text-xs text-carbon-500 mt-1">{c.project_count} project{c.project_count !== 1 ? 's' : ''} &middot; Joined {new Date(c.created_at).toLocaleDateString()}</p>
+                  <p className="text-sm text-gray-400">{c.email}</p>
+                  <p className="text-xs text-gray-500 mt-1">{c.project_count} project{c.project_count !== 1 ? 's' : ''} &middot; Joined {new Date(c.created_at).toLocaleDateString()}</p>
                 </div>
                 {c.unread_messages > 0 && (
                   <span className="text-xs bg-red-500/20 text-red-400 px-2 py-1 rounded-full">
@@ -720,11 +720,11 @@ export default function AdminDashboard() {
         <Modal onClose={() => setShowNewProject(false)} title="Create Project">
           <form onSubmit={addProject} className="space-y-3">
             <div>
-              <label className="text-sm text-carbon-300 block mb-1">Customer</label>
+              <label className="text-sm text-gray-300 block mb-1">Customer</label>
               <select
                 value={newProject.customer_id}
                 onChange={e => setNewProject({ ...newProject, customer_id: e.target.value })}
-                className="w-full bg-carbon-800 border border-carbon-700 rounded-lg px-4 py-2.5 text-white focus:border-circuit-400 focus:outline-none"
+                className="w-full bg-white/10 border border-white/15 rounded-lg px-4 py-2.5 text-gray-100 focus:border-circuit-500 focus:outline-none caret-circuit-500"
                 required
               >
                 <option value="">Select customer...</option>
@@ -733,21 +733,21 @@ export default function AdminDashboard() {
             </div>
             <Input label="Title" value={newProject.title} onChange={v => setNewProject({ ...newProject, title: v })} required />
             <div>
-              <label className="text-sm text-carbon-300 block mb-1">Description</label>
+              <label className="text-sm text-gray-300 block mb-1">Description</label>
               <textarea
                 value={newProject.description}
                 onChange={e => setNewProject({ ...newProject, description: e.target.value })}
-                className="w-full bg-carbon-800 border border-carbon-700 rounded-lg px-4 py-2.5 text-white focus:border-circuit-400 focus:outline-none resize-none"
+                className="w-full bg-white/10 border border-white/15 rounded-lg px-4 py-2.5 text-gray-100 focus:border-circuit-500 focus:outline-none caret-circuit-500 resize-none"
                 rows={3}
               />
             </div>
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <label className="text-sm text-carbon-300 block mb-1">Type</label>
+                <label className="text-sm text-gray-300 block mb-1">Type</label>
                 <select
                   value={newProject.project_type}
                   onChange={e => setNewProject({ ...newProject, project_type: e.target.value })}
-                  className="w-full bg-carbon-800 border border-carbon-700 rounded-lg px-4 py-2.5 text-white focus:border-circuit-400 focus:outline-none"
+                  className="w-full bg-white/10 border border-white/15 rounded-lg px-4 py-2.5 text-gray-100 focus:border-circuit-500 focus:outline-none caret-circuit-500"
                 >
                   <option value="hardware">Hardware</option>
                   <option value="software">Software</option>
@@ -771,21 +771,21 @@ export default function AdminDashboard() {
           <div className="space-y-3">
             <Input label="Title" value={newUpdate.title} onChange={v => setNewUpdate({ ...newUpdate, title: v })} required />
             <div>
-              <label className="text-sm text-carbon-300 block mb-1">Update</label>
+              <label className="text-sm text-gray-300 block mb-1">Update</label>
               <textarea
                 value={newUpdate.content}
                 onChange={e => setNewUpdate({ ...newUpdate, content: e.target.value })}
-                className="w-full bg-carbon-800 border border-carbon-700 rounded-lg px-4 py-2.5 text-white focus:border-circuit-400 focus:outline-none resize-none"
+                className="w-full bg-white/10 border border-white/15 rounded-lg px-4 py-2.5 text-gray-100 focus:border-circuit-500 focus:outline-none caret-circuit-500 resize-none"
                 rows={4}
                 placeholder="What's new on this project..."
               />
             </div>
             <div>
-              <label className="text-sm text-carbon-300 block mb-1">Type</label>
+              <label className="text-sm text-gray-300 block mb-1">Type</label>
               <select
                 value={newUpdate.update_type}
                 onChange={e => setNewUpdate({ ...newUpdate, update_type: e.target.value })}
-                className="w-full bg-carbon-800 border border-carbon-700 rounded-lg px-4 py-2.5 text-white focus:border-circuit-400 focus:outline-none"
+                className="w-full bg-white/10 border border-white/15 rounded-lg px-4 py-2.5 text-gray-100 focus:border-circuit-500 focus:outline-none caret-circuit-500"
               >
                 <option value="progress">Progress</option>
                 <option value="milestone">Milestone</option>
@@ -811,11 +811,11 @@ export default function AdminDashboard() {
             <Input label="Client Name" value={newCampaign.client_name} onChange={v => setNewCampaign({ ...newCampaign, client_name: v })} />
             <Input label="Website URL" value={newCampaign.website_url} onChange={v => setNewCampaign({ ...newCampaign, website_url: v })} />
             <div>
-              <label className="text-sm text-carbon-300 block mb-1">Target Keywords (comma-separated)</label>
+              <label className="text-sm text-gray-300 block mb-1">Target Keywords (comma-separated)</label>
               <textarea
                 value={newCampaign.target_keywords}
                 onChange={e => setNewCampaign({ ...newCampaign, target_keywords: e.target.value })}
-                className="w-full bg-carbon-800 border border-carbon-700 rounded-lg px-4 py-2.5 text-white placeholder-carbon-500 focus:border-circuit-400 focus:outline-none resize-none"
+                className="w-full bg-white/10 border border-white/15 rounded-lg px-4 py-2.5 text-gray-100 placeholder-gray-500 focus:border-circuit-500 focus:outline-none caret-circuit-500 resize-none"
                 rows={2}
                 placeholder="seo services, web development, circuit board design..."
               />
@@ -825,11 +825,11 @@ export default function AdminDashboard() {
               <Input label="Start Date" type="date" value={newCampaign.start_date} onChange={v => setNewCampaign({ ...newCampaign, start_date: v })} />
             </div>
             <div>
-              <label className="text-sm text-carbon-300 block mb-1">Notes</label>
+              <label className="text-sm text-gray-300 block mb-1">Notes</label>
               <textarea
                 value={newCampaign.notes}
                 onChange={e => setNewCampaign({ ...newCampaign, notes: e.target.value })}
-                className="w-full bg-carbon-800 border border-carbon-700 rounded-lg px-4 py-2.5 text-white placeholder-carbon-500 focus:border-circuit-400 focus:outline-none resize-none"
+                className="w-full bg-white/10 border border-white/15 rounded-lg px-4 py-2.5 text-gray-100 placeholder-gray-500 focus:border-circuit-500 focus:outline-none caret-circuit-500 resize-none"
                 rows={2}
               />
             </div>
@@ -856,11 +856,11 @@ export default function AdminDashboard() {
             <Input label="Client Name" value={editingCampaign.client_name || ''} onChange={v => setEditingCampaign({ ...editingCampaign, client_name: v })} />
             <Input label="Website URL" value={editingCampaign.website_url || ''} onChange={v => setEditingCampaign({ ...editingCampaign, website_url: v })} />
             <div>
-              <label className="text-sm text-carbon-300 block mb-1">Target Keywords (comma-separated)</label>
+              <label className="text-sm text-gray-300 block mb-1">Target Keywords (comma-separated)</label>
               <textarea
                 value={editingCampaign.target_keywords || ''}
                 onChange={e => setEditingCampaign({ ...editingCampaign, target_keywords: e.target.value })}
-                className="w-full bg-carbon-800 border border-carbon-700 rounded-lg px-4 py-2.5 text-white focus:border-circuit-400 focus:outline-none resize-none"
+                className="w-full bg-white/10 border border-white/15 rounded-lg px-4 py-2.5 text-gray-100 focus:border-circuit-500 focus:outline-none caret-circuit-500 resize-none"
                 rows={2}
               />
             </div>
@@ -869,11 +869,11 @@ export default function AdminDashboard() {
               <Input label="Start Date" type="date" value={editingCampaign.start_date || ''} onChange={v => setEditingCampaign({ ...editingCampaign, start_date: v })} />
             </div>
             <div>
-              <label className="text-sm text-carbon-300 block mb-1">Notes</label>
+              <label className="text-sm text-gray-300 block mb-1">Notes</label>
               <textarea
                 value={editingCampaign.notes || ''}
                 onChange={e => setEditingCampaign({ ...editingCampaign, notes: e.target.value })}
-                className="w-full bg-carbon-800 border border-carbon-700 rounded-lg px-4 py-2.5 text-white focus:border-circuit-400 focus:outline-none resize-none"
+                className="w-full bg-white/10 border border-white/15 rounded-lg px-4 py-2.5 text-gray-100 focus:border-circuit-500 focus:outline-none caret-circuit-500 resize-none"
                 rows={2}
               />
             </div>
@@ -888,13 +888,13 @@ export default function AdminDashboard() {
       {showReplyModal && (
         <Modal onClose={() => setShowReplyModal(null)} title={`Reply to ${showReplyModal.customer_name}`}>
           <div className="space-y-3">
-            <div className="bg-carbon-800 rounded-lg p-3 text-sm text-carbon-300 border-l-2 border-carbon-600">
+            <div className="bg-white/5 rounded-lg p-3 text-sm text-gray-300 border-l-2 border-circuit-500/30">
               {showReplyModal.content}
             </div>
             <textarea
               value={replyContent}
               onChange={e => setReplyContent(e.target.value)}
-              className="w-full bg-carbon-800 border border-carbon-700 rounded-lg px-4 py-2.5 text-white focus:border-circuit-400 focus:outline-none resize-none"
+              className="w-full bg-white/10 border border-white/15 rounded-lg px-4 py-2.5 text-gray-100 focus:border-circuit-500 focus:outline-none caret-circuit-500 resize-none"
               rows={4}
               placeholder="Type your reply..."
               autoFocus
@@ -915,10 +915,10 @@ export default function AdminDashboard() {
 function Modal({ children, onClose, title }: { children: React.ReactNode; onClose: () => void; title: string }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4" onClick={onClose}>
-      <div className="bg-carbon-800 border border-carbon-700 rounded-2xl p-6 w-full max-w-md" onClick={e => e.stopPropagation()}>
+      <div className="bg-carbon-400 border border-white/15 rounded-2xl glow-border p-6 w-full max-w-md" onClick={e => e.stopPropagation()}>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-semibold text-white">{title}</h2>
-          <button onClick={onClose} className="text-carbon-400 hover:text-white text-xl">&times;</button>
+          <button onClick={onClose} className="text-gray-400 hover:text-white text-xl">&times;</button>
         </div>
         {children}
       </div>
@@ -931,12 +931,12 @@ function Input({ label, value, onChange, type = 'text', required = false }: {
 }) {
   return (
     <div>
-      <label className="text-sm text-carbon-300 block mb-1">{label}</label>
+      <label className="text-sm text-gray-300 block mb-1">{label}</label>
       <input
         type={type}
         value={value}
         onChange={e => onChange(e.target.value)}
-        className="w-full bg-carbon-800 border border-carbon-700 rounded-lg px-4 py-2.5 text-white placeholder-carbon-500 focus:border-circuit-400 focus:outline-none transition"
+        className="w-full bg-white/10 border border-white/15 rounded-lg px-4 py-2.5 text-gray-100 placeholder-gray-500 focus:border-circuit-500 focus:outline-none caret-circuit-500 transition"
         required={required}
       />
     </div>
