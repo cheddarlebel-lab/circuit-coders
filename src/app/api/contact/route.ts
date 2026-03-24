@@ -65,7 +65,7 @@ export async function POST(req: Request) {
     console.error("Contact form error:", error);
     const message = error instanceof Error ? error.message : String(error);
     return NextResponse.json(
-      { error: "Failed to send inquiry", detail: message, hasDbUrl: !!process.env.TURSO_DATABASE_URL, hasToken: !!process.env.TURSO_AUTH_TOKEN },
+      { error: "Failed to send inquiry", detail: message, dbUrl: (process.env.TURSO_DATABASE_URL || '').slice(0, 30), hasToken: !!process.env.TURSO_AUTH_TOKEN },
       { status: 500 }
     );
   }
