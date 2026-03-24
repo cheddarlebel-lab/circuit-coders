@@ -29,6 +29,8 @@ export async function ensureDb(): Promise<Client> {
         name TEXT NOT NULL,
         email TEXT UNIQUE NOT NULL,
         company TEXT,
+        area_code TEXT,
+        city TEXT,
         magic_token TEXT,
         token_expires_at INTEGER,
         created_at TEXT DEFAULT (datetime('now'))
@@ -66,6 +68,9 @@ export async function ensureDb(): Promise<Client> {
         created_at TEXT DEFAULT (datetime('now'))
       );
     `);
+    // Migrations for existing tables
+    try { await db.execute('ALTER TABLE customers ADD COLUMN area_code TEXT'); } catch { /* already exists */ }
+    try { await db.execute('ALTER TABLE customers ADD COLUMN city TEXT'); } catch { /* already exists */ }
     initialized = true;
   }
   return db;

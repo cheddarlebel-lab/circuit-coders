@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
 
   const db = await ensureDb();
   try {
-    const result = await db.execute({ sql: 'INSERT INTO customers (name, email, company) VALUES (?, ?, ?)', args: [name, email, company] });
+    const result = await db.execute({ sql: 'INSERT INTO customers (name, email, company) VALUES (?, ?, ?)', args: [name, email, company ?? null] });
     return NextResponse.json({ id: Number(result.lastInsertRowid) });
   } catch {
     return NextResponse.json({ error: 'Customer with that email already exists' }, { status: 409 });

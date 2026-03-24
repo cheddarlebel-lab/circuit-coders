@@ -14,7 +14,7 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
   if (fields.length === 0) return NextResponse.json({ error: 'No valid fields' }, { status: 400 });
 
   const sets = fields.map(f => `${f} = ?`).join(', ');
-  const values = fields.map(f => updates[f]);
+  const values = fields.map(f => updates[f] ?? null);
 
   await db.execute({ sql: `UPDATE projects SET ${sets}, updated_at = datetime('now') WHERE id = ?`, args: [...values, id] });
   return NextResponse.json({ success: true });

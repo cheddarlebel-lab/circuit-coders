@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
     sql: `
     INSERT INTO projects (customer_id, title, description, project_type, status, budget, timeline)
     VALUES (?, ?, ?, ?, ?, ?, ?)
-  `, args: [customer_id, title, description, project_type || 'software', status || 'inquiry', budget, timeline]
+  `, args: [customer_id, title, description ?? null, project_type || 'software', status || 'inquiry', budget ?? null, timeline ?? null]
   });
 
   return NextResponse.json({ id: Number(result.lastInsertRowid) });

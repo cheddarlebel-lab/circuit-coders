@@ -40,6 +40,24 @@ interface Customer {
   created_at: string;
 }
 
+interface Lead {
+  id: number;
+  name: string;
+  email: string;
+  company: string;
+  area_code: string | null;
+  city: string | null;
+  created_at: string;
+  project_id: number;
+  project_title: string;
+  project_type: string;
+  budget: string;
+  timeline: string;
+  status: string;
+  description: string;
+  inquiry_date: string;
+}
+
 const STATUS_COLORS: Record<string, string> = {
   inquiry: 'bg-yellow-500/20 text-yellow-400',
   quoted: 'bg-blue-500/20 text-blue-400',
@@ -50,10 +68,13 @@ const STATUS_COLORS: Record<string, string> = {
 };
 
 export default function AdminDashboard() {
-  const [tab, setTab] = useState<'projects' | 'messages' | 'customers'>('projects');
+  const [tab, setTab] = useState<'leads' | 'projects' | 'messages' | 'customers'>('leads');
   const [projects, setProjects] = useState<Project[]>([]);
   const [messages, setMessages] = useState<Message[]>([]);
   const [customers, setCustomers] = useState<Customer[]>([]);
+  const [leads, setLeads] = useState<Lead[]>([]);
+  const [leadSearch, setLeadSearch] = useState('');
+  const [editingLead, setEditingLead] = useState<{ id: number; area_code: string; city: string } | null>(null);
   const [showNewCustomer, setShowNewCustomer] = useState(false);
   const [showNewProject, setShowNewProject] = useState(false);
   const [showUpdateModal, setShowUpdateModal] = useState<number | null>(null);
@@ -64,6 +85,12 @@ export default function AdminDashboard() {
   const [replyContent, setReplyContent] = useState('');
   const [statusEdit, setStatusEdit] = useState<{ id: number; status: string } | null>(null);
 
+  const fetchLeads = useCallback(async (search = '') => {
+    const q = search ? `?search=${encodeURIComponent(search)}` : '';
+    const res = await fetch(`/api/admin/leads${q}`);
+    if (res.ok) setLeads(await res.json());
+  }, []);
+
   const fetchAll = useCallback(async () => {
     const [pRes, mRes, cRes] = await Promise.all([
       fetch('/api/admin/projects'),
@@ -73,7 +100,8 @@ export default function AdminDashboard() {
     if (pRes.ok) setProjects(await pRes.json());
     if (mRes.ok) setMessages(await mRes.json());
     if (cRes.ok) setCustomers(await cRes.json());
-  }, []);
+    fetchLeads();
+  }, [fetchLeads]);
 
   useEffect(() => { fetchAll(); }, [fetchAll]);
 
@@ -146,6 +174,21 @@ export default function AdminDashboard() {
     fetchAll();
   }
 
+  async function saveLeadLocation(customerId: number, area_code: string, city: string) {
+    await fetch('/api/admin/leads', {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ customer_id: customerId, area_code, city }),
+    });
+    setEditingLead(null);
+    fetchLeads(leadSearch);
+  }
+
+  function handleLeadSearch(value: string) {
+    setLeadSearch(value);
+    fetchLeads(value);
+  }
+
   const unreadCount = messages.filter(m => !m.read && m.sender === 'customer').length;
 
   return (
@@ -171,7 +214,7 @@ export default function AdminDashboard() {
       {/* Tabs */}
       <div className="border-b border-carbon-700 px-6">
         <div className="flex gap-6">
-          {(['projects', 'messages', 'customers'] as const).map(t => (
+          {(['leads', 'projects', 'messages', 'customers'] as const).map(t => (
             <button
               key={t}
               onClick={() => setTab(t)}
@@ -180,6 +223,9 @@ export default function AdminDashboard() {
               }`}
             >
               {t}
+              {t === 'leads' && leads.length > 0 && (
+                <span className="ml-2 bg-yellow-500 text-carbon-900 text-xs px-1.5 py-0.5 rounded-full font-semibold">{leads.length}</span>
+              )}
               {t === 'messages' && unreadCount > 0 && (
                 <span className="ml-2 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">{unreadCount}</span>
               )}
@@ -190,6 +236,128 @@ export default function AdminDashboard() {
 
       {/* Content */}
       <div className="p-6 max-w-6xl mx-auto">
+        {/* Leads Tab */}
+        {tab === 'leads' && (
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <div className="relative flex-1 max-w-sm">
+                <input
+                  type="text"
+                  value={leadSearch}
+                  onChange={e => handleLeadSearch(e.target.value)}
+                  placeholder="Search by area code, city, name, or company..."
+                  className="w-full bg-carbon-800 border border-carbon-700 rounded-lg px-4 py-2.5 text-white placeholder-carbon-500 focus:border-circuit-400 focus:outline-none transition pl-10"
+                />
+                <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-carbon-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+              <span className="text-sm text-carbon-500">{leads.length} lead{leads.length !== 1 ? 's' : ''}</span>
+            </div>
+
+            {leads.length === 0 && (
+              <p className="text-carbon-500 text-center py-12">
+                {leadSearch ? 'No leads match your search' : 'No inquiry leads yet'}
+              </p>
+            )}
+
+            <div className="grid gap-3">
+              {leads.map(lead => (
+                <div key={`${lead.id}-${lead.project_id}`} className="glass-card rounded-xl p-5">
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-3 mb-2">
+                        <h3 className="font-semibold text-white text-lg">{lead.name}</h3>
+                        {lead.company && (
+                          <span className="text-sm text-carbon-400">({lead.company})</span>
+                        )}
+                        <span className="text-xs px-2 py-0.5 rounded-full bg-yellow-500/20 text-yellow-400 font-medium">
+                          {lead.project_type}
+                        </span>
+                      </div>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1 text-sm mb-3">
+                        <div className="flex items-center gap-2 text-carbon-300">
+                          <span className="text-carbon-500">Email:</span>
+                          <a href={`mailto:${lead.email}`} className="text-circuit-400 hover:underline">{lead.email}</a>
+                        </div>
+                        <div className="flex items-center gap-2 text-carbon-300">
+                          <span className="text-carbon-500">Budget:</span>
+                          <span>{lead.budget || 'Not specified'}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-carbon-300">
+                          <span className="text-carbon-500">Timeline:</span>
+                          <span>{lead.timeline || 'Not specified'}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-carbon-300">
+                          <span className="text-carbon-500">Inquiry:</span>
+                          <span>{new Date(lead.inquiry_date).toLocaleDateString()}</span>
+                        </div>
+                      </div>
+
+                      {lead.description && (
+                        <p className="text-sm text-carbon-400 bg-carbon-800/50 rounded-lg p-3 mb-3 line-clamp-3">
+                          {lead.description}
+                        </p>
+                      )}
+
+                      {/* Area Code / City */}
+                      {editingLead?.id === lead.id ? (
+                        <div className="flex items-center gap-2 mt-2">
+                          <input
+                            type="text"
+                            value={editingLead.area_code}
+                            onChange={e => setEditingLead({ ...editingLead, area_code: e.target.value })}
+                            placeholder="Area code"
+                            className="w-28 bg-carbon-800 border border-carbon-600 rounded px-3 py-1.5 text-sm text-white placeholder-carbon-500 focus:border-circuit-400 focus:outline-none"
+                            autoFocus
+                          />
+                          <input
+                            type="text"
+                            value={editingLead.city}
+                            onChange={e => setEditingLead({ ...editingLead, city: e.target.value })}
+                            placeholder="City"
+                            className="w-40 bg-carbon-800 border border-carbon-600 rounded px-3 py-1.5 text-sm text-white placeholder-carbon-500 focus:border-circuit-400 focus:outline-none"
+                          />
+                          <button
+                            onClick={() => saveLeadLocation(lead.id, editingLead.area_code, editingLead.city)}
+                            className="text-xs bg-circuit-500 hover:bg-circuit-400 text-carbon-900 font-semibold px-3 py-1.5 rounded transition"
+                          >
+                            Save
+                          </button>
+                          <button
+                            onClick={() => setEditingLead(null)}
+                            className="text-xs text-carbon-400 hover:text-white px-2 py-1.5 transition"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      ) : (
+                        <div className="flex items-center gap-3 mt-2">
+                          {(lead.area_code || lead.city) ? (
+                            <span className="text-sm text-carbon-300">
+                              <span className="text-carbon-500">Location:</span>{' '}
+                              {[lead.area_code, lead.city].filter(Boolean).join(' — ')}
+                            </span>
+                          ) : (
+                            <span className="text-sm text-carbon-500 italic">No location set</span>
+                          )}
+                          <button
+                            onClick={() => setEditingLead({ id: lead.id, area_code: lead.area_code || '', city: lead.city || '' })}
+                            className="text-xs text-circuit-400 hover:text-circuit-300 transition"
+                          >
+                            {lead.area_code || lead.city ? 'Edit' : '+ Add location'}
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Projects Tab */}
         {tab === 'projects' && (
           <div className="space-y-3">
