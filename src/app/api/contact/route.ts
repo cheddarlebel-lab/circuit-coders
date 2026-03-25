@@ -7,7 +7,11 @@ export const dynamic = "force-dynamic";
 export async function POST(req: Request) {
   try {
     const body = await req.json();
+    console.log("Contact form submission:", JSON.stringify({ name: body.name, email: body.email, projectType: body.projectType }));
     const { name, email, company, projectType, budget, timeline, description, components } = body;
+    if (!name || !email) {
+      return NextResponse.json({ error: "Name and email are required" }, { status: 400 });
+    }
 
     // Save to database — create customer if new, then create project + initial message
     const db = await ensureDb();

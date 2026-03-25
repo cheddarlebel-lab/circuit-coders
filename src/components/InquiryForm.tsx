@@ -94,10 +94,14 @@ export default function InquiryForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-      if (!res.ok) throw new Error("Failed to send");
+      if (!res.ok) {
+        const body = await res.text();
+        throw new Error(`Server error ${res.status}: ${body}`);
+      }
       setSubmitted(true);
-    } catch {
-      setError("Something went wrong. Please try again or email us directly.");
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      setError(`Something went wrong: ${msg}. Please try again or email us directly.`);
     } finally {
       setSubmitting(false);
     }
