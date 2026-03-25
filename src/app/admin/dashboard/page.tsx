@@ -212,6 +212,16 @@ export default function AdminDashboard() {
     fetchAll();
   }
 
+  async function deleteCustomer(id: number) {
+    if (!confirm('Delete this customer and all their projects/messages?')) return;
+    await fetch('/api/admin/customers', {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id }),
+    });
+    fetchAll();
+  }
+
   async function deleteMessage(id: number) {
     await fetch('/api/admin/messages', {
       method: 'DELETE',
@@ -222,7 +232,6 @@ export default function AdminDashboard() {
   }
 
   async function deleteProject(id: number) {
-    if (!confirm('Delete this project and all its messages/updates?')) return;
     await fetch('/api/admin/projects', {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
@@ -755,7 +764,7 @@ export default function AdminDashboard() {
                     Post Update
                   </button>
                   <button
-                    onClick={() => deleteProject(p.id)}
+                    onClick={() => { if (confirm('Delete this project and all its messages/updates?')) deleteProject(p.id); }}
                     className="text-red-400/60 hover:text-red-400 transition p-1.5"
                     title="Delete project"
                   >
@@ -821,11 +830,20 @@ export default function AdminDashboard() {
                   <p className="text-sm text-gray-400">{c.email}</p>
                   <p className="text-xs text-gray-500 mt-1">{c.project_count} project{c.project_count !== 1 ? 's' : ''} &middot; Joined {new Date(c.created_at).toLocaleDateString()}</p>
                 </div>
-                {c.unread_messages > 0 && (
-                  <span className="text-xs bg-red-500/20 text-red-400 px-2 py-1 rounded-full">
-                    {c.unread_messages} unread
-                  </span>
-                )}
+                <div className="flex items-center gap-2">
+                  {c.unread_messages > 0 && (
+                    <span className="text-xs bg-red-500/20 text-red-400 px-2 py-1 rounded-full">
+                      {c.unread_messages} unread
+                    </span>
+                  )}
+                  <button
+                    onClick={() => deleteCustomer(c.id)}
+                    className="text-red-400/60 hover:text-red-400 transition p-1.5"
+                    title="Delete customer"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+                  </button>
+                </div>
               </div>
             ))}
           </div>

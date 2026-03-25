@@ -20,6 +20,25 @@ export async function GET() {
   return NextResponse.json(customers);
 }
 
+export async function DELETE(req: NextRequest) {
+  const session = await getSession('admin');
+  if (!session) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+
+  const { id } = await req.json();
+  if (!id) return NextResponse.json({ error: 'id required' }, { status: 400 });
+
+  const db = await ensureDb();
+  // Get all projects for this customer to cascade deletes
+  const projects = (await db.execute({ sql: 'SELECT id FROM projects WHERE customer_id = ?', args: [id] })).rows;
+  for (const p of projects) {
+    await db.execute({ sql: 'DELETE FROM project_updates WHERE project_id = ?', args: [p.id] });
+  }
+  await db.execute({ sql: 'DELETE FROM messages WHERE customer_id = ?', args: [id] });
+  await db.execute({ sql: 'DELETE FROM projects WHERE customer_id = ?', args: [id] });
+  await db.execute({ sql: 'DELETE FROM customers WHERE id = ?', args: [id] });
+  return NextResponse.json({ success: true });
+}
+
 export async function POST(req: NextRequest) {
   const session = await getSession('admin');
   if (!session) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
