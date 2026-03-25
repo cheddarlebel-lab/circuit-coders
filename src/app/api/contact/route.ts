@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { ensureDb } from "@/lib/db";
+import { onInquiryCreated } from "@/lib/automation";
 
 export const dynamic = "force-dynamic";
 
@@ -63,6 +64,9 @@ export async function POST(req: Request) {
     } catch (emailError) {
       console.error("Email notification failed (inquiry still saved):", emailError);
     }
+
+    // Send confirmation email to customer
+    onInquiryCreated(db, customer.id, `${projectType} project — ${name}`, email, name).catch(e => console.error('Confirmation email error:', e));
 
     return NextResponse.json({ success: true });
   } catch (error) {

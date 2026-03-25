@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ensureDb } from '@/lib/db';
 import { getSession } from '@/lib/auth';
+import { onTaskToggled } from '@/lib/automation';
 
 export async function GET(_req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const session = await getSession('admin');
@@ -38,7 +39,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
   return NextResponse.json({ id: Number(result.lastInsertRowid) });
 }
 
-export async function PATCH(req: NextRequest) {
+export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const session = await getSession('admin');
   if (!session) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
@@ -65,6 +66,12 @@ export async function PATCH(req: NextRequest) {
 
   args.push(task_id);
   await db.execute({ sql: `UPDATE project_tasks SET ${sets.join(', ')} WHERE id = ?`, args });
+
+  // Trigger automation on status change (phase completion, project completion)
+  if (status !== undefined) {
+    const { id } = await params;
+    onTaskToggled(db, Number(id)).catch(e => console.error('Task automation error:', e));
+  }
 
   return NextResponse.json({ success: true });
 }
