@@ -221,6 +221,16 @@ export default function AdminDashboard() {
     fetchAll();
   }
 
+  async function deleteProject(id: number) {
+    if (!confirm('Delete this project and all its messages/updates?')) return;
+    await fetch('/api/admin/projects', {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id }),
+    });
+    fetchAll();
+  }
+
   async function updateLeadStatus(projectId: number, status: string) {
     await fetch(`/api/admin/projects/${projectId}`, {
       method: 'PATCH',
@@ -730,12 +740,21 @@ export default function AdminDashboard() {
                   </p>
                   <p className="text-xs text-gray-500 mt-1">Updated {new Date(p.updated_at).toLocaleDateString()}</p>
                 </div>
-                <button
-                  onClick={() => setShowUpdateModal(p.id)}
-                  className="text-sm bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-lg transition whitespace-nowrap"
-                >
-                  Post Update
-                </button>
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => setShowUpdateModal(p.id)}
+                    className="text-sm bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-lg transition whitespace-nowrap"
+                  >
+                    Post Update
+                  </button>
+                  <button
+                    onClick={() => deleteProject(p.id)}
+                    className="text-red-400/60 hover:text-red-400 transition p-1.5"
+                    title="Delete project"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+                  </button>
+                </div>
               </div>
             ))}
           </div>
