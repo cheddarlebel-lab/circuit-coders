@@ -13,8 +13,8 @@ export async function GET(req: NextRequest) {
     SELECT c.id, c.name, c.email, c.company, c.area_code, c.city, c.created_at,
       p.id as project_id, p.title as project_title, p.project_type, p.budget, p.timeline, p.status, p.description, p.created_at as inquiry_date
     FROM customers c
-    JOIN projects p ON p.customer_id = c.id AND p.status = 'inquiry'
-    ORDER BY p.created_at DESC
+    JOIN projects p ON p.customer_id = c.id
+    ORDER BY CASE p.status WHEN 'inquiry' THEN 0 WHEN 'quoted' THEN 1 WHEN 'in_progress' THEN 2 WHEN 'review' THEN 3 WHEN 'completed' THEN 4 ELSE 5 END, p.created_at DESC
   `;
 
   let rows;
@@ -23,9 +23,9 @@ export async function GET(req: NextRequest) {
       SELECT c.id, c.name, c.email, c.company, c.area_code, c.city, c.created_at,
         p.id as project_id, p.title as project_title, p.project_type, p.budget, p.timeline, p.status, p.description, p.created_at as inquiry_date
       FROM customers c
-      JOIN projects p ON p.customer_id = c.id AND p.status = 'inquiry'
+      JOIN projects p ON p.customer_id = c.id
       WHERE c.area_code LIKE ? OR c.city LIKE ? OR c.name LIKE ? OR c.company LIKE ?
-      ORDER BY p.created_at DESC
+      ORDER BY CASE p.status WHEN 'inquiry' THEN 0 WHEN 'quoted' THEN 1 WHEN 'in_progress' THEN 2 WHEN 'review' THEN 3 WHEN 'completed' THEN 4 ELSE 5 END, p.created_at DESC
     `;
     const pattern = `%${search.trim()}%`;
     rows = (await db.execute({ sql, args: [pattern, pattern, pattern, pattern] })).rows;

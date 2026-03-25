@@ -47,3 +47,15 @@ export async function PATCH(req: NextRequest) {
 
   return NextResponse.json({ success: true });
 }
+
+export async function DELETE(req: NextRequest) {
+  const session = await getSession('admin');
+  if (!session) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+
+  const { id } = await req.json();
+  if (!id) return NextResponse.json({ error: 'id required' }, { status: 400 });
+
+  const db = await ensureDb();
+  await db.execute({ sql: 'DELETE FROM messages WHERE id = ?', args: [id] });
+  return NextResponse.json({ success: true });
+}
