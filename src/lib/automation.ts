@@ -195,8 +195,129 @@ export async function onTaskToggled(db: Client, projectId: number) {
   }
 }
 
+// ─── On quote sent — create Stripe checkout + email customer ───
+export async function onQuoteSent(db: Client, projectId: number, amount?: number) {
+  const project = (await db.execute({ sql: 'SELECT * FROM projects WHERE id = ?', args: [projectId] })).rows[0];
+  if (!project) return;
+  const customer = (await db.execute({ sql: 'SELECT * FROM customers WHERE id = ?', args: [Number(project.customer_id)] })).rows[0];
+  if (!customer) return;
+
+  const budget = amount || parseBudget(String(project.budget || ''));
+  let paymentSection = '';
+
+  // Try to create Stripe checkout if configured
+  try {
+    const { getStripe } = await import('./stripe');
+    const stripe = getStripe();
+    if (stripe && budget > 0) {
+      const baseUrl = BASE_URL();
+      const session = await stripe.checkout.sessions.create({
+        mode: 'payment',
+        customer_email: String(customer.email),
+        line_items: [{
+          price_data: {
+            currency: 'usd',
+            product_data: {
+              name: String(project.title),
+              description: `Project quote for ${customer.name}`,
+            },
+            unit_amount: Math.round(budget * 100),
+          },
+          quantity: 1,
+        }],
+        metadata: { project_id: String(projectId) },
+        success_url: `${baseUrl}/portal/dashboard?payment=success`,
+        cancel_url: `${baseUrl}/portal/dashboard?payment=cancelled`,
+      });
+
+      if (session.url) {
+        paymentSection = `
+          <div style="text-align:center;margin:32px 0;">
+            <a href="${session.url}" style="display:inline-block;background:#00e68a;color:#06061a;font-weight:700;padding:14px 32px;border-radius:8px;text-decoration:none;font-size:16px;">Pay & Start Project — $${budget.toLocaleString()}</a>
+          </div>
+          <p style="font-size:13px;color:#6b7280;text-align:center;">Payment is processed securely through Stripe.</p>
+        `;
+      }
+    }
+  } catch (e) { console.error('Stripe checkout creation failed:', e); }
+
+  // If no Stripe, just show the amount and a portal link
+  if (!paymentSection) {
+    paymentSection = `
+      <div style="text-align:center;margin:32px 0;background:rgba(255,255,255,0.05);border-radius:8px;padding:24px;">
+        <p style="font-size:28px;font-weight:bold;color:#00e68a;margin:0;">$${budget > 0 ? budget.toLocaleString() : 'See details'}</p>
+        <p style="color:#9ca3af;font-size:14px;margin:8px 0 0 0;">Quoted amount</p>
+      </div>
+      <div style="text-align:center;margin:24px 0;">
+        <a href="${BASE_URL()}/portal" style="display:inline-block;background:#00e68a;color:#06061a;font-weight:700;padding:12px 28px;border-radius:8px;text-decoration:none;">View in Portal</a>
+      </div>
+    `;
+  }
+
+  await sendEmail(String(customer.email), `Your quote is ready — ${project.title}`, `
+    <div style="font-family:Inter,system-ui,sans-serif;max-width:600px;margin:0 auto;background:#06061a;color:#e5e7eb;padding:32px;border-radius:12px;">
+      <div style="border-bottom:2px solid #00e68a;padding-bottom:16px;margin-bottom:24px;">
+        <h1 style="margin:0;font-size:24px;color:white;">Circuit<span style="color:#00e68a;">Coders</span></h1>
+      </div>
+      <h2 style="color:white;margin-top:0;">Your quote is ready, ${customer.name}!</h2>
+      <p>We've reviewed your inquiry for <strong style="color:#00e68a;">${project.title}</strong> and prepared a quote.</p>
+      ${project.description ? `<div style="background:rgba(255,255,255,0.05);border-radius:8px;padding:16px;margin:16px 0;"><p style="margin:0;font-size:14px;color:#d1d5db;">${String(project.description).substring(0, 300)}${String(project.description).length > 300 ? '...' : ''}</p></div>` : ''}
+      ${paymentSection}
+      <p style="font-size:14px;color:#6b7280;">Questions? Reply to this email or message us through your portal.<br/>— The Circuit Coders Team</p>
+    </div>
+  `);
+
+  // Post update
+  await db.execute({
+    sql: "INSERT INTO project_updates (project_id, title, content, update_type) VALUES (?, ?, ?, ?)",
+    args: [projectId, 'Quote Sent', `We've sent you a quote${budget > 0 ? ` for $${budget.toLocaleString()}` : ''}. Check your email for details.`, 'milestone'],
+  });
+}
+
+function parseBudget(budget: string): number {
+  // Try to extract a number from budget strings like "$1,000-$5,000", "Under $500", "$50,000+"
+  const matches = budget.replace(/,/g, '').match(/\d+/g);
+  if (!matches) return 0;
+  // If range, take the first number
+  return Number(matches[0]) || 0;
+}
+
+// ─── Admin notification when customer sends message ────────────
+export async function onCustomerMessage(db: Client, customerId: number, projectId: number | null, content: string) {
+  const customer = (await db.execute({ sql: 'SELECT * FROM customers WHERE id = ?', args: [customerId] })).rows[0];
+  if (!customer) return;
+
+  let projectTitle = 'General';
+  if (projectId) {
+    const project = (await db.execute({ sql: 'SELECT title FROM projects WHERE id = ?', args: [projectId] })).rows[0];
+    if (project) projectTitle = String(project.title);
+  }
+
+  const adminEmail = process.env.CONTACT_EMAIL || 'admin@circuitcoders.com';
+  await sendEmail(adminEmail, `New message from ${customer.name} — ${projectTitle}`, `
+    <div style="font-family:Inter,system-ui,sans-serif;max-width:600px;margin:0 auto;background:#06061a;color:#e5e7eb;padding:32px;border-radius:12px;">
+      <div style="border-bottom:2px solid #00e68a;padding-bottom:16px;margin-bottom:24px;">
+        <h1 style="margin:0;font-size:24px;color:white;">Circuit<span style="color:#00e68a;">Coders</span></h1>
+      </div>
+      <h2 style="color:white;margin-top:0;">New message from ${customer.name}</h2>
+      <p style="color:#9ca3af;font-size:14px;">Project: <strong style="color:#d1d5db;">${projectTitle}</strong></p>
+      <div style="background:rgba(255,255,255,0.05);border-radius:8px;padding:16px;margin:16px 0;">
+        <p style="margin:0;color:#e5e7eb;white-space:pre-wrap;">${content}</p>
+      </div>
+      <div style="text-align:center;margin:24px 0;">
+        <a href="${BASE_URL()}/admin/dashboard" style="display:inline-block;background:#00e68a;color:#06061a;font-weight:700;padding:12px 28px;border-radius:8px;text-decoration:none;">Open Dashboard</a>
+      </div>
+      <p style="font-size:13px;color:#6b7280;">Reply from the admin dashboard messages tab.</p>
+    </div>
+  `);
+}
+
 // ─── On status change — trigger appropriate automations ────────
 export async function onStatusChanged(db: Client, projectId: number, oldStatus: string, newStatus: string) {
+  if (newStatus === 'quoted' && oldStatus !== 'quoted') {
+    await onQuoteSent(db, projectId);
+  }
+
   if (newStatus === 'in_progress' && oldStatus !== 'in_progress') {
     const project = (await db.execute({ sql: 'SELECT * FROM projects WHERE id = ?', args: [projectId] })).rows[0];
     if (!project) return;

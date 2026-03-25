@@ -9,7 +9,7 @@ export default function PageLoader() {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const duration = 1800;
+    const duration = 800;
     const interval = 20;
     let current = 0;
 
@@ -21,7 +21,7 @@ export default function PageLoader() {
 
       if (current >= duration) {
         clearInterval(timer);
-        setTimeout(() => setLoading(false), 200);
+        setTimeout(() => setLoading(false), 100);
       }
     }, interval);
 
@@ -32,8 +32,8 @@ export default function PageLoader() {
     <AnimatePresence>
       {loading && (
         <motion.div
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          exit={{ opacity: 0, pointerEvents: 'none' as const }}
+          transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="fixed inset-0 z-[10000] bg-carbon-500 flex flex-col items-center justify-center"
         >
           {/* Logo pulse */}

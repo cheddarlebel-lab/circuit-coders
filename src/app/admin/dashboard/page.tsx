@@ -114,6 +114,8 @@ export default function AdminDashboard() {
   const [showNewProject, setShowNewProject] = useState(false);
   const [showUpdateModal, setShowUpdateModal] = useState<number | null>(null);
   const [showReplyModal, setShowReplyModal] = useState<Message | null>(null);
+  const [showQuoteModal, setShowQuoteModal] = useState<{ projectId: number; budget: string } | null>(null);
+  const [quoteAmount, setQuoteAmount] = useState('');
   const [newCustomer, setNewCustomer] = useState({ name: '', email: '', company: '' });
   const [newProject, setNewProject] = useState({ customer_id: '', title: '', description: '', project_type: 'software', budget: '', timeline: '' });
   const [newUpdate, setNewUpdate] = useState({ title: '', content: '', update_type: 'progress' });
@@ -287,6 +289,19 @@ export default function AdminDashboard() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ status }),
     });
+    fetchAll();
+    fetchLeads(leadSearch);
+  }
+
+  async function sendQuote(projectId: number, amount: string) {
+    // Update status to "quoted" which triggers automation (email + Stripe link)
+    await fetch(`/api/admin/projects/${projectId}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ status: 'quoted', budget: amount ? `$${amount}` : undefined }),
+    });
+    setShowQuoteModal(null);
+    setQuoteAmount('');
     fetchAll();
     fetchLeads(leadSearch);
   }
@@ -531,6 +546,15 @@ export default function AdminDashboard() {
                         <p className="text-sm text-gray-400 bg-white/5 rounded-lg p-3 mb-3 line-clamp-3">
                           {lead.description}
                         </p>
+                      )}
+
+                      {lead.status === 'inquiry' && (
+                        <button
+                          onClick={() => { setShowQuoteModal({ projectId: lead.project_id, budget: lead.budget || '' }); setQuoteAmount(lead.budget?.replace(/[^0-9.]/g, '') || ''); }}
+                          className="text-sm bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 px-3 py-1.5 rounded-lg transition mb-3"
+                        >
+                          Send Quote
+                        </button>
                       )}
 
                       {/* Area Code / City */}
@@ -1215,6 +1239,33 @@ export default function AdminDashboard() {
               className="w-full bg-circuit-500 hover:bg-circuit-400 text-carbon-900 font-semibold py-2 rounded-lg transition"
             >
               Send Reply
+            </button>
+          </div>
+        </Modal>
+      )}
+
+      {showQuoteModal && (
+        <Modal onClose={() => setShowQuoteModal(null)} title="Send Quote">
+          <div className="space-y-4">
+            <p className="text-sm text-gray-400">Set the quote amount and send it to the customer. They&apos;ll receive an email with payment details{process.env.NEXT_PUBLIC_STRIPE_ENABLED === 'true' ? ' and a Stripe checkout link' : ''}.</p>
+            <div>
+              <label className="text-sm text-gray-300 block mb-1">Quote Amount ($)</label>
+              <input
+                type="number"
+                value={quoteAmount}
+                onChange={e => setQuoteAmount(e.target.value)}
+                className="w-full bg-white/10 border border-white/15 rounded-lg px-4 py-2.5 text-gray-100 focus:border-circuit-500 focus:outline-none caret-circuit-500"
+                placeholder="e.g. 2500"
+                min="0"
+                step="0.01"
+                autoFocus
+              />
+            </div>
+            <button
+              onClick={() => sendQuote(showQuoteModal.projectId, quoteAmount)}
+              className="w-full bg-blue-500 hover:bg-blue-400 text-white font-semibold py-2.5 rounded-lg transition"
+            >
+              Send Quote {quoteAmount ? `— $${Number(quoteAmount).toLocaleString()}` : ''}
             </button>
           </div>
         </Modal>

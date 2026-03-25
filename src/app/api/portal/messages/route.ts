@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ensureDb } from '@/lib/db';
 import { getSession } from '@/lib/auth';
+import { onCustomerMessage } from '@/lib/automation';
 
 export async function POST(req: NextRequest) {
   const session = await getSession('customer');
@@ -18,6 +19,9 @@ export async function POST(req: NextRequest) {
   }
 
   await db.execute({ sql: 'INSERT INTO messages (project_id, customer_id, sender, content) VALUES (?, ?, ?, ?)', args: [project_id, session.customerId, 'customer', content] });
+
+  // Notify admin via email
+  onCustomerMessage(db, Number(session.customerId), project_id ? Number(project_id) : null, content).catch(e => console.error('Admin notification error:', e));
 
   return NextResponse.json({ success: true });
 }

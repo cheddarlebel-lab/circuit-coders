@@ -30,6 +30,14 @@ const STATUS_STEPS = ['inquiry', 'quoted', 'in_progress', 'review', 'completed']
 export default function PortalDashboard() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
+  const [paymentStatus, setPaymentStatus] = useState<string | null>(null);
+  const [showPaymentBanner, setShowPaymentBanner] = useState(false);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const p = params.get('payment');
+    if (p) { setPaymentStatus(p); setShowPaymentBanner(true); }
+  }, []);
 
   const fetchProjects = useCallback(async () => {
     const res = await fetch('/api/portal/projects');
@@ -57,6 +65,18 @@ export default function PortalDashboard() {
           </Link>
           <span className="text-gray-500 text-sm">My Projects</span>
         </div>
+        {showPaymentBanner && paymentStatus === 'success' && (
+          <div className="bg-circuit-500/20 text-circuit-400 px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2">
+            Payment received! Your project is now in production.
+            <button onClick={() => setShowPaymentBanner(false)} className="text-circuit-500/60 hover:text-circuit-400">&times;</button>
+          </div>
+        )}
+        {showPaymentBanner && paymentStatus === 'cancelled' && (
+          <div className="bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2">
+            Payment was cancelled. You can pay later from your project page.
+            <button onClick={() => setShowPaymentBanner(false)} className="text-yellow-500/60 hover:text-yellow-400">&times;</button>
+          </div>
+        )}
         <button
           onClick={() => { document.cookie = 'cc_customer=; Max-Age=0; path=/'; window.location.href = '/portal'; }}
           className="text-sm text-gray-400 hover:text-white transition"
