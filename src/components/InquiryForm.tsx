@@ -88,6 +88,19 @@ export default function InquiryForm() {
     e.preventDefault();
     setSubmitting(true);
     setError("");
+
+    // Client-side validation
+    const missing: string[] = [];
+    if (!formData.name.trim()) missing.push("Name");
+    if (!formData.email.trim()) missing.push("Email");
+    if (!formData.budget) missing.push("Budget Range");
+    if (!formData.description.trim()) missing.push("Project Description");
+    if (missing.length > 0) {
+      setError(`Please fill in: ${missing.join(", ")}`);
+      setSubmitting(false);
+      return;
+    }
+
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -101,7 +114,7 @@ export default function InquiryForm() {
       setSubmitted(true);
     } catch (err) {
       const msg = err instanceof Error ? err.message : String(err);
-      setError(`Something went wrong: ${msg}. Please try again or email us directly.`);
+      setError(`Something went wrong: ${msg}. Please try again or email us directly at admin@circuitcoders.com`);
     } finally {
       setSubmitting(false);
     }
