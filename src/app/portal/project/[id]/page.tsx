@@ -52,6 +52,7 @@ export default function ProjectDetail({ params }: { params: Promise<{ id: string
   const [project, setProject] = useState<Project | null>(null);
   const [updates, setUpdates] = useState<Update[]>([]);
   const [messages, setMessages] = useState<Message[]>([]);
+  const [tasks, setTasks] = useState<{ id: number; phase: string; title: string; status: string }[]>([]);
   const [newMessage, setNewMessage] = useState('');
   const [sending, setSending] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -63,6 +64,7 @@ export default function ProjectDetail({ params }: { params: Promise<{ id: string
       setProject(data.project);
       setUpdates(data.updates);
       setMessages(data.messages);
+      setTasks(data.tasks || []);
     } else if (res.status === 401) {
       window.location.href = '/portal';
     }
@@ -133,6 +135,45 @@ export default function ProjectDetail({ params }: { params: Promise<{ id: string
             <span>Started: <span className="text-white">{new Date(project.created_at).toLocaleDateString()}</span></span>
           </div>
         </div>
+
+        {/* Production Progress */}
+        {tasks.length > 0 && (
+          <div className="glass-card rounded-xl p-6 mb-6">
+            {(() => {
+              const totalTasks = tasks.length;
+              const doneTasks = tasks.filter(t => t.status === 'done').length;
+              const pct = totalTasks > 0 ? Math.round((doneTasks / totalTasks) * 100) : 0;
+              const phases = ['planning', 'design', 'development', 'testing', 'deployment'];
+              return (
+                <>
+                  <div className="flex items-center justify-between mb-3">
+                    <h2 className="text-lg font-semibold">Build Progress</h2>
+                    <span className="text-sm font-bold text-circuit-400">{pct}%</span>
+                  </div>
+                  <div className="w-full bg-white/10 rounded-full h-3 mb-4">
+                    <div className="bg-circuit-500 h-3 rounded-full transition-all duration-500" style={{ width: `${pct}%` }} />
+                  </div>
+                  <div className="grid grid-cols-5 gap-2">
+                    {phases.map(phase => {
+                      const phaseTasks = tasks.filter(t => t.phase === phase);
+                      const phaseDone = phaseTasks.filter(t => t.status === 'done').length;
+                      const phaseTotal = phaseTasks.length;
+                      const phaseComplete = phaseTotal > 0 && phaseDone === phaseTotal;
+                      return (
+                        <div key={phase} className="text-center">
+                          <div className={`text-xs font-medium capitalize mb-1 ${phaseComplete ? 'text-circuit-400' : phaseTotal > 0 ? 'text-gray-300' : 'text-gray-600'}`}>{phase}</div>
+                          <div className={`text-xs ${phaseTotal > 0 ? 'text-gray-400' : 'text-gray-600'}`}>
+                            {phaseTotal > 0 ? `${phaseDone}/${phaseTotal}` : '-'}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </>
+              );
+            })()}
+          </div>
+        )}
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
           {/* Updates Timeline */}

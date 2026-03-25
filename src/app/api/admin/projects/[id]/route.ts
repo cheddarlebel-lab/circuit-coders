@@ -26,6 +26,7 @@ export async function DELETE(req: NextRequest, { params }: { params: Promise<{ i
 
   const { id } = await params;
   const db = await ensureDb();
+  await db.execute({ sql: 'DELETE FROM project_tasks WHERE project_id = ?', args: [id] });
   await db.execute({ sql: 'DELETE FROM project_updates WHERE project_id = ?', args: [id] });
   await db.execute({ sql: 'DELETE FROM messages WHERE project_id = ?', args: [id] });
   await db.execute({ sql: 'DELETE FROM projects WHERE id = ?', args: [id] });

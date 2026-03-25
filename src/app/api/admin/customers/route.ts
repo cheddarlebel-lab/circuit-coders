@@ -31,6 +31,7 @@ export async function DELETE(req: NextRequest) {
   // Get all projects for this customer to cascade deletes
   const projects = (await db.execute({ sql: 'SELECT id FROM projects WHERE customer_id = ?', args: [id] })).rows;
   for (const p of projects) {
+    await db.execute({ sql: 'DELETE FROM project_tasks WHERE project_id = ?', args: [p.id] });
     await db.execute({ sql: 'DELETE FROM project_updates WHERE project_id = ?', args: [p.id] });
   }
   await db.execute({ sql: 'DELETE FROM messages WHERE customer_id = ?', args: [id] });

@@ -97,7 +97,7 @@ const STATUS_COLORS: Record<string, string> = {
 };
 
 export default function AdminDashboard() {
-  const [tab, setTab] = useState<'leads' | 'seo' | 'projects' | 'messages' | 'customers'>('leads');
+  const [tab, setTab] = useState<'leads' | 'seo' | 'projects' | 'production' | 'messages' | 'customers'>('leads');
   const [projects, setProjects] = useState<Project[]>([]);
   const [messages, setMessages] = useState<Message[]>([]);
   const [customers, setCustomers] = useState<Customer[]>([]);
@@ -119,6 +119,9 @@ export default function AdminDashboard() {
   const [newUpdate, setNewUpdate] = useState({ title: '', content: '', update_type: 'progress' });
   const [replyContent, setReplyContent] = useState('');
   const [statusEdit, setStatusEdit] = useState<{ id: number; status: string } | null>(null);
+  const [prodProjectId, setProdProjectId] = useState<number | null>(null);
+  const [prodTasks, setProdTasks] = useState<{ id: number; phase: string; title: string; description: string | null; status: string; completed_at: string | null }[]>([]);
+  const [newTask, setNewTask] = useState({ phase: 'planning', title: '', description: '' });
 
   const fetchLeads = useCallback(async (search = '') => {
     const q = search ? `?search=${encodeURIComponent(search)}` : '';
@@ -238,6 +241,44 @@ export default function AdminDashboard() {
       body: JSON.stringify({ id }),
     });
     fetchAll();
+  }
+
+  async function fetchTasks(projectId: number) {
+    setProdProjectId(projectId);
+    const res = await fetch(`/api/admin/projects/${projectId}/tasks`);
+    if (res.ok) setProdTasks(await res.json());
+  }
+
+  async function addTask(e: React.FormEvent) {
+    e.preventDefault();
+    if (!prodProjectId || !newTask.title.trim()) return;
+    await fetch(`/api/admin/projects/${prodProjectId}/tasks`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newTask),
+    });
+    setNewTask({ phase: newTask.phase, title: '', description: '' });
+    fetchTasks(prodProjectId);
+  }
+
+  async function toggleTask(taskId: number, currentStatus: string) {
+    if (!prodProjectId) return;
+    await fetch(`/api/admin/projects/${prodProjectId}/tasks`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ task_id: taskId, status: currentStatus === 'done' ? 'pending' : 'done' }),
+    });
+    fetchTasks(prodProjectId);
+  }
+
+  async function deleteTask(taskId: number) {
+    if (!prodProjectId) return;
+    await fetch(`/api/admin/projects/${prodProjectId}/tasks`, {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ task_id: taskId }),
+    });
+    fetchTasks(prodProjectId);
   }
 
   async function updateLeadStatus(projectId: number, status: string) {
@@ -387,7 +428,7 @@ export default function AdminDashboard() {
       {/* Tabs */}
       <div className="border-b border-white/10 px-6">
         <div className="max-w-7xl mx-auto flex gap-6">
-          {(['leads', 'seo', 'projects', 'messages', 'customers'] as const).map(t => (
+          {(['leads', 'seo', 'projects', 'production', 'messages', 'customers'] as const).map(t => (
             <button
               key={t}
               onClick={() => setTab(t)}
@@ -395,12 +436,15 @@ export default function AdminDashboard() {
                 tab === t ? 'border-circuit-400 text-circuit-400' : 'border-transparent text-gray-400 hover:text-white'
               }`}
             >
-              {t === 'seo' ? 'SEO' : t}
+              {t === 'seo' ? 'SEO' : t === 'production' ? 'Production' : t}
               {t === 'seo' && seoCampaigns.filter(c => c.status === 'active').length > 0 && (
                 <span className="ml-2 bg-blue-500 text-white text-xs px-1.5 py-0.5 rounded-full font-semibold">{seoCampaigns.filter(c => c.status === 'active').length}</span>
               )}
               {t === 'leads' && leads.length > 0 && (
                 <span className="ml-2 bg-yellow-500 text-carbon-900 text-xs px-1.5 py-0.5 rounded-full font-semibold">{leads.length}</span>
+              )}
+              {t === 'production' && projects.filter(p => ['in_progress', 'review', 'quoted'].includes(p.status)).length > 0 && (
+                <span className="ml-2 bg-circuit-500 text-carbon-900 text-xs px-1.5 py-0.5 rounded-full font-semibold">{projects.filter(p => ['in_progress', 'review', 'quoted'].includes(p.status)).length}</span>
               )}
               {t === 'messages' && unreadCount > 0 && (
                 <span className="ml-2 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">{unreadCount}</span>
@@ -773,6 +817,124 @@ export default function AdminDashboard() {
                 </div>
               </div>
             ))}
+          </div>
+        )}
+
+        {/* Production Tab */}
+        {tab === 'production' && (
+          <div className="space-y-4">
+            {/* Project selector — show only in_progress / review projects */}
+            {(() => {
+              const activeProjects = projects.filter(p => ['in_progress', 'review', 'quoted'].includes(p.status));
+              if (activeProjects.length === 0) return <p className="text-gray-500 text-center py-12">No active projects. Set a project status to &quot;in progress&quot; to start production tracking.</p>;
+              return (
+                <>
+                  <div className="flex items-center gap-3 flex-wrap">
+                    {activeProjects.map(p => (
+                      <button
+                        key={p.id}
+                        onClick={() => fetchTasks(p.id)}
+                        className={`px-4 py-2 rounded-lg text-sm font-medium transition ${prodProjectId === p.id ? 'bg-circuit-500 text-carbon-900' : 'bg-white/10 hover:bg-white/20 text-gray-300'}`}
+                      >
+                        {p.title}
+                        <span className={`ml-2 text-xs px-1.5 py-0.5 rounded-full ${STATUS_COLORS[p.status] || 'bg-white/10 text-gray-400'}`}>{p.status.replace('_', ' ')}</span>
+                      </button>
+                    ))}
+                  </div>
+
+                  {prodProjectId && (() => {
+                    const phases = ['planning', 'design', 'development', 'testing', 'deployment'];
+                    const totalTasks = prodTasks.length;
+                    const doneTasks = prodTasks.filter(t => t.status === 'done').length;
+                    const pct = totalTasks > 0 ? Math.round((doneTasks / totalTasks) * 100) : 0;
+
+                    return (
+                      <div className="space-y-4">
+                        {/* Progress bar */}
+                        <div className="glass-card rounded-xl p-4">
+                          <div className="flex items-center justify-between mb-2">
+                            <span className="text-sm font-medium text-gray-300">Overall Progress</span>
+                            <span className="text-sm font-bold text-circuit-400">{pct}% ({doneTasks}/{totalTasks})</span>
+                          </div>
+                          <div className="w-full bg-white/10 rounded-full h-3">
+                            <div className="bg-circuit-500 h-3 rounded-full transition-all duration-500" style={{ width: `${pct}%` }} />
+                          </div>
+                        </div>
+
+                        {/* Tasks by phase */}
+                        {phases.map(phase => {
+                          const phaseTasks = prodTasks.filter(t => t.phase === phase);
+                          const phaseDone = phaseTasks.filter(t => t.status === 'done').length;
+                          return (
+                            <div key={phase} className="glass-card rounded-xl p-4">
+                              <div className="flex items-center justify-between mb-3">
+                                <h3 className="font-semibold text-white capitalize">{phase}</h3>
+                                {phaseTasks.length > 0 && (
+                                  <span className="text-xs text-gray-400">{phaseDone}/{phaseTasks.length} done</span>
+                                )}
+                              </div>
+                              {phaseTasks.length === 0 ? (
+                                <p className="text-sm text-gray-500 italic">No tasks</p>
+                              ) : (
+                                <div className="space-y-1.5">
+                                  {phaseTasks.map(t => (
+                                    <div key={t.id} className="flex items-center gap-3 group">
+                                      <button
+                                        onClick={() => toggleTask(t.id, t.status)}
+                                        className={`w-5 h-5 rounded border flex-shrink-0 flex items-center justify-center transition ${t.status === 'done' ? 'bg-circuit-500 border-circuit-500' : 'border-white/30 hover:border-circuit-400'}`}
+                                      >
+                                        {t.status === 'done' && <svg className="w-3 h-3 text-carbon-900" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>}
+                                      </button>
+                                      <span className={`text-sm flex-1 ${t.status === 'done' ? 'line-through text-gray-500' : 'text-gray-200'}`}>{t.title}</span>
+                                      {t.description && <span className="text-xs text-gray-500 hidden group-hover:inline">{t.description}</span>}
+                                      <button onClick={() => deleteTask(t.id)} className="text-red-400/0 group-hover:text-red-400/60 hover:!text-red-400 transition">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+                                      </button>
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })}
+
+                        {/* Add task form */}
+                        <form onSubmit={addTask} className="glass-card rounded-xl p-4">
+                          <h3 className="font-semibold text-white mb-3">Add Task</h3>
+                          <div className="flex gap-2">
+                            <select
+                              value={newTask.phase}
+                              onChange={e => setNewTask({ ...newTask, phase: e.target.value })}
+                              className="bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-sm text-gray-100 focus:border-circuit-500 focus:outline-none"
+                            >
+                              {phases.map(p => <option key={p} value={p} className="bg-carbon-400">{p}</option>)}
+                            </select>
+                            <input
+                              type="text"
+                              value={newTask.title}
+                              onChange={e => setNewTask({ ...newTask, title: e.target.value })}
+                              placeholder="Task title..."
+                              className="flex-1 bg-white/10 border border-white/15 rounded-lg px-3 py-2 text-sm text-gray-100 placeholder-gray-500 focus:border-circuit-500 focus:outline-none caret-circuit-500"
+                              required
+                            />
+                            <input
+                              type="text"
+                              value={newTask.description}
+                              onChange={e => setNewTask({ ...newTask, description: e.target.value })}
+                              placeholder="Description (optional)"
+                              className="w-48 bg-white/10 border border-white/15 rounded-lg px-3 py-2 text-sm text-gray-100 placeholder-gray-500 focus:border-circuit-500 focus:outline-none caret-circuit-500"
+                            />
+                            <button type="submit" className="bg-circuit-500 hover:bg-circuit-400 text-carbon-900 font-semibold px-4 py-2 rounded-lg text-sm transition">
+                              Add
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    );
+                  })()}
+                </>
+              );
+            })()}
           </div>
         )}
 

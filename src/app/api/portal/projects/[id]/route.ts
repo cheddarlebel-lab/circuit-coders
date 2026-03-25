@@ -16,8 +16,10 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ id: 
 
   const messages = (await db.execute({ sql: 'SELECT * FROM messages WHERE project_id = ? ORDER BY created_at ASC', args: [id] })).rows;
 
+  const tasks = (await db.execute({ sql: 'SELECT * FROM project_tasks WHERE project_id = ? ORDER BY phase, sort_order, id', args: [id] })).rows;
+
   // Mark admin messages as read
   await db.execute({ sql: "UPDATE messages SET read = 1 WHERE project_id = ? AND sender = 'admin' AND read = 0", args: [id] });
 
-  return NextResponse.json({ project, updates, messages });
+  return NextResponse.json({ project, updates, messages, tasks });
 }
