@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { ensureDb } from "@/lib/db";
-import { onInquiryCreated } from "@/lib/automation";
+import { onInquiryCreated, generateProjectTasks, onProjectStarted } from "@/lib/automation";
 
 export const dynamic = "force-dynamic";
 
@@ -25,7 +25,7 @@ export async function POST(req: Request) {
     }
     const projectResult = await db.execute({
       sql: 'INSERT INTO projects (customer_id, title, description, project_type, status, budget, timeline) VALUES (?, ?, ?, ?, ?, ?, ?)',
-      args: [customer.id, `${projectType} project — ${name}`, description ?? null, projectType, 'inquiry', budget ?? null, timeline ?? null]
+      args: [customer.id, `${projectType} project — ${name}`, description ?? null, projectType, 'in_progress', budget ?? null, timeline ?? null]
     });
     const projectId = Number(projectResult.lastInsertRowid);
 
@@ -65,8 +65,13 @@ export async function POST(req: Request) {
       console.error("Email notification failed (inquiry still saved):", emailError);
     }
 
-    // Send confirmation email to customer
-    onInquiryCreated(db, customer.id, `${projectType} project — ${name}`, email, name).catch(e => console.error('Confirmation email error:', e));
+    // Auto-start production: generate tasks + send portal access + kickoff email
+    const projectTitle = `${projectType} project — ${name}`;
+    Promise.all([
+      onInquiryCreated(db, customer.id, projectTitle, email, name),
+      generateProjectTasks(db, projectId, projectType),
+      onProjectStarted(db, projectId),
+    ]).catch(e => console.error('Auto-start automation error:', e));
 
     return NextResponse.json({ success: true });
   } catch (error) {
