@@ -1,7 +1,6 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { CircuitBoard, Code, Globe, Brain, Store, ArrowUpRight } from "lucide-react";
 import { services } from "@/lib/data";
 
@@ -14,15 +13,14 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 export default function Services() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isOddCount = services.length % 2 !== 0;
 
   return (
     <section id="services" className="relative py-32 px-4">
       {/* Divider line */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-circuit-500/20 to-transparent" />
 
-      <div className="max-w-7xl mx-auto" ref={ref}>
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -48,13 +46,16 @@ export default function Services() {
         <div className="grid md:grid-cols-2 gap-6">
           {services.map((service, i) => {
             const Icon = iconMap[service.icon];
+            const isLast = i === services.length - 1;
+            const spanFull = isLast && isOddCount;
             return (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 40 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: i * 0.12, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-                className="group relative glass-card-hover p-8 overflow-hidden card-spotlight hover-lift"
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ delay: (i % 2) * 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                className={`group relative glass-card-hover p-8 overflow-hidden card-spotlight hover-lift ${spanFull ? "md:col-span-2" : ""}`}
                 onMouseMove={(e) => {
                   const rect = e.currentTarget.getBoundingClientRect();
                   e.currentTarget.style.setProperty("--mouse-x", `${e.clientX - rect.left}px`);
