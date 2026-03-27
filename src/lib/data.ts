@@ -162,6 +162,23 @@ export const portfolioProjects: PortfolioProject[] = [
     features: ["Source ranking algorithm", "AI quality reviewer (reject < 5/10)", "Automated rendering pipeline", "Zero-storage architecture"],
   },
   {
+    id: "card-shop",
+    title: "Card Shop Inventory Platform",
+    subtitle: "Business Website + Admin System",
+    description: "Custom storefront and inventory management system for a trading card retailer. AI-powered card scanner, live market pricing from TCGPlayer and eBay, and PSA graded card support.",
+    category: "website",
+    tech: ["Next.js 15", "TypeScript", "Tailwind CSS", "Turso", "Claude AI"],
+    metrics: [
+      { label: "Card Scanner", value: "AI" },
+      { label: "Price Sources", value: "2" },
+      { label: "Admin Tools", value: "Full" },
+      { label: "Mobile", value: "100%" },
+    ],
+    color: "from-amber-500 to-orange-400",
+    icon: "ShoppingBag",
+    features: ["AI photo scanner identifies cards instantly", "Live TCGPlayer + eBay sold pricing", "PSA graded card support with cert verification", "Admin inventory management with CSV export"],
+  },
+  {
     id: "api-marketplace",
     title: "Developer API Marketplace",
     subtitle: "Monetized Endpoint Platform",
@@ -280,6 +297,12 @@ export const services = [
     description: "Deploy ML models on microcontrollers. Intelligent edge processing for real-time decision making.",
     icon: "Brain",
     features: ["TinyML deployment", "Edge inference", "Model optimization", "Predictive maintenance"],
+  },
+  {
+    title: "Business Websites",
+    description: "Custom websites that drive sales and showcase your business. Not templates — built from scratch with admin tools to manage your own content.",
+    icon: "Store",
+    features: ["Custom design & branding", "Mobile-first responsive", "Admin dashboard & CMS", "SEO & performance optimized"],
   },
 ];
 

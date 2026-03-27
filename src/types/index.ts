@@ -73,7 +73,7 @@ export interface PortfolioProject {
   title: string;
   subtitle: string;
   description: string;
-  category: "platform" | "mobile" | "automation" | "hardware" | "saas" | "api";
+  category: "platform" | "mobile" | "automation" | "hardware" | "saas" | "api" | "website";
   tech: string[];
   metrics: { label: string; value: string }[];
   color: string;

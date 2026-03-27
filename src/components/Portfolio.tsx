@@ -3,14 +3,14 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Network, TrendingUp, Layers, Smartphone, Zap, Code,
+  Network, TrendingUp, Layers, Smartphone, Zap, Code, ShoppingBag,
   ArrowRight, ChevronLeft, ChevronRight, Pause, Play,
 } from "lucide-react";
 import { portfolioProjects } from "@/lib/data";
 import type { PortfolioProject } from "@/types";
 
 const iconMap: Record<string, React.ElementType> = {
-  Network, TrendingUp, Layers, Smartphone, Zap, Code,
+  Network, TrendingUp, Layers, Smartphone, Zap, Code, ShoppingBag,
 };
 
 const CARD_W = 420;

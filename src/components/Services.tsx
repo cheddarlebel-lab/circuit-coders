@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { CircuitBoard, Code, Globe, Brain, ArrowUpRight } from "lucide-react";
+import { CircuitBoard, Code, Globe, Brain, Store, ArrowUpRight } from "lucide-react";
 import { services } from "@/lib/data";
 
 const iconMap: Record<string, React.ElementType> = {
@@ -10,6 +10,7 @@ const iconMap: Record<string, React.ElementType> = {
   Code,
   Globe,
   Brain,
+  Store,
 };
 
 export default function Services() {

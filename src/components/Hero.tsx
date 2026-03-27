@@ -108,9 +108,9 @@ export default function Hero() {
               transition={{ delay: 0.5, duration: 0.6 }}
               className="text-lg sm:text-xl text-gray-400 max-w-lg mb-10 leading-relaxed"
             >
-              From custom PCBs to full-stack SaaS platforms — we design, build,
-              and ship end-to-end solutions. A small team that moves at
-              startup speed with enterprise quality.
+              From custom PCBs to business websites and full-stack platforms — we
+              design, build, and ship end-to-end solutions. A small team that
+              moves at startup speed with enterprise quality.
             </motion.p>
 
             {/* CTAs */}
