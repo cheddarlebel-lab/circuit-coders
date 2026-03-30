@@ -19,14 +19,14 @@ export async function POST(req: NextRequest) {
   const session = await getSession('admin');
   if (!session) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-  const { name, client_name, website_url, target_keywords, status, monthly_budget, start_date, notes } = await req.json();
+  const { name, client_name, website_url, target_keywords, status, monthly_budget, start_date, notes, plan_type } = await req.json();
   if (!name) return NextResponse.json({ error: 'Campaign name required' }, { status: 400 });
 
   const db = await ensureDb();
   const result = await db.execute({
-    sql: `INSERT INTO seo_campaigns (name, client_name, website_url, target_keywords, status, monthly_budget, start_date, notes)
-          VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
-    args: [name, client_name ?? null, website_url ?? null, target_keywords ?? null, status || 'planning', monthly_budget ?? null, start_date ?? null, notes ?? null],
+    sql: `INSERT INTO seo_campaigns (name, client_name, website_url, target_keywords, status, monthly_budget, start_date, notes, plan_type)
+          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+    args: [name, client_name ?? null, website_url ?? null, target_keywords ?? null, status || 'planning', monthly_budget ?? null, start_date ?? null, notes ?? null, plan_type ?? 'local_spark'],
   });
 
   return NextResponse.json({ id: Number(result.lastInsertRowid) });
@@ -40,7 +40,7 @@ export async function PATCH(req: NextRequest) {
   const { id, ...updates } = body;
   if (!id) return NextResponse.json({ error: 'id required' }, { status: 400 });
 
-  const allowed = ['name', 'client_name', 'website_url', 'target_keywords', 'status', 'monthly_budget', 'start_date', 'notes', 'da_score', 'organic_traffic', 'keywords_ranked', 'backlinks'];
+  const allowed = ['name', 'client_name', 'website_url', 'target_keywords', 'status', 'monthly_budget', 'start_date', 'notes', 'da_score', 'organic_traffic', 'keywords_ranked', 'backlinks', 'plan_type'];
   const fields = Object.keys(updates).filter(k => allowed.includes(k));
   if (fields.length === 0) return NextResponse.json({ error: 'No valid fields' }, { status: 400 });
 

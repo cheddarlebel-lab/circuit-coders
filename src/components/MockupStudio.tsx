@@ -52,7 +52,6 @@ export default function MockupStudio() {
   const selectedData = hardwareComponents.filter((c) =>
     selectedComponents.includes(c.id)
   );
-  const totalCost = selectedData.reduce((sum, c) => sum + c.price, 0);
 
   return (
     <section id="mockup" className="relative py-32 px-4">
@@ -147,7 +146,6 @@ export default function MockupStudio() {
                       </span>
                     </div>
                     <div className="text-xs text-gray-500 font-mono">{comp.model}</div>
-                    <div className="text-xs text-circuit-500 font-mono mt-1">${comp.price}</div>
                   </motion.button>
                 );
               })}
@@ -286,23 +284,18 @@ export default function MockupStudio() {
                 </AnimatePresence>
               </div>
 
-              {/* Footer — cost summary */}
+              {/* Footer */}
               {selectedComponents.length > 0 && (
                 <div className="px-6 py-4 border-t border-white/[0.06] flex items-center justify-between">
                   <div className="text-sm text-gray-400">
                     <span className="text-white font-semibold">{selectedComponents.length}</span> components selected
                   </div>
-                  <div className="flex items-center gap-4">
-                    <div className="text-sm text-gray-400">
-                      BOM cost: <span className="text-circuit-400 font-mono font-semibold">${totalCost.toFixed(2)}</span>
-                    </div>
-                    <a
-                      href="#contact"
-                      className="px-4 py-2 text-sm bg-circuit-500/10 text-circuit-400 rounded-lg border border-circuit-500/20 hover:bg-circuit-500/20 transition-colors flex items-center gap-1"
-                    >
-                      Get Quote <ArrowRight className="w-3 h-3" />
-                    </a>
-                  </div>
+                  <a
+                    href="#contact"
+                    className="px-4 py-2 text-sm bg-circuit-500/10 text-circuit-400 rounded-lg border border-circuit-500/20 hover:bg-circuit-500/20 transition-colors flex items-center gap-1"
+                  >
+                    Start a Project <ArrowRight className="w-3 h-3" />
+                  </a>
                 </div>
               )}
             </div>

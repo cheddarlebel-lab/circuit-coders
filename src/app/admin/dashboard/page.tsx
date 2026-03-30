@@ -57,6 +57,7 @@ interface SeoCampaign {
   organic_traffic: number | null;
   keywords_ranked: number | null;
   backlinks: number | null;
+  plan_type: string | null;
   created_at: string;
   updated_at: string;
 }
@@ -68,6 +69,64 @@ const SEO_STATUS_COLORS: Record<string, string> = {
   completed: 'bg-green-500/20 text-green-400',
   cancelled: 'bg-red-500/20 text-red-400',
 };
+
+const SEO_PLANS = [
+  {
+    id: 'local_spark',
+    name: 'Local Spark',
+    monthly_price: 299,
+    keyword_limit: 10,
+    color: 'from-yellow-500 to-orange-400',
+    border: 'border-yellow-500/30',
+    badge: 'bg-yellow-500/15 text-yellow-400',
+    features: [
+      'Google Business Profile optimization',
+      'Local keyword targeting (up to 10)',
+      '5 blog posts/mo',
+      'Monthly analytics report',
+      'Citation building',
+      'On-page SEO audit',
+    ],
+  },
+  {
+    id: 'regional_growth',
+    name: 'Regional Growth',
+    monthly_price: 599,
+    keyword_limit: 25,
+    color: 'from-circuit-500 to-emerald-400',
+    border: 'border-circuit-500/30',
+    badge: 'bg-circuit-500/15 text-circuit-400',
+    highlighted: true,
+    features: [
+      'Everything in Local Spark',
+      'Content strategy & calendar',
+      '10 blog posts/mo',
+      'Backlink outreach campaigns',
+      'Competitor analysis',
+      'Bi-weekly performance reports',
+      'Schema markup & technical SEO',
+    ],
+  },
+  {
+    id: 'enterprise_authority',
+    name: 'Enterprise Authority',
+    monthly_price: 1299,
+    keyword_limit: 50,
+    color: 'from-purple-500 to-violet-400',
+    border: 'border-purple-500/30',
+    badge: 'bg-purple-500/15 text-purple-400',
+    features: [
+      'Everything in Regional Growth',
+      'Custom content hub',
+      '20+ blog posts/mo',
+      'Full technical SEO audit',
+      'Link building campaigns',
+      'Dedicated SEO strategist',
+      'Weekly reports & strategy calls',
+      'Custom dashboard access',
+    ],
+  },
+];
 
 interface Lead {
   id: number;
@@ -107,7 +166,7 @@ export default function AdminDashboard() {
   const [editingLead, setEditingLead] = useState<{ id: number; area_code: string; city: string } | null>(null);
   const [seoCampaigns, setSeoCampaigns] = useState<SeoCampaign[]>([]);
   const [showNewCampaign, setShowNewCampaign] = useState(false);
-  const [newCampaign, setNewCampaign] = useState({ name: '', client_name: '', website_url: '', target_keywords: '', monthly_budget: '', start_date: '', notes: '' });
+  const [newCampaign, setNewCampaign] = useState({ name: '', client_name: '', website_url: '', target_keywords: '', monthly_budget: '', start_date: '', notes: '', plan_type: 'local_spark' });
   const [editingCampaign, setEditingCampaign] = useState<SeoCampaign | null>(null);
   const [editingMetrics, setEditingMetrics] = useState<{ id: number; da_score: string; organic_traffic: string; keywords_ranked: string; backlinks: string } | null>(null);
   const [showNewCustomer, setShowNewCustomer] = useState(false);
@@ -315,7 +374,7 @@ export default function AdminDashboard() {
     });
     if (res.ok) {
       setShowNewCampaign(false);
-      setNewCampaign({ name: '', client_name: '', website_url: '', target_keywords: '', monthly_budget: '', start_date: '', notes: '' });
+      setNewCampaign({ name: '', client_name: '', website_url: '', target_keywords: '', monthly_budget: '', start_date: '', notes: '', plan_type: 'local_spark' });
       fetchAll();
     }
   }
@@ -629,157 +688,273 @@ export default function AdminDashboard() {
 
         {/* SEO Campaigns Tab */}
         {tab === 'seo' && (
-          <div className="space-y-4">
-            <div className="flex items-center justify-between">
-              <h2 className="text-lg font-semibold">SEO Campaigns</h2>
-              <span className="text-sm text-gray-500">{seoCampaigns.length} campaign{seoCampaigns.length !== 1 ? 's' : ''}</span>
+          <div className="space-y-8">
+            {/* Plan Picker Cards */}
+            <div>
+              <h2 className="text-lg font-semibold mb-4">SEO Plans</h2>
+              <div className="grid md:grid-cols-3 gap-4">
+                {SEO_PLANS.map(plan => {
+                  const planCampaigns = seoCampaigns.filter(c => c.plan_type === plan.id);
+                  return (
+                    <div key={plan.id} className={`glass-card rounded-xl overflow-hidden transition-all hover:border-white/15 ${plan.highlighted ? 'ring-1 ring-circuit-500/30' : ''}`}>
+                      <div className={`h-1 bg-gradient-to-r ${plan.color}`} />
+                      <div className="p-5">
+                        <div className="flex items-center justify-between mb-1">
+                          <h3 className="font-semibold text-white">{plan.name}</h3>
+                          {plan.highlighted && <span className="text-[10px] uppercase tracking-wider text-circuit-400 font-bold">Popular</span>}
+                        </div>
+                        <div className="mb-4">
+                          <span className="text-2xl font-bold text-white font-mono">${plan.monthly_price}</span>
+                          <span className="text-sm text-gray-500">/mo</span>
+                        </div>
+                        <div className="text-xs text-gray-500 mb-3">Up to {plan.keyword_limit} keywords</div>
+                        <ul className="space-y-1.5 mb-5">
+                          {plan.features.map(f => (
+                            <li key={f} className="flex items-start gap-2 text-xs text-gray-400">
+                              <svg className="w-3.5 h-3.5 text-circuit-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                              {f}
+                            </li>
+                          ))}
+                        </ul>
+                        <div className="flex items-center justify-between">
+                          <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${plan.badge}`}>
+                            {planCampaigns.length} client{planCampaigns.length !== 1 ? 's' : ''}
+                          </span>
+                          <button
+                            onClick={() => {
+                              setNewCampaign({ ...newCampaign, plan_type: plan.id, monthly_budget: `$${plan.monthly_price}` });
+                              setShowNewCampaign(true);
+                            }}
+                            className={`text-xs px-3 py-1.5 rounded-lg font-medium transition ${
+                              plan.highlighted
+                                ? 'bg-circuit-500 hover:bg-circuit-400 text-carbon-900'
+                                : 'bg-white/10 hover:bg-white/20 text-gray-300'
+                            }`}
+                          >
+                            + Assign Client
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
 
-            {seoCampaigns.length === 0 && (
-              <p className="text-gray-500 text-center py-12">No SEO campaigns yet. Click &quot;+ SEO Campaign&quot; to create one.</p>
-            )}
+            {/* Campaigns grouped by plan */}
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-lg font-semibold">Active Campaigns</h2>
+                <span className="text-sm text-gray-500">{seoCampaigns.length} total</span>
+              </div>
 
-            <div className="grid gap-4">
-              {seoCampaigns.map(c => (
-                <div key={c.id} className="glass-card rounded-xl p-5">
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-3 mb-2">
-                        <h3 className="font-semibold text-white text-lg">{c.name}</h3>
-                        <select
-                          value={c.status}
-                          onChange={e => updateCampaign(c.id, { status: e.target.value })}
-                          className={`text-xs px-2 py-0.5 rounded-full font-medium border-0 cursor-pointer ${SEO_STATUS_COLORS[c.status] || 'bg-white/10 text-gray-300'}`}
-                        >
-                          {Object.keys(SEO_STATUS_COLORS).map(s => (
-                            <option key={s} value={s}>{s}</option>
-                          ))}
-                        </select>
-                      </div>
+              {seoCampaigns.length === 0 && (
+                <p className="text-gray-500 text-center py-12">No SEO campaigns yet. Select a plan above to assign a client.</p>
+              )}
 
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1 text-sm mb-3">
-                        {c.client_name && (
-                          <div className="flex items-center gap-2 text-gray-300">
-                            <span className="text-gray-500">Client:</span>
-                            <span>{c.client_name}</span>
-                          </div>
-                        )}
-                        {c.website_url && (
-                          <div className="flex items-center gap-2 text-gray-300">
-                            <span className="text-gray-500">Website:</span>
-                            <a href={c.website_url.startsWith('http') ? c.website_url : `https://${c.website_url}`} target="_blank" rel="noopener noreferrer" className="text-circuit-400 hover:underline truncate">{c.website_url}</a>
-                          </div>
-                        )}
-                        {c.monthly_budget && (
-                          <div className="flex items-center gap-2 text-gray-300">
-                            <span className="text-gray-500">Budget:</span>
-                            <span>{c.monthly_budget}/mo</span>
-                          </div>
-                        )}
-                        {c.start_date && (
-                          <div className="flex items-center gap-2 text-gray-300">
-                            <span className="text-gray-500">Started:</span>
-                            <span>{new Date(c.start_date).toLocaleDateString()}</span>
-                          </div>
-                        )}
-                      </div>
-
-                      {c.target_keywords && (
-                        <div className="mb-3">
-                          <span className="text-xs text-gray-500">Keywords:</span>
-                          <div className="flex flex-wrap gap-1.5 mt-1">
-                            {c.target_keywords.split(',').map((kw, i) => (
-                              <span key={i} className="text-xs bg-blue-500/15 text-blue-400 px-2 py-0.5 rounded-full">{kw.trim()}</span>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Metrics */}
-                      {editingMetrics?.id === c.id ? (
-                        <div className="flex items-center gap-2 flex-wrap mt-2">
-                          <div className="flex items-center gap-1">
-                            <span className="text-xs text-gray-500">DA:</span>
-                            <input type="number" value={editingMetrics.da_score} onChange={e => setEditingMetrics({ ...editingMetrics, da_score: e.target.value })} className="w-16 bg-white/10 border border-white/20 rounded px-2 py-1 text-xs text-gray-100 focus:border-circuit-500 focus:outline-none caret-circuit-500" />
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <span className="text-xs text-gray-500">Traffic:</span>
-                            <input type="number" value={editingMetrics.organic_traffic} onChange={e => setEditingMetrics({ ...editingMetrics, organic_traffic: e.target.value })} className="w-20 bg-white/10 border border-white/20 rounded px-2 py-1 text-xs text-gray-100 focus:border-circuit-500 focus:outline-none caret-circuit-500" />
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <span className="text-xs text-gray-500">Keywords:</span>
-                            <input type="number" value={editingMetrics.keywords_ranked} onChange={e => setEditingMetrics({ ...editingMetrics, keywords_ranked: e.target.value })} className="w-16 bg-white/10 border border-white/20 rounded px-2 py-1 text-xs text-gray-100 focus:border-circuit-500 focus:outline-none caret-circuit-500" />
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <span className="text-xs text-gray-500">Backlinks:</span>
-                            <input type="number" value={editingMetrics.backlinks} onChange={e => setEditingMetrics({ ...editingMetrics, backlinks: e.target.value })} className="w-16 bg-white/10 border border-white/20 rounded px-2 py-1 text-xs text-gray-100 focus:border-circuit-500 focus:outline-none caret-circuit-500" />
-                          </div>
-                          <button
-                            onClick={() => updateCampaign(c.id, {
-                              da_score: editingMetrics.da_score ? Number(editingMetrics.da_score) : null,
-                              organic_traffic: editingMetrics.organic_traffic ? Number(editingMetrics.organic_traffic) : null,
-                              keywords_ranked: editingMetrics.keywords_ranked ? Number(editingMetrics.keywords_ranked) : null,
-                              backlinks: editingMetrics.backlinks ? Number(editingMetrics.backlinks) : null,
-                            })}
-                            className="text-xs bg-circuit-500 hover:bg-circuit-400 text-carbon-900 font-semibold px-3 py-1 rounded transition"
-                          >
-                            Save
-                          </button>
-                          <button onClick={() => setEditingMetrics(null)} className="text-xs text-gray-400 hover:text-white transition">Cancel</button>
-                        </div>
-                      ) : (
-                        <div className="flex items-center gap-4 mt-2">
-                          <div className="flex items-center gap-4 text-sm">
-                            {c.da_score != null && (
-                              <span className="text-gray-300"><span className="text-gray-500">DA:</span> {c.da_score}</span>
-                            )}
-                            {c.organic_traffic != null && (
-                              <span className="text-gray-300"><span className="text-gray-500">Traffic:</span> {c.organic_traffic.toLocaleString()}</span>
-                            )}
-                            {c.keywords_ranked != null && (
-                              <span className="text-gray-300"><span className="text-gray-500">Ranked:</span> {c.keywords_ranked}</span>
-                            )}
-                            {c.backlinks != null && (
-                              <span className="text-gray-300"><span className="text-gray-500">Backlinks:</span> {c.backlinks.toLocaleString()}</span>
-                            )}
-                          </div>
-                          <button
-                            onClick={() => setEditingMetrics({
-                              id: c.id,
-                              da_score: String(c.da_score ?? ''),
-                              organic_traffic: String(c.organic_traffic ?? ''),
-                              keywords_ranked: String(c.keywords_ranked ?? ''),
-                              backlinks: String(c.backlinks ?? ''),
-                            })}
-                            className="text-xs text-circuit-400 hover:text-circuit-300 transition"
-                          >
-                            {(c.da_score != null || c.organic_traffic != null) ? 'Edit metrics' : '+ Add metrics'}
-                          </button>
-                        </div>
-                      )}
-
-                      {c.notes && (
-                        <p className="text-sm text-gray-400 mt-2 italic">{c.notes}</p>
-                      )}
+              {SEO_PLANS.map(plan => {
+                const planCampaigns = seoCampaigns.filter(c => c.plan_type === plan.id);
+                if (planCampaigns.length === 0) return null;
+                return (
+                  <div key={plan.id} className="mb-6">
+                    <div className="flex items-center gap-2 mb-3">
+                      <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${plan.color}`} />
+                      <h3 className="text-sm font-semibold text-gray-300">{plan.name}</h3>
+                      <span className="text-xs text-gray-500">({planCampaigns.length})</span>
                     </div>
+                    <div className="grid gap-3">
+                      {planCampaigns.map(c => (
+                        <div key={c.id} className="glass-card rounded-xl p-5">
+                          <div className="flex items-start justify-between gap-4">
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center gap-3 mb-2">
+                                <h3 className="font-semibold text-white text-lg">{c.name}</h3>
+                                <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${plan.badge}`}>{plan.name}</span>
+                                <select
+                                  value={c.status}
+                                  onChange={e => updateCampaign(c.id, { status: e.target.value })}
+                                  className={`text-xs px-2 py-0.5 rounded-full font-medium border-0 cursor-pointer ${SEO_STATUS_COLORS[c.status] || 'bg-white/10 text-gray-300'}`}
+                                >
+                                  {Object.keys(SEO_STATUS_COLORS).map(s => (
+                                    <option key={s} value={s}>{s}</option>
+                                  ))}
+                                </select>
+                              </div>
 
-                    <div className="flex flex-col gap-2">
-                      <button
-                        onClick={() => setEditingCampaign(c)}
-                        className="text-xs bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-lg transition"
-                      >
-                        Edit
-                      </button>
-                      <button
-                        onClick={() => deleteCampaign(c.id)}
-                        className="text-xs text-red-400 hover:text-red-300 px-3 py-1.5 transition"
-                      >
-                        Delete
-                      </button>
+                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1 text-sm mb-3">
+                                {c.client_name && (
+                                  <div className="flex items-center gap-2 text-gray-300">
+                                    <span className="text-gray-500">Client:</span>
+                                    <span>{c.client_name}</span>
+                                  </div>
+                                )}
+                                {c.website_url && (
+                                  <div className="flex items-center gap-2 text-gray-300">
+                                    <span className="text-gray-500">Website:</span>
+                                    <a href={c.website_url.startsWith('http') ? c.website_url : `https://${c.website_url}`} target="_blank" rel="noopener noreferrer" className="text-circuit-400 hover:underline truncate">{c.website_url}</a>
+                                  </div>
+                                )}
+                                {c.monthly_budget && (
+                                  <div className="flex items-center gap-2 text-gray-300">
+                                    <span className="text-gray-500">Budget:</span>
+                                    <span>{c.monthly_budget}/mo</span>
+                                  </div>
+                                )}
+                                {c.start_date && (
+                                  <div className="flex items-center gap-2 text-gray-300">
+                                    <span className="text-gray-500">Started:</span>
+                                    <span>{new Date(c.start_date).toLocaleDateString()}</span>
+                                  </div>
+                                )}
+                              </div>
+
+                              {c.target_keywords && (
+                                <div className="mb-3">
+                                  <span className="text-xs text-gray-500">Keywords:</span>
+                                  <div className="flex flex-wrap gap-1.5 mt-1">
+                                    {c.target_keywords.split(',').map((kw, i) => (
+                                      <span key={i} className="text-xs bg-blue-500/15 text-blue-400 px-2 py-0.5 rounded-full">{kw.trim()}</span>
+                                    ))}
+                                  </div>
+                                </div>
+                              )}
+
+                              {/* Metrics */}
+                              {editingMetrics?.id === c.id ? (
+                                <div className="flex items-center gap-2 flex-wrap mt-2">
+                                  <div className="flex items-center gap-1">
+                                    <span className="text-xs text-gray-500">DA:</span>
+                                    <input type="number" value={editingMetrics.da_score} onChange={e => setEditingMetrics({ ...editingMetrics, da_score: e.target.value })} className="w-16 bg-white/10 border border-white/20 rounded px-2 py-1 text-xs text-gray-100 focus:border-circuit-500 focus:outline-none caret-circuit-500" />
+                                  </div>
+                                  <div className="flex items-center gap-1">
+                                    <span className="text-xs text-gray-500">Traffic:</span>
+                                    <input type="number" value={editingMetrics.organic_traffic} onChange={e => setEditingMetrics({ ...editingMetrics, organic_traffic: e.target.value })} className="w-20 bg-white/10 border border-white/20 rounded px-2 py-1 text-xs text-gray-100 focus:border-circuit-500 focus:outline-none caret-circuit-500" />
+                                  </div>
+                                  <div className="flex items-center gap-1">
+                                    <span className="text-xs text-gray-500">Keywords:</span>
+                                    <input type="number" value={editingMetrics.keywords_ranked} onChange={e => setEditingMetrics({ ...editingMetrics, keywords_ranked: e.target.value })} className="w-16 bg-white/10 border border-white/20 rounded px-2 py-1 text-xs text-gray-100 focus:border-circuit-500 focus:outline-none caret-circuit-500" />
+                                  </div>
+                                  <div className="flex items-center gap-1">
+                                    <span className="text-xs text-gray-500">Backlinks:</span>
+                                    <input type="number" value={editingMetrics.backlinks} onChange={e => setEditingMetrics({ ...editingMetrics, backlinks: e.target.value })} className="w-16 bg-white/10 border border-white/20 rounded px-2 py-1 text-xs text-gray-100 focus:border-circuit-500 focus:outline-none caret-circuit-500" />
+                                  </div>
+                                  <button
+                                    onClick={() => updateCampaign(c.id, {
+                                      da_score: editingMetrics.da_score ? Number(editingMetrics.da_score) : null,
+                                      organic_traffic: editingMetrics.organic_traffic ? Number(editingMetrics.organic_traffic) : null,
+                                      keywords_ranked: editingMetrics.keywords_ranked ? Number(editingMetrics.keywords_ranked) : null,
+                                      backlinks: editingMetrics.backlinks ? Number(editingMetrics.backlinks) : null,
+                                    })}
+                                    className="text-xs bg-circuit-500 hover:bg-circuit-400 text-carbon-900 font-semibold px-3 py-1 rounded transition"
+                                  >
+                                    Save
+                                  </button>
+                                  <button onClick={() => setEditingMetrics(null)} className="text-xs text-gray-400 hover:text-white transition">Cancel</button>
+                                </div>
+                              ) : (
+                                <div className="flex items-center gap-4 mt-2">
+                                  <div className="flex items-center gap-4 text-sm">
+                                    {c.da_score != null && (
+                                      <span className="text-gray-300"><span className="text-gray-500">DA:</span> {c.da_score}</span>
+                                    )}
+                                    {c.organic_traffic != null && (
+                                      <span className="text-gray-300"><span className="text-gray-500">Traffic:</span> {c.organic_traffic.toLocaleString()}</span>
+                                    )}
+                                    {c.keywords_ranked != null && (
+                                      <span className="text-gray-300"><span className="text-gray-500">Ranked:</span> {c.keywords_ranked}</span>
+                                    )}
+                                    {c.backlinks != null && (
+                                      <span className="text-gray-300"><span className="text-gray-500">Backlinks:</span> {c.backlinks.toLocaleString()}</span>
+                                    )}
+                                  </div>
+                                  <button
+                                    onClick={() => setEditingMetrics({
+                                      id: c.id,
+                                      da_score: String(c.da_score ?? ''),
+                                      organic_traffic: String(c.organic_traffic ?? ''),
+                                      keywords_ranked: String(c.keywords_ranked ?? ''),
+                                      backlinks: String(c.backlinks ?? ''),
+                                    })}
+                                    className="text-xs text-circuit-400 hover:text-circuit-300 transition"
+                                  >
+                                    {(c.da_score != null || c.organic_traffic != null) ? 'Edit metrics' : '+ Add metrics'}
+                                  </button>
+                                </div>
+                              )}
+
+                              {c.notes && (
+                                <p className="text-sm text-gray-400 mt-2 italic">{c.notes}</p>
+                              )}
+                            </div>
+
+                            <div className="flex flex-col gap-2">
+                              <button
+                                onClick={() => setEditingCampaign(c)}
+                                className="text-xs bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-lg transition"
+                              >
+                                Edit
+                              </button>
+                              <button
+                                onClick={() => deleteCampaign(c.id)}
+                                className="text-xs text-red-400 hover:text-red-300 px-3 py-1.5 transition"
+                              >
+                                Delete
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
+                );
+              })}
+
+              {/* Unassigned campaigns (legacy or no plan) */}
+              {seoCampaigns.filter(c => !c.plan_type || !SEO_PLANS.some(p => p.id === c.plan_type)).length > 0 && (
+                <div className="mb-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className="w-2 h-2 rounded-full bg-gray-500" />
+                    <h3 className="text-sm font-semibold text-gray-300">Unassigned</h3>
+                  </div>
+                  <div className="grid gap-3">
+                    {seoCampaigns.filter(c => !c.plan_type || !SEO_PLANS.some(p => p.id === c.plan_type)).map(c => (
+                      <div key={c.id} className="glass-card rounded-xl p-5">
+                        <div className="flex items-start justify-between gap-4">
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center gap-3 mb-2">
+                              <h3 className="font-semibold text-white">{c.name}</h3>
+                              <select
+                                value={c.plan_type || ''}
+                                onChange={e => updateCampaign(c.id, { plan_type: e.target.value })}
+                                className="text-xs bg-white/10 border border-white/15 rounded px-2 py-0.5 text-gray-300 cursor-pointer"
+                              >
+                                <option value="">Assign plan...</option>
+                                {SEO_PLANS.map(p => (
+                                  <option key={p.id} value={p.id}>{p.name} (${p.monthly_price}/mo)</option>
+                                ))}
+                              </select>
+                              <select
+                                value={c.status}
+                                onChange={e => updateCampaign(c.id, { status: e.target.value })}
+                                className={`text-xs px-2 py-0.5 rounded-full font-medium border-0 cursor-pointer ${SEO_STATUS_COLORS[c.status] || 'bg-white/10 text-gray-300'}`}
+                              >
+                                {Object.keys(SEO_STATUS_COLORS).map(s => (
+                                  <option key={s} value={s}>{s}</option>
+                                ))}
+                              </select>
+                            </div>
+                            {c.client_name && <p className="text-sm text-gray-400">{c.client_name} {c.website_url && `· ${c.website_url}`}</p>}
+                          </div>
+                          <div className="flex gap-2">
+                            <button onClick={() => setEditingCampaign(c)} className="text-xs bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-lg transition">Edit</button>
+                            <button onClick={() => deleteCampaign(c.id)} className="text-xs text-red-400 hover:text-red-300 px-3 py-1.5 transition">Delete</button>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         )}
@@ -1142,6 +1317,26 @@ export default function AdminDashboard() {
       {showNewCampaign && (
         <Modal onClose={() => setShowNewCampaign(false)} title="New SEO Campaign">
           <form onSubmit={addCampaign} className="space-y-3">
+            <div>
+              <label className="text-sm text-gray-300 block mb-1">Plan Tier</label>
+              <div className="grid grid-cols-3 gap-2">
+                {SEO_PLANS.map(plan => (
+                  <button
+                    key={plan.id}
+                    type="button"
+                    onClick={() => setNewCampaign({ ...newCampaign, plan_type: plan.id, monthly_budget: `$${plan.monthly_price}` })}
+                    className={`p-2.5 rounded-lg border text-left transition-all ${
+                      newCampaign.plan_type === plan.id
+                        ? `${plan.border} bg-white/[0.06]`
+                        : 'border-white/10 bg-white/[0.02] hover:border-white/20'
+                    }`}
+                  >
+                    <div className="text-xs font-semibold text-white">{plan.name}</div>
+                    <div className="text-xs text-gray-500 font-mono">${plan.monthly_price}/mo</div>
+                  </button>
+                ))}
+              </div>
+            </div>
             <Input label="Campaign Name" value={newCampaign.name} onChange={v => setNewCampaign({ ...newCampaign, name: v })} required />
             <Input label="Client Name" value={newCampaign.client_name} onChange={v => setNewCampaign({ ...newCampaign, client_name: v })} />
             <Input label="Website URL" value={newCampaign.website_url} onChange={v => setNewCampaign({ ...newCampaign, website_url: v })} />
