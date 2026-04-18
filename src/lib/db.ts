@@ -107,6 +107,41 @@ export async function ensureDb(): Promise<Client> {
         created_at TEXT DEFAULT (datetime('now')),
         updated_at TEXT DEFAULT (datetime('now'))
       );
+
+      CREATE TABLE IF NOT EXISTS card_orders (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        order_id TEXT UNIQUE,
+        name TEXT,
+        company TEXT,
+        email TEXT,
+        website TEXT,
+        tagline TEXT,
+        qr_url TEXT,
+        accent TEXT,
+        pack TEXT,
+        quantity INTEGER,
+        amount INTEGER,
+        status TEXT DEFAULT 'pending',
+        stripe_session_id TEXT,
+        created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+      );
+
+      CREATE TABLE IF NOT EXISTS print_orders (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        order_id TEXT UNIQUE,
+        name TEXT,
+        email TEXT,
+        size TEXT,
+        material TEXT,
+        colors TEXT,
+        notes TEXT,
+        filename TEXT,
+        file_data TEXT,
+        amount INTEGER,
+        status TEXT DEFAULT 'pending',
+        stripe_session_id TEXT,
+        created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+      );
     `);
     // Migrations for existing tables
     try { await db.execute('ALTER TABLE customers ADD COLUMN area_code TEXT'); } catch { /* already exists */ }

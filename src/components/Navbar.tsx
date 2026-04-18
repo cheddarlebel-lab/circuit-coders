@@ -9,7 +9,7 @@ const navLinks = [
   { name: "Services", href: "#services" },
   { name: "Portfolio", href: "#portfolio" },
   { name: "Mockup Studio", href: "#mockup" },
-
+  { name: "Shop", href: "/shop" },
   { name: "Contact", href: "#contact" },
 ];
 

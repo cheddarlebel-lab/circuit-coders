@@ -26,6 +26,7 @@ export async function POST(req: NextRequest) {
   if (event.type === 'checkout.session.completed') {
     const session = event.data.object;
     const projectId = session.metadata?.project_id;
+    const cardOrderId = session.metadata?.card_order_id;
 
     if (projectId) {
       const db = await ensureDb();
@@ -49,6 +50,111 @@ export async function POST(req: NextRequest) {
 
       // Trigger automation (task generation, portal access email, etc.)
       await onStatusChanged(db, Number(projectId), oldStatus, 'in_progress');
+    }
+
+    const printOrderId = session.metadata?.print_order_id;
+
+    if (printOrderId) {
+      const db = await ensureDb();
+      await db.execute({
+        sql: "UPDATE print_orders SET status = 'paid' WHERE order_id = ?",
+        args: [printOrderId],
+      });
+
+      const order = (await db.execute({
+        sql: 'SELECT * FROM print_orders WHERE order_id = ?',
+        args: [printOrderId],
+      })).rows[0];
+
+      if (order) {
+        const amountPaid = session.amount_total ? (session.amount_total / 100).toFixed(2) : '0';
+        const message = [
+          `🖨️ *New Custom Print Order Paid!*`,
+          ``,
+          `*Order:* ${order.order_id}`,
+          `*Name:* ${order.name}`,
+          `*Email:* ${order.email}`,
+          `*Size:* ${order.size}`,
+          `*Material:* ${order.material}`,
+          `*Colors:* ${order.colors || 'Single'}`,
+          `*Amount:* $${amountPaid}`,
+          `*File:* ${order.filename}`,
+          `*Notes:* ${order.notes || 'None'}`,
+          ``,
+          `_Download file from admin dashboard._`,
+        ].join('\n');
+
+        try {
+          await fetch(
+            `https://api.telegram.org/bot8219388922:AAH3eGhbcCJPd_oSBHYPPROddcFWHnjVQXg/sendMessage`,
+            {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                chat_id: 7086525719,
+                text: message,
+                parse_mode: 'Markdown',
+              }),
+            }
+          );
+        } catch (err) {
+          console.error('Failed to send Telegram notification:', err);
+        }
+      }
+    }
+
+    if (cardOrderId) {
+      const db = await ensureDb();
+
+      // Update card order status to paid
+      await db.execute({
+        sql: "UPDATE card_orders SET status = 'paid' WHERE order_id = ?",
+        args: [cardOrderId],
+      });
+
+      // Fetch order details for notification
+      const order = (await db.execute({
+        sql: 'SELECT * FROM card_orders WHERE order_id = ?',
+        args: [cardOrderId],
+      })).rows[0];
+
+      if (order) {
+        const amountPaid = session.amount_total ? (session.amount_total / 100).toFixed(2) : '0';
+        const message = [
+          `🎉 *New Card Order Paid!*`,
+          ``,
+          `*Order:* ${order.order_id}`,
+          `*Name:* ${order.name}`,
+          `*Company:* ${order.company || 'N/A'}`,
+          `*Email:* ${order.email}`,
+          `*Pack:* ${order.pack} (${order.quantity} cards)`,
+          `*Amount:* $${amountPaid}`,
+          `*Accent:* ${order.accent}`,
+          `*Website:* ${order.website || 'N/A'}`,
+          `*Tagline:* ${order.tagline || 'N/A'}`,
+          `*QR URL:* ${order.qr_url || 'N/A'}`,
+          ``,
+          `Run card generator:`,
+          `\`python3 generate_card.py --name "${order.name}" --company "${order.company || ''}" --email "${order.email}" --website "${order.website || ''}" --tagline "${order.tagline || ''}" --qr "${order.qr_url || ''}" --accent ${order.accent} --qty ${order.quantity}\``,
+        ].join('\n');
+
+        try {
+          await fetch(
+            `https://api.telegram.org/bot8219388922:AAH3eGhbcCJPd_oSBHYPPROddcFWHnjVQXg/sendMessage`,
+            {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                chat_id: 7086525719,
+                text: message,
+                parse_mode: 'Markdown',
+              }),
+            }
+          );
+        } catch (err) {
+          console.error('Failed to send Telegram notification:', err);
+        }
+      }
     }
   }
 
