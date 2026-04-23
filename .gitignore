@@ -3,3 +3,8 @@ node_modules/
 .vercel
 tsconfig.tsbuildinfo
 .env*.local
+.env.production
+.env
+.DS_Store
+.last_lead_id
+outreach-log/
