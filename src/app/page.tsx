@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Portfolio from "@/components/Portfolio";
+import WebsiteDemos from "@/components/WebsiteDemos";
 import TechMarquee from "@/components/TechMarquee";
 import MockupStudio from "@/components/MockupStudio";
 import Process from "@/components/Process";
@@ -26,6 +27,7 @@ export default function Home() {
         <TechMarquee />
         <Services />
         <Portfolio />
+        <WebsiteDemos />
         <MockupStudio />
         <Process />
         <LiveMetrics />

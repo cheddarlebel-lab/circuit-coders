@@ -21,12 +21,12 @@ export default function Footer() {
                 <span className="text-lg font-bold text-white">
                   Circuit<span className="text-circuit-400">Coders</span>
                 </span>
-                <div className="text-[10px] font-mono text-gray-600 tracking-widest uppercase">
+                <div className="text-[10px] font-mono text-circuit-300/80 tracking-widest uppercase">
                   Engineering Studio
                 </div>
               </div>
             </div>
-            <p className="text-sm text-gray-500 leading-relaxed mb-6 max-w-xs">
+            <p className="text-sm text-gray-200 leading-relaxed mb-6 max-w-xs">
               Engineering studio building bespoke hardware and
               software solutions. From custom PCBs to full-stack SaaS
               platforms — designed, built, and shipped.
@@ -44,7 +44,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="group w-10 h-10 rounded-xl bg-white/[0.03] border border-white/[0.06] flex items-center justify-center text-gray-500 hover:text-circuit-400 hover:border-circuit-500/20 hover:bg-circuit-500/5 transition-all duration-300"
+                  className="group w-10 h-10 rounded-xl bg-white/[0.05] border border-white/[0.1] flex items-center justify-center text-gray-100 hover:text-circuit-300 hover:border-circuit-500/40 hover:bg-circuit-500/10 transition-all duration-300"
                 >
                   <Icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
                 </a>
@@ -66,10 +66,10 @@ export default function Footer() {
             {
               title: "Resources",
               links: [
+                { label: "Blog", href: "/blog" },
                 { label: "Portfolio", href: "/#portfolio" },
                 { label: "Mockup Studio", href: "/#mockup" },
                 { label: "Our Process", href: "/#process" },
-                { label: "Metrics", href: "/#metrics" },
               ],
             },
             {
@@ -83,11 +83,11 @@ export default function Footer() {
             },
           ].map((col) => (
             <div key={col.title}>
-              <h4 className="text-xs font-mono text-gray-500 tracking-widest uppercase mb-5">{col.title}</h4>
+              <h4 className="text-xs font-mono text-circuit-300/80 tracking-widest uppercase mb-5 font-semibold">{col.title}</h4>
               <ul className="space-y-3">
                 {col.links.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href} className="group text-sm text-gray-500 hover:text-circuit-400 transition-colors flex items-center gap-1">
+                    <a href={link.href} className="group text-sm text-gray-100 hover:text-circuit-300 transition-colors flex items-center gap-1">
                       {link.label}
                       <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </a>
@@ -100,12 +100,12 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="pt-8 border-t border-white/[0.04] flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="text-xs text-gray-600 font-mono">
+          <div className="text-xs text-gray-300 font-mono">
             &copy; {new Date().getFullYear()} Circuit Coders. All rights reserved.
           </div>
-          <div className="flex items-center gap-1.5 text-xs text-gray-600 font-mono">
+          <div className="flex items-center gap-1.5 text-xs text-gray-300 font-mono">
             <span>Built with</span>
-            <Zap className="w-3 h-3 text-circuit-500" />
+            <Zap className="w-3 h-3 text-circuit-300" fill="currentColor" />
             <span>by Circuit Coders</span>
           </div>
         </div>

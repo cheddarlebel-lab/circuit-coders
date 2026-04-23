@@ -6,11 +6,11 @@ import { Zap, Menu, X } from "lucide-react";
 import MagneticButton from "./MagneticButton";
 
 const navLinks = [
-  { name: "Services", href: "#services" },
-  { name: "Portfolio", href: "#portfolio" },
-  { name: "Mockup Studio", href: "#mockup" },
+  { name: "Services", href: "/#services" },
+  { name: "Demos", href: "/#website-demos" },
+  { name: "Blog", href: "/blog" },
   { name: "Shop", href: "/shop" },
-  { name: "Contact", href: "#contact" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -41,16 +41,16 @@ export default function Navbar() {
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
             <div className="relative">
-              <div className="w-10 h-10 rounded-xl bg-circuit-500/10 border border-circuit-500/30 flex items-center justify-center group-hover:border-circuit-400/60 transition-colors duration-300">
-                <Zap className="w-5 h-5 text-circuit-400" />
+              <div className="w-10 h-10 rounded-xl bg-circuit-500/25 border border-circuit-400/70 flex items-center justify-center group-hover:border-circuit-300 transition-colors duration-300 shadow-[0_0_20px_rgba(0,230,138,0.35)]">
+                <Zap className="w-5 h-5 text-circuit-300 drop-shadow-[0_0_6px_rgba(0,230,138,0.9)]" fill="currentColor" />
               </div>
-              <div className="absolute inset-0 rounded-xl bg-circuit-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 rounded-xl bg-circuit-500/30 blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
             <div>
               <span className="text-lg font-bold tracking-tight text-white">
                 Circuit<span className="text-circuit-400">Coders</span>
               </span>
-              <div className="text-[10px] font-mono text-gray-500 tracking-widest uppercase">
+              <div className="text-[10px] font-mono text-circuit-300/80 tracking-widest uppercase">
                 Engineering Studio
               </div>
             </div>
@@ -62,7 +62,7 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="px-3 py-2 text-sm text-gray-400 hover:text-circuit-400 transition-colors duration-300 rounded-lg hover:bg-white/[0.03] relative group"
+                className="px-3 py-2 text-sm text-gray-100 hover:text-circuit-300 transition-colors duration-300 rounded-lg hover:bg-white/[0.05] relative group font-medium"
               >
                 {link.name}
                 <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-px bg-circuit-500 group-hover:w-3/4 transition-all duration-300" />
@@ -86,7 +86,7 @@ export default function Navbar() {
           {/* Mobile toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-gray-400 hover:text-white transition-colors"
+            className="md:hidden p-2 text-gray-100 hover:text-white transition-colors"
           >
             {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -111,7 +111,7 @@ export default function Navbar() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.05 }}
-                className="block px-4 py-3 text-gray-400 hover:text-circuit-400 hover:bg-white/[0.03] rounded-lg transition-colors"
+                className="block px-4 py-3 text-gray-100 hover:text-circuit-300 hover:bg-white/[0.05] rounded-lg transition-colors font-medium"
               >
                 {link.name}
               </motion.a>
