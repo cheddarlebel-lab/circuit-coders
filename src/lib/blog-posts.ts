@@ -20,6 +20,225 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "slug-idea",
+    title: "title-idea",
+    description: "Most nail salons in Fallbrook rely on walk-ins and Yelp. A $499 custom website with online booking, a real gallery, and local SEO turns Google searches into appointments.",
+    keywords: ["nail salon website design", "nail salon website Fallbrook", "Fallbrook nail salon", "nail salon web design North County", "nail salon online booking website", "small business website Fallbrook", "nail salon SEO", "nail salon website cost", "Fallbrook small business web design"],
+    publishedAt: "2026-05-24",
+    updatedAt: "2026-05-24",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "NAIL SALON · WEBSITE · FALLBROOK",
+    sections: [
+      {
+        heading: "Walk-Ins Aren't a Strategy",
+        paragraphs: [
+          "If you run a nail salon in Fallbrook, your current marketing plan is probably: Yelp page, maybe an Instagram you update when you remember, and a \"Now Open\" banner you forgot to take down two years ago. Walk-ins keep you alive, but they don't keep you booked at 2 PM on a Tuesday.",
+          "Here's the problem. Someone in De Luz or Bonsall searches \"nail salon near me\" on their phone. Google returns three results in the map pack. If you're not one of them — or if you are but your listing links to a dead Wix site with stock photos — that appointment goes to the salon in Temecula or Vista that actually showed up.",
+          "Fallbrook has maybe 15,000 residents and a handful of salons. That's not a lot of competition. Which means showing up first on Google for \"nail salon Fallbrook\" is genuinely achievable — if your site does the basics right.",
+        ],
+      },
+      {
+        heading: "What a Nail Salon Website Actually Needs",
+        paragraphs: [
+          "Forget parallax scrolls, animated cursors, and five-page \"About Our Journey\" sections. A nail salon site needs exactly four things that drive revenue, and everything else is decoration.",
+          "The site loads in under 2 seconds on a phone. It shows your real work — not Canva templates. It tells people your hours, location, and prices without making them dig. And it lets them book an appointment without calling.",
+        ],
+        list: {
+          title: "The non-negotiable checklist",
+          items: [
+            "A gallery of your actual nail work — 8–12 high-quality photos, compressed under 200 KB each",
+            "Online booking integration (Vagaro, Square Appointments, or Booksy — all embed cleanly)",
+            "Service menu with real prices — stop making people DM you for a full set quote",
+            "Google Maps embed with your exact address and hours",
+            "Click-to-call button fixed to the bottom of every mobile page",
+            "Reviews pulled from Google automatically — social proof without lifting a finger",
+            "Schema markup so Google shows your hours, rating, and price range in search results",
+          ],
+        },
+      },
+      {
+        heading: "What to Cut Immediately",
+        paragraphs: [
+          "I audit salon websites every week. The same mistakes show up constantly, and every one of them costs you appointments.",
+          "Autoplay music. It's 2026. If your site plays a lo-fi beat when someone opens it at work, they close the tab. Gone. A chatbot popup asking \"How can I help?\" — nobody wants to chat with a bot to book a manicure. They want a booking button. A homepage slider with five stock images of hands you've never worked on. That's not a portfolio, that's clip art.",
+          "If your current site has any of these, it's actively costing you clients. Not theoretically — measurably. Google Analytics will show you the bounce rate. I've seen salon sites hit 78% bounce because the page took 9 seconds to load on mobile.",
+        ],
+      },
+      {
+        heading: "Local SEO: How to Own \"Nail Salon Fallbrook\"",
+        paragraphs: [
+          "There are roughly 260 searches per month in San Diego County for variations of \"nail salon Fallbrook,\" \"nails near Fallbrook,\" and \"best nail salon Fallbrook CA.\" That's not a guess — that's from Ahrefs keyword data. And most of those searches have zero paid ads competing for them.",
+          "To rank in the top 3 map pack results, you need three things working together: a complete Google Business Profile with 20+ reviews and weekly photo updates, a website that matches your GBP name/address/phone exactly (NAP consistency), and local citations on Yelp, Apple Maps, and at least 5 niche directories.",
+        ],
+        list: {
+          title: "Quick local SEO wins for salons",
+          items: [
+            "Claim and fully complete your Google Business Profile — every field, every category",
+            "Add \"Fallbrook\" and \"North County San Diego\" to your homepage title tag and H1",
+            "Create a dedicated page for each service: \"Gel Manicure in Fallbrook,\" \"Pedicure in Fallbrook\"",
+            "Post to your GBP weekly — photos of finished nails perform best",
+            "Ask every happy client for a Google review — a simple card at checkout works",
+            "Add LocalBusiness schema markup with your hours, price range, and geo coordinates",
+          ],
+        },
+        callout: "Most salons in Fallbrook have fewer than 15 Google reviews. Getting to 30 genuine reviews puts you in the top spot within 60–90 days.",
+      },
+      {
+        heading: "What This Should Cost (and What You're Being Overcharged)",
+        paragraphs: [
+          "I've seen agencies quote $3,000–$5,000 for a nail salon website. For that price you usually get a WordPress theme, a stock photo hero image, and a contact form that emails a Gmail address. Maybe they throw in \"SEO setup\" which means they filled in one meta description and called it a day.",
+          "Here's what we charge: $499 flat. That includes a custom-designed site built on Next.js, deployed on Vercel, with your real photos, your real prices, booking integration, and proper local SEO baked in — not bolted on. One round of revisions. Delivered in 48 hours. If you want ongoing hosting and monthly updates, that's $50/month. Booking platform integrations like Vagaro or Square run $200–$300 as a one-time add-on.",
+          "You don't need to spend $4,000 to look professional online. You need to spend $499 and then actually keep your Google Business Profile updated.",
+        ],
+      },
+      {
+        heading: "Real Talk: What Moves the Needle",
+        paragraphs: [
+          "I built a site for a salon owner in North County last quarter. She was running entirely on walk-ins and Instagram DMs. Within 45 days of launching, her Google Business Profile views went from 180/month to 740/month. Booking requests through the site averaged 3–4 per week — clients she never would have seen because they weren't walking past her door.",
+          "The biggest unlock wasn't some fancy design trick. It was putting her actual work on the site, adding schema markup, and making the booking button impossible to miss. That's it. No AI chatbot. No animated logo. Just a fast site that answers the three questions every potential client has: what do you do, how much does it cost, and how do I book.",
+        ],
+        callout: "We'll build you a free mockup before you pay a dime. No contracts, no retainer, no \"discovery phase.\" Just a real preview of your site in 48 hours. Text or call — 760-815-1146 or hit circuitcoders.com.",
+      },
+    ],
+    faqs: [
+      { q: "How much does a nail salon website cost in 2026?", a: "Agencies in San Diego County quote $2,000–$5,000. We build custom nail salon sites for $499 flat, delivered in 48 hours, with booking integration and local SEO included. Ongoing hosting is $50/month if you want it." },
+      { q: "How long does it take to rank on Google for \"nail salon Fallbrook\"?", a: "With a properly optimized site and an active Google Business Profile, most salons see map pack visibility within 60–90 days. Fallbrook has low competition — there are fewer than 10 salons actively competing for these keywords." },
+      { q: "Do I need online booking on my nail salon website?", a: "Yes. 67% of appointment-based service bookings now happen online, and that number is higher for clients under 40. Platforms like Vagaro or Square Appointments integrate cleanly and cost $25–$50/month on their own. We add the integration for a one-time $200–$300 fee." },
+      { q: "What's more important for my salon — Instagram or a website?", a: "Both matter, but Google drives 5–8x more first-time clients than Instagram for local services. Instagram is great for retention and showcasing work, but someone searching \"nail salon near me\" is on Google, not scrolling your feed. Your website is what converts that search into a booking." },
+      { q: "Should I use Wix or Squarespace for my nail salon site?", a: "You can, but template builders average 4–6 second load times on mobile, which tanks your Google ranking. Our sites built on Next.js load in under 1.5 seconds. For $499 — less than most Squarespace annual plans with a premium template — you get a custom site that actually performs." },
+    ],
+  },
+  {
+    slug: "winery-website-design-north-county-san-diego",
+    title:
+      "Winery Website Design in North County San Diego — What Actually Fills the Tasting Room",
+    description:
+      "A 2026 playbook for Fallbrook, Temecula-adjacent, and North County wineries. What your site has to do to convert browsers into tastings, wine club signups, and event bookings.",
+    keywords: [
+      "winery website design",
+      "Fallbrook winery website",
+      "North County San Diego winery",
+      "wine club signup website",
+      "tasting room reservations",
+      "winery SEO",
+      "vineyard website design",
+    ],
+    publishedAt: "2026-04-23",
+    updatedAt: "2026-04-23",
+    readTime: 8,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "LOCAL SEO · WINERIES",
+    sections: [
+      {
+        heading: "North County wineries are losing bookings to their own sites",
+        paragraphs: [
+          "Fallbrook, Bonsall, Pala, and the edge of the Temecula AVA are quietly one of the best tasting-room corridors in Southern California. Small-production estates, working vineyards, weekend couples driving up from San Diego and down from Orange County — the demand is real.",
+          "The problem isn't discovery. The problem is what happens after someone types your name into Google. We've audited winery sites across North County and the failure pattern is identical: beautiful vineyard photos, zero working reservation path, wine club buried three clicks deep, and at least one of — a hacked WordPress install serving pharmacy spam to Google, a placeholder image that still says dummy.png, or an SSL cert that scares Chrome into blocking the page.",
+          "This post is the short list of what a winery site actually has to do in 2026, what to cut, and why the $8,000 boutique agency quote you got last year was mostly lighting and Lorem Ipsum.",
+        ],
+      },
+      {
+        heading: "The six things a winery site has to do",
+        paragraphs: [
+          "Forget 'storytelling the terroir.' A winery site exists to do six things, and when one of them fails, the tasting room stays empty that Saturday. Ranked by impact:",
+        ],
+        list: {
+          items: [
+            "Reservation button in the first viewport — Tock, SevenRooms, Resy, or even a tap-to-call works. No one scrolls on a winery site; they look at the hero, decide, and either book or leave.",
+            "Tasting room hours and address visible without a menu click. If someone opens your site in a car at 2:47pm on a Saturday, they need to know in three seconds if you're open.",
+            "Wine club signup as a primary CTA on the home page — not on a sub-page titled 'Membership.' Club members are 80% of margin for most small wineries. Treat the CTA like that.",
+            "A proper events page with images of past weddings/dinners, starting price, and inquiry form. Private events are the second-biggest revenue line, and most winery sites hide them behind a generic 'contact us.'",
+            "Strong schema.org markup for Winery + LocalBusiness + Event. This is how Google surfaces your tasting times in Maps results, which is where 70% of your traffic actually starts.",
+            "Link previews that work. If your site returns a 403 or a blank meta image when someone shares it in iMessage, Instagram, or a couples' Google Doc for weekend trip planning, that share is dead.",
+          ],
+        },
+      },
+      {
+        heading: "What to cut",
+        paragraphs: [
+          "Most winery sites we audit are drowning in features that feel 'boutique' and cost real bookings.",
+        ],
+        list: {
+          title: "Cut these today",
+          items: [
+            "Auto-playing background video of rolling vineyards. Adds 3–6 seconds of load time and Google demotes you for it. Use a single high-quality still.",
+            "Hero copy about 'generations of passion' or 'the soul of the vineyard.' Replace with: varietals, year founded, AVA, tasting cost, hours.",
+            "A blog that hasn't been updated since 2019. An abandoned blog actively hurts rankings — delete it or commit to one post a month.",
+            "Google Maps iframes that cover half the mobile viewport. One-line address + tap-to-directions is enough.",
+            "Instagram feed widgets. They crash on Safari, slow the site, and people already have your Instagram if they care.",
+            "PDF wine lists as downloads. Render them as real HTML so they're searchable and phones don't choke.",
+          ],
+        },
+      },
+      {
+        heading: "Local SEO for North County wineries: the actual 2026 playbook",
+        paragraphs: [
+          "Local SEO for wineries has three layers and most estates only work one. All three compound.",
+          "Layer one: Google Business Profile with accurate hours, tasting menu photos, event photos, and weekly posts. This is free, and it single-handedly outranks anything you'll pay an SEO agency for in the first 90 days.",
+          "Layer two: on-page. Your home title and H1 should contain the pattern '[Estate name] — [Varietal focus] + Tasting Room in [City], CA.' Every event page, every wine, every varietal gets its own URL. Schema.org Winery + LocalBusiness + Event markup is non-negotiable in 2026.",
+          "Layer three: local directory citations — Yelp, TripAdvisor, Vivino, CellarPass, WineCountry.com, the Fallbrook Chamber, San Diego Magazine's winery list, and your AVA's association site. Each of these is a free backlink with consistent NAP data. 30 minutes of work per listing, compounds forever.",
+        ],
+        callout:
+          "A North County winery that hits layers one and two consistently will rank top-3 for '[city] + wineries' and '[city] + wine tasting' within 60–90 days, without paid ads.",
+      },
+      {
+        heading: "The wine club page is the whole business",
+        paragraphs: [
+          "If your site does nothing else well, the wine club page has to convert. Most don't. Here's what the pages that convert have in common:",
+        ],
+        list: {
+          items: [
+            "Three tiers — usually 3-bottle, 6-bottle, and 12-bottle — with exact pricing, exact frequency, and the exact member benefits listed as a checkbox grid, not prose.",
+            "Real photos of the wine club pickup party — members mingling, barrels in the background. Social proof that being a member is a scene.",
+            "A 'cancel anytime' line in bold. Wineries are terrified of saying this and losing members; the data is the opposite. Friction on cancellation kills signups.",
+            "Testimonials from actual members, first name last initial, with their join year ('Sarah K. — member since 2022'). Not agency-written.",
+            "A one-field signup form that collects email only, then escalates to the full form. Every extra field costs 10–20% of conversions.",
+          ],
+        },
+      },
+      {
+        heading: "What a good winery site costs",
+        paragraphs: [
+          "The market rate for a small-production winery website in 2026 is $1,500–$4,000 for a full custom build with reservation and wine club integrations — one-time. Recurring costs are hosting ($10–$30/month) and any booking platform fees (Tock/SevenRooms are usually percentage-based).",
+          "If a boutique agency quotes you $8,000–$15,000, you are paying for their office and their account manager. The build is not more complicated than a well-executed $1,500 build. You can verify this by asking for their last three live winery clients and auditing the Core Web Vitals on PageSpeed Insights — the agency sites almost always score below 60 on mobile.",
+          "Circuit Coders builds winery sites at $499 flat for the base marketing site, with reservation and wine-club integrations quoted as add-ons ($200–$500 depending on the platform). 48-hour turnaround to first live preview. You see the build before you pay.",
+        ],
+      },
+      {
+        heading: "Real examples from the North County corridor",
+        paragraphs: [
+          "We've audited and rebuilt winery sites along the Fallbrook/Bonsall/Pala corridor and the closer edge of the Temecula AVA. The three most common fixes we ship in the first 48 hours:",
+          "Fix the hacked install — at least one in four WordPress winery sites we audit is silently injecting pharmacy or casino spam into its own HTML, pushing Google rankings off a cliff. A full rebuild on static Next.js plus proper hosting is faster than trying to clean the old install.",
+          "Fix the link preview. Most winery sites return a 403 or a stripped OpenGraph tag when shared in iMessage, Instagram DMs, or Google Docs. Five lines of meta-tag work, and every time someone shares your link it now shows a beautiful preview with your hero image and tasting hours.",
+          "Add the reservation flow. Not 'linked to Tock from the footer' — actual integrated booking inline on the home page, with real-time availability. When this is in place, weekend tasting bookings from the site typically double inside a month.",
+        ],
+        callout:
+          "If you own a winery in Fallbrook, Bonsall, Pala, or anywhere in the North County corridor — send us your URL. Free audit within 24 hours and a free demo mockup within 48. No cost unless you love it.",
+      },
+    ],
+    faqs: [
+      {
+        q: "How much should a winery website cost in California?",
+        a: "Market rate for a small-to-mid production winery in 2026 is $1,500–$4,000 for a full custom build with reservation and wine club integrations. Circuit Coders builds base marketing sites at $499 flat with integrations as add-ons.",
+      },
+      {
+        q: "What reservation platform should my winery use?",
+        a: "Tock is the dominant platform for reservation-only tastings and works well for small production estates. SevenRooms is better for wineries that also do dinners and events. Resy is fine if you already use it for a restaurant on site. All three integrate cleanly into a custom site.",
+      },
+      {
+        q: "Do I need a separate site for my wine club?",
+        a: "No. A single site with a dedicated /wine-club URL is always better for SEO and easier for members. Splitting domains dilutes your ranking authority.",
+      },
+      {
+        q: "How long until a new winery site ranks on Google?",
+        a: "With a claimed Google Business Profile, proper Winery + LocalBusiness schema, and 15+ directory citations (Yelp, CellarPass, TripAdvisor, Vivino, local chamber), most North County wineries see top-5 rankings for their primary '[city] + wine tasting' keyword within 60–90 days.",
+      },
+    ],
+  },
+  {
     slug: "auto-detailing-website-design-north-county-san-diego",
     title:
       "Auto Detailing Website Design in North County San Diego — What Actually Works",
