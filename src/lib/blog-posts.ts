@@ -20,6 +20,105 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "nail-salon-website-design-fallbrook",
+    title: "Nail Salon Website Design in Fallbrook — What Actually Fills the Chairs",
+    description: "Most nail salon websites in Fallbrook lose bookings to Instagram DMs and phone tag. Here's what a $499 custom site needs to convert walk-by traffic into booked appointments.",
+    keywords: ["nail salon website design", "nail salon website Fallbrook", "Fallbrook nail salon", "nail salon web design North County", "nail salon online booking", "nail salon SEO Fallbrook", "nail salon website cost", "small business website Fallbrook", "nail salon Google Business Profile"],
+    publishedAt: "2026-05-25",
+    updatedAt: "2026-05-25",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "NAIL SALON · WEB DESIGN · FALLBROOK",
+    sections: [
+      {
+        heading: "The Real Problem With Nail Salon Websites in Fallbrook",
+        paragraphs: [
+          "There are roughly a dozen nail salons within a 10-minute drive of Main Avenue in Fallbrook. Most of them have no website at all — just an Instagram page, a Yelp listing, and maybe a Google Business Profile with stock photos from 2019. The ones that do have a site built it on Wix or GoDaddy, and it loads like it's running on dial-up.",
+          "Here's what that actually costs you: when someone new to town Googles 'nail salon near me' or 'nail salon Fallbrook,' Google needs a real webpage to rank. An Instagram page doesn't cut it. A Yelp listing you don't control doesn't cut it. You're handing first-page real estate to whoever bothered to build a proper site.",
+          "The clients who find you through word-of-mouth are gold. But they cap out. If you want to fill Tuesday mornings and Wednesday afternoons — the dead slots — you need search traffic. That means you need a website that loads fast, shows your actual work, and makes booking effortless.",
+        ],
+      },
+      {
+        heading: "What a Nail Salon Website Actually Needs (And What It Doesn't)",
+        paragraphs: [
+          "I've seen salon owners get sold $3,000–$5,000 websites with animated backgrounds, parallax scrolling, and a full blog they'll never update. That's a waste. A nail salon website needs exactly five things, and everything else is noise.",
+          "Your site needs to answer three questions in under five seconds: where are you, what do you do, and how do I book. That's it. If a visitor has to scroll past a mission statement about 'empowering beauty' to find your phone number, you've already lost them.",
+        ],
+        list: {
+          title: "The five things that actually matter:",
+          items: [
+            "A services page with real prices — not 'starting at' or 'call for pricing'",
+            "A gallery of your actual nail work, not stock photos (10–15 high-quality images minimum)",
+            "Online booking — even a simple Calendly or Vagaro embed works",
+            "Your address, hours, and phone number visible on every single page",
+            "Mobile-first design — 78% of your visitors are on their phone",
+          ],
+        },
+        callout: "If your current site hides the phone number behind a hamburger menu, you are losing walk-in traffic right now.",
+      },
+      {
+        heading: "What to Cut — The Stuff That Hurts More Than It Helps",
+        paragraphs: [
+          "Every feature you add is a feature that can break, slow your site down, or confuse your visitor. Nail salon websites are especially prone to bloat because template builders love to upsell 'premium features' that sound impressive and do nothing.",
+          "A chatbot. For a nail salon, a chatbot is a barrier between a real person and your booking page. Nobody wants to negotiate with a robot about whether you do ombré. An e-commerce store selling nail products — unless you're moving serious volume, it's a maintenance headache. A blog you'll never write for. Auto-playing background music. I've seen all of these on salon sites in North County.",
+          "Keep it lean. Five pages max: Home, Services, Gallery, About, Contact. That's a site that loads in under 2 seconds, ranks well, and converts.",
+        ],
+      },
+      {
+        heading: "Local SEO: How 'Nail Salon Fallbrook' Becomes Your Top Client Source",
+        paragraphs: [
+          "Local SEO is the single highest-ROI thing a nail salon in Fallbrook can do online. It's free traffic from people who are already looking for exactly what you sell. But you have to set it up correctly — Google doesn't guess.",
+          "First, your Google Business Profile needs to be fully built out. Every service listed individually (gel manicure, dip powder, pedicure, nail art — not just 'nail services'). Photos updated monthly. Posts every two weeks minimum. Your website URL pointing to a real site, not a Linktree.",
+          "Second, your website needs location-specific content. Your title tags should say 'Nail Salon in Fallbrook, CA' — not just your business name. Your schema.org LocalBusiness markup should include your exact address, hours, phone, and service area covering Fallbrook, Bonsall, De Luz, and Rainbow. These are the signals that tell Google you're a real local business, not a directory listing.",
+        ],
+        list: {
+          title: "Local SEO checklist for nail salons:",
+          items: [
+            "Claim and fully complete your Google Business Profile",
+            "Add individual services with prices to your GBP listing",
+            "Get listed on Yelp, Vagaro, Booksy, and Apple Maps — consistent NAP everywhere",
+            "Build location pages targeting 'nail salon Fallbrook' and 'nail salon near Bonsall'",
+            "Ask every happy client for a Google review — aim for 50+ reviews in your first 6 months",
+            "Add LocalBusiness schema markup to your website with full address and geo coordinates",
+          ],
+        },
+      },
+      {
+        heading: "What This Should Cost — And What You're Actually Paying",
+        paragraphs: [
+          "The salon website market is a mess. On one end, you've got Wix and Squarespace templates for $16–$30/month that look like every other salon in America. On the other end, you've got agencies in Carlsbad and San Marcos quoting $2,500–$5,000 for a WordPress site that takes 4–6 weeks to deliver.",
+          "Neither option makes sense for a nail salon doing $8K–$15K/month in revenue. You need something custom enough to stand out, fast enough to rank, and affordable enough that it pays for itself within 60–90 days of new client bookings.",
+          "We build nail salon websites for $499 flat. That's a custom Next.js site on Vercel — not a template, not WordPress. It loads in under 1.5 seconds, scores 95+ on Google PageSpeed, and includes your booking integration (Vagaro, Booksy, Calendly, or whatever you use). One round of revisions, delivered in 48 hours. If you need a Stripe-powered gift card system or an SMS reminder integration, those run $200–$500 as add-ons.",
+        ],
+        callout: "$499 flat. Not $499/month. Not $499 plus hosting fees plus a 'maintenance package.' One price, one site, 48 hours.",
+      },
+      {
+        heading: "What a Fallbrook Nail Salon Site Looks Like When It's Done Right",
+        paragraphs: [
+          "Picture this: someone just moved to Fallbrook from LA. They Google 'best nail salon Fallbrook.' Your site shows up in the top 3 results because you've got proper local SEO, fast load times, and 60+ Google reviews linked from your site. They tap through, see your actual work in a clean gallery, check your prices without calling, and book a gel set for Thursday — all in under 90 seconds.",
+          "That's one new client worth $45–$80 per visit, probably coming back every 2–3 weeks. Over a year, that single Google search is worth $800–$2,000 in revenue. Now multiply that by the 15–20 new clients per month a properly optimized site brings in.",
+          "Your website isn't a brochure. It's your highest-performing employee — works 24/7, never calls in sick, and costs less than a single day's worth of product supplies.",
+        ],
+      },
+      {
+        heading: "Get a Free Mockup Before You Pay Anything",
+        paragraphs: [
+          "If you run a nail salon in Fallbrook, Bonsall, or anywhere in North County San Diego, I'll build you a free mockup of your new site before you spend a dollar. No templates, no contracts, no 'discovery calls' that waste an hour of your day.",
+          "Send me your current Instagram or Google listing and I'll put together a custom design in 24 hours. If you like it, we build the full site for $499 in 48 hours. If you don't, you walk away with a free design you can hand to literally anyone else. That's the offer.",
+        ],
+        callout: "Free mockup, $499 flat build, 48-hour turnaround. Text or email — no sales calls, no contracts. CircuitCoders.com",
+      },
+    ],
+    faqs: [
+      { q: "How much does a nail salon website cost in Fallbrook?", a: "Template builders like Wix run $16–$30/month but look generic and load slowly. Local agencies charge $2,500–$5,000. Circuit Coders builds custom nail salon sites for $499 flat with a 48-hour turnaround — no monthly fees, no contracts." },
+      { q: "Do I really need a website if my nail salon has an Instagram?", a: "Yes. Instagram doesn't rank on Google for 'nail salon Fallbrook.' A website with proper local SEO can bring in 15–20 new clients per month from search traffic alone. Instagram is great for showing your work, but it's not discoverable by people who don't already follow you." },
+      { q: "How long does it take for a new nail salon website to rank on Google?", a: "With proper local SEO, schema markup, and an active Google Business Profile, most nail salon sites start appearing in local results within 30–60 days. Competitive keywords like 'nail salon near me' in a small market like Fallbrook can hit page one in 60–90 days." },
+      { q: "What's the best booking system for a nail salon website?", a: "Vagaro and Booksy are the most popular for nail salons — both embed cleanly into a custom site and handle deposits, reminders, and no-show fees. We integrate either one for free as part of the $499 build. Calendly works too if you want something simpler." },
+      { q: "Should my nail salon website have an online store?", a: "Only if you're already selling products in volume. For most Fallbrook nail salons, an e-commerce store adds complexity and maintenance without meaningful revenue. A gift card page with Stripe checkout ($200 add-on) is a better starting point — it drives bookings instead of just product sales." },
+    ],
+  },
+  {
     slug: "slug-idea",
     title: "title-idea",
     description: "Most nail salons in Fallbrook rely on walk-ins and Yelp. A $499 custom website with online booking, a real gallery, and local SEO turns Google searches into appointments.",
