@@ -20,6 +20,109 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "auto-repair-shop-website-design-oceanside",
+    title: "Auto Repair Shop Website Design in Oceanside",
+    description: "Most Oceanside auto repair shops lose jobs to competitors with better websites. A $499 custom site with online scheduling turns 'mechanic near me' searches into booked bays.",
+    keywords: ["auto repair website design", "auto repair shop website Oceanside", "Oceanside mechanic website", "auto repair web design North County SD", "mechanic website cost", "auto repair shop SEO Oceanside", "Oceanside small business website", "car repair website design", "auto shop website Oceanside"],
+    publishedAt: "2026-05-27",
+    updatedAt: "2026-05-27",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "AUTO REPAIR · WEBSITE · OCEANSIDE",
+    sections: [
+      {
+        heading: "Your Bays Are Empty Because Google Doesn't Know You Exist",
+        paragraphs: [
+          "There are over 40 auto repair shops between Oceanside Boulevard and the 76. Independent shops, chain franchises, mobile mechanics — everyone competing for the same pool of cars that need brake pads, timing belts, and oil changes. The shops with full bays aren't necessarily better mechanics. They're just the ones that show up when someone types 'auto repair near me' at 7 AM with a check-engine light on.",
+          "Most independent shops in Oceanside either have no website or they're running a GoDaddy builder page from 2020 with a stock photo of a wrench and a phone number that doesn't even click-to-call on mobile. That's not a website — it's a digital business card from a decade ago. Meanwhile, the shop on Mission Avenue with a clean site and a 'Request Appointment' button is pulling every panicked driver who just heard a grinding noise on the 5.",
+          "One new regular customer at an auto repair shop is worth $600–$1,200 a year in maintenance and repairs. If your website converts just three new customers per month, that's $21,600–$43,200 in annual revenue from a $499 investment. No mailer, no Yelp ad, no radio spot comes close to that return.",
+        ],
+      },
+      {
+        heading: "What an Auto Repair Website Actually Needs",
+        paragraphs: [
+          "Your website has one job: get someone from a Google search to either call you or request an appointment. Every element on the page either pushes toward that action or it's dead weight slowing down your load time.",
+          "Here's what actually moves the needle for a repair shop. Everything else is noise that some agency will try to upsell you on.",
+        ],
+        list: {
+          title: "The essentials that fill your bays",
+          items: [
+            "Click-to-call phone number pinned at the top of every page — 63% of auto repair searches happen on mobile during a minor crisis",
+            "Online appointment request form — doesn't need to be a full scheduling system, just name, phone, vehicle, and a description field",
+            "Your full service list with transparent pricing ranges — 'brake pad replacement: $150–$280' beats 'call for estimate' every time",
+            "Google Maps embed showing your exact location so 'mechanic near me' searches connect to your pin",
+            "Real photos of your shop, your lifts, your team — a phone photo of your actual garage beats a stock image of a shiny showroom",
+            "Hours of operation that are actually current, including Saturday availability if you offer it",
+            "ASE certifications and warranty info displayed prominently — trust signals matter when someone is handing you their daily driver",
+          ],
+        },
+      },
+      {
+        heading: "What to Cut — Features That Waste Your Budget",
+        paragraphs: [
+          "I've audited auto repair websites across Oceanside and Vista that cost $3,000+ and are loaded with features the owner never touches. Every unnecessary feature is dead weight that slows your site down and confuses the one person who matters: the driver with a broken car looking for help right now.",
+          "A blog section with two posts from 2022. A 'vehicle tips' carousel that nobody scrolls. A chatbot that asks 'How can I help you today?' when the answer is obviously 'my car is making a noise and I need it fixed.' A customer portal that requires registration before booking. All of it is friction between a searcher and your phone ringing.",
+        ],
+        list: {
+          title: "Skip all of this",
+          items: [
+            "Chatbots or AI assistants — someone with a check-engine light wants to call or book, not type symptoms into a robot",
+            "A customer login portal — save that for the dealer networks, not a 4-bay shop",
+            "Animated hero videos of cars being repaired that add 5 seconds of load time",
+            "A separate page for every single service — one well-organized services section beats 30 thin pages",
+            "Newsletter signup — your customers aren't subscribing to a brake pad email list",
+            "Social media feed widgets that slow your page and show posts from three months ago",
+          ],
+        },
+        callout: "Every extra second of load time costs you roughly 7% of conversions. When someone's car is broken, they're not waiting for your hero animation to finish — they're hitting the back button and calling the next shop.",
+      },
+      {
+        heading: "Local SEO — How Oceanside Shops Win the Map Pack",
+        paragraphs: [
+          "When someone searches 'auto repair Oceanside' or 'brake shop near Camp Pendleton,' Google shows three shops on the map before any organic results. That map pack captures over 40% of clicks. If you're not in those three spots, more than half your potential customers never see you.",
+          "The good news: most independent shops in Oceanside are doing almost nothing for local SEO. The bar is on the floor. A few hours of setup work puts you ahead of 80% of your competition.",
+        ],
+        list: {
+          title: "The local SEO playbook for auto repair",
+          items: [
+            "Claim and complete your Google Business Profile — fill in every service, upload 10+ real photos, and list your specialties (diesel, European, hybrid, etc.)",
+            "NAP consistency: your shop name, address, and phone number must match exactly across your website, Google, Yelp, RepairPal, and every directory listing",
+            "Add AutoRepair and LocalBusiness schema markup to your site so Google reads your services and location as structured data",
+            "Target page titles like 'Auto Repair in Oceanside | [Shop Name]' — not just your shop name alone",
+            "Collect Google reviews aggressively — shops with 80+ reviews and a 4.5+ rating dominate the Oceanside map pack. Ask every satisfied customer at pickup",
+            "Post to your Google Business Profile 2–3 times per week — a quick photo of a completed engine swap or a 'same-day brake service available' update signals activity to Google",
+          ],
+        },
+      },
+      {
+        heading: "What Auto Repair Websites Cost in North County SD",
+        paragraphs: [
+          "I've looked at proposals from agencies pitching repair shops in Oceanside, Carlsbad, and San Marcos. The quotes are all over the place. Template shops charge $1,000–$2,000 for a Squarespace or Wix site with your logo dropped into a pre-built layout. Local agencies in North County quote $3,000–$7,000 for a 'custom' WordPress build that's really a $79 theme with your colors changed.",
+          "Then there's the recurring hostage situation. Most of those agencies lock you into $150–$250/month 'maintenance and hosting' contracts that cost them $15/month on the backend. That $2,000 site actually costs you $5,600 over the first year. And when you want to leave? Good luck getting your login credentials.",
+          "Circuit Coders builds auto repair shop websites for $499 flat. Custom Next.js on Vercel — no templates, no WordPress plugins that break after every update. Your appointment form, your services, your map, all integrated. One round of revisions included. Delivered in 48 hours. Optional hosting and updates at $50/month if you want hands-off, but you own the code either way. No contracts.",
+        ],
+        callout: "$499 flat. 48 hours. You own the code. No contracts, no monthly hostage fees.",
+      },
+      {
+        heading: "From Invisible to Fully Booked in 90 Days",
+        paragraphs: [
+          "Here's the realistic timeline. Your site goes live in 48 hours. Within two weeks, Google indexes your pages and your Business Profile starts syncing with your new site data. By day 30, you're appearing in results for 'auto repair Oceanside' and 'mechanic near Camp Pendleton' if you've done the SEO checklist. By day 60–90, you're pulling consistent organic traffic and your appointment form is doing the work your front desk used to do between oil changes.",
+          "I've built sites for service businesses across Oceanside, Fallbrook, Vista, and Carlsbad. The pattern repeats — shops that launch a clean, fast site with a clear call-to-action and proper local SEO see 20–40 new inbound leads in the first 90 days. That's not a guarantee, it's just what happens when you stop being invisible to Google.",
+          "If you're running a repair shop in Oceanside and your website is either nonexistent or embarrassing, send me your shop name. I'll build a free mockup of what your site could look like — no sales call, no commitment, no follow-up spam. If you like it, it's $499 and live in two days. If not, you've lost nothing.",
+        ],
+        callout: "Send your shop name to Circuit Coders for a free mockup — no commitment, no pitch deck, no follow-up spam. Just a preview of what a site built for your shop actually looks like.",
+      },
+    ],
+    faqs: [
+      { q: "How much does an auto repair shop website cost in Oceanside?", a: "Local agencies typically charge $3,000–$7,000 plus $150–$250/month in maintenance fees. Circuit Coders builds custom auto repair websites for $499 flat with no contracts required. Optional hosting and updates are $50/month." },
+      { q: "How long does it take to build a mechanic shop website?", a: "A custom one-page auto repair site with appointment forms and local SEO setup takes 48 hours at Circuit Coders. Most agencies quote 3–6 weeks for a comparable build." },
+      { q: "How do I get my Oceanside auto repair shop on Google Maps?", a: "Claim your Google Business Profile, complete every field, match your business name and address exactly to your website, add AutoRepair schema markup, and actively collect Google reviews. Shops with 80+ reviews and a live website typically reach the map pack within 60–90 days." },
+      { q: "Do auto repair shops need online booking on their website?", a: "At minimum you need an appointment request form — name, phone, vehicle, and issue description. Shops that add online scheduling see 25–35% more new customer inquiries compared to phone-only. Full scheduling platforms like Shop-Ware or Tekmetric can be integrated for $200–$500." },
+      { q: "Is WordPress good for an auto repair website?", a: "WordPress works but demands constant plugin updates, security patches, and frequently breaks. A static Next.js site loads 2–3x faster, needs zero maintenance, and costs $0–$20/month to host versus $30–$50/month for managed WordPress." },
+    ],
+  },
+  {
     slug: "barber-shop-website-design-fallbrook",
     title: "Barber Shop Website Design in Fallbrook — Get Booked Solid in 48 Hours",
     description: "Fallbrook barber shops lose walk-ins to competitors with better websites. A $499 custom site with online booking turns searchers into repeat clients fast.",
