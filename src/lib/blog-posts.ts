@@ -20,6 +20,109 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "plumber-website-design-north-county",
+    title: "Plumber Website Design That Actually Gets Service Calls in North County",
+    description: "Most North County plumbers lose emergency calls to competitors with better websites. A $499 custom site turns 'plumber near me' searches into booked jobs fast.",
+    keywords: ["plumber website design", "plumber website North County", "Fallbrook plumber website", "Oceanside plumber web design", "plumber SEO North County SD", "plumber website cost", "Vista plumber website", "emergency plumber website design", "North County small business website"],
+    publishedAt: "2026-05-28",
+    updatedAt: "2026-05-28",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "PLUMBER · WEBSITE · NORTH COUNTY",
+    sections: [
+      {
+        heading: "Your Phone Isn't Ringing Because Google Doesn't Know You Exist",
+        paragraphs: [
+          "There are over 60 licensed plumbers serving North County San Diego — from Fallbrook and Bonsall down through Vista, San Marcos, Oceanside, and Carlsbad. Some of them are booked three days out. Others are sitting in their trucks refreshing Thumbtack, paying $30–$50 per lead for jobs they might not even land. The difference isn't skill. It's who shows up when a homeowner types 'plumber near me' with water pooling on their kitchen floor.",
+          "Most independent plumbers in North County either have no website or they're running a GoDaddy one-pager from 2019 with a stock photo of a wrench and a phone number in plain text that doesn't even click-to-call on mobile. That's not a website — it's a missed call. Meanwhile, the plumber on the next block with a clean site and a 'Call Now' button sticky-pinned to the top of every page is catching every panicked homeowner between the 15 and the 76.",
+          "A single plumbing job averages $250–$500. A new repeat customer — someone who calls you for the water heater, the toilet rebuild, and the re-pipe — is worth $1,500–$3,000 over two years. If your website converts three new customers a month, that's $9,000–$36,000 in annual revenue from a $499 investment. No Thumbtack spend, no Angi subscription, no Home Advisor bidding war.",
+        ],
+      },
+      {
+        heading: "What a Plumber Website Actually Needs",
+        paragraphs: [
+          "Your website has one job: get someone from a Google search to pick up the phone or submit a service request. Plumbing is an emergency-driven trade. When someone's got a burst pipe at 10 PM, they're not browsing — they're scanning for the first number they can tap. Every element on your site either moves toward that tap or it's friction.",
+          "Here's what actually generates service calls. Everything else is filler some agency will try to charge you $3,000 for.",
+        ],
+        list: {
+          title: "The essentials that get your phone ringing",
+          items: [
+            "Click-to-call phone number sticky at the top of every page — 72% of emergency plumbing searches happen on mobile, and if your number isn't one tap away you've already lost",
+            "A 'Request Service' form with name, phone, address, and problem description — keep it to four fields max, nobody with a flooding bathroom is filling out a ten-field intake form",
+            "Your service list with transparent price ranges — 'drain clearing: $150–$300' beats 'call for estimate' because it pre-qualifies the caller and filters out tire-kickers",
+            "Google Maps embed showing your service area across Fallbrook, Vista, Oceanside, San Marcos, Carlsbad, and Bonsall",
+            "Real photos of you, your van, your work — a phone photo of an actual re-pipe you did in a Vista crawlspace beats a stock photo of a shiny pipe wrench every time",
+            "Emergency availability stated clearly — if you do same-day or 24/7 service, that needs to be the first thing a visitor sees, not buried in a FAQ page",
+            "Licenses, insurance, and bonding info displayed prominently — homeowners handing someone access to their slab want to know you're legit",
+          ],
+        },
+      },
+      {
+        heading: "What to Cut — Features That Cost You Calls",
+        paragraphs: [
+          "I've audited plumber websites across North County that cost $3,000–$5,000 and are loaded with features the owner hasn't touched since launch. Every unnecessary feature adds load time, and every extra second of load time costs roughly 7% of conversions. When someone's water heater is leaking, they are not waiting for your homepage animation to finish.",
+          "A blog with one post from 2023 about 'how to unclog a drain.' A customer portal that requires account creation before requesting service. A chatbot that asks 'How can I help you today?' when the answer is obviously 'my toilet is overflowing and I need someone here now.' All of it is friction between a searcher and your phone ringing.",
+        ],
+        list: {
+          title: "Skip all of this",
+          items: [
+            "Chatbots — someone with a sewage backup wants to call a human, not explain their plumbing emergency to a robot",
+            "Customer login portals — leave that for the enterprise HVAC outfits, not a local plumber",
+            "Animated hero videos of water flowing that add 4–6 seconds of load time on mobile",
+            "A separate page for every single service — one well-structured services section beats 25 thin pages that each rank for nothing",
+            "Newsletter signup — nobody is subscribing to a monthly plumbing email",
+            "Social media feed widgets that slow your page and show a Facebook post from February",
+          ],
+        },
+        callout: "A homeowner with a plumbing emergency gives your site about 3 seconds before they hit the back button. If your page is still loading an animated hero video, you've lost the job to the next result.",
+      },
+      {
+        heading: "Local SEO — How North County Plumbers Win the Map Pack",
+        paragraphs: [
+          "When someone searches 'plumber Fallbrook' or 'emergency plumber Oceanside,' Google shows three businesses on the map before any organic results. That map pack captures over 40% of all clicks. If you're not in those three spots, the majority of your potential customers never see your name.",
+          "The good news: most plumbers in North County are doing zero local SEO. The bar is underground. A few hours of targeted setup puts you ahead of 80% of your competition in Fallbrook, Vista, San Marcos, and Oceanside.",
+        ],
+        list: {
+          title: "The local SEO playbook for plumbers",
+          items: [
+            "Claim and fully complete your Google Business Profile — list every service (water heater, sewer line, re-pipe, drain clearing, gas line), upload 15+ real job photos, and mark your service area for each city you cover",
+            "NAP consistency: your business name, address, and phone number must be identical across your website, Google, Yelp, HomeAdvisor, and every directory listing — one mismatched digit and Google downgrades your trust score",
+            "Add Plumber and LocalBusiness schema markup to your site so Google reads your services and service area as structured data, not just text on a page",
+            "Target page titles like 'Emergency Plumber in Fallbrook | [Your Business]' — not just your company name alone",
+            "Collect Google reviews relentlessly — plumbers with 60+ reviews and a 4.6+ rating dominate the North County map pack, so ask every satisfied customer before you leave the house",
+            "Post to your Google Business Profile weekly — a quick photo of a completed water heater install or a 'same-day drain clearing available in Oceanside' update signals freshness to Google's algorithm",
+          ],
+        },
+      },
+      {
+        heading: "What Plumber Websites Cost in North County SD",
+        paragraphs: [
+          "I've seen proposals from agencies pitching plumbers across Oceanside, Carlsbad, and San Marcos. Template shops charge $1,000–$2,000 for a Squarespace or Wix site with your logo dropped into a plumber template. Local agencies in North County quote $3,000–$8,000 for a 'custom' WordPress build that's actually a $79 theme with blue pipes in the header.",
+          "Then there's the monthly trap. Most of those agencies lock you into $150–$250/month 'maintenance and hosting' contracts that cost them $12/month on the backend. That $3,000 site actually costs you $6,600 in the first year. And if you want to leave? They own the domain, the hosting account, and sometimes even your Google Business Profile.",
+          "Circuit Coders builds plumber websites for $499 flat. Custom Next.js on Vercel — no templates, no WordPress plugins that break after every update. Your click-to-call, your service request form, your service area map, your schema markup, all done. One round of revisions included. Delivered in 48 hours. Optional hosting and updates at $50/month if you want hands-off, but you own the code and the domain either way. No contracts, no hostage fees.",
+        ],
+        callout: "$499 flat. 48 hours. You own the code. No contracts, no monthly hostage fees. Scheduling integrations like Housecall Pro or Jobber quoted at $200–$500.",
+      },
+      {
+        heading: "From Zero Calls to Booked Solid in 90 Days",
+        paragraphs: [
+          "Here's the realistic timeline. Your site goes live in 48 hours. Within two weeks, Google indexes your pages and your Business Profile starts syncing with your new site data. By day 30, you're appearing in results for 'plumber Fallbrook' and 'emergency plumber Vista' if you've followed the SEO checklist. By day 60–90, you're pulling consistent organic traffic and your service request form is generating leads while you're under a house running copper.",
+          "I've built sites for service businesses across Fallbrook, Oceanside, Vista, Carlsbad, and San Marcos. The pattern repeats — trades that launch a clean, fast site with a clear call-to-action and proper local SEO see 20–40 new inbound leads in the first 90 days. For a plumber, even converting half of those leads at an average $350 ticket means $3,500–$7,000 in new revenue in three months.",
+          "If you're a plumber in North County and your website is either nonexistent or embarrassing, send me your business name. I'll build a free mockup of what your site could look like — no sales call, no commitment, no follow-up spam. If you like it, it's $499 and live in two days. If not, you've lost nothing but thirty seconds typing your name.",
+        ],
+        callout: "Send your business name to Circuit Coders for a free mockup — no commitment, no pitch deck, no follow-up drip campaign. Just a preview of what a site built for your plumbing business actually looks like.",
+      },
+    ],
+    faqs: [
+      { q: "How much does a plumber website cost in North County San Diego?", a: "Local agencies typically charge $3,000–$8,000 plus $150–$250/month in maintenance fees. Circuit Coders builds custom plumber websites for $499 flat with no contracts. Optional hosting and updates are $50/month." },
+      { q: "How long does it take to build a plumbing company website?", a: "A custom one-page plumber site with service request forms, click-to-call, and local SEO setup takes 48 hours at Circuit Coders. Most agencies quote 3–6 weeks for a comparable build." },
+      { q: "How do I get my plumbing business on Google Maps in Fallbrook?", a: "Claim your Google Business Profile, complete every field, match your NAP exactly to your website, add Plumber schema markup, and collect Google reviews at every job. Plumbers with 60+ reviews and a live website typically reach the map pack within 60–90 days." },
+      { q: "Should a plumber website have online scheduling?", a: "At minimum you need a service request form — name, phone, address, and problem. Plumbers who add direct scheduling through platforms like Housecall Pro or Jobber see 25–35% more inbound leads versus phone-only. Integration costs $200–$500." },
+      { q: "Is WordPress good for a plumbing website?", a: "WordPress works but demands constant plugin updates, security patches, and breaks regularly. A static Next.js site loads 2–3x faster, needs zero maintenance, and costs $0–$20/month to host versus $30–$50/month for managed WordPress." },
+    ],
+  },
+  {
     slug: "auto-repair-shop-website-design-oceanside",
     title: "Auto Repair Shop Website Design in Oceanside",
     description: "Most Oceanside auto repair shops lose jobs to competitors with better websites. A $499 custom site with online scheduling turns 'mechanic near me' searches into booked bays.",
