@@ -20,6 +20,111 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "med-spa-website-design-carlsbad",
+    title: "Med Spa Website Design in Carlsbad — Bookings That Convert in 48 Hours",
+    description: "Most Carlsbad med spa websites lose bookings to slow load times and buried buttons. Here's how to build one that books clients, ranks locally, and costs $499 flat.",
+    keywords: ["med spa website design", "Carlsbad med spa marketing", "med spa website Carlsbad", "aesthetic clinic web design", "med spa SEO North County", "online booking med spa", "Carlsbad", "Oceanside", "Encinitas"],
+    publishedAt: "2026-05-30",
+    updatedAt: "2026-05-30",
+    readTime: 8,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "MED SPA · CARLSBAD · BOOKINGS",
+    sections: [
+      {
+        heading: "Your Carlsbad Med Spa Website Is Losing $300 Botox Clients at the Door",
+        paragraphs: [
+          "A woman in Carlsbad Village is on her phone deciding where to get her next filler appointment. She searches \"med spa near me,\" taps your site, waits four seconds for a 6 MB hero video to load, gives up, and books with the place down on State Street instead. That's a $300–$1,200 lifetime client gone in the time it takes to lose patience.",
+          "Med spa is the worst vertical to have a slow, confusing website in. Your clients are spending real money on Botox, microneedling, lip filler, and laser — they expect the booking experience to feel as polished as the lobby. A Wix template with a stock photo of a cucumber on someone's eyes tells them you cut corners. They assume you cut corners on the syringe too.",
+          "Across Carlsbad, Encinitas, and Oceanside, the med spa market is crowded and the ad spend is brutal. The clinics winning aren't the ones with the biggest Instagram following — they're the ones whose website loads in under two seconds and puts a \"Book Now\" button in front of every service. That's a build problem, and it's fixable.",
+        ],
+      },
+      {
+        heading: "What a Med Spa Website Actually Needs (and What to Cut)",
+        paragraphs: [
+          "Most med spa sites are bloated with things that look impressive in a demo and do nothing for bookings. The job of the site is narrow: show your services, show your prices or starting prices, prove you're legitimate, and get the person into a booking flow in two taps. Everything else is decoration.",
+          "Here's the brutal truth about the \"premium\" features agencies upsell you: a chatbot that asks \"How can I help you today?\" is a tax on someone who just wants to book a HydraFacial. A 90-second autoplay video of soft lighting and a hand touching water adds three seconds of load time and zero clients. Cut them.",
+        ],
+        list: {
+          title: "Build these:",
+          items: [
+            "A service menu with clear categories — injectables, skin, body, wellness — each with starting prices",
+            "A real online booking integration (Vagaro, Boulevard, Mangomint, or Calendly) wired to a button on every service",
+            "Before/after galleries with real client results and consent — not stock photos",
+            "Provider bios with credentials (RN, NP, MD) — med spa clients buy trust",
+            "A sticky \"Book a Consult\" button that follows them as they scroll",
+            "Fast-loading pages: images compressed to under 200 KB each, total page weight under 2 MB",
+          ],
+        },
+        callout: "If a feature doesn't help someone book or trust you, it's slowing your site down. Cut it.",
+      },
+      {
+        heading: "Cut the Stuff That's Quietly Killing Your Conversions",
+        paragraphs: [
+          "The fastest way to improve a med spa site is usually deletion, not addition. Owners get sold on features that demo well and convert nobody. Every one of these adds load time, friction, or confusion between the client and the booking button.",
+          "Look at your current site and be honest about how many of these you're running. Most clinics I audit in North County have at least three.",
+        ],
+        list: {
+          title: "Cut these:",
+          items: [
+            "Autoplay hero videos over 3 MB — they delay your load and eat mobile data",
+            "Pop-up newsletter signups that block the screen before someone's even read your services",
+            "Chatbots — they intercept buyers who were already ready to book",
+            "\"Request a callback\" forms instead of real-time online booking",
+            "PDF price sheets that don't open on phones",
+            "Carousel sliders nobody clicks past slide one",
+            "Generic stock photos of spa rocks and orchids — clients can smell a template",
+          ],
+        },
+      },
+      {
+        heading: "Local SEO: How Carlsbad Clients Actually Find You",
+        paragraphs: [
+          "Ranking for \"med spa Carlsbad\" is the whole game, and it's won less by your website copy than by your Google Business Profile and local signals. Most med spa owners never claim or optimize their profile, then wonder why the clinic two blocks away outranks them. Fix the profile first — it's free and it moves the needle in weeks, not months.",
+          "On the website side, you want pages and schema that match how people search. People don't search \"aesthetic services\"; they search \"lip filler Carlsbad,\" \"Botox near me,\" \"microneedling Oceanside.\" Build a page or section per high-value service, each titled with the [service] + [city] pattern, and mark up your business with LocalBusiness and MedicalBusiness schema.org JSON-LD so Google understands your hours, location, and services.",
+          "Citations matter too. Your name, address, and phone number need to be byte-for-byte identical across Google, Yelp, Vagaro, RealSelf, and Instagram. Mismatched addresses — \"Ste 200\" on one, \"Suite 200\" on another — fracture your ranking signal. It's tedious, but it's the difference between page one and page three.",
+        ],
+        list: {
+          title: "Local SEO checklist:",
+          items: [
+            "Claim and fully fill your Google Business Profile — categories, hours, 20+ real photos",
+            "Build a service page per offering using \"[service] + Carlsbad\" titles (e.g. \"Lip Filler Carlsbad\")",
+            "Add LocalBusiness + MedicalBusiness schema.org JSON-LD to every page",
+            "Make your NAP (name, address, phone) identical across Google, Yelp, RealSelf, and booking platforms",
+            "Collect Google reviews relentlessly — ask after every appointment, respond to all of them",
+            "Embed a Google Map of your Carlsbad location on the contact page",
+          ],
+        },
+        callout: "A fully optimized Google Business Profile plus matching citations can move a Carlsbad med spa onto page one in 60–90 days. Most owners never do step one.",
+      },
+      {
+        heading: "What This Costs: $5,000 Agencies vs. $499 Flat",
+        paragraphs: [
+          "The med spa space attracts the most expensive web agencies because they know your average client is worth four figures. They'll quote you $5,000–$15,000 for a custom site, then another $300–$800 a month for \"management\" that mostly means logging in twice a year. For a single-location clinic in Carlsbad, that math doesn't work.",
+          "On the other end, the DIY platforms — Wix, Squarespace, GoDaddy — get you a site for $30/mo but leave you with the slow, templated look that makes clients hesitate. You save money and lose bookings. The cucumber-on-the-eyes stock photo is doing damage.",
+          "Circuit Coders builds med spa sites for $499 flat. Custom Next.js, hosted on Vercel, loads in under two seconds, with one round of revisions and a free mockup before you pay anything. Booking integrations — wiring up Vagaro, Boulevard, or Stripe deposits — run $200–$500 as an add-on depending on the platform. Optional hosting and updates are $50/mo if you don't want to touch it. That's the whole price. No retainer, no surprise invoice.",
+        ],
+        callout: "A real custom med spa site for $499 flat, live in 48 hours. The agency quote for the same thing starts at $5,000.",
+      },
+      {
+        heading: "See It Before You Pay: Free Mockup, 48-Hour Turnaround",
+        paragraphs: [
+          "Here's how it works. You tell us your services and show us your current site. We build a free mockup of your new homepage — real design, your branding, your services — and send it over. No payment, no contract, no obligation. If you don't like it, you walk and it cost you nothing.",
+          "If you do like it, we build the full site in 48 hours: $499 flat, custom Next.js on Vercel, one round of revisions. We'll wire in your booking platform so a Carlsbad client can go from Google search to confirmed appointment in two taps. Then it's live, fast, and ranking-ready.",
+          "Whether you're in Carlsbad Village, off El Camino Real, or serving clients from Encinitas to Oceanside, the offer is the same. See the mockup first, decide after.",
+        ],
+        callout: "Free homepage mockup, no payment up front. Like it, we build the whole thing in 48 hours for $499 flat.",
+      },
+    ],
+    faqs: [
+      { q: "How much should a med spa website cost in Carlsbad?", a: "Agencies quote $5,000–$15,000 plus monthly retainers, but a single-location Carlsbad med spa doesn't need that. Circuit Coders builds custom med spa sites for $499 flat with a free mockup first, plus $200–$500 if you need a booking integration wired in." },
+      { q: "How long does it take to rank for \"med spa Carlsbad\" on Google?", a: "With a fully optimized Google Business Profile, matching citations, and proper schema.org markup, most Carlsbad med spas can reach page one in 60–90 days. The website helps, but the Business Profile and review velocity do the heaviest lifting." },
+      { q: "Can you connect my Vagaro or Boulevard booking system to the new site?", a: "Yes. Booking integrations for Vagaro, Boulevard, Mangomint, Calendly, or Stripe deposits are a $200–$500 add-on, and we wire a \"Book Now\" button into every service so clients book in two taps." },
+      { q: "Why is my current med spa website losing bookings?", a: "Usually slow load times and buried booking buttons. If your site takes more than 3 seconds to load or hides booking behind a contact form, you're losing clients before they ever see your services — and med spa clients are worth $300–$1,200 each over their lifetime." },
+      { q: "Do I need a separate page for each service like Botox and microneedling?", a: "Yes — clients search \"Botox Carlsbad\" and \"microneedling Oceanside,\" not \"aesthetic services.\" A page per high-value service using the [service] + [city] pattern is one of the fastest ways to climb local rankings, often showing movement within 60 days." },
+    ],
+  },
+  {
     slug: "landscaper-website-design-fallbrook",
     title: "Landscaper Website Design in Fallbrook — Turn Curb Appeal Into Booked Jobs",
     description: "Most Fallbrook landscapers lose $3,000+ jobs to competitors with better websites. A $499 custom site turns 'landscaper near me' searches into signed contracts.",
