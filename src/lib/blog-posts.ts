@@ -20,6 +20,110 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "restaurant-website-design-fallbrook",
+    title: "Restaurant Website Design in Fallbrook: Stop Renting Your Customers From DoorDash",
+    description: "Your Fallbrook restaurant doesn't need a chatbot or an app. It needs a fast site that shows the menu, takes reservations, and ranks for 'restaurant near me.' Here's how.",
+    keywords: ["restaurant website design", "Fallbrook restaurant website", "restaurant web design North County", "online menu Fallbrook", "restaurant local SEO", "Google Business Profile restaurant", "Oceanside restaurant website", "Bonsall restaurant marketing"],
+    publishedAt: "2026-05-31",
+    updatedAt: "2026-05-31",
+    readTime: 8,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "FALLBROOK · RESTAURANTS · WEB DESIGN",
+    sections: [
+      {
+        heading: "The DoorDash trap, and why it's bleeding you in Fallbrook",
+        paragraphs: [
+          "Walk down Main Avenue in Fallbrook and count the restaurants relying on DoorDash, Grubhub, and Uber Eats as their entire online presence. Most of them. The apps take 15–30% per order, own the customer relationship, and email that customer about the taco shop two doors down the moment they close out.",
+          "Here's the part nobody says out loud: when somebody searches 'restaurants in Fallbrook' or 'dinner near Bonsall,' a DoorDash listing is not your website. It's DoorDash's website with your food on it. You're paying a third of every ticket to rent a customer you could have owned for $499.",
+          "A diner deciding where to eat tonight wants three things fast: the menu, the hours, and a way to book a table. If they can't find all three in ten seconds on their phone, they tap back and pick the place that made it easy.",
+        ],
+        callout: "DoorDash is a sales channel, not a website. Renting your customers from a middleman that emails them your competitors is not a marketing strategy.",
+      },
+      {
+        heading: "What a Fallbrook restaurant site actually needs",
+        paragraphs: [
+          "Forget the agency wish-list. A restaurant website has one job: turn a hungry person on their phone into someone who walks through your door or books a table. Everything that doesn't serve that job is weight slowing down your page.",
+          "Ninety percent of the people hitting your site are on a phone, standing in a parking lot or sitting on a couch deciding where to eat. Build for that person first. Big tap targets, a menu that loads instantly, a phone number that dials when tapped, and a map that opens directions in one tap.",
+        ],
+        list: {
+          title: "The non-negotiables",
+          items: [
+            "A real HTML menu — not a blurry PDF, not a photo of a chalkboard, not a link to a third-party app",
+            "Hours that are correct and easy to find, including holiday changes",
+            "Tap-to-call phone number and tap-for-directions map",
+            "Online reservations or a 'book a table' button that works on the first try",
+            "Photos of the actual food and dining room, shot this year, not stock images",
+            "Fast load — under 2 seconds, so Google and diners both stick around",
+          ],
+        },
+      },
+      {
+        heading: "What to cut from your restaurant site",
+        paragraphs: [
+          "Most restaurant websites fail not because they're missing features but because they're drowning in junk that nobody asked for. Every extra widget is another thing that breaks, another second of load time, another tap between a hungry person and your hostess stand.",
+          "A chatbot on a restaurant site is a tax on real customers. Somebody wants to know if you're open and if there's a wait — they want a phone number, not a robot asking how it can help them today.",
+        ],
+        list: {
+          title: "Delete these today",
+          items: [
+            "Autoplay video that eats data and makes the page crawl on cell signal",
+            "A chatbot that intercepts simple questions a phone call answers in 20 seconds",
+            "PDF menus — they're unreadable on phones and invisible to Google",
+            "A 5 MB hero image that takes 8 seconds to load on Fallbrook's spotty coverage",
+            "Pop-ups for a newsletter before anyone has even seen the menu",
+            "'Coming soon' pages for an online store you'll never finish",
+          ],
+        },
+      },
+      {
+        heading: "Local SEO: how Fallbrook diners actually find you",
+        paragraphs: [
+          "Nobody types 'restaurantcoders.com' into a browser. They Google 'Mexican food Fallbrook,' 'breakfast near Bonsall,' or 'restaurants open now Pala.' If you're not showing up for those searches, your beautiful website might as well not exist. This is where most restaurants leave the most money on the table.",
+          "Start with your Google Business Profile — it's free and it's the single highest-leverage thing you own. Claim it, verify it, and fill out everything: hours, menu link, real photos, the service area covering Fallbrook, Bonsall, Rainbow, and Pala. Restaurants that post photos and reply to reviews weekly consistently outrank the ones that set it and forget it.",
+          "On the site itself, the page should target '[cuisine] + Fallbrook' patterns in the title, the headings, and the copy — 'Italian restaurant in Fallbrook,' not 'Welcome to our eatery.' Add schema.org Restaurant markup so Google can read your menu, hours, price range, and reviews directly. That's what powers the rich results with the star ratings and 'Open · Closes 9 PM' that get the click.",
+        ],
+        list: {
+          title: "The local-SEO checklist",
+          items: [
+            "Claim and fully complete your Google Business Profile — hours, menu link, photos, service area",
+            "Keep your name, address, and phone identical across Yelp, TripAdvisor, Apple Maps, and your site",
+            "Add schema.org Restaurant markup for menu, hours, price range, and reviews",
+            "Title and headings that hit '[cuisine] + Fallbrook' and nearby cities like Bonsall and Pala",
+            "Ask happy diners for Google reviews — and actually reply to every one",
+            "Build a page or section for each thing you want to rank for: catering, happy hour, patio",
+          ],
+        },
+        callout: "A finished Google Business Profile plus schema markup is the difference between showing up for 'restaurants in Fallbrook' and being invisible. It costs you time, not money — and we set it up as part of the build.",
+      },
+      {
+        heading: "What this costs — and what the agencies will quote you",
+        paragraphs: [
+          "Call a typical agency for a restaurant website and you'll hear $4,000–$10,000, plus a few hundred a month, plus a six-week timeline and a discovery meeting you don't have time for. For a restaurant running on thin margins and 12-hour days, that's a non-starter. So most owners give up and let DoorDash be their website.",
+          "Circuit Coders builds it for $499 flat. Custom Next.js on Vercel — the same fast, modern stack the big chains pay tens of thousands for — delivered in 48 hours, with one round of revisions. We do a free mockup first, so you see your actual site before you pay a dime.",
+          "Want online reservations wired into OpenTable or Resy, or a Stripe deposit for large parties? Those are $200–$500 add-ons, quoted upfront, no surprises. Hosting and ongoing menu updates are optional at $50/mo — or you update it yourself, your call. Compare that to one month of DoorDash commissions and the math is not close.",
+        ],
+        callout: "One $499 site versus 15–30% of every online order, forever. The website pays for itself before the end of the first weekend.",
+      },
+      {
+        heading: "The move for Fallbrook restaurants, plainly",
+        paragraphs: [
+          "Keep DoorDash if it brings you orders — just stop letting it be your entire online presence. Own a fast site that shows your menu, books your tables, and ranks when somebody in Fallbrook or Bonsall searches for dinner. That's how you stop paying a third of every ticket to a middleman.",
+          "We've built sites like this for shops across North County — Fallbrook, Oceanside, Carlsbad, Vista, San Marcos. Same playbook every time: fast, mobile-first, dialed-in local SEO, live in 48 hours.",
+          "Here's the offer. Send us your restaurant name and what you've got now, and we'll build you a free mockup — the real homepage, your menu, your photos, no obligation. If you like it, it's $499 flat and live in 48 hours. If you don't, you've lost nothing but the email.",
+        ],
+        callout: "Free mockup, $499 flat, live in 48 hours. Stop renting your customers — own the website that owns the search.",
+      },
+    ],
+    faqs: [
+      { q: "How much does a restaurant website cost in Fallbrook?", a: "Local agencies typically quote $4,000–$10,000 plus monthly fees. Circuit Coders builds a custom restaurant site for $499 flat, delivered in 48 hours, with a free mockup before you pay." },
+      { q: "Do I still need a website if I'm already on DoorDash and Yelp?", a: "Yes — those platforms own your customers and take 15–30% per order. Your own site ranks for 'restaurant in Fallbrook' searches and books tables directly, and most restaurants see organic traffic build within 60–90 days." },
+      { q: "How do I get my restaurant to show up on Google Maps?", a: "Claim and fully complete your free Google Business Profile, keep your name/address/phone consistent everywhere, add schema.org markup, and collect reviews. Restaurants that do all four usually start climbing the map pack within 30–60 days." },
+      { q: "Can you add online reservations to my site?", a: "Yes. Reservation integrations with OpenTable, Resy, or a Stripe deposit for large parties run $200–$500 as an add-on, quoted upfront before any work starts." },
+      { q: "How fast can my Fallbrook restaurant website go live?", a: "48 hours from approval. We send a free mockup first, you get one round of revisions, and the site launches on fast Next.js hosting — typically the same week you reach out." },
+    ],
+  },
+  {
     slug: "med-spa-website-design-carlsbad",
     title: "Med Spa Website Design in Carlsbad — Bookings That Convert in 48 Hours",
     description: "Most Carlsbad med spa websites lose bookings to slow load times and buried buttons. Here's how to build one that books clients, ranks locally, and costs $499 flat.",
