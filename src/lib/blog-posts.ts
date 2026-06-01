@@ -20,6 +20,117 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "florist-website-design-oceanside",
+    title: "Florist Website Design in Oceanside: Win Weddings, Funerals & Same-Day Orders",
+    description: "Most Oceanside florists lose orders to a slow Instagram bio link. Here's how a real florist website wins weddings, funerals, and same-day delivery — for $499 flat.",
+    keywords: ["florist website design", "florist website Oceanside", "flower shop web design", "wedding florist Oceanside", "funeral flowers North County", "same-day flower delivery website", "florist SEO Carlsbad", "local SEO florist Vista"],
+    publishedAt: "2026-06-01",
+    updatedAt: "2026-06-01",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "FLORIST · OCEANSIDE · WEB DESIGN",
+    sections: [
+      {
+        heading: "Your shop is full of flowers. Your website is a dead Instagram link.",
+        paragraphs: [
+          "Walk down Coast Highway in Oceanside and the florists are doing real work — buckets of ranunculus out front, a wedding arch half-built in the cooler, a funeral spray going out the door by 2pm. Then you check their website and it's a Linktree, a Wix page from 2019, or nothing at all. Somebody in Carlsbad just Googled \"funeral flowers near me\" at 11pm and you weren't there.",
+          "Florals are an emotional, deadline-driven buy. A bride planning a Vista vineyard wedding, a son ordering a casket spray for a service in two days, a husband who forgot the anniversary — none of them want to DM you and wait for a reply. They want to see your work, know you deliver to their zip code, and pay. If your site can't do that in 30 seconds, they scroll to the next shop.",
+          "This isn't about looking pretty. Florists already win on visuals. The problem is the website doesn't turn those visuals into booked orders, and it doesn't show up when someone in Oceanside searches at the exact moment they need flowers.",
+        ],
+      },
+      {
+        heading: "What a florist website actually has to do",
+        paragraphs: [
+          "A flower shop site has three real jobs: prove you do the work, make it dead-simple to order, and show up for local searches. Everything else is decoration. Most florist sites get the photos right and fail the other two.",
+          "Here's what earns its place on the page. Build for the three buyers who matter — weddings, sympathy, and everyday/same-day — because they shop completely differently.",
+        ],
+        list: {
+          title: "Build these in:",
+          items: [
+            "A real gallery split by occasion: weddings, sympathy, everyday, seasonal — not one giant blur of bouquets",
+            "Same-day delivery cutoff stated plainly (\"Order by 1pm for same-day in Oceanside, Carlsbad, Vista\")",
+            "A clear delivery-zone map or zip list so nobody guesses whether you reach Bonsall or Pala",
+            "A wedding inquiry form that asks date, venue, budget range, and color palette — not just \"name and email\"",
+            "Sympathy/funeral ordering with funeral-home name and service time fields, so the arrangement lands on time",
+            "Click-to-call and click-to-text in the header — older buyers and grieving families will call, not type",
+          ],
+        },
+      },
+      {
+        heading: "What to cut before it costs you an order",
+        paragraphs: [
+          "Florists get talked into features that look modern and quietly kill conversions. The shop owner ends up paying monthly for tools that make ordering harder, not easier.",
+          "Cut these. Every one of them adds friction, load time, or a monthly bill you don't need.",
+        ],
+        list: {
+          title: "Cut this stuff:",
+          items: [
+            "A chatbot — a grieving family doesn't want a bot, they want your phone number",
+            "Autoplay video headers that take 4 seconds to load on a phone in a parking lot",
+            "A 20-step custom-bouquet builder nobody finishes — offer 3 sizes and a \"designer's choice\" and move on",
+            "Stock photos of flowers you don't actually sell — buyers compare your site to the real arrangement",
+            "A separate login/account requirement just to place a one-time order",
+            "Pop-up newsletter signups that block the checkout button on mobile",
+          ],
+        },
+        callout: "Every feature that makes a customer think for an extra five seconds is a feature that sends a funeral order to the florist down the street.",
+      },
+      {
+        heading: "Local SEO: how Oceanside finds you instead of 1-800-Flowers",
+        paragraphs: [
+          "The hard truth: 1-800-Flowers and Teleflora outrank local shops on generic terms because they spend millions. You don't beat them on \"flower delivery.\" You beat them on local intent — \"florist Oceanside,\" \"wedding florist Vista,\" \"same-day funeral flowers Carlsbad\" — where a national site can't fake being two miles away.",
+          "Start with your Google Business Profile. It's free and it's the single biggest lever for a florist. Categories set to \"Florist\" and \"Flower delivery,\" photos updated weekly with real arrangements, service areas listing every city you deliver to, and reviews answered within a day. Most Oceanside florists fill this out once and never touch it again — that's your opening.",
+          "On the site itself, build a page per occasion-plus-city pattern and mark it up so Google understands it. \"Wedding flowers Oceanside,\" \"sympathy flowers Carlsbad,\" \"same-day delivery Vista\" — real pages, not one stuffed homepage.",
+        ],
+        list: {
+          title: "Local SEO checklist:",
+          items: [
+            "Claim and fully complete your Google Business Profile, with correct service-area cities",
+            "Use consistent Name/Address/Phone (NAP) across Yelp, Apple Maps, The Knot, WeddingWire",
+            "Add LocalBusiness + Florist schema.org markup so Google reads your hours, area, and ratings",
+            "Build dedicated '[occasion] + [city]' pages: wedding florist Oceanside, funeral flowers Carlsbad",
+            "Get reviews that mention the occasion and city — \"beautiful wedding bouquets in Vista\" ranks",
+            "Embed a Google Map and list delivery zips (Oceanside, Carlsbad, Vista, San Marcos, Bonsall, Pala)",
+          ],
+        },
+      },
+      {
+        heading: "What this costs — and what you're probably overpaying for now",
+        paragraphs: [
+          "The big floral platforms — FloristWare, Teleflora's website service, BloomNation — will run you $100–$300 a month, plus order fees, plus they own your customer list and your domain. Over two years that's $2,400–$7,200, and you're renting a template that looks like every other shop on their network.",
+          "A local agency build runs $3,000–$8,000 and takes six to ten weeks, which is a lot of cash and time for a shop whose busy season is right now. Most florists just don't bother, which is exactly why their websites look the way they do.",
+          "Circuit Coders builds it for $499 flat, 48-hour turnaround. Custom Next.js on Vercel — fast, yours, no monthly platform tax. Want Stripe checkout, a wedding-booking flow, or a delivery-zone integration? That's a $200–$500 add-on, quoted up front. Hosting and ongoing updates are optional at $50/mo if you want us to keep it fresh; otherwise it's done and it's yours.",
+        ],
+        callout: "Two years of a Teleflora website subscription costs more than ten of our sites. You're renting a template. You could own a fast one.",
+      },
+      {
+        heading: "Same-day, every day: making the site work in your busy season",
+        paragraphs: [
+          "Florists live and die by Valentine's Day, Mother's Day, and a hundred random Tuesdays when someone in San Marcos needs a $75 bouquet delivered by dinner. Your site has to handle a same-day rush without you babysitting it.",
+          "That means a hard, visible cutoff time, an honest \"sold out for today\" toggle you can flip from your phone, and a checkout that takes Apple Pay in three taps. We've watched florists lose a whole afternoon of orders because the site didn't say they were already maxed out — so customers placed orders, then got an awkward refund call.",
+          "A 3–5 MB page that loads in under two seconds on the parking-lot 5G of a guy buying apology roses converts. A bloated platform page that spins doesn't. Speed is a feature, especially when the buyer is in a hurry and a little stressed.",
+        ],
+      },
+      {
+        heading: "Let's see your shop online before you pay anything",
+        paragraphs: [
+          "Send us your shop name, your Instagram, and the cities you deliver to. We'll build a free mockup of your homepage and your top occasion page — a real one you can click, not a slide deck — so you can see exactly what it'd look like before spending a dollar.",
+          "If you like it, it's $499 flat and live in 48 hours: gallery, occasion pages, delivery zones, wedding and sympathy forms, and the local SEO foundation that gets you found in Oceanside, Carlsbad, and Vista. One round of revisions included. If you don't like it, you keep the mockup and we shake hands.",
+          "You already do the hardest part — the flowers. Let us handle the part of the business that's quietly sending orders to someone else.",
+        ],
+        callout: "Free mockup, no commitment. $499 flat, live in 48 hours. Text or email us your shop name and we'll show you your new site this week.",
+      },
+    ],
+    faqs: [
+      { q: "How much does a florist website cost in Oceanside?", a: "Local agencies charge $3,000–$8,000 and floral platforms like Teleflora or BloomNation run $100–$300/month forever. Circuit Coders builds a custom florist site for $499 flat with a 48-hour turnaround, no monthly platform fee." },
+      { q: "Can my website take same-day flower orders and payments?", a: "Yes — we add Stripe or Apple Pay checkout with a same-day cutoff time and a \"sold out today\" toggle as a $200–$500 add-on, quoted up front. It lets customers order and pay in a few taps without calling the shop." },
+      { q: "How long until my florist website shows up on Google?", a: "A fully optimized Google Business Profile can start surfacing in local map results within 2–4 weeks. Ranking your occasion-and-city pages (like \"wedding florist Oceanside\") for competitive terms typically takes 60–90 days of consistent reviews and content." },
+      { q: "Do I really need separate pages for weddings and funerals?", a: "Yes. Wedding, sympathy, and everyday buyers search differently and want different info, and dedicated '[occasion] + [city]' pages rank far better than one stuffed homepage — that's the single biggest local SEO win for a florist." },
+      { q: "Will my site load fast enough during the Valentine's and Mother's Day rush?", a: "That's the point of building on custom Next.js and Vercel instead of a heavy platform. We target pages under 3–5 MB that load in roughly two seconds on a phone, which matters most when buyers are rushed and a slow page loses the sale." },
+    ],
+  },
+  {
     slug: "restaurant-website-design-fallbrook",
     title: "Restaurant Website Design in Fallbrook: Stop Renting Your Customers From DoorDash",
     description: "Your Fallbrook restaurant doesn't need a chatbot or an app. It needs a fast site that shows the menu, takes reservations, and ranks for 'restaurant near me.' Here's how.",
