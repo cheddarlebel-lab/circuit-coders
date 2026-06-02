@@ -20,6 +20,97 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "pilates-studio-website-design-north-county",
+    title: "Pilates & Yoga Studio Website Design in North County",
+    description: "How North County pilates and yoga studios get a fast, bookable website for $499 in 48 hours. Class schedules, MindBody integration, and local SEO that fills mats.",
+    keywords: ["pilates studio website design", "yoga studio website North County", "pilates website Carlsbad", "yoga studio web design Oceanside", "class booking website San Diego", "MindBody website integration", "pilates SEO Vista", "fitness studio website Fallbrook"],
+    publishedAt: "2026-06-02",
+    updatedAt: "2026-06-02",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "PILATES · YOGA · NORTH COUNTY",
+    sections: [
+      {
+        heading: "Your mat is empty because nobody can book the class",
+        paragraphs: [
+          "A woman in Carlsbad just moved here and wants a 9 AM reformer class. She searches \"pilates near me,\" finds your studio, taps your site — and hits a Linktree, a Facebook page last updated in 2023, or a schedule PDF that won't open on her phone. She books with the studio in Encinitas instead. You never knew she existed.",
+          "This is the North County pilates problem in one sentence: great instructors, great space, and a website that actively loses customers. Vista, San Marcos, Oceanside — I've audited a dozen studio sites and the same three failures show up every time. Slow, unbookable, invisible on Google.",
+          "A pilates or yoga studio sells appointments. The entire job of your website is to turn a phone search into a booked class in under 60 seconds. Most studio sites take more than 60 seconds just to load.",
+        ],
+      },
+      {
+        heading: "What a studio site actually needs",
+        paragraphs: [
+          "Forget the meditation stock photos and the 800-word \"our philosophy\" essay nobody reads. A class-based business needs a tight set of things that work on a phone, fast.",
+          "If a first-timer can't see the schedule and book a trial class without calling you, your site is decoration. Build for the thumb, not the desktop.",
+        ],
+        list: {
+          title: "The non-negotiables",
+          items: [
+            "A live class schedule visible above the fold — reformer, mat, yoga, times, instructor",
+            "One \"Book\" button that goes straight to your booking platform, not a contact form",
+            "An intro offer front and center ($49 for two weeks, first class free — whatever yours is)",
+            "Real photos of your actual studio and instructors, not a stock model on a beach",
+            "Pricing and class packages on the page — hiding prices loses the price-shopper anyway",
+            "Loads in under 2 seconds on cellular, because she's searching from her car",
+          ],
+        },
+      },
+      {
+        heading: "What to cut",
+        paragraphs: [
+          "Most studio sites are bloated with things that hurt conversions. Every one of these is dead weight you can delete today and book more classes tomorrow.",
+          "The worst offender is the autoplaying video header — a 12 MB hero clip of someone breathing on a reformer. It tanks your load time on mobile and the visitor bounces before it finishes buffering. Cut it.",
+        ],
+        list: {
+          title: "Delete these now",
+          items: [
+            "Autoplay video backgrounds — they cost you 3–5 seconds of load time",
+            "A contact form as the only way to book — give people the real booking link",
+            "The full instructor bio wall — one line and a photo each is plenty",
+            "\"Mind, body, spirit\" wellness copy that says nothing concrete",
+            "A chatbot — for a studio with 6 class types, a chatbot is a tax on real customers",
+            "PDF schedules — they're unreadable on the phone everyone is using",
+          ],
+        },
+      },
+      {
+        heading: "Local SEO: how \"pilates near me\" finds you",
+        paragraphs: [
+          "When someone in Oceanside types \"reformer pilates Oceanside\" or \"yoga studio near me,\" Google decides who shows up in the map pack — those top three results with the pins. Win that and you win the class. Most studios never set it up.",
+          "Start with your Google Business Profile. Claim it, set the category to \"Pilates studio\" or \"Yoga studio,\" add real photos, post your intro offer, and answer reviews. This is free and it's the single biggest lever in North County. Then make sure your name, address, and phone match exactly everywhere — Yelp, Apple Maps, ClassPass, your own site. Mismatched citations confuse Google and sink your ranking.",
+          "On the site itself, every studio needs LocalBusiness and ExerciseGym schema.org markup so Google understands your hours, location, and services. And you want pages that target the real searches: \"reformer pilates Carlsbad,\" \"prenatal yoga Vista,\" \"beginner pilates San Marcos.\" The '[service] + [city]' pattern is how you stop competing with every studio in the county and start owning your town.",
+        ],
+        callout: "If your studio doesn't show in the Google map pack for \"pilates\" + your city, you're invisible to roughly 70% of people searching — they never scroll past those three pins.",
+      },
+      {
+        heading: "What this costs — and what you're overpaying for now",
+        paragraphs: [
+          "Studio website pricing in San Diego is all over the place. A Squarespace template you fight with yourself runs $200–$400/year plus your weekends. An agency in the county will quote you $4,000–$8,000 and take two months. A \"website + marketing retainer\" outfit will lock you into $300–$600/month forever for a site you don't own.",
+          "Circuit Coders builds your studio site for $499 flat. Custom, fast, mobile-first, done in 48 hours. One round of revisions. You see a free mockup before you pay a dollar. Hosting and ongoing updates are optional at $50/month — not a mandatory leash.",
+          "Your booking platform — MindBody, Mariana Tek, Walla, Acuity — integrates as a $200–$500 add-on depending on how deep we wire it in. That's a one-time cost so the \"Book\" button drops people straight into your real schedule and pulls live class times onto the page. Compare that to bleeding $400/month to an agency for a site they hold hostage.",
+        ],
+      },
+      {
+        heading: "What this looks like for a real North County studio",
+        paragraphs: [
+          "Picture a reformer studio in Vista doing fine on word of mouth but dead online. We build a one-page site: live schedule pulled from MindBody up top, a $49 intro offer button, six real photos of the studio, pricing laid out plain, and LocalBusiness schema wired in. It loads in 1.4 seconds on a phone.",
+          "Two weeks later they're in the map pack for \"pilates Vista\" and \"reformer pilates near me.\" The intro-offer clicks come in while they teach. That's the whole point — the site books classes so the owner doesn't have to chase them. Local SEO momentum typically shows up in 60–90 days, and the map-pack work often moves faster.",
+          "If your studio site is a Linktree, a dead Facebook page, or a template you've been meaning to fix for a year, send it over. I'll do a free audit and a free mockup of the new one — no charge, no pitch deck, just a real page you can look at.",
+        ],
+        callout: "Free audit, free mockup, $499 flat, live in 48 hours. Send me your current site or your Instagram and I'll show you what your studio's site should look like.",
+      },
+    ],
+    faqs: [
+      { q: "How much does a pilates or yoga studio website cost in San Diego?", a: "Agencies in North County quote $4,000–$8,000 and take 6–8 weeks. Circuit Coders builds a custom studio site for $499 flat with a 48-hour turnaround and a free mockup first." },
+      { q: "Can my website connect to MindBody or my booking app?", a: "Yes. We integrate MindBody, Mariana Tek, Walla, or Acuity as a $200–$500 one-time add-on, so the \"Book\" button and live schedule pull straight from your real platform." },
+      { q: "How long until my studio shows up on Google for \"pilates near me\"?", a: "With a properly set up Google Business Profile and schema markup, the map pack often moves within a few weeks, and broader local SEO results typically land in 60–90 days." },
+      { q: "Do I really need a website if I have Instagram and a booking app?", a: "Yes — a website is the only thing you own and the page Google ranks locally. Instagram and your booking app don't show in the \"pilates + your city\" map pack that drives roughly 70% of new clients." },
+      { q: "What's the fastest you can get my studio site live?", a: "48 hours from approval. You get a free mockup first, one round of revisions, and the site is custom-built and mobile-first — not a template you have to fight with." },
+    ],
+  },
+  {
     slug: "florist-website-design-oceanside",
     title: "Florist Website Design in Oceanside: Win Weddings, Funerals & Same-Day Orders",
     description: "Most Oceanside florists lose orders to a slow Instagram bio link. Here's how a real florist website wins weddings, funerals, and same-day delivery — for $499 flat.",
