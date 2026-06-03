@@ -20,6 +20,98 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "general-contractor-website-design-fallbrook",
+    title: "General Contractor Website Design in Fallbrook: Win Local Jobs Online",
+    description: "Most Fallbrook contractor websites lose jobs they should win. Here's what a $499 site needs to rank, build trust, and turn searches into booked work.",
+    keywords: ["general contractor website design", "contractor website Fallbrook", "construction website design San Diego", "contractor SEO Fallbrook", "general contractor marketing North County", "builder website design Bonsall", "contractor lead generation Oceanside", "local SEO for contractors"],
+    publishedAt: "2026-06-03",
+    updatedAt: "2026-06-03",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "CONTRACTOR · FALLBROOK · LOCAL SEO",
+    sections: [
+      {
+        heading: "The job you lost before the phone rang",
+        paragraphs: [
+          "A homeowner in Fallbrook just got a $40,000 kitchen remodel approved by their spouse. They open Google, type \"general contractor near me,\" and start clicking. If your site loads slow, has no photos of finished work, and no clear way to ask for a bid, they're gone in eight seconds. They called the guy whose site looked like he'd actually pour the slab.",
+          "Contractors are the worst-served trade online in North County. I see GCs in Fallbrook, Bonsall, and Pala running six-figure jobs off a Facebook page and a Gmail address. The work is excellent. The web presence makes them look like a weekend handyman.",
+          "Here's the brutal part: the homeowner can't see your craftsmanship through a phone. They judge you by the website. A bad site doesn't just fail to win the job — it actively talks people out of calling you.",
+        ],
+      },
+      {
+        heading: "What a contractor site actually needs",
+        paragraphs: [
+          "You don't need a 40-page brochure. You need a fast site that proves you're real, shows what you build, and makes the bid request dead simple. Most of what agencies sell contractors is filler.",
+          "Strip it to the parts that close jobs. Everything below earns its place because a Fallbrook homeowner deciding on a $25,000–$80,000 project will look for it.",
+        ],
+        list: {
+          title: "The pages and elements that win bids",
+          items: [
+            "A photo gallery of finished local jobs — 15–20 real images, not stock",
+            "Service list with the work you actually do (remodels, ADUs, decks, foundations)",
+            "License number and bond info visible on every page — CA contractors get judged on this",
+            "3–5 named reviews with the city: \"— Karen M., Bonsall\"",
+            "A one-screen \"Request a Bid\" form: name, phone, project type, photo upload",
+            "Your service area spelled out: Fallbrook, Bonsall, Pala, Rainbow, north Vista",
+          ],
+        },
+      },
+      {
+        heading: "What to cut before it costs you",
+        paragraphs: [
+          "The fastest way to improve a contractor site is to delete things. Every extra widget slows the page and buries the phone number. Speed and clarity beat features every single time.",
+          "I've watched contractors pay $250/month for tools that drive customers away. Here's what to rip out today.",
+        ],
+        list: {
+          title: "Cut these immediately",
+          items: [
+            "Auto-playing background video — it adds 6+ seconds of load on mobile",
+            "A chatbot — a homeowner with a $50K project wants a human, not a bot",
+            "Stock photos of generic construction crews that aren't your team",
+            "\"Get an instant quote\" calculators — no honest GC can price a remodel blind",
+            "Carousels and sliders nobody clicks through",
+            "Buried contact info — your phone should be tappable in the top corner on every page",
+          ],
+        },
+        callout: "If a feature doesn't help someone hand you a $30,000 job, it's dead weight. Delete it.",
+      },
+      {
+        heading: "Local SEO: how Fallbrook homeowners find you",
+        paragraphs: [
+          "Ranking for \"general contractor Fallbrook\" is mostly local SEO, not magic. Google decides who shows up in the map pack based on your Google Business Profile, your citations, and signals on your actual site. Get these three aligned and you climb.",
+          "Start with the Google Business Profile — claim it, pick \"General Contractor\" as the primary category, add 20+ job photos, and post a project update every couple weeks. Then make your name, address, and phone identical everywhere: your site, Yelp, the BBB, Houzz, every directory. Mismatched info tanks your ranking.",
+          "On the site itself, build a page per service-city combo — \"kitchen remodel Fallbrook,\" \"ADU builder Bonsall,\" \"deck contractor Pala.\" Add LocalBusiness and GeneralContractor schema.org markup so Google reads your service area, hours, and reviews cleanly. That's the structured data that gets you the star ratings in search results.",
+        ],
+        callout: "The '[service] + [city]' page pattern is how a small GC outranks the big franchise — they can't write a real page for every town. You can.",
+      },
+      {
+        heading: "What this costs — and what it should cost",
+        paragraphs: [
+          "A San Diego agency will quote a contractor $4,000–$9,000 for a website, then $200–$400/month on top. For that money you usually get a slow WordPress template stuffed with plugins and a year-long contract. I've rebuilt three of these for guys who got burned.",
+          "Circuit Coders builds it for $499 flat, 48-hour turnaround. Custom Next.js on Vercel — meaning it loads in under two seconds, not the 7–8 seconds a plugin-heavy WordPress site takes. One round of revisions included, and I send you a free mockup before you pay a dollar.",
+          "Need the bid form to email and text you instantly, or a booking calendar for site visits? That's a $200–$500 add-on, quoted up front. Hosting and ongoing updates are optional at $50/month — no contract, cancel anytime. No retainer, no surprise invoice.",
+        ],
+      },
+      {
+        heading: "Built for the bid, not for the awards",
+        paragraphs: [
+          "A contractor site has exactly one job: turn a search into a booked walkthrough. Every choice — the speed, the photos, the one-tap call button, the license number up top — points at that. Pretty doesn't matter if the phone doesn't ring.",
+          "I've built sites for trades all over North County, and the pattern holds: fast, honest, photo-heavy, with a form that lands in your inbox while the homeowner is still on the page. The GCs who show real work and make it easy to reach them win the jobs.",
+          "If your current site embarrasses you — or you're still running off a Facebook page — send me your business name and the towns you serve. I'll build you a free mockup of your homepage, no charge and no commitment, so you can see exactly what $499 and 48 hours gets you.",
+        ],
+        callout: "Free homepage mockup, no cost and no obligation — see it built before you decide. $499 flat, live in 48 hours.",
+      },
+    ],
+    faqs: [
+      { q: "How much should a general contractor pay for a website?", a: "San Diego agencies quote $4,000–$9,000 plus $200–$400/month, but you don't need that. Circuit Coders builds a custom contractor site for $499 flat with a 48-hour turnaround and a free mockup first." },
+      { q: "How long until my contractor website shows up on Google in Fallbrook?", a: "With a claimed Google Business Profile, consistent citations, and proper schema markup, most contractors start ranking in the local map pack within 60–90 days. Service-city pages like \"deck contractor Fallbrook\" often rank faster because there's less competition." },
+      { q: "Do I need to show my CA contractor license number on my site?", a: "Yes — put your license and bond info on every page. North County homeowners check it before they call, and showing it builds trust that wins the bid." },
+      { q: "What's the most important page on a contractor website?", a: "The photo gallery of finished local jobs — 15–20 real images of your actual work. It outperforms every other page because homeowners judge a $30,000 project on what they can see you've already built." },
+      { q: "Can you add a bid-request form that texts me right away?", a: "Yes. A form that emails and texts you the moment someone submits is a $200–$500 add-on, quoted up front, so a lead reaches you while the homeowner is still on the page." },
+    ],
+  },
+  {
     slug: "pilates-studio-website-design-north-county",
     title: "Pilates & Yoga Studio Website Design in North County",
     description: "How North County pilates and yoga studios get a fast, bookable website for $499 in 48 hours. Class schedules, MindBody integration, and local SEO that fills mats.",
