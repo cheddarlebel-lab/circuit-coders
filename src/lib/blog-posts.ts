@@ -20,6 +20,109 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "electrician-website-design-north-county",
+    title: "Electrician Website Design for North County SD: Get Found, Get Booked",
+    description: "Most North County electricians lose jobs to a bad website or no website. Here's how to build one that ranks in Fallbrook, Oceanside, and Vista for $499 flat.",
+    keywords: ["electrician website design", "electrician website North County", "electrician web design Fallbrook", "electrician SEO Oceanside", "local electrician marketing Vista", "electrician website Carlsbad", "electrical contractor website San Marcos", "emergency electrician website Bonsall"],
+    publishedAt: "2026-06-04",
+    updatedAt: "2026-06-04",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "ELECTRICIAN · WEB DESIGN · NORTH COUNTY",
+    sections: [
+      {
+        heading: "It's 7 PM in Vista and a panel just tripped — does your name come up?",
+        paragraphs: [
+          "Someone in Vista loses power to half their house. They grab their phone and type \"electrician near me.\" In the next 90 seconds they're going to call one of the three businesses that show up. If you're not one of them, you don't exist for that job — and that job was $400 minimum.",
+          "Most electricians in North County are losing these calls every week and never know it. You're licensed, you do clean work, you've got 15 years in the trade. None of that matters if your online presence is a dead Facebook page from 2019 and a phone number buried in a directory listing.",
+          "The plumbers, HVAC guys, and handymen in Fallbrook and Oceanside already figured this out. The electrician who shows up first, looks legit, and lets people call or book in two taps wins the panel upgrade, the EV charger install, the whole-home rewire. Speed and trust. That's the whole game.",
+        ],
+      },
+      {
+        heading: "What an electrician site actually needs (and what's just noise)",
+        paragraphs: [
+          "You don't need a 12-page brochure. You need a fast site that answers three questions before someone calls: do you do my job, do you serve my town, and can I trust you. Everything else is decoration.",
+          "Here's the build that books work. Notice there's no live chat widget — a chatbot for an electrician is a tax on a homeowner who already has a problem and just wants your number.",
+        ],
+        list: {
+          title: "Build these, in this order:",
+          items: [
+            "A click-to-call number locked to the top of every screen on mobile — no scrolling to find it",
+            "Plain-language service list: panel upgrades, EV chargers, rewires, troubleshooting, lighting, generators",
+            "A real photo of you and your truck — homeowners hire a face, not a logo",
+            "An emergency / same-day line that stands out in red or orange",
+            "City pages for the towns you cover so you rank in each one",
+            "3–5 Google reviews pulled onto the homepage, not hidden on a separate tab",
+            "License number and \"licensed, bonded, insured\" visible above the fold",
+          ],
+        },
+      },
+      {
+        heading: "Cut the stuff that slows you down",
+        paragraphs: [
+          "Half the electrician websites I audit in North County are slow, bloated, and built on a $39/mo template that loads a 6 MB hero video before the phone number even appears. On a homeowner's cell signal in Bonsall, that site is blank for four seconds. They're gone.",
+          "If your current site has any of the following, it's costing you jobs. Cut them and you'll load faster and convert better the same day.",
+        ],
+        list: {
+          title: "Delete these today:",
+          items: [
+            "Auto-playing background video that eats 5 MB before the page is usable",
+            "A contact form as the only way to reach you — nobody fills out a form during an outage",
+            "Stock photos of an electrician who isn't you (homeowners can smell it)",
+            "A chatbot popup that covers the phone number",
+            "\"Request a quote\" gates in front of basic info like service area or pricing range",
+            "A blog full of \"Top 10 Electrical Safety Tips\" written by an AI farm with no local angle",
+          ],
+        },
+      },
+      {
+        heading: "Local SEO: how an electrician actually ranks in their own town",
+        paragraphs: [
+          "Ranking for \"electrician\" statewide is a fantasy. Ranking for \"electrician Oceanside\" or \"EV charger install Carlsbad\" is completely doable, and that's where the calls are. Google's local results run on three things: your Google Business Profile, consistent citations, and a site that tells Google exactly what you do and where.",
+          "Your Google Business Profile is the single highest-leverage thing you own and it's free. Fill out every field, pick the right primary category (Electrician), add 10+ photos of real jobs, and answer reviews. A complete, active profile out-ranks a half-empty one almost every time.",
+          "On the website side, the pattern that wins is one page per service-plus-city. \"Panel Upgrade Fallbrook,\" \"EV Charger Installation Vista,\" \"Emergency Electrician San Marcos.\" Each page gets its own title, its own copy, and schema.org LocalBusiness markup so Google can read your service area, hours, and phone without guessing.",
+        ],
+        list: {
+          title: "The local SEO checklist:",
+          items: [
+            "Claim and fully complete your Google Business Profile, primary category Electrician",
+            "Get 10+ real job photos onto your profile and refresh them monthly",
+            "Build '[service] + [city]' pages for every town you cover",
+            "Add schema.org LocalBusiness markup with service area and hours",
+            "Keep NAP (name, address, phone) identical across every listing",
+            "Ask every happy customer for a Google review the day you finish the job",
+          ],
+        },
+        callout: "Make sure your Name, Address, and Phone number are identical everywhere — website, Google, Yelp, the contractor directories. Mismatched info is the #1 reason a legit electrician gets buried under a guy with half the experience.",
+      },
+      {
+        heading: "What this costs — and what the market charges",
+        paragraphs: [
+          "Go ask a typical North County agency to build this and you'll hear $3,000 to $6,000, plus a six-week timeline and a recurring \"care plan.\" A national web mill will sell you a $99/mo template that you never actually own and that looks like every other tradesperson's site in the country. Neither is built for an electrician who needs the phone to ring this month.",
+          "Circuit Coders builds it for $499 flat. Custom — not a template — on Next.js and Vercel, so it loads in under a second on a phone. 48-hour turnaround, one round of revisions, free mockup before you pay a dime. You own the site.",
+          "Need online booking or a Stripe deposit so customers lock in same-day calls? That's a $200–$500 add-on, quoted up front, not a surprise. Hosting and updates are optional at $50/mo if you'd rather not touch it — but you're never locked in.",
+        ],
+      },
+      {
+        heading: "Real numbers, and a free audit",
+        paragraphs: [
+          "A panel upgrade is $1,500–$3,000. An EV charger install is $500–$2,000. One extra job a month from a site that actually ranks pays for the $499 build several times over in the first week. This isn't marketing spend, it's the cheapest tool in your truck.",
+          "I'll do this for free: send me your current site (or your Google listing if you don't have one) and I'll tell you exactly why you're not getting found in Oceanside, Vista, or wherever you work — page speed, missing city pages, GBP gaps, all of it. No pitch, just the list.",
+          "If you want it fixed, I'll send a free mockup of your new site before you pay anything. $499 flat, live in 48 hours, and the phone starts ringing for the jobs you've been missing.",
+        ],
+        callout: "Free audit, free mockup, zero commitment. Text me your town and what you do — I'll show you what a $499 site in 48 hours looks like before you spend a cent.",
+      },
+    ],
+    faqs: [
+      { q: "How much should an electrician website cost in North County?", a: "Local agencies quote $3,000–$6,000 and a six-week build. Circuit Coders does a custom site for $499 flat with a 48-hour turnaround and a free mockup first." },
+      { q: "How long until my electrician website shows up on Google?", a: "A fully optimized Google Business Profile can start surfacing in local results within 2–4 weeks. Ranking your website's '[service] + [city]' pages organically usually takes 60–90 days of consistent reviews and citations." },
+      { q: "Do I really need separate pages for each city I serve?", a: "Yes — one page per service-and-city (like \"EV Charger Install Carlsbad\") is the single biggest factor in ranking across multiple towns. A single \"service area\" sentence won't rank you in Vista, Oceanside, and San Marcos at once." },
+      { q: "What's the most important thing for getting emergency electrical calls?", a: "A click-to-call number locked to the top of every mobile screen and a fast-loading site under 1 second. Homeowners during an outage call the first legit result — they don't fill out forms or wait for pages to load." },
+      { q: "Is a contact form or a chatbot worth adding to my site?", a: "For an electrician, no — nobody fills out a form or chats with a bot during a power outage. Put a tappable phone number front and center; if you want online booking with a deposit, that's a $200–$500 add-on." },
+    ],
+  },
+  {
     slug: "general-contractor-website-design-fallbrook",
     title: "General Contractor Website Design in Fallbrook: Win Local Jobs Online",
     description: "Most Fallbrook contractor websites lose jobs they should win. Here's what a $499 site needs to rank, build trust, and turn searches into booked work.",
