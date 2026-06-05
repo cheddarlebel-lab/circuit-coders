@@ -20,6 +20,110 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "hvac-website-design-north-county",
+    title: "HVAC Website Design in North County That Actually Books Service Calls",
+    description: "Most HVAC websites in North County are slow, mobile-broken, and invisible on Google. Here's how to build one that turns AC-out emergencies into booked jobs.",
+    keywords: ["HVAC website design", "HVAC web design North County", "air conditioning contractor website", "HVAC SEO Oceanside", "HVAC marketing Vista", "AC repair website Carlsbad", "HVAC website Fallbrook", "heating and cooling website San Marcos", "HVAC contractor SEO"],
+    publishedAt: "2026-06-05",
+    updatedAt: "2026-06-05",
+    readTime: 8,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "HVAC · NORTH COUNTY · LEAD GEN",
+    sections: [
+      {
+        heading: "It's 104° in Vista and Your Website Just Lost the Job",
+        paragraphs: [
+          "When a Carlsbad homeowner's AC dies in July, they grab their phone and type 'AC repair near me.' They do not read three paragraphs about your family values. They want a phone number, a service area, and proof you can show up today. If your site takes six seconds to load on an iPhone over cell data, they're already calling the next guy.",
+          "Most HVAC sites in North County were built once, in 2017, by a cousin or a GoDaddy template. They're slow, the phone number isn't tappable, and the contact form goes to an inbox nobody checks. Meanwhile the demand is brutal and seasonal — Fallbrook, Bonsall, and Pala bake every summer, and the customers who find you in those 48 hours are the ones who pay full rate without haggling.",
+          "A good HVAC website isn't a brochure. It's a 24-hour intake machine that captures the 11pm 'my house is 88 degrees' panic and turns it into a booked call before your competitor wakes up.",
+        ],
+      },
+      {
+        heading: "What an HVAC Site Actually Needs (and What's Just Decoration)",
+        paragraphs: [
+          "The goal is one thing: get a hot lead to contact you in under 30 seconds. Everything on the page either moves them toward that or it's clutter. HVAC buyers split into two modes — emergency ('it's broken now') and planned ('I need a new system this fall') — and your site has to serve both without making either dig.",
+          "Build for the thumb. Over 70% of 'AC repair Oceanside' searches happen on a phone, often outside in the heat. If your call button isn't sticky at the bottom of the screen, you're making a sweating homeowner pinch-zoom to find your number.",
+        ],
+        list: {
+          title: "Build these in",
+          items: [
+            "A sticky tap-to-call button that follows the user down the whole page",
+            "An 'Emergency / Same-Day' banner up top with hours and response time",
+            "A short form: name, phone, address, problem — 4 fields, not 12",
+            "Service-area page naming every city you cover (Oceanside, Vista, Carlsbad, San Marcos, Fallbrook)",
+            "Financing or estimate language for the $8k–$15k system-replacement buyer",
+            "Real photos of your trucks and techs — not stock photos of a stranger holding a wrench",
+            "Reviews pulled in near the top, not buried at the bottom",
+          ],
+        },
+      },
+      {
+        heading: "Cut This Stuff — It's Costing You Calls",
+        paragraphs: [
+          "Every extra element is a tax on a person who is hot, annoyed, and in a hurry. HVAC sites are especially guilty of loading up on gimmicks that look modern in a demo and actively repel a real customer trying to book a Saturday repair.",
+          "A chatbot is the worst offender. A homeowner with a dead AC doesn't want to type into a bot that asks for their email — they want to call. A chatbot for an emergency trade is a wall between you and a paying customer.",
+        ],
+        list: {
+          title: "Delete these",
+          items: [
+            "Chatbots and 'virtual assistants' that intercept emergency calls",
+            "Auto-playing hero videos that eat 8–12 MB and stall the page",
+            "Carousels nobody clicks past slide one",
+            "A 12-field quote form asking for system model and square footage upfront",
+            "Stock photos of generic HVAC units that aren't your work",
+            "'Request a callback within 1–2 business days' — that's a lost emergency job",
+          ],
+        },
+        callout: "Speed is a feature. Shave a slow site from 6 seconds to under 2 and you'll book calls you never knew you were losing.",
+      },
+      {
+        heading: "Getting Found: Local SEO for HVAC in North County",
+        paragraphs: [
+          "A beautiful site nobody finds is a billboard in the desert. For HVAC, the money is in the local pack — those top three map results for 'AC repair Carlsbad' or 'furnace repair San Marcos.' Ranking there starts with a fully built-out Google Business Profile: correct hours, real service area, your service categories, and fresh photos of actual jobs every couple weeks.",
+          "Then your website backs it up. You want a dedicated page for each core service crossed with each city — 'AC Repair in Oceanside,' 'Heating Installation in Vista,' 'HVAC Maintenance in Fallbrook.' That '[service] + [city]' pattern is how you catch the long-tail searches your competitors ignore. One generic 'Services' page can't rank for a dozen towns.",
+          "Citations and schema do the quiet work. Make sure your name, address, and phone are identical across Yelp, Nextdoor, BBB, and the contractor directories — Google cross-checks them. Then add LocalBusiness and Service schema.org markup so Google can read your hours, area, and reviews directly. That's what gets you the star ratings and 'Open now' badge in results.",
+        ],
+        list: {
+          title: "Local SEO checklist",
+          items: [
+            "Claim and fully fill out Google Business Profile with all service categories",
+            "One landing page per '[service] + [city]' combo you want to rank for",
+            "Identical name/address/phone across every directory and citation",
+            "LocalBusiness + Service schema.org markup on every page",
+            "Post job photos to your GBP every 1–2 weeks",
+            "Ask every happy customer for a Google review the day you finish",
+          ],
+        },
+      },
+      {
+        heading: "What HVAC Web Design Actually Costs Around Here",
+        paragraphs: [
+          "Quotes in North County are all over the map. The big marketing agencies that chase contractors will pitch you $4,000–$8,000 upfront plus $500–$1,500 a month in 'management,' and you'll wait six to eight weeks to see it live. The cheap end is a $29/month template builder where you do all the work and it still looks like everyone else's.",
+          "Circuit Coders builds a custom HVAC site for $499 flat, delivered in 48 hours. That's a real Next.js site on Vercel — fast, mobile-first, built around the tap-to-call flow — not a drag-and-drop template. One round of revisions is included, and you see a free mockup before you pay a dime.",
+          "Hosting and ongoing updates are optional at $50/month. If you want online booking, a scheduling platform like Housecall Pro wired in, or Stripe for deposits, those are quoted as $200–$500 add-ons. No retainers, no surprise 'management fee' eating your margin every month.",
+        ],
+        callout: "$499 flat, 48-hour turnaround, free mockup first. Compare that to a $6,000 agency build you wait two months for.",
+      },
+      {
+        heading: "See It Before You Pay: Free Mockup for North County HVAC Pros",
+        paragraphs: [
+          "Here's the offer, no catch. Send us your current site (or just your business name if you don't have one), and we'll build a free mockup of your new homepage — sticky call button, emergency banner, your service area, the works. You look at it, and only then do you decide.",
+          "We've built for trades across Fallbrook, Oceanside, Vista, and Carlsbad, and the pattern holds every time: fast site, clear phone number, real photos, ranks for the cities you serve. That's what turns a 'my AC is dead' Google search into a booked job on your calendar.",
+          "If your site is slow, hard to find, or just embarrassing to send to a customer, that's costing you the easy summer jobs. Let's fix it in 48 hours.",
+        ],
+        callout: "Want to see your new HVAC site before you spend a cent? Reply for a free mockup — $499 flat, live in 48 hours, one round of revisions included.",
+      },
+    ],
+    faqs: [
+      { q: "How much should an HVAC website cost in North County?", a: "Agencies around here charge $4,000–$8,000 upfront plus $500–$1,500/month in management fees. Circuit Coders builds a custom HVAC site for $499 flat with a 48-hour turnaround and no monthly retainer." },
+      { q: "How long until my HVAC site ranks on Google?", a: "With a fully built Google Business Profile and '[service] + [city]' pages, most HVAC sites start showing up in local results within 60–90 days. The local map pack moves faster than national rankings if your citations and reviews are consistent." },
+      { q: "Do I need a chatbot or online booking on my HVAC website?", a: "Skip the chatbot — emergency customers want to call, not type. Online booking through a platform like Housecall Pro can help for planned jobs and runs $200–$500 as an add-on if you want it." },
+      { q: "Why is my current HVAC website not getting calls?", a: "Usually it's slow (over 4 seconds to load), the phone number isn't tap-to-call on mobile, or it doesn't have city-specific pages so it never ranks for searches like 'AC repair Vista.' Fixing all three typically takes a 48-hour rebuild." },
+      { q: "Can you build separate pages for each city I serve?", a: "Yes — that's the '[service] + [city]' strategy, like 'AC Repair in Oceanside' and 'Heating Installation in San Marcos.' It's the single biggest lever for ranking across multiple North County towns instead of just one." },
+    ],
+  },
+  {
     slug: "electrician-website-design-north-county",
     title: "Electrician Website Design for North County SD: Get Found, Get Booked",
     description: "Most North County electricians lose jobs to a bad website or no website. Here's how to build one that ranks in Fallbrook, Oceanside, and Vista for $499 flat.",
