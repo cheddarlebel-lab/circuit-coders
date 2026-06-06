@@ -20,6 +20,110 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "roofing-website-design-oceanside",
+    title: "Roofing Company Website Design in Oceanside",
+    description: "Most Oceanside roofing sites are slow, generic, and invisible after a storm. Here's how to build one that turns leaks and re-roofs into booked inspections — $499 flat.",
+    keywords: ["roofing website design", "roofing company website Oceanside", "roofer web design North County", "roofing SEO Oceanside", "roofing contractor website Carlsbad", "roof repair website Vista", "re-roof marketing Fallbrook", "roofing website San Marcos", "roofing contractor SEO"],
+    publishedAt: "2026-06-06",
+    updatedAt: "2026-06-06",
+    readTime: 8,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "ROOFING · OCEANSIDE · LEAD GEN",
+    sections: [
+      {
+        heading: "A Roof Leaks in Oceanside and the First Roofer They Find Gets the Job",
+        paragraphs: [
+          "When rain finally hits Oceanside and a ceiling stain shows up, the homeowner does not browse roofers for fun. They grab their phone, type 'roof repair near me,' and call one of the first three names that load. If your site takes six seconds over cell data or the number isn't tappable, you just handed a $700 repair — or a $14,000 re-roof — to the next guy.",
+          "Most roofing sites in North County were built once, years ago, off a template, and never touched again. The phone number is an image you can't tap, the contact form goes to an inbox nobody opens, and there's not one real photo of a finished roof on it. Meanwhile the demand is spiky and seasonal — one storm rolls through Oceanside, Carlsbad, and Vista and the roofers who show up first in Google clean up.",
+          "A roofing website isn't a brochure you point people to after they already called. It's a 24-hour intake machine that catches the 'my roof is leaking' panic at 9pm and turns it into a booked inspection before your competitor's office opens.",
+        ],
+      },
+      {
+        heading: "What a Roofing Site Actually Needs (and What's Just Decoration)",
+        paragraphs: [
+          "The goal is one thing: get a worried homeowner to contact you in under 30 seconds. Every element on the page either pushes them toward that or it's clutter. Roofing buyers come in two modes — emergency ('it's leaking now') and planned ('I need a new roof before next winter') — and your site has to serve both without making either dig.",
+          "Build for the thumb. Most 'roof repair Oceanside' searches happen on a phone, often while someone is staring at a water spot on the ceiling. If your call button isn't pinned to the bottom of the screen, you're making a stressed homeowner pinch-zoom to find your number.",
+        ],
+        list: {
+          title: "Build these in",
+          items: [
+            "A sticky tap-to-call button that follows the user down the entire page",
+            "An 'Emergency / Storm Damage' banner up top with response time and service hours",
+            "A short form: name, phone, address, problem — 4 fields, not 12",
+            "A service-area page naming every city you cover (Oceanside, Carlsbad, Vista, San Marcos, Fallbrook)",
+            "Financing or free-estimate language for the $10k–$20k re-roof buyer",
+            "Real before/after photos of your own roofs — not stock shots of someone else's shingles",
+            "Google reviews pulled in near the top, not buried at the bottom",
+          ],
+        },
+      },
+      {
+        heading: "Cut This Stuff — It's Costing You Inspections",
+        paragraphs: [
+          "Every extra element is a tax on a person who is anxious, staring at a leak, and in a hurry. Roofing sites love to load up on gimmicks that look slick in a demo and actively repel a homeowner trying to book an inspection before the next rain.",
+          "A chatbot is the worst offender. Someone with water coming through the drywall doesn't want to type into a bot that asks for their email — they want to call. A chatbot on a roofing site is a wall between you and a $14,000 job.",
+        ],
+        list: {
+          title: "Delete these",
+          items: [
+            "Chatbots and 'virtual assistants' that intercept emergency calls",
+            "Auto-playing hero videos of drone roof footage that eat 8–12 MB and stall the page",
+            "Carousels of stock roofs nobody clicks past slide one",
+            "A 12-field quote form asking for roof pitch and square footage upfront",
+            "Stock photos of roofs that aren't your work",
+            "'We'll call you back in 1–2 business days' — that's a lost storm job",
+          ],
+        },
+        callout: "Speed is a feature. Drop a slow roofing site from 6 seconds to under 2 and you'll book inspections you never knew you were losing.",
+      },
+      {
+        heading: "Getting Found: Local SEO for Roofers in North County",
+        paragraphs: [
+          "A beautiful site nobody finds is a billboard in the desert. For roofing, the money is in the local pack — those top three map results for 'roof repair Carlsbad' or 'roofing company Oceanside.' Ranking there starts with a fully built-out Google Business Profile: correct hours, real service area, your service categories, and fresh photos of finished jobs every couple weeks.",
+          "Then your website backs it up. You want a dedicated page for each core service crossed with each city — 'Roof Repair in Oceanside,' 'Re-Roofing in Carlsbad,' 'Roof Inspection in Vista.' That '[service] + [city]' pattern is how you catch the long-tail searches your competitors ignore. One generic 'Services' page can't rank for a dozen towns.",
+          "Citations and schema do the quiet work. Make sure your name, address, and phone are identical across Yelp, Nextdoor, BBB, and the contractor directories — Google cross-checks them. Then add LocalBusiness and Service schema.org markup so Google can read your hours, area, and reviews directly. That's what earns the star ratings and 'Open now' badge in results.",
+        ],
+        list: {
+          title: "Local SEO checklist",
+          items: [
+            "Claim and fully fill out Google Business Profile with all roofing service categories",
+            "One landing page per '[service] + [city]' combo you want to rank for",
+            "Identical name/address/phone across every directory and citation",
+            "LocalBusiness + Service schema.org markup on every page",
+            "Post finished-roof photos to your GBP every 1–2 weeks",
+            "Ask every happy customer for a Google review the day you finish the job",
+          ],
+        },
+      },
+      {
+        heading: "What Roofing Web Design Actually Costs Around Here",
+        paragraphs: [
+          "Quotes in North County are all over the map. The marketing agencies that chase roofers will pitch you $4,000–$8,000 upfront plus $500–$1,500 a month in 'management,' and you'll wait six to eight weeks to see it live. The cheap end is a $29/month template builder where you do all the work and it still looks like every other roofer in the county.",
+          "Circuit Coders builds a custom roofing site for $499 flat, delivered in 48 hours. That's a real Next.js site on Vercel — fast, mobile-first, built around the tap-to-call flow — not a drag-and-drop template. One round of revisions is included, and you see a free mockup before you pay a dime.",
+          "Hosting and ongoing updates are optional at $50/month. If you want online inspection scheduling, a roofing CRM like JobNimbus or AccuLynx wired in, or Stripe for deposits, those are quoted as $200–$500 add-ons. No retainers, no surprise 'management fee' eating your margin every month.",
+        ],
+        callout: "$499 flat, 48-hour turnaround, free mockup first. Compare that to a $6,000 agency build you wait two months for.",
+      },
+      {
+        heading: "See It Before You Pay: Free Mockup for North County Roofers",
+        paragraphs: [
+          "Here's the offer, no catch. Send us your current site (or just your business name if you don't have one), and we'll build a free mockup of your new homepage — sticky call button, storm-damage banner, your service area, your real before/after photos, the works. You look at it, and only then do you decide.",
+          "We've built for trades across Oceanside, Carlsbad, Vista, and Fallbrook, and the pattern holds every time: fast site, clear phone number, real photos, ranks for the cities you serve. That's what turns a 'my roof is leaking' Google search into a booked inspection on your calendar.",
+          "If your site is slow, hard to find, or just embarrassing to send to a homeowner, that's costing you the easy storm-season jobs. Let's fix it in 48 hours.",
+        ],
+        callout: "Want to see your new roofing site before you spend a cent? Reply for a free mockup — $499 flat, live in 48 hours, one round of revisions included.",
+      },
+    ],
+    faqs: [
+      { q: "How much should a roofing website cost in North County?", a: "Agencies around here charge $4,000–$8,000 upfront plus $500–$1,500/month in management fees. Circuit Coders builds a custom roofing site for $499 flat with a 48-hour turnaround and no monthly retainer." },
+      { q: "How long until my roofing site ranks on Google?", a: "With a fully built Google Business Profile and '[service] + [city]' pages, most roofing sites start showing up in local results within 60–90 days. The local map pack moves faster than national rankings if your citations and reviews stay consistent." },
+      { q: "Do I need a chatbot or online booking on my roofing website?", a: "Skip the chatbot — leak and storm-damage customers want to call, not type. Online inspection scheduling through a roofing CRM like JobNimbus can help for planned re-roofs and runs $200–$500 as an add-on if you want it." },
+      { q: "Why is my current roofing website not getting calls?", a: "Usually it's slow (over 4 seconds to load), the phone number isn't tap-to-call on mobile, or it has no city-specific pages so it never ranks for searches like 'roof repair Oceanside.' Fixing all three typically takes a 48-hour rebuild." },
+      { q: "Can you build separate pages for each city I serve?", a: "Yes — that's the '[service] + [city]' strategy, like 'Roof Repair in Oceanside' and 'Re-Roofing in Carlsbad.' It's the single biggest lever for ranking across multiple North County towns instead of just one." },
+    ],
+  },
+  {
     slug: "hvac-website-design-north-county",
     title: "HVAC Website Design in North County That Actually Books Service Calls",
     description: "Most HVAC websites in North County are slow, mobile-broken, and invisible on Google. Here's how to build one that turns AC-out emergencies into booked jobs.",
