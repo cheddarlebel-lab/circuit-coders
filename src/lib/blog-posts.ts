@@ -20,6 +20,110 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "dog-boarding-website-design-vista",
+    title: "Dog Boarding & Pet Resort Website Design in Vista",
+    description: "Vista dog boarding and pet resort owners: your site should fill kennels, not win awards. Real local SEO, online booking, and a $499 flat build that ships in 48 hours.",
+    keywords: ["pet boarding website design", "dog boarding website Vista", "pet resort web design", "dog daycare website San Marcos", "kennel website design Oceanside", "pet boarding SEO Vista", "dog boarding booking system", "North County San Diego web design"],
+    publishedAt: "2026-06-07",
+    updatedAt: "2026-06-07",
+    readTime: 8,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "PET BOARDING · VISTA · WEB DESIGN",
+    sections: [
+      {
+        heading: "It's Friday, the kennel is half empty, and your site is the problem",
+        paragraphs: [
+          "A family in Vista is leaving for Tahoe next week. They've got a 70-pound Lab and no plan for him. They pull out their phone, type \"dog boarding near me,\" and start tapping. You have about eight seconds to convince them your place is safe, clean, and bookable before they back out and tap the next listing.",
+          "Most pet boarding sites in North County lose that family in those eight seconds. A 6 MB hero video that won't load on a 4G connection at the dog park. A phone number buried below three paragraphs about your \"passion for animals.\" No prices, no real photos of the actual runs, no way to reserve a spot without calling during the one hour you're not hosing out a kennel.",
+          "Here's the thing about boarding: the decision is emotional and the timeline is urgent. People are leaving their family member with a stranger. They want to see the space, know the daily routine, and lock in dates before they change their mind. A slow, vague, call-us-only website kills all three.",
+        ],
+        callout: "Boarding customers don't browse. They're stressed, they're leaving town, and they book the first place that looks safe and answers fast.",
+      },
+      {
+        heading: "What a Vista boarding site actually needs",
+        paragraphs: [
+          "Forget the brochure mindset. Your site has one job: turn a nervous pet owner into a confirmed reservation. Everything on the page should push toward that, or it shouldn't be there.",
+          "Real photos do more selling than any paragraph you can write. Show the actual runs, the play yard, the staff with real dogs. Stock photos of golden retrievers in a studio tell people you're hiding something. A 90-second phone walkthrough of your facility, compressed to 3–5 MB so it loads fast, beats a glossy ad every time.",
+        ],
+        list: {
+          title: "Put these above the fold or near it:",
+          items: [
+            "Click-to-call and click-to-text buttons, sticky on mobile — most boarding inquiries come from a phone",
+            "Clear pricing: nightly rate, daycare rate, multi-dog discount, holiday surcharge if you have one",
+            "Real photos of YOUR runs, play yard, and crew — not stock dogs",
+            "Vaccination and drop-off requirements stated up front, so nobody shows up unprepared",
+            "An online booking or request-a-stay form that works at 9pm when people actually plan trips",
+            "A short, honest 'a day at our place' routine — feeding times, play groups, nap, last potty break",
+          ],
+        },
+      },
+      {
+        heading: "What to cut before it costs you bookings",
+        paragraphs: [
+          "Every extra feature is weight, and weight is lost customers. I see the same junk on boarding sites across Vista and San Marcos, and almost none of it earns its place.",
+          "A chatbot is the worst offender. For a boarding facility, a chatbot is a tax on a stressed customer who just wants to know if you have room July 4th weekend. They'll bounce before it finishes its canned greeting. Give them a phone number and a form.",
+        ],
+        list: {
+          title: "Delete these today:",
+          items: [
+            "Auto-playing music or barking sound effects — instant back-button",
+            "A 6 MB uncompressed hero video that stalls on mobile data",
+            "Chatbots and 'virtual assistants' that delay a simple yes-or-no answer",
+            "Endless 'About Our Philosophy' text nobody reads before booking",
+            "Pop-ups asking for an email before they've seen a single price",
+            "A 'Book Now' button that just opens your email client with a blank message",
+          ],
+        },
+        callout: "If a feature doesn't help a customer book a stay or trust you with their dog, it's working against you.",
+      },
+      {
+        heading: "Getting found: local SEO for 'dog boarding Vista'",
+        paragraphs: [
+          "A beautiful site nobody finds is a poster in a locked room. The customers searching \"dog boarding Vista\" or \"pet resort San Marcos\" at midnight need to find you on page one of Google, and that's mostly about local SEO — not blog volume or backlinks.",
+          "Your Google Business Profile does the heavy lifting. Fill it completely: correct hours, the boarding and daycare categories, 15+ real photos, and your service area covering Vista, Oceanside, Carlsbad, San Marcos, and Bonsall. Then ask every happy customer for a review by text the day they pick up their dog — reviews are the single biggest mover for the local map pack.",
+          "On the site itself, build a dedicated page per service-and-city. \"Dog Boarding in Vista,\" \"Doggy Daycare in San Marcos,\" \"Cat Boarding in Oceanside\" — each as its own page targeting the exact phrase people type. Add LocalBusiness and Service schema.org markup so Google understands your hours, location, and pricing, and your business name, address, and phone need to match exactly across every directory citation: Yelp, Bringfido, Rover, the Vista Chamber, all of it.",
+        ],
+        list: {
+          title: "Local SEO checklist for boarding:",
+          items: [
+            "Google Business Profile: boarding + daycare categories, 15+ photos, full service area",
+            "A '[service] + [city]' page for each combo — Dog Boarding Vista, Daycare San Marcos, Cat Boarding Oceanside",
+            "LocalBusiness + Service schema.org markup baked into every page",
+            "Consistent name/address/phone across Yelp, Bringfido, Google, and the Vista Chamber",
+            "Review request by text at pickup — aim for one new Google review per week",
+            "City names in your page titles, headings, and image alt text — not stuffed, but present",
+          ],
+        },
+      },
+      {
+        heading: "What this costs: agency quotes vs. the $499 flat",
+        paragraphs: [
+          "Get a quote from a San Diego agency for a boarding site and you'll hear $4,000 to $9,000, plus a few hundred a month for a 'platform' you'll never log into. They'll spend six weeks on a discovery phase to build something a Vista kennel owner could describe in one phone call. You don't need that, and you shouldn't pay for it.",
+          "Circuit Coders builds it for $499 flat. Custom Next.js on Vercel — fast, secure, no clunky page-builder template. One round of revisions, and you see a free mockup before you pay a dollar. Turnaround is 48 hours, because you've got kennels to fill, not a quarter to wait.",
+          "Online booking is where boarding sites earn their keep, so integrations like a reservation system, Stripe deposits, or a sync with Gingr or PetExec run as a $200–$500 add-on, quoted straight up based on what you use. Want me to maintain it and push updates? Hosting and updates are optional at $50/mo. No retainer, no lock-in, no surprise invoice.",
+        ],
+        callout: "$499 flat, 48 hours, custom-built. Not a $99 template, not a $9,000 agency project — the right size for a North County boarding business.",
+      },
+      {
+        heading: "See it before you pay: free mockup",
+        paragraphs: [
+          "A Bonsall kennel owner I worked with was sending every booking inquiry to voicemail because her old site had no form and a phone number nobody could find on mobile. New site went live in two days with click-to-text, a request-a-stay form, and real photos of her runs. Inquiries that used to vanish now land in her inbox while she's cleaning kennels.",
+          "If your Vista boarding site is slow, hides your prices, or can't take a reservation after hours, send it over. I'll build you a free mockup of the homepage so you can see exactly what a faster, booking-ready version looks like — no charge, no commitment.",
+          "If you like it, it's $499 flat and live in 48 hours. If you don't, you keep the mockup and we shake hands. That's the whole offer.",
+        ],
+        callout: "Free homepage mockup, no commitment. Like it? $499 flat, live in 48 hours. Don't? Keep the mockup, no hard feelings.",
+      },
+    ],
+    faqs: [
+      { q: "How much should a dog boarding website cost in Vista?", a: "San Diego agencies quote $4,000–$9,000 plus monthly fees for a boarding site. Circuit Coders builds a custom one for $499 flat, with optional hosting and updates at $50/mo and booking integrations quoted at $200–$500." },
+      { q: "How long until my boarding site shows up on Google for 'dog boarding Vista'?", a: "With a complete Google Business Profile, '[service] + [city]' pages, and steady reviews, most boarding businesses start ranking in the local map pack within 60–90 days. Organic page-one rankings for competitive terms can take a bit longer, but the map pack moves fastest." },
+      { q: "Can I take reservations and deposits directly on my site?", a: "Yes. We add online booking, Stripe deposits, or a sync with platforms like Gingr or PetExec as a $200–$500 add-on, depending on what you already use." },
+      { q: "How fast can my new pet boarding site go live?", a: "48 hours from approval. You get a free mockup first, one round of revisions, and then it's live on Vercel — no six-week agency timeline." },
+      { q: "Do I need separate pages for daycare, boarding, and cat boarding?", a: "Yes — a dedicated '[service] + [city]' page for each (Dog Boarding Vista, Daycare San Marcos, Cat Boarding Oceanside) helps you rank for the exact phrases people search. It's built into the $499 flat build." },
+    ],
+  },
+  {
     slug: "roofing-website-design-oceanside",
     title: "Roofing Company Website Design in Oceanside",
     description: "Most Oceanside roofing sites are slow, generic, and invisible after a storm. Here's how to build one that turns leaks and re-roofs into booked inspections — $499 flat.",
