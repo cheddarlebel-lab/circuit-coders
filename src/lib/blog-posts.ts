@@ -20,6 +20,108 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "dentist-website-design-fallbrook",
+    title: "Dentist Website Design in Fallbrook: What Actually Books Patients",
+    description: "A Fallbrook dental practice doesn't need a brochure site. Here's what a dentist website should do, what to cut, and why $499 beats a $4,000 agency build.",
+    keywords: ["dentist website design", "dental website design Fallbrook", "dentist website Fallbrook", "dental office web design North County", "dentist SEO Fallbrook", "dental practice website Bonsall", "dentist website design Oceanside", "new patient website dentist"],
+    publishedAt: "2026-06-08",
+    updatedAt: "2026-06-08",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "FALLBROOK · DENTAL · WEB DESIGN",
+    sections: [
+      {
+        heading: "Your Website Is Losing the Patient Before They Pick Up the Phone",
+        paragraphs: [
+          "Someone in Fallbrook wakes up with a cracked molar at 7 a.m. They grab their phone, type \"dentist near me,\" and start tapping. They are not reading your mission statement. They want three things: are you open, do you take their insurance, and can they book today.",
+          "Most dental sites in North County fail all three in the first five seconds. The phone number is buried in a footer. The hours are on a separate page. The \"Request Appointment\" button opens a contact form that emails a mailbox nobody checks until Thursday. That patient is already calling the practice in Bonsall that loaded faster.",
+          "A dental website has exactly one job: turn a person in pain or a parent overdue for a kid's cleaning into a booked appointment. Everything else is decoration.",
+        ],
+      },
+      {
+        heading: "What a Fallbrook Dental Site Actually Needs",
+        paragraphs: [
+          "You don't need a 14-page site with a blog about flossing nobody reads. You need a fast, mobile-first page that answers the questions a real patient has before they trust you with a drill.",
+          "Put the decision-making information above the fold and make the phone number a tappable link on mobile. Over 70% of dental searches happen on a phone, and a phone number that isn't clickable is a phone number that doesn't get called.",
+        ],
+        list: {
+          title: "The must-haves, in order",
+          items: [
+            "Click-to-call phone number pinned to the top on mobile",
+            "Insurance accepted, listed plainly (Delta Dental, Cigna, MetLife, cash plans)",
+            "Online booking that actually writes to your calendar — not a contact form",
+            "New-patient specials and clear pricing for cleanings and exams",
+            "Real photos of your Fallbrook office and team — not stock smiles",
+            "Hours, parking, and a map embedded for the office on Main or Mission",
+            "A page each for the big services: implants, Invisalign, emergencies, kids",
+          ],
+        },
+      },
+      {
+        heading: "What to Cut Before It Slows You Down",
+        paragraphs: [
+          "Half of what dental marketing companies sell you is dead weight. It looks busy in a demo and tanks your load time in real life. Every second of load time past three seconds costs you patients.",
+          "Be ruthless here. If a feature doesn't help someone book or trust you, it goes.",
+        ],
+        list: {
+          title: "Delete these",
+          items: [
+            "A chatbot. A patient with a toothache wants a human, not a popup asking how it can help",
+            "Auto-playing video backgrounds that eat 8 MB and stall on cell data",
+            "Stock photos of models with unnaturally white teeth — they read as fake",
+            "A 200-field intake form on the homepage before anyone has committed",
+            "Carousels and sliders nobody clicks through",
+            "\"Patient portal\" logins jammed into the main nav before someone's even a patient",
+          ],
+        },
+        callout: "If your current site takes more than three seconds to load on a phone, you're paying for a billboard pointed at a wall.",
+      },
+      {
+        heading: "Local SEO: How Fallbrook Patients Actually Find You",
+        paragraphs: [
+          "Ranking for \"dentist Fallbrook\" is mostly won off your website — on your Google Business Profile and in the consistency of your business info across the web. Your site's job is to back that up with the right signals.",
+          "Claim and fully fill out your Google Business Profile: correct categories (General Dentist, Cosmetic Dentist, Emergency Dental Service), real hours, and 15+ recent photos. Then ask every happy patient for a review the day of their visit — a steady drip of reviews moves the map pack more than anything else.",
+          "On the site itself, build a real page for each service-plus-city pattern people search: \"dental implants Fallbrook,\" \"Invisalign Bonsall,\" \"emergency dentist Oceanside\" if you pull from there. Add LocalBusiness and Dentist schema.org markup so Google reads your hours, address, and ratings directly.",
+        ],
+        list: {
+          title: "Local ranking checklist",
+          items: [
+            "Google Business Profile claimed, categorized, and photo-loaded",
+            "NAP (name, address, phone) identical on your site, Google, Yelp, and Healthgrades",
+            "Dentist + LocalBusiness schema markup on every page",
+            "A dedicated page per service + nearby city (Fallbrook, Bonsall, Pala)",
+            "Reviews requested same-day, responded to within 48 hours",
+          ],
+        },
+      },
+      {
+        heading: "What This Costs — and Why $499 Beats the $4,000 Quote",
+        paragraphs: [
+          "Dental web agencies love a recurring contract. The typical North County pitch runs $3,000–$6,000 up front, then $300–$600 a month for \"management,\" and they still build you the same template they sold the practice two towns over. Patterson and the big dental marketing firms will quote you $250+ a month before you've seen a single mockup.",
+          "Circuit Coders builds it flat: $499, 48-hour turnaround, custom Next.js on Vercel, one round of revisions. You own the site. No lease, no monthly hostage situation. Hosting and ongoing updates are optional at $50/mo if you'd rather not touch it.",
+          "Online booking that syncs to your scheduling software — LocalMed, NexHealth, or a Calendly setup — is a $200–$500 add-on depending on the platform. That's a one-time integration, not a forever subscription.",
+        ],
+        callout: "Custom site, $499, live in 48 hours. The agency hasn't finished your kickoff call by then.",
+      },
+      {
+        heading: "See It Before You Pay a Dime",
+        paragraphs: [
+          "I build a free mockup of your homepage before you commit to anything. You see exactly how your Fallbrook practice looks — your photos, your services, your booking flow — and decide from there. No retainer, no contract, no pressure.",
+          "I'm local. I'll drive to the office, shoot real photos of the front desk and the team, and have a working site live in two days. Compare that to the agency that outsources your build to a template farm and bills you monthly for the privilege.",
+          "Send me your current site or just the practice name. I'll tell you straight what's costing you patients and show you the fixed version — free.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "How long does it take to build a dental website?", a: "Circuit Coders delivers a custom dental site in 48 hours with one round of revisions. A typical agency takes 6–10 weeks for the same result." },
+      { q: "How long until my dental website ranks on Google in Fallbrook?", a: "Expect 60–90 days for a new site to climb for local terms like \"dentist Fallbrook,\" assuming your Google Business Profile is claimed and reviews are coming in. The map pack moves faster than organic results — often within 30 days." },
+      { q: "Do I need online booking on my dental website?", a: "Yes — patients increasingly won't call during business hours. Booking that syncs to your scheduler (LocalMed, NexHealth) is a one-time $200–$500 add-on, not a monthly fee." },
+      { q: "Why is $499 so much cheaper than dental marketing agencies?", a: "Agencies charge $3,000–$6,000 up front plus $250–$600/mo to lock you into a template they reuse. Circuit Coders is a flat $499, you own the site, and hosting is optional at $50/mo." },
+      { q: "Will my dental site work on phones?", a: "Every build is mobile-first, since over 70% of dental searches happen on a phone. Click-to-call, insurance info, and booking all sit above the fold on mobile." },
+    ],
+  },
+  {
     slug: "dog-boarding-website-design-vista",
     title: "Dog Boarding & Pet Resort Website Design in Vista",
     description: "Vista dog boarding and pet resort owners: your site should fill kennels, not win awards. Real local SEO, online booking, and a $499 flat build that ships in 48 hours.",
