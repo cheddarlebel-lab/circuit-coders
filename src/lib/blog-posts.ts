@@ -20,6 +20,117 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "real-estate-agent-website-design-north-county",
+    title: "Real Estate Agent Website Design in North County SD: What Actually Sells",
+    description: "Most North County real estate agent websites are slow Zillow knockoffs. Here's what a $499 site should do, what to cut, and how to rank for listings in Carlsbad, Vista, and Fallbrook.",
+    keywords: ["real estate agent website", "realtor website design", "North County San Diego real estate", "Carlsbad realtor website", "Vista real estate agent", "real estate IDX website", "local SEO for realtors", "Fallbrook real estate website"],
+    publishedAt: "2026-06-09",
+    updatedAt: "2026-06-09",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "REAL ESTATE · NORTH COUNTY · WEB DESIGN",
+    sections: [
+      {
+        heading: "Your Brokerage Page Is Not a Website",
+        paragraphs: [
+          "Walk into any open house in Carlsbad or San Marcos and the agent hands you a card with a URL like brokeragename.com/agents/jane-smith-2847. That's not your website. That's a tenant slot on someone else's domain, and it ranks for nothing.",
+          "Meanwhile a buyer in Vista Googles \"homes for sale near Brengle Terrace\" and your name is nowhere. The brokerage page can't rank locally because it's one of 4,000 identical agent profiles. You're paying a 70/30 split and still invisible.",
+          "The agents who win listings in North County have their own domain, their own content, and their own Google footprint. Everyone else is renting a room in a house they'll never own.",
+        ],
+        callout: "If your business card points to a /agents/ subpage, you don't have a website — you have a billboard on someone else's freeway.",
+      },
+      {
+        heading: "What a Real Estate Site Actually Needs",
+        paragraphs: [
+          "A realtor site has exactly two jobs: capture the lead and prove you know the area. Everything else is decoration. Most agents get this backwards and bury a contact form under five rotating hero videos.",
+          "Buyers and sellers decide in about 8 seconds whether you're a local who knows Bonsall horse property from a Carlsbad condo. Make that obvious above the fold, then make it stupid-easy to reach you.",
+        ],
+        list: {
+          title: "Build these:",
+          items: [
+            "A one-line value prop with your specific farm area (\"Selling Vista & San Marcos since 2014\")",
+            "A lead form that's 3 fields max — name, phone, what they want",
+            "Neighborhood pages: one per city or community you actually work",
+            "Real testimonials with the client's town, not stock quotes",
+            "A mobile click-to-call button that's always visible",
+            "Recent sold listings with prices — proof you close deals",
+          ],
+        },
+      },
+      {
+        heading: "What to Cut (Most of It)",
+        paragraphs: [
+          "Real estate web vendors love to upsell features that look impressive in a demo and get used zero times by actual buyers. You're paying monthly for tools that slow your site to a crawl.",
+          "Every plugin you add is another 2–3 MB of load time. A buyer on an iPhone parked outside a listing in Oceanside won't wait 9 seconds for your mortgage calculator widget to load. They'll just leave.",
+        ],
+        list: {
+          title: "Kill these:",
+          items: [
+            "Auto-playing video backgrounds (3–5 MB, instant bounce)",
+            "A live chatbot — for a solo agent it just annoys real leads",
+            "Embedded full MLS search that nobody finishes",
+            "Mortgage calculators (Google has one, it's better)",
+            "\"Home valuation\" gimmicks that demand an email before any number",
+            "Social feeds that pull in slow third-party junk",
+          ],
+        },
+      },
+      {
+        heading: "Do You Even Need IDX?",
+        paragraphs: [
+          "IDX is the live MLS feed that puts every listing on your site. Vendors push it hard because it locks you into $50–$100/mo forever. Here's the truth: most solo agents don't need full IDX, and it can actually hurt you.",
+          "When your site shows all 1,200 active North County listings, you're competing with Zillow on Zillow's game — and losing. What ranks and converts is a curated neighborhood page: \"Homes for Sale in Bressi Ranch\" with real context only a local would write.",
+          "If you genuinely need a live search, we wire up a clean IDX integration as a $200–$500 add-on, not a forever subscription with someone else's branding stamped on it. Most clients skip it and rank better with hand-built community pages instead.",
+        ],
+        callout: "Curated beats comprehensive. A buyer doesn't want every listing — they want the three in the neighborhood they already love.",
+      },
+      {
+        heading: "Ranking for \"[Neighborhood] Real Estate Agent\"",
+        paragraphs: [
+          "This is where agents leave the most money on the table. Local SEO for real estate is winnable because most agents do literally nothing. Start with your Google Business Profile: claim it, set the category to \"Real Estate Agent,\" add your service areas (Carlsbad, Vista, San Marcos, Fallbrook), and post a sold listing every two weeks.",
+          "Then nail the on-page pattern. Build a page targeting \"[service] + [city]\" — \"Carlsbad Listing Agent,\" \"Vista Real Estate Agent,\" \"Fallbrook Homes for Sale.\" One focused page per intent beats one bloated homepage trying to rank for everything.",
+          "Add RealEstateAgent and LocalBusiness schema.org markup so Google reads your name, area, and reviews as structured data. Get listed in the same citations every time — name, address, phone identical across Zillow, Realtor.com, your GBP, and local directories. Inconsistent NAP is the #1 reason agents don't rank.",
+        ],
+        list: {
+          title: "Local SEO checklist:",
+          items: [
+            "Claim and fully fill your Google Business Profile",
+            "Service-area pages: one per city you farm",
+            "RealEstateAgent + LocalBusiness schema markup",
+            "Consistent NAP across every directory",
+            "Embed a Google Map on your contact page",
+            "Collect Google reviews that mention the town by name",
+          ],
+        },
+      },
+      {
+        heading: "What This Costs vs. the $499 Flat",
+        paragraphs: [
+          "The real estate web market is built to bleed you slowly. Placester, Luxury Presence, and the rest run $50–$300/mo, often with a setup fee on top, and you never own the site. Cancel and it vanishes. A local agency quote for a custom realtor site in San Diego runs $3,000–$8,000.",
+          "Circuit Coders builds it for $499 flat. Custom Next.js on Vercel, 48-hour turnaround, one round of revisions, and you own every line of it. Hosting and updates are optional at $50/mo — the same as one month of a template service, except here it's optional and the site is already yours.",
+          "Neighborhood pages, lead form, schema markup, and your GBP setup are included in the $499. IDX or a booking integration, if you actually want one, is a $200–$500 add-on quoted up front. No surprises, no monthly ransom.",
+        ],
+      },
+      {
+        heading: "See It Before You Pay",
+        paragraphs: [
+          "You don't have to take my word for it. We build a free mockup of your homepage first — your farm area, your headshot, your sold listings — so you see exactly what you're getting before a dollar changes hands.",
+          "An agent in Oceanside came to us paying $89/mo for a template site that loaded in 7 seconds and ranked for nothing. We rebuilt it custom for $499, added three community pages, and she stopped paying rent on her own web presence. That's the whole pitch.",
+          "If your website is a brokerage subpage, a slow template, or a business card with no URL at all, send it over. We'll do a free audit and a free mockup. $499 flat, 48 hours, and it's yours for good.",
+        ],
+        callout: "Free mockup, free audit. $499 flat, 48-hour turnaround, you own it. Reply and we'll build your homepage before you pay a cent.",
+      },
+    ],
+    faqs: [
+      { q: "Do I need IDX on my real estate website?", a: "Most solo agents don't — curated neighborhood pages rank better and convert higher than a full MLS feed that competes with Zillow. If you want live search, we add it as a $200–$500 integration instead of a forever $50–$100/mo subscription." },
+      { q: "How long until my realtor website ranks in Google?", a: "For low-competition local terms like \"[neighborhood] real estate agent,\" expect movement in 60–90 days with proper schema and a consistent Google Business Profile. Broad terms like \"Carlsbad homes\" take longer and aren't worth chasing." },
+      { q: "Can't I just use my brokerage's agent page?", a: "You can, but it's one of thousands of identical profiles on a domain you don't control, so it rarely ranks for local searches. Your own site at your own domain is the only thing that builds equity you keep when you switch brokerages." },
+      { q: "How much does a real estate agent website cost in North County?", a: "Template services run $50–$300/mo and you never own them; a custom agency build runs $3,000–$8,000. Circuit Coders builds a custom site for $499 flat with a 48-hour turnaround, and you own it outright." },
+      { q: "Will the website work on phones?", a: "Yes — over 70% of buyers browse listings on mobile, so every site we build is mobile-first with an always-visible click-to-call button and loads in under 2 seconds. Slow template sites that take 7–9 seconds lose those buyers instantly." },
+    ],
+  },
+  {
     slug: "dentist-website-design-fallbrook",
     title: "Dentist Website Design in Fallbrook: What Actually Books Patients",
     description: "A Fallbrook dental practice doesn't need a brochure site. Here's what a dentist website should do, what to cut, and why $499 beats a $4,000 agency build.",
