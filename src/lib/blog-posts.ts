@@ -20,6 +20,98 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "coffee-shop-website-design-carlsbad",
+    title: "Coffee Shop & Roaster Website Design in Carlsbad",
+    description: "Most Carlsbad coffee shops live on Instagram and a stale Yelp page. Here's how a fast, $499 site sells beans, fills the patio, and ranks on Google.",
+    keywords: ["coffee shop website design", "Carlsbad coffee shop website", "roaster ecommerce website", "coffee shop SEO Carlsbad", "cafe website design North County", "sell coffee beans online", "Oceanside coffee shop website", "Vista cafe web design"],
+    publishedAt: "2026-06-10",
+    updatedAt: "2026-06-10",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "COFFEE · CARLSBAD · ROASTER",
+    sections: [
+      {
+        heading: "Your coffee is great. Your website is a dead Linktree.",
+        paragraphs: [
+          "Walk into any roaster off State Street or down in the Carlsbad Village and the coffee is dialed — single-origin Ethiopia, a house blend people drive from Vista for, a barista who actually knows pour-over ratios. Then you go to find them online and it's a Linktree, a Squarespace page that hasn't been touched since 2022, and a hours block that still says 'Closed Mondays' when you reopened Mondays in March.",
+          "Here's the gap: a tourist staying near the Flower Fields or LEGOLAND searches 'coffee near me' at 7am. Google shows three results. If your site is slow, has no hours, and no menu, you're invisible — and they walk into the chain two blocks down.",
+          "A coffee shop site has exactly two jobs: get someone in the door this morning, and sell a bag of beans to the person who already loves you. Most Carlsbad cafe sites do neither.",
+        ],
+        callout: "Your Instagram is rented land. Your website is the only piece of the internet you actually own.",
+      },
+      {
+        heading: "What a coffee shop site actually needs",
+        paragraphs: [
+          "You don't need a 12-page brand epic. You need the four things a customer is hunting for, above the fold, loading in under two seconds on the phone they're holding in the parking lot.",
+          "Everything else — your origin story, the latte art gallery, the founder's trip to Guatemala — goes lower. Nobody's reading it before their first coffee.",
+        ],
+        list: {
+          title: "The non-negotiables",
+          items: [
+            "Hours and address with a tap-to-map link (and a clear note for holidays/event days)",
+            "A menu that loads instantly — a photo of a chalkboard is not a menu",
+            "'Order ahead' or your Toast/Square online-order link, one tap away",
+            "A bean shop: buy whole bean or ground, ship it or pickup",
+            "Tap-to-call and a real photo of the actual storefront so people recognize it",
+            "Wholesale / cafe-supply inquiry link if you roast for other shops",
+          ],
+        },
+      },
+      {
+        heading: "What to cut — the stuff slowing you down",
+        paragraphs: [
+          "Most cafe sites aren't missing features. They're drowning in them. Every widget you bolt on is weight your morning customer pays for in load time.",
+          "I've audited coffee sites in Carlsbad and Encinitas that take seven seconds to load on LTE because of a 9 MB hero video and three tracking scripts. Seven seconds is forever when you're caffeine-deprived and the chain has a drive-thru.",
+        ],
+        list: {
+          title: "Delete these today",
+          items: [
+            "Autoplay hero video of beans pouring — costs you 4+ MB, says nothing",
+            "A chatbot. For a coffee shop, a chatbot is a tax on people who just want the hours.",
+            "'Sign up for our newsletter' popup that fires before the page even loads",
+            "Stock photos of generic latte art that isn't yours",
+            "An embedded full Instagram feed that drags 3–5 MB of scripts in",
+            "A reservations widget — you're a cafe, not a steakhouse",
+          ],
+        },
+      },
+      {
+        heading: "Local SEO: how Carlsbad finds you on Google",
+        paragraphs: [
+          "This is where you win or lose, and it's mostly free. The single highest-leverage thing you own is your Google Business Profile — claim it, fill every field, set real hours, add 10+ photos of the actual space, and post your seasonal drinks. That profile, not your homepage, is what most people see first.",
+          "Then make your site speak Google's language. Use schema.org LocalBusiness (CafeOrCoffeeShop) markup so your hours, price range, and menu show up as rich results. Build citations — make sure your name, address, and phone number are identical across Yelp, Apple Maps, TripAdvisor, and the Carlsbad Village directory. Inconsistent NAP is the quietest way to tank your ranking.",
+          "Target the searches people actually type: 'coffee shop Carlsbad Village,' 'best espresso Carlsbad,' 'coffee roaster North County San Diego,' 'buy coffee beans Carlsbad.' One clean page per real intent beats one bloated homepage trying to rank for all of them.",
+        ],
+        callout: "A fully filled-out Google Business Profile with weekly posts will out-perform a $5,000 website that ignores it. Do the free thing first.",
+      },
+      {
+        heading: "What this costs — and what the market charges",
+        paragraphs: [
+          "A Carlsbad agency will quote you $4,000–$8,000 for a 'brand experience' and another $150–$250/month to maintain it. A Wix template you build yourself is cheap but loads slow and looks like every other Wix site. A Shopify store for your beans runs $39/mo before you've sold a single bag, plus theme costs.",
+          "Circuit Coders builds it for $499 flat. Custom Next.js on Vercel, 48-hour turnaround, one round of revisions, and I send you a free mockup before you pay anything. It's fast because it's hand-built, not assembled from plugins.",
+          "If you want to sell beans online, the Stripe checkout or Shopify-Buy integration is a $200–$500 add-on, quoted up front — no surprises. Hosting and ongoing updates are optional at $50/mo if you'd rather not touch it. That's it. No retainer, no 'discovery phase.'",
+        ],
+      },
+      {
+        heading: "What 48 hours buys a Carlsbad roaster",
+        paragraphs: [
+          "Picture it Monday: you send me your menu, your hours, and a few real photos. Wednesday you have a live site that loads in under two seconds, ranks for 'coffee Carlsbad Village,' and lets a customer in Oceanside order a bag of your house blend shipped to their door.",
+          "No agency timeline, no $6k invoice, no monthly leash. Just a site that does its two jobs — fill the patio and sell the beans.",
+          "Free mockup first. If you don't like it, you've lost nothing but the 30 minutes it took to send me your menu.",
+        ],
+        callout: "Send me your current site or your Instagram and I'll send back a free mockup plus a 5-point audit — what's slowing you down and what's costing you walk-ins. $499 flat, live in 48 hours.",
+      },
+    ],
+    faqs: [
+      { q: "How much does a coffee shop website cost in Carlsbad?", a: "Local agencies quote $4,000–$8,000 plus $150–$250/month. Circuit Coders builds a custom site for $499 flat with a 48-hour turnaround and a free mockup before you pay." },
+      { q: "Can I sell coffee beans online from my website?", a: "Yes — adding Stripe or Shopify-Buy checkout for whole-bean and ground sales is a $200–$500 add-on, quoted up front. Most shops are taking online bean orders within the same week the site goes live." },
+      { q: "How long until my coffee shop ranks on Google?", a: "A fully optimized Google Business Profile can start showing in local results within 2–4 weeks. Organic ranking for terms like 'coffee shop Carlsbad' typically takes 60–90 days with consistent reviews and schema markup." },
+      { q: "Do I need a website if I already have Instagram?", a: "Yes. Instagram is rented land that doesn't show up when someone Googles 'coffee near me' at 7am — and you can't put a fast menu, hours, or a bean shop on it. A site is the one piece of the internet you actually own." },
+      { q: "Why is my current cafe website so slow on mobile?", a: "Usually an autoplay hero video, an embedded Instagram feed, and a stack of tracking scripts — often 5–9 MB total. Cutting those gets most sites under a 2-second load, which is what keeps caffeine-deprived customers from bouncing to the chain." },
+    ],
+  },
+  {
     slug: "real-estate-agent-website-design-north-county",
     title: "Real Estate Agent Website Design in North County SD: What Actually Sells",
     description: "Most North County real estate agent websites are slow Zillow knockoffs. Here's what a $499 site should do, what to cut, and how to rank for listings in Carlsbad, Vista, and Fallbrook.",
