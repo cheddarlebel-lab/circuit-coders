@@ -20,6 +20,97 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "wedding-florist-website-design-carlsbad",
+    title: "Wedding Florist Website Design in Carlsbad: Book More Weddings, Skip the Instagram Trap",
+    description: "Carlsbad wedding florists lose bookings to bad websites every week. Here's what a florist site actually needs — and what it should cost in 2026.",
+    keywords: ["wedding florist website", "wedding florist website design", "Carlsbad wedding florist", "florist web design Carlsbad", "wedding florist SEO", "North County San Diego weddings", "Oceanside wedding florist", "small business website Carlsbad"],
+    publishedAt: "2026-06-11",
+    updatedAt: "2026-06-11",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "WEDDING FLORIST · CARLSBAD · WEB DESIGN",
+    sections: [
+      {
+        heading: "Your Instagram Is Full. Your Calendar Isn't.",
+        paragraphs: [
+          "Here's the pattern I see with wedding florists in Carlsbad: 4,000 Instagram followers, gorgeous reels from a Park Hyatt Aviara install, and a website that hasn't been touched since 2021. A bride finds you on Instagram, taps the link in bio, and lands on a Wix page with a slideshow that takes eight seconds to load on her phone. She's gone. She's already DMing the next florist.",
+          "Couples planning a Carlsbad or Oceanside wedding shortlist vendors on Instagram, but they vet and book on websites. If your site doesn't show pricing minimums, real venue work, and an inquiry form that takes under a minute, you're paying for the discovery and handing the booking to someone else.",
+          "The average North County couple spends $3,500–$8,000 on wedding florals. One lost lead a month isn't an annoyance — it's a five-figure hole in your year.",
+        ],
+        callout: "Instagram gets you found. Your website gets you booked. Most Carlsbad florists have the first one and a liability for the second.",
+      },
+      {
+        heading: "What a Wedding Florist Website Actually Needs",
+        paragraphs: [
+          "A florist site has one job: convert a bride who's 70% sold from your Instagram into a submitted inquiry. Everything on the page either moves her toward that form or it's clutter.",
+          "Lead with full-wedding galleries, not single-bouquet close-ups. Couples want to see what an entire reception looks like at Cape Rey or Leo Carrillo Ranch — arch, tablescapes, bridal party, the works. Six to ten complete weddings beats two hundred loose photos.",
+        ],
+        list: {
+          title: "The non-negotiables",
+          items: [
+            "A stated minimum (e.g. 'full-service weddings begin at $4,000') — it filters tire-kickers and signals you're a pro",
+            "Full-wedding galleries organized by venue, with the venue named in the page title",
+            "An inquiry form asking exactly five things: date, venue, guest count, budget range, email",
+            "A 'check my date' promise with a response time — 'we reply within 24 hours' converts",
+            "Real reviews pulled from Google and The Knot, not anonymous 'testimonials'",
+            "Mobile load under 3 seconds — 80%+ of wedding planning traffic is on a phone",
+          ],
+        },
+      },
+      {
+        heading: "What to Cut From Your Florist Site Today",
+        paragraphs: [
+          "Most florist websites fail by addition, not omission. Every template gimmick that came with your theme is costing you load time and leads.",
+          "The worst offender: uncompressed photo dumps. Florists shoot beautiful work, then upload 3–5 MB images straight off the photographer's gallery. Forty of those on one page and your site is unusable on venue Wi-Fi, which is exactly where coordinators are when they look you up.",
+        ],
+        list: {
+          title: "Delete these this week",
+          items: [
+            "Background music and autoplay video headers — instant back-button on mobile",
+            "A 'request a custom quote' form with 15 fields. Five fields. That's it.",
+            "Stock photos of flowers you didn't arrange — couples can smell it",
+            "A daily-arrangements e-commerce shop bolted onto a wedding brand, if weddings are 90% of your revenue",
+            "A chatbot. A bride with a $6,000 budget wants a human reply within 24 hours, not a widget.",
+            "Pages for services you don't want ('funeral flowers' tabs on a wedding-only brand confuse Google and couples alike)",
+          ],
+        },
+      },
+      {
+        heading: "Local SEO: How Couples in Carlsbad Actually Find Florists",
+        paragraphs: [
+          "Couples don't Google 'florist.' They Google 'wedding florist Carlsbad,' 'Park Hyatt Aviara wedding florist,' and 'wedding flowers North County San Diego.' Your site needs a page or section targeting each pattern — service plus city, and service plus venue. A dedicated page for every venue you've worked (Aviara, Cape Rey, The Westin Carlsbad, Twin Oaks in San Marcos, Grand Tradition in Fallbrook) is the single highest-leverage SEO move a florist can make, because almost none of your competitors do it.",
+          "Your Google Business Profile matters as much as the website. Set your primary category to 'Wedding florist' — not 'Florist' — fill every field, upload 20+ geotagged photos of installs, and ask every couple for a review within a week of the wedding while they're still glowing. Florists with 50+ reviews own the Carlsbad map pack.",
+          "Under the hood, your site should ship LocalBusiness and FAQ schema.org markup so Google understands you're a Carlsbad business answering wedding questions. Then get consistent name-address-phone citations on The Knot, WeddingWire, Yelp, and Zola. Done right, a florist site goes from invisible to ranking for '[venue] + wedding florist' searches in 60–90 days.",
+        ],
+        callout: "Venue-name pages are the cheat code. 'Cape Rey wedding florist' has a fraction of the competition of 'Carlsbad florist' and ten times the buying intent.",
+      },
+      {
+        heading: "What This Should Cost (Hint: Not $4,000)",
+        paragraphs: [
+          "Get quotes from San Diego agencies and you'll hear $3,000–$6,000 for a 'brand experience,' six-week timelines, and $150–$250 a month in hosting and 'maintenance.' For a five-page florist site. That's a full wedding's worth of profit spent before peak season even starts.",
+          "Circuit Coders builds the whole thing — galleries, venue pages, inquiry form, schema, mobile-first — for $499 flat, delivered in 48 hours on custom Next.js hosted on Vercel. One round of revisions included. If you want us to handle hosting and content updates (swapping in this season's weddings, adding new venue pages), that's an optional $50/month.",
+          "Need more? Connecting your inquiry form to HoneyBook or your CRM, Stripe deposits for date holds, or a consultation-booking calendar runs $200–$500 as a quoted add-on. You pay for what you use, not a retainer.",
+        ],
+      },
+      {
+        heading: "Booked Solid by Engagement Season",
+        paragraphs: [
+          "The math is simple. Engagement season runs November through February, and couples book Carlsbad florists 9–14 months out. A site that goes live now is ranking and converting by the time the next wave of 2027 brides starts searching. Wait until fall and you've missed the cycle.",
+          "We work with small businesses across North County — Carlsbad, Oceanside, Vista, San Marcos, Fallbrook, Bonsall — and the florists who win aren't the ones with the biggest Instagram. They're the ones whose website answers 'are you available, what's your minimum, have you done my venue' in under thirty seconds.",
+        ],
+        callout: "Send us your current site and Instagram. We'll build a free mockup of what your florist site should look like — no deposit, no call required. If you like it, it's $499 flat and live in 48 hours.",
+      },
+    ],
+    faqs: [
+      { q: "How much does a wedding florist website cost in Carlsbad?", a: "San Diego agencies typically quote $3,000–$6,000 plus $150–$250/month in maintenance. Circuit Coders builds custom florist sites for $499 flat with a 48-hour turnaround, with optional hosting and updates at $50/month." },
+      { q: "Should I put my pricing minimum on my florist website?", a: "Yes. A stated minimum like 'weddings begin at $4,000' filters out mismatched inquiries and makes serious couples more likely to submit the form. Florists who publish minimums spend less time quoting and book at higher averages." },
+      { q: "How long until my florist site ranks on Google for Carlsbad searches?", a: "With proper schema markup, venue-specific pages, and an optimized Google Business Profile, expect movement on '[venue] + wedding florist' searches in 60–90 days. Broad terms like 'Carlsbad wedding florist' take longer, but venue pages convert better anyway." },
+      { q: "Is Instagram enough for a wedding florist, or do I really need a website?", a: "Instagram is discovery; the website is where couples vet and book. Roughly 80% of wedding planning happens on a phone, and couples cross-check your site, Google reviews, and The Knot before sending an inquiry — a missing or slow site kills bookings worth $3,500–$8,000 each." },
+      { q: "Can my florist website connect to HoneyBook or take deposits?", a: "Yes. We wire inquiry forms into HoneyBook, Dubsado, or your CRM, and can add Stripe deposits for date holds — quoted as add-ons in the $200–$500 range on top of the $499 base build." },
+    ],
+  },
+  {
     slug: "coffee-shop-website-design-carlsbad",
     title: "Coffee Shop & Roaster Website Design in Carlsbad",
     description: "Most Carlsbad coffee shops live on Instagram and a stale Yelp page. Here's how a fast, $499 site sells beans, fills the patio, and ranks on Google.",
