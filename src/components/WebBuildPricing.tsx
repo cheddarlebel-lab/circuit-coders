@@ -73,18 +73,37 @@ const tiers: Tier[] = [
   },
 ];
 
-const retainer = {
-  name: "Maintenance Retainer",
-  price: "$199/mo",
-  tagline: "Keep your site growing, not rotting.",
-  features: [
-    "Hosting + uptime monitoring",
-    "Security patches + dependency updates",
-    "2 hours/mo of content or layout edits",
-    "Weekly backups",
-    "Priority response within 24h",
-  ],
-};
+const retainers = [
+  {
+    name: "Maintenance Retainer",
+    price: "$199/mo",
+    setup: null as string | null,
+    tagline: "Keep your site growing, not rotting.",
+    cta: "Add to my build",
+    features: [
+      "Hosting + uptime monitoring",
+      "Security patches + dependency updates",
+      "2 hours/mo of content or layout edits",
+      "Weekly backups",
+      "Priority response within 24h",
+    ],
+  },
+  {
+    name: "Local SEO + Google Maps",
+    price: "$199/mo",
+    setup: "$299 one-time setup" as string | null,
+    tagline:
+      "When someone searches “[your trade] near me”, the map pack shows before any website. This puts you in it — and keeps you there.",
+    cta: "Get found on Maps",
+    features: [
+      "Google Business Profile claim, verify + full build-out",
+      "Categories, services, photos + service areas done right",
+      "Weekly Google posts that keep the listing active",
+      "Review ask-flow — grow your stars after every job",
+      "Monthly ranking + calls/views report",
+    ],
+  },
+];
 
 export default function WebBuildPricing() {
   return (
@@ -185,44 +204,54 @@ export default function WebBuildPricing() {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="glass-card p-8 rounded-2xl flex flex-col md:flex-row md:items-center gap-6"
-        >
-          <div className="flex-1">
-            <div className="text-xs font-mono text-circuit-300 tracking-widest uppercase mb-2">
-              Add-On
-            </div>
-            <div className="flex items-baseline gap-2 mb-3">
-              <span className="text-3xl font-bold text-white tracking-tight">
-                {retainer.price}
-              </span>
-              <span className="text-sm text-gray-300">{retainer.name}</span>
-            </div>
-            <p className="text-gray-200 mb-4">{retainer.tagline}</p>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {retainer.features.map((f) => (
-                <li
-                  key={f}
-                  className="flex items-start gap-2 text-sm text-gray-100"
-                >
-                  <Check className="w-4 h-4 mt-0.5 flex-shrink-0 text-circuit-400/80" />
-                  <span>{f}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <a
-            href="/#contact"
-            className="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm glass-card text-white hover:border-circuit-500/40 transition-all duration-300 whitespace-nowrap"
-          >
-            Add to my build
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </a>
-        </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {retainers.map((retainer, i) => (
+            <motion.div
+              key={retainer.name}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 + i * 0.1 }}
+              className="glass-card p-8 rounded-2xl flex flex-col gap-6"
+            >
+              <div className="flex-1">
+                <div className="text-xs font-mono text-circuit-300 tracking-widest uppercase mb-2">
+                  {i === 0 ? "Add-On" : "Recurring"}
+                </div>
+                <div className="flex items-baseline gap-2 mb-1">
+                  <span className="text-3xl font-bold text-white tracking-tight">
+                    {retainer.price}
+                  </span>
+                  <span className="text-sm text-gray-300">{retainer.name}</span>
+                </div>
+                {retainer.setup && (
+                  <div className="text-xs font-mono text-gray-300 tracking-wide mb-3">
+                    + {retainer.setup}
+                  </div>
+                )}
+                <p className="text-gray-200 mb-4 mt-2">{retainer.tagline}</p>
+                <ul className="grid grid-cols-1 gap-2">
+                  {retainer.features.map((f) => (
+                    <li
+                      key={f}
+                      className="flex items-start gap-2 text-sm text-gray-100"
+                    >
+                      <Check className="w-4 h-4 mt-0.5 flex-shrink-0 text-circuit-400/80" />
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <a
+                href="/#contact"
+                className="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm glass-card text-white hover:border-circuit-500/40 transition-all duration-300 whitespace-nowrap"
+              >
+                {retainer.cta}
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </motion.div>
+          ))}
+        </div>
 
         <p className="text-center text-xs font-mono text-gray-300 tracking-wide mt-8">
           All tiers include: live preview before payment · custom domain setup ·
