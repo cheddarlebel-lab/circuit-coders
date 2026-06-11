@@ -90,12 +90,12 @@ export default function MockupStudio() {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="flex flex-wrap justify-center gap-3 mb-12"
         >
-          <span className="text-sm text-gray-500 self-center mr-2">Quick start:</span>
+          <span className="text-sm text-gray-200 self-center mr-2 font-medium">Quick start:</span>
           {projectTemplates.map((t) => (
             <button
               key={t.id}
               onClick={() => loadTemplate(t)}
-              className="px-4 py-2 text-sm glass-card hover:border-circuit-500/30 hover:text-circuit-400 text-gray-400 transition-all duration-300"
+              className="px-4 py-2 text-sm glass-card hover:border-circuit-500/40 hover:text-circuit-300 text-gray-100 transition-all duration-300"
             >
               {t.name}
             </button>
@@ -116,7 +116,7 @@ export default function MockupStudio() {
               {selectedComponents.length > 0 && (
                 <button
                   onClick={() => { setSelectedComponents([]); setShowPreview(false); }}
-                  className="text-xs text-gray-500 hover:text-gray-300 flex items-center gap-1 transition-colors"
+                  className="text-xs text-gray-200 hover:text-white flex items-center gap-1 transition-colors"
                 >
                   <RotateCcw className="w-3 h-3" /> Clear
                 </button>
@@ -140,12 +140,12 @@ export default function MockupStudio() {
                     }`}
                   >
                     <div className="flex items-center gap-3 mb-2">
-                      <Icon className={`w-5 h-5 ${selected ? "text-circuit-400" : "text-gray-500"}`} />
-                      <span className={`text-sm font-medium ${selected ? "text-circuit-300" : "text-gray-300"}`}>
+                      <Icon className={`w-5 h-5 ${selected ? "text-circuit-300" : "text-gray-100"}`} />
+                      <span className={`text-sm font-medium ${selected ? "text-circuit-200" : "text-white"}`}>
                         {comp.name}
                       </span>
                     </div>
-                    <div className="text-xs text-gray-500 font-mono">{comp.model}</div>
+                    <div className="text-xs text-gray-300 font-mono">{comp.model}</div>
                   </motion.button>
                 );
               })}
@@ -153,7 +153,7 @@ export default function MockupStudio() {
 
             {/* Mockup type selector */}
             <div className="glass-card p-4 mt-4">
-              <div className="text-sm text-gray-400 mb-3">Preview Type</div>
+              <div className="text-xs uppercase tracking-[0.15em] text-gray-100 mb-3 font-semibold">Preview Type</div>
               <div className="flex gap-2">
                 {(["schematic", "dashboard", "api"] as MockupType[]).map((type) => (
                   <button
@@ -161,8 +161,8 @@ export default function MockupStudio() {
                     onClick={() => { setMockupType(type); setShowPreview(false); }}
                     className={`flex-1 px-3 py-2 rounded-lg text-sm font-medium capitalize transition-all duration-300 ${
                       mockupType === type
-                        ? "bg-circuit-500/20 text-circuit-400 border border-circuit-500/30"
-                        : "text-gray-500 hover:text-gray-300 border border-transparent"
+                        ? "bg-circuit-500/20 text-circuit-200 border border-circuit-500/40"
+                        : "text-gray-100 hover:text-white border border-white/[0.06] hover:border-white/20 hover:bg-white/[0.04]"
                     }`}
                   >
                     {type}
@@ -179,7 +179,7 @@ export default function MockupStudio() {
               whileTap={{ scale: 0.98 }}
               className={`w-full py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition-all duration-300 ${
                 selectedComponents.length === 0
-                  ? "bg-gray-800 text-gray-500 cursor-not-allowed"
+                  ? "bg-gray-800/50 text-gray-300 cursor-not-allowed"
                   : "bg-circuit-500 text-carbon-500 hover:bg-circuit-400 hover:shadow-[0_0_40px_rgba(0,230,138,0.3)]"
               }`}
             >
@@ -223,7 +223,7 @@ export default function MockupStudio() {
                     <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
                     <div className="w-3 h-3 rounded-full bg-green-500/60" />
                   </div>
-                  <span className="text-xs font-mono text-gray-500">
+                  <span className="text-xs font-mono text-gray-200">
                     project-preview.{mockupType === "api" ? "json" : mockupType === "dashboard" ? "tsx" : "svg"}
                   </span>
                 </div>
@@ -247,9 +247,9 @@ export default function MockupStudio() {
                       className="text-center"
                     >
                       <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-white/[0.03] border border-white/[0.06] flex items-center justify-center">
-                        <Sparkles className="w-8 h-8 text-gray-600" />
+                        <Sparkles className="w-8 h-8 text-gray-300" />
                       </div>
-                      <p className="text-gray-500 text-sm">
+                      <p className="text-gray-100 text-sm font-medium">
                         Select components and click Generate
                       </p>
                     </motion.div>

@@ -53,10 +53,10 @@ function MetricCard({ metric, index }: { metric: typeof metrics[0]; index: numbe
 
       <div className="relative z-10">
         <metric.icon className={`w-5 h-5 ${metric.color} mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`} />
-        <div className="text-3xl sm:text-4xl font-bold text-white font-mono tabular-nums mb-1">
+        <div className="text-3xl sm:text-4xl font-bold text-white font-mono tabular-nums mb-1.5">
           {count}{metric.suffix}
         </div>
-        <div className="text-xs text-gray-500 uppercase tracking-wider font-medium">
+        <div className="text-xs text-gray-200 uppercase tracking-wider font-semibold">
           {metric.label}
         </div>
       </div>
@@ -75,7 +75,7 @@ export default function LiveMetrics() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 text-xs font-mono text-gray-500">
+          <div className="inline-flex items-center gap-2 text-xs font-mono text-gray-200 tracking-widest">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-circuit-400 opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-circuit-500" />

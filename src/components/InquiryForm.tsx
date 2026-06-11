@@ -136,14 +136,14 @@ export default function InquiryForm() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-block px-4 py-1.5 glass-card text-xs font-mono text-circuit-400 mb-6">
+          <div className="inline-block px-4 py-1.5 glass-card text-xs font-mono text-circuit-300 tracking-widest mb-6">
             START A PROJECT
           </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="text-gradient-subtle">Tell Us What You&apos;re</span>{" "}
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
+            <span className="text-gradient-bright">Tell Us What You&apos;re</span>{" "}
             <span className="text-gradient">Building</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-200 max-w-2xl mx-auto text-lg leading-relaxed">
             Share your requirements, upload specs, and select hardware
             components. We&apos;ll respond with a detailed proposal within 24 hours.
           </p>
@@ -165,13 +165,13 @@ export default function InquiryForm() {
                 <CheckCircle className="w-20 h-20 text-circuit-400 mx-auto mb-6" />
               </motion.div>
               <h3 className="text-2xl font-bold text-white mb-3">Inquiry Received!</h3>
-              <p className="text-gray-400 mb-8">
+              <p className="text-gray-200 mb-8">
                 We&apos;ll review your requirements and get back to you within 24
                 hours with a detailed proposal.
               </p>
               <button
                 onClick={() => { setSubmitted(false); setFormData({ name: "", email: "", company: "", projectType: "", budget: "", timeline: "", description: "", components: [] }); setFiles([]); }}
-                className="px-6 py-3 glass-card text-gray-400 hover:text-white transition-colors"
+                className="px-6 py-3 glass-card text-gray-100 hover:text-white transition-colors"
               >
                 Submit Another Inquiry
               </button>
@@ -187,43 +187,43 @@ export default function InquiryForm() {
               {/* Basic info */}
               <div className="grid sm:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm text-gray-400 mb-2 font-medium">Name *</label>
+                  <label className="block text-xs uppercase tracking-[0.15em] text-gray-100 mb-2 font-semibold">Name *</label>
                   <input
                     type="text"
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 bg-white/[0.03] border border-white/[0.08] rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-circuit-500/40 focus:ring-1 focus:ring-circuit-500/20 transition-all"
+                    className="w-full px-4 py-3 bg-white/[0.03] border border-white/[0.08] rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-circuit-500/40 focus:ring-1 focus:ring-circuit-500/20 transition-all"
                     placeholder="Your name"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm text-gray-400 mb-2 font-medium">Email *</label>
+                  <label className="block text-xs uppercase tracking-[0.15em] text-gray-100 mb-2 font-semibold">Email *</label>
                   <input
                     type="email"
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 bg-white/[0.03] border border-white/[0.08] rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-circuit-500/40 focus:ring-1 focus:ring-circuit-500/20 transition-all"
+                    className="w-full px-4 py-3 bg-white/[0.03] border border-white/[0.08] rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-circuit-500/40 focus:ring-1 focus:ring-circuit-500/20 transition-all"
                     placeholder="you@company.com"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm text-gray-400 mb-2 font-medium">Company</label>
+                <label className="block text-xs uppercase tracking-[0.15em] text-gray-100 mb-2 font-semibold">Company</label>
                 <input
                   type="text"
                   value={formData.company}
                   onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                  className="w-full px-4 py-3 bg-white/[0.03] border border-white/[0.08] rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-circuit-500/40 focus:ring-1 focus:ring-circuit-500/20 transition-all"
+                  className="w-full px-4 py-3 bg-white/[0.03] border border-white/[0.08] rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-circuit-500/40 focus:ring-1 focus:ring-circuit-500/20 transition-all"
                   placeholder="Optional"
                 />
               </div>
 
               {/* Project type */}
               <div>
-                <label className="block text-sm text-gray-400 mb-3 font-medium">Project Type *</label>
+                <label className="block text-xs uppercase tracking-[0.15em] text-gray-100 mb-3 font-semibold">Project Type *</label>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   {projectTypes.map((type) => (
                     <button
@@ -233,7 +233,7 @@ export default function InquiryForm() {
                       className={`p-4 rounded-xl border text-center transition-all duration-300 hover-lift ${
                         formData.projectType === type.id
                           ? "bg-circuit-500/10 border-circuit-500/40 text-circuit-400 shadow-[0_0_15px_rgba(0,230,138,0.1)]"
-                          : "bg-white/[0.02] border-white/[0.06] text-gray-500 hover:border-white/10"
+                          : "bg-white/[0.02] border-white/[0.08] text-gray-100 hover:border-white/20 hover:bg-white/[0.04]"
                       }`}
                     >
                       <type.icon className="w-6 h-6 mx-auto mb-2" />
@@ -246,7 +246,7 @@ export default function InquiryForm() {
               {/* Budget & Timeline */}
               <div className="grid sm:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm text-gray-400 mb-2 font-medium">Budget Range *</label>
+                  <label className="block text-xs uppercase tracking-[0.15em] text-gray-100 mb-2 font-semibold">Budget Range *</label>
                   <select
                     required
                     value={formData.budget}
@@ -260,7 +260,7 @@ export default function InquiryForm() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm text-gray-400 mb-2 font-medium">Timeline</label>
+                  <label className="block text-xs uppercase tracking-[0.15em] text-gray-100 mb-2 font-semibold">Timeline</label>
                   <select
                     value={formData.timeline}
                     onChange={(e) => setFormData({ ...formData, timeline: e.target.value })}
@@ -276,8 +276,8 @@ export default function InquiryForm() {
 
               {/* Hardware components */}
               <div>
-                <label className="block text-sm text-gray-400 mb-3 font-medium">
-                  Hardware Components <span className="text-gray-600 font-normal">(select all that apply)</span>
+                <label className="block text-xs uppercase tracking-[0.15em] text-gray-100 mb-3 font-semibold">
+                  Hardware Components <span className="text-gray-300 font-normal normal-case tracking-normal">(select all that apply)</span>
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   {hardwareComponents.map((comp) => {
@@ -291,7 +291,7 @@ export default function InquiryForm() {
                         className={`p-3 rounded-lg border text-left text-xs transition-all duration-300 ${
                           selected
                             ? "bg-circuit-500/10 border-circuit-500/30 text-circuit-400"
-                            : "bg-white/[0.02] border-white/[0.06] text-gray-500 hover:border-white/10"
+                            : "bg-white/[0.02] border-white/[0.08] text-gray-100 hover:border-white/20 hover:bg-white/[0.04]"
                         }`}
                       >
                         <Icon className="w-4 h-4 mb-1" />
@@ -304,31 +304,31 @@ export default function InquiryForm() {
 
               {/* Description */}
               <div>
-                <label className="block text-sm text-gray-400 mb-2 font-medium">Project Description *</label>
+                <label className="block text-xs uppercase tracking-[0.15em] text-gray-100 mb-2 font-semibold">Project Description *</label>
                 <textarea
                   required
                   rows={5}
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                  className="w-full px-4 py-3 bg-white/[0.03] border border-white/[0.08] rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-circuit-500/40 focus:ring-1 focus:ring-circuit-500/20 transition-all resize-none"
+                  className="w-full px-4 py-3 bg-white/[0.03] border border-white/[0.08] rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-circuit-500/40 focus:ring-1 focus:ring-circuit-500/20 transition-all resize-none"
                   placeholder="Describe your project requirements, use case, and any technical constraints..."
                 />
               </div>
 
               {/* File uploads */}
               <div>
-                <label className="block text-sm text-gray-400 mb-2 font-medium">
-                  Attachments <span className="text-gray-600 font-normal">(schematics, specs, reference docs)</span>
+                <label className="block text-xs uppercase tracking-[0.15em] text-gray-100 mb-2 font-semibold">
+                  Attachments <span className="text-gray-300 font-normal normal-case tracking-normal">(schematics, specs, reference docs)</span>
                 </label>
                 <div
                   onClick={() => fileRef.current?.click()}
                   className="border-2 border-dashed border-white/[0.08] rounded-xl p-8 text-center cursor-pointer hover:border-circuit-500/30 hover:bg-white/[0.01] transition-all duration-300 group"
                 >
-                  <Upload className="w-8 h-8 text-gray-600 mx-auto mb-2 group-hover:text-circuit-500/50 group-hover:scale-110 transition-all" />
-                  <p className="text-sm text-gray-500">
+                  <Upload className="w-8 h-8 text-gray-300 mx-auto mb-2 group-hover:text-circuit-300 group-hover:scale-110 transition-all" />
+                  <p className="text-sm text-gray-100 font-medium">
                     Click to upload or drag files here
                   </p>
-                  <p className="text-xs text-gray-600 mt-1">
+                  <p className="text-xs text-gray-300 mt-1.5">
                     PDF, KiCad, Eagle, Gerber, images (max 10MB each)
                   </p>
                 </div>
@@ -347,8 +347,8 @@ export default function InquiryForm() {
                   <div className="mt-3 space-y-2">
                     {files.map((file, i) => (
                       <div key={i} className="flex items-center justify-between px-3 py-2 bg-white/[0.02] rounded-lg border border-white/[0.06]">
-                        <span className="text-sm text-gray-400 truncate">{file.name}</span>
-                        <button type="button" onClick={() => removeFile(i)} className="text-gray-600 hover:text-red-400 transition-colors">
+                        <span className="text-sm text-gray-100 truncate">{file.name}</span>
+                        <button type="button" onClick={() => removeFile(i)} className="text-gray-300 hover:text-red-400 transition-colors">
                           <X className="w-4 h-4" />
                         </button>
                       </div>

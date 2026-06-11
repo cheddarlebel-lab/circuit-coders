@@ -18,7 +18,7 @@ export default function TechMarquee() {
         transition={{ duration: 1 }}
       >
         <div className="text-center mb-10">
-          <p className="text-xs font-mono text-gray-600 tracking-widest uppercase">
+          <p className="text-xs font-mono text-circuit-300/80 tracking-[0.25em] uppercase font-semibold">
             Technologies we ship with
           </p>
         </div>
@@ -32,7 +32,7 @@ export default function TechMarquee() {
             {doubled.map((tech, i) => (
               <div
                 key={`${tech}-${i}`}
-                className="flex-shrink-0 px-5 py-2.5 glass-card text-sm font-mono text-gray-400 hover:text-circuit-400 hover:border-circuit-500/20 transition-all duration-300 cursor-default whitespace-nowrap"
+                className="flex-shrink-0 px-5 py-2.5 glass-card text-sm font-mono text-gray-100 hover:text-circuit-300 hover:border-circuit-500/30 transition-all duration-300 cursor-default whitespace-nowrap"
               >
                 {tech}
               </div>
@@ -49,7 +49,7 @@ export default function TechMarquee() {
             {[...doubled].reverse().map((tech, i) => (
               <div
                 key={`${tech}-rev-${i}`}
-                className="flex-shrink-0 px-5 py-2.5 glass-card text-sm font-mono text-gray-400 hover:text-circuit-400 hover:border-circuit-500/20 transition-all duration-300 cursor-default whitespace-nowrap"
+                className="flex-shrink-0 px-5 py-2.5 glass-card text-sm font-mono text-gray-100 hover:text-circuit-300 hover:border-circuit-500/30 transition-all duration-300 cursor-default whitespace-nowrap"
               >
                 {tech}
               </div>

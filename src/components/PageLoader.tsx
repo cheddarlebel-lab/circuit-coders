@@ -43,8 +43,8 @@ export default function PageLoader() {
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="relative mb-8"
           >
-            <div className="w-20 h-20 rounded-2xl bg-circuit-500/10 border border-circuit-500/30 flex items-center justify-center">
-              <Zap className="w-10 h-10 text-circuit-400" />
+            <div className="w-20 h-20 rounded-2xl bg-circuit-500/25 border border-circuit-400/70 flex items-center justify-center shadow-[0_0_40px_rgba(0,230,138,0.5)]">
+              <Zap className="w-10 h-10 text-circuit-300 drop-shadow-[0_0_10px_rgba(0,230,138,0.9)]" fill="currentColor" />
             </div>
             <motion.div
               animate={{ scale: [1, 1.5, 1], opacity: [0.3, 0, 0.3] }}
@@ -83,7 +83,7 @@ export default function PageLoader() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="mt-4 text-xs font-mono text-gray-600"
+            className="mt-4 text-xs font-mono text-gray-200 tracking-widest"
           >
             {progress}%
           </motion.div>

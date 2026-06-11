@@ -1,7 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import {
+  motion,
+  useMotionValue,
+  useTransform,
+  useSpring,
+  useScroll,
+  type Variants,
+} from "framer-motion";
 import { ArrowRight, Terminal, Cpu, Wifi, ChevronDown } from "lucide-react";
 import MagneticButton from "./MagneticButton";
 
@@ -45,13 +52,81 @@ function AnimatedCounter({ value, suffix, delay }: { value: number; suffix: stri
   );
 }
 
+const wordContainer: Variants = {
+  hidden: {},
+  show: (delay: number = 0) => ({
+    transition: { staggerChildren: 0.08, delayChildren: delay },
+  }),
+};
+
+const wordItem: Variants = {
+  hidden: { opacity: 0, y: "110%", rotateX: -40 },
+  show: {
+    opacity: 1,
+    y: "0%",
+    rotateX: 0,
+    transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] },
+  },
+};
+
+function WordReveal({
+  text,
+  className,
+  delay = 0,
+}: {
+  text: string;
+  className?: string;
+  delay?: number;
+}) {
+  const words = text.split(" ");
+  return (
+    <motion.span
+      className={className}
+      style={{ display: "inline-block", perspective: 1000 }}
+      variants={wordContainer}
+      initial="hidden"
+      animate="show"
+      custom={delay}
+    >
+      {words.map((word, i) => (
+        <span
+          key={i}
+          className="inline-block overflow-hidden align-bottom"
+          style={{ paddingBottom: "0.08em", marginBottom: "-0.08em" }}
+        >
+          <motion.span
+            variants={wordItem}
+            style={{ display: "inline-block", transformOrigin: "bottom" }}
+          >
+            {word}
+            {i < words.length - 1 && " "}
+          </motion.span>
+        </span>
+      ))}
+    </motion.span>
+  );
+}
+
 export default function Hero() {
+  const sectionRef = useRef<HTMLElement>(null);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const springX = useSpring(mouseX, { stiffness: 50, damping: 20 });
   const springY = useSpring(mouseY, { stiffness: 50, damping: 20 });
   const rotateX = useTransform(springY, [-300, 300], [5, -5]);
   const rotateY = useTransform(springX, [-300, 300], [-5, 5]);
+
+  // Scroll-linked parallax across the hero section
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+  const terminalY = useTransform(scrollYProgress, [0, 1], [0, 140]);
+  const terminalOpacity = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
+  const copyY = useTransform(scrollYProgress, [0, 1], [0, 80]);
+  const glowY = useTransform(scrollYProgress, [0, 1], [0, 260]);
+  const glowOpacity = useTransform(scrollYProgress, [0, 1], [0.35, 0]);
+  const scrollCueOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
 
   const handleMouse = (e: React.MouseEvent) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -61,22 +136,40 @@ export default function Hero() {
 
   return (
     <section
+      ref={sectionRef}
       className="relative min-h-screen flex items-center justify-center px-4 pt-24 pb-16 overflow-hidden"
       onMouseMove={handleMouse}
     >
-      {/* Hero glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-radial-glow opacity-30 pointer-events-none" />
+      {/* Hero glow — parallaxed */}
+      <motion.div
+        style={{ y: glowY, opacity: glowOpacity }}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-radial-glow pointer-events-none"
+      />
+
+      {/* Ambient floating orbs */}
+      <motion.div
+        aria-hidden
+        className="absolute left-[10%] top-[20%] w-64 h-64 rounded-full bg-circuit-500/10 blur-[80px] pointer-events-none"
+        animate={{ x: [0, 40, 0], y: [0, -30, 0] }}
+        transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        aria-hidden
+        className="absolute right-[8%] bottom-[15%] w-80 h-80 rounded-full bg-cyan-500/[0.06] blur-[90px] pointer-events-none"
+        animate={{ x: [0, -30, 0], y: [0, 25, 0] }}
+        transition={{ duration: 18, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+      />
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left — Copy */}
-          <div className="relative z-10">
+          <motion.div style={{ y: copyY }} className="relative z-10">
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20, scale: 0.9 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-2 glass-card text-xs font-mono text-circuit-400 mb-8"
+              className="inline-flex items-center gap-2 px-4 py-2 glass-card text-xs font-mono text-circuit-300 mb-8"
             >
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-circuit-400 opacity-75" />
@@ -85,89 +178,152 @@ export default function Hero() {
               HARDWARE + SOFTWARE ENGINEERING
             </motion.div>
 
-            {/* Headline */}
-            <motion.h1
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[0.92] tracking-tight mb-8"
-            >
-              <span className="text-gradient-subtle">We build</span>
-              <br />
-              <span className="text-gradient">what others</span>
-              <br />
-              <span className="text-gradient-subtle">can&apos;t</span>
-              {" "}
-              <span className="text-gray-600">imagine.</span>
-            </motion.h1>
+            {/* Headline — word-by-word reveal */}
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[0.92] tracking-tight mb-8">
+              <WordReveal
+                text="We build"
+                className="text-gradient-bright block"
+                delay={0.3}
+              />
+              <WordReveal
+                text="what others"
+                className="text-gradient block"
+                delay={0.55}
+              />
+              <span className="block">
+                <WordReveal
+                  text="can't"
+                  className="text-gradient-bright"
+                  delay={0.8}
+                />
+                {" "}
+                <WordReveal
+                  text="imagine."
+                  className="text-gray-400 italic font-light"
+                  delay={0.95}
+                />
+              </span>
+            </h1>
 
             {/* Subtitle */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.6 }}
-              className="text-lg sm:text-xl text-gray-400 max-w-lg mb-10 leading-relaxed"
+              transition={{ delay: 1.2, duration: 0.7 }}
+              className="text-lg sm:text-xl text-gray-200 max-w-lg mb-10 leading-relaxed"
             >
-              From custom PCBs to business websites and full-stack platforms — we
-              design, build, and ship end-to-end solutions. A small team that
-              moves at startup speed with enterprise quality.
+              Custom business websites from <span className="text-circuit-300 font-semibold">$499 flat</span>,
+              scaling to <span className="text-circuit-300 font-semibold">$2,500 full-stack builds</span> in 10-14 days.
+              Plus hardware, PCBs, and IoT platforms when you need the whole
+              stack. One team. Startup speed. Enterprise quality.
             </motion.p>
 
             {/* CTAs */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.6 }}
+              transition={{ delay: 1.4, duration: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
               <MagneticButton
-                href="#portfolio"
+                href="#website-demos"
                 className="group relative flex items-center justify-center gap-2 px-8 py-4 bg-circuit-500 text-carbon-500 font-semibold rounded-xl overflow-hidden transition-all duration-300"
                 strength={0.35}
               >
                 <span className="relative z-10 flex items-center gap-2">
-                  See Our Work
+                  See Live Demos
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-circuit-400 to-circuit-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute inset-0 shadow-[0_0_40px_rgba(0,230,138,0.4)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                {/* Shimmer sweep */}
+                <motion.div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    background:
+                      "linear-gradient(110deg, transparent 30%, rgba(255,255,255,0.35) 50%, transparent 70%)",
+                  }}
+                  initial={{ x: "-120%" }}
+                  animate={{ x: "120%" }}
+                  transition={{ duration: 2.4, repeat: Infinity, repeatDelay: 3, ease: "easeInOut" }}
+                />
               </MagneticButton>
               <MagneticButton
                 href="#mockup"
-                className="group flex items-center justify-center gap-2 px-8 py-4 glass-card text-gray-300 font-medium hover:text-white hover:border-circuit-500/20 transition-all duration-300"
+                className="group flex items-center justify-center gap-2 px-8 py-4 glass-card text-gray-100 font-medium hover:text-white hover:border-circuit-500/30 transition-all duration-300"
                 strength={0.35}
               >
                 <span className="w-2 h-2 rounded-full bg-circuit-500/50 group-hover:bg-circuit-500 transition-colors" />
-                Try Mockup Studio
+                Hardware Mockup Studio
               </MagneticButton>
             </motion.div>
 
             {/* Stats */}
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1, duration: 0.8 }}
+              initial="hidden"
+              animate="show"
+              variants={{
+                hidden: {},
+                show: { transition: { staggerChildren: 0.12, delayChildren: 1.6 } },
+              }}
               className="flex gap-10 sm:gap-14 mt-16"
             >
               {stats.map((stat, i) => (
-                <div key={stat.label} className="relative">
-                  <AnimatedCounter value={stat.value} suffix={stat.suffix} delay={1.2 + i * 0.2} />
-                  <div className="text-xs text-gray-500 mt-1 font-medium">{stat.label}</div>
-                </div>
+                <motion.div
+                  key={stat.label}
+                  variants={{
+                    hidden: { opacity: 0, y: 20, filter: "blur(6px)" },
+                    show: {
+                      opacity: 1,
+                      y: 0,
+                      filter: "blur(0px)",
+                      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+                    },
+                  }}
+                  className="relative group"
+                >
+                  <AnimatedCounter value={stat.value} suffix={stat.suffix} delay={1.8 + i * 0.2} />
+                  <div className="text-xs text-gray-300 mt-1.5 font-medium tracking-wide uppercase">{stat.label}</div>
+                  {/* Accent underline on hover */}
+                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-circuit-500 to-transparent group-hover:w-full transition-all duration-500" />
+                </motion.div>
               ))}
             </motion.div>
-          </div>
+          </motion.div>
 
-          {/* Right — 3D Terminal mockup */}
+          {/* Right — 3D Terminal mockup — scroll-parallaxed */}
           <motion.div
             initial={{ opacity: 0, x: 80, rotateY: -10 }}
             animate={{ opacity: 1, x: 0, rotateY: 0 }}
             transition={{ delay: 0.6, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            style={{ rotateX, rotateY, transformPerspective: 1200 }}
+            style={{
+              rotateX,
+              rotateY,
+              transformPerspective: 1200,
+              y: terminalY,
+              opacity: terminalOpacity,
+            }}
             className="relative hidden lg:block"
           >
             {/* Glow behind terminal */}
             <div className="absolute -inset-4 bg-circuit-500/5 rounded-3xl blur-2xl" />
+
+            {/* Animated conic gradient ring */}
+            <motion.div
+              aria-hidden
+              className="absolute -inset-[2px] rounded-3xl pointer-events-none opacity-40"
+              style={{
+                background:
+                  "conic-gradient(from var(--angle, 0deg), rgba(0,230,138,0.35), transparent 25%, transparent 75%, rgba(103,232,255,0.35))",
+                WebkitMask:
+                  "linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
+                WebkitMaskComposite: "xor",
+                maskComposite: "exclude",
+                padding: "1px",
+              }}
+              animate={{ rotate: 360 }}
+              transition={{ duration: 16, repeat: Infinity, ease: "linear" }}
+            />
 
             <div className="relative glass-card p-1 glow-border-intense">
               {/* Terminal header */}
@@ -177,7 +333,7 @@ export default function Hero() {
                   <div className="w-3 h-3 rounded-full bg-yellow-500/70 hover:bg-yellow-400 transition-colors cursor-pointer" />
                   <div className="w-3 h-3 rounded-full bg-green-500/70 hover:bg-green-400 transition-colors cursor-pointer" />
                 </div>
-                <span className="text-xs font-mono text-gray-500 ml-2 flex items-center gap-2">
+                <span className="text-xs font-mono text-gray-300 ml-2 flex items-center gap-2">
                   <Terminal className="w-3 h-3" />
                   ~/circuit-coders
                 </span>
@@ -187,7 +343,7 @@ export default function Hero() {
               <div className="p-6 font-mono text-sm space-y-3 min-h-[320px]">
                 <TerminalLine delay={0.8} prompt="$" command='cc-cli design "IoT sensor array --mesh"' />
                 <TerminalLine delay={1.6} prompt="" command="" />
-                <TerminalLine delay={1.8} prompt="" command="Analyzing requirements..." color="text-gray-500" />
+                <TerminalLine delay={1.8} prompt="" command="Analyzing requirements..." color="text-gray-300" />
                 <TerminalLine delay={2.4} prompt="" command="" />
 
                 <motion.div
@@ -209,8 +365,8 @@ export default function Hero() {
                     <span>Zephyr RTOS + MQTT telemetry</span>
                   </div>
                   <div className="mt-2 pt-2 border-t border-white/[0.06] flex items-center justify-between">
-                    <span className="text-[10px] text-gray-600">BOM: $68.00 per node</span>
-                    <span className="text-[10px] text-circuit-500">4-layer custom PCB</span>
+                    <span className="text-[10px] text-gray-300">BOM: $68.00 per node</span>
+                    <span className="text-[10px] text-circuit-300">4-layer custom PCB</span>
                   </div>
                 </motion.div>
 
@@ -230,11 +386,11 @@ export default function Hero() {
             </motion.div>
 
             <motion.div
-              className="absolute -bottom-4 -left-4 px-3 py-2 rounded-xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-sm"
+              className="absolute -bottom-4 -left-4 px-3 py-2 rounded-xl bg-white/[0.06] border border-white/[0.12] backdrop-blur-sm"
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
             >
-              <div className="text-[10px] font-mono text-gray-500">Build time</div>
+              <div className="text-[10px] font-mono text-gray-300 uppercase tracking-wider">Build time</div>
               <div className="text-sm font-bold text-white font-mono">2.4s</div>
             </motion.div>
           </motion.div>
@@ -246,6 +402,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1 }}
+        style={{ opacity: scrollCueOpacity }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
         <motion.div
@@ -253,8 +410,8 @@ export default function Hero() {
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           className="flex flex-col items-center gap-2"
         >
-          <span className="text-[10px] font-mono text-gray-600 tracking-widest uppercase">Scroll</span>
-          <ChevronDown className="w-4 h-4 text-gray-600" />
+          <span className="text-[10px] font-mono text-gray-300 tracking-widest uppercase">Scroll</span>
+          <ChevronDown className="w-4 h-4 text-gray-300" />
         </motion.div>
       </motion.div>
     </section>

@@ -68,17 +68,17 @@ function CarouselCard({
             </div>
             <div className="min-w-0">
               <h3 className={`text-lg font-bold truncate transition-colors duration-300 ${
-                isCenter ? "text-white" : "text-gray-500"
+                isCenter ? "text-white" : "text-gray-300"
               }`}>
                 {project.title}
               </h3>
-              <p className="text-xs font-mono text-gray-500 truncate">{project.subtitle}</p>
+              <p className="text-xs font-mono text-gray-300 truncate">{project.subtitle}</p>
             </div>
           </div>
 
           {/* Description */}
           <p className={`text-sm leading-relaxed mb-5 transition-colors duration-300 line-clamp-3 ${
-            isCenter ? "text-gray-300" : "text-gray-600"
+            isCenter ? "text-gray-100" : "text-gray-400"
           }`}>
             {project.description}
           </p>
@@ -95,11 +95,11 @@ function CarouselCard({
                 }`}
               >
                 <div className={`text-base font-bold font-mono transition-colors duration-300 ${
-                  isCenter ? "text-white" : "text-gray-600"
+                  isCenter ? "text-white" : "text-gray-300"
                 }`}>
                   {metric.value}
                 </div>
-                <div className="text-[10px] text-gray-500 uppercase tracking-wider">{metric.label}</div>
+                <div className="text-[10px] text-gray-300 uppercase tracking-wider font-medium">{metric.label}</div>
               </div>
             ))}
           </div>
@@ -111,8 +111,8 @@ function CarouselCard({
                 key={t}
                 className={`px-2 py-0.5 text-[10px] font-mono rounded-md border transition-colors duration-300 ${
                   isCenter
-                    ? "bg-white/[0.04] text-gray-400 border-white/[0.08]"
-                    : "bg-white/[0.02] text-gray-600 border-white/[0.03]"
+                    ? "bg-white/[0.06] text-gray-100 border-white/[0.12]"
+                    : "bg-white/[0.02] text-gray-400 border-white/[0.05]"
                 }`}
               >
                 {t}
@@ -132,8 +132,8 @@ function CarouselCard({
               >
                 <div className="pt-5 mt-5 border-t border-white/[0.06] space-y-2">
                   {project.features.map((feature) => (
-                    <div key={feature} className="flex items-center gap-2 text-xs text-gray-400">
-                      <ChevronRight className="w-3 h-3 text-circuit-500 flex-shrink-0" />
+                    <div key={feature} className="flex items-center gap-2 text-xs text-gray-100">
+                      <ChevronRight className="w-3 h-3 text-circuit-300 flex-shrink-0" />
                       {feature}
                     </div>
                   ))}
@@ -236,14 +236,14 @@ export default function Portfolio() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <div className="inline-block px-4 py-1.5 glass-card text-xs font-mono text-circuit-400 mb-6">
+          <div className="inline-block px-4 py-1.5 glass-card text-xs font-mono text-circuit-300 tracking-widest mb-6">
             PORTFOLIO
           </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="text-gradient-subtle">Real Projects.</span>{" "}
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
+            <span className="text-gradient-bright">Real Projects.</span>{" "}
             <span className="text-gradient">Shipped.</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-200 max-w-2xl mx-auto text-lg leading-relaxed">
             Every project here was designed, built, and deployed by our two-person team.
             Full-stack, end-to-end, from database to deployment.
           </p>
@@ -313,7 +313,7 @@ export default function Portfolio() {
         </div>
 
         <div className="text-center mt-4">
-          <span className="text-xs font-mono text-gray-600">
+          <span className="text-xs font-mono text-gray-300 tracking-wider">
             {String(currentIndex + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
           </span>
         </div>
@@ -328,7 +328,7 @@ export default function Portfolio() {
         >
           <a
             href="#contact"
-            className="group inline-flex items-center gap-2 px-8 py-4 glass-card text-gray-300 hover:text-circuit-400 hover:border-circuit-500/20 transition-all duration-300"
+            className="group inline-flex items-center gap-2 px-8 py-4 glass-card text-gray-100 hover:text-circuit-300 hover:border-circuit-500/30 transition-all duration-300"
           >
             Have a project in mind? Let&apos;s talk
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
