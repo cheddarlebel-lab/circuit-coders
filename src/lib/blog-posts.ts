@@ -20,6 +20,109 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "pool-service-website-design-fallbrook",
+    title: "Pool Service Website Design in Fallbrook: Get Found, Get Booked",
+    description: "Pool service website built for Fallbrook and North County. $499 flat, 48-hour turnaround, ranks for 'pool service near me,' and turns clicks into booked routes.",
+    keywords: ["pool service website", "pool service website design Fallbrook", "pool cleaning website North County", "pool service SEO", "pool maintenance website Bonsall", "pool service marketing Vista", "local SEO pool company", "pool service website Oceanside"],
+    publishedAt: "2026-06-16",
+    updatedAt: "2026-06-16",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "POOL SERVICE · FALLBROOK · LOCAL SEO",
+    sections: [
+      {
+        heading: "Why Fallbrook Pool Guys Lose Jobs Online",
+        paragraphs: [
+          "You run a tight route through Fallbrook, Bonsall, and Pala. Pools out here run hot from May to October, and a homeowner with green water wants someone today — not next week. They pull out their phone, type 'pool service near me,' and call whoever shows up first.",
+          "Right now that's probably not you. Most pool techs in North County have a Facebook page, maybe a Yelp listing, and a number a buddy gave them. No website, or a free Wix page that hasn't loaded right since 2019. When a Bonsall homeowner with a $60,000 pebble-tec pool is deciding who to trust, a dead link kills the call.",
+          "The work is steady and the margins are good — $150 to $250 a month per residential account, more for filter cleans and acid washes. Losing even three accounts a season to the guy with a real website is real money walking out the door.",
+        ],
+      },
+      {
+        heading: "What a Pool Service Website Actually Needs",
+        paragraphs: [
+          "You don't need a 40-page brochure. You need a fast page that tells a homeowner you're real, you're local, and you'll show up. Most of the fluff agencies sell — sliders, stock photos of resort pools in Cancun, a mission statement — does nothing for a guy in Vista who wants his pump fixed.",
+          "Here's the short list that actually books jobs.",
+        ],
+        list: {
+          title: "The pages and features that earn their keep",
+          items: [
+            "Service area spelled out: Fallbrook, Bonsall, Pala, Rainbow, De Luz, north Vista — Google reads this and so do homeowners",
+            "Clear services with rough pricing: weekly service, one-time clean, filter clean, equipment repair, green-to-clean",
+            "A click-to-call button glued to the top on mobile — 80% of your traffic is on a phone in a backyard",
+            "Real photos of real pools you've cleaned, not stock images",
+            "A short quote form that texts you the address and pool type",
+            "Google reviews pulled in live so new visitors see you're trusted",
+          ],
+        },
+        callout: "If a homeowner can't call you in one tap from their phone, your website is costing you jobs, not earning them.",
+      },
+      {
+        heading: "What to Cut From Your Pool Website",
+        paragraphs: [
+          "The fastest way to slow down a pool site is to load it with junk a real customer never asked for. Agencies pad sites with this stuff because it pads the invoice, not because it books routes.",
+          "Cut these and your page loads faster, ranks better, and converts more.",
+        ],
+        list: {
+          title: "Delete these on sight",
+          items: [
+            "A chatbot — your customers want your cell number, not a pop-up robot asking how it can help",
+            "Auto-play video of a sparkling infinity pool that blows their mobile data and hides the call button",
+            "A 12-field 'request a consultation' form when a name, address, and phone will do",
+            "Stock photos of pools that look nothing like a North County backyard",
+            "Industry jargon — 'aquatic maintenance solutions' instead of 'weekly pool cleaning'",
+            "Pages that take 6 seconds to load because someone crammed in 4 MB of unoptimized images",
+          ],
+        },
+      },
+      {
+        heading: "Local SEO: How Fallbrook Homeowners Actually Find You",
+        paragraphs: [
+          "Ranking for pool service isn't magic — it's plumbing. Google wants to know where you work, what you do, and whether people trust you. Give it clean signals and you climb the map pack, the three listings that show up under the map for 'pool service Fallbrook.'",
+          "Start with your Google Business Profile. Set the category to 'Swimming pool cleaning service,' list every city in your service area, post a photo every couple weeks, and ask every happy customer for a review. Profiles with 25+ reviews and steady photos outrank dormant ones almost every time.",
+          "On the website, the pattern that wins is '[service] + [city]' — 'weekly pool service Bonsall,' 'green pool cleanup Pala,' 'filter cleaning Vista.' We build a page or section for each so Google has something to match. Add LocalBusiness schema.org markup and consistent name-address-phone citations across Yelp, Nextdoor, and Angi, and you give Google every reason to trust you over the guy with just a Facebook page.",
+        ],
+        callout: "The pool tech who shows up in the Fallbrook map pack books the panic calls. Everyone else gets the leftovers.",
+      },
+      {
+        heading: "What This Costs — and Why $499 Beats the Market",
+        paragraphs: [
+          "Most agencies quote a pool service website at $3,000 to $6,000, then tack on $100 to $200 a month for 'maintenance' that means almost nothing. The cheap end — a $20/mo template site you build yourself — eats your weekends and still loads slow.",
+          "Circuit Coders builds it flat: $499, 48-hour turnaround, custom Next.js on Vercel so it loads in under two seconds. One round of revisions included, and we send you a free mockup before you pay a dime. If you want us to keep it updated and handle hosting, it's $50 a month — optional, not a trap.",
+          "Want online booking or Stripe deposits for one-time cleans? That's a $200–$500 add-on, quoted up front, no surprises. Compare that to a $4,000 agency build and the math isn't close.",
+        ],
+        list: {
+          title: "What $499 gets a Fallbrook pool company",
+          items: [
+            "Custom-built site, not a template — loads in under 2 seconds",
+            "Service-area and '[service] + city' pages for North County",
+            "Google Business Profile setup and review-display integration",
+            "LocalBusiness schema and clean citations",
+            "Click-to-call and a text-me quote form",
+            "Free mockup before you pay, one round of revisions",
+          ],
+        },
+      },
+      {
+        heading: "See It Before You Pay",
+        paragraphs: [
+          "Here's the deal: we'll audit your current online presence — your Google profile, your Facebook page, whatever you've got — and build you a free mockup of a real pool service website. No invoice, no commitment. You look at it, and if it's not better than what you have, you walk.",
+          "We're local. We're in Fallbrook, we know the difference between a Bonsall estate pool and a Vista tract-home spa, and we'll write your site in plain English a homeowner trusts. No agency runaround, no offshore template factory.",
+          "If you clean pools across North County and you're tired of losing the panic calls to the other guy, let's fix it this week.",
+        ],
+        callout: "Free mockup, $499 flat, live in 48 hours. Send us your service area and we'll show you what your pool site should look like — before you spend a cent.",
+      },
+    ],
+    faqs: [
+      { q: "How long until my pool service website ranks on Google?", a: "The site is live in 48 hours, but ranking takes time — expect to start showing up for 'pool service Fallbrook' in 60–90 days with a dialed-in Google Business Profile and steady reviews. The map pack moves faster than regular search results." },
+      { q: "Do I really need a website if I already have a Facebook page?", a: "Yes — most homeowners searching 'pool service near me' never see your Facebook page, and Facebook doesn't rank in Google's map pack. A $499 website gives Google something real to show and turns clicks into booked routes." },
+      { q: "Can homeowners book a one-time cleaning online?", a: "Yes, we can add online booking or Stripe deposits as a $200–$500 add-on, quoted up front. Most pool techs start with a simple text-me quote form, which is free with the $499 build." },
+      { q: "What does a pool service website cost in North County?", a: "Agencies charge $3,000–$6,000 plus monthly fees. Circuit Coders builds it flat for $499 with a 48-hour turnaround, and hosting plus updates are optional at $50/mo." },
+      { q: "Will the site work on phones?", a: "That's the whole point — roughly 80% of pool service searches happen on a phone in someone's backyard, so we build mobile-first with a one-tap call button pinned to the top of every page." },
+    ],
+  },
+  {
     slug: "tree-service-website-design-fallbrook",
     title: "Tree Service & Land Clearing Website Design in Fallbrook",
     description: "Most Fallbrook tree service websites lose emergency calls to Temecula competitors. Here's what a crew site actually needs — built for $499 flat in 48 hours.",
