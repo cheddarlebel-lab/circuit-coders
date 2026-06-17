@@ -20,6 +20,112 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "handyman-website-design-fallbrook",
+    title: "Handyman Website Design in Fallbrook: Stop Losing Jobs to Voicemail",
+    description: "A $499 handyman website built for Fallbrook and North County. Show up on Google, take booking requests, and quit losing $200 jobs to guys with a real site.",
+    keywords: ["handyman website design", "handyman website Fallbrook", "handyman SEO North County", "handyman marketing San Diego", "Fallbrook handyman", "Oceanside handyman website", "Vista handyman website", "local SEO handyman", "Google Business Profile handyman"],
+    publishedAt: "2026-06-17",
+    updatedAt: "2026-06-17",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "HANDYMAN · FALLBROOK · LOCAL SEO",
+    sections: [
+      {
+        heading: "The Jobs You Never Hear About",
+        paragraphs: [
+          "You're good with your hands. You can hang a door, patch drywall, swap a water heater, and fix the thing the last guy broke. But right now a homeowner on Mission Road in Fallbrook just typed \"handyman near me\" into their phone, scrolled past you, and called someone with a website. You never knew that job existed.",
+          "That's the problem with running on word-of-mouth and a Facebook page. Word-of-mouth is great until the referrals slow down in winter, and a Facebook page doesn't show up when someone in Bonsall is searching at 9pm with a leaking faucet. The jobs are out there — $150 to fix a fence gate, $400 to mount TVs and assemble furniture, $1,200 to redo a deck railing. They're just going to the handyman who's findable.",
+          "A website isn't about looking fancy. It's about being the guy who answers when nobody else does — with a page that loads fast, lists what you do, and lets someone in Vista or San Marcos send you a job request before they forget your name.",
+        ],
+      },
+      {
+        heading: "What Your Handyman Site Actually Needs",
+        paragraphs: [
+          "Most handyman websites fail because they try to be a brochure. A homeowner doesn't care about your \"journey.\" They care about three things: can you do my specific job, do you cover my area, and how do I reach you right now. Build for that and skip the rest.",
+          "Here's the short list that turns a visitor into a booked job. Everything else is decoration.",
+        ],
+        list: {
+          title: "The pages and parts that matter",
+          items: [
+            "A clear services list — drywall, fences, TV mounting, faucet swaps, furniture assembly, honey-do lists",
+            "Your service area spelled out: Fallbrook, Bonsall, Oceanside, Vista, San Marcos, Pala",
+            "A tap-to-call button stuck to the screen on mobile (most of your traffic is on a phone)",
+            "A short request form: name, address, what's broken, photo upload",
+            "Real photos of your actual work — not stock images of a stranger's toolbelt",
+            "Reviews pulled from Google, shown right on the page",
+            "Pricing signals — \"most jobs $150–$500\" beats making people guess",
+          ],
+        },
+      },
+      {
+        heading: "What to Cut",
+        paragraphs: [
+          "The fastest way to ruin a handyman site is to overbuild it. Every extra feature is one more thing that slows the page down, breaks on a phone, or distracts the one homeowner who was ready to call you.",
+          "Cut these. They cost you money and add nothing.",
+        ],
+        list: {
+          title: "Delete these on sight",
+          items: [
+            "A chatbot — nobody with a broken garbage disposal wants to argue with a bot, they want your number",
+            "An online store selling t-shirts or \"merch\" you'll never ship",
+            "Auto-playing video that eats 15MB and makes the page crawl",
+            "A 600-word \"About Us\" page about your passion for craftsmanship",
+            "Stock photos of suited men shaking hands",
+            "A blog you'll update once and abandon — let us run that for you instead",
+            "Five different fonts and a color scheme that fights itself",
+          ],
+        },
+        callout: "A slow, busy site doesn't make you look established. It makes the homeowner hit back and call the next guy.",
+      },
+      {
+        heading: "Getting Found: Local SEO for Handymen",
+        paragraphs: [
+          "A pretty website nobody finds is a business card in a drawer. The whole game in Fallbrook is showing up when someone nearby searches — and that's local SEO, not magic. The biggest lever isn't even your website: it's your Google Business Profile.",
+          "Claim it, fill it out completely, pick the right categories (Handyman, Drywall Contractor, Fence Contractor), set your service area to the cities you cover, and post photos of recent jobs. Then get reviews — ask every happy customer the same day you finish. Ten honest Google reviews will out-rank a guy with two, every time.",
+          "On the website itself, the pattern that wins is \"[service] + [city].\" Build pages and headings around the exact things people type: \"drywall repair Fallbrook,\" \"fence repair Bonsall,\" \"TV mounting Oceanside.\" We add schema.org LocalBusiness markup so Google reads your address, hours, service area, and reviews directly — and we make sure your name, address, and phone match exactly across Google, Yelp, and Nextdoor. Mismatched info is the quiet reason a lot of local sites never rank.",
+        ],
+        list: {
+          title: "Your local SEO checklist",
+          items: [
+            "Claim and fully complete your Google Business Profile",
+            "Set service area to Fallbrook, Bonsall, Oceanside, Vista, San Marcos, Pala",
+            "Pick accurate categories — Handyman plus your specialties",
+            "Build '[service] + [city]' headings on your site",
+            "Add schema.org LocalBusiness markup (we do this)",
+            "Keep name/address/phone identical everywhere online",
+            "Ask for a Google review the day you finish each job",
+          ],
+        },
+      },
+      {
+        heading: "What This Costs vs. What Everyone Else Charges",
+        paragraphs: [
+          "Walk into a typical San Diego agency and a handyman website runs $2,500 to $6,000, plus a monthly retainer, plus a three-week timeline and a sales rep who calls you \"the client.\" For a one-truck operation, that math doesn't work. The DIY route — Wix or Squarespace — is cheaper but eats your weekends and still loads slow and ranks poorly.",
+          "Circuit Coders builds it for $499 flat. Custom-coded on Next.js and Vercel, so it's fast and it actually ranks. Forty-eight-hour turnaround, one round of revisions, and we send you a free mockup before you pay a dime. You're in Fallbrook, we're in Fallbrook — no call center, no contract you need a lawyer to read.",
+          "Want it to do more? Online booking, a Stripe deposit, or a job-request system with photo uploads runs $200–$500 as an add-on. Hosting and updates are optional at $50/month if you'd rather never touch it again. That's it. No surprise invoices.",
+        ],
+        callout: "$499 flat. A full custom site for less than two TV-mounting jobs.",
+      },
+      {
+        heading: "See It Before You Pay",
+        paragraphs: [
+          "Here's how we work: tell us your trade and your towns, and within 48 hours we send you a free mockup of your actual handyman site — your services, your area, your name. No deposit, no pressure. If you don't like it, you walk and it cost you nothing.",
+          "If you do like it, we finish it, hook up your Google Business Profile, add the '[service] + [city]' pages, and get you findable. Most handymen in North County are one good site away from a steadier phone — especially in the slow months when referrals dry up.",
+          "We're local, we're fast, and we only build for small operations like yours. Let's get you off voicemail and onto page one.",
+        ],
+        callout: "Free mockup, 48-hour turnaround, $499 flat. Text us your trade and your towns and we'll show you what your site could look like — before you owe us anything.",
+      },
+    ],
+    faqs: [
+      { q: "How much should a handyman website cost?", a: "Agencies in San Diego charge $2,500–$6,000 plus monthly fees. Circuit Coders builds a custom handyman site for $499 flat, with a free mockup first and 48-hour turnaround." },
+      { q: "How long until my handyman site shows up on Google?", a: "Indexing takes a few days, but real local ranking for terms like \"handyman Fallbrook\" usually takes 60–90 days of a complete Google Business Profile plus steady reviews. The website speeds it up; the profile and reviews do the heavy lifting." },
+      { q: "Do I need a website if I already have a Google Business Profile?", a: "Yes. The profile gets you on the map, but a fast site with '[service] + [city]' pages and schema markup is what makes you rank higher and convert visitors. The two work together — most of our handyman clients see both set up within 48 hours." },
+      { q: "What's the most important thing on a handyman website?", a: "A tap-to-call button and a short job-request form on mobile, since most homeowners search from a phone. Everything else supports those two — they're what turn a $200 job from a maybe into a booking." },
+      { q: "Can you add online booking or deposits to my site?", a: "Yes. Booking systems, Stripe deposits, and photo-upload request forms run $200–$500 as an add-on on top of the $499 base build." },
+    ],
+  },
+  {
     slug: "pool-service-website-design-fallbrook",
     title: "Pool Service Website Design in Fallbrook: Get Found, Get Booked",
     description: "Pool service website built for Fallbrook and North County. $499 flat, 48-hour turnaround, ranks for 'pool service near me,' and turns clicks into booked routes.",
