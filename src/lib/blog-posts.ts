@@ -20,6 +20,108 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "taco-shop-website-design-fallbrook",
+    title: "Taco Shop & Family Restaurant Website Design in Fallbrook",
+    description: "Your taco shop runs on walk-ins and word of mouth. Here's how a $499 Fallbrook restaurant website pulls in hungry locals searching at 6pm — menu, hours, and Google Maps done right.",
+    keywords: ["taco shop website design", "restaurant website design Fallbrook", "Mexican restaurant website", "taqueria website Fallbrook", "local SEO restaurant", "Fallbrook restaurant marketing", "Bonsall taco shop", "Oceanside restaurant website"],
+    publishedAt: "2026-06-18",
+    updatedAt: "2026-06-18",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "FALLBROOK · TAQUERIA · RESTAURANT WEB",
+    sections: [
+      {
+        heading: "It's 6:14pm and someone three blocks away is hungry",
+        paragraphs: [
+          "A family just got off the 76, kids in the back seat, nobody wants to cook. Dad pulls out his phone and types \"taco shop near me.\" If your taqueria doesn't show up — or it does, but the link goes to a dead Facebook page with last year's hours — they're eating somewhere else tonight. That's not a hypothetical. That's most nights in Fallbrook.",
+          "Taco shops here run on walk-ins, regulars, and word of mouth. That works until a new place opens on Mission, or until Google decides your faded Yelp listing is the best it can offer. The food is the easy part. Being findable at the exact minute someone's hungry is the part most owners ignore.",
+          "You don't need a fancy website. You need a fast one that loads the menu, shows your hours, gives a phone number, and tells Google exactly where you are and what you sell. Most Fallbrook restaurant sites fail at all four.",
+        ],
+      },
+      {
+        heading: "What a taco shop website actually needs",
+        paragraphs: [
+          "Forget the slideshow of stock photos. A hungry person scanning their phone on Main Ave wants four things in under five seconds, and your homepage should hand them over without a single tap.",
+          "Build for the person standing in line deciding, or sitting in a truck deciding whether to come in. Everything else is decoration.",
+        ],
+        list: {
+          title: "The non-negotiables",
+          items: [
+            "Menu on the page itself — real HTML text, not a blurry photo of a printed menu or a slow PDF",
+            "Hours that are correct, including the day you close early, right at the top",
+            "A tap-to-call phone number and a tap-to-open Google Maps address",
+            "Photos of your actual food, shot on a phone in good light — not stock tacos",
+            "Page that loads in under 2 seconds on cell signal in the parking lot",
+            "Order/reservation link if you use one (Toast, Clover, DoorDash) — one tap, no maze",
+          ],
+        },
+      },
+      {
+        heading: "What to cut before it costs you customers",
+        paragraphs: [
+          "Half the restaurant websites I audit in North County are slow because they're carrying weight nobody asked for. Every one of these things makes the page heavier, slower, and more annoying on a phone — which is where 80% of your traffic is.",
+          "If a feature doesn't help a hungry stranger order food faster, it's working against you. Cut it.",
+        ],
+        list: {
+          title: "Delete these today",
+          items: [
+            "A chatbot. For a taco shop, a chatbot is a tax on a customer who just wants the salsa-bar hours.",
+            "Auto-playing background video of sizzling meat — it eats 8–15 MB and stalls on weak signal",
+            "A PDF menu — Google can't read it well and phones download it slowly",
+            "An email signup popup that blocks the menu on the first visit",
+            "\"Online ordering\" that's actually a broken link to a service you canceled",
+            "Flash-era animations and a splash screen before the real page loads",
+          ],
+        },
+        callout: "A 12 MB homepage that takes 6 seconds to load loses the customer before the carne asada photo even appears. Speed isn't vanity — it's revenue.",
+      },
+      {
+        heading: "Local SEO: how Fallbrook finds you on Google",
+        paragraphs: [
+          "Most of your customers will never type your restaurant's name. They type \"taco shop Fallbrook,\" \"breakfast burrito Bonsall,\" or \"Mexican food near me.\" Winning those searches is local SEO, and it's mostly free work most owners never do.",
+          "Your Google Business Profile is more important than your website on day one. Claim it, verify it, set the exact hours, the category (\"Mexican restaurant\" or \"Taco restaurant,\" not just \"Restaurant\"), add 15+ real photos, and respond to every review. That profile is what shows up in Google Maps when someone searches at dinnertime.",
+          "On the website itself, the page should spell out \"[service] + [city]\" naturally — taco shop in Fallbrook, breakfast burritos in Bonsall, catering for Oceanside and Vista. We add Restaurant and Menu schema.org markup so Google can read your menu, price range, and hours directly and show them in the results. Same NAP — name, address, phone — listed identically on the site, Google, Yelp, and Apple Maps so the citations all agree.",
+        ],
+        list: {
+          title: "The local-SEO checklist",
+          items: [
+            "Claim and fully fill out your Google Business Profile (free, do it this week)",
+            "Pick the most specific category — \"Taco restaurant\" beats \"Restaurant\"",
+            "Restaurant + Menu schema.org markup on the website so Google reads your menu",
+            "Identical name/address/phone everywhere online — no \"Ste B\" on one, nothing on another",
+            "Real photos weekly on Google — it rewards active profiles",
+            "Ask three regulars a week for a Google review; reply to all of them",
+          ],
+        },
+      },
+      {
+        heading: "What this should cost in North County",
+        paragraphs: [
+          "Here's where restaurant owners get burned. A San Diego agency quotes $4,000–$8,000 for a restaurant site, then charges $150/month to change your hours. A Wix template guy charges $1,500 and disappears. Meanwhile your nephew builds something on a free platform that loads in nine seconds and can't be found on Google.",
+          "Circuit Coders builds it for $499 flat. Custom site on Next.js and Vercel — same stack the fast tech companies use — with a 48-hour turnaround and one round of revisions. You see a free mockup before you pay a dollar. Menu changes and hosting are an optional $50/month, or you learn to edit it yourself for free.",
+          "If you take online orders or reservations, hooking up Toast, Clover, or an OpenTable-style booking flow runs $200–$500 as an add-on, quoted up front. No surprise invoices. No $150 to fix a typo in your taco prices.",
+        ],
+        callout: "$499 flat, 48 hours, free mockup first. A restaurant site shouldn't cost more than a new flat-top griddle.",
+      },
+      {
+        heading: "From dead Facebook page to dinner rush",
+        paragraphs: [
+          "The taco shops winning in Fallbrook, Bonsall, and Oceanside aren't the ones with the slickest design. They're the ones a stranger can find, read, and act on in fifteen seconds flat — menu visible, hours right, one tap to call or drive over.",
+          "If your current site is a slow PDF menu, an abandoned Facebook page, or nothing at all, that's leads walking past your door every single night. The fix is a weekend's worth of work on our end and zero risk on yours.",
+          "Send us your menu and your address. We'll build you a free mockup — real homepage, your food, your hours, found on Google — before you spend anything. If it pulls more people through the door, it's $499 and it's live in 48 hours. If you hate it, you owe nothing.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "How much does a restaurant website cost in Fallbrook?", a: "Agencies in San Diego quote $4,000–$8,000 plus monthly fees. Circuit Coders builds a custom restaurant site for $499 flat with a 48-hour turnaround and a free mockup first." },
+      { q: "How do I get my taco shop to show up on Google Maps?", a: "Claim and fully complete your Google Business Profile, pick the specific \"Taco restaurant\" category, add real photos, and keep your name/address/phone identical everywhere online. Most shops see Maps movement within 30–60 days of doing it right." },
+      { q: "Do I need online ordering on my restaurant website?", a: "Only if you'll actually use it. Hooking up Toast, Clover, or a reservation system runs $200–$500 as an add-on — but a clean menu, correct hours, and a tap-to-call number drive most of the value for a small taco shop." },
+      { q: "How long does it take to build a restaurant website?", a: "Circuit Coders delivers in 48 hours after you approve the free mockup, including one round of revisions. Local SEO results from Google Business Profile work typically show up over the following 60–90 days." },
+      { q: "Why is my current restaurant website so slow on phones?", a: "Usually auto-playing video, a heavy PDF menu, and stock photos pushing the page to 8–15 MB. A proper site loads in under 2 seconds, which matters because 80% of \"food near me\" searches happen on a phone." },
+    ],
+  },
+  {
     slug: "handyman-website-design-fallbrook",
     title: "Handyman Website Design in Fallbrook: Stop Losing Jobs to Voicemail",
     description: "A $499 handyman website built for Fallbrook and North County. Show up on Google, take booking requests, and quit losing $200 jobs to guys with a real site.",
