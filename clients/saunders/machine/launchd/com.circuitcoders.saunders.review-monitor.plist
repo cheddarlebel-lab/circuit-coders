@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- review-monitor: 3x/day (8am, 1pm, 6pm) keeps the 24h SLA comfortably.
+     Install: cp to ~/Library/LaunchAgents/ then launchctl load -w <path>.
+     Activate only AFTER access is configured in config/stores.json. -->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.circuitcoders.saunders.review-monitor</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>/Users/leolebel/clawd/circuit-coders/clients/saunders/machine/review_monitor.py</string>
+  </array>
+  <key>WorkingDirectory</key><string>/Users/leolebel/clawd/circuit-coders/clients/saunders/machine</string>
+  <key>StartCalendarInterval</key>
+  <array>
+    <dict><key>Hour</key><integer>8</integer><key>Minute</key><integer>0</integer></dict>
+    <dict><key>Hour</key><integer>13</integer><key>Minute</key><integer>0</integer></dict>
+    <dict><key>Hour</key><integer>18</integer><key>Minute</key><integer>0</integer></dict>
+  </array>
+  <key>StandardOutPath</key><string>/Users/leolebel/clawd/circuit-coders/clients/saunders/machine/data/review-monitor.log</string>
+  <key>StandardErrorPath</key><string>/Users/leolebel/clawd/circuit-coders/clients/saunders/machine/data/review-monitor.err</string>
+</dict>
+</plist>
