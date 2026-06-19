@@ -20,6 +20,114 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "car-wash-website-design-oceanside",
+    title: "Car Wash Website Design in Oceanside: What Actually Drives Cars Into Your Bays",
+    description: "A car wash website that ranks in Oceanside and books memberships. $499 flat, 48-hour turnaround, no agency fluff. What to build, what to cut, and what it really costs.",
+    keywords: ["car wash website design", "Oceanside car wash website", "car wash web design Oceanside", "car wash SEO Oceanside", "car wash membership website", "North County car wash marketing", "Carlsbad car wash website", "Vista car wash website"],
+    publishedAt: "2026-06-19",
+    updatedAt: "2026-06-19",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "CAR WASH · OCEANSIDE · LOCAL SEO",
+    sections: [
+      {
+        heading: "Your Oceanside Car Wash Has a Website Problem (and It's Costing You Memberships)",
+        paragraphs: [
+          "Drive down Oceanside Boulevard or El Camino Real and you'll pass four car washes in ten minutes. Three of them have a Facebook page from 2019 and a phone number. The fourth has a real website with online membership signup — guess which one is pulling the recurring revenue.",
+          "Here's the thing about a car wash in 2026: the money isn't in the one-off $12 wash. It's in the $30/month unlimited plan that auto-renews whether it rains or not. And nobody signs up for a membership from a parking lot sign. They sign up on their phone, at night, after they Googled \"car wash near me Oceanside\" and your site loaded in under two seconds.",
+          "If your current site takes five seconds to load, doesn't show your hours, or buries your membership pricing three taps deep, you're handing those customers to the wash down the street. That's not a marketing problem. That's a website problem, and it's fixable this week.",
+        ],
+      },
+      {
+        heading: "What a Car Wash Website Actually Needs",
+        paragraphs: [
+          "Forget the 30-page agency build. A car wash has maybe four things a customer wants to know, and your site should answer all of them above the fold. Make people hunt and they bounce.",
+          "The goal is simple: a Vista or Carlsbad driver lands on your page and within five seconds knows your price, your hours, where you are, and how to start a membership. Everything else is decoration.",
+        ],
+        list: {
+          title: "The build that converts",
+          items: [
+            "Membership pricing front and center — $25, $30, $40 tiers, what each washes, no \"call for details\"",
+            "One-tap online membership signup (Stripe or your wash platform integration)",
+            "Hours and a live map pin to your exact Oceanside location",
+            "Loading in under two seconds on a phone on a weak LTE signal",
+            "A photo of your actual wash — tunnel, bays, clean cars — not a stock Lamborghini",
+            "Clear answer to \"do you do interior?\" and \"is there a vacuum?\"",
+            "Click-to-call button that works on the first tap",
+          ],
+        },
+        callout: "Every extra tap between a customer and your membership button costs you roughly 20% of them. Two taps to sign up, max.",
+      },
+      {
+        heading: "What to Cut From Your Car Wash Site",
+        paragraphs: [
+          "Most car wash websites fail not because they're missing something — they're drowning in junk that gets in the way. The agency that charged your competitor $4,000 padded the build to justify the price.",
+          "A chatbot popping up asking \"How can I help you today?\" on a car wash site is a tax on real customers. They want to sign up and leave. So is the email newsletter modal that covers the membership button on mobile.",
+        ],
+        list: {
+          title: "Delete these today",
+          items: [
+            "Chatbots — nobody needs to chat to buy a $30 wash plan",
+            "Auto-playing video that eats 8 MB before the page loads",
+            "Newsletter popups blocking the signup button on mobile",
+            "Stock photos of cars you don't wash and people who aren't your customers",
+            "A 'Our Story' page nobody reads — put one honest sentence on the homepage instead",
+            "Carousel sliders that load five images to show one",
+            "Contact forms when a click-to-call button does the job faster",
+          ],
+        },
+        callout: "If a feature doesn't help someone start a membership or find your driveway, it's slowing down the ones who would.",
+      },
+      {
+        heading: "Getting Found: Local SEO for Oceanside Car Washes",
+        paragraphs: [
+          "You can have the cleanest site in San Diego County, but if you don't show up when someone searches \"car wash Oceanside\" or \"unlimited car wash near me,\" it might as well not exist. Local SEO is where most car washes leave money on the table.",
+          "Start with your Google Business Profile — it's free and it's the single biggest lever. Claim it, verify it, fill in every field: hours, services, the unlimited plan, real photos updated monthly. Pick the right primary category (\"Car Wash\") and answer questions people post. A complete profile with fresh photos and steady reviews outranks a half-empty one every time.",
+          "Then make sure your name, address, and phone number match exactly everywhere online — your site, Yelp, Apple Maps, Bing. Inconsistent citations confuse Google and tank your ranking. On the site itself, we bake in LocalBusiness schema.org markup so Google reads your hours, location, and services as structured data, and we build pages around the pattern people actually type: \"car wash + Oceanside,\" \"car wash + Carlsbad,\" \"detailing + Vista.\"",
+        ],
+        list: {
+          title: "Local SEO checklist",
+          items: [
+            "Claim and fully complete your Google Business Profile",
+            "Set primary category to 'Car Wash' and add every service",
+            "Post fresh photos monthly — tunnel, foam, clean cars",
+            "Get NAP (name, address, phone) identical across Yelp, Apple Maps, Bing",
+            "Add LocalBusiness schema.org markup to the site",
+            "Build '[service] + [city]' pages for Oceanside, Carlsbad, Vista, San Marcos",
+            "Ask happy members for reviews — aim for a steady trickle, not a one-time blast",
+          ],
+        },
+        callout: "A fully optimized Google Business Profile plus matching citations usually moves a local car wash up the map pack within 60–90 days.",
+      },
+      {
+        heading: "What This Costs: Agency Quotes vs. the $499 Flat",
+        paragraphs: [
+          "Call three web agencies in North County for a car wash site and you'll hear $3,000 to $8,000, plus a $200/month \"retainer,\" plus 6 to 10 weeks of timeline. Half of that is meetings about meetings. The other half is a template they'll resell to the next wash over.",
+          "Circuit Coders builds your car wash site for $499 flat. Custom Next.js on Vercel, 48-hour turnaround, one round of revisions, and a free mockup before you pay a cent. It's fast, it ranks, and it's yours.",
+          "Need online membership signup wired to Stripe or your wash management platform? That's a $200–$500 add-on depending on the integration. Want us to handle hosting and monthly updates — new pricing, seasonal promos, fresh photos? That's an optional $50/month. No retainer, no lock-in, cancel whenever.",
+        ],
+        callout: "$499 once versus $4,000 plus a monthly retainer. The cheaper site loads faster and ranks the same. Spend the difference on better foam.",
+      },
+      {
+        heading: "See It Before You Pay: Free Mockup",
+        paragraphs: [
+          "You don't have to take my word for any of this. I'll build you a free mockup of your car wash site's homepage — real layout, your pricing, your Oceanside location, your photos — so you can see exactly what you'd get before spending a dollar.",
+          "If you like it, it's $499 and live in 48 hours. If you don't, you keep the mockup and we shake hands. No pressure, no contract, no agency runaround.",
+          "Whether you're on Oceanside Boulevard, out in Vista, or down in Carlsbad, the offer's the same. Send me your current site (or your Facebook page if that's all you've got) and I'll show you what's possible.",
+        ],
+        callout: "Free homepage mockup, $499 flat, live in 48 hours. Reply or call and I'll have something to show you by tomorrow.",
+      },
+    ],
+    faqs: [
+      { q: "How much does a car wash website cost in Oceanside?", a: "North County agencies typically quote $3,000–$8,000 plus a monthly retainer. Circuit Coders builds a custom car wash site for $499 flat with a 48-hour turnaround and a free mockup first." },
+      { q: "Will a new website help my car wash rank higher on Google?", a: "Yes — a fast site with LocalBusiness schema plus a fully optimized Google Business Profile and matching citations usually moves a local car wash up the map pack within 60–90 days." },
+      { q: "Can customers sign up for an unlimited membership on the website?", a: "Absolutely. We wire one-tap signup to Stripe or your wash management platform as a $200–$500 add-on, so members can join from their phone in under a minute." },
+      { q: "How long does it take to build a car wash website?", a: "48 hours from approval. You'll see a free mockup first, then one round of revisions, and the site goes live on Vercel — not the 6–10 weeks an agency quotes." },
+      { q: "Do I need to pay monthly for hosting and updates?", a: "No. Hosting and monthly updates are optional at $50/month with no contract. Plenty of clients take the $499 build and manage it themselves." },
+    ],
+  },
+  {
     slug: "taco-shop-website-design-fallbrook",
     title: "Taco Shop & Family Restaurant Website Design in Fallbrook",
     description: "Your taco shop runs on walk-ins and word of mouth. Here's how a $499 Fallbrook restaurant website pulls in hungry locals searching at 6pm — menu, hours, and Google Maps done right.",
