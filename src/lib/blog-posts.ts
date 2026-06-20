@@ -20,6 +20,108 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "mobile-detailing-website-design-north-county",
+    title: "Mobile Detailing Website Design in North County: Book More Jobs",
+    description: "A mobile detailing website that books jobs while you're under a hood. Pricing, local SEO, and what to cut — built for North County San Diego detailers.",
+    keywords: ["mobile detailing website", "mobile detailing website design", "detailing website North County", "car detailing website Oceanside", "mobile detailer SEO Vista", "auto detailing website Carlsbad", "detailing booking website San Marcos", "Fallbrook detailing website"],
+    publishedAt: "2026-06-20",
+    updatedAt: "2026-06-20",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "MOBILE DETAILING · NORTH COUNTY · WEB DESIGN",
+    sections: [
+      {
+        heading: "Your Instagram Is Not a Website",
+        paragraphs: [
+          "Most mobile detailers in North County run their whole business off an Instagram grid and a phone number in the bio. That works until a guy in Carlsbad with a $90,000 truck wants to book a ceramic coat at 9pm and can't figure out your prices, your service area, or whether you'll even drive to him.",
+          "He's not going to DM you and wait until morning. He's going to scroll to the next detailer who has a real site with a 'Book Now' button. You just lost a $400 job because your storefront was a social feed that hides your phone number behind three taps.",
+          "A mobile detailer's website has one job: turn a stranger parked somewhere between Oceanside and Pala into a booked appointment while you're elbow-deep in someone else's wheel wells. Instagram can't do that. A real site can.",
+        ],
+        callout: "Your competitor isn't a better detailer. He's just easier to book.",
+      },
+      {
+        heading: "What a Detailing Site Actually Needs",
+        paragraphs: [
+          "You don't need a 12-page brochure. You need a fast, single-flow site that answers the three questions every customer has — what does it cost, do you come to me, and how do I book — before they bounce.",
+          "Keep it tight. Every extra click between 'I want this' and 'it's booked' is a customer you lose. Lead with your packages and a price, not a paragraph about your passion for cars.",
+        ],
+        list: {
+          title: "The non-negotiables",
+          items: [
+            "Clear packages with real prices — Basic Wash $80, Full Interior $150, Ceramic Coating $600+. Hiding prices kills mobile bookings.",
+            "A service-area map or list — name the cities: Oceanside, Vista, Carlsbad, San Marcos, Fallbrook, Bonsall.",
+            "One 'Book Now' button above the fold that goes to a booking form or platform, not a phone call.",
+            "Before/after photos that load fast — compressed to 200–400 KB, not 5 MB straight off your iPhone.",
+            "A real Google review widget pulling your live star rating, not a screenshot.",
+            "Mobile-first layout — 80% of your traffic is a guy on his phone in a parking lot.",
+          ],
+        },
+      },
+      {
+        heading: "What to Cut",
+        paragraphs: [
+          "Detailers waste money on the wrong features because someone sold them a template stuffed with junk. Cut anything that adds a click or a load-time second without booking a job.",
+          "A chatbot for a one-truck detailing operation is a tax on real customers. They don't want to argue with a bot about whether you do convertibles — they want a price and a calendar.",
+        ],
+        list: {
+          title: "Delete these today",
+          items: [
+            "Chatbots — nobody booking a $150 detail wants to talk to a robot.",
+            "Auto-playing video backgrounds that eat data and slow your load to 8 seconds.",
+            "A blog you'll never update (yes, the irony — but you have a business to run).",
+            "Stock photos of Lamborghinis you'll never touch. Show YOUR work on a Tacoma in Vista.",
+            "A contact form with 11 fields. Name, phone, vehicle, zip — that's it.",
+            "Pop-ups asking for an email before they've even seen a price.",
+          ],
+        },
+        callout: "Every feature that doesn't help someone book is just slowing down someone who would have.",
+      },
+      {
+        heading: "Getting Found: Local SEO for Detailers",
+        paragraphs: [
+          "A pretty site nobody finds is a parked truck. The detailers winning North County aren't ranking by accident — they've locked down the boring local-SEO basics their competitors ignore.",
+          "Google ranks mobile services on proximity, relevance, and reviews. You control two of those completely. The '[service] + [city]' pattern is how you show up when someone searches 'mobile detailing Oceanside' instead of just 'detailing near me.'",
+        ],
+        list: {
+          title: "Lock these down",
+          items: [
+            "Claim and fully fill your Google Business Profile — service-area business, every city listed, real photos weekly.",
+            "Build city landing pages: 'Mobile Detailing Carlsbad,' 'Auto Detailing Vista,' 'Ceramic Coating San Marcos.'",
+            "Add LocalBusiness + Service schema.org markup so Google reads your area, hours, and prices directly.",
+            "Get consistent citations — same name, phone, and service area across Yelp, Nextdoor, and Apple Maps.",
+            "Ask every happy customer for a Google review by text the day you finish the job — reviews are the #1 ranking lever you control.",
+          ],
+        },
+      },
+      {
+        heading: "What This Costs (And What It Shouldn't)",
+        paragraphs: [
+          "Agencies will quote a detailer $2,500–$5,000 for a site, then $150/month to 'maintain' it, then nickel-and-dime you for every photo swap. A guy on Fiverr will hand you a $300 template that loads in 9 seconds and ranks for nothing.",
+          "Circuit Coders builds it for $499 flat. Custom Next.js on Vercel, 48-hour turnaround, one round of revisions, and a free mockup before you pay a dime. It loads in under two seconds and it's built to rank locally, not just look pretty.",
+          "Want booking through a platform, Stripe deposits, or a reservation integration? That's a $200–$500 add-on, quoted up front — no surprises. Hosting and ongoing updates are optional at $50/month if you'd rather not touch it.",
+        ],
+        callout: "$499 flat, mockup first. You see it before you buy it.",
+      },
+      {
+        heading: "What 'Done' Looks Like",
+        paragraphs: [
+          "Picture this: a customer in Bonsall searches 'mobile detailing near me' at 8pm. Your site shows up, loads instantly, shows him a $150 Full Interior package, confirms you cover Bonsall, and books him for Thursday — all before you've even seen your phone light up.",
+          "That's the whole point. The site sells while you sleep, prices while you work, and books while you're driving between jobs. It pays for itself in two or three details.",
+          "We'll build you a free mockup first — your packages, your photos, your cities — so you can see exactly how it looks before you spend anything. If you hate it, you've lost nothing but the time it took to read this.",
+        ],
+        callout: "Free mockup, 48-hour turnaround, $499 flat. Text us your service area and we'll show you your new site this week.",
+      },
+    ],
+    faqs: [
+      { q: "Do I really need a website if I get all my jobs from Instagram?", a: "Instagram gets you discovered, but it can't take a booking or rank on Google. A real site converts the 40–60% of customers who check for a website before trusting you with a $300+ detail." },
+      { q: "How long does it take to build a mobile detailing website?", a: "Circuit Coders delivers in 48 hours from the time you approve the free mockup. You get one round of revisions included in the $499 flat price." },
+      { q: "How long until I rank for 'mobile detailing' in my city?", a: "With a fully built Google Business Profile, city landing pages, and steady reviews, most detailers see real local ranking movement in 60–90 days. Reviews are the fastest lever — ask every customer the day you finish." },
+      { q: "Can customers book and pay a deposit through the site?", a: "Yes. Booking, Stripe deposits, and reservation platforms run $200–$500 as an add-on on top of the $499 base, quoted up front so there are no surprises." },
+      { q: "What does it cost to keep the site running?", a: "Nothing required — you own it. Optional hosting and updates are $50/month if you'd rather we handle changes instead of touching it yourself." },
+    ],
+  },
+  {
     slug: "car-wash-website-design-oceanside",
     title: "Car Wash Website Design in Oceanside: What Actually Drives Cars Into Your Bays",
     description: "A car wash website that ranks in Oceanside and books memberships. $499 flat, 48-hour turnaround, no agency fluff. What to build, what to cut, and what it really costs.",
