@@ -20,6 +20,111 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "window-tint-shop-website-design-oceanside",
+    title: "Window Tint Shop Website Design in Oceanside",
+    description: "Most Oceanside window tint shops lose customers to a slow page and a buried phone number. Here's the website that books ceramic and PPF jobs—built for $499.",
+    keywords: ["window tinting website", "window tint shop website design", "Oceanside auto tint website", "ceramic tint website Oceanside", "tint shop SEO North County", "window tinting Carlsbad", "auto tint Vista", "tint shop website $499"],
+    publishedAt: "2026-06-21",
+    updatedAt: "2026-06-21",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "TINT SHOPS · OCEANSIDE · NORTH COUNTY",
+    sections: [
+      {
+        heading: "Your tint shop is losing the 11pm phone-Googler",
+        paragraphs: [
+          "It's 11pm. Somebody in Oceanside just bought a used Tacoma off Marketplace and they want it tinted before the heat hits. They Google \"window tint near me,\" and your shop comes up third. They tap your site. It takes nine seconds to load a stretched Facebook header, the hours are wrong, and there's no price anywhere. They back out and call the shop on Coast Highway that loaded instantly.",
+          "That's the whole game. Tint is an impulse-plus-research buy. People decide fast, but only after they've checked three shops on their phone. If your website is slow, vague, or built on a free Wix template from 2019, you're handing ceramic and PPF jobs to the shop next door.",
+          "I'm Leo. I build websites for North County small businesses out of Fallbrook. I've seen tint shops with a wall full of XPEL and 3M certs and a website that looks like a Craigslist ad. The work is premium. The website should be too.",
+        ],
+      },
+      {
+        heading: "What an Oceanside tint shop website actually needs",
+        paragraphs: [
+          "A tint shop site has one job: turn a phone-Googler into a booked appointment or a phone call. Everything else is decoration. You don't need a blog wizard, a loyalty portal, or an AI chatbot. You need the basics done fast and clean.",
+          "Here's the short list that moves the needle. Build these and skip the rest.",
+        ],
+        list: {
+          title: "The non-negotiables",
+          items: [
+            "Tap-to-call phone number in the header, sticky on mobile — most tint traffic is on a phone",
+            "Clear service tiers: full vehicle, two fronts, windshield strip, ceramic vs. dyed, PPF",
+            "Real prices or starting-at ranges (people will not call to ask \"how much for a Civic\")",
+            "A photo gallery of YOUR cars, not stock images of a black sedan",
+            "Certifications front and center: XPEL, 3M, SunTek, plus your warranty terms",
+            "Service area named in text: Oceanside, Carlsbad, Vista, San Marcos, Bonsall",
+            "A booking or quote form that hits your phone in real time",
+          ],
+        },
+        callout: "If a customer has to call to find out whether you do windshield strips, you've already lost half of them.",
+      },
+      {
+        heading: "What to cut — the stuff that's costing you jobs",
+        paragraphs: [
+          "Most shop websites aren't too simple. They're cluttered with things a vendor upsold the owner on. Every one of these adds load time and friction without booking a single job.",
+          "Rip these out:",
+        ],
+        list: {
+          title: "Cut these today",
+          items: [
+            "The chatbot — it's a tax on real customers who just want your number",
+            "Auto-playing video headers that eat 8MB and stall the page on cell data",
+            "Stock photos of cars you've never touched — customers can smell it",
+            "A 12-field quote form asking for VIN and mailing address up front",
+            "\"Get a free consultation\" buttons that go to a dead Calendly",
+            "Mystery pricing with \"call for a quote\" on every single service",
+            "Music. Never music.",
+          ],
+        },
+        callout: "A tint shop site should load in under 2 seconds and answer one question: how much, and how do I book?",
+      },
+      {
+        heading: "Local SEO: how Oceanside customers actually find you",
+        paragraphs: [
+          "Ranking for \"window tinting Oceanside\" isn't magic — it's a checklist most shops never finish. Google decides who shows up in the map pack based on three things: your Google Business Profile, consistent citations, and a website that proves you're local and legit.",
+          "Start with the profile. Claim and fully fill your Google Business Profile: correct hours, the Oceanside service area, 20+ real photos, and your services listed individually (ceramic tint, PPF, windshield, commercial). Then get your name, address, and phone identical everywhere — Yelp, Apple Maps, Yellow Pages, the auto directories. Mismatched info is the number one reason local shops stall in rankings.",
+          "On the site itself, build a page for each service-plus-city pattern: \"ceramic window tint Oceanside,\" \"car tint Carlsbad,\" \"PPF Vista.\" Add LocalBusiness and Service schema.org markup so Google reads your hours, area, and reviews directly. This is invisible to customers and decisive to the algorithm — and it's baked into every site I build.",
+        ],
+        list: {
+          title: "The local SEO checklist",
+          items: [
+            "Google Business Profile claimed, every field filled, weekly photo posts",
+            "NAP (name, address, phone) identical across every directory",
+            "Service + city pages: \"window tint Oceanside,\" \"ceramic tint Carlsbad\"",
+            "LocalBusiness + Service schema.org markup in the code",
+            "Reviews funnel — a QR code at checkout that opens your Google review form",
+            "Embedded map and text mention of Oceanside, Vista, San Marcos, Bonsall",
+          ],
+        },
+      },
+      {
+        heading: "What this costs — and what you've been quoted",
+        paragraphs: [
+          "Here's the market. A San Diego agency will quote you $3,000–$8,000 for a tint shop site and take six to ten weeks. A freelancer on Upwork runs $1,200–$2,500 and disappears halfway. The DIY route — Wix or Squarespace — is \"free\" until you've burned two weekends and still have a slow, generic page that won't rank.",
+          "I build it for $499 flat. Custom Next.js on Vercel, so it loads in under two seconds on cell data. 48-hour turnaround. One round of revisions. I show you a free mockup before you pay a dime.",
+          "If you want a real-time booking system — Calendly, a deposit through Stripe, or a quote-to-text flow — that's a $200–$500 add-on, quoted up front, no surprises. Hosting and ongoing updates are optional at $50/mo if you'd rather not touch it. That's the whole menu. No retainer, no \"discovery phase,\" no agency markup.",
+        ],
+        callout: "$499 flat, live in 48 hours. The agency hasn't even sent you the contract yet.",
+      },
+      {
+        heading: "What a fast site does for a tint shop in 60–90 days",
+        paragraphs: [
+          "This isn't theory. A clean, fast, properly-tagged site plus a finished Google Business Profile typically starts moving up the Oceanside map pack within 60–90 days. The phone-Googlers who used to bounce now tap-to-call. The windshield-strip customers who couldn't find a price now book themselves.",
+          "I'll give you a free audit of your current site and Google Business Profile — I'll tell you exactly what's costing you jobs, whether you hire me or not. If you want the build, you get a free mockup first. You only pay if you like what you see.",
+          "You tint cars in Oceanside, Carlsbad, and Vista. I build websites in Fallbrook. Let's get your shop showing up first when that 11pm Tacoma owner starts Googling.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "How much should a window tint shop website cost?", a: "Agencies quote $3,000–$8,000 and take six to ten weeks. I build a custom tint shop site for $499 flat with a 48-hour turnaround." },
+      { q: "How long until my tint shop ranks on Google in Oceanside?", a: "With a fast site, service-plus-city pages, and a fully completed Google Business Profile, most shops start climbing the local map pack within 60–90 days." },
+      { q: "Do I really need prices on my window tinting website?", a: "Yes. Customers will not call to ask \"how much for a Civic\" — list starting-at ranges for two fronts, full vehicle, ceramic, and PPF, or you'll lose them to the shop that did." },
+      { q: "Can you add online booking or deposit payments?", a: "Yes — booking calendars, Stripe deposits, and quote-to-text flows run $200–$500 as an add-on, quoted up front on top of the $499 base build." },
+      { q: "What makes a tint shop website rank locally?", a: "A claimed Google Business Profile, identical name/address/phone across every directory, LocalBusiness schema markup, and dedicated pages for terms like \"ceramic window tint Oceanside.\"" },
+    ],
+  },
+  {
     slug: "mobile-detailing-website-design-north-county",
     title: "Mobile Detailing Website Design in North County: Book More Jobs",
     description: "A mobile detailing website that books jobs while you're under a hood. Pricing, local SEO, and what to cut — built for North County San Diego detailers.",
