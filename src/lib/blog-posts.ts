@@ -20,6 +20,110 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "upholstery-shop-website-design-oceanside",
+    title: "Auto Upholstery Website Design in Oceanside: Get Found, Get Booked",
+    description: "Most Oceanside auto upholstery shops have no website or a dead Facebook page. Here's how to get a real one — $499 flat, 48-hour turnaround.",
+    keywords: ["auto upholstery website", "upholstery shop web design Oceanside", "car interior repair website", "auto upholstery Oceanside", "upholstery website design Carlsbad", "marine upholstery website Vista", "custom upholstery shop SEO", "North County San Diego web design"],
+    publishedAt: "2026-06-22",
+    updatedAt: "2026-06-22",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "AUTO UPHOLSTERY · OCEANSIDE · WEB DESIGN",
+    sections: [
+      {
+        heading: "The Oceanside Upholstery Problem: You're Invisible",
+        paragraphs: [
+          "Search \"auto upholstery Oceanside\" right now. You'll see two or three shops with real websites, a pile of Yelp listings, and a bunch of Facebook pages that haven't posted since 2022. If you're an upholstery shop in Oceanside, Vista, or Carlsbad and you're not in that top group, you're losing jobs to whoever is.",
+          "Here's the thing about upholstery work — it's visual and it's high-trust. Someone is handing you their truck's interior, their boat's seats, or a $4,000 custom build. They want to see your work before they call. A Facebook page with 11 grainy photos and no pricing doesn't close that.",
+          "The shops winning the redo jobs and the marine work aren't better at stitching. They just showed up on Google when somebody in Oceanside searched at 9pm on a Tuesday.",
+        ],
+        callout: "If your best portfolio lives on a phone or a Facebook album, it's not working for you. Customers can't find it and Google can't read it.",
+      },
+      {
+        heading: "What an Auto Upholstery Website Actually Needs",
+        paragraphs: [
+          "You don't need a 30-page site. You need a fast site that shows the work, names the services, and makes the phone ring. Most upholstery shops overthink this and end up with nothing.",
+          "The whole point is to answer the three questions every customer has before they call: Can you do my kind of job? Does your work look good? How do I reach you? Everything else is filler.",
+        ],
+        list: {
+          title: "The pages that earn their keep",
+          items: [
+            "A homepage with your best before/after shots loading in under 2 seconds",
+            "A services list: seat repair, headliners, convertible tops, marine, custom",
+            "A real photo gallery — 15–25 sharp images, not 3",
+            "Service area named in text: Oceanside, Carlsbad, Vista, San Marcos, Bonsall",
+            "Click-to-call button that works on a phone",
+            "A simple quote form that lands in your inbox, not a portal you'll never check",
+          ],
+        },
+      },
+      {
+        heading: "What to Cut: The Junk That Slows You Down",
+        paragraphs: [
+          "Most web designers will try to sell you features that do nothing for an upholstery shop. They pad the invoice and they slow your site down, which actually hurts your Google ranking.",
+          "A slow site is the silent killer here. Upholstery galleries are image-heavy, and if those photos aren't compressed right, your homepage takes 8 seconds to load on a phone. Half your visitors are gone before they see a single seat.",
+        ],
+        list: {
+          title: "Skip these every time",
+          items: [
+            "A chatbot — nobody booking a headliner job wants to argue with a bot",
+            "Stock photos of generic car interiors that aren't your work",
+            "Auto-playing video that eats mobile data and load time",
+            "A blog you'll never update",
+            "Uncompressed 5 MB photos straight off the camera",
+            "Social feed widgets that pull in your dead Facebook page",
+          ],
+        },
+        callout: "Every feature you add is weight. For an upholstery shop, fast and visual beats fancy every single time.",
+      },
+      {
+        heading: "Local SEO: How Oceanside Customers Actually Find You",
+        paragraphs: [
+          "This is where the real money is. People search \"auto upholstery near me,\" \"boat seat repair Oceanside,\" or \"headliner replacement Carlsbad.\" Your job is to show up for those exact phrases, and that takes more than just having a website.",
+          "Start with your Google Business Profile — it's free and it's the single biggest lever. Fill out every field, pick the right categories (Auto Upholsterer, Upholstery Shop), and post your real photos there too. Get customers to leave reviews; even 15–20 honest reviews puts you ahead of most local competitors.",
+          "Your website backs that profile up. Each service gets its own clear heading using the \"[service] + [city]\" pattern — \"Marine Upholstery in Oceanside,\" \"Convertible Top Replacement in Vista.\" Add schema.org LocalBusiness markup so Google knows your address, hours, and service area without guessing.",
+        ],
+        list: {
+          title: "The local SEO checklist",
+          items: [
+            "Claim and fully complete your Google Business Profile",
+            "Use consistent name, address, phone everywhere (citations on Yelp, Bing, Apple Maps)",
+            "Add LocalBusiness + Service schema.org markup to the site",
+            "Write real service pages: '[service] + Oceanside / Carlsbad / Vista'",
+            "Name your service area cities in actual page text, not just a map",
+            "Ask every happy customer for a Google review — aim for one a week",
+          ],
+        },
+      },
+      {
+        heading: "What This Costs in North County — And What It Shouldn't",
+        paragraphs: [
+          "Walk into a typical San Diego agency and an upholstery shop site runs $3,000–$6,000, plus a $100–$200/mo \"maintenance\" retainer that mostly covers their coffee. Squarespace and Wix DIY kits are cheaper but you'll burn a weekend fighting templates and still end up with a slow, generic site.",
+          "Circuit Coders builds it for $499 flat. Custom-built on Next.js, hosted on Vercel, 48-hour turnaround, one round of revisions. No retainer required — hosting and updates are optional at $50/mo if you'd rather not touch it.",
+          "If you want online quote requests wired to your email, a booking calendar, or a deposit-via-Stripe setup, those are add-ons in the $200–$500 range depending on what you need. You pay for what moves the needle, nothing else.",
+        ],
+        callout: "$499 flat versus $4,000 and a monthly leash. That's the difference between a tool and a subscription you'll resent.",
+      },
+      {
+        heading: "Real Talk: See It Before You Pay",
+        paragraphs: [
+          "You shouldn't have to gamble $499 on a promise. That's why we build a free mockup of your homepage first — your shop, your photos, your services — so you can see exactly what you're getting before you spend a dime.",
+          "If it's a fit, we finish it in 48 hours. If it's not, you walk with no cost and no hard feelings. Most Oceanside shop owners we talk to have never seen what their own work looks like on a fast, professional site. It changes the conversation.",
+          "Whether you're doing seat repair in Oceanside, marine work down at the harbor, or custom builds for the Vista car crowd — a real website turns your portfolio into a pipeline.",
+        ],
+        callout: "Free homepage mockup, $499 flat, 48-hour turnaround. Send us a few photos of your best work and we'll show you what your site could look like — no cost, no commitment.",
+      },
+    ],
+    faqs: [
+      { q: "How much does an auto upholstery website cost in Oceanside?", a: "Local agencies charge $3,000–$6,000 plus monthly fees. Circuit Coders builds a custom site for $499 flat with a 48-hour turnaround and optional $50/mo hosting." },
+      { q: "How long until my upholstery shop ranks on Google?", a: "A fast site plus a fully optimized Google Business Profile usually starts showing local results in 60–90 days. Steady reviews and consistent citations speed it up." },
+      { q: "Do I need a website if I already have a Facebook page?", a: "Yes — Facebook pages rank poorly and load slowly. A real website with proper schema.org markup is what gets you into Google's top local results, and it's done in 48 hours." },
+      { q: "Can you add online quote requests or deposits to my site?", a: "Yes. Quote forms come standard; booking calendars or Stripe deposit setups are add-ons in the $200–$500 range depending on what you need." },
+      { q: "What if I don't like the design?", a: "We build a free homepage mockup first, so you see your actual site before paying anything. If it's not a fit, you owe nothing." },
+    ],
+  },
+  {
     slug: "window-tint-shop-website-design-oceanside",
     title: "Window Tint Shop Website Design in Oceanside",
     description: "Most Oceanside window tint shops lose customers to a slow page and a buried phone number. Here's the website that books ceramic and PPF jobs—built for $499.",
