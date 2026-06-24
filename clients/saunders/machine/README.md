@@ -1,5 +1,5 @@
 # Saunders Brand-Management Machine
-The always-on engine behind the $2,950/mo retainer. Built pre-signature so the 14-day
+The always-on engine behind the $2,500/mo retainer (v7 signed terms: flat $2,500/mo, no upfront). Built pre-signature so the 14-day
 sprint is "flip switches + deliver," not "build + deliver." Runs **dry and error-free
 today** (no client access) — every fetch is a clearly-marked seam that returns empty
 until access lands at kickoff.

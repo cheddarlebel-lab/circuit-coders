@@ -13,7 +13,7 @@
       "website": "https://www.verobeachtoyota.com",
       "brand_color": "#EB0A1E",
       "platforms": {
-        "google": { "place_url": "<FILL GBP share/maps URL>", "review_link": "<FILL g.page/r short link>", "manager_access": false },
+        "google": { "place_url": "<FILL GBP share/maps URL>", "review_link": "https://search.google.com/local/writereview?placeid=ChIJx2c3Qvf13ogRGbL4ZutDoJ0", "manager_access": false },
         "yelp": { "url": "<FILL primary Yelp biz URL>", "duplicate_urls": ["<service listing>", "<legacy Toyota-Kia listing>"], "claimed": false },
         "dealerrater": { "url": "<FILL>", "claimed": false },
         "carscom": { "url": "<FILL>", "claimed": false },
@@ -32,7 +32,7 @@
       "website": "https://www.kiaofverobeach.com",
       "brand_color": "#BB162B",
       "platforms": {
-        "google": { "place_url": "<FILL>", "review_link": "<FILL g.page/r short link>", "manager_access": false },
+        "google": { "place_url": "<FILL>", "review_link": "https://search.google.com/local/writereview?placeid=ChIJ_4f2U_f13ogRwaXD_XCeOdk", "manager_access": false },
         "yelp": { "url": "<FILL>", "duplicate_urls": ["<Kia Service phantom listing>"], "claimed": false },
         "dealerrater": { "url": "<FILL>", "claimed": false, "note": "shows Toyota 1075 address — fix to 1105" },
         "carscom": { "url": "<FILL>", "claimed": false },

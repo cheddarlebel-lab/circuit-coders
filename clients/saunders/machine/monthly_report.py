@@ -14,6 +14,8 @@ PDF render (matches proposal toolchain):
   DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib python3 -m weasyprint <in.html> <out.pdf>
 """
 import datetime as dt
+import os
+import subprocess
 import sys
 
 import lib

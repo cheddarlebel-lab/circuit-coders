@@ -24,7 +24,7 @@ canonical: https://www.kiaofverobeach.com/kia-dealer-vero-beach-fl/
   <li><strong>Kia EV9</strong> — Kia's flagship all-electric three-row SUV. It's big, quiet, quick off the line, and a serious option for Treasure Coast households ready to go electric without giving up space or seats. Available all-wheel-drive configurations, fast-charging capability, and a genuinely usable third row make it one of the few EVs that works as a true family hauler. If you've been curious about electric but worried about fitting car seats, gear, and a road trip, the EV9 is worth a long test drive.</li>
 </ul>
 
-<p>Trims, colors, and packages shift week to week, so the right move is to <a href="{{SRP_NEW}}">view our new Kia inventory</a> for what's actually on the ground today. Looking for value? Our <a href="{{SRP_USED}}">used and certified pre-owned vehicles</a> are worth a look too — certified pre-owned Kias go through a multi-point inspection and carry extended coverage, which can be a smart way into a Telluride or Sportage. And if you don't see the exact trim or color you want, ask. We can often locate a vehicle through the network or tell you honestly when something is worth waiting for.</p>
+<p>Trims, colors, and packages shift week to week, so the right move is to <a href="https://www.kiaofverobeach.com/searchnew.aspx">view our new Kia inventory</a> for what's actually on the ground today. Looking for value? Our <a href="https://www.kiaofverobeach.com/searchused.aspx">used and certified pre-owned vehicles</a> are worth a look too — certified pre-owned Kias go through a multi-point inspection and carry extended coverage, which can be a smart way into a Telluride or Sportage. And if you don't see the exact trim or color you want, ask. We can often locate a vehicle through the network or tell you honestly when something is worth waiting for.</p>
 
 <h2>The Kia Warranty Advantage</h2>
 
@@ -51,13 +51,13 @@ canonical: https://www.kiaofverobeach.com/kia-dealer-vero-beach-fl/
 
 <p>So ask for your numbers in writing — the price, the APR, the term, and every line item — before you sign anything. Every add-on is optional: extended service contracts, coverage products, and accessories are choices, not requirements, and "no" is a complete answer. If a number isn't clear, stop and ask for it spelled out. A good deal is one both sides understand, and you're entitled to see exactly how it's built.</p>
 
-<p>We work with a range of lenders, which helps whether your credit is excellent or you're rebuilding. You can get a head start before you ever visit the lot by completing our <a href="{{FINANCE_APP}}">secure online finance application</a> — it takes a few minutes and lets us have realistic numbers ready when you arrive.</p>
+<p>We work with a range of lenders, which helps whether your credit is excellent or you're rebuilding. You can get a head start before you ever visit the lot by completing our <a href="https://www.kiaofverobeach.com/finance.aspx">secure online finance application</a> — it takes a few minutes and lets us have realistic numbers ready when you arrive.</p>
 
 <h2>Service & Parts Under One Roof</h2>
 
 <p>Buying the car is the beginning of the relationship; servicing it is the rest of it. Our on-site service department handles everything from routine oil changes and tire rotations to warranty repairs, recall work, and major mechanical jobs — all performed by technicians trained on Kia vehicles, using genuine Kia parts.</p>
 
-<p>Because we're the only Kia dealer in Indian River County, this is the closest factory-authorized Kia service you'll find without leaving the area. No more scheduling a half-day around a drive to Melbourne or Fort Pierce for a covered repair. You can <a href="/kia-service-vero-beach-fl/">learn more about our service department</a> or <a href="{{SCHEDULER}}">schedule a service appointment online</a> in a couple of clicks. Need a specific part? Our parts counter can order genuine Kia components and accessories for your vehicle.</p>
+<p>Because we're the only Kia dealer in Indian River County, this is the closest factory-authorized Kia service you'll find without leaving the area. No more scheduling a half-day around a drive to Melbourne or Fort Pierce for a covered repair. You can <a href="/kia-service-vero-beach-fl/">learn more about our service department</a> or <a href="https://www.kiaofverobeach.com/xtime-service.html">schedule a service appointment online</a> in a couple of clicks. Need a specific part? Our parts counter can order genuine Kia components and accessories for your vehicle.</p>
 
 <h2>Going Electric on the Treasure Coast</h2>
 

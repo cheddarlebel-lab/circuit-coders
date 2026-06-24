@@ -8,3 +8,8 @@ tsconfig.tsbuildinfo
 .DS_Store
 .last_lead_id
 outreach-log/
+
+# Secrets — never commit (live Stripe keys, comp IDs, tokens)
+.secrets/
+*.key
+*.secrets

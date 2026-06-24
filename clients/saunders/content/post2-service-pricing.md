@@ -38,7 +38,7 @@ These are sample, representative starting prices for the most-requested services
 
 There's a widespread assumption that the dealer is automatically more expensive than the corner shop. It often isn't — and here's the honest reason why.
 
-**Service coupons.** Ask about current service coupons on common jobs like oil changes and brakes. Before you book, it's worth a look: **[see current service coupons]({{COUPONS}})**.
+**Service coupons.** Ask about current service coupons on common jobs like oil changes and brakes. Before you book, it's worth a look: **[see current service coupons](https://www.verobeachtoyota.com/service-parts-specials.html)**.
 
 **The multipoint inspection is included.** Every visit includes a complimentary multipoint inspection — brakes, fluids, belts, tires, battery, and more — performed by technicians trained specifically on your [Toyota/Kia]. At a quick-lube, that same inspection is often an add-on, or simply not offered. You're getting a documented health check as part of the price, not on top of it.
 
@@ -71,13 +71,13 @@ We send a digital inspection with photos and video to your phone so you can see 
 Ask about current service coupons and tire offers on your size. You also get installation by techs who know your vehicle and a courtesy inspection while it's on the lift.
 
 **Do I need an appointment?**
-An appointment gets you in and out faster, but we'll always do our best to accommodate you. **[Schedule service online]({{SCHEDULER}})** at your convenience.
+An appointment gets you in and out faster, but we'll always do our best to accommodate you. **[Schedule service online](https://www.verobeachtoyota.com/serviceappmt.aspx)** at your convenience.
 
 ## Ready to book?
 
 Know what to expect — representative pricing up front, a written quote before any work begins, current coupons worth checking first, and an inspection process you control from your phone.
 
-**[Schedule your service appointment]({{SCHEDULER}})** · browse our **[service department page](/toyota-service-vero-beach-fl/)** · or call us directly.
+**[Schedule your service appointment](https://www.verobeachtoyota.com/serviceappmt.aspx)** · browse our **[service department page](/toyota-service-vero-beach-fl/)** · or call us directly.
 
 <!-- TOYOTA NAP -->
 **Toyota of Vero Beach** · 1075 S US Hwy 1, Vero Beach, FL 32962 · 772-569-8000 · [verobeachtoyota.com](https://www.verobeachtoyota.com)

@@ -9,9 +9,9 @@ canonical: https://www.verobeachtoyota.com/toyota-service-vero-beach-fl/
 
 At **Toyota of Vero Beach**, you should know what a service costs before you say yes — not at checkout. The menu below shows sample, representative starting prices for the work most Vero Beach drivers schedule, so you can plan and compare. Your exact, final price is confirmed in your written quote — just ask your advisor for it.
 
-Our service center is staffed by factory-trained Toyota technicians using genuine Toyota parts, located at **1075 S US Hwy 1, Vero Beach, FL 32962**. Call **[772-569-8000](tel:+17725698000)** or [book online in about 60 seconds]({{SCHEDULER}}).
+Our service center is staffed by factory-trained Toyota technicians using genuine Toyota parts, located at **1075 S US Hwy 1, Vero Beach, FL 32962**. Call **[772-569-8000](tel:+17725698000)** or [book online in about 60 seconds](https://www.verobeachtoyota.com/serviceappmt.aspx).
 
-[**Schedule Service Online →**]({{SCHEDULER}})
+[**Schedule Service Online →**](https://www.verobeachtoyota.com/serviceappmt.aspx)
 
 ---
 
@@ -35,7 +35,7 @@ Below are **sample, representative starting ("from") prices** for common Toyota 
 
 **How our quotes work:** Ask your advisor for your out-the-door total in writing before any work begins. If our inspection turns up something not on your original ticket — a worn belt, a leaking gasket — just ask us to show you and get your approval, with a price attached, before any added work. You decide what gets done.
 
-[**Get Your Written Quote — Book Now →**]({{SCHEDULER}})
+[**Get Your Written Quote — Book Now →**](https://www.verobeachtoyota.com/serviceappmt.aspx)
 
 ---
 
@@ -45,7 +45,7 @@ A quick-lube or corner garage can change your oil. But your Toyota was engineere
 
 - **Hybrid and plug-in expertise.** If you drive a Prius, RAV4 Hybrid, Camry Hybrid, or any Toyota hybrid, our Toyota-trained technicians are experienced with the high-voltage battery and hybrid drive systems. Hybrid battery diagnosis, conditioning, and replacement are specialized work — not every independent shop is equipped to handle them safely. We are.
 - **ToyotaCare.** New Toyotas may include **ToyotaCare**, a no-cost maintenance plan covering factory-scheduled service for the first 2 years or 25,000 miles, plus roadside assistance. Ask us to confirm your coverage — bring it in and we'll check your eligibility. Coverage terms are set by Toyota; ask us or check your owner's documentation for the specifics that apply to your vehicle.
-- **Genuine Toyota parts.** We install genuine Toyota parts engineered for your exact vehicle and backed by Toyota's parts warranty. The right part fits right and lasts — and it protects your vehicle's warranty coverage. Browse [genuine parts and accessories]({{PARTS}}).
+- **Genuine Toyota parts.** We install genuine Toyota parts engineered for your exact vehicle and backed by Toyota's parts warranty. The right part fits right and lasts — and it protects your vehicle's warranty coverage. Browse [genuine parts and accessories](https://www.verobeachtoyota.com/parts.html).
 - **Your service history, in one place.** Work done here is recorded against your VIN, which keeps your maintenance record clean and complete — useful for warranty claims and resale.
 
 Factory-trained doesn't have to mean a premium price you can't see coming. That's the whole point of the menu above.
@@ -66,7 +66,7 @@ For larger jobs, ask about loaner availability and alternate-transportation opti
 
 We rotate service specials and coupons on oil changes, brakes, tires, and seasonal maintenance throughout the year. Pair a current offer with a written quote from your advisor to know exactly what you'll pay before you commit.
 
-[**View this month's service specials and coupons →**]({{COUPONS}})
+[**View this month's service specials and coupons →**](https://www.verobeachtoyota.com/service-parts-specials.html)
 
 Specials are subject to the terms printed on each offer; present at time of write-up. Ask your advisor to apply any eligible offer to your written quote so the discount is reflected before work begins.
 
@@ -74,13 +74,13 @@ Specials are subject to the terms printed on each offer; present at time of writ
 
 ## How to Book: Appointment or Walk-In
 
-**Appointments** get you the shortest wait and a reserved time slot — book in about 60 seconds [online]({{SCHEDULER}}) or call **[772-569-8000](tel:+17725698000)**.
+**Appointments** get you the shortest wait and a reserved time slot — book in about 60 seconds [online](https://www.verobeachtoyota.com/serviceappmt.aspx) or call **[772-569-8000](tel:+17725698000)**.
 
 **Walk-ins** are welcome for quick services like oil changes and tire rotations, subject to bay availability. If the shop is busy, we'll give you an honest wait estimate before you commit your time — so you can decide whether to wait, use the shuttle, or come back at a slot that suits you.
 
 Either way, ask your advisor for your price in writing before any work begins.
 
-[**Schedule Toyota Service →**]({{SCHEDULER}})
+[**Schedule Toyota Service →**](https://www.verobeachtoyota.com/serviceappmt.aspx)
 
 ---
 
@@ -96,7 +96,7 @@ Yes. While we specialize in Toyota and are equipped with genuine Toyota parts an
 Routine maintenance like an oil change or tire rotation is often completed while you wait. Larger jobs such as brakes or alignments take longer. When you book or check in, we'll give you a realistic time estimate up front — and the shuttle is available if you'd rather drop the car off.
 
 **Do I need an appointment, or can I walk in?**
-Both work. Appointments guarantee a reserved time and the shortest wait — [book online]({{SCHEDULER}}) in about a minute. Walk-ins are welcome for quick services, subject to availability, and we'll quote your wait honestly before you commit.
+Both work. Appointments guarantee a reserved time and the shortest wait — [book online](https://www.verobeachtoyota.com/serviceappmt.aspx) in about a minute. Walk-ins are welcome for quick services, subject to availability, and we'll quote your wait honestly before you commit.
 
 **Can you service my Toyota hybrid battery?**
 Yes. Our Toyota-trained technicians are experienced with Toyota hybrid systems, including high-voltage battery diagnosis, conditioning, and replacement. Hybrid work is specialized and we're equipped for it. Call **[772-569-8000](tel:+17725698000)** to discuss your hybrid's symptoms, and ask us to outline next steps and pricing in writing before any work starts.
@@ -112,9 +112,9 @@ Web: [verobeachtoyota.com](https://www.verobeachtoyota.com)
 
 Proudly serving **Vero Beach, Sebastian, Fort Pierce, and all of Indian River County** with transparent, factory-trained Toyota service.
 
-**Related pages:** [Toyota Dealer in Vero Beach](/toyota-dealer-vero-beach-fl/) · [Toyota Dealer in Sebastian](/toyota-dealer-sebastian-fl/) · [Service Specials]({{COUPONS}}) · [Parts]({{PARTS}})
+**Related pages:** [Toyota Dealer in Vero Beach](/toyota-dealer-vero-beach-fl/) · [Toyota Dealer in Sebastian](/toyota-dealer-sebastian-fl/) · [Service Specials](https://www.verobeachtoyota.com/service-parts-specials.html) · [Parts](https://www.verobeachtoyota.com/parts.html)
 
-[**Book Your Service Now →**]({{SCHEDULER}})
+[**Book Your Service Now →**](https://www.verobeachtoyota.com/serviceappmt.aspx)
 
 ---
 
@@ -150,52 +150,7 @@ Proudly serving **Vero Beach, Sebastian, Fort Pierce, and all of Indian River Co
         { "@type": "City", "name": "Fort Pierce" },
         { "@type": "AdministrativeArea", "name": "Indian River County" }
       ],
-      "sameAs": ["{{GBP_URL}}"],
-      "makesOffer": [
-        {
-          "_comment": "COMPLIANCE CAVEAT: Only publish Offer prices if staff fill {{PRICE_*}} with real, currently-honored starting prices and keep them updated. Stale or inaccurate schema pricing can create consumer/FTC exposure. Remove this makesOffer block if exact prices cannot be maintained.",
-          "@type": "Offer",
-          "itemOffered": { "@type": "Service", "name": "Conventional Oil Change" },
-          "price": "{{PRICE_OIL_CONVENTIONAL}}",
-          "priceCurrency": "USD"
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": { "@type": "Service", "name": "Synthetic Oil Change" },
-          "price": "{{PRICE_OIL_SYNTHETIC}}",
-          "priceCurrency": "USD"
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": { "@type": "Service", "name": "Tire Rotation" },
-          "price": "{{PRICE_TIRE_ROTATION}}",
-          "priceCurrency": "USD"
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": { "@type": "Service", "name": "Wheel Alignment" },
-          "price": "{{PRICE_ALIGNMENT}}",
-          "priceCurrency": "USD"
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": { "@type": "Service", "name": "Brake Pads & Rotors (per axle)" },
-          "price": "{{PRICE_BRAKES}}",
-          "priceCurrency": "USD"
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": { "@type": "Service", "name": "Battery Replacement" },
-          "price": "{{PRICE_BATTERY}}",
-          "priceCurrency": "USD"
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": { "@type": "Service", "name": "Cabin Air Filter" },
-          "price": "{{PRICE_CABIN_FILTER}}",
-          "priceCurrency": "USD"
-        }
-      ]
+      "sameAs": ["{{GBP_URL}}"]
     },
     {
       "@type": "FAQPage",

@@ -22,11 +22,11 @@ We keep a deep lineup of the Toyotas Indian River County actually buys — built
 
 We also stock Corolla, Highlander, Tundra, 4Runner and the Sienna minivan. Hybrid availability moves quickly, so if a specific trim or color matters to you, check the live lot and reach out — we can often locate or reserve an incoming unit.
 
-**[Browse new Toyota inventory →]({{SRP_NEW}})**
+**[Browse new Toyota inventory →](https://www.verobeachtoyota.com/searchnew.aspx)**
 
 Shopping pre-owned? We carry a rotating selection of certified and used vehicles, Toyota and otherwise, each reconditioned before it reaches the line.
 
-**[Browse used inventory →]({{SRP_USED}})**
+**[Browse used inventory →](https://www.verobeachtoyota.com/searchused.aspx)**
 
 ## Why Buy Local
 
@@ -48,7 +48,7 @@ A few things worth asking about at Toyota of Vero Beach:
 
 You can start your financing online and walk in with the heavy lifting done.
 
-**[Start your financing online →]({{FINANCE_APP}})**
+**[Start your financing online →](https://www.verobeachtoyota.com/finance.aspx)**
 
 If your credit is somewhere in the middle — and most people's is — that's a normal conversation here. Ask us what you may qualify for.
 
@@ -58,7 +58,7 @@ Your current vehicle is worth real money toward your next one, and in Florida it
 
 Ask for a market-based figure on your vehicle — often in minutes. Bring the car in, we confirm condition in person, and the appraised value comes straight off your deal.
 
-**[Get your trade appraised →]({{TRADE_TOOL}})**
+**[Get your trade appraised →](https://www.verobeachtoyota.com/trade.aspx)**
 
 We appraise any make, not just Toyotas, and you're welcome to sell us the car even if you don't buy one from us the same day.
 
@@ -85,13 +85,13 @@ Toyota of Vero Beach is open {{HOURS}}. Sales and service hours differ slightly,
 From Sebastian, take US-1 south for about fifteen minutes; we're on the right at 1075 S US Hwy 1, past the main Vero Beach stretch. From Fort Pierce, take US-1 north roughly fifteen miles into Vero Beach — we'll be on your left. The dealership sits directly on US-1, so it's hard to miss in either direction.
 
 **Do you have hybrids in stock?**
-Yes. We regularly stock Camry, RAV4, Highlander and Grand Highlander hybrids, plus the RAV4 Plug-in Hybrid when available. Hybrid demand is high, so inventory moves quickly — check our [new inventory]({{SRP_NEW}}) or call to confirm a specific trim, and we can often reserve an incoming unit for you.
+Yes. We regularly stock Camry, RAV4, Highlander and Grand Highlander hybrids, plus the RAV4 Plug-in Hybrid when available. Hybrid demand is high, so inventory moves quickly — check our [new inventory](https://www.verobeachtoyota.com/searchnew.aspx) or call to confirm a specific trim, and we can often reserve an incoming unit for you.
 
 **How does the trade-in process work?**
-Get your trade appraised with our [appraisal tool]({{TRADE_TOOL}}) — ask for a market-based figure on your vehicle, often in minutes. Bring the vehicle in so we can verify its condition, and the confirmed value applies directly to your new purchase — which in Florida also reduces the sales tax you owe. We appraise all makes, and you can sell to us even without buying the same day.
+Get your trade appraised with our [appraisal tool](https://www.verobeachtoyota.com/trade.aspx) — ask for a market-based figure on your vehicle, often in minutes. Bring the vehicle in so we can verify its condition, and the confirmed value applies directly to your new purchase — which in Florida also reduces the sales tax you owe. We appraise all makes, and you can sell to us even without buying the same day.
 
 **Can I get financing with average credit?**
-Yes. We work with Toyota Financial Services and multiple banks and credit unions, which lets us look at approvals across a wide range of credit situations — not just excellent credit. [Start your financing online]({{FINANCE_APP}}) and ask us what you may qualify for.
+Yes. We work with Toyota Financial Services and multiple banks and credit unions, which lets us look at approvals across a wide range of credit situations — not just excellent credit. [Start your financing online](https://www.verobeachtoyota.com/finance.aspx) and ask us what you may qualify for.
 
 ---
 

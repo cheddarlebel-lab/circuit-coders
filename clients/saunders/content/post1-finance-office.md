@@ -59,13 +59,13 @@ Showing up prepared is the single biggest thing that shortens your visit:
 
 A typical finance-office visit runs roughly 30 to 60 minutes once you're seated, depending on how many lenders we work and how many questions you have. We'd rather you ask questions than rush.
 
-One way to shorten it is to **start your financing online before you come in — ask about getting pre-qualified.** When your application is already in the system, much of the legwork — pulling structures from lenders, confirming terms — can happen ahead of time, so your in-person visit is mostly review and signatures. You can start that from home, on your schedule, with no obligation: **[Apply for financing online]({{FINANCE_APP}})**.
+One way to shorten it is to **start your financing online before you come in — ask about getting pre-qualified.** When your application is already in the system, much of the legwork — pulling structures from lenders, confirming terms — can happen ahead of time, so your in-person visit is mostly review and signatures. You can start that from home, on your schedule, with no obligation: **[Apply for financing online](https://www.verobeachtoyota.com/finance.aspx)**.
 
 ## The bottom line
 
 Here's the set of documents you can expect to see, and you're entitled to read every number on them before you sign. Every optional product is just that — optional, and "no" is always a complete answer that changes nothing about your vehicle price or your approval. And you're entitled to ask for your financing terms in writing so you can compare them against any bank in town before you commit. Knowing what to expect and what to request is how you walk in with the upper hand.
 
-Have a question before you come in? Reach our team at **772-569-8000**, learn more about our store on our **[Toyota dealership page](/toyota-dealer-vero-beach-fl/)**, or **[start your pre-qualification online]({{FINANCE_APP}})** and walk in ready to sign.
+Have a question before you come in? Reach our team at **772-569-8000**, learn more about our store on our **[Toyota dealership page](/toyota-dealer-vero-beach-fl/)**, or **[start your pre-qualification online](https://www.verobeachtoyota.com/finance.aspx)** and walk in ready to sign.
 
 **Toyota of Vero Beach** · 1075 S US Hwy 1, Vero Beach, FL 32962 · 772-569-8000 · [verobeachtoyota.com](https://www.verobeachtoyota.com)
 

@@ -62,3 +62,17 @@ python3 lead-audit.py
   await navigator.clipboard.writeText(JSON.stringify({query: 'QUERY HERE', items: ext}));
   return 'CLIPBOARD_OK ' + ext.length; })()
 ```
+
+## ⚠ REPAIR 2026-06-19 (extract.js → extract-v2.js)
+Google Maps changed its DOM + tightened anti-bot:
+- **Inline "Website" chip REMOVED from feed cards.** Cards now expose only name, rating,
+  review count, category, address, phone, review snippet. → Use `extract-v2.js` (verified
+  working: returns those fields cleanly).
+- **Place DETAIL panel does NOT render under automation** (clicking a card leaves panel on
+  "Results", no website node). So website/email can no longer be harvested from Maps in-session.
+- **Feed throttled to ~4 cards** in automated sessions (anti-bot). Eases with cooldown/spacing
+  or a logged-in human Chrome session.
+CONSEQUENCE: the email pipeline (lead-audit.py harvests emails FROM the website) is broken at
+the source — no websites from Maps. To restore EMAIL outreach, add a website-resolution step
+(web-search each "name + city" → official domain) then feed domains to lead-audit.py. Phone is
+still captured → extract-v2 alone = a working CALL list.

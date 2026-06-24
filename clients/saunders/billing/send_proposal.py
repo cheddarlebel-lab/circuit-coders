@@ -15,15 +15,17 @@ HOME = pathlib.Path.home()
 LOG = HOME / "clawd/circuit-coders/outreach-log"
 ME = "cheddar.lebel@gmail.com"
 TO = "jareds@toyotaofvero.com"
-SUBJECT = "Toyota & Kia of Vero Beach — brand management proposal (+ heads up on the signing doc)"
-PDF = HOME / "clawd/circuit-coders/pitches/Toyota-Kia-Vero-Beach-Brand-Management-Proposal.pdf"
+SUBJECT = "Toyota & Kia of Vero Beach — updated proposal, simpler terms"
+PDF = HOME / "clawd/circuit-coders/pitches/Toyota-Kia-Vero-Beach-Brand-Management-Proposal-v7.pdf"
 DRY = "--dry-run" in sys.argv
 
 BODY = """Hi Jared,
 
-The brand-management proposal for both rooftops is attached — the $2,500 get-well sprint plus $2,950/mo across Toyota and Kia, month-to-month. It lays out what we fix first (the homepage still reading "Visit DealerOn Toyota," the BBB rating, the scattered phone numbers and listings) and how the ongoing management protects the ad spend you're already running.
+Following up with a revised proposal that makes this an easier yes — attached.
 
-One heads up: the document I sent over for your signature comes through under Verimatch, so it most likely landed in your spam/junk folder — e-sign emails usually do. If it's not in your inbox, check there and it should be near the top. Just say the word and I'll re-send.
+I dropped the upfront fee entirely. It's now a flat $2,500/month for both rooftops, month-to-month, cancel anytime — no setup cost and no money down. All the get-well cleanup (the homepage still reading "Visit DealerOn Toyota," the BBB rating, the scattered phone numbers and listings) is built into your first 30 days at no extra charge.
+
+Everything else in the program is unchanged, and your advertising stays exactly where it is.
 
 Thanks Jared,
 Leo

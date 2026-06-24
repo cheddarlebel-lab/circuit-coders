@@ -21,7 +21,7 @@ Think of the RAV4 lineup as a ladder. You climb from practical and value-focused
 - **Adventure / TRD-oriented trims** — Geared toward a more rugged look and capability for drivers who want extra presence and outdoor readiness.
 - **Limited** — The top of the ladder: the most premium materials, technology, and comfort features in the lineup.
 
-Pricing climbs as you move up the ladder, and exact figures move with availability and current offers, so we won't quote MSRPs that go stale. For live, accurate pricing on the trims we have right now, check **{{PRICE_RAV4_FROM}}** and browse **[current RAV4 inventory]({{SRP_RAV4}})**.
+Pricing climbs as you move up the ladder, and exact figures move with availability and current offers, so we won't quote MSRPs that go stale. For live, accurate pricing on the trims we have right now, check **{{PRICE_RAV4_FROM}}** and browse **[current RAV4 inventory](https://www.verobeachtoyota.com/new-toyota-rav4-verobeach-inventory.html)**.
 
 ## Hybrid vs. gas: the Florida commute math
 
@@ -45,7 +45,7 @@ For the everyday stuff — groceries, kids' sports gear, a Costco haul — the R
 
 Trims, colors, hybrid-versus-gas availability, and pricing all move with our live inventory. The fastest way to find the right RAV4 is to see what's actually here today:
 
-**[Browse live 2026 RAV4 inventory at Toyota of Vero Beach]({{SRP_RAV4}})**
+**[Browse live 2026 RAV4 inventory at Toyota of Vero Beach](https://www.verobeachtoyota.com/new-toyota-rav4-verobeach-inventory.html)**
 
 ## 2026 RAV4 FAQ
 
@@ -63,7 +63,7 @@ If you commute regularly — say, toward Port St. Lucie or do a lot of around-to
 
 ---
 
-Ready to find yours? **[See current RAV4 inventory]({{SRP_RAV4}})**, visit our **[Toyota dealership page](/toyota-dealer-vero-beach-fl/)**, or — for our Sebastian-area neighbors — our **[Sebastian Toyota page](/toyota-dealer-sebastian-fl/)**.
+Ready to find yours? **[See current RAV4 inventory](https://www.verobeachtoyota.com/new-toyota-rav4-verobeach-inventory.html)**, visit our **[Toyota dealership page](/toyota-dealer-vero-beach-fl/)**, or — for our Sebastian-area neighbors — our **[Sebastian Toyota page](/toyota-dealer-sebastian-fl/)**.
 
 **Toyota of Vero Beach** · 1075 S US Hwy 1, Vero Beach, FL 32962 · 772-569-8000 · [verobeachtoyota.com](https://www.verobeachtoyota.com)
 

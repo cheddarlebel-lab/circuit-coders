@@ -228,24 +228,20 @@ Per-task operational processes, current as of June 2026. Legend for "who": **AGE
 
 ---
 
-## 12. Stripe billing (flow only — no action)
+## 12. Stripe billing — v7 SIGNED TERMS (flat $2,500/mo, NO upfront, NO sprint fee)
 
-### One-time $2,500 invoice
-1. Dashboard → Invoices → Create invoice.
-2. Add customer (name + email).
-3. Add one-time line item: "Brand Sprint — Toyota/Kia of Vero Beach," $2,500.
-4. Collection method **Send invoice**, due date Net 7.
-5. Customer pays on the hosted invoice page (card / ACH / Link per enabled methods). Receipt auto-sends.
-- **Fees:** invoicing 0.4% (Starter) on top of processing. Card ≈ $92.80 total on $2,500; **ACH = 0.8% capped at $5 ≈ $15 total. Enable + push ACH.**
+> ⚠️ **ONE billing path only.** Jared was sent the LIVE recurring payment link
+> (https://buy.stripe.com/28E9AUefje7V6KDgcqgIo07 · plink_1TkwgvKqJSPvOjzRmrv0BCMh,
+> $2,500/mo). When he pays it, the subscription self-creates. **Do NOT also run
+> `billing/setup_invoices.py --start-subscription` and do NOT create a manual
+> subscription in the dashboard** — that would DOUBLE-bill him ($5,000/mo). There is
+> NO one-time/sprint invoice anymore.
 
-### $2,950/mo subscription, delayed start
-- Customers → customer → Create subscription → $2,950/mo price → set **future start date** → button becomes **"Schedule subscription"** (creates a subscription schedule under the hood; plain subscriptions can't future-start). ⚠️ The future-start option lives in the **classic subscription editor** — toggle from the new editor if hidden.
-- Nothing bills until start date. Collection options:
-  - `charge_automatically`: needs a saved card beforehand (collect via setup-mode Checkout link or "save card" on the sprint invoice); first invoice drafts ~1h then auto-charges.
-  - `send_invoice` (recommended for a dealership AP dept): Stripe emails a hosted invoice each month, Net 15, payable by ACH.
-- Proration: irrelevant if start date = billing anchor (full $2,950 on day one). On any future mid-cycle edit, set proration to **none**.
-- **Recommended structure:** $2,500 invoice now (ACH, Net 7) + scheduled subscription starting on sprint-completion date, `send_invoice` + Net 15, ACH ($5 fee vs ~$86 card).
-- Stripe Billing also takes 0.7% (Starter) of recurring volume on top of processing.
+### The single flow
+1. Jared clicks the payment link → enters card → $2,500/mo subscription starts, billing the same date each month.
+2. First charge = program start (kickoff). Cleanup is included in month one; nothing else is invoiced.
+3. Log to revenue.md ONLY once the first payment clears.
+- **Fees:** card ≈ 2.9%+30¢ (~$73/mo on $2,500). If a dealership AP dept prefers ACH/Net terms, switch that customer to an invoiced subscription (`send_invoice`, Net 15, ACH ≈ $5) — but pick ONE method, never both.
 
 ---
 

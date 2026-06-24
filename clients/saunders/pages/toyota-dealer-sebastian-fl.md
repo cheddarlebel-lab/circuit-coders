@@ -28,7 +28,7 @@ That's why two Toyotas tend to come up again and again with the folks who drive 
 
 We stock these in real numbers, in the trims and colors people actually ask for, alongside the rest of the lineup — Camry, Corolla, Highlander, Tundra, 4Runner, and the Toyota hybrids that have become a quiet favorite for drivers tired of US-1 gas stops.
 
-Browse the current new inventory before you make the drive: **{{SRP_NEW}}**. If you'd rather we set a few specific vehicles aside so they're ready when you arrive, call [772-569-8000](tel:7725698000) and we'll have them pulled up front.
+Browse the current new inventory before you make the drive: **https://www.verobeachtoyota.com/searchnew.aspx**. If you'd rather we set a few specific vehicles aside so they're ready when you arrive, call [772-569-8000](tel:7725698000) and we'll have them pulled up front.
 
 You can also see our full Vero Beach store details on our [main dealership page](/toyota-dealer-vero-beach-fl/).
 
@@ -44,7 +44,7 @@ A few things that make the trip painless:
 - **Ask about loaner availability for longer jobs**, so a bigger repair doesn't strand you 20 minutes from home.
 - **Genuine Toyota parts and factory-trained technicians**, which matters most on the Tacomas and Tundras that get worked hard around Fellsmere and the farms west of I-95.
 
-Schedule online any time through our service scheduler — **{{SCHEDULER}}** — or read more about what to expect on our [Vero Beach service page](/toyota-service-vero-beach-fl/).
+Schedule online any time through our service scheduler — **https://www.verobeachtoyota.com/serviceappmt.aspx** — or read more about what to expect on our [Vero Beach service page](/toyota-service-vero-beach-fl/).
 
 Because we're south of Sebastian rather than north of it, you're driving *toward* the rest of Indian River County's errands, not away from them. Drop the car, run your list, come back.
 
@@ -67,13 +67,13 @@ Nobody from Sebastian wants to make the trip twice. So we built the process arou
 You can do nearly everything from your kitchen table:
 
 1. **Build your deal at home.** Pick the vehicle, see real numbers, and structure your purchase before you leave Sebastian.
-2. **Get pre-approved.** Apply for financing securely online and know where you stand: **{{FINANCE_APP}}**.
+2. **Get pre-approved.** Apply for financing securely online and know where you stand: **https://www.verobeachtoyota.com/finance.aspx**.
 3. **Value your trade** ahead of time so you have a number in hand before you visit.
 4. **Come down once to sign and drive.** One trip down US-1, paperwork ready, keys in hand.
 
 For some customers we can also discuss delivery — call to ask whether your address in Sebastian, Micco, Barefoot Bay, or Fellsmere qualifies. The goal is the same either way: minimize the driving, maximize the time you keep for yourself.
 
-Start the online process or browse inventory: **{{SRP_NEW}}**.
+Start the online process or browse inventory: **https://www.verobeachtoyota.com/searchnew.aspx**.
 
 ---
 
@@ -98,11 +98,11 @@ Ask about our shuttle service and current coverage area, plus loaner availabilit
 In many cases, yes. Once your deal is finalized online, ask us about delivery to Sebastian, Micco, Barefoot Bay, or Fellsmere. Eligibility depends on the vehicle and your address, so call to confirm before you plan your day.
 
 **Can I do the whole purchase online and only come down once?**
-Yes. Build your deal, apply for financing ({{FINANCE_APP}}), and value your trade from home. We'll have the paperwork ready so your one trip down US-1 is just to sign and drive.
+Yes. Build your deal, apply for financing (https://www.verobeachtoyota.com/finance.aspx), and value your trade from home. We'll have the paperwork ready so your one trip down US-1 is just to sign and drive.
 
 ---
 
-Ready when you are. Browse inventory at **{{SRP_NEW}}**, schedule service at **{{SCHEDULER}}**, or call **[772-569-8000](tel:7725698000)**. We're 20 minutes south, on US-1, at 1075 S US Hwy 1, Vero Beach, FL 32962.
+Ready when you are. Browse inventory at **https://www.verobeachtoyota.com/searchnew.aspx**, schedule service at **https://www.verobeachtoyota.com/serviceappmt.aspx**, or call **[772-569-8000](tel:7725698000)**. We're 20 minutes south, on US-1, at 1075 S US Hwy 1, Vero Beach, FL 32962.
 
 ```json
 {

@@ -22,12 +22,14 @@ def stores():
 
 def notify(title, message):
     """macOS notification per feedback_deliverables_in_terminal / ping-anytime rules."""
+    # Pass title/message as argv (on run argv) so apostrophes, quotes, backslashes,
+    # and any AppleScript-special chars are never injected into the script body.
+    script = ('on run argv\n'
+              'display notification (item 1 of argv) with title (item 2 of argv) '
+              'sound name "Glass"\n'
+              'end run')
     try:
-        subprocess.run(
-            ["osascript", "-e",
-             f'display notification {json.dumps(message)} with title {json.dumps(title)} sound name "Glass"'],
-            check=False,
-        )
+        subprocess.run(["osascript", "-e", script, str(message), str(title)], check=False)
     except Exception as e:
         print(f"[notify-failed] {title}: {message} ({e})")
 

@@ -58,7 +58,7 @@ That means whatever your household needs — a fuel-efficient Kia, a Toyota truc
 
 The drive to Melbourne or Fort Pierce was never really about a better car. It was about habit. And the math on that habit — five-plus years of long drives, lost time, and fuel — has quietly stopped making sense for Indian River County drivers who can get the same brands, a longer warranty's worth of service, and a hometown team right here on US-1.
 
-Come see for yourself. **[Schedule a test drive or contact our team]({{CONTACT}})**, explore our **[Kia dealership page](/kia-dealer-vero-beach-fl/)**, or browse the **[Toyota store](/toyota-dealer-vero-beach-fl/)** next door. Your next car — and the next five years of owning it — can happen ten minutes from home.
+Come see for yourself. **[Schedule a test drive or contact our team](https://www.kiaofverobeach.com/contactus.aspx)**, explore our **[Kia dealership page](/kia-dealer-vero-beach-fl/)**, or browse the **[Toyota store](/toyota-dealer-vero-beach-fl/)** next door. Your next car — and the next five years of owning it — can happen ten minutes from home.
 
 **Kia of Vero Beach** · 1105 S US Hwy 1, Vero Beach, FL 32962 · 772-291-0031 · [kiaofverobeach.com](https://www.kiaofverobeach.com)
 **Toyota of Vero Beach** · 1075 S US Hwy 1, Vero Beach, FL 32962 · 772-569-8000 · [verobeachtoyota.com](https://www.verobeachtoyota.com)
