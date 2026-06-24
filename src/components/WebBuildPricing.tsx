@@ -19,17 +19,17 @@ const tiers: Tier[] = [
   {
     id: "starter",
     name: "Starter",
-    price: "$499",
+    price: "$1,500",
     priceSuffix: "flat",
-    timeline: "48-hour turnaround",
-    tagline: "For service businesses that need a clean, fast single-page site.",
+    timeline: "5-7 days",
+    tagline: "A clean, fast, custom site for a service business that needs to look the part and capture leads.",
     features: [
-      "5-page static site",
+      "Up to 5 custom pages",
       "Mobile-first responsive",
-      "Basic on-page SEO",
-      "Contact form → your inbox",
+      "On-page + local SEO basics",
+      "Contact / lead form → your inbox",
       "Custom domain setup",
-      "1 revision round",
+      "2 revision rounds",
       "Live preview before payment",
     ],
     cta: "Start a Starter build",
@@ -37,10 +37,10 @@ const tiers: Tier[] = [
   {
     id: "pro",
     name: "Pro",
-    price: "$1,500",
+    price: "$2,500",
     priceSuffix: "flat",
     timeline: "7-10 days",
-    tagline: "The default for most small businesses — CMS, Stripe, custom CTAs.",
+    tagline: "The default for most businesses — CMS, payments, and a brand-true custom design.",
     features: [
       "10+ pages with CMS",
       "Custom design per brand",
@@ -56,10 +56,10 @@ const tiers: Tier[] = [
   {
     id: "scale",
     name: "Scale",
-    price: "$2,500",
+    price: "$4,500",
     priceSuffix: "+",
     timeline: "10-14 days",
-    tagline: "Full-stack: auth, database, admin dashboards, custom features.",
+    tagline: "Full-stack software: auth, database, admin dashboards, and custom features built to spec.",
     features: [
       "Full Next.js 15 app",
       "Auth + user accounts",
@@ -67,7 +67,7 @@ const tiers: Tier[] = [
       "Payment flows + orders",
       "API integrations (any)",
       "Custom features quoted in scope",
-      "Unlimited revision rounds during build",
+      "Unlimited revisions during build",
     ],
     cta: "Start a Scale build",
   },
@@ -90,17 +90,32 @@ const retainers = [
   },
   {
     name: "Local SEO + Google Maps",
-    price: "$199/mo",
-    setup: "$299 one-time setup" as string | null,
+    price: "$149/mo",
+    setup: "$199 one-time setup" as string | null,
     tagline:
       "When someone searches “[your trade] near me”, the map pack shows before any website. This puts you in it — and keeps you there.",
     cta: "Get found on Maps",
     features: [
       "Google Business Profile claim, verify + full build-out",
       "Categories, services, photos + service areas done right",
-      "Weekly Google posts that keep the listing active",
+      "Periodic Google posts that keep the listing active",
       "Review ask-flow — grow your stars after every job",
       "Monthly ranking + calls/views report",
+    ],
+  },
+  {
+    name: "AI Receptionist",
+    price: "Custom",
+    setup: null as string | null,
+    tagline:
+      "A bilingual voice agent answers every call 24/7, books and qualifies the job, and texts you the details. You stop losing leads to voicemail.",
+    cta: "Hear a live demo",
+    features: [
+      "Answers 24/7 — nights, weekends, while you work",
+      "Books appointments & qualifies callers",
+      "Bilingual (English / Spanish)",
+      "Texts you caller name, number + reason",
+      "Custom-trained on your business",
     ],
   },
 ];
@@ -204,7 +219,7 @@ export default function WebBuildPricing() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {retainers.map((retainer, i) => (
             <motion.div
               key={retainer.name}

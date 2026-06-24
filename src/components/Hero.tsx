@@ -13,9 +13,9 @@ import { ArrowRight, Terminal, Cpu, Wifi, ChevronDown } from "lucide-react";
 import MagneticButton from "./MagneticButton";
 
 const stats = [
-  { value: 50, suffix: "+", label: "Projects Shipped" },
-  { value: 12, suffix: "", label: "Hardware Products" },
-  { value: 99.8, suffix: "%", label: "Uptime SLA" },
+  { value: 9, suffix: "", label: "Services, one team" },
+  { value: 14, suffix: "-day", label: "Typical launch" },
+  { value: 100, suffix: "%", label: "Custom-built" },
 ];
 
 function AnimatedCounter({ value, suffix, delay }: { value: number; suffix: string; delay: number }) {
@@ -175,7 +175,7 @@ export default function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-circuit-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-circuit-500" />
               </span>
-              HARDWARE + SOFTWARE ENGINEERING
+              WEBSITES · SEO · AI · APPS · HARDWARE
             </motion.div>
 
             {/* Headline — word-by-word reveal */}
@@ -212,10 +212,11 @@ export default function Hero() {
               transition={{ delay: 1.2, duration: 0.7 }}
               className="text-lg sm:text-xl text-gray-200 max-w-lg mb-10 leading-relaxed"
             >
-              Custom business websites from <span className="text-circuit-300 font-semibold">$499 flat</span>,
-              scaling to <span className="text-circuit-300 font-semibold">$2,500 full-stack builds</span> in 10-14 days.
-              Plus hardware, PCBs, and IoT platforms when you need the whole
-              stack. One team. Startup speed. Enterprise quality.
+              Custom websites, local SEO, AI phone agents, apps, and custom
+              software — built from scratch by one team. Fixed-scope builds from{" "}
+              <span className="text-circuit-300 font-semibold">$1,500</span>,
+              live in <span className="text-circuit-300 font-semibold">10–14 days</span>.
+              Startup speed. Enterprise quality.
             </motion.p>
 
             {/* CTAs */}

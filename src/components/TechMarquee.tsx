@@ -4,59 +4,52 @@ import { motion } from "framer-motion";
 import { techStack } from "@/lib/data";
 
 export default function TechMarquee() {
-  const doubled = [...techStack, ...techStack];
-
   return (
-    <section className="relative py-20 overflow-hidden">
+    <section className="relative py-20 px-4 overflow-hidden">
       {/* Divider */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-circuit-500/20 to-transparent" />
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-      >
-        <div className="text-center mb-10">
+      <div className="max-w-5xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-10"
+        >
           <p className="text-xs font-mono text-circuit-300/80 tracking-[0.25em] uppercase font-semibold">
-            Technologies we ship with
+            The stack we build on
           </p>
-        </div>
+        </motion.div>
 
-        {/* First row — left to right */}
-        <div className="relative">
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-carbon-500 to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-carbon-500 to-transparent z-10" />
-
-          <div className="flex animate-marquee gap-4">
-            {doubled.map((tech, i) => (
-              <div
-                key={`${tech}-${i}`}
-                className="flex-shrink-0 px-5 py-2.5 glass-card text-sm font-mono text-gray-100 hover:text-circuit-300 hover:border-circuit-500/30 transition-all duration-300 cursor-default whitespace-nowrap"
-              >
-                {tech}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Second row — right to left */}
-        <div className="relative mt-4">
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-carbon-500 to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-carbon-500 to-transparent z-10" />
-
-          <div className="flex gap-4" style={{ animation: "marquee 45s linear infinite reverse" }}>
-            {[...doubled].reverse().map((tech, i) => (
-              <div
-                key={`${tech}-rev-${i}`}
-                className="flex-shrink-0 px-5 py-2.5 glass-card text-sm font-mono text-gray-100 hover:text-circuit-300 hover:border-circuit-500/30 transition-all duration-300 cursor-default whitespace-nowrap"
-              >
-                {tech}
-              </div>
-            ))}
-          </div>
-        </div>
-      </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-60px" }}
+          variants={{
+            hidden: {},
+            show: { transition: { staggerChildren: 0.025 } },
+          }}
+          className="flex flex-wrap items-center justify-center gap-2.5"
+        >
+          {techStack.map((tech) => (
+            <motion.span
+              key={tech}
+              variants={{
+                hidden: { opacity: 0, y: 10 },
+                show: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] },
+                },
+              }}
+              className="px-4 py-2 glass-card text-sm font-mono text-gray-200 hover:text-circuit-300 hover:border-circuit-500/30 transition-colors duration-300 cursor-default"
+            >
+              {tech}
+            </motion.span>
+          ))}
+        </motion.div>
+      </div>
     </section>
   );
 }

@@ -121,8 +121,8 @@ const demos: Demo[] = [
 ];
 
 const valueProps = [
-  { icon: Zap, label: "48-hour turnaround", sub: "Live demo before you commit" },
-  { icon: ShieldCheck, label: "$499 flat fee", sub: "No retainers. No surprises." },
+  { icon: Zap, label: "Live in days", sub: "See a real demo before you pay" },
+  { icon: ShieldCheck, label: "Fixed scope, from $1,500", sub: "Quoted up front. No surprises." },
   { icon: Sparkles, label: "Built from scratch", sub: "Not Wix. Not Squarespace." },
 ];
 
@@ -151,7 +151,7 @@ export default function WebsiteDemos() {
           </div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
             <span className="text-gradient-bright">Custom websites,</span>{" "}
-            <span className="text-gradient">live in 48 hours.</span>
+            <span className="text-gradient">built for your trade.</span>
           </h2>
           <p className="text-gray-200 max-w-2xl mx-auto text-lg leading-relaxed">
             Sample designs across a few service-business categories. Each is a

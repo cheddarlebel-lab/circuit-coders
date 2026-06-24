@@ -7,7 +7,19 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import { CircuitBoard, Code, Globe, Brain, Store, ArrowUpRight } from "lucide-react";
+import {
+  CircuitBoard,
+  Code,
+  Globe,
+  Brain,
+  Store,
+  MapPin,
+  PhoneCall,
+  Layers,
+  Smartphone,
+  Sparkles,
+  ArrowUpRight,
+} from "lucide-react";
 import { services } from "@/lib/data";
 
 const iconMap: Record<string, React.ElementType> = {
@@ -16,6 +28,11 @@ const iconMap: Record<string, React.ElementType> = {
   Globe,
   Brain,
   Store,
+  MapPin,
+  PhoneCall,
+  Layers,
+  Smartphone,
+  Sparkles,
 };
 
 type Service = (typeof services)[number];
@@ -23,11 +40,9 @@ type Service = (typeof services)[number];
 function ServiceCard({
   service,
   index,
-  spanFull,
 }: {
   service: Service;
   index: number;
-  spanFull: boolean;
 }) {
   const Icon = iconMap[service.icon];
   const ref = useRef<HTMLDivElement>(null);
@@ -63,8 +78,8 @@ function ServiceCard({
       whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{
-        delay: (index % 2) * 0.12,
-        duration: 0.9,
+        delay: (index % 3) * 0.1,
+        duration: 0.8,
         ease: [0.16, 1, 0.3, 1],
       }}
       onMouseMove={handleMove}
@@ -75,7 +90,7 @@ function ServiceCard({
         transformPerspective: 1100,
         transformStyle: "preserve-3d",
       }}
-      className={`group relative glass-card-hover p-8 overflow-hidden card-spotlight hover-lift ${spanFull ? "md:col-span-2" : ""}`}
+      className="group relative glass-card-hover p-7 overflow-hidden card-spotlight hover-lift h-full"
     >
       {/* Mouse-follow spotlight */}
       <motion.div
@@ -126,10 +141,15 @@ function ServiceCard({
           </motion.div>
         </div>
 
-        <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-circuit-100 transition-colors">
-          {service.title}
-        </h3>
-        <p className="text-gray-200 mb-6 leading-relaxed">
+        <div className="flex items-center gap-3 mb-3">
+          <h3 className="text-xl font-semibold text-white group-hover:text-circuit-100 transition-colors">
+            {service.title}
+          </h3>
+        </div>
+        <div className="inline-flex items-center px-2.5 py-1 mb-4 rounded-md bg-circuit-500/10 border border-circuit-500/20 text-[11px] font-mono text-circuit-300 tracking-wide">
+          {service.tag}
+        </div>
+        <p className="text-gray-200 mb-6 leading-relaxed text-sm">
           {service.description}
         </p>
 
@@ -167,8 +187,6 @@ function ServiceCard({
 }
 
 export default function Services() {
-  const isOddCount = services.length % 2 !== 0;
-
   return (
     <section id="services" className="relative py-32 px-4">
       {/* Divider line */}
@@ -190,32 +208,27 @@ export default function Services() {
             transition={{ duration: 0.5 }}
             className="inline-block px-4 py-1.5 glass-card text-xs font-mono text-circuit-300 tracking-widest mb-6"
           >
-            WHAT WE BUILD
+            WHAT WE DO
           </motion.div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
-            <span className="text-gradient-bright">From Schematic to</span>{" "}
-            <span className="text-gradient">Shipped Product</span>
+            <span className="text-gradient-bright">One studio for your</span>{" "}
+            <span className="text-gradient">whole digital stack.</span>
           </h2>
           <p className="text-gray-200 max-w-2xl mx-auto text-lg leading-relaxed">
-            Full-stack engineering that bridges the gap between digital code and
-            physical hardware. No hand-offs — we own the entire stack.
+            Websites, local search, AI phone agents, apps, custom software, even
+            hardware — designed, built, and shipped by one team. No agencies, no
+            hand-offs, no surprises.
           </p>
         </motion.div>
 
         {/* Grid */}
-        <div className="grid md:grid-cols-2 gap-6" style={{ perspective: 1200 }}>
-          {services.map((service, i) => {
-            const isLast = i === services.length - 1;
-            const spanFull = isLast && isOddCount;
-            return (
-              <ServiceCard
-                key={service.title}
-                service={service}
-                index={i}
-                spanFull={spanFull}
-              />
-            );
-          })}
+        <div
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-5"
+          style={{ perspective: 1200 }}
+        >
+          {services.map((service, i) => (
+            <ServiceCard key={service.title} service={service} index={i} />
+          ))}
         </div>
       </div>
     </section>

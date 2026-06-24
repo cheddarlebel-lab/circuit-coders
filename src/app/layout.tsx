@@ -8,25 +8,26 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default:
-      "Circuit Coders — Fallbrook Web Designer + Custom Hardware | $499 Flat Sites",
+      "Circuit Coders — Websites, Local SEO, AI Receptionists & Custom Software",
     template: "%s | Circuit Coders",
   },
   description:
-    "Fallbrook-based engineering studio. Custom-coded small business websites from $499 with 48-hour turnaround. Plus custom hardware, firmware, and IoT platforms.",
+    "North County San Diego engineering studio. Custom websites from $1,500, Google Maps / local SEO, 24/7 AI phone receptionists, apps, and custom software — designed and built by one team.",
   keywords: [
     "Fallbrook web designer",
     "Oceanside web designer",
     "North County San Diego web design",
     "small business website",
+    "local SEO San Diego",
+    "Google Business Profile management",
+    "AI receptionist",
+    "AI phone answering service",
     "auto detailing website design",
     "barber shop website",
-    "flat fee website",
-    "$499 website",
+    "custom software development",
+    "mobile app development",
     "custom PCB",
     "firmware development",
-    "IoT platform",
-    "hardware engineering",
-    "embedded systems",
     "full-stack development",
   ],
   authors: [{ name: "Circuit Coders" }],
@@ -50,15 +51,15 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: "Circuit Coders",
     title:
-      "Circuit Coders — Fallbrook Web Designer + Custom Hardware | $499 Flat Sites",
+      "Circuit Coders — Websites, Local SEO, AI Receptionists & Custom Software",
     description:
-      "Custom-coded small business websites from $499 with 48-hour turnaround. Plus custom hardware, firmware, and IoT platforms.",
+      "Custom websites from $1,500, Google Maps / local SEO, 24/7 AI phone receptionists, apps, and custom software — built by one team in North County San Diego.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Circuit Coders — Web Design + Custom Hardware",
+    title: "Circuit Coders — Websites, Local SEO, AI & Custom Software",
     description:
-      "Custom-coded small business websites from $499 with 48-hour turnaround. Plus custom hardware, firmware, and IoT platforms.",
+      "Custom websites from $1,500, local SEO, 24/7 AI receptionists, apps, and custom software — designed and built by one team.",
   },
   verification: {
     // Add these once verified in Search Console + Bing Webmaster.
@@ -73,7 +74,7 @@ const organizationJsonLd = {
   url: SITE_URL,
   logo: `${SITE_URL}/brand/logo.png`,
   description:
-    "Engineering studio building small business websites, custom hardware, firmware, and IoT platforms. Based in Fallbrook, CA.",
+    "Engineering studio building business websites, local SEO, AI phone receptionists, mobile apps, custom software, and hardware. Based in North County San Diego, CA.",
   founder: { "@type": "Person", name: "Leo Lebel" },
   sameAs: [
     "https://github.com/circuitcoders",
@@ -119,18 +120,35 @@ const localBusinessJsonLd = {
     "Web Design",
     "Web Development",
     "Local SEO",
+    "Google Business Profile Management",
+    "AI Phone Receptionist",
+    "Mobile App Development",
+    "Custom Software Development",
     "Custom Hardware Engineering",
-    "Firmware Development",
-    "IoT Platform Development",
   ],
   makesOffer: [
     {
       "@type": "Offer",
-      name: "Flat-Fee Small Business Website",
-      price: "499",
+      name: "Custom Business Website",
+      price: "1500",
       priceCurrency: "USD",
       description:
-        "Custom-coded small business website with on-page SEO, mobile-first design, and 48-hour turnaround.",
+        "Custom-coded business website with on-page SEO, mobile-first design, CMS, and lead capture. Built from scratch — no templates.",
+    },
+    {
+      "@type": "Offer",
+      name: "Local SEO + Google Maps Management",
+      price: "149",
+      priceCurrency: "USD",
+      description:
+        "Google Business Profile build-out and ongoing local SEO so you show up in the map pack. $199 one-time setup, then $149/mo.",
+    },
+    {
+      "@type": "Offer",
+      name: "AI Phone Receptionist",
+      priceCurrency: "USD",
+      description:
+        "A bilingual AI voice agent that answers calls 24/7, books and qualifies jobs, and texts you every lead.",
     },
   ],
 };

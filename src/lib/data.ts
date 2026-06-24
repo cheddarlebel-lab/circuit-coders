@@ -275,34 +275,76 @@ export const pricingTiers: PricingTier[] = [
 
 export const services = [
   {
-    title: "Hardware Design",
-    description: "From napkin sketch to production-ready PCBs. Custom schematics, component selection, and DFM optimization.",
-    icon: "CircuitBoard",
-    features: ["Schematic capture", "PCB layout (up to 8 layers)", "BOM optimization", "DFM/DFA review"],
-  },
-  {
-    title: "Firmware Engineering",
-    description: "Bare-metal to RTOS. We write firmware that ships — reliable, efficient, and OTA-updatable.",
-    icon: "Code",
-    features: ["ESP-IDF / Zephyr / Arduino", "BLE/WiFi/LoRa stacks", "OTA update systems", "Power optimization"],
-  },
-  {
-    title: "Software Integration",
-    description: "Cloud dashboards, mobile apps, and APIs that talk to your hardware seamlessly.",
-    icon: "Globe",
-    features: ["React/Next.js dashboards", "React Native mobile apps", "REST & MQTT APIs", "Real-time telemetry"],
-  },
-  {
-    title: "AI + Edge Computing",
-    description: "Deploy ML models on microcontrollers. Intelligent edge processing for real-time decision making.",
-    icon: "Brain",
-    features: ["TinyML deployment", "Edge inference", "Model optimization", "Predictive maintenance"],
-  },
-  {
     title: "Business Websites",
-    description: "Custom websites that drive sales and showcase your business. Not templates — built from scratch with admin tools to manage your own content.",
+    description:
+      "Custom, conversion-focused sites built from scratch — never templates. You get an admin dashboard to run your own content.",
+    icon: "Globe",
+    tag: "From $1,500",
+    features: ["Custom design per brand", "Mobile-first & fast", "Admin dashboard / CMS", "Lead capture + Stripe"],
+  },
+  {
+    title: "Local SEO & Google Maps",
+    description:
+      "When customers search “[your trade] near me,” the map pack shows before any website. We put you in it — and keep you there.",
+    icon: "MapPin",
+    tag: "$199 setup + $149/mo",
+    features: ["Google Business Profile build-out", "Local schema + on-page SEO", "Weekly Google posts", "Review ask-flow"],
+  },
+  {
+    title: "AI Receptionist",
+    description:
+      "A voice agent that answers every call 24/7, books and qualifies jobs, and texts you the details. Bilingual, never misses a lead.",
+    icon: "PhoneCall",
+    tag: "Book a live demo",
+    features: ["24/7 call answering", "Books & qualifies leads", "Bilingual (EN / ES)", "Texts you every caller"],
+  },
+  {
+    title: "Web Apps & SaaS",
+    description:
+      "Full-stack applications with auth, databases, dashboards, and recurring billing — the same stack behind our own products.",
+    icon: "Layers",
+    tag: "From $2,500",
+    features: ["Auth + user accounts", "Database + admin panel", "Stripe subscriptions", "Multi-tenant ready"],
+  },
+  {
+    title: "Mobile Apps",
+    description:
+      "Native iOS & Android apps designed, built, tested, and shipped to the App Store and Google Play.",
+    icon: "Smartphone",
+    tag: "iOS + Android",
+    features: ["Native iOS & Android", "Push + in-app purchases", "Offline-ready", "Store submission handled"],
+  },
+  {
+    title: "AI & Automation",
+    description:
+      "Put AI to work in your business: chatbots, content pipelines, and workflow automation wired straight into your tools.",
+    icon: "Brain",
+    tag: "Custom scope",
+    features: ["Custom AI integrations", "Content automation", "Workflow bots", "Data pipelines"],
+  },
+  {
+    title: "E-commerce & Payments",
+    description:
+      "Sell online the right way — Stripe checkout, subscriptions, invoicing, and order management built in.",
     icon: "Store",
-    features: ["Custom design & branding", "Mobile-first responsive", "Admin dashboard & CMS", "SEO & performance optimized"],
+    tag: "From $2,500",
+    features: ["Stripe checkout", "Subscriptions & invoicing", "Inventory + orders", "Customer portal"],
+  },
+  {
+    title: "Hardware & IoT",
+    description:
+      "The circuit in Circuit Coders: custom PCBs, firmware, and connected devices, designed end to end.",
+    icon: "CircuitBoard",
+    tag: "Quoted per build",
+    features: ["Schematic + PCB design", "Firmware (ESP-IDF / Zephyr)", "BLE / WiFi / LoRa", "Cloud telemetry"],
+  },
+  {
+    title: "Branding & 3D Printing",
+    description:
+      "Logos, brand systems, and physical products — including 3D-printed business cards that get remembered.",
+    icon: "Sparkles",
+    tag: "Add-on",
+    features: ["Logo & brand identity", "Print + social assets", "3D-printed products", "Brand guidelines"],
   },
 ];
 
