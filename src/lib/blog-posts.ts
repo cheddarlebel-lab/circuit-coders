@@ -20,6 +20,111 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "gym-website-design-north-county",
+    title: "Gym & Fitness Studio Website Design in North County",
+    description: "Most North County gym websites lose members before they ever book a class. Here's how to build a $499 fitness site that fills your schedule in 48 hours.",
+    keywords: ["gym website design", "fitness studio website design", "gym web design North County", "CrossFit gym website", "yoga studio website Vista", "personal trainer website San Marcos", "gym website design Oceanside", "fitness website Carlsbad", "small business website San Diego"],
+    publishedAt: "2026-06-24",
+    updatedAt: "2026-06-24",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "GYM · FITNESS · NORTH COUNTY",
+    sections: [
+      {
+        heading: "Your Gym Is Full of Energy. Your Website Feels Like a Closed Door.",
+        paragraphs: [
+          "Walk into a gym in Vista or San Marcos and you feel it — barbells dropping, a class counting reps, somebody hitting a PR. Then you pull up that same gym's website on your phone and it's a gray Wix template from 2019 with a class schedule saved as a JPEG you can't read. The energy is gone. The door is shut.",
+          "Here's the problem: nobody joins a gym on the first visit to your site. They visit 4 or 5 times over two weeks — checking your schedule, your prices, whether you do drop-ins. If your site is slow, broken on mobile, or hides the one thing they came for, they bounce to the gym in Carlsbad that made it easy.",
+          "In North County, fitness is competitive. There's a CrossFit box, a yoga studio, an F45, and three independent trainers within five miles of each other in most of these towns. The gym that wins isn't always the best gym. It's the one whose website answered the question before the prospect had to ask.",
+        ],
+      },
+      {
+        heading: "What a Gym Website Actually Needs (Build These First)",
+        paragraphs: [
+          "A gym site has one job: turn a curious local into a booked trial. Everything else is decoration. Most fitness websites bury the conversion under a hero video and a wall of mission-statement copy nobody reads.",
+          "Strip it down to what a prospect in Oceanside is actually trying to do at 9pm on their couch. They want to know when you're open, what it costs, and how to lock in a first session without calling you.",
+        ],
+        list: {
+          title: "The non-negotiables for a fitness site that fills classes:",
+          items: [
+            "A live class schedule that's readable on a phone — not a screenshot, not a PDF",
+            "One obvious 'Book a Free Trial' button on every screen, above the fold",
+            "Real prices, or at least a clear range — hiding pricing kills 30–40% of leads",
+            "Photos of YOUR gym and YOUR members, not stock photos of a Equinox in Manhattan",
+            "Click-to-call and a Google Maps embed so people can find your unit off Highway 78",
+            "Fast load — under 2 seconds, because gym browsing happens on phones with one bar of signal",
+            "A short intro video or class clip — fitness sells on vibe, and vibe sells in motion",
+          ],
+        },
+      },
+      {
+        heading: "What to Cut From Your Gym Website Today",
+        paragraphs: [
+          "Most of the 'features' gym owners get talked into add friction, slow the site down, or actively annoy the exact person trying to give you money. If it doesn't move someone toward a booked session, it's clutter.",
+          "Be ruthless here. Every extra widget is one more thing that breaks on mobile and one more second of load time.",
+        ],
+        list: {
+          title: "Delete these the second you can:",
+          items: [
+            "A chatbot — for a local gym, a chatbot is a tax on a member who just wants your schedule",
+            "Auto-playing music or a 12 MB hero video that eats data and load time",
+            "A 'members login' portal you don't actually use — link to your app instead (Mindbody, Wodify, TeamUp)",
+            "Pop-ups that fire in the first 3 seconds before anyone's read a word",
+            "Long 'About Our Philosophy' paragraphs above the schedule and pricing",
+            "Five social icons in the header that send people off your site before they book",
+          ],
+        },
+        callout: "If a feature makes a sweaty prospect work harder to book a trial, it's not a feature. It's a leak.",
+      },
+      {
+        heading: "Get Found: Local SEO for Gyms in North County",
+        paragraphs: [
+          "Someone in Bonsall types 'gym near me' or 'CrossFit Vista' into Google. Whether you show up isn't luck — it's a handful of specific, boring tasks most gym owners never finish. Do them and you'll outrank studios with twice your budget.",
+          "Your Google Business Profile is more important than your website's homepage for local discovery. It's what shows in the map pack — those top 3 results with the pins. Claim it, fill out every field, pick the right categories ('Gym,' 'Fitness Center,' 'Personal Trainer'), and post photos every couple weeks.",
+          "Then make your website speak Google's language. Each location or service should target a '[service] + [city]' phrase — 'personal training San Marcos,' 'yoga classes Oceanside,' 'CrossFit Vista.' Add LocalBusiness and your specific schema.org markup (Gym, ExerciseGym, SportsActivityLocation) so search engines understand your hours, address, and class types.",
+        ],
+        list: {
+          title: "Local SEO checklist for North County gyms:",
+          items: [
+            "Claim and fully complete your Google Business Profile — every field, real hours, 10+ photos",
+            "Match your Name, Address, Phone exactly across Yelp, Apple Maps, and local directories (NAP consistency)",
+            "Add schema.org markup for Gym/SportsActivityLocation and your class schedule",
+            "Build a page per service-city combo: 'kickboxing Carlsbad,' 'spin classes San Marcos'",
+            "Ask 5 happy members a month for a Google review — volume and recency both rank",
+            "List in North County directories and any Fallbrook/Vista chamber of commerce site",
+          ],
+        },
+        callout: "Most gyms in North County have a half-filled Google Business Profile and zero schema. That gap is your fastest path to the map pack.",
+      },
+      {
+        heading: "What Gym Websites Cost — and Why $499 Beats the Agencies",
+        paragraphs: [
+          "Quote a gym website around North County and you'll hear everything from $3,000 to $8,000 from agencies, plus a $200–$400/month 'maintenance' retainer that mostly buys silence. The cheap end — DIY Wix or Squarespace — runs $16–$49/month forever and still leaves you doing the work yourself at 11pm.",
+          "Circuit Coders builds your gym site for $499 flat, with a 48-hour turnaround. Custom Next.js on Vercel, so it loads fast and ranks — not a bloated template fighting for every second. One round of revisions included, and we send you a free mockup first so you see it before you pay anything.",
+          "Need online booking, drop-in payments, or a Mindbody/TeamUp integration wired in? Those are $200–$500 add-ons, quoted up front, not a surprise on the invoice. Want us to keep it updated and hosted? That's an optional $50/month — schedule changes, new class photos, seasonal promos handled — and you can drop it anytime.",
+        ],
+        callout: "An agency charges $5,000 and three weeks for what we ship in 48 hours for $499. Same speed your gym demands of its members.",
+      },
+      {
+        heading: "See It Before You Pay: Free Mockup for Your Gym",
+        paragraphs: [
+          "We've built sites for detailers, tint shops, and upholstery shops across Oceanside and Fallbrook, and the pattern is always the same: the business is great, the website was the bottleneck. Gyms are no different — your floor is full, your funnel is leaking.",
+          "Here's the offer. Send us your current site (or your Instagram if that's all you've got) and we'll send back a free audit plus a mockup of a faster, cleaner gym site built to fill your schedule. No deposit, no contract, no pitch deck.",
+          "If you like it, it's $499 and live in 48 hours. If you don't, you keep the audit and we shake hands. That's the whole deal.",
+        ],
+        callout: "Free mockup, free audit, no deposit. $499 flat, 48-hour turnaround, one round of revisions. Reply and we'll start today.",
+      },
+    ],
+    faqs: [
+      { q: "How much does a gym website cost in San Diego?", a: "Local agencies quote $3,000–$8,000 plus a monthly retainer. Circuit Coders builds a custom gym site for $499 flat with a 48-hour turnaround and a free mockup first." },
+      { q: "Can you connect my website to Mindbody or TeamUp for class booking?", a: "Yes. Booking and payment integrations like Mindbody, Wodify, TeamUp, or Stripe are $200–$500 add-ons, quoted up front, so members book classes right from your site." },
+      { q: "How long does it take to rank on Google for 'gym near me' in North County?", a: "A fully optimized Google Business Profile can hit the map pack within 60–90 days for less competitive terms. Steady reviews — 5 a month — and city-specific pages speed it up." },
+      { q: "Why is my gym's Wix or Squarespace site so slow on phones?", a: "Template builders load 3–5 MB of unused code per page, which crawls on mobile data. We build on Next.js and Vercel so pages load in under 2 seconds, where 80%+ of gym browsing happens." },
+      { q: "Do I really need a separate website if I already have Instagram and a Mindbody page?", a: "Yes — neither ranks well on Google for 'gym + your city,' and both bury your schedule and pricing. A $499 site ties them together and captures the local searches they miss." },
+    ],
+  },
+  {
     slug: "upholstery-shop-website-design-oceanside",
     title: "Auto Upholstery Website Design in Oceanside: Get Found, Get Booked",
     description: "Most Oceanside auto upholstery shops have no website or a dead Facebook page. Here's how to get a real one — $499 flat, 48-hour turnaround.",
