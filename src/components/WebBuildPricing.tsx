@@ -78,6 +78,7 @@ const retainers = [
     name: "Maintenance Retainer",
     price: "$199/mo",
     setup: null as string | null,
+    href: "/#contact",
     tagline: "Keep your site growing, not rotting.",
     cta: "Add to my build",
     features: [
@@ -92,6 +93,7 @@ const retainers = [
     name: "Local SEO + Google Maps",
     price: "$149/mo",
     setup: "$199 one-time setup" as string | null,
+    href: "/#contact",
     tagline:
       "When someone searches “[your trade] near me”, the map pack shows before any website. This puts you in it — and keeps you there.",
     cta: "Get found on Maps",
@@ -107,9 +109,10 @@ const retainers = [
     name: "AI Receptionist",
     price: "Custom",
     setup: null as string | null,
+    href: "tel:+17605469189",
     tagline:
-      "A bilingual voice agent answers every call 24/7, books and qualifies the job, and texts you the details. You stop losing leads to voicemail.",
-    cta: "Hear a live demo",
+      "A bilingual voice agent answers every call 24/7, books and qualifies the job, and texts you the details. You stop losing leads to voicemail. Hear ours live — call (760) 546-9189.",
+    cta: "Call the live demo",
     features: [
       "Answers 24/7 — nights, weekends, while you work",
       "Books appointments & qualifies callers",
@@ -258,7 +261,7 @@ export default function WebBuildPricing() {
                 </ul>
               </div>
               <a
-                href="/#contact"
+                href={retainer.href}
                 className="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm glass-card text-white hover:border-circuit-500/40 transition-all duration-300 whitespace-nowrap"
               >
                 {retainer.cta}

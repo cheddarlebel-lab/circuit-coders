@@ -293,9 +293,9 @@ export const services = [
   {
     title: "AI Receptionist",
     description:
-      "A voice agent that answers every call 24/7, books and qualifies jobs, and texts you the details. Bilingual, never misses a lead.",
+      "A bilingual voice agent that answers every call 24/7, books and qualifies the job, and texts you the details. Hear ours live — call (760) 546-9189.",
     icon: "PhoneCall",
-    tag: "Book a live demo",
+    tag: "Live demo → (760) 546-9189",
     features: ["24/7 call answering", "Books & qualifies leads", "Bilingual (EN / ES)", "Texts you every caller"],
   },
   {

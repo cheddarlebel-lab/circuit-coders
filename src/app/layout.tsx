@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
+import ChatAgent from "@/components/ChatAgent";
 
 const SITE_URL = "https://circuitcoders.com";
 
@@ -190,6 +191,7 @@ export default function RootLayout({
       </head>
       <body className="bg-carbon-500 text-white antialiased font-sans">
         {children}
+        <ChatAgent />
         <Analytics />
       </body>
     </html>
