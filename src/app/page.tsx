@@ -9,6 +9,7 @@ import TechMarquee from "@/components/TechMarquee";
 import MockupStudio from "@/components/MockupStudio";
 import Process from "@/components/Process";
 import LiveMetrics from "@/components/LiveMetrics";
+import FAQ from "@/components/FAQ";
 import InquiryForm from "@/components/InquiryForm";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
@@ -37,6 +38,7 @@ export default function Home() {
         <MockupStudio />
         <Process />
         <LiveMetrics />
+        <FAQ />
         <InquiryForm />
       </main>
       <Footer />

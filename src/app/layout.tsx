@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import ChatAgent from "@/components/ChatAgent";
+import { faqJsonLd } from "@/lib/faq";
 
 const SITE_URL = "https://circuitcoders.com";
 
@@ -187,6 +188,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       </head>
       <body className="bg-carbon-500 text-white antialiased font-sans">

@@ -20,6 +20,782 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "hacked-wordpress-small-business",
+    title: "Your WordPress Site Got Hacked. Here's What to Do.",
+    description: "A WordPress hack drops your rankings, scares customers, and gets you blacklisted by Google. Here's the 48-hour cleanup plan, plus how to make sure it never happens again.",
+    keywords: ["wordpress hacked what to do", "clean a hacked wordpress site", "wordpress malware removal", "small business website security", "wordpress pharma hack", "japanese keyword hack", "google blacklist website", "website got hacked recovery"],
+    publishedAt: "2026-06-24",
+    updatedAt: "2026-06-24",
+    readTime: 8,
+    category: "Tech",
+    author: "Circuit Coders",
+    heroTag: "WORDPRESS · SECURITY · RECOVERY",
+    sections: [
+      {
+        heading: "You Googled your own business and saw Viagra ads",
+        paragraphs: [
+          "Here's how most owners find out. You search your shop's name on a Tuesday morning, and under your title in Google it says something about cheap pharmaceuticals or a casino in a language you don't speak. Your homepage looks fine when you click it. The hack is hiding from you and showing itself to Google.",
+          "I get this call a couple times a month from businesses around North County — a Vista contractor, a Carlsbad boutique, a Fallbrook landscaper who hadn't logged into their site since 2021. The site still 'works.' It's also quietly injecting 4,000 spam pages, and Google is about to slap a red 'this site may be hacked' warning under every result.",
+          "This is not the end of your business. But the clock matters. Every day a hacked site sits live, you lose rankings, you train customers to distrust your name, and you inch closer to Google blacklisting the whole domain. Move now.",
+        ],
+        callout: "If Google shows 'This site may be hacked' under your listing, you can lose 50–80% of organic traffic within a week. Speed beats perfection here.",
+      },
+      {
+        heading: "The first 48 hours: what to actually do",
+        paragraphs: [
+          "Don't panic-delete things. Don't pay the random 'we'll fix it for $50' guy in your DMs. Work the list in order. Most of this you can do today, and the parts you can't, a real developer can knock out fast.",
+          "The single most important move is taking the site offline or into maintenance mode while you work. A hacked site that's still live is still spreading and still being re-crawled by Google as spam.",
+        ],
+        list: {
+          title: "Your hacked-site checklist",
+          items: [
+            "Put the site in maintenance mode or take it offline so Google stops crawling the spam pages",
+            "Change every password — WordPress admin, hosting/cPanel, FTP, and the database. Don't reuse the old ones",
+            "Download a fresh backup of the whole site and database before you touch anything, so you have evidence and a fallback",
+            "Scan with Wordfence or Sucuri (free versions are fine) to find the injected files and backdoors",
+            "Delete every plugin and theme you're not actively using — abandoned plugins are the #1 way in",
+            "Update WordPress core, all plugins, and your theme to the current version once it's clean",
+            "Request a malware review in Google Search Console after cleanup so the warning gets removed (typically 1–3 days)",
+          ],
+        },
+      },
+      {
+        heading: "What to cut — the stuff that wastes your time",
+        paragraphs: [
+          "Half of hacked-site recovery is people doing expensive things that don't fix anything. A new logo doesn't remove a backdoor. Neither does a $300/year 'premium security suite' bolted onto a site that's already compromised.",
+          "If your site has been hacked twice, restoring the same infected backup over and over is not a strategy — you're just reloading the malware. At some point the cheapest path forward is a clean rebuild, not a fourth cleanup.",
+        ],
+        list: {
+          title: "Skip these — they don't fix a hack",
+          items: [
+            "Don't just restore an old backup and call it done — if you don't find the backdoor, it comes right back in a week",
+            "Don't buy a $99/year 'security plugin bundle' as your only defense — it's a band-aid on a knife wound",
+            "Don't ignore your hosting account — hackers often plant scripts outside WordPress entirely",
+            "Don't leave 'admin' as a username or keep inactive user accounts a former employee set up",
+            "Don't pay a recovery service that won't tell you exactly which files were infected and how they got in",
+          ],
+        },
+      },
+      {
+        heading: "Why WordPress sites get hacked (it's almost never WordPress core)",
+        paragraphs: [
+          "People love to blame WordPress. The truth is the core software is reasonably secure when it's updated. What gets you hacked is everything bolted onto it — that contact-form plugin from 2019 the developer abandoned, the 'nulled' premium theme someone downloaded for free, the slider plugin with a known vulnerability sitting unpatched.",
+          "A typical small-business WordPress site runs 15–25 plugins. Each one is a door. Each one is maintained by a different person who may have quit years ago. You're trusting two dozen strangers to keep your business safe, and most owners have no idea which plugins are even installed.",
+          "This is the part nobody tells you when they sell you a $2,000 WordPress build: you just signed up for a maintenance job. Skip the updates for a year and you're not running a website, you're running a target.",
+        ],
+        callout: "Roughly 90% of hacked CMS sites are WordPress — not because it's bad, but because it runs 40% of the web and most installs are never updated.",
+      },
+      {
+        heading: "Getting your local rankings back after the cleanup",
+        paragraphs: [
+          "Cleaning the malware is step one. Repairing what the hack did to your local SEO is step two, and it's the part most cleanup services completely ignore. A pharma hack can inject thousands of junk pages that Google indexed, and those need to be cleared out, not just hidden.",
+          "Start in Google Search Console: submit a malware review request, then use the URL removal tool on the worst spam pages. Re-confirm your real pages are indexed. Then go reassure Google your business is the real thing — your Google Business Profile, your name-address-phone matching across local citations, and clean schema.org LocalBusiness markup on your site so search engines re-verify who you are.",
+          "If you serve specific towns, your real pages should still target the searches that matter — 'electrician Oceanside,' 'detailer Carlsbad,' 'roofer San Marcos.' A hack often buries those under spam. Once the junk is gone and the markup is back, legitimate rankings usually recover within 30–60 days, sometimes faster if you act before Google blacklists you.",
+        ],
+        list: {
+          title: "Local SEO recovery steps",
+          items: [
+            "Submit a security review in Google Search Console to clear the 'hacked' label",
+            "Use the URL removal tool on injected spam pages so they drop out of the index",
+            "Re-verify NAP (name, address, phone) consistency across your Google Business Profile and local citations",
+            "Re-add LocalBusiness schema.org markup so Google can re-confirm your business identity",
+            "Rebuild your real '[service] + [city]' pages if the hack damaged or buried them",
+          ],
+        },
+      },
+      {
+        heading: "What this costs — and where $499 beats a $200/mo retainer",
+        paragraphs: [
+          "A professional malware cleanup runs $150–$500 one-time from most services. Then they offer you a security retainer at $50–$200 a month to keep watching the same fragile WordPress install you just paid to fix. Over two years that's $1,200–$4,800 to keep a hacked-prone site on life support.",
+          "Here's the math nobody does for you. If your WordPress site has been hacked once, the cleanup plus a year of monitoring often costs more than just rebuilding clean on something that doesn't have this problem in the first place.",
+          "That's what we build. Circuit Coders does a custom site on Next.js and Vercel for $499 flat, 48-hour turnaround, free mockup first. There's no WordPress, no two dozen plugins, no admin login for a bot to brute-force, no database for someone to inject. It's static and serverless — there's almost nothing to hack. Hosting and updates are an optional $50/mo if you want us handling it, but the attack surface that got you hacked is just gone.",
+        ],
+        callout: "A modern static site has no WordPress admin, no plugins, and no database — you remove the three things that get small-business sites hacked in the first place.",
+      },
+      {
+        heading: "Hacked once, hacked again — or get off the hamster wheel",
+        paragraphs: [
+          "I'll be straight with you. If your site was hacked once and you clean it and change nothing else, the odds it happens again inside a year are high. The vulnerability was the architecture, not bad luck. Patching it buys you months, not safety.",
+          "So you've got two roads. Road one: clean it, pay the monthly retainer, keep your fingers crossed every time a plugin needs updating. That's legitimate, and a good developer can do it well. Road two: rebuild clean on a platform that doesn't have an admin panel for bots to attack, and stop thinking about this entirely.",
+          "If you're not sure which road makes sense for your business, I'll look at your site for free. Send me your URL and I'll tell you exactly what got hacked, whether it's worth cleaning, and what a clean rebuild would look like — plus a free mockup of the new version if you want one. No retainer, no pitch you didn't ask for. $499 flat, 48 hours, one round of revisions, and a site there's nothing left to break into.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "How long does it take to clean a hacked WordPress site?", a: "A straightforward cleanup usually takes a few hours to a day for a developer who knows what to look for. Getting Google to remove the 'this site may be hacked' warning after you submit a review typically takes another 1–3 days." },
+      { q: "Will a hack hurt my Google rankings?", a: "Yes — a live hack can cost 50–80% of your organic traffic within a week once Google flags the site. After a clean removal and reindex, local rankings usually recover within 30–60 days." },
+      { q: "Should I just restore a backup to fix it?", a: "Only if the backup predates the hack and you've also closed the hole that let them in. Otherwise you'll re-upload the malware or get re-infected through the same vulnerable plugin within days." },
+      { q: "Is it cheaper to clean my hacked site or rebuild it?", a: "Cleanup runs $150–$500, plus $50–$200/mo if you want ongoing monitoring. If it's been hacked once already, a clean $499 flat rebuild on a platform with no plugins or database often costs less than a year of cleanup-and-monitoring." },
+      { q: "Why does WordPress get hacked so often?", a: "It's almost never the core software — it's outdated plugins and themes, which the average site has 15–25 of. WordPress runs about 40% of the web, so it's the biggest target, and most installs go months without an update." },
+    ],
+  },
+  {
+    slug: "link-preview-broken-fix",
+    title: "Why Your Website's Link Preview Is Broken (and How to Fix It)",
+    description: "Paste your site link in a text and get a blank box or naked URL? That's broken Open Graph tags. Here's exactly what's wrong and how to fix it fast.",
+    keywords: ["website link preview not working", "open graph tags", "link preview not showing image", "facebook link preview broken", "og:image not working", "imessage link preview", "social share preview", "North County web design", "Fallbrook web designer"],
+    publishedAt: "2026-06-24",
+    updatedAt: "2026-06-24",
+    readTime: 7,
+    category: "Tech",
+    author: "Circuit Coders",
+    heroTag: "OPEN GRAPH · LINK PREVIEWS · FIXES",
+    sections: [
+      {
+        heading: "You Paste Your Link and It Looks Dead",
+        paragraphs: [
+          "You're a Fallbrook contractor texting a quote to a homeowner. You paste circuitcoders-style link to your portfolio, hit send, and instead of a clean card with your logo and a photo, the customer sees a naked blue URL. Or worse — a gray box with a broken-image icon. It looks like a scam link, and now they're hesitating to tap it.",
+          "Same thing happens when an Oceanside restaurant shares its menu page on Facebook and the post shows no photo, no title, just the bare web address. The algorithm buries posts with no image. Your reach drops, the link looks sketchy, and nobody clicks.",
+          "This isn't a fluke and it isn't your phone. It's a fixable problem with a boring name — Open Graph tags — and almost every cheap or DIY site gets it wrong. The good news: it's a one-time fix, not a redesign.",
+        ],
+      },
+      {
+        heading: "The Problem Isn't Your Link. It's the Tags Behind It.",
+        paragraphs: [
+          "When you paste a link into iMessage, Facebook, LinkedIn, WhatsApp, or Slack, that app sends a little robot to your page to grab three things: a title, a description, and an image. It finds them by reading invisible tags in your site's code called Open Graph (OG) tags. No tags, no preview.",
+          "Facebook invented the Open Graph standard, and now everyone uses it — Apple, Microsoft, LinkedIn, the whole lot. X (Twitter) adds its own twist with twitter:card tags. If those tags are missing, pointing at a broken image, or using a relative path instead of a full URL, the preview falls apart.",
+          "Here's the kicker: your page can look perfect in a browser and still have zero OG tags. The browser doesn't need them. The link-preview robots do. That's why DIY builders and rushed $99 sites ship looking fine and then embarrass you the moment someone shares the link.",
+        ],
+      },
+      {
+        heading: "The Exact Tags You Need (Copy This Checklist)",
+        paragraphs: [
+          "Every page that anyone might share needs a short block of tags in the <head> of the HTML. Not the homepage only — every page. The product page, the menu page, the booking page. Each one should declare its own title, description, and image.",
+          "The image is the part people get wrong most. It has to be a full absolute URL (https://yoursite.com/preview.jpg, not /preview.jpg), it has to actually exist at that address, and it should be sized right or it'll get cropped into mush.",
+        ],
+        list: {
+          title: "The tags that make a preview work",
+          items: [
+            "og:title — the headline on the card (keep it under ~60 characters)",
+            "og:description — one or two sentences, under ~155 characters",
+            "og:image — an absolute https URL to a real image, ideally 1200×630 pixels",
+            "og:url — the canonical full address of the page",
+            "og:type — usually \"website\" for a business site",
+            "twitter:card — set to \"summary_large_image\" so X shows the big version",
+            "twitter:image — same image URL again, so X has its own copy",
+          ],
+        },
+        callout: "If you fix one thing today, fix og:image. A card with a photo gets tapped; a card without one gets ignored.",
+      },
+      {
+        heading: "What's Quietly Killing Your Preview",
+        paragraphs: [
+          "Half the time the tags are technically there — they're just wrong in ways you can't see by looking at the page. These are the silent killers I find on almost every audit, and any one of them blanks out your card.",
+          "Before you assume your fix didn't work, know this: Facebook, LinkedIn, and iMessage cache the old preview hard. You can fix the tags perfectly and still see the broken version for hours because the robot is showing you a stale copy.",
+        ],
+        list: {
+          title: "The usual suspects",
+          items: [
+            "og:image points to a relative path (/logo.png) — robots need the full https:// URL",
+            "The image is over 8 MB or under 200×200 px — Facebook refuses to load it",
+            "Tags live in the <body> instead of the <head> — the robot stops reading first",
+            "One global preview image for all 40 pages — every page looks identical",
+            "The image URL 404s because the file got renamed or moved",
+            "You're on a slow host and the robot times out before the image loads",
+            "You fixed it but never told the platform to re-scrape, so it shows the old cache",
+          ],
+        },
+        callout: "After any fix, run the page through Facebook's Sharing Debugger and LinkedIn's Post Inspector and hit \"re-scrape.\" That forces a fresh preview instead of waiting 24–48 hours for the cache to clear.",
+      },
+      {
+        heading: "While You're In There, Fix the Stuff Google Reads Too",
+        paragraphs: [
+          "Open Graph tags are for humans sharing links. Schema.org tags are for Google — and they're the same kind of invisible code in the same part of the page. If your link previews are broken, your structured data is almost certainly missing too, and that's costing you in search.",
+          "A North County service business should have LocalBusiness schema on the homepage: your name, address, phone, hours, service area, and the cities you cover — Carlsbad, Vista, San Marcos, Bonsall, Pala. That's what feeds the rich result with your hours and star rating, and it backs up your Google Business Profile.",
+          "Speaking of which: claim and fully fill your Google Business Profile, match the name-address-phone exactly across your site, Yelp, and every directory, and build separate pages targeting '[service] + [city]' — \"plumber Oceanside,\" \"detailing Vista,\" \"roofing San Marcos.\" Each page gets its own OG image and its own LocalBusiness schema. That's how a small shop shows up clean in both a text message and a map pack.",
+        ],
+      },
+      {
+        heading: "What This Costs (and Why It Shouldn't Be Much)",
+        paragraphs: [
+          "A typical agency will treat \"fix our link previews and add schema\" as a billable project — $150 to $250 an hour, padded into a few hours, call it $500 to $1,000 for an afternoon of head-tag work. That's real money for editing a dozen lines of code.",
+          "If your whole site is the problem — slow host, no OG tags, no schema, looks fine but shares like garbage — you're better off with a clean rebuild than paying hourly to patch a bad foundation. Circuit Coders builds custom sites flat at $499, 48-hour turnaround, on Next.js and Vercel, with Open Graph tags, per-page preview images, and LocalBusiness schema baked in from the first line. One round of revisions included.",
+          "Need something specific wired up — Stripe checkout, an online booking platform, a reservation system? Those run $200–$500 as add-ons. Hosting and ongoing updates are optional at $50/month. No retainer, no \"strategy call,\" no agency markup.",
+        ],
+      },
+      {
+        heading: "Send Me Your Link. I'll Tell You What's Wrong.",
+        paragraphs: [
+          "You don't have to guess whether your previews are broken. Paste your homepage into a text to yourself right now and look at the card. Blank image? Wrong title? Naked URL? That's the whole diagnosis.",
+          "I'll do the rest for free. Send me your link and I'll run it through the debuggers, check your OG tags, your schema, and your image sizes, and tell you exactly what's broken and what it'd take to fix — no charge, no pitch deck.",
+          "If the answer is \"the foundation is shot,\" I'll send you a free mockup of a fresh build so you can see the difference before you spend a dollar.",
+        ],
+        callout: "Free audit of your link previews and a free homepage mockup — $499 flat to build it right, live in 48 hours. Send the link and I'll tell you what's wrong today.",
+      },
+    ],
+    faqs: [
+      { q: "Why does my link show no image on Facebook but looks fine in my browser?", a: "Browsers don't need Open Graph tags to display a page, but Facebook's preview robot does. If those og:image and og:title tags are missing or pointing at a broken URL, you get a blank card even though the page itself loads perfectly." },
+      { q: "How long until my link preview updates after I fix the tags?", a: "Once you re-scrape the page in Facebook's Sharing Debugger or LinkedIn's Post Inspector, the new preview shows almost instantly. If you wait passively instead, platforms cache the old version for roughly 24–48 hours before refreshing on their own." },
+      { q: "Do I even need Open Graph tags if I already have a Google Business Profile?", a: "Yes — they do different jobs. Your Business Profile controls how you show up in Google Maps and search, while OG tags control how your link looks when anyone texts or shares it. A complete site needs both, plus LocalBusiness schema to tie them together." },
+      { q: "I'm on Wix or Squarespace — can I even fix this?", a: "Sometimes, through their SEO or social-sharing settings, but those builders often limit per-page images and load slowly enough that the preview robot times out. A clean custom build at $499 with proper per-page OG tags fixes it permanently in about 48 hours." },
+      { q: "What size should my link preview image be?", a: "1200×630 pixels is the standard that displays large and uncropped across Facebook, LinkedIn, iMessage, and X. Keep the file under 8 MB and never below 200×200, or platforms will refuse to load it." },
+    ],
+  },
+  {
+    slug: "schema-markup-local-business",
+    title: "Local Business Schema Markup: The Copy-Paste Version for North County Owners",
+    description: "Schema markup is the code that tells Google your address, hours, and reviews. Here's the exact copy-paste version for local businesses — no plugin, no jargon, no fluff.",
+    keywords: ["local business schema markup", "schema markup for small business", "LocalBusiness JSON-LD", "structured data SEO", "schema.org local business", "rich results Google", "Fallbrook web design", "North County San Diego SEO", "Google Business Profile schema"],
+    publishedAt: "2026-06-24",
+    updatedAt: "2026-06-24",
+    readTime: 8,
+    category: "SEO",
+    author: "Circuit Coders",
+    heroTag: "SCHEMA · STRUCTURED DATA · LOCAL SEO",
+    sections: [
+      {
+        heading: "Google reads your homepage. It can't read your business.",
+        paragraphs: [
+          "Open your website and you'll see your name, your hours, your phone number, your address in Fallbrook or Vista or Oceanside. You see a business. Google sees a wall of text and has to guess which line is the phone number and which line is just a number.",
+          "Schema markup is how you stop making Google guess. It's a small block of code that sits in your page and labels everything: this is the business name, this is the address, these are the hours, this is the 4.8-star rating. Google trusts labeled data far more than text it has to interpret.",
+          "When you skip it, you leave money on the table. The plumber in San Marcos with schema gets the star ratings and hours shown right in search results. The one without it gets a plain blue link. Same service, same town — one of them looks legit at a glance and one doesn't.",
+        ],
+        callout: "Schema doesn't change what's on your site. It changes how Google understands it — and that's half the battle in local search.",
+      },
+      {
+        heading: "What schema actually is (and the copy-paste block you need)",
+        paragraphs: [
+          "Schema markup — also called structured data or JSON-LD — is a vocabulary from schema.org that Google, Bing, and Apple all agreed to read. For a local business you only need one type to start: LocalBusiness. You drop a script into the <head> of your site and you're done.",
+          "Here's a real, working block. Swap in your own details — name, street, city, phone, hours, lat/long — and paste it before the closing </head> tag on every page. Coordinates come straight from Google Maps: right-click your pin, click the numbers to copy.",
+          "That single block can produce the hours, the click-to-call, and the map pin you see on the better-looking search results. No plugin subscription, no monthly fee, no agency retainer. It's one file edit.",
+        ],
+        list: {
+          title: "The minimum viable LocalBusiness block — fill in the blanks",
+          items: [
+            "\"@type\": \"LocalBusiness\" — or get specific: \"Plumber\", \"HVACBusiness\", \"AutoRepair\", \"BeautySalon\"",
+            "\"name\", \"image\", and \"url\" — your business name, a logo URL, your homepage",
+            "\"telephone\": \"+17605551234\" — full international format, the way Google wants it",
+            "\"address\" — streetAddress, addressLocality (Fallbrook), addressRegion (CA), postalCode",
+            "\"geo\" — latitude and longitude pulled from your Google Maps pin",
+            "\"openingHoursSpecification\" — days and times, so hours show in results",
+            "\"priceRange\": \"$$\" and \"sameAs\" — link your Facebook, Instagram, and Yelp profiles",
+          ],
+        },
+        callout: "One LocalBusiness block, pasted once, covers the three things customers scan for first: are you open, where are you, what's the number.",
+      },
+      {
+        heading: "The four schema types that actually move the needle",
+        paragraphs: [
+          "You don't need the 800 types schema.org publishes. For a service business in North County, four cover almost everything that shows up as a rich result. Add them in order — LocalBusiness first, the rest as you have the content to justify them.",
+          "The rule: only mark up things that are genuinely on the page and genuinely true. Schema for a review you never received is the fastest way to get a manual penalty. Mark up what's real and you'll start seeing star ratings, FAQs, and breadcrumbs in your listings within a few weeks of the next crawl.",
+        ],
+        list: {
+          title: "Add these, in this order",
+          items: [
+            "LocalBusiness — name, address, phone, hours, geo. The foundation. Do this first.",
+            "AggregateRating + Review — your real Yelp/Google star average. Gets you the gold stars in results.",
+            "FAQPage — mark up a real FAQ section and the questions can show directly under your listing.",
+            "Service — list what you do (drain cleaning, AC repair, deck staining) so each service is machine-readable.",
+            "BreadcrumbList — shows your site structure in the result instead of a raw URL.",
+            "Organization — your logo and social links, so the right logo shows in the knowledge panel.",
+          ],
+        },
+      },
+      {
+        heading: "What to cut — the schema mistakes that get you penalized",
+        paragraphs: [
+          "More schema is not better schema. Half the local sites I audit in Carlsbad and Oceanside have either zero structured data or a bloated mess that Google ignores or punishes. The bloat usually comes from a plugin someone installed in 2021 and forgot.",
+          "Test everything in Google's Rich Results Test before you trust it. If it throws errors, Google isn't reading it — you've done the work for nothing. Paste your URL, read the warnings, fix them. It takes five minutes and saves you from the next list.",
+        ],
+        list: {
+          title: "Cut these immediately",
+          items: [
+            "Fake or self-created reviews — marking up ratings you didn't earn is a manual-action magnet.",
+            "Schema for content that isn't on the page — Google calls this 'invisible' and ignores or penalizes it.",
+            "Five overlapping schema plugins fighting each other — pick one method, JSON-LD, and delete the rest.",
+            "Microdata and RDFa tangled into your HTML — Google prefers clean JSON-LD in the head. Use that.",
+            "Generic \"@type\": \"LocalBusiness\" when a specific type exists — use \"Electrician\" or \"Roofer\" if it fits.",
+            "Hours and phone in schema that don't match your Google Business Profile — mismatches kill trust signals.",
+          ],
+        },
+        callout: "If your schema doesn't pass the Rich Results Test, it isn't doing anything. Test before you celebrate.",
+      },
+      {
+        heading: "Schema is one leg. Local SEO needs all three.",
+        paragraphs: [
+          "Schema markup tells Google what your site is about. But ranking for 'electrician Escondido' or 'detailing Carlsbad' takes two more things working alongside it: a dialed-in Google Business Profile and consistent citations across the web.",
+          "Your Google Business Profile is free and it's the single biggest local ranking factor. Claim it, pick the right primary category, add real photos, post once a week, answer every review. The schema on your site and the data on your profile should match exactly — same name, same phone, same address, character for character.",
+          "Citations are your business listed on Yelp, Bing Places, Apple Maps, Nextdoor, the chamber of commerce. Each one with identical NAP — name, address, phone — is a vote of consistency. Pair that with pages built on the '[service] + [city]' pattern (a 'AC Repair in San Marcos' page, a 'AC Repair in Vista' page) and each page carries its own LocalBusiness and Service schema. That's the full stack.",
+        ],
+        list: {
+          title: "The local SEO trio, in plain terms",
+          items: [
+            "Google Business Profile — claimed, correct primary category, weekly posts, every review answered",
+            "Citations — Yelp, Bing, Apple Maps, Nextdoor, chamber — with identical NAP everywhere",
+            "On-page schema — LocalBusiness + Service on every '[service] + [city]' page",
+            "NAP consistency — your name, address, phone match across site, profile, and every directory",
+            "Real reviews — ask happy customers; the AggregateRating schema reflects what's actually there",
+          ],
+        },
+      },
+      {
+        heading: "What this costs — agency rates vs. doing it right once",
+        paragraphs: [
+          "An SEO agency will fold 'structured data implementation' into a $1,500–$3,000/month retainer and make it sound like rocket science. A freelancer on a marketplace will charge $150–$400 to paste a block they generated from a free tool in ten minutes. The work itself is genuinely small — the markup is the cheap part.",
+          "The catch is it only works if the rest of the site is built right: fast pages, clean HTML, mobile-first, the schema matching your real Google Business Profile. Bolting good schema onto a slow, bloated template is lipstick on a 6-second load time.",
+          "Circuit Coders builds the whole thing — custom site on Next.js and Vercel, LocalBusiness and Service schema baked into every page, your real hours and reviews wired in — for $499 flat with a 48-hour turnaround. One round of revisions, free mockup before you pay a dollar. If you just need schema added to an existing site, that's a $200 add-on, not a monthly tax.",
+        ],
+        callout: "Schema markup isn't a $2,000/month service. It's a one-time job done right — $499 flat for the whole site, or $200 to retrofit what you've got.",
+      },
+      {
+        heading: "Want to know if your schema is even working?",
+        paragraphs: [
+          "Most local businesses in Fallbrook, Bonsall, and Pala have no idea whether their site has structured data at all. The plumber thinks his web guy 'handled SEO.' He didn't — there's no schema, the hours are wrong, and the Rich Results Test throws four errors.",
+          "Send me your URL and I'll run it through Google's tools and tell you exactly what's there, what's broken, and what's missing — no charge, no pitch deck, no monthly contract dangled at the end. You get a straight answer you can act on today.",
+          "If you want it fixed, the math is simple: $200 to add schema to your current site, or $499 flat for a fast custom build with the markup, the local pages, and the Google Business Profile setup done right from the start. 48-hour turnaround, free mockup first, one round of revisions. You see it before you pay.",
+        ],
+        callout: "Free audit: send your URL and I'll tell you what your schema is — or isn't — doing, plus a free mockup if you want it rebuilt. $499 flat, 48 hours, no retainer.",
+      },
+    ],
+    faqs: [
+      { q: "Do I really need schema markup for a small local business?", a: "Yes — it's one of the cheapest local SEO wins there is. A correct LocalBusiness block can surface your hours, reviews, and click-to-call in search within a few weeks of Google's next crawl, and competitors with stars in their listing get clicked more than plain links." },
+      { q: "How long until schema markup actually shows up in Google?", a: "Once it passes the Rich Results Test, you typically see rich results within 1–4 weeks, tied to how often Google crawls your site. New or low-traffic sites can take closer to 60 days for the first crawl to pick it up." },
+      { q: "Can I add schema myself without a plugin?", a: "Yes. You paste one JSON-LD block before the closing </head> tag and validate it in Google's free Rich Results Test. The whole thing is usually under 40 lines of code for a single-location business." },
+      { q: "What's the difference between schema markup and my Google Business Profile?", a: "Schema lives on your website; your Google Business Profile is a separate free Google listing. They should match exactly — same name, address, and phone — and Circuit Coders sets up both correctly as part of a $499 build." },
+      { q: "Will the wrong schema get my site penalized?", a: "It can. Marking up fake reviews or content that isn't on the page risks a manual action, which can take 30–90 days to recover from after you fix it. Only mark up what's real and run the Rich Results Test before you trust it." },
+    ],
+  },
+  {
+    slug: "core-web-vitals-small-business",
+    title: "Core Web Vitals for Small Business Sites: What Actually Matters",
+    description: "Core Web Vitals decoded for small-business owners. The three numbers Google grades, what to fix, what to ignore, and what fast actually costs — no jargon.",
+    keywords: ["core web vitals", "core web vitals small business", "website speed optimization", "largest contentful paint", "page speed SEO", "slow website fix", "fast website Fallbrook", "Oceanside web design", "North County San Diego web design"],
+    publishedAt: "2026-06-24",
+    updatedAt: "2026-06-24",
+    readTime: 8,
+    category: "Performance",
+    author: "Circuit Coders",
+    heroTag: "PERFORMANCE · CORE WEB VITALS · NORTH COUNTY",
+    sections: [
+      {
+        heading: "Your Site Loads in 8 Seconds and the Customer Is Already Gone",
+        paragraphs: [
+          "Pull up your own website on your phone, on cell data, standing in a parking lot in Vista. Count the seconds before you can actually read it and tap something. If that number is past 3, you have a problem you can measure in lost jobs.",
+          "Google's own data says 53% of mobile visitors leave a page that takes longer than 3 seconds to load. That's not a soft 'they were less satisfied' number — that's half your traffic hitting the back button before they ever see your phone number. For a Fallbrook landscaper or an Oceanside detailer running on word-of-mouth plus a trickle of Google searches, that trickle is the whole business.",
+          "Core Web Vitals is just Google's name for grading how that loading experience feels. People hear the phrase and assume it's some developer black magic. It's three numbers, and you can understand all three in the next five minutes.",
+        ],
+      },
+      {
+        heading: "The Three Numbers Google Actually Grades",
+        paragraphs: [
+          "Forget the acronyms for a second. Google measures three things: how fast the main content shows up, how fast the page responds when someone taps, and whether stuff jumps around while it loads. That's it. Everything else is noise.",
+          "Each one has a 'good' threshold. Hit all three and you're in the green. Miss them and Google knows your site feels slow and janky — and so does the customer who's deciding whether to call you or the next shop on the list.",
+        ],
+        list: {
+          title: "What the three metrics mean in plain English",
+          items: [
+            "LCP (Largest Contentful Paint) — how long until the biggest thing on screen loads, usually your hero image or headline. Target: under 2.5 seconds.",
+            "INP (Interaction to Next Paint) — how fast the page reacts when someone taps a button or menu. Target: under 200 milliseconds.",
+            "CLS (Cumulative Layout Shift) — how much the page jumps around as it loads. Target: under 0.1, basically 'nothing should move once it's there.'",
+            "All three are measured on real visitors' phones, not in a lab, so a cheap Android on Pala backroad cell coverage counts as much as your iPhone on WiFi.",
+            "You don't need to memorize the math — you need to know that green on all three means Google stops penalizing you for feeling slow.",
+          ],
+        },
+      },
+      {
+        heading: "What to Actually Do to Fix It",
+        paragraphs: [
+          "The good news: 80% of small-business speed problems come from the same three or four causes, and most are fixable in an afternoon. You don't need to rebuild everything — you need to stop shipping a 12 MB homepage.",
+          "Here's the short list that moves the needle. In order of impact, biggest first.",
+        ],
+        list: {
+          title: "The fixes that actually change your score",
+          items: [
+            "Compress your images. A photo straight off a phone is 3–5 MB; it should be 150–300 KB on the page. This one change fixes more LCP failures than anything else.",
+            "Serve images in modern formats (WebP or AVIF) and size them to how they're displayed — don't load a 4000px photo into a 400px box.",
+            "Set explicit width and height on every image and ad slot so nothing shifts as it loads. That's your CLS fixed almost for free.",
+            "Cut the plugin bloat. Every Wix app, every tracking script, every chat widget runs JavaScript that delays the tap response and tanks your INP.",
+            "Use real hosting with a CDN so the site loads fast whether the visitor is in Carlsbad or out of state. We build on Next.js on Vercel, which handles this by default.",
+            "Lazy-load anything below the fold — the customer doesn't need the footer map downloading before they see your headline.",
+          ],
+        },
+      },
+      {
+        heading: "What to Cut — the Stuff Killing Your Speed",
+        paragraphs: [
+          "Half of fixing performance is deleting things you never needed. Small-business sites accumulate junk the way a garage does — every 'cool feature' someone bolted on is now a tax on every single visitor.",
+          "Be ruthless here. If a feature doesn't help someone call you, book you, or buy from you, it's costing you load time for nothing.",
+        ],
+        list: {
+          title: "Delete these today",
+          items: [
+            "Auto-playing background videos — a 20 MB hero video is the single fastest way to fail LCP on cell data.",
+            "Carousels and sliders nobody scrolls through — they load five images to show one and add layout shift.",
+            "A chatbot you don't staff. For a 4-person painting crew in San Marcos, a chatbot is a script tax on real customers who just wanted your number.",
+            "Three different analytics and 'marketing' scripts doing the same job — pick one, drop the rest.",
+            "Custom web fonts in six weights when two would do. Each one is a separate download blocking your text from showing.",
+            "Embedded social feeds that pull in megabytes of Instagram's JavaScript so you can show six photos you could've just uploaded.",
+          ],
+        },
+      },
+      {
+        heading: "Speed Is a Local SEO Weapon, Not Just a Vanity Score",
+        paragraphs: [
+          "Page experience is a confirmed Google ranking factor. When two Vista plumbers are otherwise neck-and-neck for 'emergency plumber Vista,' the faster site wins the tiebreaker. Speed won't outrank a competitor with 200 more reviews, but in close fights it decides who shows up third versus eighth.",
+          "And Core Web Vitals compounds with the rest of your local SEO. A fast site means Google crawls more of your pages, your service-area pages load instantly, and the people who do click actually stick around — which lowers bounce and feeds back into rankings.",
+          "Get the local fundamentals locked alongside the speed work, or you're tuning an engine on a car with no wheels.",
+        ],
+        list: {
+          title: "Pair fast pages with these local SEO basics",
+          items: [
+            "Claim and fully fill out your Google Business Profile — hours, services, photos, every category that fits.",
+            "Keep your name, address, and phone identical everywhere — Yelp, Apple Maps, Nextdoor, your own footer.",
+            "Add LocalBusiness schema.org markup so Google reads your hours, area served, and reviews directly from the code.",
+            "Build a fast '[service] + [city]' page for each combo you serve — 'mobile detailing Carlsbad,' 'roof repair Bonsall' — not one bloated catch-all page.",
+            "Earn citations in real local directories and the Fallbrook / North County chambers, not spammy link farms.",
+          ],
+        },
+        callout: "Fast pages don't win rankings alone — but slow pages quietly cap how high the rest of your SEO can ever climb.",
+      },
+      {
+        heading: "What Speed Optimization Costs — and What We Charge",
+        paragraphs: [
+          "Walk into a San Diego agency asking to 'fix Core Web Vitals' and you'll get a $1,500–$4,000 performance audit, a 30-page PDF, and a retainer pitch. A freelancer on Upwork might do it for $300–$800 but leave your underlying platform — the Wix or GoDaddy builder that's the actual problem — completely intact.",
+          "Here's the honest version: if your site is built on a bloated drag-and-drop platform, you can't truly fix it. You can shave a second off, but you're optimizing the wrong foundation. The real fix is a clean rebuild on infrastructure that's fast out of the box.",
+          "That's what we do for $499 flat, 48-hour turnaround — a custom Next.js site on Vercel that ships green on Core Web Vitals from day one, no plugins to bloat it later. Optional hosting and updates run $50/mo, and integrations like online booking or Stripe checkout are quoted as $200–$500 add-ons. No audit upsell, no retainer you can't escape.",
+        ],
+        callout: "A $2,000 audit tells you your site is slow. A $499 rebuild makes it fast. One of those you can act on this week.",
+      },
+      {
+        heading: "See Your Real Numbers Before You Spend a Dollar",
+        paragraphs: [
+          "You don't have to take my word for any of this. Open Google's free PageSpeed Insights, paste in your URL, and read the three numbers off the field-data section at the top. If you're red or orange on any of them, you now know exactly what you're losing.",
+          "Or skip the homework. Send me your current site and I'll run it, tell you which of the three Vitals you're failing and why, and build you a free mockup of a faster version — no charge, no obligation, no 30-page PDF.",
+          "If the mockup loads in under a second and yours takes six, the math makes itself. $499 flat, 48 hours, one round of revisions, and you stop bleeding the half of your traffic that was leaving before your page even finished loading.",
+        ],
+        callout: "Free Core Web Vitals check plus a free mockup of the faster version — for any business in Fallbrook, Oceanside, Carlsbad, Vista, or anywhere in North County. Send the URL and I'll send the numbers.",
+      },
+    ],
+    faqs: [
+      { q: "How fast should my small-business website load?", a: "Your largest content should appear in under 2.5 seconds and the page should respond to taps in under 200 milliseconds. Google's data shows 53% of mobile visitors leave if a page takes longer than 3 seconds, so anything past 3 is actively costing you customers." },
+      { q: "Do Core Web Vitals actually affect my Google ranking?", a: "Yes — page experience is a confirmed ranking factor, mainly as a tiebreaker between otherwise-similar sites. It won't beat a competitor with far more reviews, but in close local fights it can move you several spots, and clean rebuilds typically show ranking movement in 60–90 days." },
+      { q: "Why is my Wix or Squarespace site so slow?", a: "Drag-and-drop builders load heavy shared JavaScript and unused features on every page, which is why many of them can't hit the under-200ms interaction target no matter how much you tweak. You can shave maybe a second off, but the platform itself is usually the ceiling." },
+      { q: "How much does it cost to make my website faster?", a: "Agency performance audits run $1,500–$4,000 and freelancers charge $300–$800 to patch your existing site. We rebuild it fast from the foundation for $499 flat in 48 hours, so it ships green on Core Web Vitals instead of getting band-aided." },
+      { q: "How do I check my own website's Core Web Vitals?", a: "Paste your URL into Google's free PageSpeed Insights and read the field data at the top — it grades LCP, INP, and CLS in real visitors' browsers. Aim for under 2.5s, under 200ms, and under 0.1; anything in red or orange is worth fixing first." },
+    ],
+  },
+  {
+    slug: "google-business-profile-setup-small-business",
+    title: "Google Business Profile Setup for Small Businesses — The 20-Minute Version",
+    description: "Set up Google Business Profile the right way in 20 minutes. The fields that move you up the map pack, the ones to skip, and what to do after you hit publish.",
+    keywords: ["google business profile setup", "google business profile small business", "claim google business profile", "GBP optimization", "local SEO Fallbrook", "google maps ranking Oceanside", "google business profile categories", "north county san diego local SEO"],
+    publishedAt: "2026-06-24",
+    updatedAt: "2026-06-24",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "LOCAL · SEO · GBP",
+    sections: [
+      {
+        heading: "Your best free ad is sitting half-empty",
+        paragraphs: [
+          "Drive through downtown Fallbrook and half the shops on Main Avenue have a Google Business Profile that's a name, a phone number, and a 2019 photo of an empty parking lot. That's it. No hours, no categories, no description, no posts. Google has no idea what they do, so it doesn't show them to the guy two blocks over searching \"plumber near me\" at 9pm with a flooding kitchen.",
+          "Here's the thing nobody tells small-business owners: your Google Business Profile beats your website for local searches. When someone in Oceanside or Vista types a service plus a place, Google shows the map pack first — three listings, a map, reviews — before a single website link. If you're not in those three, you basically don't exist for that search.",
+          "The fix isn't expensive and it isn't a 6-week project. A complete, correct profile takes about 20 minutes to set up and maybe 10 minutes a week to keep warm. Most people just never do it right the first time.",
+        ],
+      },
+      {
+        heading: "The 20-minute setup, field by field",
+        paragraphs: [
+          "Go to google.com/business and either claim your existing listing or create one. Google verifies you by postcard, phone, or video — postcard takes 5–14 days, so start now and finish the rest while you wait. Don't skip verification; an unverified profile won't rank.",
+          "Fill out every field below. Not most of them. Every one. Google rewards completeness, and a profile that's 100% filled out consistently outranks one that's 60% filled out in the same town.",
+        ],
+        list: {
+          title: "Fill these out before you close the tab",
+          items: [
+            "Business name — your real name, exactly as it appears on your sign. No keyword stuffing like \"Joe's Plumbing Oceanside Best Drain Repair.\" That gets you suspended.",
+            "Primary category — the single most important field. Pick the most specific one that fits (\"Auto Detailing Service,\" not \"Car Wash\"). Add 2–4 secondary categories.",
+            "Hours — including holiday hours. Wrong hours is the #1 thing that earns a 1-star review you didn't deserve.",
+            "Phone + website — a local number beats a toll-free one for local trust. Link your actual site, not your Facebook page.",
+            "Service area or address — storefront? Use your address. Mobile (detailer, electrician, landscaper)? Set a service-area radius covering Fallbrook, Bonsall, Oceanside, wherever you actually drive.",
+            "Description — 750 characters. Plain English about what you do and where. No buzzwords.",
+            "Photos — 8–10 real ones: storefront, team, finished work, logo. Listings with photos get roughly 35% more clicks to directions and websites.",
+          ],
+        },
+        callout: "If you do only one thing right, get the primary category right. It's the biggest single ranking lever on the whole profile.",
+      },
+      {
+        heading: "What to cut — the fields and tactics that waste your time",
+        paragraphs: [
+          "Half the \"GBP optimization\" advice online is busywork or actively risky. Here's what to skip so you can spend that energy on reviews instead.",
+        ],
+        list: {
+          title: "Don't bother with these",
+          items: [
+            "Keyword-stuffing your business name — fastest way to a suspension, and a suspended profile can take weeks to recover.",
+            "Buying reviews or running review gates — Google filters fakes and penalizes the obvious ones. A real 4.6 beats a fake 5.0 every time.",
+            "Posting once and walking away — a profile that's been silent for 8 months reads as \"maybe closed\" to Google.",
+            "The Products and Services sections for a service business — nice-to-have, not a ranking factor. Skip until everything else is done.",
+            "Embedding a chatbot or messaging gimmick you won't monitor — an unanswered message hours-later does more damage than no message button at all.",
+            "Obsessing over the description keywords — Google barely uses the description for ranking. Write it for the human reading it.",
+          ],
+        },
+      },
+      {
+        heading: "After you publish: the part that actually moves rankings",
+        paragraphs: [
+          "Setup gets you on the board. Three things get you into the top three of the map pack, and you control all of them.",
+          "Reviews are the big one. Volume, recency, and your replies all matter. Ask every happy customer — text them the link, don't make them hunt for it. A shop going from 11 reviews to 40 over a couple months will often climb the pack noticeably, because Google reads steady fresh reviews as a live, trusted business.",
+          "Posts are second. Google Posts expire after 7 days, so one a week keeps the profile looking active — a job you finished, a seasonal note, a quick tip. Third is consistency of your name, address, and phone everywhere else online, which is the next section.",
+        ],
+        callout: "Reply to every review, including the bad ones. A calm reply to a 2-star says more to the next customer than the complaint does.",
+      },
+      {
+        heading: "Local SEO: making the rest of the internet agree with Google",
+        paragraphs: [
+          "Google cross-checks your profile against the rest of the web. If your name, address, and phone (NAP) match everywhere, it trusts you more. If your Yelp says one suite number and your website says another, that's a confidence hit. Pick one exact format and use it on every directory — Yelp, Apple Maps, Bing Places, Nextdoor, your local chamber.",
+          "On your website, build pages that match how people actually search: the \"[service] + [city]\" pattern. \"Drain cleaning Vista,\" \"auto detailing Carlsbad,\" \"landscaping Bonsall.\" One focused page per service-city combo, with the real town named in the heading and the copy — not 40 cities crammed into a footer.",
+          "Then add LocalBusiness schema.org markup to your site. It's invisible structured data that hands Google your name, address, hours, and geo-coordinates in a format it reads perfectly. Most DIY sites skip it because it's a pain to hand-code. We bake valid LocalBusiness schema into every build by default — it's part of the $499, not an upsell.",
+        ],
+        list: {
+          title: "The local SEO checklist",
+          items: [
+            "Identical NAP on every directory — copy-paste, don't retype.",
+            "Claim Apple Maps and Bing Places too — not everyone in North County is on Google.",
+            "One '[service] + [city]' page per combo you actually serve.",
+            "LocalBusiness schema markup on your homepage and contact page.",
+            "Embed a real Google Map of your location or service area.",
+            "Link your GBP to your website, and your website footer back to your GBP.",
+          ],
+        },
+      },
+      {
+        heading: "What this costs — and what agencies charge for the same thing",
+        paragraphs: [
+          "GBP setup itself is free. Google never charges to claim or optimize a listing — if someone calls saying you owe money to \"verify your Google,\" it's a scam, hang up. The cost is your time, or paying someone to do it right once.",
+          "Local SEO agencies will quote you $300–$1,500 a month to \"manage your local presence,\" and a lot of that retainer is them doing the 20-minute setup above plus a couple posts. For most Fallbrook and Oceanside small businesses, that's a bad trade. You don't need a monthly retainer to keep a profile warm — you need it set up correctly and a 10-minute weekly habit.",
+          "Where a site actually matters: the GBP points to your website, and a slow or sketchy site kills the trust the profile built. We build the whole thing — fast custom Next.js site, '[service] + [city]' pages, and LocalBusiness schema wired in — for $499 flat, 48-hour turnaround, one round of revisions. Optional hosting and updates run $50/mo if you'd rather not touch it. Add-ons like a booking or reservation integration are quoted at $200–$500, only if you need them.",
+        ],
+        callout: "Free to set up, free to maintain. The only thing worth paying for is making sure it's done right and pointing at a site that doesn't embarrass you.",
+      },
+      {
+        heading: "Want it done for you? Start with a free audit",
+        paragraphs: [
+          "We've watched a Vista contractor go from buried on page two of the map to the top three in about 60–90 days — no ad spend, just a complete profile, a steady stream of real reviews, and a site that finally matched. None of it was complicated. It was just done, instead of half-done.",
+          "If you'd rather not fiddle with categories and schema markup yourself, we'll handle it. Send us your business name and we'll do a free audit of your current Google Business Profile and website — what's missing, what's costing you the map pack, and what we'd fix.",
+          "And if the site behind your profile needs work, we build custom — $499 flat, 48-hour turnaround, free mockup first so you see it before you pay a dime. No retainer, no agency-speak, no chatbot you didn't ask for.",
+        ],
+        callout: "Free GBP audit and a free website mockup. $499 flat to build it right. Reply or call and we'll start today.",
+      },
+    ],
+    faqs: [
+      { q: "How long does it take to rank in the Google map pack?", a: "A complete, verified profile with steady reviews usually starts moving within 30–60 days, with most North County small businesses landing in the top three for their main '[service] + [city]' search around 60–90 days. There's no overnight switch — Google watches for consistency over time." },
+      { q: "Is Google Business Profile actually free?", a: "Yes, 100% free to claim, set up, and maintain — Google never charges for it. If anyone calls demanding payment to 'verify' or 'activate' your Google listing, it's a scam; hang up." },
+      { q: "How many photos and reviews do I need on my profile?", a: "Aim for 8–10 real photos to start and add a few each month. For reviews, there's no magic number, but getting from single digits to 40+ genuine reviews over a couple months is often enough to climb the pack noticeably in a town like Oceanside or Vista." },
+      { q: "Do I need a website if I already have a Google Business Profile?", a: "You can rank on the map without one, but a fast, legit website raises the trust your profile built and gives you '[service] + [city]' pages Google can index. We build that for $499 flat with LocalBusiness schema wired in, free mockup first." },
+      { q: "Should I pay an agency a monthly retainer for local SEO?", a: "For most small businesses, no — agency retainers of $300–$1,500/month often just cover the same 20-minute setup plus a few posts. You're usually better off getting it set up right once and spending 10 minutes a week on reviews and a post." },
+    ],
+  },
+  {
+    slug: "photographer-website-design-north-county",
+    title: "Photographer Website Design in North County SD That Books Clients",
+    description: "Photographers in Carlsbad, Oceanside, and Fallbrook lose bookings to slow galleries and Instagram-only pages. Here's a site that ranks and books — $499 flat.",
+    keywords: ["photographer website design", "wedding photographer website", "photography portfolio website", "photographer SEO North County", "Carlsbad photographer website", "Oceanside photographer", "Fallbrook photographer website design", "San Diego photography website"],
+    publishedAt: "2026-06-24",
+    updatedAt: "2026-06-24",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "PHOTOGRAPHY · NORTH COUNTY · $499 FLAT",
+    sections: [
+      {
+        heading: "Your Instagram Is Not a Website",
+        paragraphs: [
+          "Half the photographers in North County run their entire business off an Instagram grid and a Linktree. It looks fine until a bride in Carlsbad asks for your packages and you're typing prices into a DM at 11pm. Instagram owns your audience, throttles your reach, and can suspend your account on a Tuesday for no reason. You're building a business on rented land.",
+          "The other half have a Squarespace or Pixieset page they set up in 2021 and haven't touched since. It loads a 14 MB hero image, takes six seconds on a phone, and ranks nowhere when someone searches 'Oceanside family photographer.' Meanwhile the shooter down the street with a faster, leaner site is getting the inquiry.",
+          "A photographer's website has one job: turn a stranger who Googled you into a booked session. Galleries, vibes, and your About page are means to that end. If the site doesn't get found and doesn't make booking easy, the photography doesn't matter.",
+        ],
+      },
+      {
+        heading: "What a Photographer's Site Actually Needs",
+        paragraphs: [
+          "You don't need 200 photos. You need 30 of your best, organized by what people actually book — weddings, portraits, branding, real estate. A prospect should see the work that matches their need in two clicks, not scroll past your hiking trip.",
+          "And every gallery image needs to be compressed for the web. Your camera shoots 24 MB RAW files; the version on your site should be 200–400 KB and look identical. That single change is the difference between a 6-second load and a sub-2-second one.",
+        ],
+        list: {
+          title: "The non-negotiables",
+          items: [
+            "A clear booking path — pricing, an inquiry form, and a calendar link above the fold",
+            "Web-compressed galleries (200–400 KB per image, lazy-loaded) so the page loads in under 2 seconds",
+            "Packages with real numbers, or at least a starting price — 'inquire for pricing' loses budget-conscious clients",
+            "Service pages for each thing you shoot, so you can rank for each one separately",
+            "Reviews pulled in from Google, not just screenshots of texts",
+            "A mobile layout that works, because 70%+ of your inquiries come from a phone",
+          ],
+        },
+        callout: "Fast and bookable beats beautiful and buried. Every time.",
+      },
+      {
+        heading: "What to Cut",
+        paragraphs: [
+          "Most photography sites are bloated with features that hurt more than they help. The template sold you on a slideshow, an audio player, and a parallax intro animation, and now your page weighs 8 MB and bounces visitors before they see a single photo.",
+          "Cut anything that sits between a visitor and your work or your booking form. Be ruthless.",
+        ],
+        list: {
+          title: "Delete these today",
+          items: [
+            "Auto-playing music or video on the homepage — it's 2026, nobody wants it",
+            "A full-screen intro animation that delays the actual content",
+            "Twelve nav items when you offer four services",
+            "A 4,000-pixel uncompressed hero image",
+            "A blog you'll never update (one stale post from 2022 looks worse than none)",
+            "'Inquire for pricing' as your only pricing — it filters out good clients, not just cheap ones",
+          ],
+        },
+      },
+      {
+        heading: "Getting Found for 'Carlsbad Wedding Photographer'",
+        paragraphs: [
+          "Here's where most photographers leave money on the table. Searches like 'wedding photographer Carlsbad' or 'newborn photographer Oceanside' are exactly what your future clients type, and ranking for them is mostly a checklist, not magic.",
+          "Start with a fully filled-out Google Business Profile — correct category, service area covering Carlsbad, Vista, San Marcos and Encinitas, real session photos, and a steady drip of reviews. That profile drives the map pack, and the map pack drives the phone calls.",
+          "Then build a separate page for each service-plus-city you want, because Google ranks pages, not vibes. A page titled 'Wedding Photography in Carlsbad' will out-rank your generic homepage for that search every time. Add LocalBusiness and ImageObject schema.org markup, get listed in a handful of clean local citations, and you've done more SEO than 90% of the photographers in North County.",
+        ],
+        list: {
+          title: "Local SEO checklist",
+          items: [
+            "Claim and fully complete your Google Business Profile with the right category",
+            "Set your service area: Oceanside, Carlsbad, Vista, San Marcos, Fallbrook, Bonsall",
+            "Build one page per '[service] + [city]' you want to rank for",
+            "Add LocalBusiness + ImageObject schema so galleries can show in image search",
+            "Ask every booked client for a Google review — aim for 2–3 new ones a month",
+            "Keep your name, address, and phone identical everywhere online",
+          ],
+        },
+        callout: "A page named 'Newborn Photographer in Vista' beats a homepage that mentions everything once.",
+      },
+      {
+        heading: "$499 Flat vs. What the Market Charges",
+        paragraphs: [
+          "A custom photography website from a typical San Diego agency runs $2,500 to $6,000, plus a few weeks of back-and-forth. Squarespace and Pixieset feel cheaper at $16–$49/month until you add up three years of subscription, your own setup time, and the fact that it still loads slow and ranks poorly.",
+          "Circuit Coders builds your site for $499 flat, in 48 hours, on custom Next.js hosted on Vercel — the same fast stack the big brands use. One round of revisions is included, and you see a free mockup before you pay a cent. Hosting and ongoing updates are an optional $50/month if you want us to keep it current; otherwise it's yours.",
+          "Want online booking wired in — a Calendly, a deposit through Stripe, or a client gallery handoff? Those integrations run $200–$500 on top, quoted up front. No retainers, no surprise invoices, no 'discovery phase.'",
+        ],
+        callout: "$499 once, live in 48 hours. Not $4,000 and a six-week timeline.",
+      },
+      {
+        heading: "See It Before You Pay",
+        paragraphs: [
+          "We've built fast, bookable sites for service businesses all over North County — Fallbrook, Oceanside, Carlsbad, Vista, San Marcos. Photographers are an easy win because your work already sells itself; it just needs a site that loads fast, ranks locally, and makes booking a two-tap job.",
+          "Send us your Instagram or your current site and we'll build you a free mockup of a homepage and one service page — actual design, your photos, no obligation. If you like it, it's $499 and live in 48 hours. If you don't, you've lost nothing.",
+          "Stop running your business out of your DMs. Let's get you a site that does the selling while you're behind the camera.",
+        ],
+        callout: "Free mockup, no commitment. $499 flat, live in 48 hours, one round of revisions included.",
+      },
+    ],
+    faqs: [
+      { q: "How much should a photographer pay for a website?", a: "Agencies in San Diego charge $2,500–$6,000 for a custom photography site. Circuit Coders builds one for $499 flat with a 48-hour turnaround, plus an optional $50/month if you want us to host and update it." },
+      { q: "Can I just use Instagram or Pixieset instead of a website?", a: "You can, but you don't own the audience and you won't rank on Google for searches like 'Carlsbad wedding photographer.' A real site you control is what shows up in the map pack and converts strangers into booked sessions." },
+      { q: "Why is my photography website so slow?", a: "Almost always oversized images — full-resolution files of 8–14 MB instead of web-compressed versions at 200–400 KB. Fixing that alone usually cuts load time from 6 seconds to under 2, which directly lowers your bounce rate." },
+      { q: "How long does it take to build a photographer's website?", a: "Circuit Coders delivers a finished, custom site in 48 hours with one round of revisions. You see a free mockup first, so you know exactly what you're getting before you pay $499." },
+      { q: "How do I rank for 'wedding photographer near me' in North County?", a: "Complete your Google Business Profile, build a separate page for each '[service] + [city]' you want, and collect 2–3 Google reviews a month. With that in place, most photographers start showing up in the local map pack within 60–90 days." },
+    ],
+  },
+  {
+    slug: "tattoo-shop-website-design-oceanside",
+    title: "Tattoo Shop Website Design in Oceanside: Rank, Book, Get Paid",
+    description: "Your Oceanside tattoo shop lives on Instagram and walk-ins. Here's how a fast website ranks for 'tattoo shop Oceanside,' fills the books, and collects deposits — for $499 flat.",
+    keywords: ["tattoo shop website", "tattoo shop website design Oceanside", "Oceanside tattoo artist website", "tattoo shop SEO", "tattoo studio web design", "tattoo booking website", "North County San Diego web design", "Carlsbad tattoo website", "Vista tattoo shop website"],
+    publishedAt: "2026-06-24",
+    updatedAt: "2026-06-24",
+    readTime: 7,
+    category: "Web Design",
+    author: "Circuit Coders",
+    heroTag: "TATTOO · OCEANSIDE · WEB DESIGN",
+    sections: [
+      {
+        heading: "You're booking solid on Instagram — until you're not",
+        paragraphs: [
+          "Oceanside has tattoo shops stacked down Coast Highway, a steady wave of Camp Pendleton Marines who want ink before they deploy, and a downtown that pulls foot traffic off the pier every weekend. Most of those shops run their entire business off an Instagram grid and a phone number in the bio. It works — right up until the algorithm buries your post, a client wants to vet you at 11pm, or someone Googles 'tattoo shop Oceanside' and lands on the shop three blocks over instead of yours.",
+          "Instagram is a feed, not a storefront. It doesn't show up when a deploying Marine searches 'tattoo near Camp Pendleton,' it doesn't hold your healed-work gallery in a way Google can read, and it doesn't take a deposit at midnight while you're closed. You're renting an audience on someone else's platform and praying they don't change the rules again.",
+          "A real website is the one piece of the internet you actually own. For a tattoo shop, that means a portfolio that ranks, an artist roster people can book against, and a deposit link that stops no-shows before they cost you a chair. None of that requires a $5,000 agency.",
+        ],
+      },
+      {
+        heading: "What an Oceanside tattoo shop site actually needs",
+        paragraphs: [
+          "You don't need a 12-page brochure. You need a handful of pages that answer the three questions every client has before they walk in: Is this artist good, can I trust them, and how do I book. Build for that and you'll out-convert shops with twice your follower count.",
+          "Keep it lean and fast. A tattoo site is mostly images, and images are where most of these sites die — a 15 MB homepage on hotel Wi-Fi loses the customer before your best piece even loads.",
+        ],
+        list: {
+          title: "The pages that earn their keep:",
+          items: [
+            "Artist pages — one per artist with style, healed-work gallery, and an individual booking link",
+            "A real portfolio grid, filterable by style (fine line, black-and-grey, traditional, color realism)",
+            "Walk-in hours and shop policy in plain text, not buried in a Story highlight",
+            "A deposit + booking flow so consults don't ghost you",
+            "Aftercare instructions on their own page (this ranks and saves you 20 texts a week)",
+            "Shop location, parking notes, and a map — Coast Highway parking is its own conversation",
+            "Reviews pulled from Google, not screenshotted into a graphic",
+          ],
+        },
+        callout: "Your portfolio is your sales pitch. Everything else on the site exists to get people to it and get them booked once they're impressed.",
+      },
+      {
+        heading: "What to cut before it slows you down",
+        paragraphs: [
+          "Half the 'features' shops ask for actively hurt the booking flow. They look modern in a template demo and then tank your load time or annoy the exact client you're trying to win. Cut them.",
+          "Every second your homepage takes to load past three seconds drops conversions. On a tattoo site that's usually one cause: nobody compressed the photos. Fix that and skip the gimmicks.",
+        ],
+        list: {
+          title: "Cut these:",
+          items: [
+            "A chatbot — for a tattoo shop, a chatbot is a tax on a real client trying to ask about a half-sleeve",
+            "Autoplay music or video — instant close on a phone in a quiet office",
+            "Full-resolution photos straight off the camera (compress every image to under 300 KB; whole page under 3–5 MB)",
+            "A massive carousel slider nobody clicks through",
+            "Stock photos of generic tattoo machines — your real work is the only photo that matters",
+            "A 'mystery' contact form with no booking option — make it one tap to a deposit",
+          ],
+        },
+      },
+      {
+        heading: "Local SEO: how you actually win 'tattoo shop Oceanside'",
+        paragraphs: [
+          "Ranking in Oceanside isn't magic, it's plumbing. Three things move the needle: a dialed-in Google Business Profile, consistent citations across the web, and on-page content built around how people actually search. Get those right and you'll start showing in the map pack within 60–90 days.",
+          "Search isn't just 'tattoo shop Oceanside.' It's '[style] + [city]' — 'fine line tattoo Oceanside,' 'black and grey tattoo Carlsbad,' 'tattoo near Camp Pendleton,' 'cover up tattoo Vista.' Each one is a page or a section you can own, and most of your competitors have zero of them.",
+          "Behind the scenes, your site needs schema.org markup (TattooParlor / LocalBusiness) so Google reads your hours, address, and reviews as structured data instead of guessing. That's the difference between a listing that shows star ratings in search and one that's a plain blue link.",
+        ],
+        list: {
+          title: "Your local SEO checklist:",
+          items: [
+            "Claim and fully fill your Google Business Profile — category 'Tattoo Shop,' real photos, exact hours, every artist",
+            "Keep your name, address, and phone identical on Google, Yelp, Apple Maps, and Bing (citations)",
+            "Add LocalBusiness/TattooParlor schema.org markup so search engines read your details cleanly",
+            "Build '[style] + [city]' pages: fine line Oceanside, cover-up Vista, traditional Carlsbad",
+            "Post healed work to your GBP weekly — it's a ranking signal most shops ignore",
+            "Ask for Google reviews after every appointment; aim for 5–10 a month",
+          ],
+        },
+        callout: "A Marine searching 'tattoo near Camp Pendleton' is ready to book today. If you don't rank, that booking goes to whoever does.",
+      },
+      {
+        heading: "What this costs — and why $499 flat beats the alternatives",
+        paragraphs: [
+          "Here's the honest market in North County. A design agency will quote you $3,000–$8,000 and three months for a tattoo site. A template mill overseas sells you a $1,500 Squarespace job that looks like every other shop's. Or you spend four nights wrestling Wix yourself and end up with something slow that never ranks.",
+          "Circuit Coders builds it for $499 flat, delivered in 48 hours. That's a custom site on Next.js and Vercel — fast, your colors, your work, not a template — with one round of revisions and a free mockup before you pay a dollar. Hosting and ongoing updates are optional at $50/mo if you'd rather not touch it again.",
+          "Booking and deposits run a little more because they touch payments. Wiring up a reservation flow or a Stripe deposit link is a $200–$500 add-on depending on the platform. For a shop losing even two no-show consults a month, that pays for itself before the first invoice.",
+        ],
+        callout: "$499 flat, 48 hours, free mockup first. You see the site before you spend anything.",
+      },
+      {
+        heading: "See it before you pay — free mockup, no pitch",
+        paragraphs: [
+          "We've built sites for shops and small businesses up and down North County — Oceanside, Carlsbad, Vista, San Marcos, Fallbrook, Bonsall. The pattern is always the same: great work, no website to back it up, bookings leaking to whoever ranks. The fix is fast and it's cheap.",
+          "Send us your Instagram and your three best healed pieces. We'll build a free mockup of your Oceanside tattoo shop site — homepage and an artist page — so you can see exactly what it'd look like before you commit. No deposit, no obligation, no agency-speak.",
+          "If you like it, it's $499 flat and live in 48 hours. If you don't, you keep the mockup and we shake hands. That's the whole offer.",
+        ],
+        callout: "Want a free mockup of your shop's site? Send your handle and your best work — we'll build the homepage for free, then it's $499 flat and 48 hours to live.",
+      },
+    ],
+    faqs: [
+      { q: "I already have a busy Instagram — do I really need a website?", a: "Instagram is a feed you rent; a website is a storefront you own and that Google can rank. Within 60–90 days a proper site can put you in the 'tattoo shop Oceanside' map pack, where Instagram posts never show up — and it takes deposits at midnight when your DMs are closed." },
+      { q: "How long until my shop ranks for 'tattoo shop Oceanside' on Google?", a: "With a fast site, full Google Business Profile, consistent citations, and schema markup, most local shops start showing in the map pack within 60–90 days. '[style] + [city]' pages like 'fine line tattoo Oceanside' often rank faster because so few competitors target them." },
+      { q: "How much should a tattoo shop website cost in North County?", a: "Agencies quote $3,000–$8,000 and template mills sell $1,500 cookie-cutter Squarespace sites. Circuit Coders builds a custom site for $499 flat in 48 hours, with a free mockup first so you see it before paying anything." },
+      { q: "Can clients book and pay deposits through the site?", a: "Yes — we wire up booking and Stripe deposit links as a $200–$500 add-on depending on your platform. For a shop losing even two no-show consults a month, it pays for itself almost immediately." },
+      { q: "Won't all my high-res tattoo photos make the site slow?", a: "Only if nobody compresses them. We compress every image to under 300 KB and keep the whole page under 3–5 MB, so your portfolio loads in under three seconds even on a phone at the shop." },
+    ],
+  },
+  {
     slug: "gym-website-design-north-county",
     title: "Gym & Fitness Studio Website Design in North County",
     description: "Most North County gym websites lose members before they ever book a class. Here's how to build a $499 fitness site that fills your schedule in 48 hours.",
