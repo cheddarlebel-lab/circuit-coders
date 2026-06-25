@@ -20,6 +20,110 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "web-design-oceanside",
+    title: "Web Design in Oceanside CA — What a Custom Site Costs",
+    description: "What web design really costs in Oceanside: agency quotes, freelancer rates, and the $499 flat / 48-hour custom build. Real pricing, no agency-speak.",
+    keywords: ["web design oceanside", "oceanside web designer", "small business website oceanside ca", "web design north county san diego", "affordable website design carlsbad", "website cost oceanside", "local seo oceanside", "web developer vista ca"],
+    publishedAt: "2026-06-25",
+    updatedAt: "2026-06-25",
+    readTime: 8,
+    category: "Pricing",
+    author: "Circuit Coders",
+    heroTag: "OCEANSIDE · WEB DESIGN · PRICING",
+    sections: [
+      {
+        heading: "Why Most Oceanside Business Sites Are Quietly Losing Customers",
+        paragraphs: [
+          "Search 'web design oceanside' and you get a wall of agencies quoting $4,000 to $8,000 and a 'discovery call' before they'll tell you anything. Meanwhile your actual website — the one a tourist pulls up while walking Coast Highway or a Camp Pendleton family checks before booking — loads in five seconds, looks like 2014, and pinches sideways on a phone.",
+          "Oceanside isn't a sleepy beach town anymore. Downtown, the harbor, the pier district, and the new hotels off Mission Ave brought foot traffic and search traffic with it. People standing on the sidewalk are deciding right now whether to walk into your shop or the one next door, and they're deciding with their thumb.",
+          "Here's the uncomfortable part: a slow, ugly site doesn't just fail to win customers. It actively loses the ones who already found you. They Googled your name, the page took too long, and they bounced to a competitor in Carlsbad or Vista who loaded in under two seconds.",
+        ],
+        callout: "If your site takes longer than 3 seconds to load on a phone, you're paying for traffic and then throwing half of it away.",
+      },
+      {
+        heading: "What an Oceanside Small-Business Site Actually Needs",
+        paragraphs: [
+          "Forget the 40-page proposals. A site that earns money for a local business in Oceanside does five or six things well and skips everything else. You don't need a 'digital ecosystem.' You need a fast page that loads on a phone, says what you do, and makes it dead simple to call or book.",
+          "Every site we build starts here. No feature gets added unless it helps a real customer take a real action.",
+        ],
+        list: {
+          title: "The non-negotiables",
+          items: [
+            "Loads in under 2 seconds on a phone over LTE, not just on your fast home wifi",
+            "A click-to-call button visible without scrolling on mobile",
+            "Your service area named in plain text — Oceanside, Carlsbad, Vista, San Marcos, Bonsall",
+            "Hours, address, and a Google Map embed that actually matches your Google listing",
+            "Real photos of your work or your storefront, not stock images of strangers in suits",
+            "One clear next step per page: call, book, get a quote — never three competing buttons",
+          ],
+        },
+      },
+      {
+        heading: "What to Cut — The Features Agencies Sell That You Don't Need",
+        paragraphs: [
+          "A lot of what runs up an Oceanside web design bill is stuff that looks impressive in a sales deck and does nothing for a roofing company or a taco shop. Worse, half of it slows your site down and quietly drives customers away.",
+          "Before you pay for any of this, ask the person selling it exactly which customer action it improves. If they can't answer in one sentence, cut it.",
+        ],
+        list: {
+          title: "Skip these — they cost money and add nothing",
+          items: [
+            "A chatbot. For a body shop or a barber, a chatbot is a tax on real customers who just wanted your phone number.",
+            "Auto-playing video headers that eat 8–12 MB and tank your load time on mobile",
+            "A blog you'll never write and a 'content calendar' you'll never use",
+            "Carousels and sliders nobody clicks past the first slide",
+            "A custom CMS login you have to relearn every time you change your hours",
+            "Pop-ups asking for an email before the visitor has seen a single thing you offer",
+          ],
+        },
+        callout: "Every megabyte you don't load is a customer you don't lose. Lean wins in Oceanside.",
+      },
+      {
+        heading: "Getting Found in Oceanside: Local SEO That Moves the Needle",
+        paragraphs: [
+          "A pretty site nobody finds is a brochure in a drawer. For local businesses, the real game isn't ranking against the whole internet — it's showing up when someone in your zip code searches '[your service] + Oceanside.' That's won with structure, not with paying an agency $1,500 a month.",
+          "Your Google Business Profile does more heavy lifting than your website for 'near me' searches. Claim it, fill in every field, pick the right categories, and post a few photos. Then make sure your name, address, and phone number are byte-for-byte identical everywhere they appear online — your site, Yelp, the Oceanside Chamber, Apple Maps. Inconsistent citations are the single most common reason a legit business gets buried.",
+          "On the site itself, we build pages around the '[service] + [city]' pattern — 'mobile detailing Oceanside,' 'kitchen remodel Carlsbad,' 'HVAC repair Vista' — and add schema.org LocalBusiness markup so Google reads your hours, area served, and reviews without guessing. It's plumbing the visitor never sees, and it's the difference between page one and page three.",
+        ],
+        list: {
+          title: "Your local SEO checklist",
+          items: [
+            "Claim and fully complete your Google Business Profile, including services and service area",
+            "Make your name, address, and phone identical across the web — no abbreviation drift",
+            "Build a dedicated page for each core service plus each city you serve",
+            "Add schema.org LocalBusiness and Service markup so Google can read your details",
+            "Get listed in real local directories: the Chamber, Nextdoor, Yelp, Apple Maps",
+            "Ask three happy customers a week for a Google review — it compounds fast",
+          ],
+        },
+      },
+      {
+        heading: "What Web Design Costs in Oceanside — and Where $499 Fits",
+        paragraphs: [
+          "Here's the honest market for web design in North County. A full-service agency in Carlsbad or San Diego will quote $4,000 to $8,000 and take six to twelve weeks. A freelancer runs $1,500 to $3,000 and a few weeks, if they answer your emails. The DIY route — Wix or Squarespace — is $200 to $400 a year, plus the 20 hours of your own time and a site that looks like everyone else's template.",
+          "Circuit Coders builds a custom site for $499 flat. Not a template — a real Next.js site on Vercel, built fast, hosted fast, turned around in 48 hours with one round of revisions included. We send you a free mockup before you pay a dollar, so you see the actual design first and decide with your eyes, not a sales pitch.",
+          "If you want us to keep it updated and handle hosting, that's $50 a month, and it's optional — you own the site either way. Need real integrations like online booking, Stripe checkout, or a reservation platform? Those are quoted as $200–$500 add-ons depending on what's involved. No retainer, no surprise invoice, no 'phase two.'",
+        ],
+        callout: "Agency quality, freelancer price, DIY speed — for less than most Oceanside agencies charge for the discovery call.",
+      },
+      {
+        heading: "See It Before You Pay: Free Oceanside Mockup",
+        paragraphs: [
+          "We've built sites for service businesses across North County — Fallbrook, Oceanside, Carlsbad, Vista, San Marcos, Bonsall, out to Pala. Same pattern every time: fast, mobile-first, honest about your service area, structured so Google can actually find you. Most go live within 48 hours of approval.",
+          "The easiest way to know if your current site is costing you customers is to put it next to a better one. So here's the offer: tell us your business and your city, and we'll build you a free homepage mockup — no charge, no obligation, no contract to sign first. If you like it, the whole site is $499 flat in 48 hours. If you don't, you keep the mockup and we shake hands.",
+          "That's the whole pitch. No 'transforming your digital presence,' no monthly trap. A fast custom site, a fair flat price, and proof before payment.",
+        ],
+        callout: "Free homepage mockup, $499 flat, 48-hour turnaround. Email us your business and city — we'll send the design before you owe anything.",
+      },
+    ],
+    faqs: [
+      { q: "How much does a website cost in Oceanside, CA?", a: "Agencies in North County typically charge $4,000–$8,000 and take 6–12 weeks; freelancers run $1,500–$3,000. Circuit Coders builds a custom Next.js site for $499 flat with a 48-hour turnaround and a free mockup first." },
+      { q: "How long does it take to get a small-business website built?", a: "Most agencies quote 6–12 weeks. We turn around a finished custom site in 48 hours after you approve the free mockup, with one round of revisions included." },
+      { q: "How long until my Oceanside site ranks on Google?", a: "With a fully completed Google Business Profile, consistent citations, and '[service] + Oceanside' pages, most local businesses see meaningful movement in 60–90 days. Local 'near me' rankings usually move faster than broad keywords." },
+      { q: "Do I have to pay a monthly fee to keep my website?", a: "No. The $499 build is a one-time flat fee and you own the site. Hosting and ongoing updates are optional at $50/month if you'd rather we handle them." },
+      { q: "Can you add online booking or payments to my site?", a: "Yes. Reservations, Stripe checkout, and booking-platform integrations are quoted as $200–$500 add-ons depending on the setup, on top of the $499 base build." },
+    ],
+  },
+  {
     slug: "hacked-wordpress-small-business",
     title: "Your WordPress Site Got Hacked. Here's What to Do.",
     description: "A WordPress hack drops your rankings, scares customers, and gets you blacklisted by Google. Here's the 48-hour cleanup plan, plus how to make sure it never happens again.",
