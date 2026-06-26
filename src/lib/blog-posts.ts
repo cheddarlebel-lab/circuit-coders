@@ -20,6 +20,110 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "web-design-carlsbad",
+    title: "Web Design in Carlsbad — Custom Sites for Local Businesses",
+    description: "Web design in Carlsbad without the $8,000 agency quote: a custom Next.js site for $499 flat, 48-hour turnaround, free mockup first. Real pricing, no fluff.",
+    keywords: ["web design carlsbad", "carlsbad web designer", "small business website carlsbad ca", "web design north county san diego", "affordable website design carlsbad", "carlsbad web developer", "local seo carlsbad", "website cost carlsbad", "web design encinitas"],
+    publishedAt: "2026-06-26",
+    updatedAt: "2026-06-26",
+    readTime: 8,
+    category: "Web Design",
+    author: "Circuit Coders",
+    heroTag: "CARLSBAD · WEB DESIGN · LOCAL BUSINESS",
+    sections: [
+      {
+        heading: "Why Carlsbad Businesses Get Judged in Two Seconds",
+        paragraphs: [
+          "Carlsbad isn't a market where a sloppy site slides. Between LEGOLAND traffic, the foot traffic on State Street in the Village, and the La Costa and Aviara crowd who'll happily drive to Encinitas if you make them, your customers have options and high expectations. They pull up your site on a phone, give it about two seconds, and decide.",
+          "Search 'web design carlsbad' and you hit a wall of agencies — half of them in office parks off Palomar Airport Road — quoting $5,000 to $10,000 and a 'discovery workshop' before they'll name a price. Meanwhile the site you actually have loads slow, looks dated, and squeezes off the side of the screen on an iPhone.",
+          "The damage isn't theoretical. A tourist choosing between your spot and the next one in Carlsbad Village, a Bressi Ranch family booking a service — they bounce the second your page lags. You paid for that visit through ads or word of mouth, and a slow site hands it to a competitor who loaded faster.",
+        ],
+        callout: "In a town that drives to Encinitas without a second thought, a 5-second load time isn't a flaw — it's you handing the customer to someone else.",
+      },
+      {
+        heading: "What a Carlsbad Small-Business Site Actually Needs",
+        paragraphs: [
+          "You don't need a 'digital experience.' You need a fast page that says what you do, where you do it, and makes calling or booking a one-tap job. In Carlsbad that bar sits a little higher than down the freeway, because your customer just came from a competitor's clean site and is comparing.",
+          "Every site we build starts from this list. Nothing else gets added unless it helps a real person take a real action.",
+        ],
+        list: {
+          title: "The non-negotiables",
+          items: [
+            "Loads in under 2 seconds on a phone over cell data, not just your office wifi",
+            "A click-to-call button on screen before anyone scrolls on mobile",
+            "Your service area in plain text — Carlsbad, Encinitas, Oceanside, Vista, San Marcos",
+            "Hours, address, and a map embed that matches your Google listing exactly",
+            "Real photos of your shop, your team, your work — not stock suits shaking hands",
+            "One clear action per page: call, book, or quote — never three buttons fighting",
+          ],
+        },
+      },
+      {
+        heading: "What to Cut — Features Carlsbad Agencies Love to Bill For",
+        paragraphs: [
+          "A big chunk of a Carlsbad web design quote is stuff that demos well in a Palomar Airport Road conference room and does nothing for a med spa or a general contractor. A lot of it actively slows your site down and costs you the customers it was supposed to impress.",
+          "Before you pay for any of it, ask which exact customer action it improves. One sentence. If they can't answer, cut it.",
+        ],
+        list: {
+          title: "Skip these — they bill well and do nothing",
+          items: [
+            "A chatbot. For a detail shop or a salon, a chatbot is a tax on the customer who just wanted your number.",
+            "Auto-playing video headers that eat 8–12 MB and wreck your mobile load time",
+            "A blog you'll never write next to a 'content strategy' you'll never run",
+            "Carousels and sliders nobody clicks past slide one",
+            "A complicated CMS login you have to relearn every time your hours change",
+            "Email pop-ups that hit before the visitor has seen a single thing you sell",
+          ],
+        },
+        callout: "Every megabyte you don't ship is a Carlsbad customer you don't lose. Lean wins on Carlsbad Boulevard and everywhere else.",
+      },
+      {
+        heading: "Getting Found in Carlsbad: Local SEO That Actually Moves",
+        paragraphs: [
+          "A beautiful site nobody finds is a flyer in a drawer. For a local business the real fight isn't ranking against the whole internet — it's showing up when someone near the Village or out in La Costa searches '[your service] + Carlsbad.' That's won with structure, not a $1,500-a-month agency retainer.",
+          "Your Google Business Profile does more for 'near me' searches than your homepage. Claim it, fill every field, pick the right categories, add real photos. Then make your name, address, and phone identical everywhere they appear — your site, Yelp, the Carlsbad Chamber, Apple Maps. Mismatched citations are the most common reason a legit Carlsbad business sits on page three.",
+          "On the site, we build pages on the '[service] + [city]' pattern — 'med spa Carlsbad,' 'kitchen remodel Encinitas,' 'AC repair Vista' — and add schema.org LocalBusiness markup so Google reads your hours, area served, and reviews instead of guessing. It's plumbing the visitor never sees and the difference between page one and page three.",
+        ],
+        list: {
+          title: "Your Carlsbad local SEO checklist",
+          items: [
+            "Claim and fully complete your Google Business Profile, services and service area included",
+            "Make name, address, and phone byte-for-byte identical across every listing",
+            "Build a dedicated page for each core service and each city you serve",
+            "Add schema.org LocalBusiness and Service markup so Google can read your details",
+            "Get into real local directories: the Carlsbad Chamber, Nextdoor, Yelp, Apple Maps",
+            "Ask three happy customers a week for a Google review — it compounds fast",
+          ],
+        },
+      },
+      {
+        heading: "What Web Design Costs in Carlsbad — and Where $499 Lands",
+        paragraphs: [
+          "Here's the honest Carlsbad market. A full-service agency — and there are a lot of them between Bressi Ranch and Palomar Airport Road — will quote $5,000 to $10,000 and take six to twelve weeks. A freelancer runs $1,500 to $3,000 and a few weeks, if they answer your emails. DIY on Wix or Squarespace is $200 to $400 a year plus 20 hours of your own time and a site that looks like the template it is.",
+          "Circuit Coders builds a custom site for $499 flat. Not a template — a real Next.js site on Vercel, built fast, hosted fast, turned around in 48 hours with one round of revisions included. We send a free mockup before you pay a cent, so you judge the actual design with your eyes instead of a sales deck.",
+          "Want us to host it and keep it updated? That's $50 a month and it's optional — you own the site either way. Need online booking, Stripe checkout, or a reservation platform wired in? Those are $200–$500 add-ons depending on the work. No retainer, no surprise invoice, no 'phase two.'",
+        ],
+        callout: "Agency-quality build, freelancer price, 48-hour speed — for less than most Carlsbad agencies bill for the discovery call.",
+      },
+      {
+        heading: "See It First: Free Carlsbad Homepage Mockup",
+        paragraphs: [
+          "We've built sites for service businesses across North County — Carlsbad, Encinitas, Oceanside, Vista, San Marcos, out to Fallbrook and Bonsall. Same playbook every time: fast, mobile-first, honest about your service area, structured so Google can find you. Most go live within 48 hours of approval.",
+          "The fastest way to know if your current site is costing you is to set it next to a better one. So here's the deal: tell us your business and your city, and we'll build a free homepage mockup — no charge, no obligation, nothing to sign first. Like it? The full site is $499 flat in 48 hours. Don't? Keep the mockup, no hard feelings.",
+          "That's the whole pitch. No 'elevating your brand,' no monthly trap. A fast custom site, a fair flat price, and proof before you pay.",
+        ],
+        callout: "Free homepage mockup, $499 flat, 48-hour turnaround. Send us your Carlsbad business and city — we'll design it before you owe a dollar.",
+      },
+    ],
+    faqs: [
+      { q: "How much does a website cost in Carlsbad, CA?", a: "Carlsbad agencies typically charge $5,000–$10,000 over 6–12 weeks; freelancers run $1,500–$3,000. Circuit Coders builds a custom Next.js site for $499 flat with a 48-hour turnaround and a free mockup first." },
+      { q: "How fast can I get a new business website built?", a: "Most agencies quote 6–12 weeks. We deliver a finished custom site in 48 hours after you approve the free mockup, with one round of revisions included." },
+      { q: "How long until my Carlsbad site shows up on Google?", a: "With a complete Google Business Profile, consistent citations, and '[service] + Carlsbad' pages, most local businesses see real movement in 60–90 days. 'Near me' rankings usually move faster than broad keywords." },
+      { q: "Do I have to pay a monthly fee to keep my site?", a: "No. The $499 build is a one-time flat fee and you own the site. Hosting and ongoing updates are optional at $50/month if you'd rather we handle them." },
+      { q: "Can you add online booking or payments to my site?", a: "Yes. Reservations, Stripe checkout, and booking-platform integrations are quoted as $200–$500 add-ons depending on the setup, on top of the $499 base build." },
+    ],
+  },
+  {
     slug: "web-design-oceanside",
     title: "Web Design in Oceanside CA — What a Custom Site Costs",
     description: "What web design really costs in Oceanside: agency quotes, freelancer rates, and the $499 flat / 48-hour custom build. Real pricing, no agency-speak.",
