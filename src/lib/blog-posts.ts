@@ -20,6 +20,111 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "web-design-vista-ca",
+    title: "Web Design in Vista CA — Built to Get You Calls",
+    description: "Web design in Vista that turns visitors into phone calls: a custom Next.js site for $499 flat, 48-hour turnaround, free mockup first. Real pricing, zero agency-speak.",
+    keywords: ["web design vista", "vista web designer", "small business website vista ca", "web design north county san diego", "affordable website design vista", "vista web developer", "local seo vista", "website cost vista", "web design san marcos"],
+    publishedAt: "2026-06-27",
+    updatedAt: "2026-06-27",
+    readTime: 8,
+    category: "Web Design",
+    author: "Circuit Coders",
+    heroTag: "VISTA · WEB DESIGN · GET CALLS",
+    sections: [
+      {
+        heading: "Why Most Vista Business Sites Never Get the Call",
+        paragraphs: [
+          "Vista runs on phone calls. A homeowner off Shadowridge needs an AC repair before the next heat wave, a customer driving the 78 between Oceanside and San Marcos wants a quote, a family near Vista Village is picking a place for dinner. Every one of them pulls up your site on a phone, and the whole transaction lives or dies on whether they can find your number and tap it in two seconds.",
+          "Search 'web design vista' and you hit the usual wall — agencies quoting $4,000 to $8,000 and a 'discovery call' before they'll name a real number. Meanwhile the site you actually have loads in five seconds, looks like it was built in 2014, and the phone number is buried in a footer nobody scrolls to on a phone.",
+          "That's not a cosmetic problem. It's a leak. You're paying for that visit — through ads, a Google listing, a customer who heard your name — and then the page lags, the number's hard to find, and they call the next contractor or shop instead. The site didn't lose a 'conversion.' It lost a call that was already yours.",
+          "Vista has more business than people give it credit for: the brewery district, the Business Park off Sycamore, contractors and trades all over Shadowridge and the 78 corridor. The competition is real, and most of it has a site as slow as yours. The one who makes the call easy wins.",
+        ],
+        callout: "Your site has one job in Vista: turn a phone screen into a ringing phone. If a customer can't find your number before they have to scroll, you built a brochure, not a lead machine.",
+      },
+      {
+        heading: "What a Vista Small-Business Site Actually Needs",
+        paragraphs: [
+          "Forget the 40-page proposal. A site that earns calls for a Vista business does six things well and ignores the rest. You don't need a 'digital ecosystem.' You need a fast page that loads on cell data, says what you do and where, and makes calling a one-tap job.",
+          "Every site we build starts from this list. Nothing else gets added unless it helps a real person in Vista pick up the phone or book.",
+        ],
+        list: {
+          title: "The non-negotiables",
+          items: [
+            "Loads in under 2 seconds on a phone over LTE, not just your office wifi",
+            "A click-to-call button on screen before anyone scrolls — the first thing a thumb can reach",
+            "Your service area in plain text — Vista, San Marcos, Oceanside, Carlsbad, Escondido, Bonsall",
+            "Hours, address, and a map embed that matches your Google listing exactly",
+            "Real photos of your shop, your crew, your work — not stock images of strangers in suits",
+            "One clear action per page: call, book, or quote — never three buttons fighting for the tap",
+          ],
+        },
+      },
+      {
+        heading: "What to Cut — Features That Cost You the Call",
+        paragraphs: [
+          "A big chunk of a Vista web design quote is stuff that demos well in a conference room and does nothing for a brewery, a roofer, or a machine shop in the Business Park. Worse, half of it slows the page down and quietly costs you the exact customer it was supposed to impress.",
+          "Before you pay for any of it, ask the person selling it which customer action it improves. One sentence. If they can't answer, cut it.",
+        ],
+        list: {
+          title: "Skip these — they bill well and add nothing",
+          items: [
+            "A chatbot. For a body shop or a taproom, a chatbot is a tax on the customer who just wanted your number.",
+            "Auto-playing video headers that eat 8–12 MB and tank your load time on mobile",
+            "A blog you'll never write next to a 'content strategy' you'll never run",
+            "Carousels and sliders nobody clicks past the first slide",
+            "A complicated CMS login you have to relearn every time your hours change",
+            "Email pop-ups that hit before the visitor has seen a single thing you offer",
+          ],
+        },
+        callout: "Every megabyte you don't ship is a Vista customer who doesn't bounce. Lean pages load faster, rank better, and ring the phone more. Speed is the feature.",
+      },
+      {
+        heading: "Getting Found in Vista: Local SEO That Rings the Phone",
+        paragraphs: [
+          "A fast site nobody finds is a flyer in a drawer. For a local business the real fight isn't ranking against the whole internet — it's showing up when someone near Vista Village or out by the Business Park searches '[your service] + Vista.' That's won with structure, not a $1,500-a-month agency retainer.",
+          "Your Google Business Profile does more for 'near me' searches than your homepage. Claim it, fill every field, pick the right categories, and post real photos. Then make your name, address, and phone byte-for-byte identical everywhere they appear — your site, Yelp, the Vista Chamber, Apple Maps. Mismatched citations are the single most common reason a legit Vista business sits on page three.",
+          "On the site, we build pages on the '[service] + [city]' pattern — 'AC repair Vista,' 'auto detailing San Marcos,' 'kitchen remodel Oceanside' — and add schema.org LocalBusiness markup so Google reads your hours, service area, and reviews instead of guessing. It's plumbing the visitor never sees, and it's the difference between page one and page three.",
+        ],
+        list: {
+          title: "Your Vista local SEO checklist",
+          items: [
+            "Claim and fully complete your Google Business Profile, services and service area included",
+            "Make name, address, and phone identical across the web — no abbreviation drift",
+            "Build a dedicated page for each core service and each city you serve",
+            "Add schema.org LocalBusiness and Service markup so Google can read your details",
+            "Get into real local directories: the Vista Chamber, Nextdoor, Yelp, Apple Maps",
+            "Ask three happy customers a week for a Google review — it compounds fast",
+          ],
+        },
+      },
+      {
+        heading: "What Web Design Costs in Vista — and Where $499 Lands",
+        paragraphs: [
+          "Here's the honest Vista market. A full-service agency in Carlsbad or San Diego will quote $4,000 to $8,000 and take six to twelve weeks. A freelancer runs $1,500 to $3,000 and a few weeks, if they answer your emails. DIY on Wix or Squarespace is $200 to $400 a year plus 20 hours of your own time and a site that looks like the template it is.",
+          "Circuit Coders builds a custom site for $499 flat. Not a template — a real Next.js site on Vercel, built fast, hosted fast, turned around in 48 hours with one round of revisions included. We send you a free mockup before you pay a dollar, so you judge the actual design with your eyes instead of a sales deck.",
+          "Want us to host it and keep it updated? That's $50 a month and it's optional — you own the site either way. Need online booking, Stripe checkout, or a reservation platform wired in? Those are $200–$500 add-ons depending on the work. No retainer, no surprise invoice, no 'phase two.'",
+        ],
+        callout: "Agency-quality build, freelancer price, 48-hour speed — for less than most Vista agencies bill for the discovery call.",
+      },
+      {
+        heading: "See It First: Free Vista Homepage Mockup",
+        paragraphs: [
+          "We've built sites for service businesses across North County — Vista, San Marcos, Oceanside, Carlsbad, Escondido, out to Fallbrook and Bonsall. Same playbook every time: fast, mobile-first, honest about your service area, structured so Google can find you and built so the phone actually rings. Most go live within 48 hours of approval.",
+          "The fastest way to know if your current site is costing you calls is to set it next to a better one. So here's the deal: tell us your business and your city, and we'll build you a free homepage mockup — no charge, no obligation, nothing to sign first. Like it? The full site is $499 flat in 48 hours. Don't? Keep the mockup, no hard feelings.",
+          "That's the whole pitch. No 'elevating your brand,' no monthly trap. A fast custom site, a fair flat price, and proof before you pay a cent.",
+        ],
+        callout: "Free homepage mockup, $499 flat, 48-hour turnaround. Send us your Vista business and city — we'll design it before you owe a dollar.",
+      },
+    ],
+    faqs: [
+      { q: "How much does a website cost in Vista, CA?", a: "Agencies in North County typically charge $4,000–$8,000 over 6–12 weeks; freelancers run $1,500–$3,000. Circuit Coders builds a custom Next.js site for $499 flat with a 48-hour turnaround and a free mockup first." },
+      { q: "How fast can I get a new business website built?", a: "Most agencies quote 6–12 weeks. We deliver a finished custom site in 48 hours after you approve the free mockup, with one round of revisions included." },
+      { q: "How long until my Vista site shows up on Google?", a: "With a complete Google Business Profile, consistent citations, and '[service] + Vista' pages, most local businesses see real movement in 60–90 days. 'Near me' rankings usually move faster than broad keywords." },
+      { q: "How do I get my website to actually generate phone calls?", a: "Put a click-to-call button on screen before anyone scrolls, keep the page under 2 seconds on mobile, and make your service area and offer obvious in the first 3 seconds. Most call leaks come from speed and a buried phone number, not design." },
+      { q: "Do I have to pay a monthly fee to keep my site?", a: "No. The $499 build is a one-time flat fee and you own the site. Hosting and ongoing updates are optional at $50/month if you'd rather we handle them." },
+    ],
+  },
+  {
     slug: "web-design-carlsbad",
     title: "Web Design in Carlsbad — Custom Sites for Local Businesses",
     description: "Web design in Carlsbad without the $8,000 agency quote: a custom Next.js site for $499 flat, 48-hour turnaround, free mockup first. Real pricing, no fluff.",
