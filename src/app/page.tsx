@@ -12,20 +12,14 @@ import LiveMetrics from "@/components/LiveMetrics";
 import FAQ from "@/components/FAQ";
 import InquiryForm from "@/components/InquiryForm";
 import Footer from "@/components/Footer";
-import SmoothScroll from "@/components/SmoothScroll";
-import CustomCursor from "@/components/CustomCursor";
 import PageLoader from "@/components/PageLoader";
 import ScrollProgress from "@/components/ScrollProgress";
-import FilmGrain from "@/components/FilmGrain";
 
 export default function Home() {
   return (
-    <div className="custom-cursor-page">
-      <SmoothScroll />
-      <CustomCursor />
+    <div>
       <PageLoader />
       <ScrollProgress />
-      <FilmGrain />
       <CircuitBackground />
       <Navbar />
       <main>
