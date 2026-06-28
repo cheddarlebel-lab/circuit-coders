@@ -20,6 +20,117 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "web-design-escondido",
+    title: "Web Design in Escondido — Small Business Websites",
+    description: "Escondido small-business web design that loads fast, ranks local, and turns phone searches into calls. Custom site, $499 flat, 48-hour turnaround, free mockup.",
+    keywords: ["web design escondido", "escondido web designer", "small business website escondido", "website design north county san diego", "local seo escondido", "web design san marcos", "web design valley center", "escondido small business website", "escondido seo"],
+    publishedAt: "2026-06-28",
+    updatedAt: "2026-06-28",
+    readTime: 7,
+    category: "Web Design",
+    author: "Circuit Coders",
+    heroTag: "WEB DESIGN · ESCONDIDO · NORTH COUNTY",
+    sections: [
+      {
+        heading: "Your Escondido Business Deserves Better Than a Facebook Page",
+        paragraphs: [
+          "Walk down Grand Avenue on a Friday night during Cruisin' Grand and you'll see packed restaurants, full barbershops, and breweries with lines out the door. Then you try to find those same shops online and half of them have nothing but a Facebook page that hasn't posted since 2023. The customer standing on the sidewalk with a phone in their hand gives up and orders from the chain instead.",
+          "Escondido is the biggest city in inland North County — over 150,000 people, plus everyone driving in from Valley Center, Ramona, and San Marcos. That's a massive local market typing things into Google every day: 'taco shop near me,' 'auto repair escondido,' 'plumber 92025.' If your site doesn't show up, or it takes eight seconds to load on a phone, you just handed that search to a competitor.",
+          "The good news: most of your competitors' websites are bad too. A fast, clean, mobile-first site puts you ahead of 80% of the local field — for about the price of a decent used transmission.",
+        ],
+      },
+      {
+        heading: "What an Escondido Small-Business Site Actually Needs",
+        paragraphs: [
+          "Forget the agency feature list. A website for a Grand Avenue restaurant or a Mission Road repair shop has exactly one job: turn a stranger searching on their phone into a call, a booking, or a walk-in. Everything that doesn't serve that job is decoration.",
+          "Here's the short list that actually moves the needle. Nail these and you don't need anything fancy on top.",
+        ],
+        list: {
+          title: "The 6 things that actually convert",
+          items: [
+            "Your phone number tappable in the top corner on mobile — one tap to call, no scrolling",
+            "A page that loads in under 2 seconds on a phone (your customers are on cell data, not your shop wifi)",
+            "Hours, address, and a Google Map that opens directions in one tap",
+            "The actual services you offer with real prices or ranges — not 'contact us for a quote'",
+            "Real photos of your shop, your team, your work — shot on a phone beats stock every time",
+            "One clear button — 'Call,' 'Book,' or 'Order' — repeated on every screen",
+          ],
+        },
+        callout: "If a customer can't find your phone number in 3 seconds on their phone, you've already lost them to the next result.",
+      },
+      {
+        heading: "What to Cut From Your Escondido Website",
+        paragraphs: [
+          "Most of what makes a small-business site slow and confusing is stuff somebody talked the owner into. Here's what to rip out.",
+          "Every one of these slows your site down and shoves the only things that matter — your phone number and your services — further down the screen. Cutting is free. On most sites I audit, deleting is the single highest-ROI move available.",
+        ],
+        list: {
+          title: "Delete these today",
+          items: [
+            "A chatbot. For a Grand Avenue taqueria, a chatbot is a tax on hungry customers who just want a phone number.",
+            "Auto-playing hero videos that eat 15 MB and stall the page on cell data",
+            "Image carousels nobody swipes through — pick your one best photo and stop",
+            "Stock photos of smiling models who've never set foot in Escondido",
+            "A 'blog' with three posts from 2021 — either commit to it or delete it",
+            "Pop-ups that cover the whole screen before anyone's read a single line",
+          ],
+        },
+      },
+      {
+        heading: "Getting Found: Local SEO for Escondido (Start With the Free Stuff)",
+        paragraphs: [
+          "Before you spend a dollar on ads, claim what's free. The biggest lever for an Escondido business isn't even your website — it's your Google Business Profile. That's the map pack that pops up when someone searches 'barber escondido' or 'hvac near me,' and it's the first thing most people tap.",
+          "That last checklist item matters more than people think. Someone in Valley Center searching 'ac repair valley center' should land on a page that literally says Valley Center — not a generic 'Service Areas' blurb. Each page targets one service in one city, and a well-built local page can rank in 60–90 days with zero ad spend.",
+        ],
+        list: {
+          title: "Local SEO checklist",
+          items: [
+            "Claim and fully fill out your Google Business Profile — every field, correct categories, real hours",
+            "Post photos to your Profile monthly; Google ranks active profiles higher",
+            "Make your name, address, and phone identical everywhere — Yelp, Apple Maps, Bing, Nextdoor (these are 'citations')",
+            "Ask every happy customer for a Google review; aim for 1–2 a week",
+            "Add schema.org LocalBusiness markup so Google reads your hours and location cleanly",
+            "Build one page per service + city: 'auto repair escondido,' 'brake service san marcos,' 'ac repair valley center'",
+          ],
+        },
+        callout: "Your Google Business Profile is the highest-ROI marketing asset you own, and it costs $0. Most Escondido businesses haven't even claimed theirs.",
+      },
+      {
+        heading: "What Web Design Actually Costs in North County",
+        paragraphs: [
+          "Quotes around here are all over the map. A Carlsbad agency will quote $5,000–$15,000 and take three months. A Wix template you build yourself is 'free' until you've burned a weekend and it still loads slow. A guy on Fiverr will do it for $150 and vanish the moment it breaks.",
+          "Circuit Coders builds for $499 flat. Custom site, built on Next.js and hosted on Vercel so it's genuinely fast, delivered in 48 hours, with one round of revisions. And I send you a free mockup before you pay a cent — you see the real design first, then decide.",
+        ],
+        list: {
+          title: "What $499 gets you",
+          items: [
+            "A custom, mobile-first site — not a recycled template",
+            "48-hour turnaround, not 12 weeks",
+            "Built on Next.js + Vercel, scoring 90+ on Google's speed test",
+            "One round of revisions included",
+            "A free mockup before you pay anything",
+          ],
+        },
+        callout: "$499 flat, 48 hours, free mockup first. Optional after that: hosting and updates at $50/month, or integrations like online booking and Stripe payments at $200–$500.",
+      },
+      {
+        heading: "See Your New Escondido Site Before You Pay",
+        paragraphs: [
+          "Here's the deal that makes this easy. Send me your current site — or just your Facebook page if that's all you've got — and I'll send back a free audit plus a mockup of what your new site could look like. No cost, no obligation, no pushy follow-up.",
+          "If you like it, it's $499 and you're live in 48 hours. If you don't, you keep the audit and we shake hands. I'm up in Fallbrook, ten minutes north on the 15, so I actually know the difference between Grand Avenue and Rancho Bernardo.",
+        ],
+        callout: "Free mockup, free audit, $499 flat, live in 48 hours. Email me your business and I'll show you exactly what's possible before you spend a dime.",
+      },
+    ],
+    faqs: [
+      { q: "How much should a small-business website cost in Escondido?", a: "Local agencies quote $5,000–$15,000, but Circuit Coders builds a custom site for $499 flat with a 48-hour turnaround. Hosting and updates are optional at $50/month." },
+      { q: "How long does it take to build a website?", a: "48 hours from approval to live. You get a free mockup first, then one round of revisions before it goes up." },
+      { q: "How do I get my Escondido business to show up on Google Maps?", a: "Claim and fully complete your Google Business Profile, keep your name, address, and phone identical across every directory, and collect 1–2 reviews a week. Most businesses see map-pack movement within 30–60 days." },
+      { q: "How long until my new website ranks on Google?", a: "A clean site with proper local SEO and per-city service pages typically starts ranking in 60–90 days. Your Google Business Profile can show results even faster — often within 30 days." },
+      { q: "Do I need a separate page for each city I serve?", a: "Yes — one page per service per city ('ac repair valley center,' 'brake service san marcos') ranks far better than a single 'Service Areas' page. Each targeted page can rank within 60–90 days." },
+    ],
+  },
+  {
     slug: "web-design-vista-ca",
     title: "Web Design in Vista CA — Built to Get You Calls",
     description: "Web design in Vista that turns visitors into phone calls: a custom Next.js site for $499 flat, 48-hour turnaround, free mockup first. Real pricing, zero agency-speak.",
