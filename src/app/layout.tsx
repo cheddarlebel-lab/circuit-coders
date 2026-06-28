@@ -81,6 +81,7 @@ const organizationJsonLd = {
   founder: { "@type": "Person", name: "Leo Lebel" },
   sameAs: [
     "https://instagram.com/circuit_coders",
+    "https://x.com/Cheddarlebel",
   ],
   contactPoint: {
     "@type": "ContactPoint",

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Zap, Instagram, Mail, ArrowUpRight } from "lucide-react";
+import { Zap, Instagram, Twitter, Mail, ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -34,6 +34,7 @@ export default function Footer() {
             <div className="flex gap-2">
               {[
                 { icon: Instagram, label: "Instagram", href: "https://instagram.com/circuit_coders" },
+                { icon: Twitter, label: "X", href: "https://x.com/Cheddarlebel" },
                 { icon: Mail, label: "Email", href: "mailto:admin@circuitcoders.com" },
               ].map(({ icon: Icon, label, href }) => (
                 <a
