@@ -80,9 +80,7 @@ const organizationJsonLd = {
     "Engineering studio building business websites, local SEO, AI phone receptionists, mobile apps, custom software, and hardware. Based in North County San Diego, CA.",
   founder: { "@type": "Person", name: "Leo Lebel" },
   sameAs: [
-    "https://github.com/circuitcoders",
-    "https://x.com/circuitcoders",
-    "https://linkedin.com/company/circuitcoders",
+    "https://instagram.com/circuit_coders",
   ],
   contactPoint: {
     "@type": "ContactPoint",

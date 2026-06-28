@@ -91,10 +91,12 @@ export default function LinksPage() {
         </div>
 
         <a
-          href="https://instagram.com/circuitcoders"
+          href="https://instagram.com/circuit_coders"
+          target="_blank"
+          rel="noopener noreferrer"
           className="mt-9 text-xs text-gray-500 transition-colors hover:text-gray-300"
         >
-          @circuitcoders
+          @circuit_coders
         </a>
         <p className="mt-auto pt-8 text-[11px] text-gray-600">
           San Diego, CA · custom-coded, never templates
