@@ -16,7 +16,8 @@ export const metadata: Metadata = {
   description:
     "North County San Diego engineering studio. Custom websites from $1,500, Google Maps / local SEO, 24/7 AI phone receptionists, apps, and custom software — designed and built by one team.",
   keywords: [
-    "Fallbrook web designer",
+    "San Diego web designer",
+    "San Diego web design",
     "Oceanside web designer",
     "North County San Diego web design",
     "small business website",
@@ -105,12 +106,12 @@ const localBusinessJsonLd = {
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Fallbrook",
+    addressLocality: "San Diego",
     addressRegion: "CA",
     addressCountry: "US",
   },
   areaServed: [
-    { "@type": "City", name: "Fallbrook" },
+    { "@type": "City", name: "San Diego" },
     { "@type": "City", name: "Oceanside" },
     { "@type": "City", name: "Vista" },
     { "@type": "City", name: "Carlsbad" },

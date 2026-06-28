@@ -9,7 +9,7 @@ import CircuitBackground from "@/components/CircuitBackground";
 export const metadata: Metadata = {
   title: "Blog — Circuit Coders | Local SEO + Web Design for Small Businesses",
   description:
-    "Field notes on local SEO, web design, and custom hardware for small businesses in Fallbrook, Oceanside, and North County San Diego.",
+    "Field notes on local SEO, web design, and custom hardware for small businesses across San Diego and North County.",
   alternates: { canonical: "https://circuitcoders.com/blog" },
   openGraph: {
     title: "Circuit Coders Blog — Local SEO + Web Design",
@@ -38,7 +38,7 @@ export default function BlogIndex() {
             Notes from building <span className="text-circuit-400">small-business websites</span> that actually rank.
           </h1>
           <p className="text-lg text-gray-200 max-w-2xl leading-relaxed">
-            We build sites for Fallbrook, Oceanside, and North County businesses — and write about what works. No fluff, no agency-speak.
+            We build sites for San Diego and North County businesses — and write about what works. No fluff, no agency-speak.
           </p>
         </header>
 

@@ -27,7 +27,7 @@ export const FAQS: FaqItem[] = [
   },
   {
     q: "Where are you located, and who do you work with?",
-    a: "Circuit Coders is based in North County San Diego (Fallbrook, Oceanside, Vista, Carlsbad, San Marcos, Escondido) and works with local service businesses — contractors, auto and collision shops, detailers, barbers, and more — as well as clients nationwide.",
+    a: "Circuit Coders is a San Diego studio serving the whole county — North County (Oceanside, Vista, Carlsbad, San Marcos, Escondido) out to the coast and inland — working with local service businesses like contractors, auto and collision shops, detailers, barbers, and more, as well as clients nationwide.",
   },
   {
     q: "Are these real custom sites or templates?",
