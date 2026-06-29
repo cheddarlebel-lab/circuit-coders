@@ -117,7 +117,7 @@ export const blogPosts: BlogPost[] = [
         heading: "See Your New Escondido Site Before You Pay",
         paragraphs: [
           "Here's the deal that makes this easy. Send me your current site — or just your Facebook page if that's all you've got — and I'll send back a free audit plus a mockup of what your new site could look like. No cost, no obligation, no pushy follow-up.",
-          "If you like it, it's $499 and you're live in 48 hours. If you don't, you keep the audit and we shake hands. I'm up in Fallbrook, ten minutes north on the 15, so I actually know the difference between Grand Avenue and Rancho Bernardo.",
+          "If you like it, it's $499 and you're live in 48 hours. If you don't, you keep the audit and we shake hands. I'm up in San Diego, ten minutes north on the 15, so I actually know the difference between Grand Avenue and Rancho Bernardo.",
         ],
         callout: "Free mockup, free audit, $499 flat, live in 48 hours. Email me your business and I'll show you exactly what's possible before you spend a dime.",
       },
@@ -220,7 +220,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "See It First: Free Vista Homepage Mockup",
         paragraphs: [
-          "We've built sites for service businesses across North County — Vista, San Marcos, Oceanside, Carlsbad, Escondido, out to Fallbrook and Bonsall. Same playbook every time: fast, mobile-first, honest about your service area, structured so Google can find you and built so the phone actually rings. Most go live within 48 hours of approval.",
+          "We've built sites for service businesses across North County — Vista, San Marcos, Oceanside, Carlsbad, Escondido, out to San Diego and Bonsall. Same playbook every time: fast, mobile-first, honest about your service area, structured so Google can find you and built so the phone actually rings. Most go live within 48 hours of approval.",
           "The fastest way to know if your current site is costing you calls is to set it next to a better one. So here's the deal: tell us your business and your city, and we'll build you a free homepage mockup — no charge, no obligation, nothing to sign first. Like it? The full site is $499 flat in 48 hours. Don't? Keep the mockup, no hard feelings.",
           "That's the whole pitch. No 'elevating your brand,' no monthly trap. A fast custom site, a fair flat price, and proof before you pay a cent.",
         ],
@@ -324,7 +324,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "See It First: Free Carlsbad Homepage Mockup",
         paragraphs: [
-          "We've built sites for service businesses across North County — Carlsbad, Encinitas, Oceanside, Vista, San Marcos, out to Fallbrook and Bonsall. Same playbook every time: fast, mobile-first, honest about your service area, structured so Google can find you. Most go live within 48 hours of approval.",
+          "We've built sites for service businesses across North County — Carlsbad, Encinitas, Oceanside, Vista, San Marcos, out to San Diego and Bonsall. Same playbook every time: fast, mobile-first, honest about your service area, structured so Google can find you. Most go live within 48 hours of approval.",
           "The fastest way to know if your current site is costing you is to set it next to a better one. So here's the deal: tell us your business and your city, and we'll build a free homepage mockup — no charge, no obligation, nothing to sign first. Like it? The full site is $499 flat in 48 hours. Don't? Keep the mockup, no hard feelings.",
           "That's the whole pitch. No 'elevating your brand,' no monthly trap. A fast custom site, a fair flat price, and proof before you pay.",
         ],
@@ -428,7 +428,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "See It Before You Pay: Free Oceanside Mockup",
         paragraphs: [
-          "We've built sites for service businesses across North County — Fallbrook, Oceanside, Carlsbad, Vista, San Marcos, Bonsall, out to Pala. Same pattern every time: fast, mobile-first, honest about your service area, structured so Google can actually find you. Most go live within 48 hours of approval.",
+          "We've built sites for service businesses across North County — San Diego, Oceanside, Carlsbad, Vista, San Marcos, Bonsall, out to Pala. Same pattern every time: fast, mobile-first, honest about your service area, structured so Google can actually find you. Most go live within 48 hours of approval.",
           "The easiest way to know if your current site is costing you customers is to put it next to a better one. So here's the offer: tell us your business and your city, and we'll build you a free homepage mockup — no charge, no obligation, no contract to sign first. If you like it, the whole site is $499 flat in 48 hours. If you don't, you keep the mockup and we shake hands.",
           "That's the whole pitch. No 'transforming your digital presence,' no monthly trap. A fast custom site, a fair flat price, and proof before payment.",
         ],
@@ -459,7 +459,7 @@ export const blogPosts: BlogPost[] = [
         heading: "You Googled your own business and saw Viagra ads",
         paragraphs: [
           "Here's how most owners find out. You search your shop's name on a Tuesday morning, and under your title in Google it says something about cheap pharmaceuticals or a casino in a language you don't speak. Your homepage looks fine when you click it. The hack is hiding from you and showing itself to Google.",
-          "I get this call a couple times a month from businesses around North County — a Vista contractor, a Carlsbad boutique, a Fallbrook landscaper who hadn't logged into their site since 2021. The site still 'works.' It's also quietly injecting 4,000 spam pages, and Google is about to slap a red 'this site may be hacked' warning under every result.",
+          "I get this call a couple times a month from businesses around North County — a Vista contractor, a Carlsbad boutique, a San Diego landscaper who hadn't logged into their site since 2021. The site still 'works.' It's also quietly injecting 4,000 spam pages, and Google is about to slap a red 'this site may be hacked' warning under every result.",
           "This is not the end of your business. But the clock matters. Every day a hacked site sits live, you lose rankings, you train customers to distrust your name, and you inch closer to Google blacklisting the whole domain. Move now.",
         ],
         callout: "If Google shows 'This site may be hacked' under your listing, you can lose 50–80% of organic traffic within a week. Speed beats perfection here.",
@@ -557,7 +557,7 @@ export const blogPosts: BlogPost[] = [
     slug: "link-preview-broken-fix",
     title: "Why Your Website's Link Preview Is Broken (and How to Fix It)",
     description: "Paste your site link in a text and get a blank box or naked URL? That's broken Open Graph tags. Here's exactly what's wrong and how to fix it fast.",
-    keywords: ["website link preview not working", "open graph tags", "link preview not showing image", "facebook link preview broken", "og:image not working", "imessage link preview", "social share preview", "North County web design", "Fallbrook web designer"],
+    keywords: ["website link preview not working", "open graph tags", "link preview not showing image", "facebook link preview broken", "og:image not working", "imessage link preview", "social share preview", "North County web design", "San Diego web designer"],
     publishedAt: "2026-06-24",
     updatedAt: "2026-06-24",
     readTime: 7,
@@ -568,7 +568,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "You Paste Your Link and It Looks Dead",
         paragraphs: [
-          "You're a Fallbrook contractor texting a quote to a homeowner. You paste circuitcoders-style link to your portfolio, hit send, and instead of a clean card with your logo and a photo, the customer sees a naked blue URL. Or worse — a gray box with a broken-image icon. It looks like a scam link, and now they're hesitating to tap it.",
+          "You're a San Diego contractor texting a quote to a homeowner. You paste circuitcoders-style link to your portfolio, hit send, and instead of a clean card with your logo and a photo, the customer sees a naked blue URL. Or worse — a gray box with a broken-image icon. It looks like a scam link, and now they're hesitating to tap it.",
           "Same thing happens when an Oceanside restaurant shares its menu page on Facebook and the post shows no photo, no title, just the bare web address. The algorithm buries posts with no image. Your reach drops, the link looks sketchy, and nobody clicks.",
           "This isn't a fluke and it isn't your phone. It's a fixable problem with a boring name — Open Graph tags — and almost every cheap or DIY site gets it wrong. The good news: it's a one-time fix, not a redesign.",
         ],
@@ -659,7 +659,7 @@ export const blogPosts: BlogPost[] = [
     slug: "schema-markup-local-business",
     title: "Local Business Schema Markup: The Copy-Paste Version for North County Owners",
     description: "Schema markup is the code that tells Google your address, hours, and reviews. Here's the exact copy-paste version for local businesses — no plugin, no jargon, no fluff.",
-    keywords: ["local business schema markup", "schema markup for small business", "LocalBusiness JSON-LD", "structured data SEO", "schema.org local business", "rich results Google", "Fallbrook web design", "North County San Diego SEO", "Google Business Profile schema"],
+    keywords: ["local business schema markup", "schema markup for small business", "LocalBusiness JSON-LD", "structured data SEO", "schema.org local business", "rich results Google", "San Diego web design", "North County San Diego SEO", "Google Business Profile schema"],
     publishedAt: "2026-06-24",
     updatedAt: "2026-06-24",
     readTime: 8,
@@ -670,7 +670,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Google reads your homepage. It can't read your business.",
         paragraphs: [
-          "Open your website and you'll see your name, your hours, your phone number, your address in Fallbrook or Vista or Oceanside. You see a business. Google sees a wall of text and has to guess which line is the phone number and which line is just a number.",
+          "Open your website and you'll see your name, your hours, your phone number, your address in San Diego or Vista or Oceanside. You see a business. Google sees a wall of text and has to guess which line is the phone number and which line is just a number.",
           "Schema markup is how you stop making Google guess. It's a small block of code that sits in your page and labels everything: this is the business name, this is the address, these are the hours, this is the 4.8-star rating. Google trusts labeled data far more than text it has to interpret.",
           "When you skip it, you leave money on the table. The plumber in San Marcos with schema gets the star ratings and hours shown right in search results. The one without it gets a plain blue link. Same service, same town — one of them looks legit at a glance and one doesn't.",
         ],
@@ -689,7 +689,7 @@ export const blogPosts: BlogPost[] = [
             "\"@type\": \"LocalBusiness\" — or get specific: \"Plumber\", \"HVACBusiness\", \"AutoRepair\", \"BeautySalon\"",
             "\"name\", \"image\", and \"url\" — your business name, a logo URL, your homepage",
             "\"telephone\": \"+17605551234\" — full international format, the way Google wants it",
-            "\"address\" — streetAddress, addressLocality (Fallbrook), addressRegion (CA), postalCode",
+            "\"address\" — streetAddress, addressLocality (San Diego), addressRegion (CA), postalCode",
             "\"geo\" — latitude and longitude pulled from your Google Maps pin",
             "\"openingHoursSpecification\" — days and times, so hours show in results",
             "\"priceRange\": \"$$\" and \"sameAs\" — link your Facebook, Instagram, and Yelp profiles",
@@ -764,7 +764,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Want to know if your schema is even working?",
         paragraphs: [
-          "Most local businesses in Fallbrook, Bonsall, and Pala have no idea whether their site has structured data at all. The plumber thinks his web guy 'handled SEO.' He didn't — there's no schema, the hours are wrong, and the Rich Results Test throws four errors.",
+          "Most local businesses in San Diego, Bonsall, and Pala have no idea whether their site has structured data at all. The plumber thinks his web guy 'handled SEO.' He didn't — there's no schema, the hours are wrong, and the Rich Results Test throws four errors.",
           "Send me your URL and I'll run it through Google's tools and tell you exactly what's there, what's broken, and what's missing — no charge, no pitch deck, no monthly contract dangled at the end. You get a straight answer you can act on today.",
           "If you want it fixed, the math is simple: $200 to add schema to your current site, or $499 flat for a fast custom build with the markup, the local pages, and the Google Business Profile setup done right from the start. 48-hour turnaround, free mockup first, one round of revisions. You see it before you pay.",
         ],
@@ -783,7 +783,7 @@ export const blogPosts: BlogPost[] = [
     slug: "core-web-vitals-small-business",
     title: "Core Web Vitals for Small Business Sites: What Actually Matters",
     description: "Core Web Vitals decoded for small-business owners. The three numbers Google grades, what to fix, what to ignore, and what fast actually costs — no jargon.",
-    keywords: ["core web vitals", "core web vitals small business", "website speed optimization", "largest contentful paint", "page speed SEO", "slow website fix", "fast website Fallbrook", "Oceanside web design", "North County San Diego web design"],
+    keywords: ["core web vitals", "core web vitals small business", "website speed optimization", "largest contentful paint", "page speed SEO", "slow website fix", "fast website San Diego", "Oceanside web design", "North County San Diego web design"],
     publishedAt: "2026-06-24",
     updatedAt: "2026-06-24",
     readTime: 8,
@@ -795,7 +795,7 @@ export const blogPosts: BlogPost[] = [
         heading: "Your Site Loads in 8 Seconds and the Customer Is Already Gone",
         paragraphs: [
           "Pull up your own website on your phone, on cell data, standing in a parking lot in Vista. Count the seconds before you can actually read it and tap something. If that number is past 3, you have a problem you can measure in lost jobs.",
-          "Google's own data says 53% of mobile visitors leave a page that takes longer than 3 seconds to load. That's not a soft 'they were less satisfied' number — that's half your traffic hitting the back button before they ever see your phone number. For a Fallbrook landscaper or an Oceanside detailer running on word-of-mouth plus a trickle of Google searches, that trickle is the whole business.",
+          "Google's own data says 53% of mobile visitors leave a page that takes longer than 3 seconds to load. That's not a soft 'they were less satisfied' number — that's half your traffic hitting the back button before they ever see your phone number. For a San Diego landscaper or an Oceanside detailer running on word-of-mouth plus a trickle of Google searches, that trickle is the whole business.",
           "Core Web Vitals is just Google's name for grading how that loading experience feels. People hear the phrase and assume it's some developer black magic. It's three numbers, and you can understand all three in the next five minutes.",
         ],
       },
@@ -866,7 +866,7 @@ export const blogPosts: BlogPost[] = [
             "Keep your name, address, and phone identical everywhere — Yelp, Apple Maps, Nextdoor, your own footer.",
             "Add LocalBusiness schema.org markup so Google reads your hours, area served, and reviews directly from the code.",
             "Build a fast '[service] + [city]' page for each combo you serve — 'mobile detailing Carlsbad,' 'roof repair Bonsall' — not one bloated catch-all page.",
-            "Earn citations in real local directories and the Fallbrook / North County chambers, not spammy link farms.",
+            "Earn citations in real local directories and the San Diego / North County chambers, not spammy link farms.",
           ],
         },
         callout: "Fast pages don't win rankings alone — but slow pages quietly cap how high the rest of your SEO can ever climb.",
@@ -887,7 +887,7 @@ export const blogPosts: BlogPost[] = [
           "Or skip the homework. Send me your current site and I'll run it, tell you which of the three Vitals you're failing and why, and build you a free mockup of a faster version — no charge, no obligation, no 30-page PDF.",
           "If the mockup loads in under a second and yours takes six, the math makes itself. $499 flat, 48 hours, one round of revisions, and you stop bleeding the half of your traffic that was leaving before your page even finished loading.",
         ],
-        callout: "Free Core Web Vitals check plus a free mockup of the faster version — for any business in Fallbrook, Oceanside, Carlsbad, Vista, or anywhere in North County. Send the URL and I'll send the numbers.",
+        callout: "Free Core Web Vitals check plus a free mockup of the faster version — for any business in San Diego, Oceanside, Carlsbad, Vista, or anywhere in North County. Send the URL and I'll send the numbers.",
       },
     ],
     faqs: [
@@ -902,7 +902,7 @@ export const blogPosts: BlogPost[] = [
     slug: "google-business-profile-setup-small-business",
     title: "Google Business Profile Setup for Small Businesses — The 20-Minute Version",
     description: "Set up Google Business Profile the right way in 20 minutes. The fields that move you up the map pack, the ones to skip, and what to do after you hit publish.",
-    keywords: ["google business profile setup", "google business profile small business", "claim google business profile", "GBP optimization", "local SEO Fallbrook", "google maps ranking Oceanside", "google business profile categories", "north county san diego local SEO"],
+    keywords: ["google business profile setup", "google business profile small business", "claim google business profile", "GBP optimization", "local SEO San Diego", "google maps ranking Oceanside", "google business profile categories", "north county san diego local SEO"],
     publishedAt: "2026-06-24",
     updatedAt: "2026-06-24",
     readTime: 7,
@@ -913,7 +913,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Your best free ad is sitting half-empty",
         paragraphs: [
-          "Drive through downtown Fallbrook and half the shops on Main Avenue have a Google Business Profile that's a name, a phone number, and a 2019 photo of an empty parking lot. That's it. No hours, no categories, no description, no posts. Google has no idea what they do, so it doesn't show them to the guy two blocks over searching \"plumber near me\" at 9pm with a flooding kitchen.",
+          "Drive through downtown San Diego and half the shops on Main Street have a Google Business Profile that's a name, a phone number, and a 2019 photo of an empty parking lot. That's it. No hours, no categories, no description, no posts. Google has no idea what they do, so it doesn't show them to the guy two blocks over searching \"plumber near me\" at 9pm with a flooding kitchen.",
           "Here's the thing nobody tells small-business owners: your Google Business Profile beats your website for local searches. When someone in Oceanside or Vista types a service plus a place, Google shows the map pack first — three listings, a map, reviews — before a single website link. If you're not in those three, you basically don't exist for that search.",
           "The fix isn't expensive and it isn't a 6-week project. A complete, correct profile takes about 20 minutes to set up and maybe 10 minutes a week to keep warm. Most people just never do it right the first time.",
         ],
@@ -931,7 +931,7 @@ export const blogPosts: BlogPost[] = [
             "Primary category — the single most important field. Pick the most specific one that fits (\"Auto Detailing Service,\" not \"Car Wash\"). Add 2–4 secondary categories.",
             "Hours — including holiday hours. Wrong hours is the #1 thing that earns a 1-star review you didn't deserve.",
             "Phone + website — a local number beats a toll-free one for local trust. Link your actual site, not your Facebook page.",
-            "Service area or address — storefront? Use your address. Mobile (detailer, electrician, landscaper)? Set a service-area radius covering Fallbrook, Bonsall, Oceanside, wherever you actually drive.",
+            "Service area or address — storefront? Use your address. Mobile (detailer, electrician, landscaper)? Set a service-area radius covering San Diego, Bonsall, Oceanside, wherever you actually drive.",
             "Description — 750 characters. Plain English about what you do and where. No buzzwords.",
             "Photos — 8–10 real ones: storefront, team, finished work, logo. Listings with photos get roughly 35% more clicks to directions and websites.",
           ],
@@ -987,7 +987,7 @@ export const blogPosts: BlogPost[] = [
         heading: "What this costs — and what agencies charge for the same thing",
         paragraphs: [
           "GBP setup itself is free. Google never charges to claim or optimize a listing — if someone calls saying you owe money to \"verify your Google,\" it's a scam, hang up. The cost is your time, or paying someone to do it right once.",
-          "Local SEO agencies will quote you $300–$1,500 a month to \"manage your local presence,\" and a lot of that retainer is them doing the 20-minute setup above plus a couple posts. For most Fallbrook and Oceanside small businesses, that's a bad trade. You don't need a monthly retainer to keep a profile warm — you need it set up correctly and a 10-minute weekly habit.",
+          "Local SEO agencies will quote you $300–$1,500 a month to \"manage your local presence,\" and a lot of that retainer is them doing the 20-minute setup above plus a couple posts. For most San Diego and Oceanside small businesses, that's a bad trade. You don't need a monthly retainer to keep a profile warm — you need it set up correctly and a 10-minute weekly habit.",
           "Where a site actually matters: the GBP points to your website, and a slow or sketchy site kills the trust the profile built. We build the whole thing — fast custom Next.js site, '[service] + [city]' pages, and LocalBusiness schema wired in — for $499 flat, 48-hour turnaround, one round of revisions. Optional hosting and updates run $50/mo if you'd rather not touch it. Add-ons like a booking or reservation integration are quoted at $200–$500, only if you need them.",
         ],
         callout: "Free to set up, free to maintain. The only thing worth paying for is making sure it's done right and pointing at a site that doesn't embarrass you.",
@@ -1013,8 +1013,8 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "photographer-website-design-north-county",
     title: "Photographer Website Design in North County SD That Books Clients",
-    description: "Photographers in Carlsbad, Oceanside, and Fallbrook lose bookings to slow galleries and Instagram-only pages. Here's a site that ranks and books — $499 flat.",
-    keywords: ["photographer website design", "wedding photographer website", "photography portfolio website", "photographer SEO North County", "Carlsbad photographer website", "Oceanside photographer", "Fallbrook photographer website design", "San Diego photography website"],
+    description: "Photographers in Carlsbad, Oceanside, and San Diego lose bookings to slow galleries and Instagram-only pages. Here's a site that ranks and books — $499 flat.",
+    keywords: ["photographer website design", "wedding photographer website", "photography portfolio website", "photographer SEO North County", "Carlsbad photographer website", "Oceanside photographer", "San Diego photographer website design", "San Diego photography website"],
     publishedAt: "2026-06-24",
     updatedAt: "2026-06-24",
     readTime: 7,
@@ -1078,7 +1078,7 @@ export const blogPosts: BlogPost[] = [
           title: "Local SEO checklist",
           items: [
             "Claim and fully complete your Google Business Profile with the right category",
-            "Set your service area: Oceanside, Carlsbad, Vista, San Marcos, Fallbrook, Bonsall",
+            "Set your service area: Oceanside, Carlsbad, Vista, San Marcos, San Diego, Bonsall",
             "Build one page per '[service] + [city]' you want to rank for",
             "Add LocalBusiness + ImageObject schema so galleries can show in image search",
             "Ask every booked client for a Google review — aim for 2–3 new ones a month",
@@ -1099,7 +1099,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "See It Before You Pay",
         paragraphs: [
-          "We've built fast, bookable sites for service businesses all over North County — Fallbrook, Oceanside, Carlsbad, Vista, San Marcos. Photographers are an easy win because your work already sells itself; it just needs a site that loads fast, ranks locally, and makes booking a two-tap job.",
+          "We've built fast, bookable sites for service businesses all over North County — San Diego, Oceanside, Carlsbad, Vista, San Marcos. Photographers are an easy win because your work already sells itself; it just needs a site that loads fast, ranks locally, and makes booking a two-tap job.",
           "Send us your Instagram or your current site and we'll build you a free mockup of a homepage and one service page — actual design, your photos, no obligation. If you like it, it's $499 and live in 48 hours. If you don't, you've lost nothing.",
           "Stop running your business out of your DMs. Let's get you a site that does the selling while you're behind the camera.",
         ],
@@ -1204,7 +1204,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "See it before you pay — free mockup, no pitch",
         paragraphs: [
-          "We've built sites for shops and small businesses up and down North County — Oceanside, Carlsbad, Vista, San Marcos, Fallbrook, Bonsall. The pattern is always the same: great work, no website to back it up, bookings leaking to whoever ranks. The fix is fast and it's cheap.",
+          "We've built sites for shops and small businesses up and down North County — Oceanside, Carlsbad, Vista, San Marcos, San Diego, Bonsall. The pattern is always the same: great work, no website to back it up, bookings leaking to whoever ranks. The fix is fast and it's cheap.",
           "Send us your Instagram and your three best healed pieces. We'll build a free mockup of your Oceanside tattoo shop site — homepage and an artist page — so you can see exactly what it'd look like before you commit. No deposit, no obligation, no agency-speak.",
           "If you like it, it's $499 flat and live in 48 hours. If you don't, you keep the mockup and we shake hands. That's the whole offer.",
         ],
@@ -1292,7 +1292,7 @@ export const blogPosts: BlogPost[] = [
             "Add schema.org markup for Gym/SportsActivityLocation and your class schedule",
             "Build a page per service-city combo: 'kickboxing Carlsbad,' 'spin classes San Marcos'",
             "Ask 5 happy members a month for a Google review — volume and recency both rank",
-            "List in North County directories and any Fallbrook/Vista chamber of commerce site",
+            "List in North County directories and any San Diego/Vista chamber of commerce site",
           ],
         },
         callout: "Most gyms in North County have a half-filled Google Business Profile and zero schema. That gap is your fastest path to the map pack.",
@@ -1309,7 +1309,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "See It Before You Pay: Free Mockup for Your Gym",
         paragraphs: [
-          "We've built sites for detailers, tint shops, and upholstery shops across Oceanside and Fallbrook, and the pattern is always the same: the business is great, the website was the bottleneck. Gyms are no different — your floor is full, your funnel is leaking.",
+          "We've built sites for detailers, tint shops, and upholstery shops across Oceanside and San Diego, and the pattern is always the same: the business is great, the website was the bottleneck. Gyms are no different — your floor is full, your funnel is leaking.",
           "Here's the offer. Send us your current site (or your Instagram if that's all you've got) and we'll send back a free audit plus a mockup of a faster, cleaner gym site built to fill your schedule. No deposit, no contract, no pitch deck.",
           "If you like it, it's $499 and live in 48 hours. If you don't, you keep the audit and we shake hands. That's the whole deal.",
         ],
@@ -1445,7 +1445,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           "It's 11pm. Somebody in Oceanside just bought a used Tacoma off Marketplace and they want it tinted before the heat hits. They Google \"window tint near me,\" and your shop comes up third. They tap your site. It takes nine seconds to load a stretched Facebook header, the hours are wrong, and there's no price anywhere. They back out and call the shop on Coast Highway that loaded instantly.",
           "That's the whole game. Tint is an impulse-plus-research buy. People decide fast, but only after they've checked three shops on their phone. If your website is slow, vague, or built on a free Wix template from 2019, you're handing ceramic and PPF jobs to the shop next door.",
-          "I'm Leo. I build websites for North County small businesses out of Fallbrook. I've seen tint shops with a wall full of XPEL and 3M certs and a website that looks like a Craigslist ad. The work is premium. The website should be too.",
+          "I'm Leo. I build websites for North County small businesses out of San Diego. I've seen tint shops with a wall full of XPEL and 3M certs and a website that looks like a Craigslist ad. The work is premium. The website should be too.",
         ],
       },
       {
@@ -1521,7 +1521,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           "This isn't theory. A clean, fast, properly-tagged site plus a finished Google Business Profile typically starts moving up the Oceanside map pack within 60–90 days. The phone-Googlers who used to bounce now tap-to-call. The windshield-strip customers who couldn't find a price now book themselves.",
           "I'll give you a free audit of your current site and Google Business Profile — I'll tell you exactly what's costing you jobs, whether you hire me or not. If you want the build, you get a free mockup first. You only pay if you like what you see.",
-          "You tint cars in Oceanside, Carlsbad, and Vista. I build websites in Fallbrook. Let's get your shop showing up first when that 11pm Tacoma owner starts Googling.",
+          "You tint cars in Oceanside, Carlsbad, and Vista. I build websites in San Diego. Let's get your shop showing up first when that 11pm Tacoma owner starts Googling.",
         ],
       },
     ],
@@ -1537,7 +1537,7 @@ export const blogPosts: BlogPost[] = [
     slug: "mobile-detailing-website-design-north-county",
     title: "Mobile Detailing Website Design in North County: Book More Jobs",
     description: "A mobile detailing website that books jobs while you're under a hood. Pricing, local SEO, and what to cut — built for North County San Diego detailers.",
-    keywords: ["mobile detailing website", "mobile detailing website design", "detailing website North County", "car detailing website Oceanside", "mobile detailer SEO Vista", "auto detailing website Carlsbad", "detailing booking website San Marcos", "Fallbrook detailing website"],
+    keywords: ["mobile detailing website", "mobile detailing website design", "detailing website North County", "car detailing website Oceanside", "mobile detailer SEO Vista", "auto detailing website Carlsbad", "detailing booking website San Marcos", "San Diego detailing website"],
     publishedAt: "2026-06-20",
     updatedAt: "2026-06-20",
     readTime: 7,
@@ -1564,7 +1564,7 @@ export const blogPosts: BlogPost[] = [
           title: "The non-negotiables",
           items: [
             "Clear packages with real prices — Basic Wash $80, Full Interior $150, Ceramic Coating $600+. Hiding prices kills mobile bookings.",
-            "A service-area map or list — name the cities: Oceanside, Vista, Carlsbad, San Marcos, Fallbrook, Bonsall.",
+            "A service-area map or list — name the cities: Oceanside, Vista, Carlsbad, San Marcos, San Diego, Bonsall.",
             "One 'Book Now' button above the fold that goes to a booking form or platform, not a phone call.",
             "Before/after photos that load fast — compressed to 200–400 KB, not 5 MB straight off your iPhone.",
             "A real Google review widget pulling your live star rating, not a screenshot.",
@@ -1744,23 +1744,23 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "taco-shop-website-design-fallbrook",
-    title: "Taco Shop & Family Restaurant Website Design in Fallbrook",
-    description: "Your taco shop runs on walk-ins and word of mouth. Here's how a $499 Fallbrook restaurant website pulls in hungry locals searching at 6pm — menu, hours, and Google Maps done right.",
-    keywords: ["taco shop website design", "restaurant website design Fallbrook", "Mexican restaurant website", "taqueria website Fallbrook", "local SEO restaurant", "Fallbrook restaurant marketing", "Bonsall taco shop", "Oceanside restaurant website"],
+    slug: "taco-shop-website-design-san-diego",
+    title: "Taco Shop & Family Restaurant Website Design in San Diego",
+    description: "Your taco shop runs on walk-ins and word of mouth. Here's how a $499 San Diego restaurant website pulls in hungry locals searching at 6pm — menu, hours, and Google Maps done right.",
+    keywords: ["taco shop website design", "restaurant website design San Diego", "Mexican restaurant website", "taqueria website San Diego", "local SEO restaurant", "San Diego restaurant marketing", "Bonsall taco shop", "Oceanside restaurant website"],
     publishedAt: "2026-06-18",
     updatedAt: "2026-06-18",
     readTime: 7,
     category: "Local SEO",
     author: "Circuit Coders",
-    heroTag: "FALLBROOK · TAQUERIA · RESTAURANT WEB",
+    heroTag: "SAN DIEGO · TAQUERIA · RESTAURANT WEB",
     sections: [
       {
         heading: "It's 6:14pm and someone three blocks away is hungry",
         paragraphs: [
-          "A family just got off the 76, kids in the back seat, nobody wants to cook. Dad pulls out his phone and types \"taco shop near me.\" If your taqueria doesn't show up — or it does, but the link goes to a dead Facebook page with last year's hours — they're eating somewhere else tonight. That's not a hypothetical. That's most nights in Fallbrook.",
+          "A family just got off the 76, kids in the back seat, nobody wants to cook. Dad pulls out his phone and types \"taco shop near me.\" If your taqueria doesn't show up — or it does, but the link goes to a dead Facebook page with last year's hours — they're eating somewhere else tonight. That's not a hypothetical. That's most nights in San Diego.",
           "Taco shops here run on walk-ins, regulars, and word of mouth. That works until a new place opens on Mission, or until Google decides your faded Yelp listing is the best it can offer. The food is the easy part. Being findable at the exact minute someone's hungry is the part most owners ignore.",
-          "You don't need a fancy website. You need a fast one that loads the menu, shows your hours, gives a phone number, and tells Google exactly where you are and what you sell. Most Fallbrook restaurant sites fail at all four.",
+          "You don't need a fancy website. You need a fast one that loads the menu, shows your hours, gives a phone number, and tells Google exactly where you are and what you sell. Most San Diego restaurant sites fail at all four.",
         ],
       },
       {
@@ -1801,11 +1801,11 @@ export const blogPosts: BlogPost[] = [
         callout: "A 12 MB homepage that takes 6 seconds to load loses the customer before the carne asada photo even appears. Speed isn't vanity — it's revenue.",
       },
       {
-        heading: "Local SEO: how Fallbrook finds you on Google",
+        heading: "Local SEO: how San Diego finds you on Google",
         paragraphs: [
-          "Most of your customers will never type your restaurant's name. They type \"taco shop Fallbrook,\" \"breakfast burrito Bonsall,\" or \"Mexican food near me.\" Winning those searches is local SEO, and it's mostly free work most owners never do.",
+          "Most of your customers will never type your restaurant's name. They type \"taco shop San Diego,\" \"breakfast burrito Bonsall,\" or \"Mexican food near me.\" Winning those searches is local SEO, and it's mostly free work most owners never do.",
           "Your Google Business Profile is more important than your website on day one. Claim it, verify it, set the exact hours, the category (\"Mexican restaurant\" or \"Taco restaurant,\" not just \"Restaurant\"), add 15+ real photos, and respond to every review. That profile is what shows up in Google Maps when someone searches at dinnertime.",
-          "On the website itself, the page should spell out \"[service] + [city]\" naturally — taco shop in Fallbrook, breakfast burritos in Bonsall, catering for Oceanside and Vista. We add Restaurant and Menu schema.org markup so Google can read your menu, price range, and hours directly and show them in the results. Same NAP — name, address, phone — listed identically on the site, Google, Yelp, and Apple Maps so the citations all agree.",
+          "On the website itself, the page should spell out \"[service] + [city]\" naturally — taco shop in San Diego, breakfast burritos in Bonsall, catering for Oceanside and Vista. We add Restaurant and Menu schema.org markup so Google can read your menu, price range, and hours directly and show them in the results. Same NAP — name, address, phone — listed identically on the site, Google, Yelp, and Apple Maps so the citations all agree.",
         ],
         list: {
           title: "The local-SEO checklist",
@@ -1831,14 +1831,14 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "From dead Facebook page to dinner rush",
         paragraphs: [
-          "The taco shops winning in Fallbrook, Bonsall, and Oceanside aren't the ones with the slickest design. They're the ones a stranger can find, read, and act on in fifteen seconds flat — menu visible, hours right, one tap to call or drive over.",
+          "The taco shops winning in San Diego, Bonsall, and Oceanside aren't the ones with the slickest design. They're the ones a stranger can find, read, and act on in fifteen seconds flat — menu visible, hours right, one tap to call or drive over.",
           "If your current site is a slow PDF menu, an abandoned Facebook page, or nothing at all, that's leads walking past your door every single night. The fix is a weekend's worth of work on our end and zero risk on yours.",
           "Send us your menu and your address. We'll build you a free mockup — real homepage, your food, your hours, found on Google — before you spend anything. If it pulls more people through the door, it's $499 and it's live in 48 hours. If you hate it, you owe nothing.",
         ],
       },
     ],
     faqs: [
-      { q: "How much does a restaurant website cost in Fallbrook?", a: "Agencies in San Diego quote $4,000–$8,000 plus monthly fees. Circuit Coders builds a custom restaurant site for $499 flat with a 48-hour turnaround and a free mockup first." },
+      { q: "How much does a restaurant website cost in San Diego?", a: "Agencies in San Diego quote $4,000–$8,000 plus monthly fees. Circuit Coders builds a custom restaurant site for $499 flat with a 48-hour turnaround and a free mockup first." },
       { q: "How do I get my taco shop to show up on Google Maps?", a: "Claim and fully complete your Google Business Profile, pick the specific \"Taco restaurant\" category, add real photos, and keep your name/address/phone identical everywhere online. Most shops see Maps movement within 30–60 days of doing it right." },
       { q: "Do I need online ordering on my restaurant website?", a: "Only if you'll actually use it. Hooking up Toast, Clover, or a reservation system runs $200–$500 as an add-on — but a clean menu, correct hours, and a tap-to-call number drive most of the value for a small taco shop." },
       { q: "How long does it take to build a restaurant website?", a: "Circuit Coders delivers in 48 hours after you approve the free mockup, including one round of revisions. Local SEO results from Google Business Profile work typically show up over the following 60–90 days." },
@@ -1846,21 +1846,21 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "handyman-website-design-fallbrook",
-    title: "Handyman Website Design in Fallbrook: Stop Losing Jobs to Voicemail",
-    description: "A $499 handyman website built for Fallbrook and North County. Show up on Google, take booking requests, and quit losing $200 jobs to guys with a real site.",
-    keywords: ["handyman website design", "handyman website Fallbrook", "handyman SEO North County", "handyman marketing San Diego", "Fallbrook handyman", "Oceanside handyman website", "Vista handyman website", "local SEO handyman", "Google Business Profile handyman"],
+    slug: "handyman-website-design-san-diego",
+    title: "Handyman Website Design in San Diego: Stop Losing Jobs to Voicemail",
+    description: "A $499 handyman website built for San Diego and North County. Show up on Google, take booking requests, and quit losing $200 jobs to guys with a real site.",
+    keywords: ["handyman website design", "handyman website San Diego", "handyman SEO North County", "handyman marketing San Diego", "San Diego handyman", "Oceanside handyman website", "Vista handyman website", "local SEO handyman", "Google Business Profile handyman"],
     publishedAt: "2026-06-17",
     updatedAt: "2026-06-17",
     readTime: 7,
     category: "Local SEO",
     author: "Circuit Coders",
-    heroTag: "HANDYMAN · FALLBROOK · LOCAL SEO",
+    heroTag: "HANDYMAN · SAN DIEGO · LOCAL SEO",
     sections: [
       {
         heading: "The Jobs You Never Hear About",
         paragraphs: [
-          "You're good with your hands. You can hang a door, patch drywall, swap a water heater, and fix the thing the last guy broke. But right now a homeowner on Mission Road in Fallbrook just typed \"handyman near me\" into their phone, scrolled past you, and called someone with a website. You never knew that job existed.",
+          "You're good with your hands. You can hang a door, patch drywall, swap a water heater, and fix the thing the last guy broke. But right now a homeowner on Mission Road in San Diego just typed \"handyman near me\" into their phone, scrolled past you, and called someone with a website. You never knew that job existed.",
           "That's the problem with running on word-of-mouth and a Facebook page. Word-of-mouth is great until the referrals slow down in winter, and a Facebook page doesn't show up when someone in Bonsall is searching at 9pm with a leaking faucet. The jobs are out there — $150 to fix a fence gate, $400 to mount TVs and assemble furniture, $1,200 to redo a deck railing. They're just going to the handyman who's findable.",
           "A website isn't about looking fancy. It's about being the guy who answers when nobody else does — with a page that loads fast, lists what you do, and lets someone in Vista or San Marcos send you a job request before they forget your name.",
         ],
@@ -1875,7 +1875,7 @@ export const blogPosts: BlogPost[] = [
           title: "The pages and parts that matter",
           items: [
             "A clear services list — drywall, fences, TV mounting, faucet swaps, furniture assembly, honey-do lists",
-            "Your service area spelled out: Fallbrook, Bonsall, Oceanside, Vista, San Marcos, Pala",
+            "Your service area spelled out: San Diego, Bonsall, Oceanside, Vista, San Marcos, Pala",
             "A tap-to-call button stuck to the screen on mobile (most of your traffic is on a phone)",
             "A short request form: name, address, what's broken, photo upload",
             "Real photos of your actual work — not stock images of a stranger's toolbelt",
@@ -1907,15 +1907,15 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Getting Found: Local SEO for Handymen",
         paragraphs: [
-          "A pretty website nobody finds is a business card in a drawer. The whole game in Fallbrook is showing up when someone nearby searches — and that's local SEO, not magic. The biggest lever isn't even your website: it's your Google Business Profile.",
+          "A pretty website nobody finds is a business card in a drawer. The whole game in San Diego is showing up when someone nearby searches — and that's local SEO, not magic. The biggest lever isn't even your website: it's your Google Business Profile.",
           "Claim it, fill it out completely, pick the right categories (Handyman, Drywall Contractor, Fence Contractor), set your service area to the cities you cover, and post photos of recent jobs. Then get reviews — ask every happy customer the same day you finish. Ten honest Google reviews will out-rank a guy with two, every time.",
-          "On the website itself, the pattern that wins is \"[service] + [city].\" Build pages and headings around the exact things people type: \"drywall repair Fallbrook,\" \"fence repair Bonsall,\" \"TV mounting Oceanside.\" We add schema.org LocalBusiness markup so Google reads your address, hours, service area, and reviews directly — and we make sure your name, address, and phone match exactly across Google, Yelp, and Nextdoor. Mismatched info is the quiet reason a lot of local sites never rank.",
+          "On the website itself, the pattern that wins is \"[service] + [city].\" Build pages and headings around the exact things people type: \"drywall repair San Diego,\" \"fence repair Bonsall,\" \"TV mounting Oceanside.\" We add schema.org LocalBusiness markup so Google reads your address, hours, service area, and reviews directly — and we make sure your name, address, and phone match exactly across Google, Yelp, and Nextdoor. Mismatched info is the quiet reason a lot of local sites never rank.",
         ],
         list: {
           title: "Your local SEO checklist",
           items: [
             "Claim and fully complete your Google Business Profile",
-            "Set service area to Fallbrook, Bonsall, Oceanside, Vista, San Marcos, Pala",
+            "Set service area to San Diego, Bonsall, Oceanside, Vista, San Marcos, Pala",
             "Pick accurate categories — Handyman plus your specialties",
             "Build '[service] + [city]' headings on your site",
             "Add schema.org LocalBusiness markup (we do this)",
@@ -1928,7 +1928,7 @@ export const blogPosts: BlogPost[] = [
         heading: "What This Costs vs. What Everyone Else Charges",
         paragraphs: [
           "Walk into a typical San Diego agency and a handyman website runs $2,500 to $6,000, plus a monthly retainer, plus a three-week timeline and a sales rep who calls you \"the client.\" For a one-truck operation, that math doesn't work. The DIY route — Wix or Squarespace — is cheaper but eats your weekends and still loads slow and ranks poorly.",
-          "Circuit Coders builds it for $499 flat. Custom-coded on Next.js and Vercel, so it's fast and it actually ranks. Forty-eight-hour turnaround, one round of revisions, and we send you a free mockup before you pay a dime. You're in Fallbrook, we're in Fallbrook — no call center, no contract you need a lawyer to read.",
+          "Circuit Coders builds it for $499 flat. Custom-coded on Next.js and Vercel, so it's fast and it actually ranks. Forty-eight-hour turnaround, one round of revisions, and we send you a free mockup before you pay a dime. You're in San Diego, we're in San Diego — no call center, no contract you need a lawyer to read.",
           "Want it to do more? Online booking, a Stripe deposit, or a job-request system with photo uploads runs $200–$500 as an add-on. Hosting and updates are optional at $50/month if you'd rather never touch it again. That's it. No surprise invoices.",
         ],
         callout: "$499 flat. A full custom site for less than two TV-mounting jobs.",
@@ -1945,28 +1945,28 @@ export const blogPosts: BlogPost[] = [
     ],
     faqs: [
       { q: "How much should a handyman website cost?", a: "Agencies in San Diego charge $2,500–$6,000 plus monthly fees. Circuit Coders builds a custom handyman site for $499 flat, with a free mockup first and 48-hour turnaround." },
-      { q: "How long until my handyman site shows up on Google?", a: "Indexing takes a few days, but real local ranking for terms like \"handyman Fallbrook\" usually takes 60–90 days of a complete Google Business Profile plus steady reviews. The website speeds it up; the profile and reviews do the heavy lifting." },
+      { q: "How long until my handyman site shows up on Google?", a: "Indexing takes a few days, but real local ranking for terms like \"handyman San Diego\" usually takes 60–90 days of a complete Google Business Profile plus steady reviews. The website speeds it up; the profile and reviews do the heavy lifting." },
       { q: "Do I need a website if I already have a Google Business Profile?", a: "Yes. The profile gets you on the map, but a fast site with '[service] + [city]' pages and schema markup is what makes you rank higher and convert visitors. The two work together — most of our handyman clients see both set up within 48 hours." },
       { q: "What's the most important thing on a handyman website?", a: "A tap-to-call button and a short job-request form on mobile, since most homeowners search from a phone. Everything else supports those two — they're what turn a $200 job from a maybe into a booking." },
       { q: "Can you add online booking or deposits to my site?", a: "Yes. Booking systems, Stripe deposits, and photo-upload request forms run $200–$500 as an add-on on top of the $499 base build." },
     ],
   },
   {
-    slug: "pool-service-website-design-fallbrook",
-    title: "Pool Service Website Design in Fallbrook: Get Found, Get Booked",
-    description: "Pool service website built for Fallbrook and North County. $499 flat, 48-hour turnaround, ranks for 'pool service near me,' and turns clicks into booked routes.",
-    keywords: ["pool service website", "pool service website design Fallbrook", "pool cleaning website North County", "pool service SEO", "pool maintenance website Bonsall", "pool service marketing Vista", "local SEO pool company", "pool service website Oceanside"],
+    slug: "pool-service-website-design-san-diego",
+    title: "Pool Service Website Design in San Diego: Get Found, Get Booked",
+    description: "Pool service website built for San Diego and North County. $499 flat, 48-hour turnaround, ranks for 'pool service near me,' and turns clicks into booked routes.",
+    keywords: ["pool service website", "pool service website design San Diego", "pool cleaning website North County", "pool service SEO", "pool maintenance website Bonsall", "pool service marketing Vista", "local SEO pool company", "pool service website Oceanside"],
     publishedAt: "2026-06-16",
     updatedAt: "2026-06-16",
     readTime: 7,
     category: "Local SEO",
     author: "Circuit Coders",
-    heroTag: "POOL SERVICE · FALLBROOK · LOCAL SEO",
+    heroTag: "POOL SERVICE · SAN DIEGO · LOCAL SEO",
     sections: [
       {
-        heading: "Why Fallbrook Pool Guys Lose Jobs Online",
+        heading: "Why San Diego Pool Guys Lose Jobs Online",
         paragraphs: [
-          "You run a tight route through Fallbrook, Bonsall, and Pala. Pools out here run hot from May to October, and a homeowner with green water wants someone today — not next week. They pull out their phone, type 'pool service near me,' and call whoever shows up first.",
+          "You run a tight route through San Diego, Bonsall, and Pala. Pools out here run hot from May to October, and a homeowner with green water wants someone today — not next week. They pull out their phone, type 'pool service near me,' and call whoever shows up first.",
           "Right now that's probably not you. Most pool techs in North County have a Facebook page, maybe a Yelp listing, and a number a buddy gave them. No website, or a free Wix page that hasn't loaded right since 2019. When a Bonsall homeowner with a $60,000 pebble-tec pool is deciding who to trust, a dead link kills the call.",
           "The work is steady and the margins are good — $150 to $250 a month per residential account, more for filter cleans and acid washes. Losing even three accounts a season to the guy with a real website is real money walking out the door.",
         ],
@@ -1980,7 +1980,7 @@ export const blogPosts: BlogPost[] = [
         list: {
           title: "The pages and features that earn their keep",
           items: [
-            "Service area spelled out: Fallbrook, Bonsall, Pala, Rainbow, De Luz, north Vista — Google reads this and so do homeowners",
+            "Service area spelled out: San Diego, Bonsall, Pala, Rainbow, North County, north Vista — Google reads this and so do homeowners",
             "Clear services with rough pricing: weekly service, one-time clean, filter clean, equipment repair, green-to-clean",
             "A click-to-call button glued to the top on mobile — 80% of your traffic is on a phone in a backyard",
             "Real photos of real pools you've cleaned, not stock images",
@@ -2009,13 +2009,13 @@ export const blogPosts: BlogPost[] = [
         },
       },
       {
-        heading: "Local SEO: How Fallbrook Homeowners Actually Find You",
+        heading: "Local SEO: How San Diego Homeowners Actually Find You",
         paragraphs: [
-          "Ranking for pool service isn't magic — it's plumbing. Google wants to know where you work, what you do, and whether people trust you. Give it clean signals and you climb the map pack, the three listings that show up under the map for 'pool service Fallbrook.'",
+          "Ranking for pool service isn't magic — it's plumbing. Google wants to know where you work, what you do, and whether people trust you. Give it clean signals and you climb the map pack, the three listings that show up under the map for 'pool service San Diego.'",
           "Start with your Google Business Profile. Set the category to 'Swimming pool cleaning service,' list every city in your service area, post a photo every couple weeks, and ask every happy customer for a review. Profiles with 25+ reviews and steady photos outrank dormant ones almost every time.",
           "On the website, the pattern that wins is '[service] + [city]' — 'weekly pool service Bonsall,' 'green pool cleanup Pala,' 'filter cleaning Vista.' We build a page or section for each so Google has something to match. Add LocalBusiness schema.org markup and consistent name-address-phone citations across Yelp, Nextdoor, and Angi, and you give Google every reason to trust you over the guy with just a Facebook page.",
         ],
-        callout: "The pool tech who shows up in the Fallbrook map pack books the panic calls. Everyone else gets the leftovers.",
+        callout: "The pool tech who shows up in the San Diego map pack books the panic calls. Everyone else gets the leftovers.",
       },
       {
         heading: "What This Costs — and Why $499 Beats the Market",
@@ -2025,7 +2025,7 @@ export const blogPosts: BlogPost[] = [
           "Want online booking or Stripe deposits for one-time cleans? That's a $200–$500 add-on, quoted up front, no surprises. Compare that to a $4,000 agency build and the math isn't close.",
         ],
         list: {
-          title: "What $499 gets a Fallbrook pool company",
+          title: "What $499 gets a San Diego pool company",
           items: [
             "Custom-built site, not a template — loads in under 2 seconds",
             "Service-area and '[service] + city' pages for North County",
@@ -2040,14 +2040,14 @@ export const blogPosts: BlogPost[] = [
         heading: "See It Before You Pay",
         paragraphs: [
           "Here's the deal: we'll audit your current online presence — your Google profile, your Facebook page, whatever you've got — and build you a free mockup of a real pool service website. No invoice, no commitment. You look at it, and if it's not better than what you have, you walk.",
-          "We're local. We're in Fallbrook, we know the difference between a Bonsall estate pool and a Vista tract-home spa, and we'll write your site in plain English a homeowner trusts. No agency runaround, no offshore template factory.",
+          "We're local. We're in San Diego, we know the difference between a Bonsall estate pool and a Vista tract-home spa, and we'll write your site in plain English a homeowner trusts. No agency runaround, no offshore template factory.",
           "If you clean pools across North County and you're tired of losing the panic calls to the other guy, let's fix it this week.",
         ],
         callout: "Free mockup, $499 flat, live in 48 hours. Send us your service area and we'll show you what your pool site should look like — before you spend a cent.",
       },
     ],
     faqs: [
-      { q: "How long until my pool service website ranks on Google?", a: "The site is live in 48 hours, but ranking takes time — expect to start showing up for 'pool service Fallbrook' in 60–90 days with a dialed-in Google Business Profile and steady reviews. The map pack moves faster than regular search results." },
+      { q: "How long until my pool service website ranks on Google?", a: "The site is live in 48 hours, but ranking takes time — expect to start showing up for 'pool service San Diego' in 60–90 days with a dialed-in Google Business Profile and steady reviews. The map pack moves faster than regular search results." },
       { q: "Do I really need a website if I already have a Facebook page?", a: "Yes — most homeowners searching 'pool service near me' never see your Facebook page, and Facebook doesn't rank in Google's map pack. A $499 website gives Google something real to show and turns clicks into booked routes." },
       { q: "Can homeowners book a one-time cleaning online?", a: "Yes, we can add online booking or Stripe deposits as a $200–$500 add-on, quoted up front. Most pool techs start with a simple text-me quote form, which is free with the $499 build." },
       { q: "What does a pool service website cost in North County?", a: "Agencies charge $3,000–$6,000 plus monthly fees. Circuit Coders builds it flat for $499 with a 48-hour turnaround, and hosting plus updates are optional at $50/mo." },
@@ -2055,22 +2055,22 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "tree-service-website-design-fallbrook",
-    title: "Tree Service & Land Clearing Website Design in Fallbrook",
-    description: "Most Fallbrook tree service websites lose emergency calls to Temecula competitors. Here's what a crew site actually needs — built for $499 flat in 48 hours.",
-    keywords: ["tree service website", "tree service website design", "tree removal Fallbrook", "land clearing website", "brush clearing Fallbrook", "small business web design Fallbrook", "tree service SEO North County", "Bonsall tree removal", "emergency tree service website"],
+    slug: "tree-service-website-design-san-diego",
+    title: "Tree Service & Land Clearing Website Design in San Diego",
+    description: "Most San Diego tree service websites lose emergency calls to Temecula competitors. Here's what a crew site actually needs — built for $499 flat in 48 hours.",
+    keywords: ["tree service website", "tree service website design", "tree removal San Diego", "land clearing website", "brush clearing San Diego", "small business web design San Diego", "tree service SEO North County", "Bonsall tree removal", "emergency tree service website"],
     publishedAt: "2026-06-12",
     updatedAt: "2026-06-12",
     readTime: 7,
     category: "Local SEO",
     author: "Circuit Coders",
-    heroTag: "TREE SERVICE · FALLBROOK · WEB DESIGN",
+    heroTag: "TREE SERVICE · SAN DIEGO · WEB DESIGN",
     sections: [
       {
-        heading: "Fallbrook Tree Work Is Booming. Your Website Is Losing the Calls.",
+        heading: "San Diego Tree Work Is Booming. Your Website Is Losing the Calls.",
         paragraphs: [
-          "Fallbrook is fire country. Between defensible-space notices, insurance companies demanding brush clearance before they'll renew, and 100-foot eucalyptus leaning over houses off De Luz Road, there has never been more tree and land clearing work in the 92028. The demand is real and it's year-round — peak panic hits every May when inspection letters go out.",
-          "Here's the problem: when a homeowner in Bonsall gets a non-renewal letter from their insurer giving them 30 days to clear brush, they don't ask around at the feed store. They Google 'land clearing Fallbrook' from their kitchen table. If your website is a dead Facebook page or a 2014 Weebly site with a contact form nobody checks, that job goes to a Temecula outfit with a real site — and they'll drive 25 minutes down the 15 to take it.",
+          "San Diego is fire country. Between defensible-space notices, insurance companies demanding brush clearance before they'll renew, and 100-foot eucalyptus leaning over houses off North County, there has never been more tree and land clearing work in the 92008. The demand is real and it's year-round — peak panic hits every May when inspection letters go out.",
+          "Here's the problem: when a homeowner in Bonsall gets a non-renewal letter from their insurer giving them 30 days to clear brush, they don't ask around at the feed store. They Google 'land clearing San Diego' from their kitchen table. If your website is a dead Facebook page or a 2014 Weebly site with a contact form nobody checks, that job goes to a Temecula outfit with a real site — and they'll drive 25 minutes down the 15 to take it.",
           "I've audited tree service sites across North County. The pattern is brutal: no phone number above the fold, no proof of insurance, photos that take 8 seconds to load on a phone. The crew is excellent. The website is actively repelling customers.",
         ],
         callout: "A homeowner with a hazard tree or an insurance deadline decides in under 10 seconds. Your site either produces a phone call in that window or it produced nothing.",
@@ -2089,7 +2089,7 @@ export const blogPosts: BlogPost[] = [
             "Before/after photos of real local jobs — a cleared hillside in Rainbow beats any stock photo of a generic forest",
             "A clear service list: removal, trimming, stump grinding, palm skinning, brush/land clearing, emergency storm response",
             "Defensible-space and PRC 4291 language — homeowners are Googling the exact terms from their inspection letters",
-            "Your service area spelled out: Fallbrook, Bonsall, Rainbow, De Luz, Pala, Valley Center",
+            "Your service area spelled out: San Diego, Bonsall, Rainbow, North County, Pala, Valley Center",
             "3–5 Google reviews pulled onto the page with names and neighborhoods",
           ],
         },
@@ -2105,7 +2105,7 @@ export const blogPosts: BlogPost[] = [
           items: [
             "A chatbot. Someone with a cracked oak hanging over their garage does not want to chat with a robot — they want a human in 30 seconds.",
             "Quote forms with 10 fields. Name, phone, what's wrong. Three fields. Anything more and they bail to the next result.",
-            "Auto-playing hero video. It's 40 MB, it murders load time on rural Fallbrook cell coverage, and nobody watches it.",
+            "Auto-playing hero video. It's 40 MB, it murders load time on rural San Diego cell coverage, and nobody watches it.",
             "Stock photos of arborists who clearly aren't your crew. Locals can smell it instantly.",
             "A 'blog' with two posts from 2021. Either commit or remove it — a dead blog signals a dead business.",
             "Image sliders. Nobody clicks past slide one, and they add 2–3 seconds of load time.",
@@ -2113,12 +2113,12 @@ export const blogPosts: BlogPost[] = [
         },
       },
       {
-        heading: "Local SEO: How 'Tree Removal Fallbrook' Actually Gets Won",
+        heading: "Local SEO: How 'Tree Removal San Diego' Actually Gets Won",
         paragraphs: [
           "For tree service, the Google Business Profile is worth more than the website itself — the map pack gets the click before any blue link does. Claim it, set your primary category to 'Tree Service,' add secondary categories for land clearing and arborist services, and upload 20+ real job photos with your truck and crew visible. Profiles with regular photo uploads get dramatically more calls than bare listings.",
-          "On the site itself, every service needs the '[service] + [city]' pattern in a real heading: 'Tree Removal in Fallbrook,' 'Land Clearing in Bonsall,' 'Stump Grinding in Rainbow.' Not stuffed — structured. One short section per service-city combo beats a wall of keywords every time.",
-          "Add LocalBusiness schema.org markup with your service area, hours, and phone number so Google can read your business like data instead of guessing. Then lock down your citations: identical name, address, and phone on Yelp, Angi, Thumbtack, Nextdoor, and the Fallbrook Chamber listing. Mismatched phone numbers across directories quietly tank your map ranking.",
-          "Reviews are the multiplier. Ask every customer the day you finish, while the cleared lot still looks impressive. Texting them a direct review link converts about 10x better than 'find us on Google.' Twenty-five reviews mentioning 'Fallbrook' and 'tree removal' is a moat a Temecula competitor can't cross.",
+          "On the site itself, every service needs the '[service] + [city]' pattern in a real heading: 'Tree Removal in San Diego,' 'Land Clearing in Bonsall,' 'Stump Grinding in Rainbow.' Not stuffed — structured. One short section per service-city combo beats a wall of keywords every time.",
+          "Add LocalBusiness schema.org markup with your service area, hours, and phone number so Google can read your business like data instead of guessing. Then lock down your citations: identical name, address, and phone on Yelp, Angi, Thumbtack, Nextdoor, and the San Diego Chamber listing. Mismatched phone numbers across directories quietly tank your map ranking.",
+          "Reviews are the multiplier. Ask every customer the day you finish, while the cleared lot still looks impressive. Texting them a direct review link converts about 10x better than 'find us on Google.' Twenty-five reviews mentioning 'San Diego' and 'tree removal' is a moat a Temecula competitor can't cross.",
         ],
       },
       {
@@ -2126,7 +2126,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           "Call a typical agency for a tree service website and you'll get quoted $3,000–$8,000, a 6–8 week timeline, and a discovery workshop where they ask about your 'brand story.' You cut trees. Your brand story is a clean stump and an insured crew. You do not need a workshop.",
           "The other trap is the $20/month DIY builder. It looks free until you've burned three weekends fighting a template, and the result still loads slow and ranks nowhere. Your time is worth more on a job site than fighting Wix.",
-          "Circuit Coders builds tree service sites for $499 flat, delivered in 48 hours. Custom-coded Next.js on Vercel — loads in under a second even on spotty Fallbrook cell service — with one round of revisions included. Hosting and updates are optional at $50/mo, and if you ever want online booking or deposit payments through Stripe, that's a quoted $200–$500 add-on, not a surprise invoice.",
+          "Circuit Coders builds tree service sites for $499 flat, delivered in 48 hours. Custom-coded Next.js on Vercel — loads in under a second even on spotty San Diego cell service — with one round of revisions included. Hosting and updates are optional at $50/mo, and if you ever want online booking or deposit payments through Stripe, that's a quoted $200–$500 add-on, not a surprise invoice.",
         ],
         callout: "$499 flat. 48 hours. One emergency removal job pays for the site twice over.",
       },
@@ -2134,15 +2134,15 @@ export const blogPosts: BlogPost[] = [
         heading: "See It Before You Pay a Dime",
         paragraphs: [
           "Here's how this works with zero risk: send me your business name and phone number, and I'll build a free mockup of your site first. You see the actual design — your jobs, your service area, your reviews — before any money moves. If you don't like it, you walk away and owe nothing.",
-          "I'm in Fallbrook. I know the difference between De Luz and Pala Mesa, I know what a defensible-space notice looks like, and I know your busy season. While the Temecula agencies are scheduling your kickoff call, your site is already live and your phone is ringing.",
+          "I'm in San Diego. I know the difference between North County and Pala Mesa, I know what a defensible-space notice looks like, and I know your busy season. While the Temecula agencies are scheduling your kickoff call, your site is already live and your phone is ringing.",
           "Fire season doesn't wait 6–8 weeks. Neither should your website.",
         ],
         callout: "Free mockup first, $499 flat if you love it, live in 48 hours. Worst case, you spent two minutes on an email.",
       },
     ],
     faqs: [
-      { q: "How much does a tree service website cost in Fallbrook?", a: "Agencies in North County typically quote $3,000–$8,000 with a 6–8 week build. Circuit Coders builds the same caliber site — custom-coded, mobile-first — for $499 flat with a 48-hour turnaround." },
-      { q: "How long until my tree service shows up on Google in Fallbrook?", a: "With a properly optimized Google Business Profile and consistent citations, most tree services see map-pack movement in 30–60 days and solid local rankings in 60–90 days. Reviews accelerate everything — aim for 25+ with city names mentioned." },
+      { q: "How much does a tree service website cost in San Diego?", a: "Agencies in North County typically quote $3,000–$8,000 with a 6–8 week build. Circuit Coders builds the same caliber site — custom-coded, mobile-first — for $499 flat with a 48-hour turnaround." },
+      { q: "How long until my tree service shows up on Google in San Diego?", a: "With a properly optimized Google Business Profile and consistent citations, most tree services see map-pack movement in 30–60 days and solid local rankings in 60–90 days. Reviews accelerate everything — aim for 25+ with city names mentioned." },
       { q: "Do I really need a website if I get most jobs from word of mouth?", a: "Yes — referrals Google you before they call. Around 8 in 10 people check a business online even after a personal recommendation, and a missing or broken site kills the referral you already earned." },
       { q: "Can my site take emergency calls after hours?", a: "The site itself should push every visitor to your cell with a click-to-call button — no forms, no chatbots. If you want online scheduling for non-emergency estimates, that's a $200–$500 add-on, but the 2 AM storm call should always go straight to your phone." },
       { q: "What's the single most important thing on a tree service website?", a: "Your phone number, visible without scrolling, tappable on mobile. After that: license number, proof of insurance, and real photos of local jobs. Those four things close more work than everything else combined." },
@@ -2208,7 +2208,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Local SEO: How Couples in Carlsbad Actually Find Florists",
         paragraphs: [
-          "Couples don't Google 'florist.' They Google 'wedding florist Carlsbad,' 'Park Hyatt Aviara wedding florist,' and 'wedding flowers North County San Diego.' Your site needs a page or section targeting each pattern — service plus city, and service plus venue. A dedicated page for every venue you've worked (Aviara, Cape Rey, The Westin Carlsbad, Twin Oaks in San Marcos, Grand Tradition in Fallbrook) is the single highest-leverage SEO move a florist can make, because almost none of your competitors do it.",
+          "Couples don't Google 'florist.' They Google 'wedding florist Carlsbad,' 'Park Hyatt Aviara wedding florist,' and 'wedding flowers North County San Diego.' Your site needs a page or section targeting each pattern — service plus city, and service plus venue. A dedicated page for every venue you've worked (Aviara, Cape Rey, The Westin Carlsbad, Twin Oaks in San Marcos, Grand Tradition in San Diego) is the single highest-leverage SEO move a florist can make, because almost none of your competitors do it.",
           "Your Google Business Profile matters as much as the website. Set your primary category to 'Wedding florist' — not 'Florist' — fill every field, upload 20+ geotagged photos of installs, and ask every couple for a review within a week of the wedding while they're still glowing. Florists with 50+ reviews own the Carlsbad map pack.",
           "Under the hood, your site should ship LocalBusiness and FAQ schema.org markup so Google understands you're a Carlsbad business answering wedding questions. Then get consistent name-address-phone citations on The Knot, WeddingWire, Yelp, and Zola. Done right, a florist site goes from invisible to ranking for '[venue] + wedding florist' searches in 60–90 days.",
         ],
@@ -2226,7 +2226,7 @@ export const blogPosts: BlogPost[] = [
         heading: "Booked Solid by Engagement Season",
         paragraphs: [
           "The math is simple. Engagement season runs November through February, and couples book Carlsbad florists 9–14 months out. A site that goes live now is ranking and converting by the time the next wave of 2027 brides starts searching. Wait until fall and you've missed the cycle.",
-          "We work with small businesses across North County — Carlsbad, Oceanside, Vista, San Marcos, Fallbrook, Bonsall — and the florists who win aren't the ones with the biggest Instagram. They're the ones whose website answers 'are you available, what's your minimum, have you done my venue' in under thirty seconds.",
+          "We work with small businesses across North County — Carlsbad, Oceanside, Vista, San Marcos, San Diego, Bonsall — and the florists who win aren't the ones with the biggest Instagram. They're the ones whose website answers 'are you available, what's your minimum, have you done my venue' in under thirty seconds.",
         ],
         callout: "Send us your current site and Instagram. We'll build a free mockup of what your florist site should look like — no deposit, no call required. If you like it, it's $499 flat and live in 48 hours.",
       },
@@ -2334,8 +2334,8 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "real-estate-agent-website-design-north-county",
     title: "Real Estate Agent Website Design in North County SD: What Actually Sells",
-    description: "Most North County real estate agent websites are slow Zillow knockoffs. Here's what a $499 site should do, what to cut, and how to rank for listings in Carlsbad, Vista, and Fallbrook.",
-    keywords: ["real estate agent website", "realtor website design", "North County San Diego real estate", "Carlsbad realtor website", "Vista real estate agent", "real estate IDX website", "local SEO for realtors", "Fallbrook real estate website"],
+    description: "Most North County real estate agent websites are slow Zillow knockoffs. Here's what a $499 site should do, what to cut, and how to rank for listings in Carlsbad, Vista, and San Diego.",
+    keywords: ["real estate agent website", "realtor website design", "North County San Diego real estate", "Carlsbad realtor website", "Vista real estate agent", "real estate IDX website", "local SEO for realtors", "San Diego real estate website"],
     publishedAt: "2026-06-09",
     updatedAt: "2026-06-09",
     readTime: 7,
@@ -2400,8 +2400,8 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Ranking for \"[Neighborhood] Real Estate Agent\"",
         paragraphs: [
-          "This is where agents leave the most money on the table. Local SEO for real estate is winnable because most agents do literally nothing. Start with your Google Business Profile: claim it, set the category to \"Real Estate Agent,\" add your service areas (Carlsbad, Vista, San Marcos, Fallbrook), and post a sold listing every two weeks.",
-          "Then nail the on-page pattern. Build a page targeting \"[service] + [city]\" — \"Carlsbad Listing Agent,\" \"Vista Real Estate Agent,\" \"Fallbrook Homes for Sale.\" One focused page per intent beats one bloated homepage trying to rank for everything.",
+          "This is where agents leave the most money on the table. Local SEO for real estate is winnable because most agents do literally nothing. Start with your Google Business Profile: claim it, set the category to \"Real Estate Agent,\" add your service areas (Carlsbad, Vista, San Marcos, San Diego), and post a sold listing every two weeks.",
+          "Then nail the on-page pattern. Build a page targeting \"[service] + [city]\" — \"Carlsbad Listing Agent,\" \"Vista Real Estate Agent,\" \"San Diego Homes for Sale.\" One focused page per intent beats one bloated homepage trying to rank for everything.",
           "Add RealEstateAgent and LocalBusiness schema.org markup so Google reads your name, area, and reviews as structured data. Get listed in the same citations every time — name, address, phone identical across Zillow, Realtor.com, your GBP, and local directories. Inconsistent NAP is the #1 reason agents don't rank.",
         ],
         list: {
@@ -2443,27 +2443,27 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "dentist-website-design-fallbrook",
-    title: "Dentist Website Design in Fallbrook: What Actually Books Patients",
-    description: "A Fallbrook dental practice doesn't need a brochure site. Here's what a dentist website should do, what to cut, and why $499 beats a $4,000 agency build.",
-    keywords: ["dentist website design", "dental website design Fallbrook", "dentist website Fallbrook", "dental office web design North County", "dentist SEO Fallbrook", "dental practice website Bonsall", "dentist website design Oceanside", "new patient website dentist"],
+    slug: "dentist-website-design-san-diego",
+    title: "Dentist Website Design in San Diego: What Actually Books Patients",
+    description: "A San Diego dental practice doesn't need a brochure site. Here's what a dentist website should do, what to cut, and why $499 beats a $4,000 agency build.",
+    keywords: ["dentist website design", "dental website design San Diego", "dentist website San Diego", "dental office web design North County", "dentist SEO San Diego", "dental practice website Bonsall", "dentist website design Oceanside", "new patient website dentist"],
     publishedAt: "2026-06-08",
     updatedAt: "2026-06-08",
     readTime: 7,
     category: "Local SEO",
     author: "Circuit Coders",
-    heroTag: "FALLBROOK · DENTAL · WEB DESIGN",
+    heroTag: "SAN DIEGO · DENTAL · WEB DESIGN",
     sections: [
       {
         heading: "Your Website Is Losing the Patient Before They Pick Up the Phone",
         paragraphs: [
-          "Someone in Fallbrook wakes up with a cracked molar at 7 a.m. They grab their phone, type \"dentist near me,\" and start tapping. They are not reading your mission statement. They want three things: are you open, do you take their insurance, and can they book today.",
+          "Someone in San Diego wakes up with a cracked molar at 7 a.m. They grab their phone, type \"dentist near me,\" and start tapping. They are not reading your mission statement. They want three things: are you open, do you take their insurance, and can they book today.",
           "Most dental sites in North County fail all three in the first five seconds. The phone number is buried in a footer. The hours are on a separate page. The \"Request Appointment\" button opens a contact form that emails a mailbox nobody checks until Thursday. That patient is already calling the practice in Bonsall that loaded faster.",
           "A dental website has exactly one job: turn a person in pain or a parent overdue for a kid's cleaning into a booked appointment. Everything else is decoration.",
         ],
       },
       {
-        heading: "What a Fallbrook Dental Site Actually Needs",
+        heading: "What a San Diego Dental Site Actually Needs",
         paragraphs: [
           "You don't need a 14-page site with a blog about flossing nobody reads. You need a fast, mobile-first page that answers the questions a real patient has before they trust you with a drill.",
           "Put the decision-making information above the fold and make the phone number a tappable link on mobile. Over 70% of dental searches happen on a phone, and a phone number that isn't clickable is a phone number that doesn't get called.",
@@ -2475,7 +2475,7 @@ export const blogPosts: BlogPost[] = [
             "Insurance accepted, listed plainly (Delta Dental, Cigna, MetLife, cash plans)",
             "Online booking that actually writes to your calendar — not a contact form",
             "New-patient specials and clear pricing for cleanings and exams",
-            "Real photos of your Fallbrook office and team — not stock smiles",
+            "Real photos of your San Diego office and team — not stock smiles",
             "Hours, parking, and a map embedded for the office on Main or Mission",
             "A page each for the big services: implants, Invisalign, emergencies, kids",
           ],
@@ -2501,11 +2501,11 @@ export const blogPosts: BlogPost[] = [
         callout: "If your current site takes more than three seconds to load on a phone, you're paying for a billboard pointed at a wall.",
       },
       {
-        heading: "Local SEO: How Fallbrook Patients Actually Find You",
+        heading: "Local SEO: How San Diego Patients Actually Find You",
         paragraphs: [
-          "Ranking for \"dentist Fallbrook\" is mostly won off your website — on your Google Business Profile and in the consistency of your business info across the web. Your site's job is to back that up with the right signals.",
+          "Ranking for \"dentist San Diego\" is mostly won off your website — on your Google Business Profile and in the consistency of your business info across the web. Your site's job is to back that up with the right signals.",
           "Claim and fully fill out your Google Business Profile: correct categories (General Dentist, Cosmetic Dentist, Emergency Dental Service), real hours, and 15+ recent photos. Then ask every happy patient for a review the day of their visit — a steady drip of reviews moves the map pack more than anything else.",
-          "On the site itself, build a real page for each service-plus-city pattern people search: \"dental implants Fallbrook,\" \"Invisalign Bonsall,\" \"emergency dentist Oceanside\" if you pull from there. Add LocalBusiness and Dentist schema.org markup so Google reads your hours, address, and ratings directly.",
+          "On the site itself, build a real page for each service-plus-city pattern people search: \"dental implants San Diego,\" \"Invisalign Bonsall,\" \"emergency dentist Oceanside\" if you pull from there. Add LocalBusiness and Dentist schema.org markup so Google reads your hours, address, and ratings directly.",
         ],
         list: {
           title: "Local ranking checklist",
@@ -2513,7 +2513,7 @@ export const blogPosts: BlogPost[] = [
             "Google Business Profile claimed, categorized, and photo-loaded",
             "NAP (name, address, phone) identical on your site, Google, Yelp, and Healthgrades",
             "Dentist + LocalBusiness schema markup on every page",
-            "A dedicated page per service + nearby city (Fallbrook, Bonsall, Pala)",
+            "A dedicated page per service + nearby city (San Diego, Bonsall, Pala)",
             "Reviews requested same-day, responded to within 48 hours",
           ],
         },
@@ -2530,7 +2530,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "See It Before You Pay a Dime",
         paragraphs: [
-          "I build a free mockup of your homepage before you commit to anything. You see exactly how your Fallbrook practice looks — your photos, your services, your booking flow — and decide from there. No retainer, no contract, no pressure.",
+          "I build a free mockup of your homepage before you commit to anything. You see exactly how your San Diego practice looks — your photos, your services, your booking flow — and decide from there. No retainer, no contract, no pressure.",
           "I'm local. I'll drive to the office, shoot real photos of the front desk and the team, and have a working site live in two days. Compare that to the agency that outsources your build to a template farm and bills you monthly for the privilege.",
           "Send me your current site or just the practice name. I'll tell you straight what's costing you patients and show you the fixed version — free.",
         ],
@@ -2538,7 +2538,7 @@ export const blogPosts: BlogPost[] = [
     ],
     faqs: [
       { q: "How long does it take to build a dental website?", a: "Circuit Coders delivers a custom dental site in 48 hours with one round of revisions. A typical agency takes 6–10 weeks for the same result." },
-      { q: "How long until my dental website ranks on Google in Fallbrook?", a: "Expect 60–90 days for a new site to climb for local terms like \"dentist Fallbrook,\" assuming your Google Business Profile is claimed and reviews are coming in. The map pack moves faster than organic results — often within 30 days." },
+      { q: "How long until my dental website ranks on Google in San Diego?", a: "Expect 60–90 days for a new site to climb for local terms like \"dentist San Diego,\" assuming your Google Business Profile is claimed and reviews are coming in. The map pack moves faster than organic results — often within 30 days." },
       { q: "Do I need online booking on my dental website?", a: "Yes — patients increasingly won't call during business hours. Booking that syncs to your scheduler (LocalMed, NexHealth) is a one-time $200–$500 add-on, not a monthly fee." },
       { q: "Why is $499 so much cheaper than dental marketing agencies?", a: "Agencies charge $3,000–$6,000 up front plus $250–$600/mo to lock you into a template they reuse. Circuit Coders is a flat $499, you own the site, and hosting is optional at $50/mo." },
       { q: "Will my dental site work on phones?", a: "Every build is mobile-first, since over 70% of dental searches happen on a phone. Click-to-call, insurance info, and booking all sit above the fold on mobile." },
@@ -2652,7 +2652,7 @@ export const blogPosts: BlogPost[] = [
     slug: "roofing-website-design-oceanside",
     title: "Roofing Company Website Design in Oceanside",
     description: "Most Oceanside roofing sites are slow, generic, and invisible after a storm. Here's how to build one that turns leaks and re-roofs into booked inspections — $499 flat.",
-    keywords: ["roofing website design", "roofing company website Oceanside", "roofer web design North County", "roofing SEO Oceanside", "roofing contractor website Carlsbad", "roof repair website Vista", "re-roof marketing Fallbrook", "roofing website San Marcos", "roofing contractor SEO"],
+    keywords: ["roofing website design", "roofing company website Oceanside", "roofer web design North County", "roofing SEO Oceanside", "roofing contractor website Carlsbad", "roof repair website Vista", "re-roof marketing San Diego", "roofing website San Marcos", "roofing contractor SEO"],
     publishedAt: "2026-06-06",
     updatedAt: "2026-06-06",
     readTime: 8,
@@ -2680,7 +2680,7 @@ export const blogPosts: BlogPost[] = [
             "A sticky tap-to-call button that follows the user down the entire page",
             "An 'Emergency / Storm Damage' banner up top with response time and service hours",
             "A short form: name, phone, address, problem — 4 fields, not 12",
-            "A service-area page naming every city you cover (Oceanside, Carlsbad, Vista, San Marcos, Fallbrook)",
+            "A service-area page naming every city you cover (Oceanside, Carlsbad, Vista, San Marcos, San Diego)",
             "Financing or free-estimate language for the $10k–$20k re-roof buyer",
             "Real before/after photos of your own roofs — not stock shots of someone else's shingles",
             "Google reviews pulled in near the top, not buried at the bottom",
@@ -2738,7 +2738,7 @@ export const blogPosts: BlogPost[] = [
         heading: "See It Before You Pay: Free Mockup for North County Roofers",
         paragraphs: [
           "Here's the offer, no catch. Send us your current site (or just your business name if you don't have one), and we'll build a free mockup of your new homepage — sticky call button, storm-damage banner, your service area, your real before/after photos, the works. You look at it, and only then do you decide.",
-          "We've built for trades across Oceanside, Carlsbad, Vista, and Fallbrook, and the pattern holds every time: fast site, clear phone number, real photos, ranks for the cities you serve. That's what turns a 'my roof is leaking' Google search into a booked inspection on your calendar.",
+          "We've built for trades across Oceanside, Carlsbad, Vista, and San Diego, and the pattern holds every time: fast site, clear phone number, real photos, ranks for the cities you serve. That's what turns a 'my roof is leaking' Google search into a booked inspection on your calendar.",
           "If your site is slow, hard to find, or just embarrassing to send to a homeowner, that's costing you the easy storm-season jobs. Let's fix it in 48 hours.",
         ],
         callout: "Want to see your new roofing site before you spend a cent? Reply for a free mockup — $499 flat, live in 48 hours, one round of revisions included.",
@@ -2756,7 +2756,7 @@ export const blogPosts: BlogPost[] = [
     slug: "hvac-website-design-north-county",
     title: "HVAC Website Design in North County That Actually Books Service Calls",
     description: "Most HVAC websites in North County are slow, mobile-broken, and invisible on Google. Here's how to build one that turns AC-out emergencies into booked jobs.",
-    keywords: ["HVAC website design", "HVAC web design North County", "air conditioning contractor website", "HVAC SEO Oceanside", "HVAC marketing Vista", "AC repair website Carlsbad", "HVAC website Fallbrook", "heating and cooling website San Marcos", "HVAC contractor SEO"],
+    keywords: ["HVAC website design", "HVAC web design North County", "air conditioning contractor website", "HVAC SEO Oceanside", "HVAC marketing Vista", "AC repair website Carlsbad", "HVAC website San Diego", "heating and cooling website San Marcos", "HVAC contractor SEO"],
     publishedAt: "2026-06-05",
     updatedAt: "2026-06-05",
     readTime: 8,
@@ -2768,7 +2768,7 @@ export const blogPosts: BlogPost[] = [
         heading: "It's 104° in Vista and Your Website Just Lost the Job",
         paragraphs: [
           "When a Carlsbad homeowner's AC dies in July, they grab their phone and type 'AC repair near me.' They do not read three paragraphs about your family values. They want a phone number, a service area, and proof you can show up today. If your site takes six seconds to load on an iPhone over cell data, they're already calling the next guy.",
-          "Most HVAC sites in North County were built once, in 2017, by a cousin or a GoDaddy template. They're slow, the phone number isn't tappable, and the contact form goes to an inbox nobody checks. Meanwhile the demand is brutal and seasonal — Fallbrook, Bonsall, and Pala bake every summer, and the customers who find you in those 48 hours are the ones who pay full rate without haggling.",
+          "Most HVAC sites in North County were built once, in 2017, by a cousin or a GoDaddy template. They're slow, the phone number isn't tappable, and the contact form goes to an inbox nobody checks. Meanwhile the demand is brutal and seasonal — San Diego, Bonsall, and Pala bake every summer, and the customers who find you in those 48 hours are the ones who pay full rate without haggling.",
           "A good HVAC website isn't a brochure. It's a 24-hour intake machine that captures the 11pm 'my house is 88 degrees' panic and turns it into a booked call before your competitor wakes up.",
         ],
       },
@@ -2784,7 +2784,7 @@ export const blogPosts: BlogPost[] = [
             "A sticky tap-to-call button that follows the user down the whole page",
             "An 'Emergency / Same-Day' banner up top with hours and response time",
             "A short form: name, phone, address, problem — 4 fields, not 12",
-            "Service-area page naming every city you cover (Oceanside, Vista, Carlsbad, San Marcos, Fallbrook)",
+            "Service-area page naming every city you cover (Oceanside, Vista, Carlsbad, San Marcos, San Diego)",
             "Financing or estimate language for the $8k–$15k system-replacement buyer",
             "Real photos of your trucks and techs — not stock photos of a stranger holding a wrench",
             "Reviews pulled in near the top, not buried at the bottom",
@@ -2814,7 +2814,7 @@ export const blogPosts: BlogPost[] = [
         heading: "Getting Found: Local SEO for HVAC in North County",
         paragraphs: [
           "A beautiful site nobody finds is a billboard in the desert. For HVAC, the money is in the local pack — those top three map results for 'AC repair Carlsbad' or 'furnace repair San Marcos.' Ranking there starts with a fully built-out Google Business Profile: correct hours, real service area, your service categories, and fresh photos of actual jobs every couple weeks.",
-          "Then your website backs it up. You want a dedicated page for each core service crossed with each city — 'AC Repair in Oceanside,' 'Heating Installation in Vista,' 'HVAC Maintenance in Fallbrook.' That '[service] + [city]' pattern is how you catch the long-tail searches your competitors ignore. One generic 'Services' page can't rank for a dozen towns.",
+          "Then your website backs it up. You want a dedicated page for each core service crossed with each city — 'AC Repair in Oceanside,' 'Heating Installation in Vista,' 'HVAC Maintenance in San Diego.' That '[service] + [city]' pattern is how you catch the long-tail searches your competitors ignore. One generic 'Services' page can't rank for a dozen towns.",
           "Citations and schema do the quiet work. Make sure your name, address, and phone are identical across Yelp, Nextdoor, BBB, and the contractor directories — Google cross-checks them. Then add LocalBusiness and Service schema.org markup so Google can read your hours, area, and reviews directly. That's what gets you the star ratings and 'Open now' badge in results.",
         ],
         list: {
@@ -2842,7 +2842,7 @@ export const blogPosts: BlogPost[] = [
         heading: "See It Before You Pay: Free Mockup for North County HVAC Pros",
         paragraphs: [
           "Here's the offer, no catch. Send us your current site (or just your business name if you don't have one), and we'll build a free mockup of your new homepage — sticky call button, emergency banner, your service area, the works. You look at it, and only then do you decide.",
-          "We've built for trades across Fallbrook, Oceanside, Vista, and Carlsbad, and the pattern holds every time: fast site, clear phone number, real photos, ranks for the cities you serve. That's what turns a 'my AC is dead' Google search into a booked job on your calendar.",
+          "We've built for trades across San Diego, Oceanside, Vista, and Carlsbad, and the pattern holds every time: fast site, clear phone number, real photos, ranks for the cities you serve. That's what turns a 'my AC is dead' Google search into a booked job on your calendar.",
           "If your site is slow, hard to find, or just embarrassing to send to a customer, that's costing you the easy summer jobs. Let's fix it in 48 hours.",
         ],
         callout: "Want to see your new HVAC site before you spend a cent? Reply for a free mockup — $499 flat, live in 48 hours, one round of revisions included.",
@@ -2859,8 +2859,8 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "electrician-website-design-north-county",
     title: "Electrician Website Design for North County SD: Get Found, Get Booked",
-    description: "Most North County electricians lose jobs to a bad website or no website. Here's how to build one that ranks in Fallbrook, Oceanside, and Vista for $499 flat.",
-    keywords: ["electrician website design", "electrician website North County", "electrician web design Fallbrook", "electrician SEO Oceanside", "local electrician marketing Vista", "electrician website Carlsbad", "electrical contractor website San Marcos", "emergency electrician website Bonsall"],
+    description: "Most North County electricians lose jobs to a bad website or no website. Here's how to build one that ranks in San Diego, Oceanside, and Vista for $499 flat.",
+    keywords: ["electrician website design", "electrician website North County", "electrician web design San Diego", "electrician SEO Oceanside", "local electrician marketing Vista", "electrician website Carlsbad", "electrical contractor website San Marcos", "emergency electrician website Bonsall"],
     publishedAt: "2026-06-04",
     updatedAt: "2026-06-04",
     readTime: 7,
@@ -2873,7 +2873,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           "Someone in Vista loses power to half their house. They grab their phone and type \"electrician near me.\" In the next 90 seconds they're going to call one of the three businesses that show up. If you're not one of them, you don't exist for that job — and that job was $400 minimum.",
           "Most electricians in North County are losing these calls every week and never know it. You're licensed, you do clean work, you've got 15 years in the trade. None of that matters if your online presence is a dead Facebook page from 2019 and a phone number buried in a directory listing.",
-          "The plumbers, HVAC guys, and handymen in Fallbrook and Oceanside already figured this out. The electrician who shows up first, looks legit, and lets people call or book in two taps wins the panel upgrade, the EV charger install, the whole-home rewire. Speed and trust. That's the whole game.",
+          "The plumbers, HVAC guys, and handymen in San Diego and Oceanside already figured this out. The electrician who shows up first, looks legit, and lets people call or book in two taps wins the panel upgrade, the EV charger install, the whole-home rewire. Speed and trust. That's the whole game.",
         ],
       },
       {
@@ -2918,7 +2918,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           "Ranking for \"electrician\" statewide is a fantasy. Ranking for \"electrician Oceanside\" or \"EV charger install Carlsbad\" is completely doable, and that's where the calls are. Google's local results run on three things: your Google Business Profile, consistent citations, and a site that tells Google exactly what you do and where.",
           "Your Google Business Profile is the single highest-leverage thing you own and it's free. Fill out every field, pick the right primary category (Electrician), add 10+ photos of real jobs, and answer reviews. A complete, active profile out-ranks a half-empty one almost every time.",
-          "On the website side, the pattern that wins is one page per service-plus-city. \"Panel Upgrade Fallbrook,\" \"EV Charger Installation Vista,\" \"Emergency Electrician San Marcos.\" Each page gets its own title, its own copy, and schema.org LocalBusiness markup so Google can read your service area, hours, and phone without guessing.",
+          "On the website side, the pattern that wins is one page per service-plus-city. \"Panel Upgrade San Diego,\" \"EV Charger Installation Vista,\" \"Emergency Electrician San Marcos.\" Each page gets its own title, its own copy, and schema.org LocalBusiness markup so Google can read your service area, hours, and phone without guessing.",
         ],
         list: {
           title: "The local SEO checklist:",
@@ -2960,22 +2960,22 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "general-contractor-website-design-fallbrook",
-    title: "General Contractor Website Design in Fallbrook: Win Local Jobs Online",
-    description: "Most Fallbrook contractor websites lose jobs they should win. Here's what a $499 site needs to rank, build trust, and turn searches into booked work.",
-    keywords: ["general contractor website design", "contractor website Fallbrook", "construction website design San Diego", "contractor SEO Fallbrook", "general contractor marketing North County", "builder website design Bonsall", "contractor lead generation Oceanside", "local SEO for contractors"],
+    slug: "general-contractor-website-design-san-diego",
+    title: "General Contractor Website Design in San Diego: Win Local Jobs Online",
+    description: "Most San Diego contractor websites lose jobs they should win. Here's what a $499 site needs to rank, build trust, and turn searches into booked work.",
+    keywords: ["general contractor website design", "contractor website San Diego", "construction website design San Diego", "contractor SEO San Diego", "general contractor marketing North County", "builder website design Bonsall", "contractor lead generation Oceanside", "local SEO for contractors"],
     publishedAt: "2026-06-03",
     updatedAt: "2026-06-03",
     readTime: 7,
     category: "Local SEO",
     author: "Circuit Coders",
-    heroTag: "CONTRACTOR · FALLBROOK · LOCAL SEO",
+    heroTag: "CONTRACTOR · SAN DIEGO · LOCAL SEO",
     sections: [
       {
         heading: "The job you lost before the phone rang",
         paragraphs: [
-          "A homeowner in Fallbrook just got a $40,000 kitchen remodel approved by their spouse. They open Google, type \"general contractor near me,\" and start clicking. If your site loads slow, has no photos of finished work, and no clear way to ask for a bid, they're gone in eight seconds. They called the guy whose site looked like he'd actually pour the slab.",
-          "Contractors are the worst-served trade online in North County. I see GCs in Fallbrook, Bonsall, and Pala running six-figure jobs off a Facebook page and a Gmail address. The work is excellent. The web presence makes them look like a weekend handyman.",
+          "A homeowner in San Diego just got a $40,000 kitchen remodel approved by their spouse. They open Google, type \"general contractor near me,\" and start clicking. If your site loads slow, has no photos of finished work, and no clear way to ask for a bid, they're gone in eight seconds. They called the guy whose site looked like he'd actually pour the slab.",
+          "Contractors are the worst-served trade online in North County. I see GCs in San Diego, Bonsall, and Pala running six-figure jobs off a Facebook page and a Gmail address. The work is excellent. The web presence makes them look like a weekend handyman.",
           "Here's the brutal part: the homeowner can't see your craftsmanship through a phone. They judge you by the website. A bad site doesn't just fail to win the job — it actively talks people out of calling you.",
         ],
       },
@@ -2983,7 +2983,7 @@ export const blogPosts: BlogPost[] = [
         heading: "What a contractor site actually needs",
         paragraphs: [
           "You don't need a 40-page brochure. You need a fast site that proves you're real, shows what you build, and makes the bid request dead simple. Most of what agencies sell contractors is filler.",
-          "Strip it to the parts that close jobs. Everything below earns its place because a Fallbrook homeowner deciding on a $25,000–$80,000 project will look for it.",
+          "Strip it to the parts that close jobs. Everything below earns its place because a San Diego homeowner deciding on a $25,000–$80,000 project will look for it.",
         ],
         list: {
           title: "The pages and elements that win bids",
@@ -2993,7 +2993,7 @@ export const blogPosts: BlogPost[] = [
             "License number and bond info visible on every page — CA contractors get judged on this",
             "3–5 named reviews with the city: \"— Karen M., Bonsall\"",
             "A one-screen \"Request a Bid\" form: name, phone, project type, photo upload",
-            "Your service area spelled out: Fallbrook, Bonsall, Pala, Rainbow, north Vista",
+            "Your service area spelled out: San Diego, Bonsall, Pala, Rainbow, north Vista",
           ],
         },
       },
@@ -3017,11 +3017,11 @@ export const blogPosts: BlogPost[] = [
         callout: "If a feature doesn't help someone hand you a $30,000 job, it's dead weight. Delete it.",
       },
       {
-        heading: "Local SEO: how Fallbrook homeowners find you",
+        heading: "Local SEO: how San Diego homeowners find you",
         paragraphs: [
-          "Ranking for \"general contractor Fallbrook\" is mostly local SEO, not magic. Google decides who shows up in the map pack based on your Google Business Profile, your citations, and signals on your actual site. Get these three aligned and you climb.",
+          "Ranking for \"general contractor San Diego\" is mostly local SEO, not magic. Google decides who shows up in the map pack based on your Google Business Profile, your citations, and signals on your actual site. Get these three aligned and you climb.",
           "Start with the Google Business Profile — claim it, pick \"General Contractor\" as the primary category, add 20+ job photos, and post a project update every couple weeks. Then make your name, address, and phone identical everywhere: your site, Yelp, the BBB, Houzz, every directory. Mismatched info tanks your ranking.",
-          "On the site itself, build a page per service-city combo — \"kitchen remodel Fallbrook,\" \"ADU builder Bonsall,\" \"deck contractor Pala.\" Add LocalBusiness and GeneralContractor schema.org markup so Google reads your service area, hours, and reviews cleanly. That's the structured data that gets you the star ratings in search results.",
+          "On the site itself, build a page per service-city combo — \"kitchen remodel San Diego,\" \"ADU builder Bonsall,\" \"deck contractor Pala.\" Add LocalBusiness and GeneralContractor schema.org markup so Google reads your service area, hours, and reviews cleanly. That's the structured data that gets you the star ratings in search results.",
         ],
         callout: "The '[service] + [city]' page pattern is how a small GC outranks the big franchise — they can't write a real page for every town. You can.",
       },
@@ -3045,7 +3045,7 @@ export const blogPosts: BlogPost[] = [
     ],
     faqs: [
       { q: "How much should a general contractor pay for a website?", a: "San Diego agencies quote $4,000–$9,000 plus $200–$400/month, but you don't need that. Circuit Coders builds a custom contractor site for $499 flat with a 48-hour turnaround and a free mockup first." },
-      { q: "How long until my contractor website shows up on Google in Fallbrook?", a: "With a claimed Google Business Profile, consistent citations, and proper schema markup, most contractors start ranking in the local map pack within 60–90 days. Service-city pages like \"deck contractor Fallbrook\" often rank faster because there's less competition." },
+      { q: "How long until my contractor website shows up on Google in San Diego?", a: "With a claimed Google Business Profile, consistent citations, and proper schema markup, most contractors start ranking in the local map pack within 60–90 days. Service-city pages like \"deck contractor San Diego\" often rank faster because there's less competition." },
       { q: "Do I need to show my CA contractor license number on my site?", a: "Yes — put your license and bond info on every page. North County homeowners check it before they call, and showing it builds trust that wins the bid." },
       { q: "What's the most important page on a contractor website?", a: "The photo gallery of finished local jobs — 15–20 real images of your actual work. It outperforms every other page because homeowners judge a $30,000 project on what they can see you've already built." },
       { q: "Can you add a bid-request form that texts me right away?", a: "Yes. A form that emails and texts you the moment someone submits is a $200–$500 add-on, quoted up front, so a lead reaches you while the homeowner is still on the page." },
@@ -3055,7 +3055,7 @@ export const blogPosts: BlogPost[] = [
     slug: "pilates-studio-website-design-north-county",
     title: "Pilates & Yoga Studio Website Design in North County",
     description: "How North County pilates and yoga studios get a fast, bookable website for $499 in 48 hours. Class schedules, MindBody integration, and local SEO that fills mats.",
-    keywords: ["pilates studio website design", "yoga studio website North County", "pilates website Carlsbad", "yoga studio web design Oceanside", "class booking website San Diego", "MindBody website integration", "pilates SEO Vista", "fitness studio website Fallbrook"],
+    keywords: ["pilates studio website design", "yoga studio website North County", "pilates website Carlsbad", "yoga studio web design Oceanside", "class booking website San Diego", "MindBody website integration", "pilates SEO Vista", "fitness studio website San Diego"],
     publishedAt: "2026-06-02",
     updatedAt: "2026-06-02",
     readTime: 7,
@@ -3254,28 +3254,28 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "restaurant-website-design-fallbrook",
-    title: "Restaurant Website Design in Fallbrook: Stop Renting Your Customers From DoorDash",
-    description: "Your Fallbrook restaurant doesn't need a chatbot or an app. It needs a fast site that shows the menu, takes reservations, and ranks for 'restaurant near me.' Here's how.",
-    keywords: ["restaurant website design", "Fallbrook restaurant website", "restaurant web design North County", "online menu Fallbrook", "restaurant local SEO", "Google Business Profile restaurant", "Oceanside restaurant website", "Bonsall restaurant marketing"],
+    slug: "restaurant-website-design-san-diego",
+    title: "Restaurant Website Design in San Diego: Stop Renting Your Customers From DoorDash",
+    description: "Your San Diego restaurant doesn't need a chatbot or an app. It needs a fast site that shows the menu, takes reservations, and ranks for 'restaurant near me.' Here's how.",
+    keywords: ["restaurant website design", "San Diego restaurant website", "restaurant web design North County", "online menu San Diego", "restaurant local SEO", "Google Business Profile restaurant", "Oceanside restaurant website", "Bonsall restaurant marketing"],
     publishedAt: "2026-05-31",
     updatedAt: "2026-05-31",
     readTime: 8,
     category: "Local SEO",
     author: "Circuit Coders",
-    heroTag: "FALLBROOK · RESTAURANTS · WEB DESIGN",
+    heroTag: "SAN DIEGO · RESTAURANTS · WEB DESIGN",
     sections: [
       {
-        heading: "The DoorDash trap, and why it's bleeding you in Fallbrook",
+        heading: "The DoorDash trap, and why it's bleeding you in San Diego",
         paragraphs: [
-          "Walk down Main Avenue in Fallbrook and count the restaurants relying on DoorDash, Grubhub, and Uber Eats as their entire online presence. Most of them. The apps take 15–30% per order, own the customer relationship, and email that customer about the taco shop two doors down the moment they close out.",
-          "Here's the part nobody says out loud: when somebody searches 'restaurants in Fallbrook' or 'dinner near Bonsall,' a DoorDash listing is not your website. It's DoorDash's website with your food on it. You're paying a third of every ticket to rent a customer you could have owned for $499.",
+          "Walk down Main Street in San Diego and count the restaurants relying on DoorDash, Grubhub, and Uber Eats as their entire online presence. Most of them. The apps take 15–30% per order, own the customer relationship, and email that customer about the taco shop two doors down the moment they close out.",
+          "Here's the part nobody says out loud: when somebody searches 'restaurants in San Diego' or 'dinner near Bonsall,' a DoorDash listing is not your website. It's DoorDash's website with your food on it. You're paying a third of every ticket to rent a customer you could have owned for $499.",
           "A diner deciding where to eat tonight wants three things fast: the menu, the hours, and a way to book a table. If they can't find all three in ten seconds on their phone, they tap back and pick the place that made it easy.",
         ],
         callout: "DoorDash is a sales channel, not a website. Renting your customers from a middleman that emails them your competitors is not a marketing strategy.",
       },
       {
-        heading: "What a Fallbrook restaurant site actually needs",
+        heading: "What a San Diego restaurant site actually needs",
         paragraphs: [
           "Forget the agency wish-list. A restaurant website has one job: turn a hungry person on their phone into someone who walks through your door or books a table. Everything that doesn't serve that job is weight slowing down your page.",
           "Ninety percent of the people hitting your site are on a phone, standing in a parking lot or sitting on a couch deciding where to eat. Build for that person first. Big tap targets, a menu that loads instantly, a phone number that dials when tapped, and a map that opens directions in one tap.",
@@ -3304,18 +3304,18 @@ export const blogPosts: BlogPost[] = [
             "Autoplay video that eats data and makes the page crawl on cell signal",
             "A chatbot that intercepts simple questions a phone call answers in 20 seconds",
             "PDF menus — they're unreadable on phones and invisible to Google",
-            "A 5 MB hero image that takes 8 seconds to load on Fallbrook's spotty coverage",
+            "A 5 MB hero image that takes 8 seconds to load on San Diego's spotty coverage",
             "Pop-ups for a newsletter before anyone has even seen the menu",
             "'Coming soon' pages for an online store you'll never finish",
           ],
         },
       },
       {
-        heading: "Local SEO: how Fallbrook diners actually find you",
+        heading: "Local SEO: how San Diego diners actually find you",
         paragraphs: [
-          "Nobody types 'restaurantcoders.com' into a browser. They Google 'Mexican food Fallbrook,' 'breakfast near Bonsall,' or 'restaurants open now Pala.' If you're not showing up for those searches, your beautiful website might as well not exist. This is where most restaurants leave the most money on the table.",
-          "Start with your Google Business Profile — it's free and it's the single highest-leverage thing you own. Claim it, verify it, and fill out everything: hours, menu link, real photos, the service area covering Fallbrook, Bonsall, Rainbow, and Pala. Restaurants that post photos and reply to reviews weekly consistently outrank the ones that set it and forget it.",
-          "On the site itself, the page should target '[cuisine] + Fallbrook' patterns in the title, the headings, and the copy — 'Italian restaurant in Fallbrook,' not 'Welcome to our eatery.' Add schema.org Restaurant markup so Google can read your menu, hours, price range, and reviews directly. That's what powers the rich results with the star ratings and 'Open · Closes 9 PM' that get the click.",
+          "Nobody types 'restaurantcoders.com' into a browser. They Google 'Mexican food San Diego,' 'breakfast near Bonsall,' or 'restaurants open now Pala.' If you're not showing up for those searches, your beautiful website might as well not exist. This is where most restaurants leave the most money on the table.",
+          "Start with your Google Business Profile — it's free and it's the single highest-leverage thing you own. Claim it, verify it, and fill out everything: hours, menu link, real photos, the service area covering San Diego, Bonsall, Rainbow, and Pala. Restaurants that post photos and reply to reviews weekly consistently outrank the ones that set it and forget it.",
+          "On the site itself, the page should target '[cuisine] + San Diego' patterns in the title, the headings, and the copy — 'Italian restaurant in San Diego,' not 'Welcome to our eatery.' Add schema.org Restaurant markup so Google can read your menu, hours, price range, and reviews directly. That's what powers the rich results with the star ratings and 'Open · Closes 9 PM' that get the click.",
         ],
         list: {
           title: "The local-SEO checklist",
@@ -3323,12 +3323,12 @@ export const blogPosts: BlogPost[] = [
             "Claim and fully complete your Google Business Profile — hours, menu link, photos, service area",
             "Keep your name, address, and phone identical across Yelp, TripAdvisor, Apple Maps, and your site",
             "Add schema.org Restaurant markup for menu, hours, price range, and reviews",
-            "Title and headings that hit '[cuisine] + Fallbrook' and nearby cities like Bonsall and Pala",
+            "Title and headings that hit '[cuisine] + San Diego' and nearby cities like Bonsall and Pala",
             "Ask happy diners for Google reviews — and actually reply to every one",
             "Build a page or section for each thing you want to rank for: catering, happy hour, patio",
           ],
         },
-        callout: "A finished Google Business Profile plus schema markup is the difference between showing up for 'restaurants in Fallbrook' and being invisible. It costs you time, not money — and we set it up as part of the build.",
+        callout: "A finished Google Business Profile plus schema markup is the difference between showing up for 'restaurants in San Diego' and being invisible. It costs you time, not money — and we set it up as part of the build.",
       },
       {
         heading: "What this costs — and what the agencies will quote you",
@@ -3340,21 +3340,21 @@ export const blogPosts: BlogPost[] = [
         callout: "One $499 site versus 15–30% of every online order, forever. The website pays for itself before the end of the first weekend.",
       },
       {
-        heading: "The move for Fallbrook restaurants, plainly",
+        heading: "The move for San Diego restaurants, plainly",
         paragraphs: [
-          "Keep DoorDash if it brings you orders — just stop letting it be your entire online presence. Own a fast site that shows your menu, books your tables, and ranks when somebody in Fallbrook or Bonsall searches for dinner. That's how you stop paying a third of every ticket to a middleman.",
-          "We've built sites like this for shops across North County — Fallbrook, Oceanside, Carlsbad, Vista, San Marcos. Same playbook every time: fast, mobile-first, dialed-in local SEO, live in 48 hours.",
+          "Keep DoorDash if it brings you orders — just stop letting it be your entire online presence. Own a fast site that shows your menu, books your tables, and ranks when somebody in San Diego or Bonsall searches for dinner. That's how you stop paying a third of every ticket to a middleman.",
+          "We've built sites like this for shops across North County — San Diego, Oceanside, Carlsbad, Vista, San Marcos. Same playbook every time: fast, mobile-first, dialed-in local SEO, live in 48 hours.",
           "Here's the offer. Send us your restaurant name and what you've got now, and we'll build you a free mockup — the real homepage, your menu, your photos, no obligation. If you like it, it's $499 flat and live in 48 hours. If you don't, you've lost nothing but the email.",
         ],
         callout: "Free mockup, $499 flat, live in 48 hours. Stop renting your customers — own the website that owns the search.",
       },
     ],
     faqs: [
-      { q: "How much does a restaurant website cost in Fallbrook?", a: "Local agencies typically quote $4,000–$10,000 plus monthly fees. Circuit Coders builds a custom restaurant site for $499 flat, delivered in 48 hours, with a free mockup before you pay." },
-      { q: "Do I still need a website if I'm already on DoorDash and Yelp?", a: "Yes — those platforms own your customers and take 15–30% per order. Your own site ranks for 'restaurant in Fallbrook' searches and books tables directly, and most restaurants see organic traffic build within 60–90 days." },
+      { q: "How much does a restaurant website cost in San Diego?", a: "Local agencies typically quote $4,000–$10,000 plus monthly fees. Circuit Coders builds a custom restaurant site for $499 flat, delivered in 48 hours, with a free mockup before you pay." },
+      { q: "Do I still need a website if I'm already on DoorDash and Yelp?", a: "Yes — those platforms own your customers and take 15–30% per order. Your own site ranks for 'restaurant in San Diego' searches and books tables directly, and most restaurants see organic traffic build within 60–90 days." },
       { q: "How do I get my restaurant to show up on Google Maps?", a: "Claim and fully complete your free Google Business Profile, keep your name/address/phone consistent everywhere, add schema.org markup, and collect reviews. Restaurants that do all four usually start climbing the map pack within 30–60 days." },
       { q: "Can you add online reservations to my site?", a: "Yes. Reservation integrations with OpenTable, Resy, or a Stripe deposit for large parties run $200–$500 as an add-on, quoted upfront before any work starts." },
-      { q: "How fast can my Fallbrook restaurant website go live?", a: "48 hours from approval. We send a free mockup first, you get one round of revisions, and the site launches on fast Next.js hosting — typically the same week you reach out." },
+      { q: "How fast can my San Diego restaurant website go live?", a: "48 hours from approval. We send a free mockup first, you get one round of revisions, and the site launches on fast Next.js hosting — typically the same week you reach out." },
     ],
   },
   {
@@ -3463,23 +3463,23 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "landscaper-website-design-fallbrook",
-    title: "Landscaper Website Design in Fallbrook — Turn Curb Appeal Into Booked Jobs",
-    description: "Most Fallbrook landscapers lose $3,000+ jobs to competitors with better websites. A $499 custom site turns 'landscaper near me' searches into signed contracts.",
-    keywords: ["landscaper website design", "landscaper website Fallbrook", "Bonsall landscaping website", "landscaping web design North County", "Fallbrook landscaper SEO", "landscaper website cost", "landscape design website Fallbrook", "Vista landscaper website", "North County landscaping website"],
+    slug: "landscaper-website-design-san-diego",
+    title: "Landscaper Website Design in San Diego — Turn Curb Appeal Into Booked Jobs",
+    description: "Most San Diego landscapers lose $3,000+ jobs to competitors with better websites. A $499 custom site turns 'landscaper near me' searches into signed contracts.",
+    keywords: ["landscaper website design", "landscaper website San Diego", "Bonsall landscaping website", "landscaping web design North County", "San Diego landscaper SEO", "landscaper website cost", "landscape design website San Diego", "Vista landscaper website", "North County landscaping website"],
     publishedAt: "2026-05-29",
     updatedAt: "2026-05-29",
     readTime: 7,
     category: "Local SEO",
     author: "Circuit Coders",
-    heroTag: "LANDSCAPER · WEBSITE · FALLBROOK",
+    heroTag: "LANDSCAPER · WEBSITE · SAN DIEGO",
     sections: [
       {
         heading: "You're Losing $5K Hardscape Jobs to the Guy With a Better Website",
         paragraphs: [
-          "Drive through any neighborhood in Fallbrook or Bonsall and you'll see the work — drought-tolerant front yards, flagstone patios, retaining walls cut into hillside lots, irrigation systems keeping avocado groves alive through October. There's no shortage of landscaping talent in North County. But there's a massive gap between the landscapers getting $5,000–$15,000 hardscape jobs and the ones grinding out $200 mow-and-blow routes. The difference isn't skill. It's who shows up when a homeowner types 'landscaper near me' on their phone.",
-          "Most independent landscapers around Fallbrook, Bonsall, and Vista either have no website at all or they've got a free Wix page with a stock photo of a lawn mower and a Gmail address. That's not a web presence — it's a reason for a homeowner to keep scrolling. Meanwhile, the outfit down De Luz Road with a clean portfolio site and a 'Get a Free Estimate' button is booking every patio install and xeriscaping project from the 76028 to the 92003.",
-          "A single landscaping project in Fallbrook averages $2,000–$8,000. A full backyard redesign with hardscape, planting, and irrigation runs $10,000–$25,000. If your website converts just two new projects a month, that's $48,000–$192,000 in annual revenue from a $499 investment. Compare that to paying $40–$60 per lead on Thumbtack for jobs you're bidding against four other crews.",
+          "Drive through any neighborhood in San Diego or Bonsall and you'll see the work — drought-tolerant front yards, flagstone patios, retaining walls cut into hillside lots, irrigation systems keeping avocado groves alive through October. There's no shortage of landscaping talent in North County. But there's a massive gap between the landscapers getting $5,000–$15,000 hardscape jobs and the ones grinding out $200 mow-and-blow routes. The difference isn't skill. It's who shows up when a homeowner types 'landscaper near me' on their phone.",
+          "Most independent landscapers around San Diego, Bonsall, and Vista either have no website at all or they've got a free Wix page with a stock photo of a lawn mower and a Gmail address. That's not a web presence — it's a reason for a homeowner to keep scrolling. Meanwhile, the outfit down North County with a clean portfolio site and a 'Get a Free Estimate' button is booking every patio install and xeriscaping project from the 76028 to the 92003.",
+          "A single landscaping project in San Diego averages $2,000–$8,000. A full backyard redesign with hardscape, planting, and irrigation runs $10,000–$25,000. If your website converts just two new projects a month, that's $48,000–$192,000 in annual revenue from a $499 investment. Compare that to paying $40–$60 per lead on Thumbtack for jobs you're bidding against four other crews.",
         ],
       },
       {
@@ -3494,8 +3494,8 @@ export const blogPosts: BlogPost[] = [
             "A project gallery with 8–12 real before-and-after photos — phone shots of a Bonsall hillside retaining wall you actually built beat a stock photo of a perfect lawn every time",
             "A 'Request Free Estimate' form with name, phone, address, and project description — four fields max, the homeowner browsing backyard ideas at 9 PM isn't filling out a ten-field intake",
             "Your service list organized clearly: maintenance, hardscape, irrigation, xeriscaping, tree trimming, grading — list what you do so Google can index it and homeowners can self-qualify",
-            "Service area map or text showing Fallbrook, Bonsall, Vista, San Marcos, Oceanside, Carlsbad, De Luz, and Pala",
-            "Real photos of your crew, your truck, your equipment — a phone shot of your guys finishing a flagstone patio in Fallbrook tells a homeowner more than any stock image",
+            "Service area map or text showing San Diego, Bonsall, Vista, San Marcos, Oceanside, Carlsbad, North County, and Pala",
+            "Real photos of your crew, your truck, your equipment — a phone shot of your guys finishing a flagstone patio in San Diego tells a homeowner more than any stock image",
             "Click-to-call phone number pinned to the top on mobile — 68% of landscaping searches happen on phones, and if your number takes two taps to reach you've already lost the bid",
           ],
         },
@@ -3520,9 +3520,9 @@ export const blogPosts: BlogPost[] = [
         callout: "A homeowner comparing landscapers gives your site about 4 seconds. If your page is still loading a drone flyover video, you've lost the project to the next Google result.",
       },
       {
-        heading: "Local SEO — How Fallbrook Landscapers Win the Map Pack",
+        heading: "Local SEO — How San Diego Landscapers Win the Map Pack",
         paragraphs: [
-          "When someone searches 'landscaper Fallbrook' or 'hardscape Bonsall,' Google shows three businesses on the map before any organic results. That map pack captures over 40% of all clicks. If you're not in those three spots, most homeowners in Fallbrook and Bonsall never see your name.",
+          "When someone searches 'landscaper San Diego' or 'hardscape Bonsall,' Google shows three businesses on the map before any organic results. That map pack captures over 40% of all clicks. If you're not in those three spots, most homeowners in San Diego and Bonsall never see your name.",
           "The good news: most landscapers in North County are doing zero local SEO. The bar is on the ground. A few hours of targeted setup puts you ahead of 90% of your competition from Pala to Carlsbad.",
         ],
         list: {
@@ -3531,7 +3531,7 @@ export const blogPosts: BlogPost[] = [
             "Claim and fully complete your Google Business Profile — list every service (hardscaping, xeriscaping, irrigation repair, tree trimming, grading, retaining walls), upload 20+ real project photos, and mark your service area for each city you cover",
             "NAP consistency: your business name, address, and phone number must be identical across your website, Google, Yelp, Angi, and every directory — one mismatched digit and Google downgrades your trust score",
             "Add LandscapingOrGardening and LocalBusiness schema markup to your site so Google reads your services and service area as structured data, not just text",
-            "Target page titles like 'Landscaper in Fallbrook | Hardscape · Irrigation · Xeriscaping | [Your Business]' — not just your company name",
+            "Target page titles like 'Landscaper in San Diego | Hardscape · Irrigation · Xeriscaping | [Your Business]' — not just your company name",
             "Collect Google reviews after every completed project — landscapers with 40+ reviews and a 4.7+ rating dominate the North County map pack",
             "Post to your Google Business Profile weekly — a before-and-after of a completed xeriscape in Bonsall or a 'booking hardscape projects for June' update signals freshness to Google's algorithm",
           ],
@@ -3540,7 +3540,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "What Landscaper Websites Cost in North County",
         paragraphs: [
-          "I've reviewed proposals from agencies pitching landscapers across Fallbrook, Vista, and Oceanside. Template shops charge $1,500–$2,500 for a Squarespace site with your logo dropped into a landscaping template. Local agencies in North County quote $3,000–$8,000 for a 'custom' WordPress build that's actually a $79 theme with green gradients and a stock photo of a riding mower.",
+          "I've reviewed proposals from agencies pitching landscapers across San Diego, Vista, and Oceanside. Template shops charge $1,500–$2,500 for a Squarespace site with your logo dropped into a landscaping template. Local agencies in North County quote $3,000–$8,000 for a 'custom' WordPress build that's actually a $79 theme with green gradients and a stock photo of a riding mower.",
           "Then there's the monthly trap. Most of those agencies lock you into $150–$250/month 'maintenance and hosting' contracts that cost them $12/month on the backend. That $4,000 site actually costs you $7,800 in the first year. And if you try to leave? They own the domain, the hosting, and sometimes even your Google Business Profile.",
           "Circuit Coders builds landscaper websites for $499 flat. Custom Next.js on Vercel — no templates, no WordPress plugins that break after every update. Your gallery, your estimate form, your service area, your schema markup, all done. One round of revisions included. Delivered in 48 hours. Optional hosting and updates at $50/month if you want hands-off, but you own the code and the domain either way.",
         ],
@@ -3549,17 +3549,17 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "From Invisible to Booked Out — The 90-Day Timeline",
         paragraphs: [
-          "Here's the realistic timeline. Your site goes live in 48 hours. Within two weeks, Google indexes your pages and your Business Profile starts syncing with your new site. By day 30, you're appearing in results for 'landscaper Fallbrook' and 'hardscape Bonsall' if you've followed the SEO checklist. By day 60–90, you're pulling consistent organic traffic and your estimate form is generating leads while you're grading a hillside lot in De Luz.",
-          "I've built sites for service businesses across Fallbrook, Bonsall, Oceanside, Vista, Carlsbad, and San Marcos. The pattern is the same every time — trades that launch a clean, fast site with a clear call-to-action and proper local SEO see 20–40 new inbound leads in the first 90 days. For a landscaper, even converting a third of those leads at an average $3,500 ticket means $23,000–$46,000 in new revenue in three months.",
-          "If you're a landscaper in Fallbrook or Bonsall and your website is either nonexistent or embarrassing, send me your business name. I'll build a free mockup of what your site could look like — no sales call, no commitment, no follow-up spam. If you like it, it's $499 and live in two days. If not, you've lost nothing but thirty seconds typing your name.",
+          "Here's the realistic timeline. Your site goes live in 48 hours. Within two weeks, Google indexes your pages and your Business Profile starts syncing with your new site. By day 30, you're appearing in results for 'landscaper San Diego' and 'hardscape Bonsall' if you've followed the SEO checklist. By day 60–90, you're pulling consistent organic traffic and your estimate form is generating leads while you're grading a hillside lot in North County.",
+          "I've built sites for service businesses across San Diego, Bonsall, Oceanside, Vista, Carlsbad, and San Marcos. The pattern is the same every time — trades that launch a clean, fast site with a clear call-to-action and proper local SEO see 20–40 new inbound leads in the first 90 days. For a landscaper, even converting a third of those leads at an average $3,500 ticket means $23,000–$46,000 in new revenue in three months.",
+          "If you're a landscaper in San Diego or Bonsall and your website is either nonexistent or embarrassing, send me your business name. I'll build a free mockup of what your site could look like — no sales call, no commitment, no follow-up spam. If you like it, it's $499 and live in two days. If not, you've lost nothing but thirty seconds typing your name.",
         ],
         callout: "Send your business name to Circuit Coders for a free mockup — no commitment, no pitch deck, no drip campaign. Just a preview of what a site built for your landscaping business actually looks like.",
       },
     ],
     faqs: [
-      { q: "How much does a landscaper website cost in Fallbrook?", a: "Local agencies typically charge $3,000–$8,000 plus $150–$250/month in maintenance fees. Circuit Coders builds custom landscaper websites for $499 flat with no contracts. Optional hosting and updates are $50/month." },
+      { q: "How much does a landscaper website cost in San Diego?", a: "Local agencies typically charge $3,000–$8,000 plus $150–$250/month in maintenance fees. Circuit Coders builds custom landscaper websites for $499 flat with no contracts. Optional hosting and updates are $50/month." },
       { q: "How long does it take to build a landscaping company website?", a: "A custom one-page landscaper site with a project gallery, estimate request form, and local SEO setup takes 48 hours at Circuit Coders. Most agencies quote 3–6 weeks for a comparable build." },
-      { q: "How do I get my landscaping business to show up on Google Maps in Fallbrook?", a: "Claim your Google Business Profile, complete every field, match your NAP exactly to your website, add LocalBusiness schema markup, and collect reviews after every project. Landscapers with 40+ reviews and a live website typically reach the map pack within 60–90 days." },
+      { q: "How do I get my landscaping business to show up on Google Maps in San Diego?", a: "Claim your Google Business Profile, complete every field, match your NAP exactly to your website, add LocalBusiness schema markup, and collect reviews after every project. Landscapers with 40+ reviews and a live website typically reach the map pack within 60–90 days." },
       { q: "Do landscapers really need a website if they get referrals?", a: "Referrals are great but they don't scale. Even referred homeowners Google your business name before calling — 81% of consumers research online before hiring a service provider. Without a website, you're losing the validation step and the referral goes to the landscaper who does have one." },
       { q: "What's the best website platform for a landscaping business?", a: "Avoid Wix and Squarespace — they're slow, bloated, and limit your SEO control. A custom-coded site on a modern framework like Next.js loads in under 1 second, scores 95+ on Google PageSpeed, and gives you full ownership of the code. That speed advantage directly impacts your Google ranking." },
     ],
@@ -3568,7 +3568,7 @@ export const blogPosts: BlogPost[] = [
     slug: "plumber-website-design-north-county",
     title: "Plumber Website Design That Actually Gets Service Calls in North County",
     description: "Most North County plumbers lose emergency calls to competitors with better websites. A $499 custom site turns 'plumber near me' searches into booked jobs fast.",
-    keywords: ["plumber website design", "plumber website North County", "Fallbrook plumber website", "Oceanside plumber web design", "plumber SEO North County SD", "plumber website cost", "Vista plumber website", "emergency plumber website design", "North County small business website"],
+    keywords: ["plumber website design", "plumber website North County", "San Diego plumber website", "Oceanside plumber web design", "plumber SEO North County SD", "plumber website cost", "Vista plumber website", "emergency plumber website design", "North County small business website"],
     publishedAt: "2026-05-28",
     updatedAt: "2026-05-28",
     readTime: 7,
@@ -3579,7 +3579,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Your Phone Isn't Ringing Because Google Doesn't Know You Exist",
         paragraphs: [
-          "There are over 60 licensed plumbers serving North County San Diego — from Fallbrook and Bonsall down through Vista, San Marcos, Oceanside, and Carlsbad. Some of them are booked three days out. Others are sitting in their trucks refreshing Thumbtack, paying $30–$50 per lead for jobs they might not even land. The difference isn't skill. It's who shows up when a homeowner types 'plumber near me' with water pooling on their kitchen floor.",
+          "There are over 60 licensed plumbers serving North County San Diego — from San Diego and Bonsall down through Vista, San Marcos, Oceanside, and Carlsbad. Some of them are booked three days out. Others are sitting in their trucks refreshing Thumbtack, paying $30–$50 per lead for jobs they might not even land. The difference isn't skill. It's who shows up when a homeowner types 'plumber near me' with water pooling on their kitchen floor.",
           "Most independent plumbers in North County either have no website or they're running a GoDaddy one-pager from 2019 with a stock photo of a wrench and a phone number in plain text that doesn't even click-to-call on mobile. That's not a website — it's a missed call. Meanwhile, the plumber on the next block with a clean site and a 'Call Now' button sticky-pinned to the top of every page is catching every panicked homeowner between the 15 and the 76.",
           "A single plumbing job averages $250–$500. A new repeat customer — someone who calls you for the water heater, the toilet rebuild, and the re-pipe — is worth $1,500–$3,000 over two years. If your website converts three new customers a month, that's $9,000–$36,000 in annual revenue from a $499 investment. No Thumbtack spend, no Angi subscription, no Home Advisor bidding war.",
         ],
@@ -3596,7 +3596,7 @@ export const blogPosts: BlogPost[] = [
             "Click-to-call phone number sticky at the top of every page — 72% of emergency plumbing searches happen on mobile, and if your number isn't one tap away you've already lost",
             "A 'Request Service' form with name, phone, address, and problem description — keep it to four fields max, nobody with a flooding bathroom is filling out a ten-field intake form",
             "Your service list with transparent price ranges — 'drain clearing: $150–$300' beats 'call for estimate' because it pre-qualifies the caller and filters out tire-kickers",
-            "Google Maps embed showing your service area across Fallbrook, Vista, Oceanside, San Marcos, Carlsbad, and Bonsall",
+            "Google Maps embed showing your service area across San Diego, Vista, Oceanside, San Marcos, Carlsbad, and Bonsall",
             "Real photos of you, your van, your work — a phone photo of an actual re-pipe you did in a Vista crawlspace beats a stock photo of a shiny pipe wrench every time",
             "Emergency availability stated clearly — if you do same-day or 24/7 service, that needs to be the first thing a visitor sees, not buried in a FAQ page",
             "Licenses, insurance, and bonding info displayed prominently — homeowners handing someone access to their slab want to know you're legit",
@@ -3625,8 +3625,8 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Local SEO — How North County Plumbers Win the Map Pack",
         paragraphs: [
-          "When someone searches 'plumber Fallbrook' or 'emergency plumber Oceanside,' Google shows three businesses on the map before any organic results. That map pack captures over 40% of all clicks. If you're not in those three spots, the majority of your potential customers never see your name.",
-          "The good news: most plumbers in North County are doing zero local SEO. The bar is underground. A few hours of targeted setup puts you ahead of 80% of your competition in Fallbrook, Vista, San Marcos, and Oceanside.",
+          "When someone searches 'plumber San Diego' or 'emergency plumber Oceanside,' Google shows three businesses on the map before any organic results. That map pack captures over 40% of all clicks. If you're not in those three spots, the majority of your potential customers never see your name.",
+          "The good news: most plumbers in North County are doing zero local SEO. The bar is underground. A few hours of targeted setup puts you ahead of 80% of your competition in San Diego, Vista, San Marcos, and Oceanside.",
         ],
         list: {
           title: "The local SEO playbook for plumbers",
@@ -3634,7 +3634,7 @@ export const blogPosts: BlogPost[] = [
             "Claim and fully complete your Google Business Profile — list every service (water heater, sewer line, re-pipe, drain clearing, gas line), upload 15+ real job photos, and mark your service area for each city you cover",
             "NAP consistency: your business name, address, and phone number must be identical across your website, Google, Yelp, HomeAdvisor, and every directory listing — one mismatched digit and Google downgrades your trust score",
             "Add Plumber and LocalBusiness schema markup to your site so Google reads your services and service area as structured data, not just text on a page",
-            "Target page titles like 'Emergency Plumber in Fallbrook | [Your Business]' — not just your company name alone",
+            "Target page titles like 'Emergency Plumber in San Diego | [Your Business]' — not just your company name alone",
             "Collect Google reviews relentlessly — plumbers with 60+ reviews and a 4.6+ rating dominate the North County map pack, so ask every satisfied customer before you leave the house",
             "Post to your Google Business Profile weekly — a quick photo of a completed water heater install or a 'same-day drain clearing available in Oceanside' update signals freshness to Google's algorithm",
           ],
@@ -3652,8 +3652,8 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "From Zero Calls to Booked Solid in 90 Days",
         paragraphs: [
-          "Here's the realistic timeline. Your site goes live in 48 hours. Within two weeks, Google indexes your pages and your Business Profile starts syncing with your new site data. By day 30, you're appearing in results for 'plumber Fallbrook' and 'emergency plumber Vista' if you've followed the SEO checklist. By day 60–90, you're pulling consistent organic traffic and your service request form is generating leads while you're under a house running copper.",
-          "I've built sites for service businesses across Fallbrook, Oceanside, Vista, Carlsbad, and San Marcos. The pattern repeats — trades that launch a clean, fast site with a clear call-to-action and proper local SEO see 20–40 new inbound leads in the first 90 days. For a plumber, even converting half of those leads at an average $350 ticket means $3,500–$7,000 in new revenue in three months.",
+          "Here's the realistic timeline. Your site goes live in 48 hours. Within two weeks, Google indexes your pages and your Business Profile starts syncing with your new site data. By day 30, you're appearing in results for 'plumber San Diego' and 'emergency plumber Vista' if you've followed the SEO checklist. By day 60–90, you're pulling consistent organic traffic and your service request form is generating leads while you're under a house running copper.",
+          "I've built sites for service businesses across San Diego, Oceanside, Vista, Carlsbad, and San Marcos. The pattern repeats — trades that launch a clean, fast site with a clear call-to-action and proper local SEO see 20–40 new inbound leads in the first 90 days. For a plumber, even converting half of those leads at an average $350 ticket means $3,500–$7,000 in new revenue in three months.",
           "If you're a plumber in North County and your website is either nonexistent or embarrassing, send me your business name. I'll build a free mockup of what your site could look like — no sales call, no commitment, no follow-up spam. If you like it, it's $499 and live in two days. If not, you've lost nothing but thirty seconds typing your name.",
         ],
         callout: "Send your business name to Circuit Coders for a free mockup — no commitment, no pitch deck, no follow-up drip campaign. Just a preview of what a site built for your plumbing business actually looks like.",
@@ -3662,7 +3662,7 @@ export const blogPosts: BlogPost[] = [
     faqs: [
       { q: "How much does a plumber website cost in North County San Diego?", a: "Local agencies typically charge $3,000–$8,000 plus $150–$250/month in maintenance fees. Circuit Coders builds custom plumber websites for $499 flat with no contracts. Optional hosting and updates are $50/month." },
       { q: "How long does it take to build a plumbing company website?", a: "A custom one-page plumber site with service request forms, click-to-call, and local SEO setup takes 48 hours at Circuit Coders. Most agencies quote 3–6 weeks for a comparable build." },
-      { q: "How do I get my plumbing business on Google Maps in Fallbrook?", a: "Claim your Google Business Profile, complete every field, match your NAP exactly to your website, add Plumber schema markup, and collect Google reviews at every job. Plumbers with 60+ reviews and a live website typically reach the map pack within 60–90 days." },
+      { q: "How do I get my plumbing business on Google Maps in San Diego?", a: "Claim your Google Business Profile, complete every field, match your NAP exactly to your website, add Plumber schema markup, and collect Google reviews at every job. Plumbers with 60+ reviews and a live website typically reach the map pack within 60–90 days." },
       { q: "Should a plumber website have online scheduling?", a: "At minimum you need a service request form — name, phone, address, and problem. Plumbers who add direct scheduling through platforms like Housecall Pro or Jobber see 25–35% more inbound leads versus phone-only. Integration costs $200–$500." },
       { q: "Is WordPress good for a plumbing website?", a: "WordPress works but demands constant plugin updates, security patches, and breaks regularly. A static Next.js site loads 2–3x faster, needs zero maintenance, and costs $0–$20/month to host versus $30–$50/month for managed WordPress." },
     ],
@@ -3756,7 +3756,7 @@ export const blogPosts: BlogPost[] = [
         heading: "From Invisible to Fully Booked in 90 Days",
         paragraphs: [
           "Here's the realistic timeline. Your site goes live in 48 hours. Within two weeks, Google indexes your pages and your Business Profile starts syncing with your new site data. By day 30, you're appearing in results for 'auto repair Oceanside' and 'mechanic near Camp Pendleton' if you've done the SEO checklist. By day 60–90, you're pulling consistent organic traffic and your appointment form is doing the work your front desk used to do between oil changes.",
-          "I've built sites for service businesses across Oceanside, Fallbrook, Vista, and Carlsbad. The pattern repeats — shops that launch a clean, fast site with a clear call-to-action and proper local SEO see 20–40 new inbound leads in the first 90 days. That's not a guarantee, it's just what happens when you stop being invisible to Google.",
+          "I've built sites for service businesses across Oceanside, San Diego, Vista, and Carlsbad. The pattern repeats — shops that launch a clean, fast site with a clear call-to-action and proper local SEO see 20–40 new inbound leads in the first 90 days. That's not a guarantee, it's just what happens when you stop being invisible to Google.",
           "If you're running a repair shop in Oceanside and your website is either nonexistent or embarrassing, send me your shop name. I'll build a free mockup of what your site could look like — no sales call, no commitment, no follow-up spam. If you like it, it's $499 and live in two days. If not, you've lost nothing.",
         ],
         callout: "Send your shop name to Circuit Coders for a free mockup — no commitment, no pitch deck, no follow-up spam. Just a preview of what a site built for your shop actually looks like.",
@@ -3771,22 +3771,22 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "barber-shop-website-design-fallbrook",
-    title: "Barber Shop Website Design in Fallbrook — Get Booked Solid in 48 Hours",
-    description: "Fallbrook barber shops lose walk-ins to competitors with better websites. A $499 custom site with online booking turns searchers into repeat clients fast.",
-    keywords: ["barber shop website design", "barber shop website Fallbrook", "Fallbrook barber website", "barber online booking website", "barber shop web design North County SD", "barber website cost", "Fallbrook small business website", "barber shop SEO Fallbrook"],
+    slug: "barber-shop-website-design-san-diego",
+    title: "Barber Shop Website Design in San Diego — Get Booked Solid in 48 Hours",
+    description: "San Diego barber shops lose walk-ins to competitors with better websites. A $499 custom site with online booking turns searchers into repeat clients fast.",
+    keywords: ["barber shop website design", "barber shop website San Diego", "San Diego barber website", "barber online booking website", "barber shop web design North County SD", "barber website cost", "San Diego small business website", "barber shop SEO San Diego"],
     publishedAt: "2026-05-26",
     updatedAt: "2026-05-26",
     readTime: 7,
     category: "Local SEO",
     author: "Circuit Coders",
-    heroTag: "BARBER · WEBSITE · FALLBROOK",
+    heroTag: "BARBER · WEBSITE · SAN DIEGO",
     sections: [
       {
         heading: "Your Chair Is Empty Because Your Website Is Missing",
         paragraphs: [
-          "There are roughly a dozen barber shops within a 15-minute drive of downtown Fallbrook. Some of them are packed every Saturday morning. Others have open chairs at noon. The difference is almost never skill — it's visibility. When someone new to the area searches 'barber shop near me' or 'men's haircut Fallbrook,' Google decides who shows up first.",
-          "Most Fallbrook barbers either have no website at all or they're running a free Wix page from 2019 with a stock photo of scissors and zero booking functionality. That's not a website — it's a placeholder that tells Google you're not serious. Meanwhile, the shop two miles away with a clean site and a 'Book Now' button is grabbing every new client who moved into one of those new housing developments off Stage Coach.",
+          "There are roughly a dozen barber shops within a 15-minute drive of downtown San Diego. Some of them are packed every Saturday morning. Others have open chairs at noon. The difference is almost never skill — it's visibility. When someone new to the area searches 'barber shop near me' or 'men's haircut San Diego,' Google decides who shows up first.",
+          "Most San Diego barbers either have no website at all or they're running a free Wix page from 2019 with a stock photo of scissors and zero booking functionality. That's not a website — it's a placeholder that tells Google you're not serious. Meanwhile, the shop two miles away with a clean site and a 'Book Now' button is grabbing every new client who moved into one of those new housing developments off Stage Coach.",
           "The math is simple. A single new regular client is worth $1,200–$1,800 a year in cuts alone, plus product upsells. If your website brings in even two new regulars per month, that's $2,400–$3,600 in annual revenue from a $499 investment. There's no marketing channel with a better return.",
         ],
       },
@@ -3801,7 +3801,7 @@ export const blogPosts: BlogPost[] = [
           items: [
             "Online booking integration — Square Appointments, Booksy, or Vagaro embedded directly on the page, not a link that opens a new tab",
             "Your actual prices listed clearly — no 'call for pricing' nonsense that makes people bounce to the next result",
-            "Google Maps embed with your exact pin so 'Fallbrook barber shop near me' searches pull your listing",
+            "Google Maps embed with your exact pin so 'San Diego barber shop near me' searches pull your listing",
             "Real photos of your shop, your chairs, your work — phone photos beat stock images every single time",
             "Hours of operation updated for holidays, not showing Christmas 2023 hours in May 2026",
             "A mobile-first layout — 78% of local service searches happen on phones, and if your site isn't thumb-friendly you're losing them",
@@ -3827,10 +3827,10 @@ export const blogPosts: BlogPost[] = [
         callout: "Every unnecessary feature adds load time. Every extra second of load time costs you 7% of conversions. A fast, clean one-pager beats a bloated five-page site every time.",
       },
       {
-        heading: "Local SEO — How Fallbrook Barbers Win the Map Pack",
+        heading: "Local SEO — How San Diego Barbers Win the Map Pack",
         paragraphs: [
-          "When someone searches 'barber shop Fallbrook' or 'men's haircut near Bonsall,' Google shows three results on the map before anything else. That map pack gets 42% of all clicks. If you're not in it, you're invisible to almost half your potential clients.",
-          "Getting into the map pack isn't magic. It's a checklist. Google rewards shops that have consistent information everywhere, a website that matches their Google Business Profile, and recent reviews. Most Fallbrook barbers are doing zero of these things, which means the bar is low.",
+          "When someone searches 'barber shop San Diego' or 'men's haircut near Bonsall,' Google shows three results on the map before anything else. That map pack gets 42% of all clicks. If you're not in it, you're invisible to almost half your potential clients.",
+          "Getting into the map pack isn't magic. It's a checklist. Google rewards shops that have consistent information everywhere, a website that matches their Google Business Profile, and recent reviews. Most San Diego barbers are doing zero of these things, which means the bar is low.",
         ],
         list: {
           title: "The local SEO checklist",
@@ -3838,8 +3838,8 @@ export const blogPosts: BlogPost[] = [
             "Claim and fully complete your Google Business Profile — every field, every service, every photo",
             "Make sure your name, address, and phone number match exactly across your website, Google, Yelp, and any directory listing",
             "Add LocalBusiness and BarberShop schema markup to your site so Google reads your data cleanly",
-            "Target page titles like 'Men's Haircut in Fallbrook | [Shop Name]' — not just your shop name alone",
-            "Ask every satisfied client for a Google review — shops with 50+ reviews dominate the map pack in small towns like Fallbrook",
+            "Target page titles like 'Men's Haircut in San Diego | [Shop Name]' — not just your shop name alone",
+            "Ask every satisfied client for a Google review — shops with 50+ reviews dominate the map pack in small towns like San Diego",
             "Post to your Google Business Profile weekly — a 30-second photo of a fresh fade with 'Walk-ins welcome today' does more than any ad",
           ],
         },
@@ -3854,40 +3854,40 @@ export const blogPosts: BlogPost[] = [
         callout: "$499 flat. 48 hours. You own the code. No contracts, no hostage fees.",
       },
       {
-        heading: "A Fallbrook Barber Can Be Booked Solid in 60 Days",
+        heading: "A San Diego Barber Can Be Booked Solid in 60 Days",
         paragraphs: [
-          "Here's what the timeline actually looks like. You get a custom site live in 48 hours. Within the first two weeks, Google indexes your pages and your Business Profile starts syncing with your new site. By day 30, you're showing up for 'barber shop Fallbrook' searches if you've followed the SEO checklist. By day 60–90, you're pulling consistent organic traffic and your booking widget is doing the work your phone used to do.",
-          "I've built sites for service businesses across Fallbrook, Oceanside, and Carlsbad. The pattern is the same every time — the shops that launch a clean, fast site with real booking integration see 15–30 new online bookings in the first 60 days. That's not a promise, it's just what happens when you stop being invisible.",
-          "If you're cutting hair in Fallbrook and your website is nonexistent or embarrassing, send me your shop name. I'll build a free mockup of what your site could look like — no commitment, no pitch call, no follow-up emails. If you like it, it's $499 and live in two days. If you don't, you wasted nothing.",
+          "Here's what the timeline actually looks like. You get a custom site live in 48 hours. Within the first two weeks, Google indexes your pages and your Business Profile starts syncing with your new site. By day 30, you're showing up for 'barber shop San Diego' searches if you've followed the SEO checklist. By day 60–90, you're pulling consistent organic traffic and your booking widget is doing the work your phone used to do.",
+          "I've built sites for service businesses across San Diego, Oceanside, and Carlsbad. The pattern is the same every time — the shops that launch a clean, fast site with real booking integration see 15–30 new online bookings in the first 60 days. That's not a promise, it's just what happens when you stop being invisible.",
+          "If you're cutting hair in San Diego and your website is nonexistent or embarrassing, send me your shop name. I'll build a free mockup of what your site could look like — no commitment, no pitch call, no follow-up emails. If you like it, it's $499 and live in two days. If you don't, you wasted nothing.",
         ],
         callout: "Send your shop name to Circuit Coders for a free mockup — no commitment, no pitch deck, no follow-up spam. Just a preview of what your site could look like.",
       },
     ],
     faqs: [
-      { q: "How much does a barber shop website cost in Fallbrook?", a: "Most local agencies charge $1,500–$5,000 plus monthly fees of $150–$250. Circuit Coders builds custom barber shop sites for $499 flat with no ongoing contracts required. Optional hosting and updates run $50/month." },
+      { q: "How much does a barber shop website cost in San Diego?", a: "Most local agencies charge $1,500–$5,000 plus monthly fees of $150–$250. Circuit Coders builds custom barber shop sites for $499 flat with no ongoing contracts required. Optional hosting and updates run $50/month." },
       { q: "How long does it take to build a barber shop website?", a: "A custom one-page barber site with booking integration takes 48 hours at Circuit Coders. Template-based agencies typically quote 2–4 weeks for a comparable result." },
       { q: "Do I need online booking on my barber shop website?", a: "Yes. Shops with embedded online booking see 20–40% more new client appointments compared to phone-only booking. Square Appointments, Booksy, and Vagaro all integrate cleanly and most have free tiers for solo barbers." },
-      { q: "How do I get my Fallbrook barber shop to show up on Google Maps?", a: "Claim your Google Business Profile, fill out every field, match your name/address/phone exactly to your website, add schema markup, and actively collect Google reviews. Most Fallbrook barbers with 50+ reviews and a live website rank in the map pack within 60–90 days." },
+      { q: "How do I get my San Diego barber shop to show up on Google Maps?", a: "Claim your Google Business Profile, fill out every field, match your name/address/phone exactly to your website, add schema markup, and actively collect Google reviews. Most San Diego barbers with 50+ reviews and a live website rank in the map pack within 60–90 days." },
       { q: "Is WordPress good for a barber shop website?", a: "WordPress works but requires constant plugin updates, security patches, and breaks more often than modern alternatives. A static Next.js site loads 2–3x faster, requires zero maintenance, and costs less to host — typically $0–$20/month versus $30–$50/month for managed WordPress." },
     ],
   },
   {
-    slug: "nail-salon-website-design-fallbrook",
-    title: "Nail Salon Website Design in Fallbrook — What Actually Fills the Chairs",
-    description: "Most nail salon websites in Fallbrook lose bookings to Instagram DMs and phone tag. Here's what a $499 custom site needs to convert walk-by traffic into booked appointments.",
-    keywords: ["nail salon website design", "nail salon website Fallbrook", "Fallbrook nail salon", "nail salon web design North County", "nail salon online booking", "nail salon SEO Fallbrook", "nail salon website cost", "small business website Fallbrook", "nail salon Google Business Profile"],
+    slug: "nail-salon-website-design-san-diego",
+    title: "Nail Salon Website Design in San Diego — What Actually Fills the Chairs",
+    description: "Most nail salon websites in San Diego lose bookings to Instagram DMs and phone tag. Here's what a $499 custom site needs to convert walk-by traffic into booked appointments.",
+    keywords: ["nail salon website design", "nail salon website San Diego", "San Diego nail salon", "nail salon web design North County", "nail salon online booking", "nail salon SEO San Diego", "nail salon website cost", "small business website San Diego", "nail salon Google Business Profile"],
     publishedAt: "2026-05-25",
     updatedAt: "2026-05-25",
     readTime: 7,
     category: "Local SEO",
     author: "Circuit Coders",
-    heroTag: "NAIL SALON · WEB DESIGN · FALLBROOK",
+    heroTag: "NAIL SALON · WEB DESIGN · SAN DIEGO",
     sections: [
       {
-        heading: "The Real Problem With Nail Salon Websites in Fallbrook",
+        heading: "The Real Problem With Nail Salon Websites in San Diego",
         paragraphs: [
-          "There are roughly a dozen nail salons within a 10-minute drive of Main Avenue in Fallbrook. Most of them have no website at all — just an Instagram page, a Yelp listing, and maybe a Google Business Profile with stock photos from 2019. The ones that do have a site built it on Wix or GoDaddy, and it loads like it's running on dial-up.",
-          "Here's what that actually costs you: when someone new to town Googles 'nail salon near me' or 'nail salon Fallbrook,' Google needs a real webpage to rank. An Instagram page doesn't cut it. A Yelp listing you don't control doesn't cut it. You're handing first-page real estate to whoever bothered to build a proper site.",
+          "There are roughly a dozen nail salons within a 10-minute drive of Main Street in San Diego. Most of them have no website at all — just an Instagram page, a Yelp listing, and maybe a Google Business Profile with stock photos from 2019. The ones that do have a site built it on Wix or GoDaddy, and it loads like it's running on dial-up.",
+          "Here's what that actually costs you: when someone new to town Googles 'nail salon near me' or 'nail salon San Diego,' Google needs a real webpage to rank. An Instagram page doesn't cut it. A Yelp listing you don't control doesn't cut it. You're handing first-page real estate to whoever bothered to build a proper site.",
           "The clients who find you through word-of-mouth are gold. But they cap out. If you want to fill Tuesday mornings and Wednesday afternoons — the dead slots — you need search traffic. That means you need a website that loads fast, shows your actual work, and makes booking effortless.",
         ],
       },
@@ -3918,11 +3918,11 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: "Local SEO: How 'Nail Salon Fallbrook' Becomes Your Top Client Source",
+        heading: "Local SEO: How 'Nail Salon San Diego' Becomes Your Top Client Source",
         paragraphs: [
-          "Local SEO is the single highest-ROI thing a nail salon in Fallbrook can do online. It's free traffic from people who are already looking for exactly what you sell. But you have to set it up correctly — Google doesn't guess.",
+          "Local SEO is the single highest-ROI thing a nail salon in San Diego can do online. It's free traffic from people who are already looking for exactly what you sell. But you have to set it up correctly — Google doesn't guess.",
           "First, your Google Business Profile needs to be fully built out. Every service listed individually (gel manicure, dip powder, pedicure, nail art — not just 'nail services'). Photos updated monthly. Posts every two weeks minimum. Your website URL pointing to a real site, not a Linktree.",
-          "Second, your website needs location-specific content. Your title tags should say 'Nail Salon in Fallbrook, CA' — not just your business name. Your schema.org LocalBusiness markup should include your exact address, hours, phone, and service area covering Fallbrook, Bonsall, De Luz, and Rainbow. These are the signals that tell Google you're a real local business, not a directory listing.",
+          "Second, your website needs location-specific content. Your title tags should say 'Nail Salon in San Diego, CA' — not just your business name. Your schema.org LocalBusiness markup should include your exact address, hours, phone, and service area covering San Diego, Bonsall, North County, and Rainbow. These are the signals that tell Google you're a real local business, not a directory listing.",
         ],
         list: {
           title: "Local SEO checklist for nail salons:",
@@ -3930,7 +3930,7 @@ export const blogPosts: BlogPost[] = [
             "Claim and fully complete your Google Business Profile",
             "Add individual services with prices to your GBP listing",
             "Get listed on Yelp, Vagaro, Booksy, and Apple Maps — consistent NAP everywhere",
-            "Build location pages targeting 'nail salon Fallbrook' and 'nail salon near Bonsall'",
+            "Build location pages targeting 'nail salon San Diego' and 'nail salon near Bonsall'",
             "Ask every happy client for a Google review — aim for 50+ reviews in your first 6 months",
             "Add LocalBusiness schema markup to your website with full address and geo coordinates",
           ],
@@ -3946,9 +3946,9 @@ export const blogPosts: BlogPost[] = [
         callout: "$499 flat. Not $499/month. Not $499 plus hosting fees plus a 'maintenance package.' One price, one site, 48 hours.",
       },
       {
-        heading: "What a Fallbrook Nail Salon Site Looks Like When It's Done Right",
+        heading: "What a San Diego Nail Salon Site Looks Like When It's Done Right",
         paragraphs: [
-          "Picture this: someone just moved to Fallbrook from LA. They Google 'best nail salon Fallbrook.' Your site shows up in the top 3 results because you've got proper local SEO, fast load times, and 60+ Google reviews linked from your site. They tap through, see your actual work in a clean gallery, check your prices without calling, and book a gel set for Thursday — all in under 90 seconds.",
+          "Picture this: someone just moved to San Diego from LA. They Google 'best nail salon San Diego.' Your site shows up in the top 3 results because you've got proper local SEO, fast load times, and 60+ Google reviews linked from your site. They tap through, see your actual work in a clean gallery, check your prices without calling, and book a gel set for Thursday — all in under 90 seconds.",
           "That's one new client worth $45–$80 per visit, probably coming back every 2–3 weeks. Over a year, that single Google search is worth $800–$2,000 in revenue. Now multiply that by the 15–20 new clients per month a properly optimized site brings in.",
           "Your website isn't a brochure. It's your highest-performing employee — works 24/7, never calls in sick, and costs less than a single day's worth of product supplies.",
         ],
@@ -3956,38 +3956,38 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Get a Free Mockup Before You Pay Anything",
         paragraphs: [
-          "If you run a nail salon in Fallbrook, Bonsall, or anywhere in North County San Diego, I'll build you a free mockup of your new site before you spend a dollar. No templates, no contracts, no 'discovery calls' that waste an hour of your day.",
+          "If you run a nail salon in San Diego, Bonsall, or anywhere in North County San Diego, I'll build you a free mockup of your new site before you spend a dollar. No templates, no contracts, no 'discovery calls' that waste an hour of your day.",
           "Send me your current Instagram or Google listing and I'll put together a custom design in 24 hours. If you like it, we build the full site for $499 in 48 hours. If you don't, you walk away with a free design you can hand to literally anyone else. That's the offer.",
         ],
         callout: "Free mockup, $499 flat build, 48-hour turnaround. Text or email — no sales calls, no contracts. CircuitCoders.com",
       },
     ],
     faqs: [
-      { q: "How much does a nail salon website cost in Fallbrook?", a: "Template builders like Wix run $16–$30/month but look generic and load slowly. Local agencies charge $2,500–$5,000. Circuit Coders builds custom nail salon sites for $499 flat with a 48-hour turnaround — no monthly fees, no contracts." },
-      { q: "Do I really need a website if my nail salon has an Instagram?", a: "Yes. Instagram doesn't rank on Google for 'nail salon Fallbrook.' A website with proper local SEO can bring in 15–20 new clients per month from search traffic alone. Instagram is great for showing your work, but it's not discoverable by people who don't already follow you." },
-      { q: "How long does it take for a new nail salon website to rank on Google?", a: "With proper local SEO, schema markup, and an active Google Business Profile, most nail salon sites start appearing in local results within 30–60 days. Competitive keywords like 'nail salon near me' in a small market like Fallbrook can hit page one in 60–90 days." },
+      { q: "How much does a nail salon website cost in San Diego?", a: "Template builders like Wix run $16–$30/month but look generic and load slowly. Local agencies charge $2,500–$5,000. Circuit Coders builds custom nail salon sites for $499 flat with a 48-hour turnaround — no monthly fees, no contracts." },
+      { q: "Do I really need a website if my nail salon has an Instagram?", a: "Yes. Instagram doesn't rank on Google for 'nail salon San Diego.' A website with proper local SEO can bring in 15–20 new clients per month from search traffic alone. Instagram is great for showing your work, but it's not discoverable by people who don't already follow you." },
+      { q: "How long does it take for a new nail salon website to rank on Google?", a: "With proper local SEO, schema markup, and an active Google Business Profile, most nail salon sites start appearing in local results within 30–60 days. Competitive keywords like 'nail salon near me' in a small market like San Diego can hit page one in 60–90 days." },
       { q: "What's the best booking system for a nail salon website?", a: "Vagaro and Booksy are the most popular for nail salons — both embed cleanly into a custom site and handle deposits, reminders, and no-show fees. We integrate either one for free as part of the $499 build. Calendly works too if you want something simpler." },
-      { q: "Should my nail salon website have an online store?", a: "Only if you're already selling products in volume. For most Fallbrook nail salons, an e-commerce store adds complexity and maintenance without meaningful revenue. A gift card page with Stripe checkout ($200 add-on) is a better starting point — it drives bookings instead of just product sales." },
+      { q: "Should my nail salon website have an online store?", a: "Only if you're already selling products in volume. For most San Diego nail salons, an e-commerce store adds complexity and maintenance without meaningful revenue. A gift card page with Stripe checkout ($200 add-on) is a better starting point — it drives bookings instead of just product sales." },
     ],
   },
   {
     slug: "slug-idea",
     title: "title-idea",
-    description: "Most nail salons in Fallbrook rely on walk-ins and Yelp. A $499 custom website with online booking, a real gallery, and local SEO turns Google searches into appointments.",
-    keywords: ["nail salon website design", "nail salon website Fallbrook", "Fallbrook nail salon", "nail salon web design North County", "nail salon online booking website", "small business website Fallbrook", "nail salon SEO", "nail salon website cost", "Fallbrook small business web design"],
+    description: "Most nail salons in San Diego rely on walk-ins and Yelp. A $499 custom website with online booking, a real gallery, and local SEO turns Google searches into appointments.",
+    keywords: ["nail salon website design", "nail salon website San Diego", "San Diego nail salon", "nail salon web design North County", "nail salon online booking website", "small business website San Diego", "nail salon SEO", "nail salon website cost", "San Diego small business web design"],
     publishedAt: "2026-05-24",
     updatedAt: "2026-05-24",
     readTime: 7,
     category: "Local SEO",
     author: "Circuit Coders",
-    heroTag: "NAIL SALON · WEBSITE · FALLBROOK",
+    heroTag: "NAIL SALON · WEBSITE · SAN DIEGO",
     sections: [
       {
         heading: "Walk-Ins Aren't a Strategy",
         paragraphs: [
-          "If you run a nail salon in Fallbrook, your current marketing plan is probably: Yelp page, maybe an Instagram you update when you remember, and a \"Now Open\" banner you forgot to take down two years ago. Walk-ins keep you alive, but they don't keep you booked at 2 PM on a Tuesday.",
-          "Here's the problem. Someone in De Luz or Bonsall searches \"nail salon near me\" on their phone. Google returns three results in the map pack. If you're not one of them — or if you are but your listing links to a dead Wix site with stock photos — that appointment goes to the salon in Temecula or Vista that actually showed up.",
-          "Fallbrook has maybe 15,000 residents and a handful of salons. That's not a lot of competition. Which means showing up first on Google for \"nail salon Fallbrook\" is genuinely achievable — if your site does the basics right.",
+          "If you run a nail salon in San Diego, your current marketing plan is probably: Yelp page, maybe an Instagram you update when you remember, and a \"Now Open\" banner you forgot to take down two years ago. Walk-ins keep you alive, but they don't keep you booked at 2 PM on a Tuesday.",
+          "Here's the problem. Someone in North County or Bonsall searches \"nail salon near me\" on their phone. Google returns three results in the map pack. If you're not one of them — or if you are but your listing links to a dead Wix site with stock photos — that appointment goes to the salon in Temecula or Vista that actually showed up.",
+          "San Diego has maybe 15,000 residents and a handful of salons. That's not a lot of competition. Which means showing up first on Google for \"nail salon San Diego\" is genuinely achievable — if your site does the basics right.",
         ],
       },
       {
@@ -4018,23 +4018,23 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: "Local SEO: How to Own \"Nail Salon Fallbrook\"",
+        heading: "Local SEO: How to Own \"Nail Salon San Diego\"",
         paragraphs: [
-          "There are roughly 260 searches per month in San Diego County for variations of \"nail salon Fallbrook,\" \"nails near Fallbrook,\" and \"best nail salon Fallbrook CA.\" That's not a guess — that's from Ahrefs keyword data. And most of those searches have zero paid ads competing for them.",
+          "There are roughly 260 searches per month in San Diego County for variations of \"nail salon San Diego,\" \"nails near San Diego,\" and \"best nail salon San Diego CA.\" That's not a guess — that's from Ahrefs keyword data. And most of those searches have zero paid ads competing for them.",
           "To rank in the top 3 map pack results, you need three things working together: a complete Google Business Profile with 20+ reviews and weekly photo updates, a website that matches your GBP name/address/phone exactly (NAP consistency), and local citations on Yelp, Apple Maps, and at least 5 niche directories.",
         ],
         list: {
           title: "Quick local SEO wins for salons",
           items: [
             "Claim and fully complete your Google Business Profile — every field, every category",
-            "Add \"Fallbrook\" and \"North County San Diego\" to your homepage title tag and H1",
-            "Create a dedicated page for each service: \"Gel Manicure in Fallbrook,\" \"Pedicure in Fallbrook\"",
+            "Add \"San Diego\" and \"North County San Diego\" to your homepage title tag and H1",
+            "Create a dedicated page for each service: \"Gel Manicure in San Diego,\" \"Pedicure in San Diego\"",
             "Post to your GBP weekly — photos of finished nails perform best",
             "Ask every happy client for a Google review — a simple card at checkout works",
             "Add LocalBusiness schema markup with your hours, price range, and geo coordinates",
           ],
         },
-        callout: "Most salons in Fallbrook have fewer than 15 Google reviews. Getting to 30 genuine reviews puts you in the top spot within 60–90 days.",
+        callout: "Most salons in San Diego have fewer than 15 Google reviews. Getting to 30 genuine reviews puts you in the top spot within 60–90 days.",
       },
       {
         heading: "What This Should Cost (and What You're Being Overcharged)",
@@ -4055,7 +4055,7 @@ export const blogPosts: BlogPost[] = [
     ],
     faqs: [
       { q: "How much does a nail salon website cost in 2026?", a: "Agencies in San Diego County quote $2,000–$5,000. We build custom nail salon sites for $499 flat, delivered in 48 hours, with booking integration and local SEO included. Ongoing hosting is $50/month if you want it." },
-      { q: "How long does it take to rank on Google for \"nail salon Fallbrook\"?", a: "With a properly optimized site and an active Google Business Profile, most salons see map pack visibility within 60–90 days. Fallbrook has low competition — there are fewer than 10 salons actively competing for these keywords." },
+      { q: "How long does it take to rank on Google for \"nail salon San Diego\"?", a: "With a properly optimized site and an active Google Business Profile, most salons see map pack visibility within 60–90 days. San Diego has low competition — there are fewer than 10 salons actively competing for these keywords." },
       { q: "Do I need online booking on my nail salon website?", a: "Yes. 67% of appointment-based service bookings now happen online, and that number is higher for clients under 40. Platforms like Vagaro or Square Appointments integrate cleanly and cost $25–$50/month on their own. We add the integration for a one-time $200–$300 fee." },
       { q: "What's more important for my salon — Instagram or a website?", a: "Both matter, but Google drives 5–8x more first-time clients than Instagram for local services. Instagram is great for retention and showcasing work, but someone searching \"nail salon near me\" is on Google, not scrolling your feed. Your website is what converts that search into a booking." },
       { q: "Should I use Wix or Squarespace for my nail salon site?", a: "You can, but template builders average 4–6 second load times on mobile, which tanks your Google ranking. Our sites built on Next.js load in under 1.5 seconds. For $499 — less than most Squarespace annual plans with a premium template — you get a custom site that actually performs." },
@@ -4066,10 +4066,10 @@ export const blogPosts: BlogPost[] = [
     title:
       "Winery Website Design in North County San Diego — What Actually Fills the Tasting Room",
     description:
-      "A 2026 playbook for Fallbrook, Temecula-adjacent, and North County wineries. What your site has to do to convert browsers into tastings, wine club signups, and event bookings.",
+      "A 2026 playbook for San Diego, Temecula-adjacent, and North County wineries. What your site has to do to convert browsers into tastings, wine club signups, and event bookings.",
     keywords: [
       "winery website design",
-      "Fallbrook winery website",
+      "San Diego winery website",
       "North County San Diego winery",
       "wine club signup website",
       "tasting room reservations",
@@ -4086,7 +4086,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "North County wineries are losing bookings to their own sites",
         paragraphs: [
-          "Fallbrook, Bonsall, Pala, and the edge of the Temecula AVA are quietly one of the best tasting-room corridors in Southern California. Small-production estates, working vineyards, weekend couples driving up from San Diego and down from Orange County — the demand is real.",
+          "San Diego, Bonsall, Pala, and the edge of the Temecula AVA are quietly one of the best tasting-room corridors in Southern California. Small-production estates, working vineyards, weekend couples driving up from San Diego and down from Orange County — the demand is real.",
           "The problem isn't discovery. The problem is what happens after someone types your name into Google. We've audited winery sites across North County and the failure pattern is identical: beautiful vineyard photos, zero working reservation path, wine club buried three clicks deep, and at least one of — a hacked WordPress install serving pharmacy spam to Google, a placeholder image that still says dummy.png, or an SSL cert that scares Chrome into blocking the page.",
           "This post is the short list of what a winery site actually has to do in 2026, what to cut, and why the $8,000 boutique agency quote you got last year was mostly lighting and Lorem Ipsum.",
         ],
@@ -4130,7 +4130,7 @@ export const blogPosts: BlogPost[] = [
           "Local SEO for wineries has three layers and most estates only work one. All three compound.",
           "Layer one: Google Business Profile with accurate hours, tasting menu photos, event photos, and weekly posts. This is free, and it single-handedly outranks anything you'll pay an SEO agency for in the first 90 days.",
           "Layer two: on-page. Your home title and H1 should contain the pattern '[Estate name] — [Varietal focus] + Tasting Room in [City], CA.' Every event page, every wine, every varietal gets its own URL. Schema.org Winery + LocalBusiness + Event markup is non-negotiable in 2026.",
-          "Layer three: local directory citations — Yelp, TripAdvisor, Vivino, CellarPass, WineCountry.com, the Fallbrook Chamber, San Diego Magazine's winery list, and your AVA's association site. Each of these is a free backlink with consistent NAP data. 30 minutes of work per listing, compounds forever.",
+          "Layer three: local directory citations — Yelp, TripAdvisor, Vivino, CellarPass, WineCountry.com, the San Diego Chamber, San Diego Magazine's winery list, and your AVA's association site. Each of these is a free backlink with consistent NAP data. 30 minutes of work per listing, compounds forever.",
         ],
         callout:
           "A North County winery that hits layers one and two consistently will rank top-3 for '[city] + wineries' and '[city] + wine tasting' within 60–90 days, without paid ads.",
@@ -4161,13 +4161,13 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Real examples from the North County corridor",
         paragraphs: [
-          "We've audited and rebuilt winery sites along the Fallbrook/Bonsall/Pala corridor and the closer edge of the Temecula AVA. The three most common fixes we ship in the first 48 hours:",
+          "We've audited and rebuilt winery sites along the San Diego/Bonsall/Pala corridor and the closer edge of the Temecula AVA. The three most common fixes we ship in the first 48 hours:",
           "Fix the hacked install — at least one in four WordPress winery sites we audit is silently injecting pharmacy or casino spam into its own HTML, pushing Google rankings off a cliff. A full rebuild on static Next.js plus proper hosting is faster than trying to clean the old install.",
           "Fix the link preview. Most winery sites return a 403 or a stripped OpenGraph tag when shared in iMessage, Instagram DMs, or Google Docs. Five lines of meta-tag work, and every time someone shares your link it now shows a beautiful preview with your hero image and tasting hours.",
           "Add the reservation flow. Not 'linked to Tock from the footer' — actual integrated booking inline on the home page, with real-time availability. When this is in place, weekend tasting bookings from the site typically double inside a month.",
         ],
         callout:
-          "If you own a winery in Fallbrook, Bonsall, Pala, or anywhere in the North County corridor — send us your URL. Free audit within 24 hours and a free demo mockup within 48. No cost unless you love it.",
+          "If you own a winery in San Diego, Bonsall, Pala, or anywhere in the North County corridor — send us your URL. Free audit within 24 hours and a free demo mockup within 48. No cost unless you love it.",
       },
     ],
     faqs: [
@@ -4194,12 +4194,12 @@ export const blogPosts: BlogPost[] = [
     title:
       "Auto Detailing Website Design in North County San Diego — What Actually Works",
     description:
-      "A 2026 playbook for auto detailers in Oceanside, Fallbrook, Vista and Carlsbad. What your site has to do, what to cut, and real local examples.",
+      "A 2026 playbook for auto detailers in Oceanside, San Diego, Vista and Carlsbad. What your site has to do, what to cut, and real local examples.",
     keywords: [
       "auto detailing website design",
       "North County San Diego",
       "Oceanside web designer",
-      "Fallbrook web designer",
+      "San Diego web designer",
       "Vista web designer",
       "mobile detailing website",
       "detailing website examples",
@@ -4214,7 +4214,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "North County detailers are losing work to their websites",
         paragraphs: [
-          "If you detail cars in Oceanside, Vista, Carlsbad, Fallbrook or San Marcos, your biggest competitor isn't the shop two blocks over — it's the free Wix template your customers have to squint at on a phone.",
+          "If you detail cars in Oceanside, Vista, Carlsbad, San Diego or San Marcos, your biggest competitor isn't the shop two blocks over — it's the free Wix template your customers have to squint at on a phone.",
           "We've built and shipped auto detailing sites for clients across San Diego County. The pattern is identical every time: the owner is doing good work, getting solid referrals, and then losing 40–60% of inbound leads because the website loads slowly, has no visible phone number above the fold, or asks for ten fields before a quote.",
           "This post walks through what a detailing site actually has to do in 2026, what to cut, and how to stop paying for leads you are already getting but not converting.",
         ],
@@ -4227,7 +4227,7 @@ export const blogPosts: BlogPost[] = [
         list: {
           items: [
             "Phone number as a tap-to-call button, visible in the first 200 pixels. Most detailing leads are same-week. If they have to scroll, you lost them.",
-            "Service area named explicitly — 'Mobile detailing serving Oceanside, Carlsbad, Vista, San Marcos and Fallbrook.' Google reads this. So do customers who are tired of contacting people who won't drive ten minutes.",
+            "Service area named explicitly — 'Mobile detailing serving Oceanside, Carlsbad, Vista, San Marcos and San Diego.' Google reads this. So do customers who are tired of contacting people who won't drive ten minutes.",
             "Price anchors on at least three packages. You don't need a full price list, but ranges ($150–$250 interior, etc.) let customers self-qualify and drastically cut tire-kicker calls.",
             "Before/after photos above testimonials. Not logos. Not stock photography of Porsches you've never touched — actual cars you've done, even if they're a 2012 Camry.",
             "A two-field quote form (name + phone) — nothing else. Every extra field kills conversions by 10–20%. You can ask the vehicle make on the call.",
@@ -4293,14 +4293,14 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "fallbrook-web-designer-499-flat-fee",
+    slug: "san-diego-web-designer-499-flat-fee",
     title:
-      "Fallbrook Web Designer: $499 Flat-Fee Sites for Local Businesses",
+      "San Diego Web Designer: $499 Flat-Fee Sites for Local Businesses",
     description:
-      "Fallbrook and North County web design at a flat $499 — what you get, what it costs elsewhere, and why flat-fee beats hourly for small businesses.",
+      "San Diego and North County web design at a flat $499 — what you get, what it costs elsewhere, and why flat-fee beats hourly for small businesses.",
     keywords: [
-      "Fallbrook web designer",
-      "Fallbrook web design",
+      "San Diego web designer",
+      "San Diego web design",
       "flat fee website",
       "small business website",
       "North County web designer",
@@ -4311,13 +4311,13 @@ export const blogPosts: BlogPost[] = [
     readTime: 6,
     category: "Pricing",
     author: "Circuit Coders",
-    heroTag: "PRICING · FALLBROOK",
+    heroTag: "PRICING · SAN DIEGO",
     sections: [
       {
-        heading: "Why flat-fee beats hourly for Fallbrook businesses",
+        heading: "Why flat-fee beats hourly for San Diego businesses",
         paragraphs: [
-          "If you own a business in Fallbrook — a plumbing shop, a salon, a detailing outfit, a restaurant, a contractor — and you've been quoted $3,000+ for a website, you've been quoted the agency-hourly rate, not the Fallbrook rate.",
-          "Agencies price on hours because that's how they cover their overhead: account managers, project managers, designers, developers, meetings. A small business in Fallbrook doesn't need any of that. You need a working site. Fast.",
+          "If you own a business in San Diego — a plumbing shop, a salon, a detailing outfit, a restaurant, a contractor — and you've been quoted $3,000+ for a website, you've been quoted the agency-hourly rate, not the San Diego rate.",
+          "Agencies price on hours because that's how they cover their overhead: account managers, project managers, designers, developers, meetings. A small business in San Diego doesn't need any of that. You need a working site. Fast.",
           "Flat-fee pricing fixes the incentives. We quote $499. If the build takes us eight hours or eighteen, that's our problem, not yours. You know exactly what it costs before you say yes.",
         ],
       },
@@ -4349,7 +4349,7 @@ export const blogPosts: BlogPost[] = [
             "Wix or Squarespace DIY: $16–$49/month forever, plus 10–40 hours of your time, plus a site that ranks worse than hand-coded sites.",
             "Fiverr: $75–$500 for a template swap, usually handed off with zero SEO and a design that another thousand businesses already use.",
             "Local freelancer: $800–$2,500 for a WordPress build. Good ones are worth it. Most aren't.",
-            "Local agency: $3,000–$8,000 for a custom build, plus $150+/month retainer. Good for enterprise. Overkill for a Fallbrook plumber.",
+            "Local agency: $3,000–$8,000 for a custom build, plus $150+/month retainer. Good for enterprise. Overkill for a San Diego plumber.",
             "National agency: $10,000+. You're paying for their office in New York.",
           ],
         },
@@ -4375,7 +4375,7 @@ export const blogPosts: BlogPost[] = [
           "That's the offer. It's designed to make saying yes easy and saying no painless.",
         ],
         callout:
-          "Local to Fallbrook? We also do in-person meetings. Call Leo at 442-297-8170 to grab coffee on Main Ave.",
+          "Local to San Diego? We also do in-person meetings. Call Leo at 442-297-8170 to grab coffee on Main Ave.",
       },
     ],
     faqs: [
@@ -4384,8 +4384,8 @@ export const blogPosts: BlogPost[] = [
         a: "The $499 is the total build price. There is no mandatory retainer, no hidden hosting fee, no contract lock-in. Optional hosting + monthly updates is $50/month if you want it.",
       },
       {
-        q: "Do you work with clients outside of Fallbrook?",
-        a: "Yes. We're based in Fallbrook and work across North County San Diego and remotely with clients anywhere in the US. Local clients get the option of in-person meetings.",
+        q: "Do you work with clients outside of San Diego?",
+        a: "Yes. We're based in San Diego and work across North County San Diego and remotely with clients anywhere in the US. Local clients get the option of in-person meetings.",
       },
       {
         q: "How long until my site ranks on Google?",
@@ -4419,7 +4419,7 @@ export const blogPosts: BlogPost[] = [
         paragraphs: [
           "Wix is the default platform for small-business owners who need a site and don't know where to start. It's cheap, it's familiar, and it promises 'you can build a website in minutes.'",
           "The problem isn't that Wix is bad at building websites. The problem is that Wix is actively bad at ranking websites — and for a small business, the difference between a site nobody finds and a site Google ships you leads is the whole game.",
-          "We've audited dozens of Wix sites for Fallbrook, Oceanside, and Vista businesses. The failure mode is always the same: beautiful site, zero organic traffic.",
+          "We've audited dozens of Wix sites for San Diego, Oceanside, and Vista businesses. The failure mode is always the same: beautiful site, zero organic traffic.",
         ],
       },
       {
