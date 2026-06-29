@@ -7,6 +7,7 @@ import WebsiteDemos from "@/components/WebsiteDemos";
 import WebBuildPricing from "@/components/WebBuildPricing";
 import MissedCallCTA from "@/components/MissedCallCTA";
 import SystemArchitecture from "@/components/SystemArchitecture";
+import VoicemailCalculator from "@/components/VoicemailCalculator";
 import MockupStudio from "@/components/MockupStudio";
 import Process from "@/components/Process";
 import LiveMetrics from "@/components/LiveMetrics";
@@ -25,6 +26,7 @@ export default function Home() {
         <Hero />
         <MissedCallCTA />
         <SystemArchitecture />
+        <VoicemailCalculator />
         <Services />
         <Portfolio />
         <WebsiteDemos />
