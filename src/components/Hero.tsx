@@ -9,7 +9,7 @@ import {
   useScroll,
   type Variants,
 } from "framer-motion";
-import { ArrowRight, Terminal, Cpu, Wifi, ChevronDown } from "lucide-react";
+import { ArrowRight, Terminal, Globe, MapPin, Phone, ChevronDown } from "lucide-react";
 import MagneticButton from "./MagneticButton";
 
 const stats = [
@@ -342,9 +342,9 @@ export default function Hero() {
 
               {/* Terminal body */}
               <div className="p-6 font-mono text-sm space-y-3 min-h-[320px]">
-                <TerminalLine delay={0.8} prompt="$" command='cc-cli design "IoT sensor array --mesh"' />
+                <TerminalLine delay={0.8} prompt="$" command='cc-cli build "auto-shop --website --local-seo"' />
                 <TerminalLine delay={1.6} prompt="" command="" />
-                <TerminalLine delay={1.8} prompt="" command="Analyzing requirements..." color="text-gray-300" />
+                <TerminalLine delay={1.8} prompt="" command="Building your site..." color="text-gray-300" />
                 <TerminalLine delay={2.4} prompt="" command="" />
 
                 <motion.div
@@ -354,26 +354,26 @@ export default function Hero() {
                   className="glass-card p-4 space-y-2.5"
                 >
                   <div className="flex items-center gap-2 text-circuit-400 text-xs">
-                    <Cpu className="w-4 h-4" />
-                    <span>ESP32-S3 x 8 nodes — mesh topology</span>
+                    <Globe className="w-4 h-4" />
+                    <span>Custom 5-page site — mobile-first</span>
                   </div>
                   <div className="flex items-center gap-2 text-circuit-400 text-xs">
-                    <Wifi className="w-4 h-4" />
-                    <span>SX1276 LoRa (915MHz, 15km range)</span>
+                    <MapPin className="w-4 h-4" />
+                    <span>Google Maps + local SEO built in</span>
                   </div>
                   <div className="flex items-center gap-2 text-circuit-400 text-xs">
-                    <Terminal className="w-4 h-4" />
-                    <span>Zephyr RTOS + MQTT telemetry</span>
+                    <Phone className="w-4 h-4" />
+                    <span>24/7 AI receptionist connected</span>
                   </div>
                   <div className="mt-2 pt-2 border-t border-white/[0.06] flex items-center justify-between">
-                    <span className="text-[10px] text-gray-300">BOM: $68.00 per node</span>
-                    <span className="text-[10px] text-circuit-300">4-layer custom PCB</span>
+                    <span className="text-[10px] text-gray-300">Live in 7 days</span>
+                    <span className="text-[10px] text-circuit-300">$1,500 flat</span>
                   </div>
                 </motion.div>
 
-                <TerminalLine delay={3.6} prompt="" command="Generating schematic + API..." color="text-yellow-400/80" />
-                <TerminalLine delay={4.2} prompt="✓" command="Preview ready — 3 views generated" color="text-circuit-400" />
-                <TerminalLine delay={4.8} prompt="✓" command="Estimated timeline: 3 weeks" color="text-circuit-400" />
+                <TerminalLine delay={3.6} prompt="" command="Generating preview..." color="text-yellow-400/80" />
+                <TerminalLine delay={4.2} prompt="✓" command="Preview ready — you see it before you pay" color="text-circuit-400" />
+                <TerminalLine delay={4.8} prompt="✓" command="Live in 7 days" color="text-circuit-400" />
               </div>
             </div>
 
@@ -383,7 +383,7 @@ export default function Hero() {
               animate={{ y: [0, -12, 0], rotate: [0, 5, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
             >
-              <Cpu className="w-8 h-8 text-circuit-500/50" />
+              <Globe className="w-8 h-8 text-circuit-500/50" />
             </motion.div>
 
             <motion.div

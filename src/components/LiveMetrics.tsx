@@ -5,12 +5,12 @@ import { motion, useInView } from "framer-motion";
 import { Activity, Rocket, Cpu, Globe, Zap, Users } from "lucide-react";
 
 const metrics = [
-  { icon: Rocket, label: "Deployments", target: 12000, suffix: "+", color: "text-circuit-400" },
-  { icon: Cpu, label: "Systems Delivered", target: 850, suffix: "+", color: "text-blue-400" },
-  { icon: Globe, label: "API Calls Processed", target: 15, suffix: "M+", color: "text-purple-400" },
-  { icon: Zap, label: "Components Designed", target: 500, suffix: "+", color: "text-amber-400" },
-  { icon: Activity, label: "Uptime SLA", target: 99.99, suffix: "%", color: "text-emerald-400", decimals: 2 },
-  { icon: Users, label: "Enterprise Clients", target: 120, suffix: "+", color: "text-pink-400" },
+  { icon: Rocket, label: "Days to launch", target: 7, suffix: "", color: "text-circuit-400" },
+  { icon: Zap, label: "Performance score", target: 95, suffix: "+", color: "text-amber-400" },
+  { icon: Activity, label: "Uptime", target: 99.9, suffix: "%", color: "text-emerald-400", decimals: 1 },
+  { icon: Globe, label: "Custom-coded", target: 100, suffix: "%", color: "text-blue-400" },
+  { icon: Cpu, label: "Templates used", target: 0, suffix: "", color: "text-purple-400" },
+  { icon: Users, label: "Mobile-first", target: 100, suffix: "%", color: "text-pink-400" },
 ];
 
 function MetricCard({ metric, index }: { metric: typeof metrics[0]; index: number }) {
@@ -80,7 +80,7 @@ export default function LiveMetrics() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-circuit-400 opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-circuit-500" />
             </span>
-            LIVE METRICS
+            BY THE NUMBERS
           </div>
         </motion.div>
 

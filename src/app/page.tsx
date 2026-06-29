@@ -12,13 +12,11 @@ import LiveMetrics from "@/components/LiveMetrics";
 import FAQ from "@/components/FAQ";
 import InquiryForm from "@/components/InquiryForm";
 import Footer from "@/components/Footer";
-import PageLoader from "@/components/PageLoader";
 import ScrollProgress from "@/components/ScrollProgress";
 
 export default function Home() {
   return (
     <div>
-      <PageLoader />
       <ScrollProgress />
       <CircuitBackground />
       <Navbar />

@@ -1,7 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { techStack } from "@/lib/data";
+
+const benefits = [
+  "Custom-coded — never Wix",
+  "Mobile-first",
+  "SEO built in",
+  "Loads in under 2s",
+  "Google Maps ready",
+  "Bilingual",
+  "Live in 7 days",
+  "You see it before you pay",
+];
 
 export default function TechMarquee() {
   return (
@@ -18,7 +28,7 @@ export default function TechMarquee() {
           className="text-center mb-10"
         >
           <p className="text-xs font-mono text-circuit-300/80 tracking-[0.25em] uppercase font-semibold">
-            The stack we build on
+            How every site is built
           </p>
         </motion.div>
 
@@ -32,7 +42,7 @@ export default function TechMarquee() {
           }}
           className="flex flex-wrap items-center justify-center gap-2.5"
         >
-          {techStack.map((tech) => (
+          {benefits.map((tech) => (
             <motion.span
               key={tech}
               variants={{
