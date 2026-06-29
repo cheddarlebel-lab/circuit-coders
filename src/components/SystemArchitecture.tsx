@@ -20,7 +20,7 @@ const stages = [
     icon: Webhook,
     step: "03",
     title: "Operation Sync",
-    body: "Webhooks route each lead's name, number, and reason straight to your phone via SMS — or into your field-management CRM and Stripe invoicing.",
+    body: "Webhooks route each lead's name, number, and reason straight to your phone via SMS — or sync natively into your management system: CCC ONE, Mitchell, Shop-Ware, Tekmetric, or ProCore.",
   },
 ];
 
