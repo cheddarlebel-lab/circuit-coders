@@ -142,6 +142,17 @@ export async function ensureDb(): Promise<Client> {
         stripe_session_id TEXT,
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP
       );
+
+      CREATE TABLE IF NOT EXISTS inbound_leads (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        shop_name TEXT,
+        name TEXT,
+        phone TEXT,
+        email TEXT,
+        headache TEXT,
+        source TEXT DEFAULT 'start-page',
+        created_at TEXT DEFAULT (datetime('now'))
+      );
     `);
     // Migrations for existing tables
     try { await db.execute('ALTER TABLE customers ADD COLUMN area_code TEXT'); } catch { /* already exists */ }
