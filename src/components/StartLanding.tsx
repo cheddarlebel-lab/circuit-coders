@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import {
   PhoneCall,
   Send,
@@ -89,152 +88,131 @@ function LeadForm() {
   const labelCls =
     "block text-xs uppercase tracking-[0.15em] text-gray-100 mb-2 font-semibold";
 
+  if (submitted) {
+    return (
+      <div className="glass-card p-10 text-center glow-border">
+        <CheckCircle className="w-16 h-16 text-circuit-400 mx-auto mb-5" />
+        <h3 className="text-2xl font-bold text-white mb-3">Got it — we&apos;re on it.</h3>
+        <p className="text-gray-200 mb-6 leading-relaxed">
+          We&apos;ll run your free website + Google audit and call you back with the
+          findings. Want to hear the AI receptionist right now?
+        </p>
+        <a
+          href={PHONE_HREF}
+          className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-circuit-500 text-carbon-500 font-bold rounded-xl hover:bg-circuit-400 transition-all duration-300"
+        >
+          <PhoneCall className="w-5 h-5" />
+          Call {PHONE_DISPLAY}
+        </a>
+      </div>
+    );
+  }
+
   return (
-    <AnimatePresence mode="wait" initial={false}>
-      {submitted ? (
-        <motion.div
-          key="success"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="glass-card p-10 text-center glow-border"
-        >
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ type: "spring", delay: 0.15 }}
-          >
-            <CheckCircle className="w-16 h-16 text-circuit-400 mx-auto mb-5" />
-          </motion.div>
-          <h3 className="text-2xl font-bold text-white mb-3">Got it — we&apos;re on it.</h3>
-          <p className="text-gray-200 mb-6 leading-relaxed">
-            We&apos;ll run your free website + Google audit and call you back with the
-            findings. Want to hear the AI receptionist right now?
-          </p>
-          <a
-            href={PHONE_HREF}
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-circuit-500 text-carbon-500 font-bold rounded-xl hover:bg-circuit-400 transition-all duration-300"
-          >
-            <PhoneCall className="w-5 h-5" />
-            Call {PHONE_DISPLAY}
-          </a>
-        </motion.div>
-      ) : (
-        <motion.form
-          key="form"
-          onSubmit={handleSubmit}
-          initial={{ opacity: 1 }}
-          animate={{ opacity: 1 }}
-          className="glass-card p-7 sm:p-8 space-y-5 glow-border"
-        >
-          <div>
-            <h3 className="text-xl font-bold text-white mb-1">Get your free shop audit</h3>
-            <p className="text-sm text-gray-300">
-              Website + Google check, plus a 60-second AI receptionist demo for your shop.
-            </p>
-          </div>
+    <form onSubmit={handleSubmit} className="glass-card p-7 sm:p-8 space-y-5 glow-border">
+      <div>
+        <h3 className="text-xl font-bold text-white mb-1">Get your free shop audit</h3>
+        <p className="text-sm text-gray-300">
+          Website + Google check, plus a 60-second AI receptionist demo for your shop.
+        </p>
+      </div>
 
-          <div>
-            <label className={labelCls}>Shop name *</label>
-            <input
-              type="text"
-              required
-              value={form.shop_name}
-              onChange={(e) => setForm({ ...form, shop_name: e.target.value })}
-              className={field}
-              placeholder="e.g. Mike's Auto Body"
-            />
-          </div>
+      <div>
+        <label className={labelCls}>Shop name *</label>
+        <input
+          type="text"
+          required
+          value={form.shop_name}
+          onChange={(e) => setForm({ ...form, shop_name: e.target.value })}
+          className={field}
+          placeholder="e.g. Mike's Auto Body"
+        />
+      </div>
 
-          <div className="grid sm:grid-cols-2 gap-5">
-            <div>
-              <label className={labelCls}>Your name *</label>
-              <input
-                type="text"
-                required
-                value={form.name}
-                onChange={(e) => setForm({ ...form, name: e.target.value })}
-                className={field}
-                placeholder="Your name"
-              />
-            </div>
-            <div>
-              <label className={labelCls}>Phone *</label>
-              <input
-                type="tel"
-                required
-                value={form.phone}
-                onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                className={field}
-                placeholder="(555) 123-4567"
-              />
-            </div>
-          </div>
+      <div className="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label className={labelCls}>Your name *</label>
+          <input
+            type="text"
+            required
+            value={form.name}
+            onChange={(e) => setForm({ ...form, name: e.target.value })}
+            className={field}
+            placeholder="Your name"
+          />
+        </div>
+        <div>
+          <label className={labelCls}>Phone *</label>
+          <input
+            type="tel"
+            required
+            value={form.phone}
+            onChange={(e) => setForm({ ...form, phone: e.target.value })}
+            className={field}
+            placeholder="(555) 123-4567"
+          />
+        </div>
+      </div>
 
-          <div>
-            <label className={labelCls}>
-              Email{" "}
-              <span className="text-gray-300 font-normal normal-case tracking-normal">
-                (optional)
-              </span>
-            </label>
-            <input
-              type="email"
-              value={form.email}
-              onChange={(e) => setForm({ ...form, email: e.target.value })}
-              className={field}
-              placeholder="you@yourshop.com"
-            />
-          </div>
+      <div>
+        <label className={labelCls}>
+          Email{" "}
+          <span className="text-gray-300 font-normal normal-case tracking-normal">
+            (optional)
+          </span>
+        </label>
+        <input
+          type="email"
+          value={form.email}
+          onChange={(e) => setForm({ ...form, email: e.target.value })}
+          className={field}
+          placeholder="you@yourshop.com"
+        />
+      </div>
 
-          <div>
-            <label className={labelCls}>
-              Biggest headache right now{" "}
-              <span className="text-gray-300 font-normal normal-case tracking-normal">
-                (optional)
-              </span>
-            </label>
-            <textarea
-              rows={2}
-              value={form.headache}
-              onChange={(e) => setForm({ ...form, headache: e.target.value })}
-              className={`${field} resize-none`}
-              placeholder="Missing calls? Invisible on Google? Slow site?"
-            />
-          </div>
+      <div>
+        <label className={labelCls}>
+          Biggest headache right now{" "}
+          <span className="text-gray-300 font-normal normal-case tracking-normal">
+            (optional)
+          </span>
+        </label>
+        <textarea
+          rows={2}
+          value={form.headache}
+          onChange={(e) => setForm({ ...form, headache: e.target.value })}
+          className={`${field} resize-none`}
+          placeholder="Missing calls? Invisible on Google? Slow site?"
+        />
+      </div>
 
-          {error && (
-            <div className="px-4 py-3 bg-red-500/10 border border-red-500/20 rounded-xl text-red-400 text-sm">
-              {error}
-            </div>
-          )}
-
-          <button
-            type="submit"
-            disabled={submitting}
-            className="group w-full py-4 bg-circuit-500 text-carbon-500 font-semibold rounded-xl transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 hover:bg-circuit-400"
-          >
-            {submitting ? (
-              <>
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                  className="w-5 h-5 border-2 border-carbon-500/30 border-t-carbon-500 rounded-full"
-                />
-                Sending...
-              </>
-            ) : (
-              <>
-                <Send className="w-5 h-5" />
-                Get my free audit
-              </>
-            )}
-          </button>
-          <p className="text-center text-xs text-gray-400">
-            No cost, no obligation. We&apos;ll call you back fast.
-          </p>
-        </motion.form>
+      {error && (
+        <div className="px-4 py-3 bg-red-500/10 border border-red-500/20 rounded-xl text-red-400 text-sm">
+          {error}
+        </div>
       )}
-    </AnimatePresence>
+
+      <button
+        type="submit"
+        disabled={submitting}
+        className="group w-full py-4 bg-circuit-500 text-carbon-500 font-semibold rounded-xl transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 hover:bg-circuit-400"
+      >
+        {submitting ? (
+          <>
+            <span className="w-5 h-5 border-2 border-carbon-500/30 border-t-carbon-500 rounded-full animate-spin" />
+            Sending...
+          </>
+        ) : (
+          <>
+            <Send className="w-5 h-5" />
+            Get my free audit
+          </>
+        )}
+      </button>
+      <p className="text-center text-xs text-gray-400">
+        No cost, no obligation. We&apos;ll call you back fast.
+      </p>
+    </form>
   );
 }
 
@@ -248,11 +226,7 @@ export default function StartLanding() {
         <div className="max-w-7xl mx-auto w-full relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             {/* Left — pitch */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            >
+            <div>
               <div className="inline-flex items-center gap-2 px-4 py-1.5 glass-card text-xs font-mono text-circuit-300 tracking-widest mb-7">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-circuit-400 opacity-75" />
@@ -304,18 +278,12 @@ export default function StartLanding() {
                   up, answers, and books — 24/7.
                 </p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Right — lead form (PRIMARY CTA) */}
-            <motion.div
-              id="start-form"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="lg:sticky lg:top-24 scroll-mt-24"
-            >
+            <div id="start-form" className="lg:sticky lg:top-24 scroll-mt-24">
               <LeadForm />
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -326,13 +294,7 @@ export default function StartLanding() {
       {/* PROOF — real, non-fabricated */}
       <section className="relative py-20 px-4">
         <div className="max-w-5xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7 }}
-            className="text-center mb-10"
-          >
+          <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 glass-card text-xs font-mono text-circuit-300 tracking-widest mb-5">
               <BadgeCheck className="w-3.5 h-3.5" />
               REAL SHOPS, REAL SYSTEMS
@@ -340,15 +302,9 @@ export default function StartLanding() {
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
               <span className="text-gradient-bright">Built for the trade.</span>
             </h2>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7 }}
-            className="grid sm:grid-cols-2 gap-5"
-          >
+          <div className="grid sm:grid-cols-2 gap-5">
             <div className="glass-card rounded-2xl p-7">
               <div className="flex items-center gap-2 text-circuit-300 mb-3">
                 <MapPin className="w-4 h-4" />
@@ -376,15 +332,9 @@ export default function StartLanding() {
                 the same playbook, scaled to a multi-rooftop operation.
               </p>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mt-10"
-          >
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mt-10">
             {[
               { icon: Clock, label: "Answers 24/7" },
               { icon: Languages, label: "English + Spanish" },
@@ -395,7 +345,7 @@ export default function StartLanding() {
                 {p.label}
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -403,13 +353,7 @@ export default function StartLanding() {
       <section className="relative py-24 px-4">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-circuit-500/20 to-transparent" />
         <div className="max-w-3xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="relative glass-card rounded-3xl p-9 sm:p-12 text-center overflow-hidden"
-          >
+          <div className="relative glass-card rounded-3xl p-9 sm:p-12 text-center overflow-hidden">
             <div className="absolute -top-24 -right-24 w-72 h-72 bg-circuit-500/10 rounded-full blur-[110px] pointer-events-none" />
             <div className="relative z-10">
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4 leading-tight">
@@ -437,7 +381,7 @@ export default function StartLanding() {
                 </a>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </>
