@@ -9,13 +9,13 @@ import {
   useScroll,
   type Variants,
 } from "framer-motion";
-import { ArrowRight, Terminal, Globe, MapPin, Phone, ChevronDown } from "lucide-react";
+import { ArrowRight, Globe, ChevronDown, BarChart3 } from "lucide-react";
 import MagneticButton from "./MagneticButton";
 
 const stats = [
-  { value: 9, suffix: "", label: "Services, one team" },
-  { value: 14, suffix: "-day", label: "Typical launch" },
-  { value: 100, suffix: "%", label: "Custom-built" },
+  { value: 100, suffix: "", label: "Lighthouse score" },
+  { value: 24, suffix: "/7", label: "AI call coverage" },
+  { value: 100, suffix: "%", label: "Source code you own" },
 ];
 
 function AnimatedCounter({ value, suffix, delay }: { value: number; suffix: string; delay: number }) {
@@ -186,23 +186,15 @@ export default function Hero() {
                 delay={0.3}
               />
               <WordReveal
-                text="what others"
+                text="the local edge"
                 className="text-gradient block"
                 delay={0.55}
               />
-              <span className="block">
-                <WordReveal
-                  text="can't"
-                  className="text-gradient-bright"
-                  delay={0.8}
-                />
-                {" "}
-                <WordReveal
-                  text="imagine."
-                  className="text-gray-400 italic font-light"
-                  delay={0.95}
-                />
-              </span>
+              <WordReveal
+                text="that wins the job."
+                className="text-gradient-bright block"
+                delay={0.8}
+              />
             </h1>
 
             {/* Subtitle */}
@@ -212,11 +204,10 @@ export default function Hero() {
               transition={{ delay: 1.2, duration: 0.7 }}
               className="text-lg sm:text-xl text-gray-200 max-w-lg mb-10 leading-relaxed"
             >
-              Custom websites, local SEO, AI phone agents, apps, and custom
-              software — built from scratch by one team. Fixed-scope builds from{" "}
-              <span className="text-circuit-300 font-semibold">$1,500</span>,
-              live in <span className="text-circuit-300 font-semibold">10–14 days</span>.
-              Startup speed. Enterprise quality.
+              Bespoke local search engines, autonomous lead capture, and a 24/7
+              bilingual AI phone agent — engineered for{" "}
+              <span className="text-circuit-300 font-semibold">auto body, contractors, and high-ticket trades</span>.
+              No platform lock-in. You own everything we build.
             </motion.p>
 
             {/* CTAs */}
@@ -250,12 +241,12 @@ export default function Hero() {
                 />
               </MagneticButton>
               <MagneticButton
-                href="#mockup"
+                href="tel:+17605469189"
                 className="group flex items-center justify-center gap-2 px-8 py-4 glass-card text-gray-100 font-medium hover:text-white hover:border-circuit-500/30 transition-all duration-300"
                 strength={0.35}
               >
                 <span className="w-2 h-2 rounded-full bg-circuit-500/50 group-hover:bg-circuit-500 transition-colors" />
-                Hardware Mockup Studio
+                Hear our AI receptionist
               </MagneticButton>
             </motion.div>
 
@@ -327,53 +318,74 @@ export default function Hero() {
             />
 
             <div className="relative glass-card p-1 glow-border-intense">
-              {/* Terminal header */}
-              <div className="flex items-center gap-2 px-4 py-3 border-b border-white/[0.06]">
-                <div className="flex gap-1.5">
-                  <div className="w-3 h-3 rounded-full bg-red-500/70 hover:bg-red-400 transition-colors cursor-pointer" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-500/70 hover:bg-yellow-400 transition-colors cursor-pointer" />
-                  <div className="w-3 h-3 rounded-full bg-green-500/70 hover:bg-green-400 transition-colors cursor-pointer" />
+              {/* Dashboard header */}
+              <div className="flex items-center justify-between px-5 py-4 border-b border-white/[0.06]">
+                <div className="flex items-center gap-2">
+                  <BarChart3 className="w-4 h-4 text-circuit-400" />
+                  <span className="text-sm font-semibold text-white">Lead Performance</span>
                 </div>
-                <span className="text-xs font-mono text-gray-300 ml-2 flex items-center gap-2">
-                  <Terminal className="w-3 h-3" />
-                  ~/circuit-coders
+                <span className="text-[10px] font-mono text-circuit-300 flex items-center gap-1.5">
+                  <span className="relative flex h-1.5 w-1.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-circuit-400 opacity-75" />
+                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-circuit-500" />
+                  </span>
+                  LIVE
                 </span>
               </div>
 
-              {/* Terminal body */}
-              <div className="p-6 font-mono text-sm space-y-3 min-h-[320px]">
-                <TerminalLine delay={0.8} prompt="$" command='cc-cli build "auto-shop --website --local-seo"' />
-                <TerminalLine delay={1.6} prompt="" command="" />
-                <TerminalLine delay={1.8} prompt="" command="Building your site..." color="text-gray-300" />
-                <TerminalLine delay={2.4} prompt="" command="" />
-
+              {/* Dashboard body */}
+              <div className="p-5 space-y-4 min-h-[320px]">
+                {/* Stylized region map — local map-pack coverage */}
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 2.8, duration: 0.6 }}
-                  className="glass-card p-4 space-y-2.5"
+                  transition={{ delay: 1.0, duration: 0.6 }}
+                  className="relative h-36 rounded-xl overflow-hidden border border-white/[0.06] bg-[#0a1020]"
                 >
-                  <div className="flex items-center gap-2 text-circuit-400 text-xs">
-                    <Globe className="w-4 h-4" />
-                    <span>Custom 5-page site — mobile-first</span>
+                  <div
+                    className="absolute inset-0 opacity-[0.13]"
+                    style={{
+                      backgroundImage:
+                        "linear-gradient(#3b4a6b 1px,transparent 1px),linear-gradient(90deg,#3b4a6b 1px,transparent 1px)",
+                      backgroundSize: "26px 26px",
+                    }}
+                  />
+                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-44 h-44 rounded-full bg-circuit-500/15 blur-2xl" />
+                  <span className="absolute left-[22%] top-[30%] w-2 h-2 rounded-full bg-gray-500" />
+                  <span className="absolute left-[72%] top-[26%] w-2 h-2 rounded-full bg-gray-500" />
+                  <span className="absolute left-[78%] top-[64%] w-2 h-2 rounded-full bg-gray-500" />
+                  <span className="absolute left-[28%] top-[68%] w-2 h-2 rounded-full bg-gray-500" />
+                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <span className="relative flex h-4 w-4">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-circuit-400 opacity-60" />
+                      <span className="relative inline-flex rounded-full h-4 w-4 bg-circuit-400 border-2 border-white/40" />
+                    </span>
                   </div>
-                  <div className="flex items-center gap-2 text-circuit-400 text-xs">
-                    <MapPin className="w-4 h-4" />
-                    <span>Google Maps + local SEO built in</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-circuit-400 text-xs">
-                    <Phone className="w-4 h-4" />
-                    <span>24/7 AI receptionist connected</span>
-                  </div>
-                  <div className="mt-2 pt-2 border-t border-white/[0.06] flex items-center justify-between">
-                    <span className="text-[10px] text-gray-300">Live in 7 days</span>
-                    <span className="text-[10px] text-circuit-300">$1,500 flat</span>
+                  <div className="absolute bottom-2 left-3 text-[10px] font-mono text-gray-400">
+                    Local map pack · your region
                   </div>
                 </motion.div>
 
-                <TerminalLine delay={3.6} prompt="" command="Generating preview..." color="text-yellow-400/80" />
-                <TerminalLine delay={4.2} prompt="✓" command="Preview ready — you see it before you pay" color="text-circuit-400" />
-                <TerminalLine delay={4.8} prompt="✓" command="Live in 7 days" color="text-circuit-400" />
+                {/* Operational metrics */}
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.3, duration: 0.6 }}
+                  className="space-y-2.5"
+                >
+                  <div className="flex items-center justify-between glass-card px-4 py-2.5">
+                    <span className="text-xs text-gray-300">Local Map Pack Dominance</span>
+                    <span className="text-base font-bold text-circuit-300">98.4%</span>
+                  </div>
+                  <div className="flex items-center justify-between glass-card px-4 py-2.5">
+                    <span className="text-xs text-gray-300">Missed Calls Recovered by AI (mo.)</span>
+                    <span className="text-base font-bold text-white">42</span>
+                  </div>
+                  <div className="flex items-center justify-between glass-card px-4 py-2.5">
+                    <span className="text-xs text-gray-300">Mobile Paint-Load Latency</span>
+                    <span className="text-base font-bold text-white">&lt;1.2s</span>
+                  </div>
+                </motion.div>
               </div>
             </div>
 
@@ -391,8 +403,8 @@ export default function Hero() {
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
             >
-              <div className="text-[10px] font-mono text-gray-300 uppercase tracking-wider">Build time</div>
-              <div className="text-sm font-bold text-white font-mono">2.4s</div>
+              <div className="text-[10px] font-mono text-gray-300 uppercase tracking-wider">Calls answered</div>
+              <div className="text-sm font-bold text-white font-mono">24/7</div>
             </motion.div>
           </motion.div>
         </div>
@@ -419,26 +431,3 @@ export default function Hero() {
   );
 }
 
-function TerminalLine({
-  delay,
-  prompt,
-  command,
-  color = "text-gray-300",
-}: {
-  delay: number;
-  prompt: string;
-  command: string;
-  color?: string;
-}) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, x: -10 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ delay, duration: 0.4 }}
-      className={`flex gap-2 ${color}`}
-    >
-      {prompt && <span className="text-circuit-600 select-none">{prompt}</span>}
-      <span>{command}</span>
-    </motion.div>
-  );
-}

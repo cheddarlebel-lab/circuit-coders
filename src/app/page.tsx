@@ -5,7 +5,8 @@ import Services from "@/components/Services";
 import Portfolio from "@/components/Portfolio";
 import WebsiteDemos from "@/components/WebsiteDemos";
 import WebBuildPricing from "@/components/WebBuildPricing";
-import TechMarquee from "@/components/TechMarquee";
+import MissedCallCTA from "@/components/MissedCallCTA";
+import SystemArchitecture from "@/components/SystemArchitecture";
 import MockupStudio from "@/components/MockupStudio";
 import Process from "@/components/Process";
 import LiveMetrics from "@/components/LiveMetrics";
@@ -22,7 +23,8 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <TechMarquee />
+        <MissedCallCTA />
+        <SystemArchitecture />
         <Services />
         <Portfolio />
         <WebsiteDemos />

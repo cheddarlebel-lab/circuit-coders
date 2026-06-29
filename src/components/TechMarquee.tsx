@@ -3,14 +3,14 @@
 import { motion } from "framer-motion";
 
 const benefits = [
-  "Custom-coded — never Wix",
-  "Mobile-first",
-  "SEO built in",
-  "Loads in under 2s",
-  "Google Maps ready",
-  "Bilingual",
-  "Live in 7 days",
-  "You see it before you pay",
+  "Zero-downtime architecture",
+  "Sub-second load times",
+  "Localized schema markup",
+  "Engineered for the map pack",
+  "Autonomous lead capture",
+  "Bilingual AI phone agent",
+  "Conversion-optimized UX",
+  "You own 100% of the code",
 ];
 
 export default function TechMarquee() {
@@ -28,7 +28,7 @@ export default function TechMarquee() {
           className="text-center mb-10"
         >
           <p className="text-xs font-mono text-circuit-300/80 tracking-[0.25em] uppercase font-semibold">
-            How every site is built
+            Engineered in by default
           </p>
         </motion.div>
 
