@@ -8,7 +8,6 @@ import WebBuildPricing from "@/components/WebBuildPricing";
 import MissedCallCTA from "@/components/MissedCallCTA";
 import SystemArchitecture from "@/components/SystemArchitecture";
 import VoicemailCalculator from "@/components/VoicemailCalculator";
-import MockupStudio from "@/components/MockupStudio";
 import Process from "@/components/Process";
 import LiveMetrics from "@/components/LiveMetrics";
 import FAQ from "@/components/FAQ";
@@ -31,7 +30,6 @@ export default function Home() {
         <Portfolio />
         <WebsiteDemos />
         <WebBuildPricing />
-        <MockupStudio />
         <Process />
         <LiveMetrics />
         <FAQ />

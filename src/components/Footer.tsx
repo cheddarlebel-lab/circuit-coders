@@ -67,7 +67,7 @@ export default function Footer() {
               links: [
                 { label: "Blog", href: "/blog" },
                 { label: "Portfolio", href: "/#portfolio" },
-                { label: "Mockup Studio", href: "/#mockup" },
+                { label: "Voicemail Leak Calculator", href: "/#leak-calculator" },
                 { label: "Our Process", href: "/#process" },
               ],
             },
