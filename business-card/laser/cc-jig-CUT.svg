@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Circuit Coders 12-up CUT outline. Registered to cc-overlay-*.png (same 282.4x246.7 mm canvas + card centers).
+     Engrave first, DO NOT move the board, then import this, align it to the engraving, assign LaserLineCut, run cut-only. Units = mm. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="282.400mm" height="246.700mm" viewBox="0 0 282.400 246.700">
+  <rect x="5.900" y="5.900" width="86.0" height="54.0" rx="3.0" ry="3.0" fill="none" stroke="#000000" stroke-width="0.1"/>
+  <rect x="98.200" y="5.900" width="86.0" height="54.0" rx="3.0" ry="3.0" fill="none" stroke="#000000" stroke-width="0.1"/>
+  <rect x="190.500" y="5.900" width="86.0" height="54.0" rx="3.0" ry="3.0" fill="none" stroke="#000000" stroke-width="0.1"/>
+  <rect x="5.900" y="66.200" width="86.0" height="54.0" rx="3.0" ry="3.0" fill="none" stroke="#000000" stroke-width="0.1"/>
+  <rect x="98.200" y="66.200" width="86.0" height="54.0" rx="3.0" ry="3.0" fill="none" stroke="#000000" stroke-width="0.1"/>
+  <rect x="190.500" y="66.200" width="86.0" height="54.0" rx="3.0" ry="3.0" fill="none" stroke="#000000" stroke-width="0.1"/>
+  <rect x="5.900" y="126.500" width="86.0" height="54.0" rx="3.0" ry="3.0" fill="none" stroke="#000000" stroke-width="0.1"/>
+  <rect x="98.200" y="126.500" width="86.0" height="54.0" rx="3.0" ry="3.0" fill="none" stroke="#000000" stroke-width="0.1"/>
+  <rect x="190.500" y="126.500" width="86.0" height="54.0" rx="3.0" ry="3.0" fill="none" stroke="#000000" stroke-width="0.1"/>
+  <rect x="5.900" y="186.800" width="86.0" height="54.0" rx="3.0" ry="3.0" fill="none" stroke="#000000" stroke-width="0.1"/>
+  <rect x="98.200" y="186.800" width="86.0" height="54.0" rx="3.0" ry="3.0" fill="none" stroke="#000000" stroke-width="0.1"/>
+  <rect x="190.500" y="186.800" width="86.0" height="54.0" rx="3.0" ry="3.0" fill="none" stroke="#000000" stroke-width="0.1"/>
+</svg>

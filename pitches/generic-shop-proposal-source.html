@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Automation &amp; Growth Proposal</title>
+<style>
+  @page {
+    size: letter; margin: 0.85in 0.8in 0.95in;
+    @bottom-left { content: "Circuit Coders · Automation & Growth Proposal"; font-family: "Helvetica Neue", Helvetica, sans-serif; font-size: 7.5pt; color: #9aa0ac; }
+    @bottom-right { content: "Page " counter(page) " of " counter(pages); font-family: "Helvetica Neue", Helvetica, sans-serif; font-size: 7.5pt; color: #9aa0ac; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: #1a1f2b; font-size: 10.5pt; line-height: 1.55; margin: 0; }
+
+  .brandbar { height: 5pt; background: linear-gradient(to right, #11122a 0%, #00a866 55%, #00e68a 100%); margin-bottom: 22pt; }
+  .cover { margin-bottom: 26pt; border-bottom: 1pt solid #d8dbe2; padding-bottom: 20pt; }
+  .lockup { margin-bottom: 14pt; }
+  .lockup img { height: 38pt; width: 38pt; vertical-align: middle; border-radius: 8pt; margin-right: 12pt; }
+  .wordmark { display: inline; font-size: 20pt; font-weight: 800; letter-spacing: 1px; color: #11122a; vertical-align: middle; }
+  .wordmark span { color: #00a866; }
+  .kicker { font-size: 8.5pt; letter-spacing: 2.5px; text-transform: uppercase; color: #8a8f9c; margin-bottom: 8pt; }
+  h1 { font-size: 22pt; font-weight: 700; letter-spacing: -0.5px; margin: 0 0 4pt; }
+  .subtitle { font-size: 12.5pt; color: #4a5160; font-weight: 400; margin: 0 0 12pt; }
+  .meta { font-size: 9pt; color: #6a7080; }
+  .meta strong { color: #1a1f2b; font-weight: 600; }
+
+  h2 { break-after: avoid; font-size: 13.5pt; font-weight: 700; margin: 24pt 0 8pt; padding-top: 13pt; border-top: 1pt solid #d8dbe2; letter-spacing: -0.2px; }
+  h2 .num { color: #00a866; margin-right: 8pt; }
+  h3 { break-after: avoid; font-size: 11pt; font-weight: 700; margin: 15pt 0 5pt; }
+  p { margin: 0 0 8pt; }
+  ul, ol { margin: 0 0 9pt; padding-left: 18pt; }
+  li { margin-bottom: 3.5pt; }
+  table { width: 100%; border-collapse: collapse; margin: 8pt 0 12pt; font-size: 9.5pt; }
+  th { text-align: left; font-size: 8pt; text-transform: uppercase; letter-spacing: 1px; color: #6a7080; border-bottom: 1.5pt solid #1a1f2b; padding: 4pt 8pt 4pt 0; }
+  tr { break-inside: avoid; }
+  td { border-bottom: 0.6pt solid #e3e5ea; padding: 5pt 8pt 5pt 0; vertical-align: top; }
+  .bad { color: #a33327; font-weight: 600; }
+  .good { color: #1f6e43; font-weight: 600; }
+  .callout { background: #f4f6f9; border-left: 3pt solid #11122a; padding: 9pt 12pt; margin: 10pt 0 12pt; }
+  .callout.red { border-left-color: #00a866; }
+  .callout p:last-child { margin-bottom: 0; }
+  .tier { break-inside: avoid; border: 1pt solid #d8dbe2; border-radius: 4pt; padding: 12pt 14pt; margin: 12pt 0; }
+  .tier h3 { margin-top: 0; }
+  .tier .tag { font-size: 8pt; text-transform: uppercase; letter-spacing: 1.5px; color: #00a866; font-weight: 700; }
+  .price-line { font-size: 12pt; margin: 6pt 0 2pt; }
+  .price-line strong { font-size: 14pt; color: #11122a; }
+  .footer { margin-top: 8pt; padding-top: 8pt; border-top: 1pt solid #d8dbe2; font-size: 9pt; color: #6a7080; }
+  .footer strong { color: #1a1f2b; }
+  .avoid-break { break-inside: avoid; }
+  .pagebreak { break-before: page; }
+  .note { font-size: 9pt; color: #6a7080; font-style: italic; }
+
+  /* signing section */
+  .select-table { width: 100%; border-collapse: collapse; margin: 6pt 0 16pt; font-size: 10pt; }
+  .select-table th { background: #11122a; color: #fff; border: none; padding: 6pt 10pt; font-size: 8.5pt; }
+  .select-table td { border-bottom: 0.6pt solid #e3e5ea; padding: 8pt 10pt; vertical-align: middle; }
+  .checkbox { display: inline-block; width: 13pt; height: 13pt; border: 1.5pt solid #11122a; border-radius: 2.5pt; vertical-align: middle; }
+  .opt-name { font-weight: 700; color: #11122a; }
+  .opt-price { white-space: nowrap; }
+  .terms { font-size: 9pt; color: #3a4150; }
+  .terms li { margin-bottom: 4pt; }
+  .sig-grid { width: 100%; border-collapse: collapse; margin-top: 14pt; }
+  .sig-grid td { width: 50%; vertical-align: bottom; padding: 0 18pt 0 0; border: none; }
+  .sig-line { border-bottom: 1pt solid #1a1f2b; height: 22pt; margin-bottom: 4pt; }
+  .sig-label { font-size: 8pt; text-transform: uppercase; letter-spacing: 1px; color: #6a7080; }
+  .sig-party { font-size: 10pt; font-weight: 700; color: #11122a; margin-bottom: 12pt; }
+  .accent { color: #00a866; }
+</style>
+</head>
+<body>
+
+<div class="brandbar"></div>
+<div class="cover">
+  <div class="lockup"><img src="file:///Users/leolebel/clawd/circuit-coders/pitches/assets/cc-logo.png" alt="Circuit Coders"><span class="wordmark">CIRCUIT <span>CODERS</span></span></div>
+  <div class="kicker">Confidential Proposal</div>
+  <h1>Automation &amp; Growth Proposal</h1>
+  <p class="subtitle">[Shop Name] — [City, ST]</p>
+  <p class="meta"><strong>Prepared for</strong> [Owner Name], [Shop Name]&nbsp;&nbsp;·&nbsp;&nbsp;<strong>Prepared by</strong> Leo Lebel, Circuit Coders&nbsp;&nbsp;·&nbsp;&nbsp;<strong>Date</strong> [Date]</p>
+</div>
+
+<h2>Executive Summary</h2>
+<p>Your shop does genuinely excellent work — quality repairs, real attention to detail, and customers who trust you. That reputation, though, mostly lives in your customers' heads and not where new customers look. Today most new jobs have to come through one channel — the phone, during business hours — and your online presence (reviews, search visibility, lead capture) is doing almost none of the selling it could be doing.</p>
+<p>This proposal lays out three options, smallest to largest. Each one is scoped honestly: we describe what we <strong>do</strong> and what we <strong>capture</strong>, not outcomes we can't control. You can start at any tier and move up later.</p>
+
+<h2><span class="num">1</span>What We Typically Find</h2>
+<p>Before anything is signed, we run a quick live audit of your specific shop. But across shops like yours, the same handful of gaps show up again and again — and each one is quietly costing jobs:</p>
+
+<h3>1. The phone is the only door in — and it closes at 5</h3>
+<p>For most shops, every new job starts with a phone call, during business hours. A breakdown or a fender-bender doesn't keep business hours. Tonight's and this weekend's callers reach voicemail — and a voicemail competing with a shop that picks up usually loses the job.</p>
+
+<h3>2. Your reputation is nearly invisible online</h3>
+<p>Plenty of excellent shops have a thin public review footprint — a small handful of reviews across Google and Yelp — while a competitor down the street has dozens or hundreds. New customers comparing shops see <em>their</em> wall of reviews and your near-empty one. The work may be better; the scoreboard says otherwise.</p>
+<p class="note">Exact review counts and competitor figures are confirmed live during the audit before signing — review platforms change daily.</p>
+
+<h3>3. The website can't capture or convert</h3>
+<ul>
+  <li><strong>No online booking or estimate-request form</strong> — most shop sites make every call-to-action a "call us" phone link. There's no way for a customer to request an estimate or appointment online, day or night.</li>
+  <li><strong>No live chat</strong> to catch the visitor who won't pick up the phone.</li>
+  <li><strong>Weak local-search structured data</strong> — many shop sites carry only a bare-bones "WebSite" schema tag, with no <em>LocalBusiness</em> markup for the address, hours, or service area. That structured data is exactly what Google reads to rank you in the local map pack and "near me" results.</li>
+  <li><strong>No paid acquisition</strong> — automotive work is high-intent and high-value, yet there's often no paid search running while competitors can bid on your customers.</li>
+</ul>
+
+<div class="callout avoid-break">
+  <p><strong>What's already working (and stays):</strong> most shops we work with already have a clean, mobile-friendly site with solid on-page basics — a clear title, hours, and contact info — plus a shop-management system that's the industry standard and genuine repair quality and word-of-mouth. We build on a good foundation, not replace one. The audit confirms exactly what's strong at your shop so we don't touch what's already working.</p>
+</div>
+
+<h2><span class="num">2</span>The Three Options</h2>
+
+<div class="callout avoid-break">
+  <p><strong>How to read the price:</strong> these are <em>done-for-you</em> managed services — built for your shop, integrated with the system you already run on, and operated for you month to month — not a do-it-yourself app you configure and babysit. For perspective: a full-time front-desk receptionist runs <strong>$3,000–$4,500/mo</strong>, and a single missed job is <strong>$1,500–$6,000</strong> in lost work. Recovering even one extra job a month covers the service several times over.</p>
+</div>
+
+<div class="tier">
+  <div class="tag">Option 1 — Entry</div>
+  <h3>AI Phone Receptionist</h3>
+  <p>An AI voice assistant answers the phone 24/7. It greets callers, answers common questions (hours, location, services, "do you work with insurance?"), collects the caller's name, vehicle, and the details of what they need, and books an <em>estimate or appointment request</em> on your calendar. After hours, it texts the lead straight to you so nothing waits until morning. Bilingual English/Spanish. Every call logged.</p>
+  <p class="note"><strong>What it honestly does:</strong> it makes sure every call is answered and every lead is captured. It does not give firm repair prices (an accurate quote requires seeing the vehicle) and it won't catch the rare caller who hangs up on an automated voice — a human still confirms each appointment.</p>
+  <p class="price-line">Setup <strong>$1,500</strong> &nbsp;·&nbsp; Base <strong>$349/mo</strong> &nbsp;+&nbsp; <strong>$0.25/min</strong> talk time</p>
+  <p class="note">Call minutes are metered and billed monthly on actual usage at $0.25/min — for a shop your size that typically runs about $75–250/mo on top of the base, scaling only with the calls the system actually handles for you. <strong>Support included: Monday–Friday, 9–5.</strong></p>
+</div>
+
+<div class="tier">
+  <div class="tag">Option 2 — Recommended</div>
+  <h3>Full Shop Automation</h3>
+  <p>Everything in Option 1, plus the rest of the front-office workflow:</p>
+  <ul>
+    <li><strong>Automated repair-status texts</strong> — customers get a text at each stage of their job. We configure your shop-management system's built-in texting where it fits, and layer our own on top off a one-tap front-desk update or a direct data connection (see Section 3).</li>
+    <li><strong>Review-request engine</strong> — every completed job automatically gets a polite text asking for a Google/Yelp review. We send the request every time; review volume typically climbs steadily as a result.</li>
+    <li><strong>Online estimate / booking form</strong> added to the site, routed to the bot and your calendar.</li>
+    <li><strong>Lead follow-up</strong> — anyone who got a quote and didn't book gets an automatic, friendly nudge.</li>
+    <li><strong>Monthly dashboard</strong> — calls answered, leads captured, jobs booked, reviews requested vs. earned.</li>
+  </ul>
+  <p class="note"><strong>What it honestly does:</strong> we automate the request and the workflow. We can't guarantee a specific number of reviews or bookings — but every customer gets asked, every lead gets followed up, and you'll see the real numbers each month. Deep integration with your shop-management system depends on that vendor's approval; the status-text system works day one regardless.</p>
+  <p class="price-line">Setup <strong>$3,500</strong> &nbsp;·&nbsp; Base <strong>$1,500/mo</strong> &nbsp;+&nbsp; <strong>$0.25/min</strong> talk time</p>
+  <p class="note">Includes the AI phone receptionist, so the same metered call billing applies — $0.25/min on actual usage (typically ~$75–250/mo for a shop your size). <strong>Support included: Monday–Friday, 9–5.</strong></p>
+</div>
+
+<div class="tier">
+  <div class="tag">Option 3 — Full Growth Partner</div>
+  <h3>Everything + Website, SEO, Ads &amp; On-Site AI</h3>
+  <p>Everything in Options 1 and 2, plus we run the whole digital front end:</p>
+  <ul>
+    <li><strong>Website rebuild</strong> — fast, conversion-focused, online booking built in.</li>
+    <li><strong>Local SEO &amp; brand scaling</strong> — Google Business Profile optimization, local landing pages, ongoing content to compete for "near me" searches in your area.</li>
+    <li><strong>Paid ads</strong> — Google &amp; Meta local campaigns on high-intent searches, managed and optimized monthly.</li>
+    <li><strong>On-site AI chat agent</strong> — answers questions and captures leads 24/7 on the website.</li>
+    <li>Monthly strategy + reporting on the full funnel: search → call → booked job.</li>
+  </ul>
+  <p class="note"><strong>What it honestly does:</strong> we do the work and report real numbers. SEO and ad results build over roughly 3–6 months — we control the inputs and the spend efficiency, not Google's rankings or a guaranteed return. The goal is to make your shop the top-ranked, most-reviewed option in your market; we won't promise a ranking we can't command.</p>
+  <p class="price-line">Setup <strong>$6,500</strong> &nbsp;·&nbsp; Base <strong>$2,950/mo</strong> &nbsp;+&nbsp; <strong>$0.25/min</strong> talk time</p>
+  <p class="note">Includes the AI phone receptionist, so metered call billing applies at $0.25/min on actual usage (typically ~$75–250/mo). Ad spend is billed separately at cost (recommended $1,000–$2,000/mo to start). No money-down on ad spend or usage you haven't approved. <strong>Support included: Monday–Friday, 9–5.</strong></p>
+</div>
+
+<h2><span class="num">3</span>How This Works Alongside Your Shop-Management System</h2>
+<p>The system your shop already runs on — for collision shops that's usually CCC ONE; for general and performance shops, Mitchell, Shop-Ware, Tekmetric or similar — is the hub. We build <em>around</em> it. Nothing gets ripped out or replaced.</p>
+<h3>What your system already does — we configure it, we don't rebuild it</h3>
+<p>Most shop-management platforms include built-in automated status texts that keep customers updated through a repair. Where that's the right fit, we simply turn it on and tune the messaging — you should never pay us to rebuild a feature you already own.</p>
+<h3>What we integrate, with your authorization</h3>
+<p>Many systems expose a secure data connection (for example, CCC's <strong>Secure Share</strong> network — a cloud API in the industry-standard CIECA BMS format) that lets an approved app read your job data. With your sign-off, we connect to it so that:</p>
+<ul>
+  <li>When a job reaches completion (e.g. <strong>Final Bill</strong>), that's the automatic trigger for the review-request text and any follow-up — no one at the front desk has to remember.</li>
+  <li>Customer and vehicle details flow in to personalize every message we send.</li>
+</ul>
+<p class="note">Where a vendor approval or per-job data fee applies, we handle it. Until that connection is live, every one of these automations runs off a one-tap "job done" at the front desk, so nothing waits on the approval process.</p>
+<h3>What lives outside your system — this is what we build</h3>
+<p>Your shop-management system only knows about jobs already written up. Everything <em>upstream</em> of that — the missed call, the tire-kicker, the after-hours lead — is invisible to it, and that's exactly where the lost revenue is. We build the layer it doesn't cover:</p>
+<ul>
+  <li>The <strong>AI phone receptionist</strong> and online booking form (capture the lead before it's ever a written-up job).</li>
+  <li>The <strong>review-request engine</strong> and <strong>lead follow-up</strong> for callers who never became a work order.</li>
+  <li>Your <strong>reporting dashboard</strong>, tying calls, leads, jobs, and reviews together in one view.</li>
+</ul>
+
+<h2><span class="num">4</span>How We Work</h2>
+<p>Month-to-month after setup — no long lock-in. We start with a short access &amp; onboarding call, stand up the system, and you see results in your dashboard. If a tier isn't pulling its weight, you can step down or out. We'd rather keep you because it works than because of a contract.</p>
+
+<h2 class="pagebreak"><span class="num">5</span>Agreement &amp; Acceptance</h2>
+<p>To move forward, check the option you'd like to begin with, then sign below. This is a simple month-to-month service agreement — the setup fee is due on signing, the monthly base begins when your system goes live, and metered call usage (where applicable) is billed in arrears on actual minutes.</p>
+
+<table class="select-table">
+  <thead><tr><th style="width:8%">Select</th><th style="width:52%">Option</th><th style="width:40%">Investment</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><span class="checkbox"></span></td>
+      <td><span class="opt-name">Option 1 — AI Phone Receptionist</span></td>
+      <td class="opt-price">$1,500 setup · $349/mo + $0.25/min</td>
+    </tr>
+    <tr>
+      <td><span class="checkbox"></span></td>
+      <td><span class="opt-name">Option 2 — Full Shop Automation</span> &nbsp;<span class="accent">(Recommended)</span></td>
+      <td class="opt-price">$3,500 setup · $1,500/mo + $0.25/min</td>
+    </tr>
+    <tr>
+      <td><span class="checkbox"></span></td>
+      <td><span class="opt-name">Option 3 — Full Growth Partner</span></td>
+      <td class="opt-price">$6,500 setup · $2,950/mo + $0.25/min<br><span class="note" style="font-style:normal">+ ad spend at cost</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<ul class="terms">
+  <li><strong>Term:</strong> Month-to-month. Either party may cancel with 30 days' written notice. No long-term lock-in.</li>
+  <li><strong>Setup fee:</strong> Due on signing; covers build, configuration, and integration setup for the selected option.</li>
+  <li><strong>Monthly base:</strong> Begins on go-live date and is billed on the 1st of each month.</li>
+  <li><strong>Support:</strong> Included on every tier — Monday through Friday, 9–5.</li>
+  <li><strong>Call usage:</strong> Metered at $0.25/min and billed monthly on actual minutes handled. A monthly usage alert can be set on request.</li>
+  <li><strong>Ad spend (Option 3):</strong> Billed separately at cost; nothing is spent without your written approval.</li>
+  <li><strong>Authorizations:</strong> Client authorizes Circuit Coders to access the accounts needed to deliver the selected services (e.g. shop-management system / data connection, Google Business Profile, website, ad accounts).</li>
+</ul>
+
+<table class="sig-grid avoid-break">
+  <tr>
+    <td>
+      <div class="sig-party">[Shop Name]</div>
+      <div class="sig-line"></div><div class="sig-label">Authorized Signature</div>
+      <div style="height:6pt"></div>
+      <div class="sig-line"></div><div class="sig-label">Print Name &amp; Title</div>
+      <div style="height:6pt"></div>
+      <div class="sig-line"></div><div class="sig-label">Date</div>
+    </td>
+    <td>
+      <div class="sig-party">Circuit Coders</div>
+      <div class="sig-line"></div><div class="sig-label">Authorized Signature</div>
+      <div style="height:6pt"></div>
+      <div class="sig-line"></div><div class="sig-label">Leo Lebel, Founder</div>
+      <div style="height:6pt"></div>
+      <div class="sig-line"></div><div class="sig-label">Date</div>
+    </td>
+  </tr>
+</table>
+
+<p class="note" style="margin-top:14pt">Circuit Coders · Leo Lebel · cheddar.lebel@gmail.com. Audit findings reflect public information confirmed live before signing.</p>
+
+</body>
+</html>

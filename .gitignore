@@ -13,3 +13,5 @@ outreach-log/
 .secrets/
 *.key
 *.secrets
+clients/*/.secure/
+clients/tsm/review-engine/.env

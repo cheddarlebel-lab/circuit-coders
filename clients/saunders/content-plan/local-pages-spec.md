@@ -1,7 +1,14 @@
 # Local SEO Page Plan — Toyota of Vero Beach & Kia of Vero Beach
 *2026-06-12 · Circuit Coders · DealerOn custom pages (additive only)*
 
-## Competitive benchmark: Bev Smith Toyota (Ft. Pierce)
+> ⚠️ **STRATEGY UPDATE 2026-06-23 (competitive-audit.md) — read first, it overrides the Toyota benchmark below.**
+> - **Bev Smith TOYOTA dropped its Vero near-me page** (it now 301s to Fort Pierce). The Toyota near-me conquest threat is GONE. The benchmark section below is stale on the Toyota side — keep only as a content-pattern reference.
+> - **The real conquest threat is Bev Smith KIA:** `/kia-dealer-near-vero-beach-fl/` ranks pg 1 for "kia dealer vero beach" but is THIN (~520w, no FAQ/schema/drive-time/review quotes). Our drafted Kia Vero page beats it outright.
+> - **SHIP ORDER CHANGED → Kia Vero (#4) FIRST**, then the commodity-leak fixes (service page + used/CPO — competitors outrank us on "oil change vero beach" / "used car dealer vero beach"), then Sebastian.
+> - **One metric a competitor genuinely wins:** Kia review VOLUME (Boniface Hiers Kia 4.7/8,044 vs our 4.6/3,192) → review-gen is the #1 ongoing play, not optional.
+> - Our structural edge over EVERY competitor city page: schema + FAQ + drive-time math + embedded review snippets — none of them have any. Don't ship a page without all four.
+
+## Competitive benchmark: Bev Smith Toyota (Ft. Pierce) — ⚠️ STALE on Toyota, see update above
 Indexed local landing pages found:
 - `/toyota-dealer-serving-vero-beach-fl/` — **they target OUR city**
 - `/toyota-dealer-serving-fort-pierce-fl.html`

@@ -1,0 +1,16 @@
+# Circuit Coders laser jig — 3x4 pockets, engraving TOP 12
+# pocket centers (mm, origin = bottom-left corner)
+# jig outer: 282.40 x 246.70 mm | card 86.0x54.0 | clearance 0.4/side | wall 5.5
+
+pocket 00 [ENGRAVE]: x=  48.90  y=  32.90
+pocket 01 [ENGRAVE]: x= 141.20  y=  32.90
+pocket 02 [ENGRAVE]: x= 233.50  y=  32.90
+pocket 03 [ENGRAVE]: x=  48.90  y=  93.20
+pocket 04 [ENGRAVE]: x= 141.20  y=  93.20
+pocket 05 [ENGRAVE]: x= 233.50  y=  93.20
+pocket 06 [ENGRAVE]: x=  48.90  y= 153.50
+pocket 07 [ENGRAVE]: x= 141.20  y= 153.50
+pocket 08 [ENGRAVE]: x= 233.50  y= 153.50
+pocket 09 [ENGRAVE]: x=  48.90  y= 213.80
+pocket 10 [ENGRAVE]: x= 141.20  y= 213.80
+pocket 11 [ENGRAVE]: x= 233.50  y= 213.80
