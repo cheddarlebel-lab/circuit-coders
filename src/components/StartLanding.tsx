@@ -90,7 +90,7 @@ function LeadForm() {
     "block text-xs uppercase tracking-[0.15em] text-gray-100 mb-2 font-semibold";
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence mode="wait" initial={false}>
       {submitted ? (
         <motion.div
           key="success"
@@ -122,7 +122,7 @@ function LeadForm() {
         <motion.form
           key="form"
           onSubmit={handleSubmit}
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           className="glass-card p-7 sm:p-8 space-y-5 glow-border"
         >
