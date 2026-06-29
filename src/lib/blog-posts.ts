@@ -20,6 +20,113 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "web-design-san-marcos",
+    title: "Web Design in San Marcos CA",
+    description: "Honest web design for San Marcos businesses. What a fast, custom site should cost, what to cut, and how to rank for 'your service + San Marcos' — built in 48 hours flat.",
+    keywords: ["web design san marcos", "san marcos web designer", "small business website san marcos ca", "web design north county san diego", "local seo san marcos", "affordable website design san marcos", "web design vista", "web design escondido", "web design carlsbad"],
+    publishedAt: "2026-06-29",
+    updatedAt: "2026-06-29",
+    readTime: 7,
+    category: "Web Design",
+    author: "Circuit Coders",
+    heroTag: "WEB DESIGN · SAN MARCOS · NORTH COUNTY SD",
+    sections: [
+      {
+        heading: "Your San Marcos site is slow, and your customers already left",
+        paragraphs: [
+          "Walk San Marcos Boulevard or Restaurant Row and pull up the local businesses on your phone. Half of them load a stock GoDaddy or Wix template that takes 6–8 seconds to appear, then jumps around while a giant 4 MB hero photo finally renders. By second 3, most people are already back on Google looking at the next result.",
+          "San Marcos is not a sleepy town anymore. You've got 40,000+ students cycling through Cal State San Marcos, new builds out toward San Elijo Hills, and a lunch crowd that decides where to eat from a phone in under 15 seconds. Every one of those decisions runs through a website, and a slow one quietly hands the customer to a competitor in Vista or Escondido.",
+          "The frustrating part: owners are usually paying for this. A $29/mo template subscription plus a 'theme' nobody customized, and the thing still loads like it's 2014. You're paying monthly to lose customers.",
+        ],
+        callout: "If your homepage takes more than 3 seconds to load on a phone, you're not competing on the merits — you're losing before the customer sees a single word.",
+      },
+      {
+        heading: "What a San Marcos small-business site actually needs",
+        paragraphs: [
+          "You don't need a 30-page mega-site. You need a handful of pages that load instantly, say exactly what you do, and make it dead simple to call, book, or get directions. That's it. Everything else is decoration that slows you down.",
+          "Here's the short list that actually moves the needle for a local business in North County.",
+        ],
+        list: {
+          title: "The non-negotiables",
+          items: [
+            "A homepage that loads in under 2 seconds on a phone — most of San Marcos finds you on mobile, not a desktop",
+            "Click-to-call and click-for-directions buttons above the fold, no scrolling required",
+            "Your real service area named in plain text: San Marcos, plus Vista, Escondido, Carlsbad, San Elijo Hills",
+            "Hours, address, and phone as actual text Google can read — not buried in an image",
+            "A short, honest 'what we do' section with prices or starting prices if you have them",
+            "Photos of your real work or storefront, compressed to 150–250 KB each, not 3–5 MB straight off the camera",
+            "An embedded Google Map so people from Twin Oaks Valley to Discovery Lake know you're close",
+          ],
+        },
+      },
+      {
+        heading: "What to cut — the stuff that's quietly hurting you",
+        paragraphs: [
+          "Most bad small-business sites aren't missing features. They're drowning in them. Every plugin, popup, and 'engagement' widget is another thing that loads, breaks, and gets between your customer and the call button.",
+          "Cut these today and your site gets faster, cleaner, and more likely to convert.",
+        ],
+        list: {
+          title: "Delete without mercy",
+          items: [
+            "The chatbot. For a San Marcos plumber or taco shop, a chatbot is a tax on real customers — they want your phone number, not a robot",
+            "Auto-playing video backgrounds that eat 5–10 MB and drain phone batteries",
+            "The newsletter popup that fires before anyone's read a word",
+            "Stock photos of people in suits shaking hands — nobody believes them, and they don't look like San Marcos",
+            "Five social icons linking to accounts you last posted on in 2022",
+            "Carousels and sliders nobody clicks past the first slide on",
+            "A 'Blog' that's been empty since launch — an empty section reads as 'this business is gone'",
+          ],
+        },
+        callout: "A site that does three things fast beats a site that does fifteen things slowly. Every time.",
+      },
+      {
+        heading: "Ranking for 'your service + San Marcos' on Google",
+        paragraphs: [
+          "Pretty design doesn't get you found. Local SEO does. When someone in San Marcos searches 'electrician San Marcos' or 'best breakfast near Cal State San Marcos,' Google decides who shows up based on a few specific signals — and almost none of them are about how the site looks.",
+          "Start with your Google Business Profile. It's free, and for most local businesses it drives more calls than the website itself. Claim it, fill out every field, pick the right categories, add 10–15 real photos, and ask happy customers for reviews — businesses with 25+ reviews and a 4.5+ rating routinely outrank competitors with better-looking sites.",
+          "Then make your website back it up. Your name, address, and phone need to match your Google profile exactly — same format, character for character — across Yelp, Apple Maps, and any directory you're listed in. That consistency (NAP) is a ranking signal. Add LocalBusiness schema.org markup so Google reads your hours, location, and service area as structured data instead of guessing.",
+          "Last piece: actually use the 'service + city' phrases on your pages. A landscaping company should have a page that plainly says 'landscaping in San Marcos' and names the neighborhoods it serves. Not stuffed 40 times — written like a human, in the headline and once or twice in the copy. That's how you show up when someone two streets over is searching.",
+        ],
+        list: {
+          title: "Local SEO checklist for San Marcos",
+          items: [
+            "Claim and fully complete your Google Business Profile — every field, 10+ photos",
+            "Get to 25+ reviews; reply to all of them, good and bad",
+            "Match your name, address, and phone exactly everywhere online",
+            "Add LocalBusiness schema.org markup to your site",
+            "Use '[your service] + San Marcos' in real page headings and copy",
+            "Name nearby areas you serve: San Elijo Hills, Vista, Escondido, Carlsbad",
+          ],
+        },
+      },
+      {
+        heading: "What this should cost in North County",
+        paragraphs: [
+          "Here's where San Marcos owners get burned. The typical local agency quote for a custom small-business site runs $3,000–$8,000, takes 6–10 weeks, and comes with a $100–$200/mo 'maintenance' contract you can't get out of. For a five-page site. That math doesn't work for a shop on Restaurant Row.",
+          "The other end is the $29/mo template you build yourself at 11 p.m. — which is why so many San Marcos sites look and load the way they do. You're not paying for design there; you're renting someone else's slow theme.",
+          "Circuit Coders builds it for $499 flat. Custom Next.js on Vercel — the same stack big tech companies use — so it loads in well under 2 seconds. 48-hour turnaround, one round of revisions, and you see a free mockup before you pay a dollar. Hosting and updates are optional at $50/mo, not a lock-in. Need online booking, Stripe checkout, or a reservation system wired in? That's a $200–$500 add-on, quoted up front, no surprises.",
+        ],
+        callout: "$499 flat, 48 hours, real custom code — not a $5,000 quote for a template with the colors swapped.",
+      },
+      {
+        heading: "See it before you pay — free mockup for San Marcos businesses",
+        paragraphs: [
+          "If you run a business in San Marcos and your site is slow, dated, or just embarrassing to send people to, we'll build you a free mockup of a faster one. No deposit, no contract, no 'discovery call' that's really a sales pitch. You look at it, and if it's better than what you've got, we ship it in 48 hours for $499 flat.",
+          "We're local — North County San Diego, same time zone, same area code, no offshore agency you'll never reach. We've cleaned up sites for shops from Fallbrook to Oceanside, and the playbook is the same in San Marcos: make it fast, make it clear, make it easy to call.",
+          "Send us your current website (or a link to your Google listing if you don't have one yet) and we'll send back a mockup plus a short, honest audit of what's costing you customers. That part's free either way.",
+        ],
+        callout: "Free mockup, free audit, zero commitment. If we can't beat your current site, you've lost nothing but the email.",
+      },
+    ],
+    faqs: [
+      { q: "How much does a website cost for a small business in San Marcos?", a: "Local agencies typically quote $3,000–$8,000 for a custom site plus $100–$200/mo maintenance. Circuit Coders charges $499 flat with a 48-hour turnaround and optional $50/mo hosting — no lock-in contract." },
+      { q: "How long does it take to build a website?", a: "We deliver in 48 hours once you approve the free mockup. Most local agencies take 6–10 weeks for the same five-page small-business site." },
+      { q: "How do I get my San Marcos business to show up on Google?", a: "Start with a fully completed Google Business Profile and 25+ reviews — that drives most local calls. Pair it with a fast site using LocalBusiness schema and 'service + San Marcos' wording, and you'll usually see movement in the local pack within 60–90 days." },
+      { q: "Do you only work with businesses in San Marcos?", a: "No — we build for all of North County San Diego, including Vista, Escondido, Carlsbad, Oceanside, and Fallbrook. Same $499 flat rate everywhere." },
+      { q: "Why is my current website so slow?", a: "Usually it's a template theme loading 3–5 MB images, a chatbot, and a stack of plugins. A custom Next.js build on Vercel typically cuts load time to under 2 seconds on a phone." },
+    ],
+  },
+  {
     slug: "web-design-escondido",
     title: "Web Design in Escondido — Small Business Websites",
     description: "Escondido small-business web design that loads fast, ranks local, and turns phone searches into calls. Custom site, $499 flat, 48-hour turnaround, free mockup.",
