@@ -20,6 +20,109 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-receptionist-contractors",
+    title: "AI Receptionist for Contractors — Stop Losing Jobs to Voicemail",
+    description: "Contractors miss 1 in 4 calls and lose jobs to voicemail. Here's how an AI receptionist books work 24/7 — and how to set it up for under $499.",
+    keywords: ["ai receptionist contractors", "answering service for contractors", "missed call text back", "contractor lead capture", "ai phone answering", "plumber electrician answering service", "Fallbrook contractor website", "Oceanside contractor SEO", "North County San Diego contractors"],
+    publishedAt: "2026-06-30",
+    updatedAt: "2026-06-30",
+    readTime: 7,
+    category: "Tech",
+    author: "Circuit Coders",
+    heroTag: "AI RECEPTIONIST · CONTRACTORS · NORTH COUNTY",
+    sections: [
+      {
+        heading: "You're under a sink in Vista when the phone rings",
+        paragraphs: [
+          "You can't answer it. You're elbow-deep in a P-trap, on a roof in Oceanside, or pulling wire in a Carlsbad attic. The phone buzzes, you can't get to it, and 72% of callers who hit a contractor's voicemail just hang up and call the next guy on Google.",
+          "That's not a missed call. That's a missed job. The average contractor in North County misses 1 in 4 inbound calls, and a single HVAC swap, panel upgrade, or repipe can run $4,000–$8,000. Miss four of those a month and you've handed a competitor $20K you never even knew rang.",
+          "An AI receptionist isn't a robot reading a script badly. It's a voice (or a text) that picks up on the first ring, answers your customer's question, books the appointment, and texts you the details — while you keep both hands on the job.",
+        ],
+        callout: "A missed call from a homeowner with a flooding kitchen is a $1,500 emergency job that just became your competitor's $1,500 emergency job.",
+      },
+      {
+        heading: "What an AI receptionist actually does for a contractor",
+        paragraphs: [
+          "Forget the sci-fi version. For a plumber in Fallbrook or an electrician in San Marcos, the job is simple: answer fast, capture the lead, never let a real customer fall through. A good setup runs 24/7, so the 9pm \"my water heater burst\" call gets caught instead of going to a dead voicemail box.",
+          "The bar is whether a stranger who needs work done can get a straight answer and a booked slot without you touching your phone. Here's what that looks like in practice.",
+        ],
+        list: {
+          title: "What a real contractor AI receptionist should do",
+          items: [
+            "Answer every call on the first ring — including nights, weekends, and when you're on another job",
+            "Text-back any missed call within 30 seconds so the lead doesn't bounce to the next contractor",
+            "Ask the 4 questions that matter: name, address, what's broken, and how soon",
+            "Book straight into your calendar (or hand off to a real person for the big stuff)",
+            "Send you an instant text or email with the lead details before you've climbed off the ladder",
+            "Quote ballpark ranges you've pre-set ($150 service call, $250 diagnostic) so price-shoppers self-qualify",
+            "Speak Spanish when the caller does — a huge share of North County homeowners do",
+          ],
+        },
+      },
+      {
+        heading: "What to cut — the gimmicks that cost you jobs",
+        paragraphs: [
+          "Most \"AI for business\" pitches are built to impress at a trade show, not to book a re-roof in Bonsall. The features that demo well are usually the ones that annoy a homeowner with a real problem.",
+          "Cut anything that adds a step between \"my pipe burst\" and \"someone is coming.\" Every extra click, menu, or upsell is a place where a paying customer gives up and dials someone else.",
+        ],
+        list: {
+          title: "Skip all of this",
+          items: [
+            "A website chatbot pop-up — homeowners with an emergency call, they don't type",
+            "\"Press 1 for sales, press 2 for service\" phone trees that bury a stressed caller",
+            "A bot that can't transfer to you for a $6K job that deserves a human",
+            "Generic overseas call centers that don't know Pala from Pacific Beach",
+            "Monthly \"AI platforms\" charging $300–$500/mo for features you'll never switch on",
+            "Anything that captures the lead but doesn't text it to you for hours",
+          ],
+        },
+        callout: "If a feature doesn't end in a booked job or a text on your phone, it's decoration. Cut it.",
+      },
+      {
+        heading: "Get found before the phone even rings",
+        paragraphs: [
+          "An AI receptionist only matters if calls come in. For contractors, that means winning the Google Map Pack — the three businesses that show up when someone searches \"emergency plumber Oceanside\" or \"electrician near me.\" That's where the jobs are, and it's mostly free to claim.",
+          "Local SEO for trades is unglamorous and it works. Nail the basics below and you'll outrank guys who've been in business 20 years but never touched their Google Business Profile.",
+        ],
+        list: {
+          title: "The local SEO checklist for trades",
+          items: [
+            "Claim and fully fill your Google Business Profile — hours, service area, 10+ real photos of finished jobs",
+            "Match your Name, Address, Phone exactly across Yelp, Angi, BBB, and 15–20 directory citations",
+            "Build a page per service per city: \"water heater repair Vista,\" \"panel upgrade Carlsbad\"",
+            "Add LocalBusiness + Service schema.org markup so Google reads your trade and service area",
+            "Ask every happy customer for a Google review by text — aim for 1–2 new reviews a week",
+            "List your real service-area cities: Fallbrook, Bonsall, Oceanside, Vista, San Marcos, Carlsbad",
+          ],
+        },
+      },
+      {
+        heading: "What a receptionist actually costs — and what we charge",
+        paragraphs: [
+          "A human answering service runs $250–$600/mo and still misses your after-hours calls or charges per minute when things get busy. The slick AI-receptionist SaaS platforms quote $300–$500/mo plus setup, and you're renting it forever. A full-time front-desk hire is $3,500+/mo before payroll tax.",
+          "Circuit Coders builds the front door it all hangs on — a fast, custom site that ranks and captures leads — for $499 flat, 48-hour turnaround, with one round of revisions and a free mockup before you pay a dime. It's custom Next.js on Vercel, not a $30 template that loads in 6 seconds and tanks your Google ranking.",
+          "Want the actual booking, missed-call text-back, or reservation/Stripe wiring? Those plug in as $200–$500 add-ons, quoted up front, no surprises. Hosting and ongoing updates are optional at $50/mo — and optional means optional.",
+        ],
+        callout: "The math is simple: one $4,000 job you would've lost to voicemail pays for the whole build eight times over.",
+      },
+      {
+        heading: "See it before you spend a dollar",
+        paragraphs: [
+          "We're in Fallbrook and we build for North County trades — plumbers, electricians, HVAC, roofers, GCs from Pala to the coast. We'll audit your current site and Google presence and show you exactly where calls are leaking out, free.",
+          "If it makes sense, we'll send a free mockup of your new site first. You only pay the $499 if you like what you see. No retainer, no \"strategy call,\" no agency runaround — just a site that answers the phone so you don't have to.",
+        ],
+        callout: "Free audit, free mockup, $499 flat, live in 48 hours. Text us the trade and the cities you cover and we'll show you what we'd build.",
+      },
+    ],
+    faqs: [
+      { q: "How much does an AI receptionist cost for a small contractor?", a: "AI receptionist platforms typically run $300–$500/mo, and human answering services run $250–$600/mo. We build the website and lead-capture front end for a $499 flat fee, with booking and missed-call text-back as $200–$500 add-ons." },
+      { q: "Will an AI receptionist actually book jobs or just take messages?", a: "A good one books straight into your calendar and texts you the lead details within 30 seconds — name, address, and the problem. For big-ticket jobs it should hand off to you rather than guess." },
+      { q: "How long until a new contractor website starts ranking on Google?", a: "We deliver the site in 48 hours, but local Google rankings typically take 60–90 days of consistent reviews, citations, and per-city service pages before you crack the Map Pack." },
+      { q: "Do I need a chatbot on my contractor website?", a: "No. Homeowners with a burst pipe or a dead AC call — they don't type into a pop-up. Skip the chatbot and put a click-to-call button and a missed-call text-back in its place." },
+      { q: "Can an AI receptionist answer calls in Spanish?", a: "Yes, and for North County it should. A large share of homeowners in Oceanside, Vista, and San Marcos speak Spanish, and answering in their language wins jobs your English-only competitors lose." },
+    ],
+  },
+  {
     slug: "web-design-san-marcos",
     title: "Web Design in San Marcos CA",
     description: "Honest web design for San Marcos businesses. What a fast, custom site should cost, what to cut, and how to rank for 'your service + San Marcos' — built in 48 hours flat.",
