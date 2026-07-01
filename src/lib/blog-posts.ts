@@ -20,6 +20,110 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ai-receptionist-auto-shops",
+    title: "AI Receptionist for Auto & Collision Shops",
+    description: "Auto and collision shops lose booked bays and tow-ins to voicemail every day. Here's how an AI receptionist answers 24/7 — and how to set it up for under $499.",
+    keywords: ["ai receptionist auto shop", "answering service for auto repair", "collision shop lead capture", "missed call text back auto shop", "auto repair phone answering", "body shop answering service", "Oceanside auto repair website", "Vista collision shop SEO", "North County San Diego auto shops"],
+    publishedAt: "2026-07-01",
+    updatedAt: "2026-07-01",
+    readTime: 7,
+    category: "Tech",
+    author: "Circuit Coders",
+    heroTag: "AI RECEPTIONIST · AUTO & COLLISION · NORTH COUNTY",
+    sections: [
+      {
+        heading: "You're under a lift in Vista when the phone rings",
+        paragraphs: [
+          "You can't answer it. You're under a Silverado on the lift, torquing lugs on an alignment, or walking a customer through an estimate in the lobby. The phone buzzes in your pocket, you can't get to it, and most callers who hit a shop's voicemail just hang up and dial the next name on Google.",
+          "That's not a missed call. That's a missed car. The average shop in North County misses roughly 1 in 4 inbound calls, and the jobs on the other end aren't small — a brake-and-rotor job runs $400–$700, a transmission $3,000+, and a full collision repair $2,000–$6,000. Miss a few of those a month and you've handed the shop down the street revenue you never even knew rang.",
+          "It's worse for collision. Somebody just got rear-ended on the 76 and they're calling three body shops from the tow lot, insurance card in hand. The first shop that picks up gets the car. The other two get a voicemail nobody checks until Monday.",
+          "An AI receptionist isn't a robot butchering a script. It's a voice — or a text — that picks up on the first ring, answers the caller's question, books the drop-off, captures the insurance claim, and texts you the details while you keep both hands on the job.",
+        ],
+        callout: "A rear-end collision on the 78 is a $4,000 repair. The first shop that answers gets the car; the other two get a voicemail.",
+      },
+      {
+        heading: "What an AI receptionist actually does for an auto or collision shop",
+        paragraphs: [
+          "Forget the sci-fi version. For a general repair shop in Oceanside or a body shop in San Marcos, the job is simple: answer fast, capture the lead, and never let a real customer fall through to voicemail. A good setup runs 24/7, so the Saturday-night \"I just got hit\" call gets caught instead of dying in a mailbox.",
+          "The bar is whether a stranger with a broken car can get a straight answer and a booked slot without you touching your phone. Here's what that looks like in a real shop.",
+        ],
+        list: {
+          title: "What a real shop AI receptionist should do",
+          items: [
+            "Answer every call on the first ring — including nights, weekends, and when every bay is slammed",
+            "Text-back any missed call within 30 seconds so the caller doesn't dial the next shop",
+            "Ask the questions that matter: year/make/model, what's wrong, and cash job or insurance",
+            "Book the drop-off straight into your scheduling calendar (or hand off to your writer for the big stuff)",
+            "For collision, capture the insurance carrier and claim number and flag DRP jobs on the spot",
+            "Quote pre-set ranges ($60–$120 oil change, $150 diagnostic) so price-shoppers self-qualify",
+            "Route after-hours accident and tow-in calls straight to your cell, and speak Spanish when the caller does",
+          ],
+        },
+      },
+      {
+        heading: "What to cut — the gimmicks that cost you cars",
+        paragraphs: [
+          "Most \"AI for business\" pitches are built to wow at a trade show, not to book a bumper repair in Bonsall. The features that demo well are usually the exact ones that annoy a driver who's stranded with a dead car.",
+          "Cut anything that adds a step between \"my car won't start\" and \"bring it in.\" Every extra menu, click, or upsell is another spot where a paying customer gives up and calls someone else.",
+        ],
+        list: {
+          title: "Skip all of this",
+          items: [
+            "A website chatbot pop-up — a driver stuck on the shoulder calls, they don't type",
+            "\"Press 1 for parts, press 2 for service\" phone trees that bury a stressed caller",
+            "A bot that can't hand a $5K collision claim and its adjuster off to a real human",
+            "Generic overseas call centers that don't know the 76 from the 78",
+            "Monthly \"AI platforms\" charging $300–$500/mo for features you'll never switch on",
+            "Anything that captures the lead but doesn't text it to you for hours",
+          ],
+        },
+        callout: "If a feature doesn't end in a car on your lift or a text on your phone, it's decoration. Cut it.",
+      },
+      {
+        heading: "Get found before the phone even rings",
+        paragraphs: [
+          "An AI receptionist only matters if calls come in. For shops, that means winning the Google Map Pack — the three businesses that show up when someone searches \"auto repair near me,\" \"collision repair Oceanside,\" or \"brake repair Vista.\" That's where the cars are, and claiming your spot is mostly free.",
+          "Local SEO for shops is unglamorous and it works. Nail the basics below and you'll outrank a shop that's been on the same corner for 20 years but never once touched its Google Business Profile.",
+        ],
+        list: {
+          title: "The local SEO checklist for shops",
+          items: [
+            "Claim and fully fill your Google Business Profile — hours, services, and 10+ real photos including before/after collision work",
+            "Match your Name, Address, Phone exactly across Yelp, Carwise, RepairPal, BBB, and 15–20 directory citations",
+            "Build a page per service per city: \"brake repair Vista,\" \"collision repair Carlsbad,\" \"check engine light Oceanside\"",
+            "Add LocalBusiness + AutoRepair schema.org markup so Google reads your services and service area",
+            "Ask every happy customer for a Google review by text — aim for 1–2 new reviews a week",
+            "List your real service-area cities and the insurance carriers you work with: Fallbrook, Bonsall, Oceanside, Vista, San Marcos, Carlsbad",
+          ],
+        },
+      },
+      {
+        heading: "What a receptionist actually costs — and what we charge",
+        paragraphs: [
+          "A human answering service runs $250–$600/mo and still misses your after-hours accident calls or bills per minute when the phones blow up. The slick AI-receptionist SaaS platforms quote $300–$500/mo plus setup, and you rent it forever. A full-time front-desk hire is $3,500+/mo before payroll tax.",
+          "Circuit Coders builds the front door it all hangs on — a fast, custom site that ranks and captures leads — for $499 flat, 48-hour turnaround, with one round of revisions and a free mockup before you pay a dime. It's custom Next.js on Vercel, not a $30 template that loads in 6 seconds and tanks your Google ranking.",
+          "Want the actual booking, missed-call text-back, or insurance-intake wiring? Those plug in as $200–$500 add-ons, quoted up front, no surprises. Hosting and ongoing updates are optional at $50/mo — and optional means optional.",
+        ],
+        callout: "The math is simple: one $4,000 collision job you'd have lost to voicemail pays for the whole build eight times over.",
+      },
+      {
+        heading: "See it before you spend a dollar",
+        paragraphs: [
+          "We're in Fallbrook and we build for North County shops — general repair, collision, tire, transmission, and detail, from Pala to the coast. We'll audit your current site and Google presence and show you exactly where calls are leaking out, free.",
+          "If it makes sense, we'll send a free mockup of your new site first. You only pay the $499 if you like what you see. No retainer, no \"strategy call,\" no agency runaround — just a site that answers the phone so you don't have to climb out from under the car.",
+        ],
+        callout: "Free audit, free mockup, $499 flat, live in 48 hours. Text us your shop and the cities you cover and we'll show you what we'd build.",
+      },
+    ],
+    faqs: [
+      { q: "How much does an AI receptionist cost for a small auto shop?", a: "AI receptionist platforms typically run $300–$500/mo, and human answering services run $250–$600/mo. We build the website and lead-capture front end for a $499 flat fee, with booking and missed-call text-back as $200–$500 add-ons." },
+      { q: "Can an AI receptionist handle insurance and collision calls?", a: "Yes. A good setup captures the carrier and claim number, texts you the details within 30 seconds, and flags DRP jobs — then hands the big claims and adjuster conversations off to a human instead of guessing." },
+      { q: "How long until a new auto shop website starts ranking on Google?", a: "We deliver the site in 48 hours, but local Google rankings typically take 60–90 days of consistent reviews, citations, and per-city service pages before you crack the Map Pack." },
+      { q: "Do I need a chatbot on my auto shop website?", a: "No. A driver with a dead car or a check-engine light calls — they don't type into a pop-up. Skip the chatbot and put a click-to-call button and a missed-call text-back in its place." },
+      { q: "Can an AI receptionist answer calls in Spanish?", a: "Yes, and for North County it should. A large share of drivers in Oceanside, Vista, and San Marcos speak Spanish, and answering in their language wins jobs your English-only competitors lose." },
+    ],
+  },
+  {
     slug: "ai-receptionist-contractors",
     title: "AI Receptionist for Contractors — Stop Losing Jobs to Voicemail",
     description: "Contractors miss 1 in 4 calls and lose jobs to voicemail. Here's how an AI receptionist books work 24/7 — and how to set it up for under $499.",
