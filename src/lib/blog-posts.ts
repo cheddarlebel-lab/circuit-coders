@@ -20,6 +20,116 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "google-maps-ranking-near-me",
+    title: "How to Rank in the Google Maps \"Near Me\" Pack",
+    description: "The Google Maps 3-pack takes nearly half the clicks on 'near me' searches. Here's what actually moves your ranking — and what's a waste of money.",
+    keywords: ["rank google maps near me", "google maps ranking", "google business profile optimization", "local map pack SEO", "near me search ranking", "local SEO North County San Diego", "google reviews Oceanside", "local citations Carlsbad", "web design Fallbrook"],
+    publishedAt: "2026-07-02",
+    updatedAt: "2026-07-02",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "LOCAL SEO · GOOGLE MAPS · NEAR ME",
+    sections: [
+      {
+        heading: "The Map Pack Eats First — and You're Probably Not in It",
+        paragraphs: [
+          "Search 'plumber near me' from a driveway in Vista and Google shows three businesses on a map before anything else. Those three get the call. Everyone else — including page one of the regular results — is fighting over scraps.",
+          "The numbers back this up: the local 3-pack pulls roughly 44% of clicks on searches with local intent, and 'near me' searches are almost pure buying intent. Someone in Oceanside typing 'transmission shop near me' at 4pm needs a transmission shop today, not a brand story. If you're a Fallbrook contractor, a Carlsbad detailer, or a San Marcos restaurant and you're not in that pack, you're invisible at the exact moment people are ready to spend.",
+          "The good news: most North County businesses do this so badly that the bar is low. Half the Google Business Profiles I audit are unclaimed, miscategorized, or haven't seen a new photo since 2023. You don't need to outspend anyone. You need to out-execute three competitors.",
+        ],
+      },
+      {
+        heading: "How Google Picks the Three Names on the Map",
+        paragraphs: [
+          "Google says map rankings come down to three things: proximity, relevance, and prominence. Translation: how close you are to the searcher, how well your profile matches what they typed, and how much evidence exists that you're a real, active business.",
+          "Proximity you can't control. If the searcher is standing in Bonsall and your shop is in Encinitas, the Bonsall competitor has a head start no budget buys back. Stop worrying about it and pour everything into the two factors you can move.",
+          "Relevance is your categories, services, and the words on your profile and website. Prominence is reviews, citations, photos, and a real site that loads fast. Every action in this post targets one of those two — nothing else matters.",
+        ],
+      },
+      {
+        heading: "Fix Your Google Business Profile First — It's 80% of the Battle",
+        paragraphs: [
+          "Your Google Business Profile is the single biggest lever in map rankings, and it's free. Claim it at google.com/business, verify it, and treat it like a second homepage — because for 'near me' searches, it is your homepage.",
+          "The primary category is the highest-weight field on the entire profile. 'Auto Repair Shop' vs 'Auto Body Shop' is the difference between showing up for 'mechanic near me' and not existing. Pick the exact category for your money service, then add 3–5 secondary categories for everything else you do.",
+        ],
+        list: {
+          title: "Do these this week:",
+          items: [
+            "Set the exact primary category for your money service — not something close, the exact one",
+            "Fill out every service with a real description; Google matches these against searches",
+            "Upload 3–5 real photos a month — your shop, your crew, your work; no stock images",
+            "Write a description that names your services and your cities: Fallbrook, Bonsall, Vista, Oceanside",
+            "Keep hours accurate including holidays — showing 'Closed' when you're open kills calls",
+            "Post weekly: offers, finished jobs, before-and-afters — it takes 5 minutes",
+          ],
+        },
+        callout: "An unclaimed or half-empty profile isn't neutral — Google reads it as a business that might not exist. Claim it today, not this quarter.",
+      },
+      {
+        heading: "Reviews, Citations, and City Pages — the Boring Stuff That Ranks",
+        paragraphs: [
+          "Reviews are the biggest prominence signal you control. Count matters, but velocity matters more: 1–2 new reviews a week beats a pile of 50 from 2022. Ask every happy customer the same day with a direct review link, and respond to every review within 48 hours — especially the bad ones.",
+          "Citations are listings of your name, address, and phone number across directories. Google cross-checks them, so your NAP has to match character for character everywhere it appears. You need 30–40 consistent citations, not 300 — and the ones that matter most are free and take one afternoon.",
+          "Then there's your website. Google reads the landing page behind your profile, and a one-page template with no city names gives it nothing to work with. Build a page per service-plus-city pattern — 'drywall repair Oceanside,' 'pool service San Marcos' — and add schema.org LocalBusiness markup so Google can parse your hours, service area, and reviews without guessing.",
+        ],
+        list: {
+          title: "Free citations worth doing first:",
+          items: [
+            "Yelp",
+            "Apple Business Connect (Apple Maps)",
+            "Bing Places",
+            "Better Business Bureau",
+            "Nextdoor",
+            "Facebook business page",
+            "Your local chamber — Fallbrook, Vista, and Oceanside chambers all list members online",
+          ],
+        },
+      },
+      {
+        heading: "What to Cut (You're Probably Paying for Some of This)",
+        paragraphs: [
+          "Half of the local SEO money spent in North County goes to things Google ignores or actively punishes. If any of this shows up on your invoice, cancel it and put the money into photos and review asks instead.",
+          "None of these are edge cases — I see at least two of them on almost every audit I run between Fallbrook and Oceanside. Cutting them is the fastest ROI in this entire post.",
+        ],
+        list: {
+          title: "Stop paying for:",
+          items: [
+            "Keyword-stuffed business names ('Bob's Plumbing – Best Plumber Near Me Oceanside') — against Google's guidelines, and profiles get suspended for it",
+            "Bought or gated reviews — Google filters them, and the FTC can fine up to $51,744 per fake review",
+            "$99/mo 'citation blasting' that sprays your NAP across 300 junk directories — 30 clean listings beat 300 sloppy ones",
+            "National backlink packages — one link from a Carlsbad news site beats 50 from overseas blog farms",
+            "'Near me' stuffed into every page title — Google supplies the location; stuffing it reads as spam",
+            "A chatbot on your site — for a local service business, it's a tax on real customers who just want your phone number",
+          ],
+        },
+      },
+      {
+        heading: "What This Should Actually Cost",
+        paragraphs: [
+          "Local SEO agencies around North County quote $500–$1,500 a month for 'map pack management.' Read the deliverables: GBP posts, review responses, a citation audit. That's 2–3 hours of real work a month dressed up as a retainer.",
+          "Here's the honest breakdown. The profile and citation setup is one-time work you can do yourself in a weekend using this post. The ongoing part — photos, weekly posts, review asks — is 20 minutes a week. The one piece most owners can't DIY is the website: city pages, LocalBusiness schema, and load times under a second.",
+          "That's the part we handle. Circuit Coders builds custom Next.js sites on Vercel for $499 flat, delivered in 48 hours, with schema and service-city pages built in — not a $3,000 agency build or a drag-and-drop template Google can barely read. Hosting and updates are optional at $50/mo, and add-ons like booking or Stripe run $200–$500.",
+        ],
+      },
+      {
+        heading: "The 60–90 Day Reality Check",
+        paragraphs: [
+          "None of this is instant. Do everything above and expect map movement in 60–90 days for most North County verticals — competitive niches like plumbing or law in Carlsbad can take 4–6 months because everyone's fighting for the same three spots. Track progress by searching your service from an incognito window at a few spots around town, not from your own shop.",
+          "But it compounds. The reviews you earn this month still rank you next year, and the profile you fix this weekend works while you sleep. The businesses sitting in the pack today are mostly there because they started six months before you did. Start now.",
+        ],
+        callout: "Want to know exactly why you're not in the pack? Send us your business name — we'll audit your profile and site free, and mock up a new site at no charge. If you like it, it's $499 flat and live in 48 hours.",
+      },
+    ],
+    faqs: [
+      { q: "How long does it take to rank in the Google Maps 3-pack?", a: "Expect 60–90 days for most North County verticals after fixing your Google Business Profile, reviews, and citations. Competitive niches like plumbing or personal injury law in Carlsbad can take 4–6 months." },
+      { q: "How many Google reviews do I need to show up in 'near me' searches?", a: "Match or beat the review counts of the businesses currently in the pack — in most North County verticals that's 30–50 reviews. Velocity matters more than the total: 1–2 new reviews a week signals an active business." },
+      { q: "Should I put 'near me' in my website titles and content?", a: "No — Google inserts the searcher's location automatically, so stuffing 'near me' reads as spam. Build 3–5 real 'service + city' pages like 'landscaping Vista' instead; they outrank any amount of 'near me' stuffing." },
+      { q: "Does my website actually affect Google Maps rankings?", a: "Yes. Google reads the landing page linked from your profile for relevance and prominence signals, so a fast site with city pages and LocalBusiness schema typically moves map rankings within the same 60–90 day window as everything else." },
+      { q: "Can I just pay Google to appear in the map pack?", a: "Sort of — Local Services Ads and sponsored map pins place you above the organic pack at roughly $25–$85 per lead depending on the vertical. The three organic spots can't be bought, which is exactly why they're worth the 90-day grind." },
+    ],
+  },
+  {
     slug: "ai-receptionist-auto-shops",
     title: "AI Receptionist for Auto & Collision Shops",
     description: "Auto and collision shops lose booked bays and tow-ins to voicemail every day. Here's how an AI receptionist answers 24/7 — and how to set it up for under $499.",
