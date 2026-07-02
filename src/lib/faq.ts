@@ -15,7 +15,7 @@ export const FAQS: FaqItem[] = [
   },
   {
     q: "What is the AI receptionist, and can I try it?",
-    a: "It's a bilingual (English/Spanish) AI voice agent that answers every call 24/7, books appointments, qualifies leads, and texts you the details — so you never lose a job to voicemail. You can call our live demo line and talk to it yourself: (760) 546-9189.",
+    a: "It's a bilingual (English/Spanish) AI voice agent that answers every call 24/7, books appointments, qualifies leads, and texts you the details — so you never lose a job to voicemail. It starts at $500 setup + $297/mo. You can call our live demo line and talk to it yourself: (760) 546-9189.",
   },
   {
     q: "How long does a project take?",

@@ -295,7 +295,7 @@ export const services = [
     description:
       "A bilingual voice agent that answers every call 24/7, books and qualifies the job, and texts you the details. Hear ours live — call (760) 546-9189.",
     icon: "PhoneCall",
-    tag: "Live demo → (760) 546-9189",
+    tag: "From $500 setup + $297/mo",
     features: ["24/7 call answering", "Books & qualifies leads", "Bilingual (EN / ES)", "Texts you every caller"],
   },
   {
