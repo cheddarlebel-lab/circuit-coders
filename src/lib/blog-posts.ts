@@ -20,6 +20,97 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "website-cost-small-business-2026",
+    title: "Small Business Website Cost in 2026: Real Numbers, No Agency Math",
+    description: "Agencies quote $5,000. DIY builders bleed you $600 a year. Here's what a small business website actually costs in 2026 — and what you should pay.",
+    keywords: ["small business website cost", "how much does a website cost 2026", "web design pricing San Diego", "affordable website North County", "Wix vs custom website cost", "web designer Fallbrook", "website cost Oceanside", "flat rate web design Carlsbad"],
+    publishedAt: "2026-07-03",
+    updatedAt: "2026-07-03",
+    readTime: 7,
+    category: "Pricing",
+    author: "Circuit Coders",
+    heroTag: "PRICING · 2026 · REAL NUMBERS",
+    sections: [
+      {
+        heading: "Nobody Will Give You a Straight Number",
+        paragraphs: [
+          "Ask five people in North County what a website costs and you'll get five answers spread across a full order of magnitude. A guy on Craigslist in Vista says $300. A freelancer in San Marcos quotes $1,800. An agency in Carlsbad wants $6,500 and a 'discovery call' before they'll even say that out loud.",
+          "The reason nobody gives you a number is that the number is the negotiation. Agencies price on what they think you can pay, not what the work costs. A landscaper in Fallbrook and a med spa in Del Mar can get quoted 4x apart for the same five-page site.",
+          "Here's the actual math, with real 2026 numbers, so you can walk into any conversation knowing when you're being played.",
+        ],
+      },
+      {
+        heading: "The Four Ways to Buy a Website in 2026",
+        paragraphs: [
+          "Every option on the market falls into one of four buckets. The sticker price is only half the story — what matters is total cost over three years, because that's roughly how long a small-business site lives before a rebuild.",
+          "Run the three-year math and the 'cheap' options stop looking cheap. A $23/mo Wix plan is $828 over three years, and you did all the work yourself, at night, badly.",
+        ],
+        list: {
+          title: "What each path actually costs",
+          items: [
+            "DIY builder (Wix, Squarespace, GoDaddy): $16–$49/mo, so $576–$1,764 over 3 years — plus 20–40 hours of your own time, which is not free",
+            "Freelancer: $1,200–$3,000 up front, 3–6 week turnaround, and a coin flip on whether they answer email in month eight",
+            "Traditional agency: $4,000–$10,000 up front, 6–10 weeks, plus a $150–$250/mo 'maintenance retainer' they'll insist you need",
+            "Flat-rate shop: a fixed price, a fixed turnaround, and you own the site — this is the bucket Circuit Coders lives in at $499 flat",
+          ],
+        },
+      },
+      {
+        heading: "The Costs That Never Show Up on the Quote",
+        paragraphs: [
+          "The up-front number is where the honesty ends for most of this industry. The real money is in the recurring line items that appear after you've signed, when switching feels harder than paying.",
+          "A WordPress site is the worst offender. Between premium theme renewals, plugin licenses, and the hosting the agency 'manages' for you at a 300% markup, a $3,000 build quietly becomes $5,500 by year three.",
+          "Read every quote for these words: retainer, license, per-page, per-revision. Each one is a meter running on your money.",
+        ],
+        list: {
+          title: "What to cut from any proposal",
+          items: [
+            "Maintenance retainers of $150–$250/mo for a five-page brochure site — a static site doesn't need babysitting",
+            "Per-page pricing ($200/page 'after the first five') — pages are not the expensive part",
+            "Managed hosting at $50–$100/mo for traffic a free Vercel tier handles without breaking a sweat",
+            "Stock photo licensing fees — your phone shoots 4K; a real photo of your shop in Oceanside beats a stock handshake every time",
+            "'SEO packages' at $500/mo that are a rank-tracking dashboard and a monthly PDF",
+            "Revision charges of $75–$150/hr starting at revision one — one full round should be included, in writing",
+          ],
+        },
+        callout: "If a proposal has more recurring line items than one, the business model is the subscription, not the website.",
+      },
+      {
+        heading: "The Cheapest Line Item Is the One That Makes the Phone Ring",
+        paragraphs: [
+          "Here's what agencies don't tell you: for a local business, the website is half the job. The other half is local SEO, and most of it costs nothing but attention.",
+          "Your Google Business Profile is free and it's where 'plumber near me' searches in Bonsall actually get decided. Fill out every field, pick precise categories, upload 10+ real photos, and answer every review within 48 hours. A complete profile outranks a half-finished one from a bigger competitor more often than you'd think.",
+          "On the site itself, three things matter: a page or section targeting each '[service] + [city]' pattern you actually serve — 'drywall repair Vista,' 'dog grooming San Marcos' — schema.org LocalBusiness markup so Google can parse your name, address, and hours without guessing, and consistent citations (same exact name/address/phone on Yelp, Apple Maps, and the big directories). Mismatched citations are the silent killer; one old address from your 2019 location in Pala can drag your whole map ranking down.",
+        ],
+        callout: "For local queries, a $499 site with correct schema and a maxed-out Business Profile beats a $6,000 site without them. Every time.",
+      },
+      {
+        heading: "Agency Math vs. $499 Flat",
+        paragraphs: [
+          "So why can Circuit Coders charge $499 when the shop up the road in Carlsbad charges $6,000? Because the $6,000 isn't paying for your website. It's paying for their project manager, their office, their sales guy's commission, and the four meetings you didn't need.",
+          "The build itself — custom Next.js, deployed on Vercel, no theme licenses, no plugin stack to maintain — takes a competent developer a day or two. So that's what we charge for: $499 flat, live in 48 hours, one full round of revisions included. You see a free mockup before paying a dollar.",
+          "Hosting and updates are optional at $50/mo, not mandatory, and you can leave anytime — you own the site and the domain. Need more than a brochure site? Reservations, Stripe payments, and booking integrations are quoted straight: $200–$500 per add-on, priced before work starts, not discovered on an invoice after.",
+        ],
+      },
+      {
+        heading: "What This Looks Like in Real Life",
+        paragraphs: [
+          "A detailing shop paying $215/mo across Wix, a booking plugin, and an 'SEO tool' is spending $2,580 a year to look worse than a $499 site that costs $0–$50 a month to run. That's not a close call. That's a rounding error versus a car payment.",
+          "The pattern across North County is the same everywhere: owners overpay for the build, overpay again for the maintenance, and underinvest in the one thing that drives calls — showing up when someone in their city searches for what they do.",
+          "You don't have to take any of this on faith. Send us your current site, or just your business name if you don't have one, and we'll tell you exactly what we'd build and show you the mockup first.",
+        ],
+        callout: "Free mockup, no deposit, no call required. $499 flat if you like it, live in 48 hours. If you don't like it, you've spent nothing.",
+      },
+    ],
+    faqs: [
+      { q: "How much should a small business website cost in 2026?", a: "For a standard 4–7 page local business site: $499–$1,500 is fair, $3,000+ means you're paying for agency overhead. Circuit Coders builds them at $499 flat with a 48-hour turnaround." },
+      { q: "Isn't Wix or Squarespace cheaper than hiring someone?", a: "Only in month one. At $16–$49/mo you'll spend $576–$1,764 over three years, plus 20–40 hours of your own time building it. A $499 one-time build with optional $50/mo hosting is usually cheaper by year two." },
+      { q: "How long does it take to build a small business website?", a: "Agencies typically quote 6–10 weeks. A flat-rate shop working from a mockup you've already approved can go live in 48 hours." },
+      { q: "Do I have to pay monthly for my website?", a: "No. A static Next.js site on Vercel can run on a free hosting tier. We offer hosting plus content updates at an optional $50/mo, and you can cancel anytime because you own the site." },
+      { q: "How long until a new website ranks on Google?", a: "For local '[service] + [city]' searches in North County, expect movement in 60–90 days if the site has proper schema.org markup, a completed Google Business Profile, and consistent citations. Competitive non-local keywords take 6–12 months." },
+    ],
+  },
+  {
     slug: "google-maps-ranking-near-me",
     title: "How to Rank in the Google Maps \"Near Me\" Pack",
     description: "The Google Maps 3-pack takes nearly half the clicks on 'near me' searches. Here's what actually moves your ranking — and what's a waste of money.",
