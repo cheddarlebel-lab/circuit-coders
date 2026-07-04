@@ -20,6 +20,121 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "missed-calls-cost-business",
+    title: "How Many Jobs Missed Calls Are Costing Your Business",
+    description: "Every missed call is a job that went to the next shop on Google Maps. Here's the real math for North County businesses — and fixes that don't cost $300/mo.",
+    keywords: ["missed calls costing business", "missed call text back", "AI receptionist for small business", "answering service cost", "small business phone leads", "Google Business Profile calls", "Oceanside small business", "North County San Diego"],
+    publishedAt: "2026-07-04",
+    updatedAt: "2026-07-04",
+    readTime: 7,
+    category: "Tech",
+    author: "Circuit Coders",
+    heroTag: "MISSED CALLS · REAL MATH · NORTH COUNTY",
+    sections: [
+      {
+        heading: "The Call You Missed Went to the Next Shop on the List",
+        paragraphs: [
+          "You're under a sink in Vista or halfway through a ceramic coat in Fallbrook and the phone rings. You let it go to voicemail because you're working — which is exactly the problem. That caller found you on Google Maps, waited four rings, and tapped the next listing.",
+          "The industry numbers are ugly: roughly 62% of calls to small businesses go unanswered, and about 85% of people who hit voicemail never call back. They don't leave a message. They book with whoever picks up.",
+          "In North County, that competitor is never far. Search 'mobile detailing Oceanside' or 'plumber San Marcos' and the map pack hands the caller three businesses side by side. If you're #1 and don't answer, #2 gets the job — your ranking did the marketing and someone else cashed the check.",
+        ],
+      },
+      {
+        heading: "Do the Actual Math on Your Own Phone",
+        paragraphs: [
+          "Pull up your call log from last week. Count the missed calls from numbers you don't recognize during business hours. That's not an inconvenience — that's your leak, and it has a dollar figure.",
+          "For a detailing shop charging $150–$250 a job: miss 10 calls a week, and if even 3 of those would have booked at $200 average, that's $600 a week. Run it out and you're at $31,200 a year walking to the next listing while you were busy doing the work that was supposed to pay you.",
+          "It gets worse the bigger your ticket is. Trades and service businesses with $300+ call-outs are bleeding a used truck's worth of revenue every year, one unanswered ring at a time.",
+        ],
+        list: {
+          title: "The leak, by trade",
+          items: [
+            "Mobile detailer (Fallbrook/Bonsall): $150–$250 per job, 3 missed bookings a week ≈ $31,000/year",
+            "Plumber (San Marcos): $350 average call-out, 2 missed bookable calls a week ≈ $36,400/year",
+            "HVAC (Carlsbad): $450 average repair, 2 missed a week ≈ $46,800/year",
+            "Dog groomer (Vista): $85 a groom, but grooming is repeat business — one missed new client is $1,000+ in lifetime revenue",
+            "Restaurant (Oceanside): a missed reservation call at 5pm Friday is a four-top you never see and never count",
+          ],
+        },
+        callout: "You probably don't have a marketing problem. You have an answering problem.",
+      },
+      {
+        heading: "Fix It This Week: A Phone That Answers Itself",
+        paragraphs: [
+          "You can't answer while you're elbow-deep in a job, and you shouldn't hire a $20/hour person to sit by the phone. The fix is plumbing: every missed call gets an instant, automatic response that keeps the caller from moving down the list.",
+          "The single highest-ROI move is missed-call text-back. The caller hangs up, and within seconds they get a text: 'This is Leo at Circuit Detailing — on a job right now. Text me what you need or grab a slot here.' That one message recovers callers who would never have left a voicemail, because texting back takes them zero effort.",
+        ],
+        list: {
+          title: "Set these up, in order",
+          items: [
+            "Missed-call text-back: instant automatic text with your name and a booking link — recovers a big chunk of callers who'd otherwise dial the next shop",
+            "A booking link that works on a phone: tap, pick a slot, done — not a form with 11 fields",
+            "After-hours answering: an AI receptionist that picks up at 8pm, answers your top 10 questions, and books the job while you're at dinner",
+            "A 10-second voicemail: your name, when you call back, and 'I just texted you a booking link' — then actually text it",
+            "Google Business Profile call history turned on, so you can see exactly which Maps calls you missed and when they cluster",
+          ],
+        },
+      },
+      {
+        heading: "What to Cut",
+        paragraphs: [
+          "Half the 'solutions' sold to small businesses make the missed-call problem worse. They add friction for the 30 seconds a caller is willing to give you, and the caller responds by leaving.",
+          "Be honest about what your customer actually wants: a human or a booked appointment, fast. Anything standing between the ring and one of those two outcomes is costing you jobs.",
+        ],
+        list: {
+          title: "Kill these today",
+          items: [
+            "The four-option phone tree. You're a two-person shop, not Kaiser.",
+            "The 'your call is very important to us' greeting. It's 25 seconds of nothing, and they hung up at second 8.",
+            "The website chatbot. For a detailing shop, a chatbot is a tax on real customers — they wanted your number, not a conversation with a widget.",
+            "The $300/mo answering service that reads a script, mangles the address, and texts you the message an hour after the caller booked elsewhere.",
+            "A contact form as your only fallback. 'We'll respond within 1–2 business days' is a joke to someone with a burst pipe.",
+          ],
+        },
+        callout: "Every second between the missed ring and your response is a second the caller spends looking at your competitor's listing.",
+      },
+      {
+        heading: "Your Maps Ranking and Your Missed Calls Are the Same Problem",
+        paragraphs: [
+          "Almost every call worth answering starts as a '[service] + [city]' search — 'electrician Vista,' 'dog groomer Fallbrook,' 'auto glass Oceanside.' Your Google Business Profile is the faucet, and the phone is where the water comes out. Fixing one without the other is pointless: ranking #1 and missing calls is paying for leads and shredding them.",
+          "So do both jobs at once. The same 60–90 days it takes to move in the map pack is plenty of time to get your answering stack in place, so the new calls actually convert when they arrive.",
+        ],
+        list: {
+          title: "The local SEO checklist that feeds the phone",
+          items: [
+            "Complete Google Business Profile: right primary category, real hours, photos from actual jobs — not stock",
+            "One phone number everywhere: site, GBP, Yelp, Nextdoor. Random call-tracking numbers that break NAP consistency cost you rankings.",
+            "LocalBusiness schema.org on your site with telephone, address, and areaServed for every city you cover — Fallbrook, Bonsall, Pala, wherever you actually drive",
+            "A page per city for '[service] + [city]' searches: 'pool service Bonsall' should land on a Bonsall page, not your homepage",
+            "Reviews that mention the city and the service — ask every happy customer, reply to every single one",
+          ],
+        },
+      },
+      {
+        heading: "What This Costs: Market Rates vs. $499 Flat",
+        paragraphs: [
+          "Here's what the market charges to solve this. Human answering services run $250–$400 a month — $3,000–$4,800 a year — to take messages. AI receptionist SaaS platforms run $99–$500 a month. And most local agencies want $3,000–$8,000 for the website before any of that even starts, on a 4–8 week timeline.",
+          "Circuit Coders does it differently: $499 flat for a custom Next.js site on Vercel, live in 48 hours, one round of revisions included. Missed-call text-back, booking, or Stripe integrations get quoted as $200–$500 one-time add-ons — not a monthly ransom. Hosting and updates are optional at $50/mo.",
+          "Run that against the math from earlier. One recovered plumbing call-out at $350 covers most of the build. One recovered week of detailing jobs covers the whole thing with money left over.",
+        ],
+      },
+      {
+        heading: "Find Out What You're Actually Missing",
+        paragraphs: [
+          "Most owners guess they miss 'a couple calls a week.' Then they turn on GBP call history and find out it's 10–15, clustered exactly when they're on jobs — because that's when customers need them. You can't fix a leak you haven't measured.",
+          "So measure it. Send us your business name and we'll audit your missed-call exposure and your Maps presence for free, and build a free mockup of what your site should look like. No deposit, no call required, no obligation.",
+        ],
+        callout: "Free missed-call and Maps audit, plus a free mockup first. If you like it: $499 flat, live in 48 hours. If you don't, you owe nothing.",
+      },
+    ],
+    faqs: [
+      { q: "How many calls does the average small business miss?", a: "Around 62% of calls to small businesses go unanswered, and about 85% of callers who hit voicemail never call back. For a shop getting 20 calls a week, that's roughly 12 jobs at risk." },
+      { q: "How much does a missed call actually cost my business?", a: "Multiply your average job value by the bookable calls you miss. A San Marcos plumber at $350 a call-out missing 2 bookable calls a week is losing about $36,400 a year." },
+      { q: "Is an answering service worth it for a small business?", a: "Human answering services run $250–$400 a month and mostly just take messages. A missed-call text-back plus after-hours AI answering, built once as a $200–$500 add-on to a $499 site, usually recovers more jobs for far less." },
+      { q: "Does answering more calls help my Google Maps ranking?", a: "Not directly — but the same Google Business Profile work that drives those calls (categories, reviews, citations, schema) typically moves map-pack rankings in 60–90 days, and answering is what turns the ranking into revenue." },
+    ],
+  },
+  {
     slug: "website-cost-small-business-2026",
     title: "Small Business Website Cost in 2026: Real Numbers, No Agency Math",
     description: "Agencies quote $5,000. DIY builders bleed you $600 a year. Here's what a small business website actually costs in 2026 — and what you should pay.",
