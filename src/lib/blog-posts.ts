@@ -20,6 +20,108 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "contractor-website-design-north-county",
+    title: "Contractor Website Design in North County San Diego: What Actually Wins Jobs",
+    description: "What a contractor website in North County actually needs to win jobs: license number up top, real project photos, city pages — $499 flat, live in 48 hours.",
+    keywords: ["contractor website design", "contractor website design North County", "general contractor website San Diego", "construction website design Oceanside", "contractor web design Carlsbad", "ADU builder website Vista", "contractor SEO Fallbrook", "website for contractors San Marcos"],
+    publishedAt: "2026-07-05",
+    updatedAt: "2026-07-05",
+    readTime: 7,
+    category: "Web Design",
+    author: "Circuit Coders",
+    heroTag: "CONTRACTORS · NORTH COUNTY · WEB DESIGN",
+    sections: [
+      {
+        heading: "The Guy With the Better Website Is Taking Your Bids",
+        paragraphs: [
+          "Here's how a kitchen remodel gets awarded in Carlsbad in 2026: the homeowner gets three quotes, then Googles all three names that night. Two contractors have nothing but a dead Facebook page and a Yelp profile with a photo from 2019. The third has a clean site with a license number, twenty project photos, and a tap-to-call button. Guess who gets the callback — even at the highest bid.",
+          "North County is one of the busiest residential markets in California right now. ADU permits are flying in Oceanside and Vista, rebuild and hardscape work keeps rolling through Fallbrook and Bonsall, and every remodeler in San Marcos is booked out weeks. The work is there. The question is whether homeowners can find you and trust you in the ninety seconds they spend checking you out.",
+          "I've watched contractors with 25 years of flawless work lose jobs to guys with 5 years and a decent website. That's not fair, but it's how it works. Your website isn't marketing fluff — it's the reference check that happens before anyone calls your references.",
+        ],
+      },
+      {
+        heading: "What Homeowners Actually Check Before They Call",
+        paragraphs: [
+          "A contractor website has one job: convince a stranger you're licensed, real, and good at the work — fast. Homeowners spending $40,000 on a remodel or $180,000 on an ADU are nervous. Every element on your site should reduce that nervousness or get cut.",
+          "Photos do most of the heavy lifting. Not one hero shot — a real gallery, organized by job type, so the Vista homeowner looking for a bathroom remodel doesn't have to scroll past your commercial tenant improvements to find one.",
+        ],
+        list: {
+          title: "The must-have list",
+          items: [
+            "Your CSLB license number in the header of every page — California homeowners verify it, so don't make them dig",
+            "10–15 real project photos organized by job type, each compressed under 200 KB so the page doesn't crawl",
+            "A tap-to-call phone number pinned on mobile — most of your traffic is a homeowner on a phone",
+            "A service-area section naming actual cities: Oceanside, Vista, Fallbrook, Bonsall, San Marcos — not 'San Diego and surrounding areas'",
+            "Before/after pairs for remodel work — one good pair outsells three paragraphs of copy",
+            "A 3-field quote form: name, phone, what's the job. That's it.",
+          ],
+        },
+      },
+      {
+        heading: "Cut This Stuff Today",
+        paragraphs: [
+          "Most contractor websites I audit in North County aren't missing things — they're buried in things. Somebody sold them a package in 2021 and bolted on every widget in the catalog. Every one of these slows the page down or gets between the homeowner and your phone number.",
+          "The worst offender is uncompressed photos. Contractors upload straight off the phone — 3–5 MB per image — and the gallery takes eight seconds to load on a job-site LTE connection. Half your visitors are gone before your best work ever renders.",
+        ],
+        list: {
+          title: "Delete without mercy",
+          items: [
+            "The chatbot. A homeowner with a failing retaining wall wants your number, not a robot asking how it can help.",
+            "Stock photos of models in clean hardhats — homeowners smell them instantly, and they read as 'hiding something'",
+            "The homepage image slider — nobody on earth waits for slide three",
+            "The 12-field 'consultation request' form asking for budget, timeline, and how they heard about you",
+            "Autoplay video, especially with sound",
+            "PDF brochures — nobody downloads a PDF on a phone standing in their unfinished kitchen",
+          ],
+        },
+        callout: "Every field you add to a contact form costs you leads. Three fields. Name, phone, job. Get the rest on the phone like you always have.",
+      },
+      {
+        heading: "Local SEO: How You Show Up for 'ADU Builder Oceanside'",
+        paragraphs: [
+          "Nobody searches 'contractor.' They search 'kitchen remodel Vista,' 'ADU builder Oceanside,' 'deck contractor Fallbrook.' If your website is one homepage that says you serve 'all of San Diego County,' Google has no reason to show you for any of those searches — and it won't.",
+          "The fix is a page per city you actually work, each one targeting a '[service] + [city]' pattern with real content: jobs you've done there, the neighborhoods, the permit quirks. Five to eight pages covers most North County contractors. Pair that with a properly built Google Business Profile and consistent citations, and you're ahead of 90% of the trucks you park next to at the supply house.",
+          "None of this is instant. With a clean site, an active profile, and matching citations, expect real movement in the map pack in 60–90 days. Anyone promising page one in two weeks is selling you something.",
+        ],
+        list: {
+          title: "The 60–90 day checklist",
+          items: [
+            "Claim and fully build your Google Business Profile — primary category, all services listed, service area set to your real cities",
+            "Upload 3–5 job photos to your profile every week; Google visibly rewards active profiles",
+            "Fix your name, address, and phone so they match exactly across Yelp, Angi, BBB, Houzz, and Nextdoor",
+            "Add LocalBusiness/GeneralContractor schema.org markup so Google reads your license, service area, and reviews as structured data",
+            "Build one page per city — 'Kitchen Remodels in Carlsbad,' 'ADU Construction in Oceanside' — with photos from actual local jobs",
+            "Ask every happy customer for a Google review while you're still in the driveway; reviews with your city and service named count double",
+          ],
+        },
+      },
+      {
+        heading: "What Contractor Websites Cost — and What They Should Cost",
+        paragraphs: [
+          "San Diego agencies quote contractors $3,000 to $10,000 for a website and take 6–8 weeks to deliver it. The contractor-specific marketing companies are sneakier: $300–$500 a month on a contract, and when you leave, the site leaves with you. And the 'free' website builders? $150–$250 a month once you add the plans that make them usable, forever, for a template site that loads slow.",
+          "A contractor site is not a $10,000 problem. It's a known set of pages — home, services, gallery, city pages, contact — done fast and done right. Circuit Coders builds it for $499 flat: custom-coded Next.js on Vercel, no template, no page builder bloat, live in 48 hours with one round of revisions included. You own everything.",
+          "Hosting and updates are optional at $50/month — swap project photos, add a review, tweak your service list, done same week. Need something heavier, like a financing application, scheduling, or Stripe deposits for small jobs? Those run $200–$500 as flat add-ons, quoted before any work starts. No retainers, no surprises on the invoice.",
+        ],
+      },
+      {
+        heading: "Here's the Build, Start to Finish",
+        paragraphs: [
+          "Take a remodeler in Vista working Vista, San Marcos, Carlsbad, and Escondido. The build: a homepage that loads in under a second with the license number in the header, a gallery of fifteen compressed job photos sorted into kitchens, baths, and additions, four city pages targeting '[remodel] + [city],' schema markup, and a pinned call button on mobile. That's the whole machine — nothing on it that doesn't produce a phone call.",
+          "You don't have to take my word for any of it. Send me your company name and I'll build the mockup first — your photos, your license, your cities — before you've paid anything. If it doesn't look like a site that wins bids, walk away and keep the opinion for free.",
+          "You're already outworking the competition on the job site. Stop losing to them on a Google search.",
+        ],
+        callout: "Free mockup first, $499 flat if you like it, live in 48 hours. No deposit, no contract, no monthly ransom. Text or email and it's on your screen this week.",
+      },
+    ],
+    faqs: [
+      { q: "How much should a contractor website cost in North County San Diego?", a: "Local agencies quote $3,000–$10,000 and take 6–8 weeks; contractor marketing companies charge $300–$500/month on contracts. Circuit Coders builds a custom-coded contractor site for $499 flat, live in 48 hours, and you own it outright." },
+      { q: "How long does it take to rank for 'contractor near me' in Oceanside or Vista?", a: "With a fast site, a fully built Google Business Profile, matching citations, and city pages, expect real map-pack movement in 60–90 days. Anyone promising page one in two weeks is lying to you." },
+      { q: "Do I need a separate page for every city I work in?", a: "Yes — one page per city you actually serve, targeting patterns like 'kitchen remodel Vista' or 'ADU builder Oceanside.' For most North County contractors that's 5–8 pages, and it's the single biggest local SEO lever you have." },
+      { q: "Should my CSLB license number be on my website?", a: "Absolutely — in the header of every page. Homeowners getting 3 quotes verify licenses on cslb.ca.gov before they call anyone back, and making them hunt for yours reads like you're hiding something." },
+      { q: "Can you add financing applications or online scheduling to my contractor site?", a: "Yes. Integrations like financing applications, scheduling tools, or Stripe deposits run $200–$500 as flat add-ons on top of the $499 build, quoted up front before any work starts." },
+    ],
+  },
+  {
     slug: "missed-calls-cost-business",
     title: "How Many Jobs Missed Calls Are Costing Your Business",
     description: "Every missed call is a job that went to the next shop on Google Maps. Here's the real math for North County businesses — and fixes that don't cost $300/mo.",
