@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { CC_SYSTEM_PROMPT, fallbackReply } from "@/lib/cc-knowledge";
+import { rateLimit } from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
 
@@ -26,6 +27,9 @@ function sanitize(messages: unknown): Msg[] {
 export async function POST(req: Request) {
   let lastUserText = "";
   try {
+    const limited = await rateLimit(req, "chat", 30, 600); // 30 / 10 min per IP (caps LLM cost abuse)
+    if (limited) return limited;
+
     const body = await req.json();
     const messages = sanitize(body?.messages);
     const lastUser = [...messages].reverse().find((m) => m.role === "user");

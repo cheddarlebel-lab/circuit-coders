@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ensureDb } from '@/lib/db';
 import { getStripe } from '@/lib/stripe';
+import { rateLimit } from '@/lib/rate-limit';
 import { randomUUID } from 'crypto';
 
 const PRINT_PRICING: Record<string, { price: number; label: string }> = {
@@ -10,6 +11,9 @@ const PRINT_PRICING: Record<string, { price: number; label: string }> = {
 };
 
 export async function POST(req: NextRequest) {
+  const limited = await rateLimit(req, 'shop-upload', 5, 600); // 5 / 10 min per IP (50MB blobs → DB-bloat guard)
+  if (limited) return limited;
+
   const stripe = getStripe();
   if (!stripe) return NextResponse.json({ error: 'Stripe not configured' }, { status: 503 });
 

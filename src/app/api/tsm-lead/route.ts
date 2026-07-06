@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { rateLimit } from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
 
@@ -41,6 +42,9 @@ function hash(s: string): number { let h = 0; for (let i = 0; i < s.length; i++)
 
 export async function POST(req: Request) {
   try {
+    const limited = await rateLimit(req, "tsm-lead", 20, 600); // 20 / 10 min per IP
+    if (limited) return limited;
+
     const url = new URL(req.url);
     if (url.searchParams.get("token") !== TOKEN) {
       return NextResponse.json({ error: "unauthorized" }, { status: 401 });

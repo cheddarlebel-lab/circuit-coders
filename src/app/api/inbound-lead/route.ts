@@ -4,6 +4,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import { Resend } from "resend";
 import { ensureDb } from "@/lib/db";
+import { rateLimit } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -30,6 +31,9 @@ function esc(v: string): string {
 
 export async function POST(req: Request) {
   try {
+    const limited = await rateLimit(req, "inbound-lead", 8, 600); // 8 / 10 min per IP
+    if (limited) return limited;
+
     const body = await req.json().catch(() => ({}));
     const shop_name = clean(body.shop_name ?? body.shop ?? body.company);
     const name = clean(body.name);

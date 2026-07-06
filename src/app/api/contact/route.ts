@@ -2,11 +2,15 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { ensureDb } from "@/lib/db";
 import { onInquiryCreated, generateProjectTasks, onProjectStarted } from "@/lib/automation";
+import { rateLimit } from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
 
 export async function POST(req: Request) {
   try {
+    const limited = await rateLimit(req, "contact", 6, 600); // 6 / 10 min per IP
+    if (limited) return limited;
+
     const body = await req.json();
     console.log("Contact form submission:", JSON.stringify({ name: body.name, email: body.email, projectType: body.projectType }));
     const { name, email, company, projectType, budget, timeline, description, components } = body;

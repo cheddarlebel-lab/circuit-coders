@@ -15,3 +15,7 @@ outreach-log/
 *.secrets
 clients/*/.secure/
 clients/tsm/review-engine/.env
+
+# Confidential client files — never commit to the (public until private) repo
+clients/
+SECURITY-INCIDENT-*.md

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ensureDb } from '@/lib/db';
 import { generateMagicToken, signToken } from '@/lib/auth';
+import { rateLimit } from '@/lib/rate-limit';
 import { Resend } from 'resend';
 
 function getResend() { return new Resend(process.env.RESEND_API_KEY); }
@@ -9,6 +10,9 @@ const FROM_EMAIL = process.env.FROM_EMAIL || 'admin@circuitcoders.com';
 // POST: request magic link
 export async function POST(req: NextRequest) {
   try {
+    const limited = await rateLimit(req, 'customer-magic-link', 10, 900); // 10 / 15 min per IP
+    if (limited) return limited;
+
     const { email } = await req.json();
     if (!email) return NextResponse.json({ error: 'Email required' }, { status: 400 });
 

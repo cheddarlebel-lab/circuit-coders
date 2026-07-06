@@ -153,6 +153,12 @@ export async function ensureDb(): Promise<Client> {
         source TEXT DEFAULT 'start-page',
         created_at TEXT DEFAULT (datetime('now'))
       );
+
+      CREATE TABLE IF NOT EXISTS rate_limits (
+        bucket TEXT PRIMARY KEY,
+        count INTEGER NOT NULL DEFAULT 0,
+        window_start INTEGER NOT NULL DEFAULT 0
+      );
     `);
     // Migrations for existing tables
     try { await db.execute('ALTER TABLE customers ADD COLUMN area_code TEXT'); } catch { /* already exists */ }

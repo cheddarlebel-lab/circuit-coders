@@ -1,13 +1,33 @@
 #!/usr/bin/env python3
 """Send each queued pitch via IONOS SMTP, log it, remove from queue."""
-import json, smtplib, ssl, time, random, pathlib, datetime
+import json, smtplib, ssl, time, random, pathlib, datetime, os, sys
 from email.mime.text import MIMEText
 from email.utils import formatdate, make_msgid
 
-USER = "admin@circuitcoders.com"
-PW = "Wh@tismyPW38"
+def _load_secrets():
+    envf = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".secrets", "monitor.env")
+    if not os.path.exists(envf):
+        return
+    with open(envf) as f:
+        for line in f:
+            line = line.strip()
+            if line.startswith("export "):
+                line = line[7:]
+            if "=" in line and not line.startswith("#"):
+                k, v = line.split("=", 1)
+                os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+
+
+_load_secrets()
+
+# Secrets from .secrets/monitor.env (gitignored) — never hardcode.
+USER = os.environ.get("IONOS_USER", "admin@circuitcoders.com")
+PW = os.environ.get("IONOS_PW", "")
 HOST = "smtp.ionos.com"
 PORT = 465  # SSL
+
+if not PW:
+    sys.exit("IONOS_PW not set — source .secrets/monitor.env before running.")
 
 HOME = pathlib.Path.home()
 LOG = HOME / "clawd/circuit-coders/outreach-log"

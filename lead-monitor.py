@@ -12,12 +12,31 @@ import sys
 import urllib.request
 import ssl
 
-# === Config ===
-TURSO_URL = "https://circuit-coders-cheddar.aws-us-west-2.turso.io"
-TURSO_TOKEN = "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NzQzMTQ1NDIsImlkIjoiMDE5ZDFkNjMtMzkwMS03OGY0LWFjMDAtZDBiY2IyYzczMWU1IiwicmlkIjoiMWUyY2Q0M2UtYzNkYi00NmNlLWFkNDgtZmU4MTk3MWNhY2U5In0.7Ns6hzwtKLID-gg71aGnwn-eUizwAr9U-beu31sJyJmuIuWxcyzyqlzFB3l45RkKVgqI1CI6H7v5P6In91sWDw"
-TELEGRAM_TOKEN = "8219388922:AAH3eGhbcCJPd_oSBHYPPROddcFWHnjVQXg"
-TELEGRAM_CHAT_ID = "7086525719"  # Leo
+def _load_secrets():
+    envf = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".secrets", "monitor.env")
+    if not os.path.exists(envf):
+        return
+    with open(envf) as f:
+        for line in f:
+            line = line.strip()
+            if line.startswith("export "):
+                line = line[7:]
+            if "=" in line and not line.startswith("#"):
+                k, v = line.split("=", 1)
+                os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+
+
+_load_secrets()
+
+# === Config === (secrets sourced from .secrets/monitor.env — never hardcode)
+TURSO_URL = os.environ.get("TURSO_URL", "https://circuit-coders-cheddar.aws-us-west-2.turso.io")
+TURSO_TOKEN = os.environ.get("TURSO_TOKEN", "")
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "")
+TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
 STATE_FILE = os.path.expanduser("~/clawd/circuit-coders/.last_lead_id")
+
+if not TURSO_TOKEN:
+    sys.exit("TURSO_TOKEN not set — source .secrets/monitor.env before running.")
 
 
 def turso_query(sql):

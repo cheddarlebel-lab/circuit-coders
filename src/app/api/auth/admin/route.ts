@@ -1,8 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { verifyAdminPassword, signToken } from '@/lib/auth';
+import { rateLimit } from '@/lib/rate-limit';
 
 export async function POST(req: NextRequest) {
   try {
+    const limited = await rateLimit(req, 'admin-login', 8, 900); // 8 attempts / 15 min per IP
+    if (limited) return limited;
+
     const { password } = await req.json();
     if (!verifyAdminPassword(password)) {
       return NextResponse.json({ error: 'Invalid password' }, { status: 401 });

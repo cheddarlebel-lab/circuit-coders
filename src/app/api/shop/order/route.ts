@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ensureDb } from '@/lib/db';
 import { getStripe } from '@/lib/stripe';
+import { rateLimit } from '@/lib/rate-limit';
 import { randomUUID } from 'crypto';
 
 const PACKS: Record<string, { quantity: number; price: number; label: string }> = {
@@ -10,6 +11,9 @@ const PACKS: Record<string, { quantity: number; price: number; label: string }> 
 };
 
 export async function POST(req: NextRequest) {
+  const limited = await rateLimit(req, 'shop-order', 10, 600); // 10 / 10 min per IP
+  if (limited) return limited;
+
   const stripe = getStripe();
   if (!stripe) return NextResponse.json({ error: 'Stripe not configured' }, { status: 503 });
 

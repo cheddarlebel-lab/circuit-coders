@@ -1,4 +1,5 @@
 import { type Client } from '@libsql/client/web';
+import { randomBytes } from 'crypto';
 import { getTaskTemplates } from './task-templates';
 
 const RESEND_KEY = () => process.env.RESEND_API_KEY;
@@ -17,8 +18,8 @@ async function sendEmail(to: string, subject: string, html: string) {
 }
 
 function generateMagicToken(): string {
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  return Array.from({ length: 32 }, () => chars[Math.floor(Math.random() * chars.length)]).join('');
+  // Cryptographically secure, URL-safe — replaces predictable Math.random().
+  return randomBytes(32).toString('base64url');
 }
 
 // ─── Inquiry confirmation email to customer ────────────────────

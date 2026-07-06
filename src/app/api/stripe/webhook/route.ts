@@ -3,6 +3,22 @@ import { ensureDb } from '@/lib/db';
 import { getStripe } from '@/lib/stripe';
 import { onStatusChanged } from '@/lib/automation';
 
+// Telegram order notification — no-ops unless TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID are set in env.
+async function notifyTelegram(text: string): Promise<void> {
+  const token = process.env.TELEGRAM_BOT_TOKEN;
+  const chatId = process.env.TELEGRAM_CHAT_ID;
+  if (!token || !chatId) return;
+  try {
+    await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: chatId, text, parse_mode: 'Markdown' }),
+    });
+  } catch (err) {
+    console.error('Failed to send Telegram notification:', err);
+  }
+}
+
 export async function POST(req: NextRequest) {
   const stripe = getStripe();
   if (!stripe) return NextResponse.json({ error: 'Stripe not configured' }, { status: 503 });
@@ -84,22 +100,7 @@ export async function POST(req: NextRequest) {
           `_Download file from admin dashboard._`,
         ].join('\n');
 
-        try {
-          await fetch(
-            `https://api.telegram.org/bot8219388922:AAH3eGhbcCJPd_oSBHYPPROddcFWHnjVQXg/sendMessage`,
-            {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                chat_id: 7086525719,
-                text: message,
-                parse_mode: 'Markdown',
-              }),
-            }
-          );
-        } catch (err) {
-          console.error('Failed to send Telegram notification:', err);
-        }
+        await notifyTelegram(message);
       }
     }
 
@@ -138,22 +139,7 @@ export async function POST(req: NextRequest) {
           `\`python3 generate_card.py --name "${order.name}" --company "${order.company || ''}" --email "${order.email}" --website "${order.website || ''}" --tagline "${order.tagline || ''}" --qr "${order.qr_url || ''}" --accent ${order.accent} --qty ${order.quantity}\``,
         ].join('\n');
 
-        try {
-          await fetch(
-            `https://api.telegram.org/bot8219388922:AAH3eGhbcCJPd_oSBHYPPROddcFWHnjVQXg/sendMessage`,
-            {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                chat_id: 7086525719,
-                text: message,
-                parse_mode: 'Markdown',
-              }),
-            }
-          );
-        } catch (err) {
-          console.error('Failed to send Telegram notification:', err);
-        }
+        await notifyTelegram(message);
       }
     }
   }

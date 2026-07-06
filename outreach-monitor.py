@@ -12,16 +12,36 @@ Every run:
 
 Run hourly via launchd.
 """
-import imaplib, email, json, pathlib, re, datetime, urllib.request, sys
+import imaplib, email, json, pathlib, re, datetime, urllib.request, sys, os
 from email.header import decode_header
 
-USER = "admin@circuitcoders.com"
-PW = "Wh@tismyPW38"
+def _load_secrets():
+    envf = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".secrets", "monitor.env")
+    if not os.path.exists(envf):
+        return
+    with open(envf) as f:
+        for line in f:
+            line = line.strip()
+            if line.startswith("export "):
+                line = line[7:]
+            if "=" in line and not line.startswith("#"):
+                k, v = line.split("=", 1)
+                os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+
+
+_load_secrets()
+
+# Secrets from .secrets/monitor.env (gitignored) — never hardcode.
+USER = os.environ.get("IONOS_USER", "admin@circuitcoders.com")
+PW = os.environ.get("IONOS_PW", "")
 IMAP_HOST = "imap.ionos.com"
 IMAP_PORT = 993
 
-TG_TOKEN = "8219388922:AAH3eGhbcCJPd_oSBHYPPROddcFWHnjVQXg"
-TG_CHAT = "7086525719"
+TG_TOKEN = os.environ.get("TELEGRAM_TOKEN", "")
+TG_CHAT = os.environ.get("TELEGRAM_CHAT_ID", "")
+
+if not PW:
+    sys.exit("IONOS_PW not set — source .secrets/monitor.env before running.")
 
 HOME = pathlib.Path.home()
 LOGDIR = HOME / "clawd/circuit-coders/outreach-log"

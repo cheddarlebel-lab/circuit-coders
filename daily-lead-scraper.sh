@@ -8,8 +8,13 @@ set -u
 LOG=/tmp/cc-daily-leads.log
 PROJECT_DIR="$HOME/clawd/circuit-coders"
 BASE_URL="https://www.circuitcoders.com"
-TELEGRAM_TOKEN="8219388922:AAH3eGhbcCJPd_oSBHYPPROddcFWHnjVQXg"
-TELEGRAM_CHAT_ID="7086525719"
+
+# Secrets sourced from .secrets/monitor.env (gitignored) — never hardcode.
+SECRETS_FILE="$PROJECT_DIR/.secrets/monitor.env"
+if [ -f "$SECRETS_FILE" ]; then
+    # shellcheck disable=SC1090
+    source "$SECRETS_FILE"
+fi
 
 timestamp() { date "+%Y-%m-%d %H:%M:%S"; }
 log() { echo "[$(timestamp)] $*" | tee -a "$LOG"; }
