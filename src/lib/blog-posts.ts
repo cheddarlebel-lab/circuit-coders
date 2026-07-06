@@ -20,6 +20,99 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "auto-body-shop-website-design",
+    title: "Auto Body Shop Website Design: Turn Collision Searches Into Repair Orders",
+    description: "Most auto body shop websites lose the customer standing next to a wrecked car. What a collision shop site actually needs in 2026 — and what it should cost.",
+    keywords: ["auto body shop website", "collision repair website design", "auto body shop website design", "body shop marketing", "collision repair SEO", "auto body shop Oceanside", "collision repair Vista", "website for auto body shop"],
+    publishedAt: "2026-07-06",
+    updatedAt: "2026-07-06",
+    readTime: 7,
+    category: "Web Design",
+    author: "Circuit Coders",
+    heroTag: "AUTO BODY · WEB DESIGN · NORTH COUNTY",
+    sections: [
+      {
+        heading: "The Person Searching 'Auto Body Shop Near Me' Just Got Hit",
+        paragraphs: [
+          "Nobody browses body shop websites for fun. The person typing 'auto body shop near me' just got rear-ended at the Mission Ave light in Oceanside, or clipped a deer on the 76 outside Fallbrook, and they're standing on the shoulder with their insurance company on hold. They're going to call the first shop that looks open, legit, and close.",
+          "That search happens hundreds of times a month across North County — Oceanside, Vista, San Marcos, Carlsbad — and the shops winning those calls aren't the best painters in the county. They're the shops whose site loads in two seconds on a cracked phone screen and shows a tap-to-call number before anything else.",
+          "Here's the part most shop owners miss: the insurance company is going to try to steer that driver to a DRP shop before you ever hear about the job. Your website is your one shot to win the customer directly, while they're still the one choosing.",
+        ],
+      },
+      {
+        heading: "Why Most Body Shop Websites Lose the Job Before the Phone Rings",
+        paragraphs: [
+          "I've audited body shop sites all over North County and the pattern repeats: a rotating image slider nobody watches, a phone number hiding in the footer, and stock photos of a sedan that has never been within 500 miles of the shop.",
+          "Worse are the sites that try too hard. A chatbot. For a collision shop, a chatbot is a tax on a stressed customer standing next to a wrecked car — they want a human on the phone, not 'Hi! How can I help you today?'",
+        ],
+        list: {
+          title: "Cut these today",
+          items: [
+            "The image slider — nobody waits for slide three, it just delays your phone number",
+            "The chatbot — collision customers want a call, not a conversation tree",
+            "PDF estimate forms — nobody on the shoulder of the 78 is downloading a PDF",
+            "Stock photos of handshakes and generic cars — they scream template",
+            "Autoplay video with sound — it burns mobile data and gets your tab closed",
+            "'Our Journey' essays above the fold — put your phone number there instead",
+          ],
+        },
+        callout: "Every one of these sits between a stressed customer and your phone number. Removing them raises call volume without spending a dollar on ads.",
+      },
+      {
+        heading: "What a Collision Shop Website Actually Needs",
+        paragraphs: [
+          "A body shop site has one job: make the phone ring while the customer is still standing next to the damage. Everything on the page either helps that or gets cut.",
+          "Before/after photos are your best sales tool, and almost nobody uses them right. Your phone shoots 3–5 MB images — upload those raw and your homepage takes eight seconds to load from the I-15 shoulder. Compressed to under 200 KB each, the same photos load instantly and do the selling for you.",
+          "And say what the customer is actually worried about: which insurers you work with, whether the repair is warrantied, and whether you can help with towing and a rental. Answer those three things above the fold and you've beaten 90% of the shops in the map pack.",
+        ],
+        list: {
+          title: "Above the fold and working on mobile",
+          items: [
+            "Tap-to-call phone number pinned to the top of every page",
+            "Real before/after photos of your work — compressed, captioned with make and model",
+            "The insurance carriers you work with, plus 'we work with all insurers' in plain English",
+            "I-CAR Gold Class, ASE, and OEM certification logos — logos, not paragraphs",
+            "Lifetime warranty language, stated once, clearly",
+            "An estimate form with photo upload that works from a phone in under a minute",
+            "Hours, address, and towing/rental info without scrolling",
+          ],
+        },
+      },
+      {
+        heading: "Own 'Collision Repair + Your City' on Google Maps",
+        paragraphs: [
+          "Most collision work comes through Google Maps, not your homepage. Your Google Business Profile is doing more selling than your website, so treat it like a second storefront: primary category 'Auto body shop' — not 'Auto repair shop,' Google treats them differently — fresh photos of real repairs every week, and a reply to every review within 24 hours.",
+          "Then build the citation base: Yelp, Carwise, AutoBody-Review, BBB, and the data aggregators, all with the exact same name, address, and phone number. One stale listing with your old Vista address quietly drags down everything else you do.",
+          "On the site itself, build one page per city you actually pull cars from — 'collision repair Oceanside,' 'auto body shop Vista,' 'bumper repair Carlsbad' — each with real, distinct content, not the same paragraph with the city name swapped. Add schema.org AutoBodyShop markup with your geo coordinates and hours so Google reads your business as data instead of guessing.",
+        ],
+        callout: "Done right, a body shop can go from invisible to the Maps top three for '[service] + [city]' searches in 60–90 days. That's not a sales number — that's how long Google takes to trust consistent signals.",
+      },
+      {
+        heading: "What a Body Shop Website Should Cost in 2026",
+        paragraphs: [
+          "Agencies quote body shops $3,000–$8,000 for a website and take six weeks to deliver it. For that money you get a project manager, a discovery call, a mood board — and roughly the same seven pages you'd get anywhere else.",
+          "The DIY route looks cheaper: Wix or Squarespace runs $150–$250 a year. But now you're the web designer, and every hour fighting a template editor is an hour you're not writing estimates. Most shop-owner-built sites stall at 80% done and stay there for three years.",
+          "Circuit Coders builds it for $499 flat, delivered in 48 hours — custom Next.js on Vercel, so it loads fast and never runs on a bloated page builder. One round of revisions included, hosting and updates optional at $50/mo. Want online estimate scheduling or Stripe deposits for custom work? Those quote at $200–$500 as add-ons, not four-figure surprises.",
+        ],
+      },
+      {
+        heading: "See the Mockup Before You Spend a Dime",
+        paragraphs: [
+          "Every project starts with a free mockup of your homepage — your shop name, your photos, your services — before any money changes hands. If you like it, it's $499 flat and live in 48 hours. If you don't, you've lost nothing and you keep the honest feedback.",
+          "If you run a body or collision shop in Fallbrook, Oceanside, Vista, Carlsbad, San Marcos, or anywhere in North County, send me your current site and I'll tell you exactly what's costing you calls — no pitch deck, no discovery call, just a straight answer.",
+        ],
+        callout: "Free mockup first. $499 flat if you like it. Live in 48 hours. That's the whole pitch.",
+      },
+    ],
+    faqs: [
+      { q: "How much does an auto body shop website cost?", a: "Agencies charge $3,000–$8,000 and take about six weeks. Circuit Coders builds a custom Next.js site for $499 flat with a 48-hour turnaround, and you see a free mockup before paying anything." },
+      { q: "How long does it take to rank for 'auto body shop near me'?", a: "With a clean Google Business Profile, consistent citations, and city-specific pages, most shops see real Maps movement in 60–90 days. Competitive terms in Oceanside or Carlsbad can take four to six months." },
+      { q: "Do I need a separate page for every city I serve?", a: "One page per city you actually pull cars from — for most North County shops that's 4–6 pages. Each needs unique content; swapping the city name into the same paragraph gets ignored by Google." },
+      { q: "Should my website list the insurance companies I work with?", a: "Yes — it directly counters insurance steering and answers the first question most collision customers ask. Listing your carriers plus a plain 'we work with all insurers, DRP or not' line takes 10 minutes and removes a reason to call the next shop." },
+      { q: "Can customers request estimates through my website?", a: "They should be able to — a mobile photo-upload estimate form is included in the $499 build. Full online scheduling that syncs with your shop calendar is a $200–$500 add-on, not a four-figure project." },
+    ],
+  },
+  {
     slug: "contractor-website-design-north-county",
     title: "Contractor Website Design in North County San Diego: What Actually Wins Jobs",
     description: "What a contractor website in North County actually needs to win jobs: license number up top, real project photos, city pages — $499 flat, live in 48 hours.",
