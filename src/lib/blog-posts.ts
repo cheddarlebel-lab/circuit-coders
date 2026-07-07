@@ -20,6 +20,98 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "restaurant-website-design-north-county",
+    title: "Restaurant Website Design in North County: What Actually Fills Tables",
+    description: "Most North County restaurant websites lose diners before the menu loads. What to build, what to cut, and why it should cost $499 — not $4,000.",
+    keywords: ["restaurant website design", "restaurant website design North County", "restaurant web design Oceanside", "restaurant website Carlsbad", "restaurant SEO San Diego North County", "online menu website", "Google Business Profile restaurant", "restaurant website cost", "Vista restaurant website"],
+    publishedAt: "2026-07-07",
+    updatedAt: "2026-07-07",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "RESTAURANTS · NORTH COUNTY · WEB DESIGN",
+    sections: [
+      {
+        heading: "Your Menu Is a 4 MB PDF and It's Costing You Covers",
+        paragraphs: [
+          "It's 6:40 on a Friday and somebody in Carlsbad Village types 'thai food near me.' They tap your site, wait four seconds, and get a 3–5 MB PDF menu that hijacks their screen and won't zoom right on a phone. They hit back and tap the next result. You never know it happened, but it happens every single night.",
+          "North County is not a forgiving market. Oceanside's Coast Highway corridor, downtown Vista's brewery row, San Marcos on Via Vera Cruz, Carlsbad Village — every one of those strips has six places within walking distance of yours. The diner doesn't need to forgive your website. They just need to walk fifty feet.",
+          "Most restaurant sites around here were built once in 2019, cost $2,500, and haven't been touched since. Wrong hours, a menu two price-hikes out of date, and a homepage photo of a dish you stopped serving. That's not a website. That's a liability with a domain name.",
+        ],
+        callout: "Google's own data says over half of mobile visitors leave a page that takes more than 3 seconds to load. Restaurant traffic is 70%+ mobile. Do the math on a Friday night.",
+      },
+      {
+        heading: "What a Restaurant Website Actually Needs",
+        paragraphs: [
+          "A restaurant website has one job: get a hungry person from Google to your door (or your ordering page) in under 30 seconds. Everything on the page either serves that or slows it down.",
+          "Here's the full list. If your site has these seven things and loads in under two seconds, you're ahead of 90% of the restaurants in North County.",
+        ],
+        list: {
+          title: "Build these, in this order:",
+          items: [
+            "The menu as real HTML text with prices — not a PDF, not a photo of a printed menu. Google indexes HTML; it can't reliably read your PDF.",
+            "Hours at the top of the page, accurate, including holiday closures. Wrong hours generate one-star reviews.",
+            "A tap-to-call phone number. On mobile, the number should be a button, not decoration.",
+            "One-tap directions — an embedded map that opens Apple or Google Maps with your address pre-loaded.",
+            "8–12 real photos of your actual food, compressed under 200 KB each. Shot on an iPhone in daylight beats stock photography every time.",
+            "A direct link to your ordering system (Toast, Square, ChowNow) — one tap from the homepage, not buried three pages deep.",
+            "A one-liner about parking. In Carlsbad Village and Oceanside, parking anxiety kills walk-ins.",
+          ],
+        },
+      },
+      {
+        heading: "What to Cut — Ruthlessly",
+        paragraphs: [
+          "Every restaurant site I audit in North County is carrying dead weight some agency sold them in 2021. This stuff doesn't just fail to help — it actively slows the page and gets between a hungry customer and your phone number.",
+          "A chatbot. For a restaurant, a chatbot is a tax on real customers. Nobody wants to negotiate with a widget to find out if you're open. Same with autoplay video backgrounds — that's 8 MB of hero footage loading on someone's cell connection in a Bonsall dead zone.",
+        ],
+        list: {
+          title: "Delete these today:",
+          items: [
+            "PDF menus — replace with HTML text your customers and Google can both read",
+            "Autoplay video or music — it tanks load time and startles people in quiet offices",
+            "Chatbots and pop-ups — the phone number IS your chat",
+            "Instagram feed embeds — they add 1–2 seconds of load for zero conversions; use a link instead",
+            "Reservation widgets when you're a 12-table spot that takes calls — that's a $250/mo tool solving a problem you don't have",
+            "Stock photos of food you don't serve — diners notice, and it reads as fake",
+          ],
+        },
+      },
+      {
+        heading: "How North County Diners Actually Find You",
+        paragraphs: [
+          "Nobody types your restaurant's name unless they've already eaten there. New customers search '[cuisine] + [city]' — 'birria Oceanside,' 'sushi Carlsbad,' 'breakfast Fallbrook' — and Google shows them a map with three pins. If you're not one of those pins, your website barely matters.",
+          "Your Google Business Profile does more heavy lifting than your homepage. Claim it, pick the right primary category (not just 'Restaurant' — 'Mexican Restaurant,' 'Ramen Restaurant'), load 15+ photos, keep hours current, and answer every review within 48 hours. Restaurants that post photos weekly measurably outperform ones that don't.",
+          "Then wire the website to support it: schema.org Restaurant and Menu markup so Google can pull prices and hours straight into search results, and identical name/address/phone across Yelp, TripAdvisor, Apple Maps, and your site. One mismatched suite number across those listings and Google trusts you less. For a restaurant in Vista or San Marcos with a clean profile and consistent citations, cracking the map pack for '[cuisine] + [your city]' typically takes 60–90 days.",
+        ],
+        callout: "The map pack — those three pins above the regular results — captures the huge majority of 'near me' clicks. Everything below it is fighting for scraps.",
+      },
+      {
+        heading: "What This Should Cost (and What You're Probably Being Quoted)",
+        paragraphs: [
+          "San Diego agencies quote restaurant sites at $3,000–$8,000 and deliver in 6–8 weeks. Restaurant-specific platforms like Popmenu and BentoBox charge $150–$250 a month forever — that's $1,800–$3,000 a year, every year, for a template. And the DIY builders are 'free' until you count the Friday nights you spent fighting a drag-and-drop editor instead of running your kitchen.",
+          "Circuit Coders builds restaurant sites for $499 flat with a 48-hour turnaround. Custom-coded Next.js on Vercel — the same stack the big chains use — which is why the pages load in under a second instead of four. One round of revisions included. Hosting plus menu updates is optional at $50/mo, and if you want online ordering, reservations, or Stripe wired in, those are quoted as $200–$500 add-ons, not mysteries on an invoice.",
+          "The math is simple: one platform-builder year costs 4–6x the entire Circuit Coders build. And you own the site outright — cancel the hosting and the code is still yours.",
+        ],
+      },
+      {
+        heading: "The 48-Hour Fix",
+        paragraphs: [
+          "Here's what this looks like in practice: a taco spot with a PDF menu and 2022 hours becomes a one-second-load site with an HTML menu, tap-to-call, one-tap directions, and Restaurant schema — live before the weekend rush. No six-week agency timeline, no discovery workshops, no $4,000 invoice.",
+          "If you run a restaurant anywhere in North County — Oceanside, Carlsbad, Vista, San Marcos, Fallbrook, out to Bonsall or Pala — send us your current site and we'll tell you exactly what's broken and what it's costing you. Then we'll mock up the replacement for free, before you pay anything.",
+        ],
+        callout: "Free mockup first, $499 flat if you like it, live in 48 hours. If the mockup doesn't beat what you have, you've lost nothing but two minutes sending a link.",
+      },
+    ],
+    faqs: [
+      { q: "How much does a restaurant website cost in North County?", a: "Local agencies quote $3,000–$8,000, and platforms like Popmenu or BentoBox run $150–$250/mo forever. Circuit Coders builds custom restaurant sites for $499 flat with a 48-hour turnaround." },
+      { q: "Should my restaurant menu be a PDF?", a: "No. A 3–5 MB PDF is slow on cell connections, hard to read on phones, and Google can't reliably index it — which means your dishes never show up in search. Put the menu on the page as real HTML text with prices." },
+      { q: "How long does it take for a restaurant to rank on Google Maps?", a: "With a properly set up Google Business Profile, consistent citations, and Restaurant schema on your site, expect to crack the map pack for '[cuisine] + [your city]' in 60–90 days. Weekly photo posts and fast review responses speed that up." },
+      { q: "Do I need online ordering on my website?", a: "Only if takeout is a real chunk of your revenue — then link your Toast, Square, or ChowNow ordering one tap from the homepage. Wiring an ordering or reservation integration into a Circuit Coders build runs $200–$500 as a quoted add-on." },
+      { q: "How fast should a restaurant website load?", a: "Under 2 seconds on a phone, ideally under 1. Most mobile visitors abandon pages that take longer than 3 seconds, and restaurant traffic is over 70% mobile — every extra second is lost covers on a Friday night." },
+    ],
+  },
+  {
     slug: "auto-body-shop-website-design",
     title: "Auto Body Shop Website Design: Turn Collision Searches Into Repair Orders",
     description: "Most auto body shop websites lose the customer standing next to a wrecked car. What a collision shop site actually needs in 2026 — and what it should cost.",
