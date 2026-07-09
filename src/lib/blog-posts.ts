@@ -20,6 +20,97 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "get-more-google-reviews",
+    title: "How to Get More Google Reviews Without Being Annoying: The 90-Day System",
+    description: "The exact system North County businesses use to go from 12 Google reviews to 100+ — the ask, the link, what to cut, and why it should cost you $0/month.",
+    keywords: ["how to get more google reviews", "google review link", "google business profile optimization", "review request text template", "google map pack ranking", "local seo north county san diego", "small business reviews oceanside", "review management software cost"],
+    publishedAt: "2026-07-09",
+    updatedAt: "2026-07-09",
+    readTime: 7,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "GOOGLE REVIEWS · LOCAL SEO · NORTH COUNTY",
+    sections: [
+      {
+        heading: "The Math Nobody Runs: 12 Reviews vs. 120",
+        paragraphs: [
+          "Search \"plumber Vista\" or \"dog groomer Carlsbad\" right now. Google shows three businesses in the map pack before a single website appears. Two things decide who's in that box: how close you are and how many reviews you have. If your competitor has 120 reviews and you have 12, you're not losing the comparison — you're not in it.",
+          "I see this constantly in North County. A shop in Fallbrook or Bonsall with a 15-year reputation and 9 Google reviews, bleeding calls to a two-year-old competitor in San Marcos with 140. The customer searching from their phone doesn't know about your reputation. They know what Google shows them, and Google shows them a number and some stars.",
+          "Reviews do two jobs at once: they push you into the map pack, and they close the sale once you're there. Nobody calls the 3.8-star shop with 11 reviews when the 4.9 with 130 is one result up. This is fixable, it's mostly free, and it takes 90 seconds per customer.",
+        ],
+      },
+      {
+        heading: "The Ask: A System That Takes 90 Seconds Per Customer",
+        paragraphs: [
+          "The reason you have 12 reviews isn't that customers don't like you. It's that you don't ask, or you ask wrong — a mumbled \"leave us a review sometime\" as they walk out. Nobody goes home, opens a laptop, and hunts down your Google listing. You have to remove every step between happy customer and posted review.",
+          "Here's the whole system. Set it up once, then it's a text message per job.",
+        ],
+        list: {
+          title: "Do this, in order:",
+          items: [
+            "Grab your direct review link from your Google Business Profile (tap \"Ask for reviews\" in the dashboard). It's a one-tap link straight to the 5-star form.",
+            "Ask at the peak moment — when they say \"this looks great\" or within 2 hours of finishing the job. Not next week. The goodwill decays fast.",
+            "Text it, don't email it. Texts get opened in minutes; emails get archived. \"Thanks for the business, Maria — if we earned it, a Google review helps us a ton: [link]\" is the entire script.",
+            "Make it personal and one tap. No \"click here, then search for us, then find the button.\" Link goes directly to the review box.",
+            "One follow-up, 3 days later, then stop. Two asks total. More than that and you've crossed into annoying.",
+            "Aim for 2–4 new reviews per month, every month. Google rewards steady velocity over a one-time blast of 30 that looks fake.",
+          ],
+        },
+        callout: "You don't need 500 reviews. In most North County niches, 50–80 recent reviews with a 4.7+ average puts you in the top three. That's 2 years of texting a link.",
+      },
+      {
+        heading: "What to Cut: The Stuff That Gets Listings Suspended",
+        paragraphs: [
+          "There's a whole industry selling shortcuts here, and most of them either do nothing or get your listing nuked. A suspended Google Business Profile takes weeks to recover — sometimes months — and while it's down, you don't exist on Maps. Not worth it.",
+          "Cut all of this:",
+        ],
+        list: {
+          items: [
+            "Buying reviews. Google's filters catch batches of fake reviews from fresh accounts, and the penalty is suspension, not a warning.",
+            "Review gating — surveying customers first and only sending the happy ones to Google. Explicitly against policy since 2018, and the software that does it puts your listing at risk.",
+            "Incentives. \"$10 off your next visit for a review\" violates Google's terms whether the review is positive or not.",
+            "The tablet kiosk at the counter. Twenty reviews from the same IP address get filtered into the void. Customers must review from their own phones.",
+            "Mass-blasting your entire customer list in one weekend. Thirty reviews in 3 days after years of silence is a fraud signal, not a growth strategy.",
+            "$300/month \"reputation management\" retainers that do exactly what the text-message system above does for free.",
+          ],
+        },
+      },
+      {
+        heading: "Reviews Are Fuel. Your Google Business Profile Is the Engine.",
+        paragraphs: [
+          "A pile of reviews on a half-empty profile is horsepower with no transmission. Google ranks the whole package, so before you start collecting, spend 30 minutes making the profile worth ranking: pick the correct primary category (this alone moves rankings), fill in every service you offer, set accurate hours, and upload 10+ real photos of your work — then add a few new ones monthly.",
+          "Respond to every review within 24–48 hours, including the bad ones. Write like a human and mention the actual work naturally: \"Glad the water heater install in Oceanside went smooth\" tells Google what you do and where you do it. Don't stuff keywords — one natural mention beats five robotic ones.",
+          "Then make the rest of your footprint agree. Your name, address, and phone number should be identical on Yelp, BBB, Nextdoor, and Angi — mismatched citations erode Google's trust in your listing. And your website should carry LocalBusiness schema.org markup plus a page for each \"[service] + [city]\" combo you actually serve: \"drywall repair San Marcos,\" \"mobile detailing Carlsbad.\" That's the pattern people type, so that's the page that should exist.",
+        ],
+        callout: "The review link, the profile, the citations, the schema — none of it requires software. It requires 30 minutes of setup and a habit.",
+      },
+      {
+        heading: "What This Should Cost: $0/Month, Not $400/Month",
+        paragraphs: [
+          "The review-software industry wants a subscription: Podium runs $399+/month, Birdeye around $299/month, NiceJob $75–$169/month. For a shop doing 15–30 jobs a month, that's paying $3,600–$4,800 a year for something your thumbs do for free. The software's core feature is sending a text with a link. You can send a text with a link.",
+          "Automation earns its keep at volume — if you're running 100+ customers a month through a POS or booking system, a $75/month tool that auto-fires the request is reasonable. Below that, it's a solution renting itself to a problem you don't have.",
+          "Where a website fits in: every Circuit Coders build is $499 flat, live in 48 hours, custom Next.js on Vercel — and we bake the review machinery in. One-tap \"Review us on Google\" buttons, your real reviews embedded on the homepage as social proof, LocalBusiness schema wired up. If you want requests automated through your booking or POS system, that's a $200–$500 add-on quoted up front, not a subscription that bleeds you monthly.",
+        ],
+      },
+      {
+        heading: "The 90-Day Sprint",
+        paragraphs: [
+          "Here's the whole play, start to finish. Days 1–7: fix the Google Business Profile — category, services, hours, 10 photos — and save your review link where you'll actually use it. Days 8–30: text the link after every completed job, one follow-up at day 3, and reply to every review that lands within 48 hours.",
+          "Days 31–90: keep the cadence. 2–4 new reviews a month, new photos monthly, citations cleaned up on Yelp and Nextdoor. In most North County niches — detailing, contracting, salons, restaurants — this is enough to move from invisible to map pack in 60–90 days, because your competitors are asking nobody.",
+          "If you want a second set of eyes, send us your Google Business Profile and your current site. We'll tell you exactly what's holding you back — review count, profile gaps, missing schema, no city pages — and what we'd fix first.",
+        ],
+        callout: "Free review audit, free homepage mockup, no meeting required. If you want the site: $499 flat, one round of revisions, live in 48 hours. Hosting and updates optional at $50/month.",
+      },
+    ],
+    faqs: [
+      { q: "How many Google reviews do I need to rank in the map pack?", a: "There's no magic number, but in most North County service niches the top three listings have 50–150 reviews with a 4.6+ average. Steady velocity matters more than the total — 2–4 new reviews a month outranks a stale pile of 80 from 2023." },
+      { q: "Is it against Google's rules to ask customers for reviews?", a: "No — asking is completely allowed. What's banned is paying for reviews, offering discounts for them, or gating (only sending happy customers to Google). Violations can get your listing suspended for weeks." },
+      { q: "How long until more reviews actually bring in more calls?", a: "Plan on 60–90 days of consistent collecting before map-pack movement shows up, assuming your Google Business Profile is fully filled out. The conversion boost is faster — a jump from 3.9 to 4.7 stars changes who calls you within weeks." },
+      { q: "Should I respond to a bad review or ignore it?", a: "Respond within 24–48 hours, stay calm, state the facts once, and offer to fix it offline. Future customers read your response more carefully than the complaint — one professional reply defuses a 1-star more than ten new 5-stars." },
+      { q: "Can I show my Google reviews on my own website?", a: "Yes, and you should — embedded reviews are the cheapest social proof there is. Every $499 Circuit Coders build includes your real Google reviews on the homepage; live-syncing feeds through a review API run $200–$500 as an add-on." },
+    ],
+  },
+  {
     slug: "restaurant-website-design-north-county",
     title: "Restaurant Website Design in North County: What Actually Fills Tables",
     description: "Most North County restaurant websites lose diners before the menu loads. What to build, what to cut, and why it should cost $499 — not $4,000.",
