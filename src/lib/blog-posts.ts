@@ -20,6 +20,139 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "local-seo-checklist-2026",
+    title: "The 2026 Local SEO Checklist for Service Businesses (What Actually Works)",
+    description: "A no-fluff local SEO checklist for North County service businesses: Google Business Profile, citations, schema, and what to skip. Rank in 60–90 days.",
+    keywords: ["local seo checklist", "local seo for service businesses", "google business profile optimization", "local citations NAP", "rank in google map pack", "schema.org local business", "seo oceanside", "seo fallbrook", "north county san diego seo"],
+    publishedAt: "2026-07-10",
+    updatedAt: "2026-07-10",
+    readTime: 8,
+    category: "Local SEO",
+    author: "Circuit Coders",
+    heroTag: "LOCAL SEO · CHECKLIST · 2026",
+    sections: [
+      {
+        heading: "Why the Plumber Down the Street Outranks You",
+        paragraphs: [
+          "Search \"plumber Oceanside\" or \"electrician Vista\" right now. The three businesses in that map pack get roughly 44% of all clicks on the page. If you're not one of them, you're fighting over scraps with everyone from San Marcos to Bonsall — and most of those calls go to whoever shows up first, not whoever does the best work.",
+          "Here's the part nobody tells you: the businesses ranking above you aren't better at their trade. They just did a handful of boring, mostly free tasks — usually years ago — and Google has been rewarding them ever since. A landscaper in Fallbrook with a claimed profile, 40 reviews, and a page that says \"landscaping in Fallbrook\" will beat a better landscaper with none of that, every single time.",
+          "This checklist is everything that actually moves local rankings in 2026, in order of impact. No 47-point PDF, no \"content strategy framework.\" You can knock out the first half in a weekend.",
+        ],
+      },
+      {
+        heading: "Step 1: Google Business Profile — 20% of the Work, 80% of the Results",
+        paragraphs: [
+          "Your Google Business Profile is the single biggest local ranking factor, and it's free. Most North County service businesses either never claimed theirs or claimed it in 2019 and haven't touched it since. Google reads that as a dead business.",
+          "Claiming takes 10 minutes at google.com/business. Verification is usually a postcard (5–14 days) or a video walkthrough if you work from home or a truck. Do it today — every other item on this list works better once this one exists.",
+        ],
+        list: {
+          title: "GBP checklist",
+          items: [
+            "Claim and verify the profile — exact business name, no keyword stuffing like \"Joe's Plumbing | Best Plumber Oceanside\" (Google suspends for this now)",
+            "Pick the most specific primary category available, then add 3–5 secondary categories",
+            "Fill every field: hours, service area, phone, website, services with prices where you can",
+            "Upload 10+ real photos — job sites, your truck, your face. Skip stock photos; Google's image detection flags them",
+            "Ask every happy customer for a review, and reply to every one within a week — response rate is a ranking signal",
+            "Post once a week: a finished job, a before/after, a seasonal offer. Two sentences is enough",
+          ],
+        },
+        callout: "A profile with 25+ reviews and weekly photos will outrank a dormant profile with a better website. Google trusts activity.",
+      },
+      {
+        heading: "Step 2: Citations — Boring, Free, and They Compound",
+        paragraphs: [
+          "Citations are listings of your business name, address, and phone number (NAP) across directories — Yelp, Bing Places, Apple Maps, Nextdoor, BBB, your chamber of commerce. Each one is a small trust signal. Twenty consistent ones beat two hundred sloppy ones.",
+          "The one rule: your NAP must be character-for-character identical everywhere. If Yelp says \"Ste. 4\" and your website says \"Suite 4,\" Google isn't sure you're the same business, and your rankings pay for it. Pick one exact format and never deviate.",
+          "Budget 3–4 hours total. Knock out the big eight first — Google, Yelp, Bing, Apple Maps, Facebook, Nextdoor, BBB, Angi — then add local ones like the Fallbrook or Oceanside chamber. Skip the $300 \"citation blast\" services; they submit to 200 junk directories nobody, including Google, has visited since 2014.",
+        ],
+        list: {
+          title: "Citation priority order",
+          items: [
+            "Google Business Profile (done in Step 1)",
+            "Yelp, Bing Places, Apple Business Connect",
+            "Facebook page + Nextdoor business page",
+            "BBB and Angi (free tiers — decline every upsell call)",
+            "Your local chamber of commerce (Fallbrook, Vista, and Carlsbad chambers all list members online)",
+            "Industry-specific directories: Houzz for contractors, TripAdvisor for food, Avvo for legal",
+          ],
+        },
+      },
+      {
+        heading: "Step 3: Your Website — Service + City Pages and Schema",
+        paragraphs: [
+          "Google can't rank you for \"drywall repair San Marcos\" if those words don't appear together anywhere on your site. The fix is a dedicated page for each service-plus-city combination you actually serve: /drywall-repair-san-marcos, /drywall-repair-vista, and so on. Each page needs 300+ words of real content — the neighborhoods you cover, actual jobs you've done there, your response time — not the same paragraph with the city name swapped out.",
+          "Then add LocalBusiness schema — a block of structured data in your site's code that tells Google your exact name, address, phone, hours, service area, and reviews in a format it reads natively. It takes a developer about 20 minutes and most North County small-business sites don't have it, which means it's still a real edge.",
+          "Speed matters too. A 3–5 MB page built on a bloated WordPress theme takes 6+ seconds to load on a phone, and Google demotes slow sites in mobile results — which is where 70%+ of \"near me\" searches happen. Every site we ship is static Next.js on Vercel and loads in under a second.",
+        ],
+        list: {
+          title: "On-site checklist",
+          items: [
+            "One page per service + city combo, each with unique local content",
+            "City and service in the page title tag: \"Drywall Repair in San Marcos | [Your Business]\"",
+            "LocalBusiness schema.org markup with NAP matching your citations exactly",
+            "NAP in the footer of every page, in plain text (not an image)",
+            "Embedded Google Map of your service area on the contact page",
+            "Mobile load under 3 seconds — test at pagespeed.web.dev, aim for 90+",
+          ],
+        },
+      },
+      {
+        heading: "What to Cut: The Stuff Agencies Sell That Doesn't Rank You",
+        paragraphs: [
+          "Half of local SEO spend in North County goes to things that make invoices, not rankings. If you're paying for any of the items below, you're funding someone's boat payment.",
+          "The tell is always the same: monthly deliverables you can't verify against a ranking you can. If your agency's report shows \"impressions up 300%\" but you still can't find yourself in the map pack for your own service in your own city, the report is the product.",
+        ],
+        list: {
+          title: "Cut these today",
+          items: [
+            "Directory blast submissions to 200+ sites ($300 for spam Google ignores)",
+            "\"SEO content\" blog posts about generic topics with no local angle — 800 words on \"Why Gutters Matter\" ranks for nothing",
+            "Backlink packages from Fiverr or cold emails — $50 links from Pakistani blog networks can get you penalized",
+            "A chatbot on your site — for a service business, a chatbot is a tax on real customers who just want your phone number",
+            "Social media management sold as SEO — Instagram posts do not move Google rankings, period",
+            "Monthly \"optimization\" retainers where the work is a rank-tracking screenshot",
+          ],
+        },
+        callout: "If you can't point at the map pack and see the result, you're not buying SEO. You're buying reporting.",
+      },
+      {
+        heading: "What This Should Cost (Hint: Not $2,000/Month)",
+        paragraphs: [
+          "Local SEO agencies quoting North County businesses typically ask $500–$2,000/month on 6–12 month contracts — $6,000 to $24,000 a year. For a business serving Fallbrook, Bonsall, and maybe two other cities, that's wildly out of proportion to the actual work, because local SEO is front-loaded: the profile, citations, schema, and city pages get built once, then maintained with reviews and an occasional post.",
+          "The DIY math: everything in Steps 1 and 2 is free and takes a weekend. The website piece — city pages, schema, sub-second load times — is where you either learn to code or pay someone. Freelancers around here quote $150–$250 per page for that work; a five-city service business is looking at $1,000+ before hosting.",
+          "We build the whole thing — custom Next.js site, service + city pages, LocalBusiness schema baked in, deployed on Vercel — for $499 flat with a 48-hour turnaround and one round of revisions included. Hosting and updates are an optional $50/mo, and if you need booking or payments wired in, integrations like Stripe or a reservation platform run $200–$500 as add-ons. No retainer, no contract, no monthly report theater.",
+        ],
+      },
+      {
+        heading: "The Condensed Checklist (Print This)",
+        paragraphs: [
+          "Here's the whole post in one list. A Carlsbad handyman we can point to did nothing but items 1 through 5 and went from invisible to the map pack for \"handyman Carlsbad\" in about 10 weeks. That's the realistic timeline for most North County service categories: 60–90 days from consistent effort to visible movement, faster in less competitive niches like Bonsall or Pala.",
+          "Start at the top. Don't skip to the fun stuff. The boring items are boring because they work so reliably nobody can sell them as a secret.",
+        ],
+        list: {
+          title: "The 2026 local SEO checklist",
+          items: [
+            "Claim, verify, and fully complete your Google Business Profile",
+            "Get to 25+ reviews and reply to every one within 7 days",
+            "Post a photo or update to GBP weekly",
+            "Build identical NAP citations on the big eight directories plus your chamber",
+            "Publish a unique page for every service + city you serve",
+            "Add LocalBusiness schema and get mobile load under 3 seconds",
+            "Cut anything you're paying for that isn't on this list",
+          ],
+        },
+        callout: "Want to know exactly where you stand? Send us your site and we'll audit it against this checklist free — and mock up the fixed version before you pay anything. $499 flat, live in 48 hours if you like what you see.",
+      },
+    ],
+    faqs: [
+      { q: "How long does local SEO take to work?", a: "For most North County service categories, expect visible movement in 60–90 days and a real shot at the map pack in 3–6 months. Less competitive areas like Fallbrook or Bonsall often move faster than Carlsbad or Oceanside." },
+      { q: "Do I really need a website to rank on Google Maps?", a: "You can appear in the map pack with just a Google Business Profile, but a linked website with service + city pages and schema markup is a direct ranking factor. Profiles with a fast, relevant site attached consistently beat profile-only competitors — and it's where the other 56% of clicks go." },
+      { q: "How much should local SEO cost for a small service business?", a: "The profile and citation work is free and takes a weekend of your time. The website piece runs $150–$250 per page from local freelancers, or $499 flat from us for the complete build with schema and city pages included. Be skeptical of anything structured as a $500+/month retainer." },
+      { q: "How many Google reviews do I need to rank in the map pack?", a: "There's no magic number, but 25+ reviews with recent activity is the practical threshold where most North County businesses become competitive. Velocity matters more than the total — 2–3 new reviews a month beats a pile of old ones from 2022." },
+      { q: "Is it worth paying for a citation-building service?", a: "No. The 15–20 citations that matter take 3–4 hours to build yourself for free, and the $300 blast services submit you to hundreds of junk directories Google ignores. Consistency across a few real listings beats volume every time." },
+    ],
+  },
+  {
     slug: "get-more-google-reviews",
     title: "How to Get More Google Reviews Without Being Annoying: The 90-Day System",
     description: "The exact system North County businesses use to go from 12 Google reviews to 100+ — the ask, the link, what to cut, and why it should cost you $0/month.",
