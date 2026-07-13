@@ -2,7 +2,7 @@
 
 import { useMemo, useState, type CSSProperties } from 'react';
 
-export type Module = { id: string; label: string; price: number; note?: string; recommended?: boolean };
+export type Module = { id: string; label: string; price: number; note?: string; recommended?: boolean; badge?: string };
 export type Pricing = {
   basePrice: number; baseLabel: string; baseIncludes: string[];
   unit?: { label: string; included: number; per: number };   // optional per-unit pricing (e.g. employees)
@@ -100,7 +100,10 @@ export default function PricingBuilder({
                 </span>
                 <span style={{ flex: 1 }}>
                   <span style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 10 }}>
-                    <span style={{ fontSize: 14.5, fontWeight: 600, color: ink }}>{m.label}</span>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: 7, flexWrap: 'wrap' }}>
+                      <span style={{ fontSize: 14.5, fontWeight: 600, color: ink }}>{m.label}</span>
+                      {m.badge && <span style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: '0.03em', textTransform: 'uppercase', color: accent, background: accentSoft, borderRadius: 999, padding: '2px 7px', whiteSpace: 'nowrap' }}>{m.badge}</span>}
+                    </span>
                     <span style={{ fontSize: 14, fontWeight: 600, color: on ? accent : body, whiteSpace: 'nowrap' }}>+${m.price}/mo</span>
                   </span>
                   {m.note && <span style={{ display: 'block', fontSize: 12.5, color: body, marginTop: 2 }}>{m.note}</span>}
