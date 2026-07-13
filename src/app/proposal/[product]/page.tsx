@@ -26,15 +26,15 @@ const PRODUCTS: Record<string, Cfg> = {
     ],
     cta: 'Book a 10-minute demo', email: 'leo@lothours.com',
     pricing: {
-      basePrice: 199, baseLabel: 'Basic', includedSeats: 20, perSeat: 6,
+      basePrice: 199, baseLabel: 'Basic', includedSeats: 20, perSeat: 5, trialDays: 14,
       baseIncludes: ['Geofenced auto clock-in/out', 'Timesheets & payroll-ready exports', 'Team messaging + two-way SMS', 'Scheduling, shifts & cover requests'],
       modules: [
-        { id: 'multirooftop', label: 'Multi-rooftop administration & cross-site analytics', price: 99, note: 'For dealer groups running more than one store.' },
-        { id: 'overtime', label: 'Predictive overtime & California meal-break alerts', price: 49, recommended: true },
-        { id: 'integrations', label: 'Direct payroll, DMS & CRM integrations', price: 79, recommended: true },
-        { id: 'api', label: 'API access & priority support', price: 99 },
+        { id: 'multirooftop', label: 'Multi-rooftop administration & cross-site analytics', price: 79, note: 'For dealer groups running more than one store.' },
+        { id: 'overtime', label: 'Predictive overtime & California meal-break alerts', price: 39, recommended: true },
+        { id: 'integrations', label: 'Direct payroll, DMS & CRM integrations', price: 59, recommended: true },
+        { id: 'api', label: 'API access & priority support', price: 79 },
       ],
-      freeNote: 'Prefer to start free? The Free plan covers up to 5 employees at $0.',
+      freeNote: 'Or start free forever — the Free plan covers up to 5 employees at $0.',
     },
   },
   circuit_coders: {
@@ -162,6 +162,15 @@ export default async function ProposalPage({
               </a>
               <span style={{ fontSize: 14.5, color: '#71717a' }}>or just reply to the email — it comes straight to me.</span>
             </div>
+            {cfg.pricing?.trialDays && (
+              <div style={{ marginTop: 18, display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 13.5, color: body }}>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: cfg.accentSoft, color: cfg.accent, border: `1px solid ${cfg.accent}22`, borderRadius: 999, padding: '4px 10px', fontWeight: 600 }}>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke={cfg.accent} strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5" /></svg>
+                  {cfg.pricing.trialDays}-day free trial
+                </span>
+                no credit card to start
+              </div>
+            )}
           </div>
         </section>
 

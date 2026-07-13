@@ -5,7 +5,7 @@ import { useMemo, useState, type CSSProperties } from 'react';
 export type Module = { id: string; label: string; price: number; note?: string; recommended?: boolean };
 export type Pricing = {
   basePrice: number; baseLabel: string; baseIncludes: string[];
-  includedSeats: number; perSeat: number; modules: Module[]; freeNote?: string;
+  includedSeats: number; perSeat: number; modules: Module[]; freeNote?: string; trialDays?: number;
 };
 
 export default function PricingBuilder({
@@ -27,18 +27,19 @@ export default function PricingBuilder({
   const toggle = (id: string) =>
     setPicked(p => { const n = new Set(p); n.has(id) ? n.delete(id) : n.add(id); return n; });
 
+  const trial = pricing.trialDays ?? 14;
   const mailto = useMemo(() => {
     const lines = [
-      `Hi Leo — I built a LotHours plan for ${dealer}:`,
+      `Hi Leo — I'd like to start the ${trial}-day free trial for ${dealer} on this plan:`,
       ``,
       `• ${seats} employees`,
       ...addOns.map(m => `• ${m.label}`),
       ``,
-      `Estimated total: $${total}/mo. Let's talk.`,
+      `After the trial: $${total}/mo. Let's set it up.`,
     ];
     return `mailto:${email}?subject=${encodeURIComponent(
-      `LotHours plan for ${dealer} — $${total}/mo`)}&body=${encodeURIComponent(lines.join('\n'))}`;
-  }, [dealer, seats, addOns, total, email]);
+      `LotHours ${trial}-day trial for ${dealer} — $${total}/mo plan`)}&body=${encodeURIComponent(lines.join('\n'))}`;
+  }, [dealer, seats, addOns, total, email, trial]);
 
   const card: CSSProperties = { border: `1px solid ${line}`, borderRadius: 14, background: '#fff' };
 
@@ -111,9 +112,12 @@ export default function PricingBuilder({
         <div style={{ display: 'flex', alignItems: 'baseline', gap: 6, margin: '8px 0 2px' }}>
           <span style={{ fontSize: 44, fontWeight: 600, letterSpacing: '-0.03em', color: ink }}>${total}</span>
           <span style={{ fontSize: 16, color: body }}>/mo</span>
+          <span style={{ marginLeft: 'auto', fontSize: 12, fontWeight: 600, color: accent, background: accentSoft, borderRadius: 999, padding: '4px 10px' }}>
+            {trial}-day free trial
+          </span>
         </div>
         <div style={{ fontSize: 13, color: body, marginBottom: 18 }}>
-          {seats} employees{addOns.length ? ` · ${addOns.length} add-on${addOns.length > 1 ? 's' : ''}` : ''}
+          {seats} employees{addOns.length ? ` · ${addOns.length} add-on${addOns.length > 1 ? 's' : ''}` : ''} · billed after your free trial
         </div>
         <div style={{ borderTop: `1px solid ${line}`, paddingTop: 14, fontSize: 13, color: body, lineHeight: 1.9 }}>
           <Row l={`${pricing.baseLabel} base`} r={`$${pricing.basePrice}`} />
@@ -124,8 +128,11 @@ export default function PricingBuilder({
           display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, marginTop: 18,
           background: accent, color: '#fff', fontWeight: 500, fontSize: 15, padding: '12px 20px',
           borderRadius: 6, textDecoration: 'none',
-        }}>Lock in this plan →</a>
-        {pricing.freeNote && <div style={{ fontSize: 12, color: '#a1a1aa', marginTop: 12, textAlign: 'center' }}>{pricing.freeNote}</div>}
+        }}>Start your {trial}-day free trial →</a>
+        <div style={{ fontSize: 12, color: '#71717a', marginTop: 10, textAlign: 'center' }}>
+          No credit card to start · cancel anytime
+        </div>
+        {pricing.freeNote && <div style={{ fontSize: 12, color: '#a1a1aa', marginTop: 8, textAlign: 'center' }}>{pricing.freeNote}</div>}
       </div>
     </div>
   );
