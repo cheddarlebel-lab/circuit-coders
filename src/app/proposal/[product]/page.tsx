@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import { ensureDb } from '@/lib/db';
+import PricingBuilder, { type Pricing } from './PricingBuilder';
 
 export const dynamic = 'force-dynamic';
 
@@ -7,7 +8,7 @@ type Feature = { title: string; desc: string; icon: 'pin' | 'ledger' | 'shield' 
 type Cfg = {
   brand: string; poweredBy?: boolean; accent: string; accentSoft: string;
   eyebrow: string; headline: string; sub: string;
-  proof: string; features: Feature[]; cta: string; email: string;
+  proof: string; features: Feature[]; cta: string; email: string; pricing?: Pricing;
 };
 
 const PRODUCTS: Record<string, Cfg> = {
@@ -24,6 +25,17 @@ const PRODUCTS: Record<string, Cfg> = {
       { icon: 'bolt', title: 'Live on your lot in under a week', desc: 'Runs on the phones your team already carries, plus Apple Watch and Wear OS. No hardware to buy, no kiosk to bolt to a wall.' },
     ],
     cta: 'Book a 10-minute demo', email: 'leo@lothours.com',
+    pricing: {
+      basePrice: 199, baseLabel: 'Basic', includedSeats: 20, perSeat: 6,
+      baseIncludes: ['Geofenced auto clock-in/out', 'Timesheets & payroll-ready exports', 'Team messaging + two-way SMS', 'Scheduling, shifts & cover requests'],
+      modules: [
+        { id: 'multirooftop', label: 'Multi-rooftop administration & cross-site analytics', price: 99, note: 'For dealer groups running more than one store.' },
+        { id: 'overtime', label: 'Predictive overtime & California meal-break alerts', price: 49, recommended: true },
+        { id: 'integrations', label: 'Direct payroll, DMS & CRM integrations', price: 79, recommended: true },
+        { id: 'api', label: 'API access & priority support', price: 99 },
+      ],
+      freeNote: 'Prefer to start free? The Free plan covers up to 5 employees at $0.',
+    },
   },
   circuit_coders: {
     brand: 'Circuit Coders', accent: '#0a7d33', accentSoft: 'rgba(10,125,51,0.10)',
@@ -176,6 +188,25 @@ export default async function ProposalPage({
             ))}
           </div>
         </section>
+
+        {/* Pricing configurator */}
+        {cfg.pricing && (
+          <section style={{ borderTop: `1px solid ${line}`, marginTop: 40, background: '#fafafa' }}>
+            <div style={{ maxWidth: wrap, margin: '0 auto', padding: '60px 24px' }}>
+              <div style={{ maxWidth: 640, marginBottom: 32 }}>
+                <div style={{ fontSize: 13, letterSpacing: '0.06em', textTransform: 'uppercase', color: cfg.accent, fontWeight: 600, marginBottom: 12 }}>Build your plan</div>
+                <h2 style={{ fontSize: 34, lineHeight: 1.1, fontWeight: 600, letterSpacing: '-0.03em', margin: '0 0 12px', color: ink }}>
+                  Priced for {name ?? 'your dealership'} — not a quote you have to chase.
+                </h2>
+                <p style={{ fontSize: 17, lineHeight: 1.6, color: body, margin: 0 }}>
+                  Start with everything in Basic, then add only what your store needs. Set your headcount and toggle the modules — your monthly total updates live.
+                </p>
+              </div>
+              <PricingBuilder pricing={cfg.pricing} accent={cfg.accent} accentSoft={cfg.accentSoft}
+                dealer={name ?? 'your dealership'} email={cfg.email} />
+            </div>
+          </section>
+        )}
 
         {/* Closing CTA */}
         <section style={{ maxWidth: wrap, margin: '0 auto', padding: '48px 24px 0' }}>
