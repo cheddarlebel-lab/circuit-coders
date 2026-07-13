@@ -444,6 +444,7 @@ export default function AdminDashboard() {
               Circuit<span className="text-circuit-400">Coders</span>
             </Link>
             <span className="text-xs font-mono bg-circuit-500/15 text-circuit-400 px-2 py-0.5 rounded-full border border-circuit-500/20">ADMIN</span>
+            <Link href="/admin/outreach" className="text-sm text-gray-400 hover:text-circuit-400 transition font-medium">Outreach →</Link>
           </div>
           <div className="flex items-center gap-3">
             <button onClick={() => setShowNewCampaign(true)} className="text-sm bg-blue-600 hover:bg-blue-500 px-3 py-1.5 rounded-lg transition font-medium">
