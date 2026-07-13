@@ -43,7 +43,7 @@ export default function PricingBuilder({
   const card: CSSProperties = { border: `1px solid ${line}`, borderRadius: 14, background: '#fff' };
 
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) 320px', gap: 24, alignItems: 'start' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 24, alignItems: 'start' }}>
       {/* Builder */}
       <div style={{ ...card, padding: 24 }}>
         <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 4 }}>
@@ -106,7 +106,7 @@ export default function PricingBuilder({
       {/* Live total */}
       <div style={{ ...card, padding: 24, position: 'sticky', top: 20 }}>
         <div style={{ fontSize: 12.5, letterSpacing: '0.04em', textTransform: 'uppercase', color: body, fontWeight: 600 }}>
-          {dealer}&apos;s plan
+          {dealer} · monthly
         </div>
         <div style={{ display: 'flex', alignItems: 'baseline', gap: 6, margin: '8px 0 2px' }}>
           <span style={{ fontSize: 44, fontWeight: 600, letterSpacing: '-0.03em', color: ink }}>${total}</span>
@@ -118,7 +118,7 @@ export default function PricingBuilder({
         <div style={{ borderTop: `1px solid ${line}`, paddingTop: 14, fontSize: 13, color: body, lineHeight: 1.9 }}>
           <Row l={`${pricing.baseLabel} base`} r={`$${pricing.basePrice}`} />
           {seatCost > 0 && <Row l={`${extraSeats} extra employees`} r={`$${seatCost}`} />}
-          {addOns.map(m => <Row key={m.id} l={m.label.split(' ').slice(0, 3).join(' ')} r={`$${m.price}`} />)}
+          {addOns.map(m => <Row key={m.id} l={m.label} r={`$${m.price}`} />)}
         </div>
         <a href={mailto} style={{
           display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, marginTop: 18,
