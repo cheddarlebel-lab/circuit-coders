@@ -26,7 +26,8 @@ const PRODUCTS: Record<string, Cfg> = {
     ],
     cta: 'Book a 10-minute demo', email: 'leo@lothours.com',
     pricing: {
-      basePrice: 199, baseLabel: 'Basic', includedSeats: 20, perSeat: 5, trialDays: 14,
+      basePrice: 199, baseLabel: 'Basic', trialDays: 14,
+      unit: { label: 'Employees', included: 20, per: 5 },
       baseIncludes: ['Geofenced auto clock-in/out', 'Timesheets & payroll-ready exports', 'Team messaging + two-way SMS', 'Scheduling, shifts & cover requests'],
       modules: [
         { id: 'multirooftop', label: 'Multi-rooftop administration & cross-site analytics', price: 79, note: 'For dealer groups running more than one store.' },
@@ -50,6 +51,19 @@ const PRODUCTS: Record<string, Cfg> = {
       { icon: 'bolt', title: 'Built for you, start to finish', desc: 'We handle the design, the copy, and the phone integration. You approve it and it goes live — usually inside a week.' },
     ],
     cta: 'See it on a quick call', email: 'leo@circuitcoders.com',
+    pricing: {
+      basePrice: 149, baseLabel: 'Website',
+      baseIncludes: ['Custom design, built for your business', 'Mobile-optimized & fast', 'Hosting, SSL & security included', 'Unlimited content edits'],
+      modules: [
+        { id: 'receptionist', label: 'AI receptionist — answers & books every call, 24/7', price: 149, recommended: true, note: 'Never lose a job to voicemail again.' },
+        { id: 'seo', label: 'Local SEO — rank in Google Maps & local search', price: 99 },
+        { id: 'textback', label: 'Missed-call text-back', price: 29, note: 'Every missed call gets an instant text back.' },
+        { id: 'booking', label: 'Online booking & scheduling', price: 39 },
+        { id: 'reviews', label: 'Review generation & management', price: 49 },
+      ],
+      offer: { badge: 'Free demo first', cta: 'Get my free demo site →', reassure: 'I build it before you pay · no long contracts' },
+      freeNote: 'One flat monthly rate — no setup fees, no surprises.',
+    },
   },
   lanetab: {
     brand: 'LaneTab', accent: '#d97706', accentSoft: 'rgba(217,119,6,0.10)',
@@ -162,13 +176,13 @@ export default async function ProposalPage({
               </a>
               <span style={{ fontSize: 14.5, color: '#71717a' }}>or just reply to the email — it comes straight to me.</span>
             </div>
-            {cfg.pricing?.trialDays && (
+            {cfg.pricing && (cfg.pricing.offer || cfg.pricing.trialDays) && (
               <div style={{ marginTop: 18, display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 13.5, color: body }}>
                 <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: cfg.accentSoft, color: cfg.accent, border: `1px solid ${cfg.accent}22`, borderRadius: 999, padding: '4px 10px', fontWeight: 600 }}>
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke={cfg.accent} strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5" /></svg>
-                  {cfg.pricing.trialDays}-day free trial
+                  {cfg.pricing.offer?.badge ?? `${cfg.pricing.trialDays}-day free trial`}
                 </span>
-                no credit card to start
+                {cfg.pricing.offer?.reassure ?? 'no credit card to start'}
               </div>
             )}
           </div>
@@ -205,14 +219,14 @@ export default async function ProposalPage({
               <div style={{ maxWidth: 640, marginBottom: 32 }}>
                 <div style={{ fontSize: 13, letterSpacing: '0.06em', textTransform: 'uppercase', color: cfg.accent, fontWeight: 600, marginBottom: 12 }}>Build your plan</div>
                 <h2 style={{ fontSize: 34, lineHeight: 1.1, fontWeight: 600, letterSpacing: '-0.03em', margin: '0 0 12px', color: ink }}>
-                  Priced for {name ?? 'your dealership'} — not a quote you have to chase.
+                  Priced for {name ?? 'you'} — not a quote you have to chase.
                 </h2>
                 <p style={{ fontSize: 17, lineHeight: 1.6, color: body, margin: 0 }}>
-                  Start with everything in Basic, then add only what your store needs. Set your headcount and toggle the modules — your monthly total updates live.
+                  Start with {cfg.pricing.baseLabel}, then add only what you need.{cfg.pricing.unit ? ' Set your headcount and' : ''} toggle the modules — your monthly total updates live.
                 </p>
               </div>
               <PricingBuilder pricing={cfg.pricing} accent={cfg.accent} accentSoft={cfg.accentSoft}
-                dealer={name ?? 'your dealership'} email={cfg.email} />
+                dealer={name ?? 'your business'} email={cfg.email} brand={cfg.brand} />
             </div>
           </section>
         )}

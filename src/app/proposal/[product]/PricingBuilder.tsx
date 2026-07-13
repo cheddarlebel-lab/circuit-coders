@@ -5,41 +5,50 @@ import { useMemo, useState, type CSSProperties } from 'react';
 export type Module = { id: string; label: string; price: number; note?: string; recommended?: boolean };
 export type Pricing = {
   basePrice: number; baseLabel: string; baseIncludes: string[];
-  includedSeats: number; perSeat: number; modules: Module[]; freeNote?: string; trialDays?: number;
+  unit?: { label: string; included: number; per: number };   // optional per-unit pricing (e.g. employees)
+  modules: Module[]; freeNote?: string; trialDays?: number;
+  offer?: { badge: string; cta: string; reassure: string };  // overrides the trial-based text
 };
 
 export default function PricingBuilder({
-  pricing, accent, accentSoft, dealer, email,
+  pricing, accent, accentSoft, dealer, email, brand,
 }: {
-  pricing: Pricing; accent: string; accentSoft: string; dealer: string; email: string;
+  pricing: Pricing; accent: string; accentSoft: string; dealer: string; email: string; brand: string;
 }) {
   const ink = '#18181b', body = '#52525c', line = '#e8e8ec';
-  const [seats, setSeats] = useState(pricing.includedSeats);
+  const unit = pricing.unit;
+  const [units, setUnits] = useState(unit?.included ?? 0);
   const [picked, setPicked] = useState<Set<string>>(
     () => new Set(pricing.modules.filter(m => m.recommended).map(m => m.id)));
 
-  const extraSeats = Math.max(0, seats - pricing.includedSeats);
-  const seatCost = extraSeats * pricing.perSeat;
+  const extra = unit ? Math.max(0, units - unit.included) : 0;
+  const unitCost = unit ? extra * unit.per : 0;
   const addOns = pricing.modules.filter(m => picked.has(m.id));
   const addOnCost = addOns.reduce((s, m) => s + m.price, 0);
-  const total = pricing.basePrice + seatCost + addOnCost;
+  const total = pricing.basePrice + unitCost + addOnCost;
+
+  const trial = pricing.trialDays ?? 14;
+  const offer = pricing.offer ?? {
+    badge: `${trial}-day free trial`,
+    cta: `Start your ${trial}-day free trial →`,
+    reassure: 'No credit card to start · cancel anytime',
+  };
 
   const toggle = (id: string) =>
     setPicked(p => { const n = new Set(p); n.has(id) ? n.delete(id) : n.add(id); return n; });
 
-  const trial = pricing.trialDays ?? 14;
   const mailto = useMemo(() => {
     const lines = [
-      `Hi Leo — I'd like to start the ${trial}-day free trial for ${dealer} on this plan:`,
+      `Hi Leo — I'd like to get started with ${brand} for ${dealer}. Here's the plan I built:`,
       ``,
-      `• ${seats} employees`,
+      ...(unit ? [`• ${units} ${unit.label.toLowerCase()}`] : []),
       ...addOns.map(m => `• ${m.label}`),
       ``,
-      `After the trial: $${total}/mo. Let's set it up.`,
+      `That comes to $${total}/mo. Let's set it up.`,
     ];
     return `mailto:${email}?subject=${encodeURIComponent(
-      `LotHours ${trial}-day trial for ${dealer} — $${total}/mo plan`)}&body=${encodeURIComponent(lines.join('\n'))}`;
-  }, [dealer, seats, addOns, total, email, trial]);
+      `${brand} plan for ${dealer} — $${total}/mo`)}&body=${encodeURIComponent(lines.join('\n'))}`;
+  }, [brand, dealer, unit, units, addOns, total, email]);
 
   const card: CSSProperties = { border: `1px solid ${line}`, borderRadius: 14, background: '#fff' };
 
@@ -51,38 +60,36 @@ export default function PricingBuilder({
           <span style={{ fontSize: 15, fontWeight: 600, color: ink }}>Starts with {pricing.baseLabel}</span>
           <span style={{ fontSize: 15, color: body }}>${pricing.basePrice}/mo base</span>
         </div>
-        <div style={{ fontSize: 13.5, color: body, lineHeight: 1.6, marginBottom: 20 }}>
+        <div style={{ fontSize: 13.5, color: body, lineHeight: 1.6, marginBottom: unit ? 20 : 6 }}>
           {pricing.baseIncludes.join(' · ')}
         </div>
 
-        {/* Seats */}
-        <div style={{ borderTop: `1px solid ${line}`, paddingTop: 18, marginBottom: 4 }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-            <div>
-              <div style={{ fontSize: 14.5, fontWeight: 600, color: ink }}>Employees</div>
-              <div style={{ fontSize: 12.5, color: body }}>
-                {pricing.includedSeats} included · ${pricing.perSeat}/mo each beyond
+        {unit && (
+          <div style={{ borderTop: `1px solid ${line}`, paddingTop: 18, marginBottom: 4 }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <div>
+                <div style={{ fontSize: 14.5, fontWeight: 600, color: ink }}>{unit.label}</div>
+                <div style={{ fontSize: 12.5, color: body }}>{unit.included} included · ${unit.per}/mo each beyond</div>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 4, border: `1px solid ${line}`, borderRadius: 8, padding: 3 }}>
+                <button onClick={() => setUnits(s => Math.max(1, s - 5))} style={stepBtn(ink)}>–</button>
+                <input value={units} onChange={e => setUnits(Math.max(1, Math.min(999, +e.target.value || 0)))}
+                  style={{ width: 46, textAlign: 'center', border: 'none', outline: 'none', fontSize: 15, fontWeight: 600, color: ink, background: 'transparent' }} />
+                <button onClick={() => setUnits(s => s + 5)} style={stepBtn(ink)}>+</button>
               </div>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 4, border: `1px solid ${line}`, borderRadius: 8, padding: 3 }}>
-              <button onClick={() => setSeats(s => Math.max(1, s - 5))} style={stepBtn(ink)}>–</button>
-              <input value={seats} onChange={e => setSeats(Math.max(1, Math.min(999, +e.target.value || 0)))}
-                style={{ width: 46, textAlign: 'center', border: 'none', outline: 'none', fontSize: 15, fontWeight: 600, color: ink, background: 'transparent' }} />
-              <button onClick={() => setSeats(s => s + 5)} style={stepBtn(ink)}>+</button>
-            </div>
           </div>
-        </div>
+        )}
 
-        {/* Modules */}
-        <div style={{ marginTop: 14 }}>
+        <div style={{ marginTop: unit ? 14 : 12 }}>
+          <div style={{ fontSize: 12.5, letterSpacing: '0.04em', textTransform: 'uppercase', color: '#a1a1aa', fontWeight: 600, marginBottom: 2 }}>Add what you need</div>
           {pricing.modules.map(m => {
             const on = picked.has(m.id);
             return (
               <button key={m.id} onClick={() => toggle(m.id)} style={{
                 width: '100%', textAlign: 'left', display: 'flex', alignItems: 'flex-start', gap: 12,
                 padding: '13px 14px', marginTop: 10, cursor: 'pointer', borderRadius: 10,
-                border: `1px solid ${on ? accent : line}`, background: on ? accentSoft : '#fff',
-                transition: 'all .12s',
+                border: `1px solid ${on ? accent : line}`, background: on ? accentSoft : '#fff', transition: 'all .12s',
               }}>
                 <span style={{
                   flexShrink: 0, width: 18, height: 18, borderRadius: 5, marginTop: 1,
@@ -112,26 +119,22 @@ export default function PricingBuilder({
         <div style={{ display: 'flex', alignItems: 'baseline', gap: 6, margin: '8px 0 2px' }}>
           <span style={{ fontSize: 44, fontWeight: 600, letterSpacing: '-0.03em', color: ink }}>${total}</span>
           <span style={{ fontSize: 16, color: body }}>/mo</span>
-          <span style={{ marginLeft: 'auto', fontSize: 12, fontWeight: 600, color: accent, background: accentSoft, borderRadius: 999, padding: '4px 10px' }}>
-            {trial}-day free trial
-          </span>
+          <span style={{ marginLeft: 'auto', fontSize: 12, fontWeight: 600, color: accent, background: accentSoft, borderRadius: 999, padding: '4px 10px' }}>{offer.badge}</span>
         </div>
         <div style={{ fontSize: 13, color: body, marginBottom: 18 }}>
-          {seats} employees{addOns.length ? ` · ${addOns.length} add-on${addOns.length > 1 ? 's' : ''}` : ''} · billed after your free trial
+          {unit ? `${units} ${unit.label.toLowerCase()}` : `${pricing.baseLabel}`}{addOns.length ? ` · ${addOns.length} add-on${addOns.length > 1 ? 's' : ''}` : ''}
         </div>
         <div style={{ borderTop: `1px solid ${line}`, paddingTop: 14, fontSize: 13, color: body, lineHeight: 1.9 }}>
           <Row l={`${pricing.baseLabel} base`} r={`$${pricing.basePrice}`} />
-          {seatCost > 0 && <Row l={`${extraSeats} extra employees`} r={`$${seatCost}`} />}
+          {unitCost > 0 && unit && <Row l={`${extra} extra ${unit.label.toLowerCase()}`} r={`$${unitCost}`} />}
           {addOns.map(m => <Row key={m.id} l={m.label} r={`$${m.price}`} />)}
         </div>
         <a href={mailto} style={{
           display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, marginTop: 18,
           background: accent, color: '#fff', fontWeight: 500, fontSize: 15, padding: '12px 20px',
           borderRadius: 6, textDecoration: 'none',
-        }}>Start your {trial}-day free trial →</a>
-        <div style={{ fontSize: 12, color: '#71717a', marginTop: 10, textAlign: 'center' }}>
-          No credit card to start · cancel anytime
-        </div>
+        }}>{offer.cta}</a>
+        <div style={{ fontSize: 12, color: '#71717a', marginTop: 10, textAlign: 'center' }}>{offer.reassure}</div>
         {pricing.freeNote && <div style={{ fontSize: 12, color: '#a1a1aa', marginTop: 8, textAlign: 'center' }}>{pricing.freeNote}</div>}
       </div>
     </div>
