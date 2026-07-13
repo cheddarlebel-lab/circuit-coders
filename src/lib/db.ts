@@ -197,6 +197,12 @@ export async function ensureDb(): Promise<Client> {
     try { await db.execute('ALTER TABLE outreach_prospects ADD COLUMN last_click_at TEXT'); } catch { /* already exists */ }
     try { await db.execute('ALTER TABLE outreach_prospects ADD COLUMN bbb_rating TEXT'); } catch { /* already exists */ }
     try { await db.execute('ALTER TABLE outreach_prospects ADD COLUMN bbb_url TEXT'); } catch { /* already exists */ }
+    try { await db.execute('ALTER TABLE outreach_prospects ADD COLUMN opens INTEGER NOT NULL DEFAULT 0'); } catch { /* already exists */ }
+    try { await db.execute('ALTER TABLE outreach_prospects ADD COLUMN first_open_at TEXT'); } catch { /* already exists */ }
+    try { await db.execute('ALTER TABLE outreach_prospects ADD COLUMN last_open_at TEXT'); } catch { /* already exists */ }
+    try { await db.execute('ALTER TABLE outreach_prospects ADD COLUMN followup_count INTEGER NOT NULL DEFAULT 0'); } catch { /* already exists */ }
+    try { await db.execute('ALTER TABLE outreach_prospects ADD COLUMN last_followup_at TEXT'); } catch { /* already exists */ }
+    try { await db.execute('ALTER TABLE outreach_prospects ADD COLUMN replied_at TEXT'); } catch { /* already exists */ }
     initialized = true;
   }
   return db;
