@@ -55,7 +55,7 @@ const PRODUCTS: Record<string, Cfg> = {
       basePrice: 149, baseLabel: 'Website',
       baseIncludes: ['Custom design, built for your business', 'Mobile-optimized & fast', 'Hosting, SSL & security included', 'Unlimited content edits'],
       modules: [
-        { id: 'brand', label: 'Brand management — reviews, social & Google presence, fully managed', price: 249, badge: 'Most popular', note: 'We run your whole online reputation end-to-end, so you never have to think about it.' },
+        { id: 'brand', label: 'Brand management — reviews, social & Google presence, fully managed', price: 399, badge: 'Most popular', note: 'Done-for-you: reviews, social & Google, handled end-to-end. Most agencies charge $1,000+/mo for this.' },
         { id: 'receptionist', label: 'AI receptionist — answers & books every call, 24/7', price: 149, recommended: true, note: 'Never lose a job to voicemail again.' },
         { id: 'seo', label: 'Local SEO — rank in Google Maps & local search', price: 99 },
         { id: 'textback', label: 'Missed-call text-back', price: 29, note: 'Every missed call gets an instant text back.' },
