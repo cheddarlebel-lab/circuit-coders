@@ -222,7 +222,7 @@ export default async function ProposalPage({
                   Priced for {name ?? 'you'} — not a quote you have to chase.
                 </h2>
                 <p style={{ fontSize: 17, lineHeight: 1.6, color: body, margin: 0 }}>
-                  Start with {cfg.pricing.baseLabel}, then add only what you need.{cfg.pricing.unit ? ' Set your headcount and' : ''} toggle the modules — your monthly total updates live.
+                  Start with {cfg.pricing.baseLabel}, then add only what you need — {cfg.pricing.unit ? 'set your headcount and ' : ''}toggle the modules to watch your monthly total update live.
                 </p>
               </div>
               <PricingBuilder pricing={cfg.pricing} accent={cfg.accent} accentSoft={cfg.accentSoft}
