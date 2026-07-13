@@ -21,6 +21,9 @@ type Prospect = {
   clicks: number | null;
   last_click_at: string | null;
   bbb_rating: string | null;
+  opens: number | null;
+  followup_count: number | null;
+  replied_at: string | null;
 };
 
 const PRODUCTS: Record<string, { label: string; accent: string }> = {
@@ -197,11 +200,11 @@ export default function OutreachMissionControl() {
                     </td>
                     <td style={{ padding: '9px 12px', whiteSpace: 'nowrap' }}>
                       <div style={{ color: '#6b736b' }}>{ago(p.last_touch_at)}</div>
-                      {(p.clicks ?? 0) > 0 && (
-                        <div style={{ color: '#3fd6e0', fontSize: 11.5, fontWeight: 700 }}>
-                          {p.clicks} click{p.clicks === 1 ? '' : 's'}
-                        </div>
-                      )}
+                      <div style={{ display: 'flex', gap: 8, fontSize: 11.5, fontWeight: 700, marginTop: 1 }}>
+                        {(p.opens ?? 0) > 0 && <span style={{ color: '#8b93a0' }} title="opens">👁 {p.opens}</span>}
+                        {(p.clicks ?? 0) > 0 && <span style={{ color: '#3fd6e0' }} title="clicks">↗ {p.clicks}</span>}
+                        {(p.followup_count ?? 0) > 0 && <span style={{ color: '#b98bff' }} title="follow-ups sent">↻ {p.followup_count}</span>}
+                      </div>
                     </td>
                   </tr>
                 ))}
