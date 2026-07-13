@@ -13,8 +13,8 @@ export async function GET() {
     SELECT * FROM outreach_prospects
     ORDER BY CASE status
       WHEN 'won' THEN 0 WHEN 'meeting' THEN 1 WHEN 'replied' THEN 2
-      WHEN 'sent' THEN 3 WHEN 'not_contacted' THEN 4 ELSE 5 END,
-      product, name
+      WHEN 'clicked' THEN 3 WHEN 'sent' THEN 4 WHEN 'not_contacted' THEN 5 ELSE 6 END,
+      clicks DESC, product, name
   `)).rows;
   return NextResponse.json({ prospects: rows });
 }
@@ -38,13 +38,14 @@ export async function POST(req: NextRequest) {
     if (dupe.length) continue;
     await db.execute({
       sql: `INSERT INTO outreach_prospects
-        (product,name,contact_name,city,region,email,phone,website,segment,status,channel,notes,last_touch_at)
-        VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+        (product,name,contact_name,city,region,email,phone,website,segment,status,channel,notes,last_touch_at,bbb_rating,bbb_url)
+        VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
       args: [
         product, p.name, p.contact_name ?? null, p.city ?? null, p.region ?? null,
         p.email ?? null, p.phone ?? null, p.website ?? null, p.segment ?? null,
         p.status ?? 'not_contacted', p.channel ?? null, p.notes ?? null,
         p.last_touch_at ?? (CONTACTED.has(p.status) ? new Date().toISOString() : null),
+        p.bbb_rating ?? null, p.bbb_url ?? null,
       ],
     });
     added++;

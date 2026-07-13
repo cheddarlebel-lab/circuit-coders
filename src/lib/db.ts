@@ -51,10 +51,17 @@ export async function ensureDb(): Promise<Client> {
         channel TEXT,
         notes TEXT,
         last_touch_at TEXT,
+        track_token TEXT,
+        clicks INTEGER NOT NULL DEFAULT 0,
+        first_click_at TEXT,
+        last_click_at TEXT,
+        bbb_rating TEXT,
+        bbb_url TEXT,
         created_at TEXT DEFAULT (datetime('now'))
       );
       CREATE INDEX IF NOT EXISTS idx_outreach_product ON outreach_prospects(product);
       CREATE INDEX IF NOT EXISTS idx_outreach_status ON outreach_prospects(status);
+      CREATE INDEX IF NOT EXISTS idx_outreach_token ON outreach_prospects(track_token);
 
       CREATE TABLE IF NOT EXISTS projects (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -184,6 +191,12 @@ export async function ensureDb(): Promise<Client> {
     try { await db.execute('ALTER TABLE customers ADD COLUMN area_code TEXT'); } catch { /* already exists */ }
     try { await db.execute('ALTER TABLE customers ADD COLUMN city TEXT'); } catch { /* already exists */ }
     try { await db.execute('ALTER TABLE seo_campaigns ADD COLUMN plan_type TEXT DEFAULT \'local_spark\''); } catch { /* already exists */ }
+    try { await db.execute('ALTER TABLE outreach_prospects ADD COLUMN track_token TEXT'); } catch { /* already exists */ }
+    try { await db.execute('ALTER TABLE outreach_prospects ADD COLUMN clicks INTEGER NOT NULL DEFAULT 0'); } catch { /* already exists */ }
+    try { await db.execute('ALTER TABLE outreach_prospects ADD COLUMN first_click_at TEXT'); } catch { /* already exists */ }
+    try { await db.execute('ALTER TABLE outreach_prospects ADD COLUMN last_click_at TEXT'); } catch { /* already exists */ }
+    try { await db.execute('ALTER TABLE outreach_prospects ADD COLUMN bbb_rating TEXT'); } catch { /* already exists */ }
+    try { await db.execute('ALTER TABLE outreach_prospects ADD COLUMN bbb_url TEXT'); } catch { /* already exists */ }
     initialized = true;
   }
   return db;

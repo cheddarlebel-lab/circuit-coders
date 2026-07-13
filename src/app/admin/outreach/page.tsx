@@ -18,6 +18,9 @@ type Prospect = {
   channel: string | null;
   notes: string | null;
   last_touch_at: string | null;
+  clicks: number | null;
+  last_click_at: string | null;
+  bbb_rating: string | null;
 };
 
 const PRODUCTS: Record<string, { label: string; accent: string }> = {
@@ -27,14 +30,15 @@ const PRODUCTS: Record<string, { label: string; accent: string }> = {
 };
 
 // Ordered pipeline stages (reached-count funnel).
-const STAGES = ['not_contacted', 'sent', 'replied', 'meeting', 'won'] as const;
+const STAGES = ['not_contacted', 'sent', 'clicked', 'replied', 'meeting', 'won'] as const;
 const STAGE_LABEL: Record<string, string> = {
-  not_contacted: 'Not contacted', sent: 'Sent', replied: 'Replied',
+  not_contacted: 'Not contacted', sent: 'Sent', clicked: 'Clicked', replied: 'Replied',
   meeting: 'Meeting', won: 'Won', lost: 'Lost', bounced: 'Bounced',
 };
 const STATUS_STYLE: Record<string, { bg: string; fg: string }> = {
   not_contacted: { bg: '#1a1d1a', fg: '#8b938b' },
   sent: { bg: '#152230', fg: '#5b9dff' },
+  clicked: { bg: '#0e2e33', fg: '#3fd6e0' },
   replied: { bg: '#2a2410', fg: '#ffb020' },
   meeting: { bg: '#12321f', fg: '#4fd08a' },
   won: { bg: '#0f3a1d', fg: '#2fbf71' },
@@ -171,7 +175,10 @@ export default function OutreachMissionControl() {
                   <tr key={p.id} style={{ borderTop: '1px solid #171a17' }}>
                     <td style={{ padding: '9px 12px' }}>
                       <div style={{ fontWeight: 600 }}>{p.name}</div>
-                      {p.segment && <div style={{ color: '#6b736b', fontSize: 11.5 }}>{p.segment}</div>}
+                      <div style={{ fontSize: 11.5, display: 'flex', gap: 8, marginTop: 1 }}>
+                        {p.segment && <span style={{ color: '#6b736b' }}>{p.segment}</span>}
+                        {p.bbb_rating && <span style={{ color: '#d08a8a', fontWeight: 700 }}>BBB {p.bbb_rating}</span>}
+                      </div>
                     </td>
                     <td style={{ padding: '9px 12px' }}>
                       <span style={{ color: PRODUCTS[p.product]?.accent ?? '#b6bdb6', fontSize: 12 }}>{PRODUCTS[p.product]?.label ?? p.product}</span>
@@ -188,7 +195,14 @@ export default function OutreachMissionControl() {
                         {ALL_STATUSES.map(s => <option key={s} value={s} style={{ background: '#161a16', color: '#e8ece8' }}>{STAGE_LABEL[s]}</option>)}
                       </select>
                     </td>
-                    <td style={{ padding: '9px 12px', color: '#6b736b', whiteSpace: 'nowrap' }}>{ago(p.last_touch_at)}</td>
+                    <td style={{ padding: '9px 12px', whiteSpace: 'nowrap' }}>
+                      <div style={{ color: '#6b736b' }}>{ago(p.last_touch_at)}</div>
+                      {(p.clicks ?? 0) > 0 && (
+                        <div style={{ color: '#3fd6e0', fontSize: 11.5, fontWeight: 700 }}>
+                          {p.clicks} click{p.clicks === 1 ? '' : 's'}
+                        </div>
+                      )}
+                    </td>
                   </tr>
                 ))}
                 {rows !== null && !filtered.length && <tr><td colSpan={7} style={{ padding: 24, color: '#8b938b' }}>No prospects match.</td></tr>}
