@@ -36,6 +36,26 @@ export async function ensureDb(): Promise<Client> {
         created_at TEXT DEFAULT (datetime('now'))
       );
 
+      CREATE TABLE IF NOT EXISTS outreach_prospects (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        product TEXT NOT NULL DEFAULT 'circuit_coders',
+        name TEXT NOT NULL,
+        contact_name TEXT,
+        city TEXT,
+        region TEXT,
+        email TEXT,
+        phone TEXT,
+        website TEXT,
+        segment TEXT,
+        status TEXT NOT NULL DEFAULT 'not_contacted',
+        channel TEXT,
+        notes TEXT,
+        last_touch_at TEXT,
+        created_at TEXT DEFAULT (datetime('now'))
+      );
+      CREATE INDEX IF NOT EXISTS idx_outreach_product ON outreach_prospects(product);
+      CREATE INDEX IF NOT EXISTS idx_outreach_status ON outreach_prospects(status);
+
       CREATE TABLE IF NOT EXISTS projects (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         customer_id INTEGER NOT NULL REFERENCES customers(id),
