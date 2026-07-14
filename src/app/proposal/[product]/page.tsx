@@ -7,6 +7,7 @@ export const dynamic = 'force-dynamic';
 type Feature = { title: string; desc: string; icon: 'pin' | 'ledger' | 'shield' | 'bolt' | 'phone' | 'globe' | 'chat' | 'chart' };
 type Cfg = {
   brand: string; poweredBy?: boolean; accent: string; accentSoft: string;
+  logo?: string; appStore?: string;
   eyebrow: string; headline: string; sub: string;
   proof: string; features: Feature[]; cta: string; email: string; pricing?: Pricing;
 };
@@ -14,6 +15,7 @@ type Cfg = {
 const PRODUCTS: Record<string, Cfg> = {
   lothours: {
     brand: 'LotHours', poweredBy: true, accent: '#155dfc', accentSoft: 'rgba(21,93,252,0.10)',
+    logo: '/lothours-car.png', appStore: 'https://apps.apple.com/us/app/lothours/id6772284476',
     eyebrow: 'Proposal for',
     headline: 'Stop paying for hours nobody worked.',
     sub: 'LotHours puts a geofence around your lot. Techs, porters, and sales staff clock in and out automatically the moment they arrive or leave — no punch clock to game, no Friday timesheet guesswork, and a clean record if a labor claim ever lands.',
@@ -144,7 +146,11 @@ export default async function ProposalPage({
         <header style={{ borderBottom: `1px solid ${line}` }}>
           <div style={{ maxWidth: wrap, margin: '0 auto', padding: '18px 24px',
             display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-            <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+              {cfg.logo && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={cfg.logo} alt={`${cfg.brand} logo`} height={30} style={{ height: 30, width: 'auto', display: 'block' }} />
+              )}
               <span style={{ fontWeight: 700, fontSize: 18, letterSpacing: '-0.02em' }}>{cfg.brand}</span>
               {cfg.poweredBy && (
                 <span style={{ fontSize: 10, letterSpacing: '0.09em', color: '#a1a1aa', fontWeight: 600, textTransform: 'uppercase' }}>
@@ -184,6 +190,17 @@ export default async function ProposalPage({
                   {cfg.pricing.offer?.badge ?? `${cfg.pricing.trialDays}-day free trial`}
                 </span>
                 {cfg.pricing.offer?.reassure ?? 'no credit card to start'}
+              </div>
+            )}
+            {cfg.appStore && (
+              <div style={{ marginTop: 26, display: 'flex', alignItems: 'center', gap: 14, flexWrap: 'wrap' }}>
+                <a href={cfg.appStore} target="_blank" rel="noopener noreferrer" aria-label={`Download ${cfg.brand} on the App Store`} style={{ display: 'inline-flex' }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/app-store-badge.svg" alt={`Download ${cfg.brand} on the App Store`} height={42} style={{ height: 42, width: 'auto', display: 'block' }} />
+                </a>
+                <span style={{ fontSize: 13.5, color: '#71717a', maxWidth: 280, lineHeight: 1.5 }}>
+                  Already live &amp; shipping — your team installs it free from the App Store.
+                </span>
               </div>
             )}
           </div>
