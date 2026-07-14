@@ -9,7 +9,7 @@ export default function RoiCalculator({
 }: {
   accent: string; accentSoft: string; basePrice: number; included: number; per: number; dealer: string;
 }) {
-  const ink = '#18181b', body = '#52525c', line = '#e8e8ec', warn = '#d1443a';
+  const ink = '#18181b', body = '#52525c', line = '#e8e8ec';
   const [emp, setEmp] = useState(15);
   const [mins, setMins] = useState(10);
   const [rate, setRate] = useState(35);
@@ -41,7 +41,7 @@ export default function RoiCalculator({
           {dealer} is losing about
         </div>
         <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, margin: '6px 0 0' }}>
-          <span style={{ fontSize: 46, fontWeight: 700, letterSpacing: '-0.03em', color: warn, lineHeight: 1 }}>{money(monthly)}</span>
+          <span style={{ fontSize: 46, fontWeight: 700, letterSpacing: '-0.03em', color: ink, lineHeight: 1 }}>{money(monthly)}</span>
           <span style={{ fontSize: 16, color: body }}>/mo</span>
         </div>
         <div style={{ fontSize: 14, color: body, marginTop: 6 }}>
