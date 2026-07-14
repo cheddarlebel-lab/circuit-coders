@@ -59,12 +59,29 @@ function ago(iso: string | null): string {
   return `${Math.floor(d / 86400)}d ago`;
 }
 
+// Interest score = how hot a prospect is, engagement-driven and scanner-discounted.
+// Corporate email security scanners auto-fetch links (producing click-spikes like ↗39),
+// so clicks are capped at 5 and opens at 8 — genuine multi-open + click behavior from a
+// named decision-maker outranks a scanner's inflated click count.
+function interestScore(p: Prospect): number {
+  if (p.replied_at || p.status === 'replied') return 1000;   // a reply is the hottest signal
+  const opens = p.opens ?? 0, clicks = p.clicks ?? 0;
+  return Math.min(clicks, 5) * 5
+    + Math.min(opens, 8) * 4
+    + (p.contact_name ? 6 : 0)                                // a named GM/owner is actionable
+    + (clicks > 0 && opens > 0 ? 8 : 0);                      // opened AND clicked = strongest human signal
+}
+function tsMs(s: string | null): number {
+  return s ? new Date(s.replace(' ', 'T') + (s.includes('Z') ? '' : 'Z')).getTime() : 0;
+}
+
 export default function OutreachMissionControl() {
   const [rows, setRows] = useState<Prospect[] | null>(null);
   const [err, setErr] = useState('');
   const [productFilter, setProductFilter] = useState('all');
   const [statusFilter, setStatusFilter] = useState('all');
   const [q, setQ] = useState('');
+  const [sort, setSort] = useState<'hot' | 'recent'>('hot');
 
   const load = useCallback(async () => {
     const r = await fetch('/api/admin/outreach');
@@ -95,12 +112,16 @@ export default function OutreachMissionControl() {
 
   const filtered = useMemo(() => {
     const needle = q.trim().toLowerCase();
-    return (rows ?? []).filter(p =>
+    const list = (rows ?? []).filter(p =>
       (productFilter === 'all' || p.product === productFilter) &&
       (statusFilter === 'all' || p.status === statusFilter) &&
       (!needle || [p.name, p.contact_name, p.city, p.region, p.email, p.phone, p.notes]
         .some(v => v?.toLowerCase().includes(needle))));
-  }, [rows, productFilter, statusFilter, q]);
+    return list.sort((a, b) =>
+      sort === 'hot'
+        ? interestScore(b) - interestScore(a) || tsMs(b.last_touch_at) - tsMs(a.last_touch_at)
+        : tsMs(b.last_touch_at) - tsMs(a.last_touch_at) || interestScore(b) - interestScore(a));
+  }, [rows, productFilter, statusFilter, q, sort]);
 
   return (
     <div style={{ minHeight: '100vh', background: '#0b0d0b', color: '#e8ece8', fontFamily: 'ui-sans-serif, system-ui, sans-serif' }}>
@@ -157,6 +178,10 @@ export default function OutreachMissionControl() {
           </select>
           <input placeholder="Search name, city, contact…" value={q} onChange={e => setQ(e.target.value)}
             style={{ ...selectStyle, flex: 1, minWidth: 180 }} />
+          <div style={{ display: 'flex', gap: 4 }}>
+            <button onClick={() => setSort('hot')} style={pill(sort === 'hot')} title="Rank by interest — engagement, scanner-discounted">🔥 Hottest</button>
+            <button onClick={() => setSort('recent')} style={pill(sort === 'recent')} title="Most recent touch first">Recent</button>
+          </div>
           <span style={{ color: '#6b736b', fontSize: 12.5 }}>{filtered.length} shown</span>
         </div>
 
@@ -201,6 +226,11 @@ export default function OutreachMissionControl() {
                     <td style={{ padding: '9px 12px', whiteSpace: 'nowrap' }}>
                       <div style={{ color: '#6b736b' }}>{ago(p.last_touch_at)}</div>
                       <div style={{ display: 'flex', gap: 8, fontSize: 11.5, fontWeight: 700, marginTop: 1 }}>
+                        {(() => {
+                          const sc = interestScore(p);
+                          const hot = p.replied_at || (p.opens ?? 0) > 0 || (p.clicks ?? 0) > 0;
+                          return hot ? <span style={{ color: '#ff9e40', fontWeight: 800 }} title="interest score — engagement, scanner-discounted">🔥 {sc >= 1000 ? '★' : sc}</span> : null;
+                        })()}
                         {(p.opens ?? 0) > 0 && <span style={{ color: '#8b93a0' }} title="opens">👁 {p.opens}</span>}
                         {(p.clicks ?? 0) > 0 && <span style={{ color: '#3fd6e0' }} title="clicks">↗ {p.clicks}</span>}
                         {(p.followup_count ?? 0) > 0 && <span style={{ color: '#b98bff' }} title="follow-ups sent">↻ {p.followup_count}</span>}
