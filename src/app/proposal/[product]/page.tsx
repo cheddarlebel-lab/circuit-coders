@@ -222,7 +222,7 @@ export default async function ProposalPage({
             </div>
             {cfg.pricing?.trialDays && !cfg.pricing.offer ? (
               // Trial as the centerpiece — big, unmissable.
-              <div style={{ marginTop: 28, display: 'flex', alignItems: 'stretch', border: `1.5px solid ${cfg.accent}`, borderRadius: 14, overflow: 'hidden', maxWidth: 540 }}>
+              <div style={{ marginTop: 28, display: 'inline-flex', alignItems: 'stretch', border: `1.5px solid ${cfg.accent}`, borderRadius: 14, overflow: 'hidden' }}>
                 <div style={{ background: cfg.accent, color: '#fff', padding: '16px 22px', display: 'flex', flexDirection: 'column', justifyContent: 'center', flexShrink: 0, textAlign: 'center' }}>
                   <div style={{ fontSize: 30, fontWeight: 700, lineHeight: 1, letterSpacing: '-0.02em' }}>{cfg.pricing.trialDays} days</div>
                   <div style={{ fontSize: 15, fontWeight: 600, letterSpacing: '0.02em', opacity: 0.95, marginTop: 2 }}>free</div>
