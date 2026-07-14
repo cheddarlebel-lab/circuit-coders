@@ -70,14 +70,14 @@ const PRODUCTS: Record<string, Cfg> = {
       basePrice: 149, baseLabel: 'Website',
       baseIncludes: ['Custom design, built for your business', 'Mobile-optimized & fast', 'Hosting, SSL & security included', 'Unlimited content edits'],
       modules: [
+        { id: 'receptionist', label: 'AI receptionist — answers & books every call, 24/7', price: 149, recommended: true, note: 'Your front desk that never sleeps: picks up nights, weekends, and while you’re under a hood — and books the estimate on the spot.' },
+        { id: 'seo', label: 'Local SEO — rank in Google Maps & local search', price: 99, note: 'Be the shop that shows up first when a stranded driver or an insurance adjuster searches nearby.' },
+        { id: 'reviews', label: 'Review generation — a steady stream of 5-star Google reviews', price: 49, note: 'Auto-ask every happy customer for a review — the trust signal that wins the click over the shop down the street.' },
         { id: 'brand', label: 'Brand management — reviews, social & Google presence, fully managed', price: 399, badge: 'Most popular', note: 'Done-for-you: reviews, social & Google, handled end-to-end. Most agencies charge $1,000+/mo for this.' },
-        { id: 'receptionist', label: 'AI receptionist — answers & books every call, 24/7', price: 149, recommended: true, note: 'Never lose a job to voicemail again.' },
-        { id: 'seo', label: 'Local SEO — rank in Google Maps & local search', price: 99 },
-        { id: 'textback', label: 'Missed-call text-back', price: 29, note: 'Every missed call gets an instant text back.' },
-        { id: 'booking', label: 'Online booking & scheduling', price: 39 },
-        { id: 'reviews', label: 'Review generation only', price: 49 },
+        { id: 'booking', label: 'Online booking & photo-estimate intake', price: 39, note: 'A friction-free form where customers upload photos of the damage from their phone — you fire back a fast preliminary estimate before they drive to a competitor.' },
+        { id: 'textback', label: 'Missed-call text-back', price: 29, note: 'The backstop to the receptionist: if every line is tied up, the caller still gets an instant text so they don’t dial the next shop.' },
       ],
-      offer: { badge: 'Free demo first', cta: 'Get my free demo site →', reassure: 'I build it before you pay · no long contracts' },
+      offer: { badge: 'Free demo first', cta: 'Get my free demo site →', reassure: 'No credit card. We build it from your existing photos & info — you just look at it.' },
       freeNote: 'One flat monthly rate — no setup fees, no surprises.',
     },
   },
@@ -151,16 +151,28 @@ export default async function ProposalPage({
   const cfg = PRODUCTS[product] ?? PRODUCTS.lothours;
 
   let name: string | null = null;
+  let segment: string | null = null, pnotes: string | null = null;
   if (ref) {
     try {
       const db = await ensureDb();
       const row = (await db.execute({
-        sql: 'SELECT name FROM outreach_prospects WHERE track_token = ? LIMIT 1',
+        sql: 'SELECT name, segment, notes FROM outreach_prospects WHERE track_token = ? LIMIT 1',
         args: [ref],
-      })).rows[0] as unknown as { name: string } | undefined;
+      })).rows[0] as unknown as { name: string; segment: string | null; notes: string | null } | undefined;
       name = row?.name ?? null;
+      segment = row?.segment ?? null;
+      pnotes = row?.notes ?? null;
     } catch { /* generic fallback */ }
   }
+
+  // Vertical-aware hero for Circuit Coders — a collision/auto-body shop hears insurance-job
+  // urgency; every other local business keeps the universal missed-call hook.
+  const isCollision = product === 'circuit_coders'
+    && /collision|auto ?body|body shop|body & paint|\bpaint\b|bodyshop/i.test(`${segment ?? ''} ${pnotes ?? ''}`);
+  const headline = isCollision ? 'In a collision, nobody leaves a voicemail.' : cfg.headline;
+  const sub = isCollision
+    ? 'They call the next shop on the list. Circuit Coders makes sure yours answers first — an AI receptionist that picks up every call, books the estimate, and texts the customer back before they’ve scrolled to the next result.'
+    : cfg.sub;
 
   const subject = encodeURIComponent(`${cfg.brand} — ${name ?? 'quick question'}`);
   const mailto = `mailto:${cfg.email}?subject=${subject}`;
@@ -209,8 +221,8 @@ export default async function ProposalPage({
               {cfg.eyebrow} {name ?? 'your team'}
             </div>
             <h1 style={{ fontSize: 52, lineHeight: 1.04, fontWeight: 600, letterSpacing: '-0.032em',
-              margin: '0 0 20px', color: ink }}>{cfg.headline}</h1>
-            <p style={{ fontSize: 19, lineHeight: 1.6, color: body, margin: '0 0 32px', maxWidth: 640 }}>{cfg.sub}</p>
+              margin: '0 0 20px', color: ink }}>{headline}</h1>
+            <p style={{ fontSize: 19, lineHeight: 1.6, color: body, margin: '0 0 32px', maxWidth: 640 }}>{sub}</p>
             <div style={{ display: 'flex', alignItems: 'center', gap: 18, flexWrap: 'wrap' }}>
               <a href={mailto} style={{ display: 'inline-flex', alignItems: 'center', gap: 8,
                 background: cfg.accent, color: '#fff', fontWeight: 500, fontSize: 15,

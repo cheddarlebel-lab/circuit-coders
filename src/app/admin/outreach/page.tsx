@@ -21,6 +21,7 @@ type Prospect = {
   clicks: number | null;
   last_click_at: string | null;
   bbb_rating: string | null;
+  bbb_url: string | null;
   opens: number | null;
   followup_count: number | null;
   replied_at: string | null;
@@ -205,7 +206,9 @@ export default function OutreachMissionControl() {
                       <div style={{ fontWeight: 600 }}>{p.name}</div>
                       <div style={{ fontSize: 11.5, display: 'flex', gap: 8, marginTop: 1 }}>
                         {p.segment && <span style={{ color: '#6b736b' }}>{p.segment}</span>}
-                        {p.bbb_rating && <span style={{ color: '#d08a8a', fontWeight: 700 }}>BBB {p.bbb_rating}</span>}
+                        {p.bbb_rating && (p.bbb_url
+                          ? <a href={p.bbb_url} target="_blank" rel="noopener noreferrer" title="Open BBB profile" style={{ color: '#d08a8a', fontWeight: 700, textDecoration: 'underline' }}>BBB {p.bbb_rating} ↗</a>
+                          : <span style={{ color: '#d08a8a', fontWeight: 700 }}>BBB {p.bbb_rating}</span>)}
                       </div>
                     </td>
                     <td style={{ padding: '9px 12px' }}>
