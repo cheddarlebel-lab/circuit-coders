@@ -116,30 +116,6 @@ function Icon({ name, color }: { name: Feature['icon']; color: string }) {
   );
 }
 
-// Illustrative (not a screenshot): a phone crossing the geofence auto-starts the clock,
-// and stops it on the way out. Loops. Swap for real dashboard footage when available.
-function GeofenceDemo({ accent, accentSoft }: { accent: string; accentSoft: string }) {
-  const off = '#a1a1aa';
-  const kt = '0;0.27;0.30;0.72;0.75;1';
-  return (
-    <svg viewBox="0 0 360 190" width="100%" style={{ maxWidth: 440, display: 'block' }}
-      role="img" aria-label="Illustration: an employee crossing the lot geofence starts the clock automatically, and leaving stops it">
-      <rect x="0" y="0" width="360" height="190" rx="14" fill={accentSoft} />
-      <rect x="108" y="40" width="150" height="110" rx="12" fill="#ffffff" stroke={accent} strokeWidth="2" strokeDasharray="7 6" />
-      <text x="183" y="146" textAnchor="middle" fontSize="10.5" fontWeight="700" fill={accent} letterSpacing="0.1em">YOUR LOT</text>
-      <g opacity="0">
-        <rect x="137" y="58" width="92" height="24" rx="12" fill={accent} />
-        <text x="183" y="74" textAnchor="middle" fontSize="10.5" fontWeight="700" fill="#fff" letterSpacing="0.03em">ON THE CLOCK</text>
-        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes={kt} dur="7s" repeatCount="indefinite" />
-      </g>
-      <circle cy="104" r="9">
-        <animate attributeName="cx" values="22;338" dur="7s" repeatCount="indefinite" />
-        <animate attributeName="fill" values={`${off};${off};${accent};${accent};${off};${off}`} keyTimes={kt} dur="7s" repeatCount="indefinite" />
-      </circle>
-    </svg>
-  );
-}
-
 export default async function ProposalPage({
   params, searchParams,
 }: {
@@ -295,16 +271,10 @@ export default async function ProposalPage({
         {cfg.trustPoints && (
           <section style={{ borderTop: `1px solid ${line}`, background: '#fff' }}>
             <div style={{ maxWidth: wrap, margin: '0 auto', padding: '60px 24px' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 40, alignItems: 'center', marginBottom: 44 }}>
-                <div style={{ maxWidth: 480 }}>
-                  <div style={{ fontSize: 13, letterSpacing: '0.06em', textTransform: 'uppercase', color: cfg.accent, fontWeight: 600, marginBottom: 12 }}>Straight answers</div>
-                  <h2 style={{ fontSize: 32, lineHeight: 1.12, fontWeight: 600, letterSpacing: '-0.03em', margin: '0 0 12px', color: ink }}>{cfg.trustHeading}</h2>
-                  {cfg.trustSub && <p style={{ fontSize: 17, lineHeight: 1.6, color: body, margin: 0 }}>{cfg.trustSub}</p>}
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
-                  <GeofenceDemo accent={cfg.accent} accentSoft={cfg.accentSoft} />
-                  <div style={{ fontSize: 12.5, color: '#a1a1aa', textAlign: 'center' }}>Cross the line, the clock starts. Leave, it stops. Automatically.</div>
-                </div>
+              <div style={{ maxWidth: 620, marginBottom: 40 }}>
+                <div style={{ fontSize: 13, letterSpacing: '0.06em', textTransform: 'uppercase', color: cfg.accent, fontWeight: 600, marginBottom: 12 }}>Straight answers</div>
+                <h2 style={{ fontSize: 32, lineHeight: 1.12, fontWeight: 600, letterSpacing: '-0.03em', margin: '0 0 12px', color: ink }}>{cfg.trustHeading}</h2>
+                {cfg.trustSub && <p style={{ fontSize: 17, lineHeight: 1.6, color: body, margin: 0 }}>{cfg.trustSub}</p>}
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '28px 44px' }}>
                 {cfg.trustPoints.map((t, i) => (
