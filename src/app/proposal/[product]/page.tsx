@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { ensureDb } from '@/lib/db';
 import PricingBuilder, { type Pricing } from './PricingBuilder';
+import RoiCalculator from './RoiCalculator';
 
 export const dynamic = 'force-dynamic';
 
@@ -10,6 +11,9 @@ type Cfg = {
   logo?: string; appStore?: string;
   eyebrow: string; headline: string; sub: string;
   proof: string; features: Feature[]; cta: string; email: string; pricing?: Pricing;
+  roi?: boolean;                                     // show the interactive ROI calculator
+  trustHeading?: string; trustSub?: string;
+  trustPoints?: { title: string; desc: string }[];  // privacy / battery / edge-case answers
 };
 
 const PRODUCTS: Record<string, Cfg> = {
@@ -26,7 +30,16 @@ const PRODUCTS: Record<string, Cfg> = {
       { icon: 'shield', title: 'A defensible paper trail', desc: 'Each clock event captures location accuracy, battery, and timestamp — the audit-ready record you want the day a wage dispute or comp claim shows up.' },
       { icon: 'bolt', title: 'Live on your lot in under a week', desc: 'Runs on the phones your team already carries, plus Apple Watch and Wear OS. No hardware to buy, no kiosk to bolt to a wall.' },
     ],
-    cta: 'Book a 10-minute demo', email: 'leo@lothours.com',
+    cta: 'Start your 14-day free trial', email: 'leo@lothours.com',
+    roi: true,
+    trustHeading: 'Built for a service lot — not a generic office.',
+    trustSub: 'The questions every GM asks before rolling out tracking, answered up front.',
+    trustPoints: [
+      { title: 'Off the lot means off the record', desc: 'Tracking lives inside your geofence and nowhere else. The second a tech crosses the boundary — heading home, on a lunch run — it stops cold. No commute tracking, no after-hours pings. Privacy by design, which is also how you keep it clean if an employee ever asks.' },
+      { title: 'Light on the battery, by design', desc: 'LotHours rides the phone’s native geofence triggers instead of polling GPS all day — the app wakes at the boundary, logs the event, and goes back to sleep. Runs on the phones your team already carries; they won’t feel it.' },
+      { title: 'Test drives & car deliveries, handled', desc: 'A porter leaves to deliver a car, a rep takes a test drive? Crossing the line logs a clean off-lot event your manager clears in a tap — the time still counts, without the Friday guesswork over who was really where.' },
+      { title: 'One footprint across every building', desc: 'Main showroom here, the service bay down the street, the overflow lot across town — chain them into a single geofenced footprint. Staff are “on the lot” whether they’re in parts, service, or on the back line.' },
+    ],
     pricing: {
       basePrice: 199, baseLabel: 'Basic', trialDays: 14,
       unit: { label: 'Employees', included: 20, per: 5 },
@@ -99,6 +112,30 @@ function Icon({ name, color }: { name: Feature['icon']; color: string }) {
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={color}
       strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
       {p[name]}
+    </svg>
+  );
+}
+
+// Illustrative (not a screenshot): a phone crossing the geofence auto-starts the clock,
+// and stops it on the way out. Loops. Swap for real dashboard footage when available.
+function GeofenceDemo({ accent, accentSoft }: { accent: string; accentSoft: string }) {
+  const off = '#a1a1aa';
+  const kt = '0;0.27;0.30;0.72;0.75;1';
+  return (
+    <svg viewBox="0 0 360 190" width="100%" style={{ maxWidth: 440, display: 'block' }}
+      role="img" aria-label="Illustration: an employee crossing the lot geofence starts the clock automatically, and leaving stops it">
+      <rect x="0" y="0" width="360" height="190" rx="14" fill={accentSoft} />
+      <rect x="108" y="40" width="150" height="110" rx="12" fill="#ffffff" stroke={accent} strokeWidth="2" strokeDasharray="7 6" />
+      <text x="183" y="146" textAnchor="middle" fontSize="10.5" fontWeight="700" fill={accent} letterSpacing="0.1em">YOUR LOT</text>
+      <g opacity="0">
+        <rect x="137" y="58" width="92" height="24" rx="12" fill={accent} />
+        <text x="183" y="74" textAnchor="middle" fontSize="10.5" fontWeight="700" fill="#fff" letterSpacing="0.03em">ON THE CLOCK</text>
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes={kt} dur="7s" repeatCount="indefinite" />
+      </g>
+      <circle cy="104" r="9">
+        <animate attributeName="cx" values="22;338" dur="7s" repeatCount="indefinite" />
+        <animate attributeName="fill" values={`${off};${off};${accent};${accent};${off};${off}`} keyTimes={kt} dur="7s" repeatCount="indefinite" />
+      </circle>
     </svg>
   );
 }
@@ -183,7 +220,19 @@ export default async function ProposalPage({
               </a>
               <span style={{ fontSize: 14.5, color: '#71717a' }}>or just reply to the email — it comes straight to me.</span>
             </div>
-            {cfg.pricing && (cfg.pricing.offer || cfg.pricing.trialDays) && (
+            {cfg.pricing?.trialDays && !cfg.pricing.offer ? (
+              // Trial as the centerpiece — big, unmissable.
+              <div style={{ marginTop: 28, display: 'flex', alignItems: 'stretch', border: `1.5px solid ${cfg.accent}`, borderRadius: 14, overflow: 'hidden', maxWidth: 540 }}>
+                <div style={{ background: cfg.accent, color: '#fff', padding: '16px 22px', display: 'flex', flexDirection: 'column', justifyContent: 'center', flexShrink: 0, textAlign: 'center' }}>
+                  <div style={{ fontSize: 30, fontWeight: 700, lineHeight: 1, letterSpacing: '-0.02em' }}>{cfg.pricing.trialDays} days</div>
+                  <div style={{ fontSize: 15, fontWeight: 600, letterSpacing: '0.02em', opacity: 0.95, marginTop: 2 }}>free</div>
+                </div>
+                <div style={{ padding: '14px 22px', display: 'flex', flexDirection: 'column', justifyContent: 'center', background: cfg.accentSoft }}>
+                  <div style={{ fontSize: 16, fontWeight: 700, color: ink }}>Full access to every feature — on us.</div>
+                  <div style={{ fontSize: 14, color: body, marginTop: 3 }}>No credit card. Cancel anytime.</div>
+                </div>
+              </div>
+            ) : cfg.pricing && (cfg.pricing.offer || cfg.pricing.trialDays) ? (
               <div style={{ marginTop: 18, display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 13.5, color: body }}>
                 <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: cfg.accentSoft, color: cfg.accent, border: `1px solid ${cfg.accent}22`, borderRadius: 999, padding: '4px 10px', fontWeight: 600 }}>
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke={cfg.accent} strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5" /></svg>
@@ -191,7 +240,7 @@ export default async function ProposalPage({
                 </span>
                 {cfg.pricing.offer?.reassure ?? 'no credit card to start'}
               </div>
-            )}
+            ) : null}
             {cfg.appStore && (
               <div style={{ marginTop: 26, display: 'flex', alignItems: 'center', gap: 14, flexWrap: 'wrap' }}>
                 <a href={cfg.appStore} target="_blank" rel="noopener noreferrer" aria-label={`Download ${cfg.brand} on the App Store`} style={{ display: 'inline-flex' }}>
@@ -230,9 +279,61 @@ export default async function ProposalPage({
           </div>
         </section>
 
+        {/* Trust & edge-cases — the objections a GM raises before rolling out tracking */}
+        {cfg.trustPoints && (
+          <section style={{ borderTop: `1px solid ${line}`, background: '#fff' }}>
+            <div style={{ maxWidth: wrap, margin: '0 auto', padding: '60px 24px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 40, alignItems: 'center', marginBottom: 44 }}>
+                <div style={{ maxWidth: 480 }}>
+                  <div style={{ fontSize: 13, letterSpacing: '0.06em', textTransform: 'uppercase', color: cfg.accent, fontWeight: 600, marginBottom: 12 }}>Straight answers</div>
+                  <h2 style={{ fontSize: 32, lineHeight: 1.12, fontWeight: 600, letterSpacing: '-0.03em', margin: '0 0 12px', color: ink }}>{cfg.trustHeading}</h2>
+                  {cfg.trustSub && <p style={{ fontSize: 17, lineHeight: 1.6, color: body, margin: 0 }}>{cfg.trustSub}</p>}
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
+                  <GeofenceDemo accent={cfg.accent} accentSoft={cfg.accentSoft} />
+                  <div style={{ fontSize: 12.5, color: '#a1a1aa', textAlign: 'center' }}>Cross the line, the clock starts. Leave, it stops. Automatically.</div>
+                </div>
+              </div>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '28px 44px' }}>
+                {cfg.trustPoints.map((t, i) => (
+                  <div key={i}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 9, marginBottom: 8 }}>
+                      <span style={{ display: 'inline-flex', width: 22, height: 22, borderRadius: 999, background: cfg.accentSoft, alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke={cfg.accent} strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5" /></svg>
+                      </span>
+                      <div style={{ fontSize: 16, fontWeight: 600, color: ink, letterSpacing: '-0.01em' }}>{t.title}</div>
+                    </div>
+                    <div style={{ fontSize: 14.5, lineHeight: 1.6, color: body }}>{t.desc}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ROI calculator — quantify the loss in the dealer's own numbers */}
+        {cfg.roi && cfg.pricing && (
+          <section style={{ borderTop: `1px solid ${line}`, background: '#fafafa' }}>
+            <div style={{ maxWidth: wrap, margin: '0 auto', padding: '60px 24px' }}>
+              <div style={{ maxWidth: 640, marginBottom: 32 }}>
+                <div style={{ fontSize: 13, letterSpacing: '0.06em', textTransform: 'uppercase', color: cfg.accent, fontWeight: 600, marginBottom: 12 }}>The math</div>
+                <h2 style={{ fontSize: 34, lineHeight: 1.1, fontWeight: 600, letterSpacing: '-0.03em', margin: '0 0 12px', color: ink }}>
+                  What time theft is quietly costing {name ?? 'you'}.
+                </h2>
+                <p style={{ fontSize: 17, lineHeight: 1.6, color: body, margin: 0 }}>
+                  Slide in your real numbers. Most stores are stunned by the monthly figure — and by how fast LotHours pays for itself.
+                </p>
+              </div>
+              <RoiCalculator accent={cfg.accent} accentSoft={cfg.accentSoft}
+                basePrice={cfg.pricing.basePrice} included={cfg.pricing.unit?.included ?? 20} per={cfg.pricing.unit?.per ?? 5}
+                dealer={name ?? 'your store'} />
+            </div>
+          </section>
+        )}
+
         {/* Pricing configurator */}
         {cfg.pricing && (
-          <section style={{ borderTop: `1px solid ${line}`, marginTop: 40, background: '#fafafa' }}>
+          <section style={{ borderTop: `1px solid ${line}`, background: '#fafafa' }}>
             <div style={{ maxWidth: wrap, margin: '0 auto', padding: '60px 24px' }}>
               <div style={{ maxWidth: 640, marginBottom: 32 }}>
                 <div style={{ fontSize: 13, letterSpacing: '0.06em', textTransform: 'uppercase', color: cfg.accent, fontWeight: 600, marginBottom: 12 }}>Build your plan</div>
