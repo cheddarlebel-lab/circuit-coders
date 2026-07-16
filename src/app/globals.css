@@ -23,6 +23,13 @@
   .admin-page [role="button"] {
     cursor: pointer !important;
   }
+  html,
+  body {
+    /* Cap the canvas at the viewport: decorative fixed-width glows and
+       pre-animation x-offsets must never make the page pan sideways on phones.
+       clip (not hidden) so no scroll container is created and sticky still works. */
+    overflow-x: clip;
+  }
   body {
     @apply bg-carbon-500 text-gray-100 antialiased;
   }

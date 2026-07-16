@@ -60,11 +60,10 @@ const wordContainer: Variants = {
 };
 
 const wordItem: Variants = {
-  hidden: { opacity: 0, y: "110%", rotateX: -40 },
+  hidden: { opacity: 0, y: "110%" },
   show: {
     opacity: 1,
     y: "0%",
-    rotateX: 0,
     transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] },
   },
 };
@@ -82,7 +81,7 @@ function WordReveal({
   return (
     <motion.span
       className={className}
-      style={{ display: "inline-block", perspective: 1000 }}
+      style={{ display: "block" }}
       variants={wordContainer}
       initial="hidden"
       animate="show"
