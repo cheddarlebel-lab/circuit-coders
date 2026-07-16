@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Globe, Zap, ShieldCheck, Sparkles, Scissors, Car, Droplets, HardHat, Waves, Wrench } from "lucide-react";
+import { Globe, Zap, ShieldCheck, Sparkles, Scissors, Car, Droplets, HardHat, Waves, Wrench, ExternalLink } from "lucide-react";
 import TiltCard from "./TiltCard";
 
 type Demo = {
@@ -19,6 +19,7 @@ type Demo = {
   ctaLabel: string;
   microLabel: string;
   fontStyle: "serif" | "sans" | "display";
+  liveUrl?: string;
 };
 
 const demos: Demo[] = [
@@ -37,6 +38,7 @@ const demos: Demo[] = [
     ctaLabel: "Book a chair",
     microLabel: "CLASSIC CUTS · MAIN STREET",
     fontStyle: "serif",
+    liveUrl: "https://lucky-ace.vercel.app",
   },
   {
     id: "auto-detail-premium",
@@ -53,6 +55,7 @@ const demos: Demo[] = [
     ctaLabel: "Reserve a detail",
     microLabel: "PROFESSIONAL · INSURED · LOCAL",
     fontStyle: "display",
+    liveUrl: "https://sr-elite.vercel.app",
   },
   {
     id: "mobile-detail",
@@ -69,6 +72,7 @@ const demos: Demo[] = [
     ctaLabel: "Get a quote",
     microLabel: "FIVE-STAR RATED · 20-MILE RADIUS",
     fontStyle: "sans",
+    liveUrl: "https://fresh1-mobile-detailing.vercel.app",
   },
   {
     id: "construction",
@@ -117,6 +121,7 @@ const demos: Demo[] = [
     ctaLabel: "Request a quote",
     microLabel: "WRAPS · AUDIO · LIGHTING · PERFORMANCE",
     fontStyle: "display",
+    liveUrl: "https://inland-empire-autobody.vercel.app",
   },
 ];
 
@@ -154,9 +159,10 @@ export default function WebsiteDemos() {
             <span className="text-gradient">built for your trade.</span>
           </h2>
           <p className="text-gray-200 max-w-2xl mx-auto text-lg leading-relaxed">
-            Sample designs across a few service-business categories. Each is a
-            from-scratch build — no templates, no themes — tuned to the
-            industry it serves.
+            Real builds across a few service-business categories — the ones marked
+            <span className="text-circuit-300 font-semibold"> live</span> are deployed and
+            clickable. Every one is from scratch — no templates, no themes — tuned to the
+            trade it serves.
           </p>
         </motion.div>
 
@@ -280,8 +286,8 @@ export default function WebsiteDemos() {
                 </div>
 
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-500 flex items-center justify-center">
-                  <div className="opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500 px-4 py-2 rounded-lg bg-white/95 backdrop-blur text-carbon-500 text-xs font-semibold">
-                    Sample design preview
+                  <div className="opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500 px-4 py-2 rounded-lg bg-white/95 backdrop-blur text-carbon-500 text-xs font-semibold inline-flex items-center gap-1.5">
+                    {demo.liveUrl ? <>View live site <ExternalLink className="w-3 h-3" /></> : "Sample design preview"}
                   </div>
                 </div>
               </div>
@@ -289,7 +295,7 @@ export default function WebsiteDemos() {
               <div className="p-6">
                 <div className="mb-3">
                   <div className="text-[10px] font-mono text-circuit-300 tracking-widest mb-1.5 font-semibold">
-                    SAMPLE {demo.number}
+                    {demo.liveUrl ? "● LIVE DEMO" : `SAMPLE ${demo.number}`}
                   </div>
                   <h3 className="text-lg font-semibold text-white">
                     {demo.industry}
@@ -310,6 +316,18 @@ export default function WebsiteDemos() {
                     </span>
                   ))}
                 </div>
+
+                {demo.liveUrl && (
+                  <a
+                    href={demo.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-circuit-300 hover:text-circuit-200 transition-colors"
+                  >
+                    View live site
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                )}
               </div>
             </TiltCard>
             </motion.div>

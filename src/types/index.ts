@@ -79,4 +79,7 @@ export interface PortfolioProject {
   color: string;
   icon: string;
   features: string[];
+  liveUrl?: string;
+  liveLabel?: string;
+  badge?: string;
 }

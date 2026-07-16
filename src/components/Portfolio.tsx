@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Network, TrendingUp, Layers, Smartphone, Zap, Code, ShoppingBag,
-  ArrowRight, ChevronLeft, ChevronRight, Pause, Play,
+  ArrowRight, ChevronLeft, ChevronRight, Pause, Play, ExternalLink,
 } from "lucide-react";
 import { portfolioProjects } from "@/lib/data";
 import type { PortfolioProject } from "@/types";
@@ -67,11 +67,19 @@ function CarouselCard({
               </div>
             </div>
             <div className="min-w-0">
-              <h3 className={`text-lg font-bold truncate transition-colors duration-300 ${
-                isCenter ? "text-white" : "text-gray-300"
-              }`}>
-                {project.title}
-              </h3>
+              <div className="flex items-center gap-2">
+                <h3 className={`text-lg font-bold truncate transition-colors duration-300 ${
+                  isCenter ? "text-white" : "text-gray-300"
+                }`}>
+                  {project.title}
+                </h3>
+                {project.badge && (
+                  <span className="flex-shrink-0 inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[9px] font-mono uppercase tracking-wider bg-circuit-500/15 text-circuit-300 border border-circuit-500/25">
+                    <span className="w-1.5 h-1.5 rounded-full bg-circuit-400" />
+                    {project.badge}
+                  </span>
+                )}
+              </div>
               <p className="text-xs font-mono text-gray-300 truncate">{project.subtitle}</p>
             </div>
           </div>
@@ -138,6 +146,17 @@ function CarouselCard({
                     </div>
                   ))}
                 </div>
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-5 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-circuit-500 text-carbon-500 text-sm font-semibold hover:bg-circuit-400 transition-colors"
+                  >
+                    {project.liveLabel || "View live"}
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                )}
               </motion.div>
             )}
           </AnimatePresence>
