@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Visibility Audit · Five Star Plumbing &amp; Drains, Riverside CA</title>
+<style>
+  :root {
+    --ink:#1a1f2b; --soft:#4a5160; --dim:#6a7080; --faint:#8a8f9c;
+    --rule:#d8dbe2; --hair:#e3e5ea; --panel:#f7f5f2;
+    --bad:#a33327; --good:#1f6e43; --accent:#1D5B9E;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: #fff; color: var(--ink);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16.5px; line-height: 1.55; -webkit-font-smoothing: antialiased;
+  }
+  .brandbar { height: 6px; display: flex; }
+  .brandbar span { flex: 1; }
+  .page { max-width: 760px; margin: 0 auto; padding: 34px 22px 80px; }
+
+  .kicker { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--faint); margin-bottom: 10px; }
+  h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.6px; margin: 0 0 6px; line-height: 1.15; }
+  .subtitle { font-size: 18px; color: var(--soft); margin: 0 0 14px; }
+  .meta { font-size: 14px; color: var(--dim); padding-bottom: 24px; border-bottom: 1px solid var(--rule); }
+  .meta strong { color: var(--ink); font-weight: 600; }
+
+  h2 { font-size: 21px; font-weight: 700; letter-spacing: -0.3px; margin: 40px 0 10px;
+       padding-top: 20px; border-top: 1px solid var(--rule); }
+  h2 .num { color: var(--accent); margin-right: 10px; }
+  h3 { font-size: 17px; font-weight: 700; margin: 26px 0 6px; }
+  p { margin: 0 0 12px; }
+  ul { margin: 0 0 14px; padding-left: 20px; }
+  li { margin-bottom: 6px; }
+
+  .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 14px 0 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 540px; }
+  th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+       color: var(--dim); border-bottom: 2px solid var(--ink); padding: 7px 10px 7px 0; font-weight: 600; }
+  td { border-bottom: 1px solid var(--hair); padding: 9px 10px 9px 0; vertical-align: top; }
+  td.n, th.n { text-align: right; padding-right: 16px; font-variant-numeric: tabular-nums; }
+  tr.me td { background: #fbf4f3; font-weight: 700; }
+  .bad { color: var(--bad); font-weight: 700; }
+  .good { color: var(--good); font-weight: 700; }
+  .hint { font-size: 13px; color: var(--dim); font-style: italic; margin-top: 4px; }
+
+  .callout { background: var(--panel); border-left: 4px solid var(--accent); padding: 16px 18px; margin: 18px 0; }
+  .callout .hd { font-weight: 700; margin-bottom: 4px; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .alert { border: 1px solid var(--bad); border-left: 5px solid var(--bad);
+           background: #fdf6f5; padding: 18px 20px; margin: 18px 0; }
+  .alert .tag { display: inline-block; background: var(--bad); color: #fff; font-size: 11px;
+                letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
+                padding: 4px 9px; border-radius: 2px; margin-bottom: 10px; }
+  .alert .hd { font-weight: 700; font-size: 17px; margin-bottom: 6px; }
+  .alert p:last-child { margin-bottom: 0; }
+
+  .included { border: 2px solid var(--good); background: #f4faf6; padding: 16px 20px; margin: 18px 0; }
+  .included .hd { font-weight: 700; font-size: 17px; color: var(--good); margin-bottom: 4px; }
+  .included p:last-child { margin-bottom: 0; }
+
+  .plan { border-top: 1px solid var(--hair); padding: 16px 0; }
+  .plan .row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .plan-name { font-weight: 700; font-size: 17px; }
+  .plan-price { font-weight: 700; font-size: 19px; white-space: nowrap; }
+  .plan p { color: var(--soft); font-size: 15px; margin: 6px 0 0; }
+
+  .calc { border: 1px solid var(--ink); margin: 22px 0; }
+  .calc-head { background: var(--ink); color: #fff; padding: 12px 18px; }
+  .calc-head .t { font-weight: 700; font-size: 16px; }
+  .calc-head .s { font-size: 13px; opacity: .75; margin-top: 2px; }
+  .calc-body { padding: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+  .sliders { display: flex; flex-direction: column; gap: 16px; }
+  .sl label { display: flex; justify-content: space-between; align-items: baseline;
+              font-size: 14px; font-weight: 600; margin-bottom: 6px; gap: 10px; }
+  .sl .v { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .sl input[type=range] { width: 100%; accent-color: var(--accent); height: 22px; }
+  .sl .cap { font-size: 12px; color: var(--dim); margin-top: 2px; }
+  .out { background: var(--panel); padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; }
+  .out .line { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 14px; }
+  .out .line .n { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+  .out .big { border-top: 1px solid var(--rule); padding-top: 12px; margin-top: 2px; }
+  .out .big .l { font-weight: 700; font-size: 15px; }
+  .out .big .n { font-size: 26px; font-weight: 700; color: var(--good); letter-spacing: -.5px; }
+  .out .mult { text-align: right; font-size: 13px; color: var(--dim); }
+  .out .cost .n { color: var(--bad); }
+  @media (max-width: 640px) { .calc-body { grid-template-columns: 1fr; gap: 18px; } }
+
+  .foot { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule);
+          font-size: 13.5px; color: var(--dim); }
+  .foot strong { color: var(--ink); }
+
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    h1 { font-size: 25px; }
+    .plan .row { flex-direction: column; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+<div class="brandbar"><span style="background:#1D5B9E"></span><span style="background:#16497e"></span><span style="background:#1D5B9E"></span><span style="background:#2a6fb8"></span><span style="background:#1D5B9E"></span><span style="background:#123c68"></span></div>
+<div class="page">
+
+<div class="kicker">Circuit Coders · Confidential · Internal</div>
+<h1>Visibility Audit</h1>
+<p class="subtitle">Five Star Plumbing &amp; Drains — Riverside, California</p>
+<div class="meta">
+  <strong>Prepared by</strong> Leo Lebel, Circuit Coders · <strong>Swept live</strong> July 30, 2026 ·
+  Independent audit, no access required ·
+  <strong>Warm lead — Leo knows the owner personally.</strong>
+  <span style="color:var(--bad)">Read §0 first: three Riverside businesses share this name.</span>
+</div>
+
+<h2><span class="num">0</span>Which Business Is This?</h2>
+<p>"Five Star Plumbing" in the Riverside area resolves to <strong>three separate companies</strong>.
+This audit covers the first one, which is the exact-name match and by far the strongest prospect.
+Confirm before anyone picks up a phone:</p>
+<div class="scroll">
+<table>
+<tr><th>Business</th><th>Phone</th><th>Where</th><th>Fit</th></tr>
+<tr class="me"><td>Five Star Plumbing &amp; Drains <em>(this audit)</em></td><td>(951) 207-0041</td><td>3025 David St + 10270 Mull Ave, Riverside</td><td>Strongest — invisible on Google, no website</td></tr>
+<tr><td>5 Star Plumbing, Heating &amp; Air</td><td>(951) 270-4216 / (951) 363-2911</td><td>1030 Northgate St, Riverside</td><td>Real but smaller gap — see §7</td></tr>
+<tr><td>5 Star Plumbing LLC</td><td>(909) 841-1057</td><td>673 E Cooley Dr, Colton</td><td>Well set up — Google 4.8 (112), BBB A+</td></tr>
+</table>
+</div>
+
+<h2>Executive Summary</h2>
+<p><strong>This is a seventeen-year-old business with an A+ from the Better Business Bureau that does
+not exist on Google.</strong></p>
+<p>Not "ranks poorly" — does not exist. There is no Google Business Profile. Searching Google Maps for
+his phone number returns "Google Maps can't find 951-207-0041." Searching for plumbers at his own street
+address returns thirteen competitors and not him.</p>
+<p>He also has no website. The BBB profile lists his <em>Facebook page</em> in the website field, and that
+Facebook page has 127 followers and zero reviews.</p>
+<p>Every competitor Google does show sits at 4.8–5.0 stars with between 18 and 874 reviews, and every one
+of them has a website. He is not losing on reputation — his reputation is genuinely good. He is losing
+because he is not on the board.</p>
+<div class="included">
+  <div class="hd">Verdict: yes, and it is one of the cleanest fits we have found</div>
+  <p>Good business, real credentials, zero digital footprint, and a warm personal introduction. The work
+  is foundational rather than remedial, which means it is fast to deliver and the before/after is
+  undeniable inside 60 days.</p>
+</div>
+
+<h2><span class="num">1</span>What Exists Today</h2>
+<div class="scroll">
+<table>
+<tr><th>Asset</th><th>State</th></tr>
+<tr><td><strong>Google Business Profile</strong></td><td class="bad">DOES NOT EXIST. Absent from Maps entirely; phone number returns no result.</td></tr>
+<tr><td><strong>Website</strong></td><td class="bad">NONE. BBB lists his Facebook page in the website field.</td></tr>
+<tr><td>Better Business Bureau</td><td class="good">A+ · 17 years in business (established 1/1/2009) · not accredited</td></tr>
+<tr><td>Facebook</td><td class="bad">"Five Star Plumbing and drains 951-207-0041" — 127 followers, <strong>0 reviews, not yet rated</strong></td></tr>
+<tr><td>Yelp</td><td class="bad">TWO separate listings — one per address. Ratings not read (see §6).</td></tr>
+<tr><td>Yellow Pages</td><td>Listed at 3025 David St</td></tr>
+<tr><td>Address of record</td><td class="bad">Two in use: 3025 David St and 10270 Mull Ave. BBB carries both.</td></tr>
+</table>
+</div>
+<p class="hint">Business name, addresses, phone, BBB rating and start date read live from BBB and Facebook on 2026-07-30.</p>
+
+<h2><span class="num">2</span>The Finding</h2>
+<div class="alert">
+  <span class="tag">Critical</span>
+  <div class="hd">He is absent from the only place emergency plumbing demand actually starts.</div>
+  <p>A Google Maps search for plumbers at <strong>3025 David St, Riverside</strong> — his own address —
+  returns thirteen plumbing companies. He is not one of them. When a Riverside homeowner has water on the
+  floor at 9pm, the shortlist they see does not contain him at any position.</p>
+</div>
+<p>This is different from the usual reputation problem, and it is a much easier fix. Nothing has to be
+repaired. A Google Business Profile has to be created, verified and populated — and seventeen years of
+goodwill that currently lives entirely in word-of-mouth gets somewhere to accumulate.</p>
+
+<h2><span class="num">3</span>The Competitive Bar He Is Being Measured Against</h2>
+<p>Every plumber Google returns for his own address, in the order Google returns them:</p>
+<div class="scroll">
+<table>
+<tr><th>Competitor</th><th class="n">Rating</th><th class="n">Reviews</th><th>Website</th></tr>
+<tr><td>OneStop Plumbers</td><td class="n good">4.9</td><td class="n">711</td><td class="good">Yes</td></tr>
+<tr><td>Jim &amp; Sons Plumbing &amp; Rooter</td><td class="n good">5.0</td><td class="n">850</td><td class="good">Yes</td></tr>
+<tr><td>First Class Plumbing &amp; AC</td><td class="n good">4.8</td><td class="n">874</td><td class="good">Yes</td></tr>
+<tr><td>Plumbing Matters Rooter</td><td class="n good">5.0</td><td class="n">441</td><td class="good">Yes</td></tr>
+<tr><td>RD Plumbing and Rooter</td><td class="n good">5.0</td><td class="n">353</td><td class="good">Yes</td></tr>
+<tr><td>Drains and Plumbing 24/HVAC</td><td class="n good">5.0</td><td class="n">333</td><td class="good">Yes</td></tr>
+<tr><td>Righty Tighty Plumbing</td><td class="n good">4.9</td><td class="n">279</td><td class="good">Yes</td></tr>
+<tr><td>All City Plumbing, Air &amp; Electrical</td><td class="n good">5.0</td><td class="n">254</td><td class="good">Yes</td></tr>
+<tr><td>Diamond House Plumbing</td><td class="n good">4.8</td><td class="n">221</td><td class="good">Yes</td></tr>
+<tr><td>First Place Plumbing Solutions</td><td class="n good">5.0</td><td class="n">173</td><td class="good">Yes</td></tr>
+<tr><td>Best Plumbing Services</td><td class="n good">4.9</td><td class="n">157</td><td class="good">Yes</td></tr>
+<tr><td>See It Better Plumbing</td><td class="n good">4.8</td><td class="n">43</td><td class="good">Yes</td></tr>
+<tr><td>Riverside's Plumber</td><td class="n good">5.0</td><td class="n">18</td><td class="good">Yes</td></tr>
+<tr class="me"><td>Five Star Plumbing &amp; Drains</td><td class="n bad">not listed</td><td class="n bad">0</td><td class="bad">None</td></tr>
+</table>
+</div>
+<p>Thirteen for thirteen have a website. The lowest review count on the board is 18 — he has a Facebook
+page with zero. <strong>"Riverside's Plumber" outranks him with eighteen reviews and no other advantage.</strong>
+That is the whole argument, and it takes one screenshot to make.</p>
+
+<h2><span class="num">4</span>The Duplicate-Listing Problem, Already Started</h2>
+<p>He operates under two addresses — 3025 David St and 10270 Mull Ave — and the platforms have already
+split him in two. BBB carries both addresses on one profile; Yelp has created <em>two separate business
+pages</em>, one per address. Whatever reputation he does accumulate is being divided between them before
+it ever reaches a customer.</p>
+<p>This wants settling before a Google profile is created, not after — Google will not verify a second
+profile at a second address for the same business, and picking the wrong one is expensive to undo.
+<strong>First question for him: which address is the real business address?</strong></p>
+
+<h2><span class="num">5</span>What This Is Worth</h2>
+<div class="calc">
+  <div class="calc-head">
+    <div class="t">Value of getting on the board</div>
+    <div class="s">An assumption model, not a measurement. Move the inputs — nothing here is claimed as fact.</div>
+  </div>
+  <div class="calc-body">
+    <div class="sliders">
+      <div class="sl">
+        <label>Extra calls per month from being listed <span class="v" id="v-calls">12</span></label>
+        <input type="range" id="s-calls" min="2" max="60" step="1" value="12">
+        <div class="cap">Competitors on this board carry 18–874 reviews each.</div>
+      </div>
+      <div class="sl">
+        <label>Share that become jobs <span class="v" id="v-close">40%</span></label>
+        <input type="range" id="s-close" min="10" max="80" step="5" value="40">
+      </div>
+      <div class="sl">
+        <label>Average ticket <span class="v" id="v-ticket">$450</span></label>
+        <input type="range" id="s-ticket" min="150" max="2000" step="50" value="450">
+      </div>
+      <div class="sl">
+        <label>Program cost / month <span class="v" id="v-cost">$399</span></label>
+        <input type="range" id="s-cost" min="199" max="1000" step="50" value="399">
+      </div>
+    </div>
+    <div class="out">
+      <div class="line"><span>Jobs added / month</span><span class="n" id="o-jobs">5</span></div>
+      <div class="line"><span>Revenue added / month</span><span class="n" id="o-rev">$2,160</span></div>
+      <div class="line cost"><span>Program cost / month</span><span class="n" id="o-cost">$399</span></div>
+      <div class="line big"><span class="l">Net / month</span><span class="n" id="o-net">$1,761</span></div>
+      <div class="mult" id="o-mult">5.4× return · $21,132 net per year</div>
+    </div>
+  </div>
+</div>
+<p>The model is deliberately modest: twelve extra calls a month is less than one every other day, against
+competitors fielding hundreds of reviews' worth of demand. Even at half these inputs the program pays for
+itself.</p>
+
+<h2><span class="num">6</span>Open Items — Not Guessed</h2>
+<ul>
+  <li><strong>Yelp ratings on both of his listings were not read.</strong> Yelp began blocking us
+  mid-session. Two listings are confirmed to exist; their star ratings are unknown and are not
+  estimated here.</li>
+  <li><strong>Owner's name not confirmed.</strong> The BBB profile lists no principal. Leo knows him —
+  that gap closes with one text.</li>
+  <li><strong>Licence status not checked — now a gating item.</strong> A CSLB lookup is required before
+  anything goes in writing, because Google Guaranteed verification in Phase 3 (§9) depends on a clean,
+  current licence and proof of insurance. If that is not in order, the ad phase cannot be quoted.</li>
+</ul>
+
+<h2><span class="num">7</span>The Other Two, Briefly</h2>
+<p><strong>5 Star Plumbing, Heating &amp; Air</strong> (1030 Northgate St, founded by Gabriel Reyes) is a
+different shape of prospect and also viable: Google <span class="good">4.8 on 54 reviews</span> against
+<span class="bad">Yelp 3.0 on 6 reviews</span> — and Bing reprints the Yelp 3.0 as its headline rating,
+not the Google 4.8. It also runs at least two phone numbers, (951) 270-4216 and (951) 363-2911, and a
+Hemet-registered sibling carries a BBB <span class="bad">B−</span>. That is a reputation-and-consistency
+engagement rather than a visibility one.</p>
+<p><strong>5 Star Plumbing LLC</strong> (Colton) is Google 4.8 on 112 reviews with a BBB A+ and a website.
+Nothing obvious to sell.</p>
+
+<h2><span class="num">8</span>Recommendation</h2>
+<div class="callout">
+  <div class="hd">Pitch it, and lead with the screenshot</div>
+  <p>Open by showing him the thirteen-competitor Google result for his own street address with his name
+  absent. Do not open with pricing, and do not frame it as a marketing upsell — frame it as
+  "you are not on the list, and here is the list." Seventeen years and an A+ make the rest of the
+  conversation easy.</p>
+</div>
+<div class="plan">
+  <div class="row"><span class="plan-name">Phase 1 · Get on the board</span><span class="plan-price">$1,500 one-time</span></div>
+  <p>Google Business Profile created and verified, address question settled, duplicate Yelp listings
+  merged or claimed, a real website, consistent name/address/phone everywhere.</p>
+</div>
+<div class="plan">
+  <div class="row"><span class="plan-name">Phase 2 · Keep it fed</span><span class="plan-price">$399/mo</span></div>
+  <p>Review generation off completed jobs, review responses, listing monitoring, monthly reporting.
+  This is the part that compounds — the competitors' 300–800 review counts took years to build.</p>
+</div>
+<div class="plan">
+  <div class="row"><span class="plan-name">Phase 3 · Ad management</span><span class="plan-price">$500/mo + spend</span></div>
+  <p>Google Local Services Ads and search ads, built and managed. Ad spend is paid by him directly to
+  Google and never runs through us — see §9.</p>
+</div>
+<div class="total" style="margin-top:22px;padding:18px 20px;background:var(--panel);border-left:4px solid var(--accent);">
+  <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;">
+    <span style="font-weight:700;font-size:18px;">All three, month two onward</span>
+    <span style="font-weight:700;font-size:24px;white-space:nowrap;letter-spacing:-0.5px;">$899/mo</span>
+  </div>
+  <div style="margin-top:8px;font-size:14px;color:var(--dim);">
+    Plus the one-time $1,500 build and whatever he chooses to spend with Google. Phase 3 should not
+    start until Phase 1 is verified live.
+  </div>
+</div>
+
+<h2><span class="num">9</span>Ad Management — Why It Is Phase 3, Not Phase 1</h2>
+<p>Ads are the right lever for this business and the wrong thing to sell him first. Both halves matter.</p>
+<div class="alert">
+  <span class="tag">Sequencing</span>
+  <div class="hd">Google Local Services Ads require a verified Google Business Profile.</div>
+  <p>He does not have one. Selling ad management before the profile exists would mean charging him for
+  work that cannot run. Phase 1 is the prerequisite, not an upsell wrapped around it.</p>
+</div>
+
+<h3>Local Services Ads are the product here — not regular search ads</h3>
+<p>For a residential plumber, <strong>Google Local Services Ads</strong> are the strongest placement
+available. They sit <em>above</em> the map pack and above paid search, they are billed
+<strong>per lead rather than per click</strong>, and they carry the <strong>Google Guaranteed</strong>
+badge. On an emergency call at 9pm — which is most of this trade — that badge and that position are the
+whole ballgame.</p>
+<p>Google Guaranteed requires verification of <strong>licence and insurance</strong>. That makes the CSLB
+lookup in §6 a gating item rather than a nice-to-have: if his licence is not clean and current, Phase 3
+cannot happen and we need to know that before it is quoted, not after.</p>
+
+<h3>Regular search ads as the secondary layer</h3>
+<p>A tight search campaign on emergency intent — burst pipe, water heater, sewer backup, no hot water —
+run against a real landing page from Phase 1. Not brand terms; he has no brand demand to defend yet.
+This layer only makes sense once there is a site to send clicks to.</p>
+
+<div class="callout">
+  <div class="hd">The cautionary example, from our own mining this week</div>
+  <p>Regan Roofing in Temecula is currently <strong>buying Google Ads while rated 4.0</strong>, against a
+  field sitting at 4.8–5.0. They are paying for clicks that land on a rating which loses the comparison.
+  That is precisely the mistake ad management prevents — and precisely what happens if ads are switched
+  on before reviews and listings are handled.</p>
+</div>
+
+<h3>How the money works</h3>
+<ul>
+  <li><strong>$500/mo management fee</strong> — campaign build, bid and budget management, lead-quality
+  review, call tracking, monthly reporting. Flat, so our incentive is not to inflate his spend.</li>
+  <li><strong>Ad spend is his, paid directly to Google on his own card.</strong> It never passes through
+  Circuit Coders. He keeps ownership of the account and can see every dollar.</li>
+  <li><strong>Suggested opening spend $1,000–1,500/mo</strong> on LSA. At a $450 average ticket that needs
+  roughly three to four won jobs to break even before the management fee — a realistic bar for this trade
+  in a market this size, though it is a target and not a promise.</li>
+  <li><strong>No spend commitment.</strong> Month-to-month, pausable, and he owns the account if he leaves.</li>
+</ul>
+<p class="hint">Do not quote a cost-per-lead. LSA pricing varies by trade and market and we have not
+measured it for Riverside plumbing — quoting a number we have not verified is how the first Crown Toyota
+draft went wrong.</p>
+
+<h2><span class="num">10</span>Method</h2>
+<p>Read live on <strong>2026-07-30</strong> from public sources only — Google Maps, BBB's public search
+API and profile, Facebook, Bing, and web search. No access requested from the business, nothing
+contacted. The Google absence was verified three ways: by business name, by phone number, and by a
+category search at his own street address.</p>
+<p class="hint">Re-verify before this is shown to him — listings change, and being wrong in front of a
+friend is expensive.</p>
+
+<div class="foot">
+  Leo Lebel · Circuit Coders · Brand &amp; Reputation Management<br>
+  leo@circuitcoders.com · 442-297-8170 · circuitcoders.com
+</div>
+</div>
+
+<script>
+(function () {
+  var calls = document.getElementById('s-calls'),
+      close = document.getElementById('s-close'),
+      ticket = document.getElementById('s-ticket'),
+      cost = document.getElementById('s-cost');
+
+  function money(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+
+  function recalc() {
+    var c = +calls.value, r = +close.value, t = +ticket.value, k = +cost.value;
+    var jobs = c * (r / 100),
+        rev = jobs * t,
+        net = rev - k,
+        mult = k > 0 ? rev / k : 0;
+
+    document.getElementById('v-calls').textContent = c;
+    document.getElementById('v-close').textContent = r + '%';
+    document.getElementById('v-ticket').textContent = money(t);
+    document.getElementById('v-cost').textContent = money(k);
+
+    document.getElementById('o-jobs').textContent = jobs.toFixed(0);
+    document.getElementById('o-rev').textContent = money(rev);
+    document.getElementById('o-cost').textContent = money(k);
+    document.getElementById('o-net').textContent = money(net);
+    document.getElementById('o-mult').textContent =
+      mult.toFixed(1) + '× return · ' + money(net * 12) + ' net per year';
+  }
+
+  [calls, close, ticket, cost].forEach(function (el) {
+    el.addEventListener('input', recalc);
+  });
+  recalc();
+})();
+</script>
+</body>
+</html>

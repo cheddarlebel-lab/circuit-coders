@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Brand &amp; Reputation Audit · Daytona Kia</title>
+<style>
+
+  :root {
+    --ink:#15181f; --soft:#474d5a; --dim:#6a7080; --faint:#8a8f9c;
+    --rule:#d8dbe2; --hair:#e3e5ea; --panel:#f6f5f3;
+    --bad:#a33327; --good:#1f6e43; --accent:#05141F;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: #fff; color: var(--ink);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16.5px; line-height: 1.55; -webkit-font-smoothing: antialiased;
+  }
+  .brandbar { height: 6px; display: flex; }
+  .brandbar span { flex: 1; }
+  .page { max-width: 760px; margin: 0 auto; padding: 6px 22px 80px; }
+
+  /* Static credibility strip — the platforms actually read for this audit. */
+  .strip-wrap { max-width: 860px; margin: 0 auto; padding: 26px 22px 0; }
+  .strip {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+    gap: 14px 40px; padding: 4px 0 22px; border-bottom: 1px solid var(--hair); margin-bottom: 30px;
+  }
+  .strip img { height: 46px; width: auto; display: block; }
+
+  .kicker { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--faint); margin-bottom: 10px; }
+  h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.6px; margin: 0 0 6px; line-height: 1.15; }
+  .subtitle { font-size: 18px; color: var(--soft); margin: 0 0 14px; }
+  .meta { font-size: 14px; color: var(--dim); padding-bottom: 24px; border-bottom: 1px solid var(--rule); }
+  .meta strong { color: var(--ink); font-weight: 600; }
+
+  h2 { font-size: 21px; font-weight: 700; letter-spacing: -0.3px; margin: 40px 0 10px;
+       padding-top: 20px; border-top: 1px solid var(--rule); }
+  h2 .num { color: var(--accent); margin-right: 10px; }
+  h3 { font-size: 17px; font-weight: 700; margin: 26px 0 6px; }
+  p { margin: 0 0 12px; }
+  ul { margin: 0 0 14px; padding-left: 20px; }
+  li { margin-bottom: 6px; }
+
+  .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 14px 0 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 540px; }
+  th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+       color: var(--dim); border-bottom: 2px solid var(--ink); padding: 7px 10px 7px 0; font-weight: 600; }
+  td { border-bottom: 1px solid var(--hair); padding: 9px 10px 9px 0; vertical-align: top; }
+  td.n, th.n { text-align: right; padding-right: 16px; font-variant-numeric: tabular-nums; }
+  tr.tot td { border-top: 2px solid var(--ink); border-bottom: none; font-weight: 700; }
+  .bad { color: var(--bad); font-weight: 700; }
+  .good { color: var(--good); font-weight: 700; }
+  .hint { font-size: 13px; color: var(--dim); font-style: italic; margin-top: 4px; }
+
+  .callout { background: var(--panel); border-left: 4px solid var(--accent); padding: 16px 18px; margin: 18px 0; }
+  .callout .hd { font-weight: 700; margin-bottom: 4px; }
+  .callout p:last-child { margin-bottom: 0; }
+  blockquote { margin: 10px 0; padding-left: 14px; border-left: 3px solid var(--rule);
+               color: var(--soft); font-style: italic; }
+
+  .plan { border-top: 1px solid var(--hair); padding: 16px 0; }
+  .plan .row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .plan-name { font-weight: 700; font-size: 17px; }
+  .plan-price { font-weight: 700; font-size: 19px; white-space: nowrap; }
+  .plan p { color: var(--soft); font-size: 15px; margin: 6px 0 0; }
+
+  .alert { border: 1px solid var(--bad); border-left: 5px solid var(--bad);
+           background: #fdf6f5; padding: 18px 20px; margin: 18px 0; }
+  .alert .tag { display: inline-block; background: var(--bad); color: #fff; font-size: 11px;
+                letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
+                padding: 4px 9px; border-radius: 2px; margin-bottom: 10px; }
+  .alert .hd { font-weight: 700; font-size: 17px; margin-bottom: 6px; }
+  .alert p:last-child { margin-bottom: 0; }
+
+  .included { border: 2px solid var(--good); background: #f4faf6; padding: 16px 20px; margin: 18px 0; }
+  .included .hd { font-weight: 700; font-size: 17px; color: var(--good); margin-bottom: 4px; }
+  .included p:last-child { margin-bottom: 0; }
+
+  .calc { border: 1px solid var(--ink); margin: 22px 0; }
+  .calc-head { background: var(--ink); color: #fff; padding: 12px 18px; }
+  .calc-head .t { font-weight: 700; font-size: 16px; }
+  .calc-head .s { font-size: 13px; opacity: .75; margin-top: 2px; }
+  .calc-body { padding: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+  .sliders { display: flex; flex-direction: column; gap: 15px; }
+  .sl label { display: flex; justify-content: space-between; align-items: baseline;
+              font-size: 14px; font-weight: 600; margin-bottom: 6px; gap: 10px; }
+  .sl .v { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .sl input[type=range] { width: 100%; accent-color: var(--accent); height: 22px; }
+  .sl .cap { font-size: 12px; color: var(--dim); margin-top: 2px; }
+  .out { background: var(--panel); padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; }
+  .out .line { display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+               font-size: 14px; }
+  .out .line .n { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+  .out .big { border-top: 1px solid var(--rule); padding-top: 12px; margin-top: 2px; }
+  .out .big .l { font-weight: 700; font-size: 15px; }
+  .out .big .n { font-size: 26px; font-weight: 700; color: var(--good); letter-spacing: -.5px; }
+  .out .mult { text-align: right; font-size: 13px; color: var(--dim); }
+  .out .cost .n { color: var(--bad); }
+  @media (max-width: 640px) { .calc-body { grid-template-columns: 1fr; gap: 18px; } }
+
+  .foot { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule);
+          font-size: 13.5px; color: var(--dim); }
+  .foot strong { color: var(--ink); }
+
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    h1 { font-size: 25px; }
+    .strip img { height: 34px; }
+    .strip { gap: 12px 26px; }
+    .plan .row { flex-direction: column; gap: 2px; }
+  }
+
+</style>
+</head>
+<body>
+<div class="brandbar"><span style="background:#05141F"></span><span style="background:#0d2233"></span><span style="background:#05141F"></span><span style="background:#132c3f"></span><span style="background:#05141F"></span><span style="background:#0d2233"></span></div>
+
+<div class="strip-wrap"><div class="strip" aria-label="Platforms read for this audit">
+  <img src="marques/brand-kia.png" alt="Kia">
+  <img src="marques/plat-google.png" alt="Google">
+  <img src="marques/plat-yelp.png" alt="Yelp">
+  <img src="marques/plat-bbb.png" alt="Better Business Bureau">
+  <img src="marques/plat-facebook.png" alt="Facebook">
+  <img src="marques/brand-mitsubishi.png" alt="Mitsubishi">
+</div></div>
+
+<div class="page">
+
+<div class="kicker">Circuit Coders · Prepared for Daytona Kia</div>
+<h1>Brand &amp; Reputation Audit</h1>
+<p class="subtitle">Daytona Kia — 510 N Nova Rd, Daytona Beach, Florida</p>
+<div class="meta">
+  <strong>Prepared for</strong> Richard Nisbett, Dealer Principal ·
+  <strong>Prepared by</strong> Leo Lebel, Circuit Coders ·
+  <strong>Swept live</strong> July 30, 2026 ·
+  Independent audit — no access to your systems was requested or used ·
+  Nine public surfaces read · Every figure re-verifiable from a browser
+</div>
+
+<h2>Executive Summary</h2>
+<p>This audit was not commissioned. We ran it because a national sweep of low-rated franchise
+dealerships surfaced Daytona Kia at the very bottom, and the reason turned out to be more
+interesting than the ranking.</p>
+
+<p><strong>Your store is not badly rated. It is unevenly rated, and the split is almost perfectly
+clean.</strong> On every platform where somebody at the dealership is actively working — Google,
+Cars.com, DealerRater, Kelley Blue Book, CARFAX — Daytona Kia sits between 4.4 and 4.5 stars across
+more than 15,000 reviews. On Google specifically you are <strong>4.5 on 4,515 reviews, the highest
+rating in your local dealer set</strong>, and someone on your team replies to reviews within days,
+by name. That is genuinely good work and it is the reason this document is worth reading: it proves
+the store can already do this.</p>
+
+<p>On the platforms where nobody is working, the picture inverts. <strong>Yelp is 2.2 stars.
+The Better Business Bureau grades you F — the lowest score of 2,820 low-rated dealerships we
+measured nationwide — for one stated reason: 16 complaints were never answered.</strong> Facebook
+sits at 3.7. All three are free to work on, none require a vendor's permission, and the Yelp page
+is already claimed under your name.</p>
+
+<p>The cost of the split is that the unmanaged surfaces are the ones a stranger hits first.
+Search your own store name on Google and <strong>Yelp is the third result</strong> — above your
+Facebook page, above MapQuest, above everything except your own website and CARFAX. The 2.2 is what
+greets a shopper checking whether you are legitimate, while the 4.5 sits on a platform they reach
+only after they have already decided to trust you.</p>
+
+<p>One finding sits outside the reputation frame and we would rather say it than sell around it.
+The complaints that drive the BBB grade are not scattered. They cluster on two specific, upstream
+things — a <strong>direct-mail sweepstakes program</strong> and <strong>the gap between an
+advertised price and the final number</strong> — and the same two allegations appear independently
+on Yelp, from different people, in different years. Review management will not fix that. Section 4
+covers it plainly, because a vendor who sold you review-generation and stayed quiet about it would
+be taking your money under false pretenses.</p>
+
+<h2><span class="num">1</span>The Two-Tier Reputation</h2>
+<p>Nine public surfaces, read live on July 30, 2026. Sorted by who is tending them.</p>
+<div class="scroll">
+<table>
+<tr><th>Platform</th><th class="n">Rating</th><th class="n">Reviews</th><th>State</th></tr>
+<tr><td colspan="4" style="border-bottom:none;padding-top:14px;padding-bottom:2px;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--good);font-weight:700;">Actively managed</td></tr>
+<tr><td><strong>Google Business Profile</strong></td><td class="n good">4.5</td><td class="n">4,515</td><td>Claimed. Owner replies within days, signed. Excellent.</td></tr>
+<tr><td>Cars.com</td><td class="n good">4.5</td><td class="n">5,373</td><td>Largest review base you have.</td></tr>
+<tr><td>DealerRater</td><td class="n good">4.5</td><td class="n">4,873</td><td>Staff pages live, individually rated.</td></tr>
+<tr><td>Kelley Blue Book</td><td class="n good">4.5</td><td class="n">4,514</td><td>Listed as <em>"Daytona Mitsubishi Kia"</em> — combined identity.</td></tr>
+<tr><td>CARFAX</td><td class="n good">4.4</td><td class="n">913</td><td>77% five-star. Healthy.</td></tr>
+<tr><td colspan="4" style="border-bottom:none;padding-top:18px;padding-bottom:2px;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--bad);font-weight:700;">Unmanaged</td></tr>
+<tr><td><strong>Yelp</strong></td><td class="n bad">2.2</td><td class="n">121</td><td class="bad">Claimed, but <strong>zero owner replies</strong>. +60 suppressed.</td></tr>
+<tr><td><strong>Better Business Bureau</strong></td><td class="n bad">F</td><td class="n">29 complaints</td><td class="bad">Not accredited. <strong>16 never answered.</strong></td></tr>
+<tr><td>Facebook</td><td class="n bad">3.7</td><td class="n">188</td><td>74% recommend, on 289 recommendations. 4.8k followers.</td></tr>
+<tr><td>Trustpilot</td><td class="n">3.2</td><td class="n">1</td><td>Effectively empty. Unclaimed profile exists.</td></tr>
+</table>
+</div>
+<p class="hint">Read live 2026-07-30. Ratings drift — re-check before quoting any figure back to us.</p>
+
+<div class="callout">
+  <div class="hd">The pattern is not random.</div>
+  <p>Every platform above 4.4 is one your CRM solicits automatically after a sale. Every platform
+  below 3.8 is one that only receives reviews people take the trouble to leave <em>unprompted</em> —
+  which, without a pipeline pointed at it, means almost exclusively the aggrieved. You do not have a
+  quality problem on Yelp. You have an <em>absence</em> on Yelp, and absence fills with the loudest
+  voices available.</p>
+</div>
+
+<h2><span class="num">2</span>Yelp — 2.2 Stars, Claimed, and Third on Your Own Name</h2>
+<div class="alert">
+  <span class="tag">Highest-leverage defect</span>
+  <div class="hd">121 Yelp reviewers at 2.2 stars are setting the first impression of a store that 4,515 Google reviewers rate 4.5.</div>
+  <p>Yelp carries under <strong>1%</strong> of your total review volume and sits <strong>2.3 stars
+  below</strong> the platform carrying the rest. It is also the third organic result when someone
+  searches <em>"Daytona Kia"</em> — we ran it.</p>
+</div>
+
+<p>Three things make this the cheapest fix in the document:</p>
+<ul>
+  <li><strong>The page is already claimed.</strong> Yelp lists the business owner as "Richard N."
+  Somebody at the store has the login. No recovery process, no waiting on Yelp support.</li>
+  <li><strong>Not one review has an owner response.</strong> We read the full first page — reviews
+  from July 2026 back to February 2025, one and five star alike. Every one is unanswered. On Google
+  you reply to nearly everything, often within a day. The capability exists; it has simply never been
+  pointed at this platform.</li>
+  <li><strong>60 reviews are sitting suppressed.</strong> Yelp's filter has moved 60 reviews —
+  roughly a third of your total base there — into "not currently recommended," where they do not
+  count toward the score. That filter disproportionately buries reviews from low-activity accounts,
+  which is exactly what somebody who buys one car every six years looks like.</li>
+</ul>
+
+<p>Worth noting in your favour: the recent Yelp reviews are not uniformly hostile. A July 8, 2026
+reviewer describes "a little bump in the road which they made good on" and names a salesperson
+positively. The platform is recoverable — it has just never been worked.</p>
+
+<h2><span class="num">3</span>The BBB F — One Sentence Explains It</h2>
+<div class="alert">
+  <span class="tag">Hard defect</span>
+  <div class="hd">Daytona Kia holds an F from the Better Business Bureau, and BBB publishes the reason on a page that ranks for your name.</div>
+  <p>BBB's two stated reasons, verbatim: <strong>"Failure to respond to 16 complaint(s) filed
+  against business"</strong> and <strong>"6 complaint(s) filed against business that were not
+  resolved."</strong> The business is not BBB accredited.</p>
+</div>
+
+<p>The complaint ledger, as BBB publishes it — 29 complaints over three years, 12 closed in the
+last twelve months:</p>
+<div class="scroll">
+<table>
+<tr><th>Status</th><th class="n">Count</th><th>What it means, in BBB's own words</th></tr>
+<tr><td class="bad"><strong>Unanswered</strong></td><td class="n bad">16</td><td>"The business failed to respond to the dispute."</td></tr>
+<tr><td class="bad">Unresolved</td><td class="n bad">6</td><td>Business responded but "failed to make a good faith effort to resolve it."</td></tr>
+<tr><td>Answered</td><td class="n">6</td><td>Addressed, but the consumer did not confirm satisfaction.</td></tr>
+<tr><td class="good">Resolved</td><td class="n good">1</td><td>Complainant verified the issue was fixed.</td></tr>
+<tr class="tot"><td>Total</td><td class="n">29</td><td>One of twenty-nine closed to the complainant's satisfaction.</td></tr>
+</table>
+</div>
+
+<p>This is the single most fixable item here, and the most expensive to leave alone. BBB's algorithm
+punishes <em>silence</em> far more heavily than it punishes the underlying complaint — a business
+that answers every complaint and resolves none still outranks one that ignores sixteen. Sixteen
+unanswered disputes is not a quality failure. It is an inbox nobody owns.</p>
+
+<p>It also compounds. BBB routes complaint notices to the contact on file — listed publicly as
+<strong>Mike Tacinelli, Sales Manager</strong>. If that routing has drifted, or lands somewhere
+nobody checks, the F will keep regenerating no matter how well the store performs on the floor.</p>
+
+<h2><span class="num">4</span>What the Complaints Actually Say</h2>
+<p>We read the published complaint texts rather than just the counts, because the counts alone would
+have led us to sell you the wrong thing.</p>
+
+<div class="callout">
+  <div class="hd">Stated plainly before anything else in this section.</div>
+  <p>Everything below is an <strong>allegation made by a member of the public</strong> on a platform
+  that publishes complaints without adjudicating them. Circuit Coders takes no position on whether
+  any of it is accurate, and we are not lawyers. We are flagging it because these are the words
+  currently sitting on pages that rank for your store's name — and because two themes repeat across
+  independent complainants, on two different platforms, in different years. That pattern is worth
+  your attention regardless of the merits of any single complaint.</p>
+</div>
+
+<h3>Theme one — the sweepstakes mailer</h3>
+<p>A BBB complaint (status: <em>unanswered</em>) describes a mailed sweepstakes with a phone number
+to confirm a winning number, a recorded confirmation of a win, and then no prize at the store. An
+unrelated Yelp reviewer in August 2025 describes the same sequence in almost the same terms and
+states they filed with the Florida Attorney General's Office and the U.S. Postal Service.</p>
+<p>Two strangers, two platforms, a year apart, describing one marketing program. Whatever the
+program's actual terms are, <strong>its disclosures are not landing</strong> — and it is generating
+regulatory complaints rather than showroom traffic. That is a campaign problem with a compliance
+tail, and no amount of review management touches it.</p>
+
+<h3>Theme two — advertised price versus final price</h3>
+<p>Three separate complainants, independently:</p>
+<ul>
+  <li>A BBB complaint alleging a vehicle purchased for over $26,000, followed the next morning by a
+  dealership email advertising the same vehicle at $17,915.</li>
+  <li>A BBB complaint alleging a vehicle advertised at $11,500 presented at $21,900, the difference
+  attributed to a trade-in requirement the complainant says was not disclosed up front. Their words:
+  <em>"hidden at the end of their website and not easily visible."</em></li>
+  <li>An April 2026 Yelp reviewer describing market-adjustment addenda of $6,000–$10,000 over sticker
+  attached to a lease-payoff promotion.</li>
+</ul>
+<p>Again — we are not adjudicating these. But the consistent shape is a <strong>disclosure-timing
+problem</strong>: the qualifying condition exists somewhere, and buyers are meeting it in the finance
+office instead of in the ad. Moving one disclosure line from the footer to the offer is close to
+free, and it retires an entire complaint category.</p>
+
+<h3>Theme three — the phones</h3>
+<p>Google's own review summary for your store surfaces this line among its top quotes:</p>
+<blockquote>"Get recording saying mail box is full for sales finance and reception desk."</blockquote>
+<p>A full voicemail box on sales, finance, and reception is a direct revenue leak, and it is a
+fifteen-minute fix. We flag it because it is the kind of thing that never reaches an owner — the
+people who hit it do not call back to tell you.</p>
+
+<h2><span class="num">5</span>The Dead Domain BBB Points At</h2>
+<div class="alert">
+  <span class="tag">Verified defect</span>
+  <div class="hd">The "Visit Website" button on your BBB profile links to a domain that no longer resolves.</div>
+  <p>BBB lists <strong>daytonamitsubishi.com</strong> as the primary website for the Daytona Kia
+  profile. That domain currently has <strong>no DNS A record at all</strong> — it does not fail to
+  load, it fails to exist. Your real Kia site, daytonakia.com, is demoted to "Additional Websites"
+  further down the page.</p>
+</div>
+<p>The domain is still registered and its nameservers still point at <strong>dealer.com</strong> —
+a previous website vendor. Your current site is built by Team Velocity. So the most likely history
+is straightforward: the platform was switched, the old domain was left behind, and the BBB record
+was never updated to follow. Meanwhile the sister store's live site is at
+<strong>daytonamitsu.com</strong>, a third address again.</p>
+<p>Net effect: a visitor who lands on your F-rated BBB profile and clicks the one button offered to
+hear your side of it reaches nothing at all. Both halves of that are fixable this week.</p>
+
+<h2><span class="num">6</span>NAP Consistency — Five Numbers, Two Addresses</h2>
+<p>Name, address and phone consistency is the input Google weighs most heavily when deciding whether
+two listings describe the same real business. Yours currently disagrees with itself:</p>
+<div class="scroll">
+<table>
+<tr><th>Surface</th><th>Phone shown</th><th>Address shown</th></tr>
+<tr><td>Google Business Profile</td><td>(386) 280-7453</td><td>510 N Nova Rd, 32114</td></tr>
+<tr><td>BBB profile</td><td>(386) 252-7000</td><td>510 N Nova Rd <span class="bad">and 900 N Nova Rd, 32117</span></td></tr>
+<tr><td>Yelp</td><td>(386) 252-7000</td><td>510 N Nova Rd, 32114</td></tr>
+<tr><td>daytonakia.com — Sales</td><td class="bad">386-588-5890</td><td>510 N Nova Rd, 32114</td></tr>
+<tr><td>daytonakia.com — Service / Parts</td><td class="bad">386-251-6676</td><td>510 N Nova Rd, 32114</td></tr>
+</table>
+</div>
+<p>Department-level and call-tracking numbers are normal and we are not asking you to abandon them.
+The issue is that <strong>no single number appears on every surface</strong>, and BBB carries both
+the Kia and Mitsubishi addresses under one profile — which is very likely part of why Kelley Blue
+Book renders the store as the merged "Daytona Mitsubishi Kia" while Google, Yelp and your own site
+call it Daytona Kia. Pick one canonical public number and one canonical address per rooftop, push
+them everywhere, and keep the tracking numbers in the ad channels where they belong.</p>
+
+<h2><span class="num">7</span>What Is Genuinely Well Run</h2>
+<div class="included">
+  <div class="hd">Credit where it is earned — and the reason this is worth doing.</div>
+  <p>A store with real problems on the floor does not hold 4.5 stars across 15,000+ reviews. The
+  operation is working. What follows is a list of things we would not change.</p>
+</div>
+<ul>
+  <li><strong>Google review response is excellent.</strong> Replies are specific, personal, signed,
+  and land within days. Several name the employee the customer praised. This is the hardest habit to
+  build in a dealership and you already have it.</li>
+  <li><strong>Review volume is a genuine asset.</strong> 4,515 on Google, 5,373 on Cars.com, 4,873 on
+  DealerRater. Very few single rooftops carry that.</li>
+  <li><strong>Your Google rating leads your market.</strong> Against the local set: Daytona Kia 4.5
+  (4,515) · Daytona Nissan 4.5 (4,323) · Daytona Toyota 4.4 (4,095) · Deland Kia 4.4 (3,694) ·
+  Daytona Hyundai 4.3 (1,501). You are first on rating and first on volume among Kia's local
+  competition.</li>
+  <li><strong>The website surfaces reviews honestly.</strong> The homepage carries a live Google
+  feed rather than a curated testimonial slider. That is the right instinct.</li>
+  <li><strong>Named staff are individually well rated</strong> on DealerRater, including the dealer
+  principal. Reviewers repeatedly name specific people. That is the raw material a review pipeline
+  runs on.</li>
+  <li><strong>26 years in business</strong> under a corporation formed in 1990. Longevity is the one
+  thing no competitor can buy.</li>
+</ul>
+
+<h2><span class="num">8</span>The Math</h2>
+<p>We are not going to tell you what your store grosses. The calculator below takes your numbers and
+applies one conservative assumption: some share of shoppers check a store's reputation before
+choosing it, and some share of those are deterred by what they find on the surfaces you are not
+managing. Move any slider to zero and the case disappears — that is deliberate.</p>
+
+<div class="calc">
+  <div class="calc-head">
+    <div class="t">Recoverable gross — Daytona Kia</div>
+    <div class="s">Drag any input. Defaults are deliberately conservative.</div>
+  </div>
+  <div class="calc-body">
+    <div class="sliders">
+      <div class="sl">
+        <label for="s1">Vehicles sold per month <span class="v" id="v1">180</span></label>
+        <input type="range" id="s1" min="40" max="500" step="10" value="180">
+      </div>
+      <div class="sl">
+        <label for="s2">Average total gross per unit <span class="v" id="v2">$3,200</span></label>
+        <input type="range" id="s2" min="800" max="6000" step="100" value="3200">
+      </div>
+      <div class="sl">
+        <label for="s3">Shoppers who check reviews first <span class="v" id="v3">60%</span></label>
+        <input type="range" id="s3" min="0" max="100" step="5" value="60">
+        <div class="cap">Industry research puts this well above 90%. We use 60%.</div>
+      </div>
+      <div class="sl">
+        <label for="s4">Of those, share deterred by Yelp / BBB <span class="v" id="v4">4%</span></label>
+        <input type="range" id="s4" min="0" max="25" step="1" value="4">
+      </div>
+      <div class="sl">
+        <label for="s5">Share of that we can realistically recover <span class="v" id="v5">60%</span></label>
+        <input type="range" id="s5" min="0" max="100" step="5" value="60">
+        <div class="cap">The rest we assume is lost for reasons no vendor controls.</div>
+      </div>
+      <div class="sl">
+        <label for="s6">Program — rooftops covered <span class="v" id="v6">1 · $1,250/mo</span></label>
+        <input type="range" id="s6" min="1" max="2" step="1" value="1">
+      </div>
+    </div>
+    <div class="out">
+      <div class="line"><span>Units deterred per month</span><span class="n" id="oUnits">4.4</span></div>
+      <div class="line"><span>Gross at risk, annual</span><span class="n" id="oRisk">$170,000</span></div>
+      <div class="line"><span>Recovered at the rate set above</span><span class="n" id="oRec">$102,000</span></div>
+      <div class="line cost"><span>Program cost, annual</span><span class="n" id="oCost">$15,000</span></div>
+      <div class="big line"><span class="l">Net, year one</span><span class="n" id="oNet">$87,000</span></div>
+      <div class="mult" id="oMult">6.8× return on spend</div>
+    </div>
+  </div>
+</div>
+<p class="hint">A model, not a promise. It is built so you can argue with it — every assumption is a
+slider, and the conservative end of each is the default.</p>
+
+<h2><span class="num">9</span>The Program</h2>
+<p>Everything below is work we do, not advice we hand you.</p>
+
+<h3>Recovery sprint — first 30 days, included at no extra cost</h3>
+<ul>
+  <li><strong>Answer the BBB backlog.</strong> All 16 unanswered complaints drafted, reviewed by you,
+  filed. Where a complaint is resolvable, we pursue the resolution, not just the reply. This alone
+  moves the letter grade.</li>
+  <li><strong>Correct the BBB record.</strong> Primary website switched from the dead
+  daytonamitsubishi.com to daytonakia.com; addresses and contact routing corrected; accreditation
+  path priced out so you can decide on it with real numbers.</li>
+  <li><strong>Open Yelp.</strong> Response templates for the existing 121, then every new review
+  answered inside 48 hours. Public, non-defensive, signed.</li>
+  <li><strong>Fix the voicemail.</strong> Full mailboxes on sales, finance and reception cleared, with
+  a weekly check added to the runbook.</li>
+  <li><strong>NAP reconciliation</strong> across Google, Yelp, BBB, KBB, Cars.com, DealerRater,
+  CARFAX, Apple and Bing — one canonical number and address per rooftop.</li>
+  <li><strong>Disclosure review</strong> on the two complaint themes in Section 4. We mark up the
+  current ad and mailer language and hand you a revised version. You decide whether to adopt it.</li>
+</ul>
+
+<h3>Ongoing, monthly</h3>
+<ul>
+  <li>Every review on every platform answered within 48 hours, in your voice, signed by a real person.</li>
+  <li>A review pipeline pointed at the <em>unmanaged</em> platforms — the fix for Yelp is not
+  arguing with the 121, it is giving the next 400 satisfied buyers somewhere to go.</li>
+  <li>BBB complaint monitoring with a named owner, so the grade never regenerates from silence.</li>
+  <li>Listing integrity monitoring — new duplicates, drifting hours, changed numbers.</li>
+  <li>Monthly written report: what moved, what did not, what we recommend next. Plain English.</li>
+</ul>
+
+<h2><span class="num">10</span>Investment</h2>
+<p>Our standard dealer rate is $1,250 per rooftop per month. No setup fee. Month to month — no term,
+cancel any time, for any reason.</p>
+
+<div class="plan">
+  <div class="row"><span class="plan-name">Option A — Daytona Kia</span><span class="plan-price">$1,250 / mo</span></div>
+  <p>Single rooftop. Recovery sprint included. Everything in Section 9.</p>
+</div>
+<div class="plan">
+  <div class="row"><span class="plan-name">Option B — Kia + Mitsubishi</span><span class="plan-price">$2,250 / mo</span></div>
+  <p>Both rooftops, $250/mo below standard rate. Recommended — BBB already merges the two
+  identities, KBB already lists you as one business, and the fixes overlap heavily. Splitting them
+  means doing the same NAP work twice.</p>
+</div>
+
+<div class="included">
+  <div class="hd">The 30-day recovery sprint is included in both options.</div>
+  <p>We do not charge separately for cleanup. If the first month does not visibly move the BBB
+  position and the Yelp response rate, cancel — there is nothing to cancel out of.</p>
+</div>
+
+<h2><span class="num">11</span>What We Need From You</h2>
+<p>Less than you would expect. The BBB and Yelp work needs credentials; the rest we can do from the
+outside.</p>
+<div class="scroll">
+<table>
+<tr><th>Item</th><th>Why</th><th>When</th></tr>
+<tr><td>BBB business login</td><td>To file the 16 responses</td><td>Day 1</td></tr>
+<tr><td>Yelp business account access</td><td>Page is already claimed — we need a seat, not a transfer</td><td>Day 1</td></tr>
+<tr><td>Google Business Profile — manager access</td><td>NAP corrections. We do not touch your reviews</td><td>Day 1</td></tr>
+<tr><td>Domain registrar contact</td><td>To retire or redirect daytonamitsubishi.com</td><td>Week 1</td></tr>
+<tr><td>One named person on your side</td><td>To approve complaint responses before they file</td><td>Day 1</td></tr>
+<tr><td>Current mailer and ad creative</td><td>For the Section 4 disclosure review</td><td>Week 2</td></tr>
+</table>
+</div>
+<p>We never publish a complaint response, a review reply, or a public statement without your
+approval on the first pass. After a few weeks, most clients hand us the wheel on routine replies and
+keep approval for anything contentious. That is your call, and it stays your call.</p>
+
+<h2><span class="num">12</span>Why Us</h2>
+<p>We run brand and reputation management for <strong>multiple franchise dealerships</strong>,
+covering the same scope described here: complaint response, listing integrity, review pipeline, and
+monthly reporting. References are available once a conversation is serious.</p>
+<p>Circuit Coders is small and deliberately so. You would work with me directly — not an account
+manager, not an offshore review-response queue. That is the trade: we are not the biggest vendor
+you could hire, and we do not take on more rooftops than we can personally cover.</p>
+
+<h2><span class="num">13</span>Method</h2>
+<p>So you can check every number rather than trust it.</p>
+<ul>
+  <li><strong>Discovery.</strong> BBB's public search API, filtered to D and F rated new- and
+  used-car dealers across 46 U.S. metros. 2,820 low-rated dealerships returned; 1,223 franchise
+  rooftops after removing national chains. Daytona Kia carried the lowest BBB score in the set.</li>
+  <li><strong>BBB.</strong> Public profile and complaints pages, read in full. Rating reasons,
+  complaint status counts, business details and contacts quoted verbatim.</li>
+  <li><strong>Google.</strong> Business Profile and Maps listing read directly, including the review
+  summary panel and the local competitive set. Branded SERP position checked on a clean query.</li>
+  <li><strong>Yelp.</strong> Live listing, first page of reviews read in full, owner-response state
+  and suppressed-review count taken from the page itself.</li>
+  <li><strong>Cars.com, DealerRater, KBB, CARFAX, Facebook, Trustpilot.</strong> Ratings and review
+  counts as published on July 30, 2026.</li>
+  <li><strong>Technical.</strong> DNS resolution and WHOIS on all four Daytona-branded domains; HTTP
+  status on each; site platform identified from page markup.</li>
+  <li><strong>No access, no scraping of private systems, no contact with your staff or customers.</strong>
+  Everything here was readable by anyone with a browser.</li>
+</ul>
+
+<h2><span class="num">14</span>If You Want To Talk</h2>
+<p>There is no signature block on this document on purpose. It is an audit, not a contract.</p>
+<p>If any of it is wrong, tell us and we will correct it and resend — we would rather be accurate
+than persuasive. If it is right and you would like the sixteen complaints answered, reply to the
+email this came from, or call <strong>Leo Lebel at Circuit Coders</strong> directly.</p>
+<p>And if you would rather do all of this in-house: the findings above are yours to keep. Sections
+3, 5 and 6 are a complete to-do list, and none of it requires hiring anyone.</p>
+
+<div class="foot">
+  <strong>Circuit Coders</strong> · Brand &amp; reputation management for franchise dealerships ·
+  circuitcoders.com<br>
+  Audit swept live July 30, 2026. All figures re-verifiable from public sources as of that date.
+  Complaint texts are public allegations published by BBB and Yelp; Circuit Coders takes no position
+  on their merits and this document is not legal advice.
+</div>
+
+</div>
+
+<script>
+(function () {
+  var ids = ['s1','s2','s3','s4','s5','s6'];
+  var el = {};
+  ids.forEach(function (i) { el[i] = document.getElementById(i); });
+
+  function money(n) {
+    return '$' + Math.round(n).toLocaleString('en-US');
+  }
+
+  function render() {
+    var units  = +el.s1.value;
+    var gross  = +el.s2.value;
+    var check  = +el.s3.value / 100;
+    var deter  = +el.s4.value / 100;
+    var recov  = +el.s5.value / 100;
+    var roofs  = +el.s6.value;
+
+    document.getElementById('v1').textContent = units;
+    document.getElementById('v2').textContent = money(gross);
+    document.getElementById('v3').textContent = el.s3.value + '%';
+    document.getElementById('v4').textContent = el.s4.value + '%';
+    document.getElementById('v5').textContent = el.s5.value + '%';
+
+    var cost = roofs === 2 ? 2250 : 1250;
+    document.getElementById('v6').textContent =
+      roofs + (roofs === 1 ? ' · $1,250/mo' : ' · $2,250/mo');
+
+    // Share of would-be buyers turned away before they ever reach the floor.
+    var lossRate = check * deter;
+    // Units sold are what survived that filter, so gross the number back up
+    // rather than taking a percentage of an already-filtered figure.
+    var lostUnits = lossRate >= 1 ? 0 : units * (lossRate / (1 - lossRate));
+
+    var riskAnnual = lostUnits * gross * 12;
+    var recovered  = riskAnnual * recov;
+    var costAnnual = cost * 12;
+    var net        = recovered - costAnnual;
+
+    document.getElementById('oUnits').textContent = lostUnits.toFixed(1);
+    document.getElementById('oRisk').textContent  = money(riskAnnual);
+    document.getElementById('oRec').textContent   = money(recovered);
+    document.getElementById('oCost').textContent  = money(costAnnual);
+    document.getElementById('oNet').textContent   = money(net);
+
+    var multEl = document.getElementById('oMult');
+    if (recovered <= 0) {
+      multEl.textContent = 'No case at these inputs.';
+    } else {
+      multEl.textContent = (recovered / costAnnual).toFixed(1) + '× return on spend';
+    }
+  }
+
+  ids.forEach(function (i) { el[i].addEventListener('input', render); });
+  render();
+})();
+</script>
+
+</body>
+</html>

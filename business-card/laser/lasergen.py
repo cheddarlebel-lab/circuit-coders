@@ -17,6 +17,7 @@ Usage:
 """
 
 import os
+import cv2
 import numpy as np
 import qrcode
 from PIL import Image, ImageDraw, ImageFont
@@ -25,8 +26,26 @@ from PIL import Image, ImageDraw, ImageFont
 HERE = os.path.dirname(os.path.abspath(__file__))
 LOGO = os.path.join(HERE, "..", "..", "public", "brand", "logo-512.png")
 
-CARD_W_MM, CARD_H_MM = 86.0, 54.0          # Bambu black-aluminum blank (86 x 54 x 0.4mm)
+# Blank geometry. Default = Bambu black-aluminum blank (86 x 54 x 0.4mm).
+# CC_CARD_MM="86x53" re-lays the art out for the VMYTH 304 stainless blanks
+# (86 x 53 x 0.5mm) that the proven STAINLESS recipe runs on. The whole layout is
+# proportional, so this re-flows rather than distorting.
+CARD_W_MM, CARD_H_MM = (
+    tuple(float(v) for v in os.environ["CC_CARD_MM"].split("x"))
+    if os.environ.get("CC_CARD_MM") else (86.0, 54.0)
+)
 CORNER_MM = 3.0                             # rounded-corner radius
+
+# How far the engraved border frame sits inside the card edge. This sets the
+# footprint of the whole etch: at 3.2 the art was only 79.5x47.5 on an 86x54 card
+# (92.5%), which read as tiny cards with huge gaps in the 12-up jig. It cannot go
+# to 0 -- the jig pocket gives each card CLEAR (0.4mm) of play per side, so a
+# flush frame would drop off the card edge onto the tray whenever a blank shifts.
+# 0.6 = that play plus half the 0.30mm line width = the tightest safe frame.
+BORDER_INSET_MM = 0.6
+
+# CC_NO_BORDER=1 drops the engraved rounded-rect frame entirely (content only).
+DRAW_BORDER = os.environ.get("CC_NO_BORDER") != "1"
 DPI = 600                                   # engrave-master resolution (matches Temecula card)
 SS = 3                                      # supersample factor for clean edges
 PXMM = DPI / 25.4                           # px per mm (final)
@@ -36,13 +55,17 @@ CONTACT = dict(
     tagline="ENGINEERING STUDIO",
     name="Leo Lebel",
     title="Founder",
-    phone="(442) 297-8170",
+    phone="(760) 672-2461",
     web="circuitcoders.com",
-    email="admin@circuitcoders.com",
+    email="leo@circuitcoders.com",
     qr_url="https://circuitcoders.com",
 )
 
 GREEN = (0, 230, 138)                       # circuit-500 brand accent
+
+# Stroke weight of the rounded-square frame around the bolt. The logo's own frame
+# was a hairline (~0.25mm at card scale); Leo asked for a bolder outline.
+BOLT_FRAME_STROKE_MM = 0.55
 
 FONT_CANDIDATES = {
     "bold": [
@@ -99,18 +122,55 @@ def draw_text(draw, xy, s, fnt, fill, tracking=0.0):
         x += draw.textlength(ch, font=fnt) + tracking
 
 
-def bolt_mask():
-    """Binary mask of the Circuit Coders lightning bolt, lifted from the real logo."""
+def _text_w(draw, s, fnt, tracking=0.0):
+    """Rendered width of a (optionally tracked) string, matching draw_text."""
+    if not tracking:
+        return draw.textlength(s, font=fnt)
+    return sum(draw.textlength(c, font=fnt) for c in s) + tracking * (len(s) - 1)
+
+
+def draw_text_centered(draw, cx, y, s, fnt, fill, tracking=0.0):
+    """draw_text, horizontally centered on cx. Returns the string width."""
+    w = _text_w(draw, s, fnt, tracking)
+    draw_text(draw, (cx - w / 2, y), s, fnt, fill, tracking=tracking)
+    return w
+
+
+def _logo_ink():
+    """Green-dominant pixels of the real logo = the rounded-square frame AND the
+    bolt inside it, cropped to the frame's bounding box."""
     img = Image.open(LOGO).convert("RGB")
     a = np.asarray(img).astype(np.int16)
     r, g, b = a[..., 0], a[..., 1], a[..., 2]
-    # bolt = bright + clearly green-dominant (the dark frame/background fails this)
     mask = (g > 120) & (g - r > 30) & (g - b > 10)
     ys, xs = np.where(mask)
     if len(xs) == 0:
         raise RuntimeError("bolt not found in logo")
-    crop = mask[ys.min():ys.max() + 1, xs.min():xs.max() + 1]
-    return Image.fromarray((crop * 255).astype(np.uint8))
+    return mask[ys.min():ys.max() + 1, xs.min():xs.max() + 1].astype(np.uint8)
+
+
+def bolt_mask():
+    """Binary mask of JUST the lightning bolt, with the logo's frame dropped.
+
+    The logo art bakes in a thin rounded-square frame around the bolt, so its
+    stroke weight can't be adjusted. We isolate the bolt (the component that does
+    not touch the frame's bbox) and let render() redraw the frame at
+    BOLT_FRAME_STROKE_MM instead. Returns (bolt_image, bolt_frac) where
+    bolt_frac is the bolt's height as a fraction of the frame, so the redrawn
+    frame keeps the logo's original proportions.
+    """
+    ink = _logo_ink()
+    n, lbl = cv2.connectedComponents(ink, connectivity=8)
+    edge = set(lbl[0, :]) | set(lbl[-1, :]) | set(lbl[:, 0]) | set(lbl[:, -1])
+    edge.discard(0)
+    inner = [i for i in range(1, n) if i not in edge]
+    if not inner:
+        raise RuntimeError("bolt not separable from logo frame")
+    bolt = lbl == max(inner, key=lambda i: int((lbl == i).sum()))
+    ys, xs = np.where(bolt)
+    crop = bolt[ys.min():ys.max() + 1, xs.min():xs.max() + 1]
+    return (Image.fromarray((crop * 255).astype(np.uint8)),
+            crop.shape[0] / ink.shape[0])
 
 
 def qr_matrix(url):
@@ -138,20 +198,28 @@ def render(ink_rgb, bg_rgb, qr_dark_material, transparent_bg=False):
     ink = (*ink_rgb, 255)
 
     # --- border frame -------------------------------------------------------
-    inset = mm(3.2)
-    d.rounded_rectangle([inset, inset, W - inset, H - inset],
-                        radius=mm(CORNER_MM * 0.6), outline=ink, width=mm(0.30))
+    if DRAW_BORDER:
+        inset = mm(BORDER_INSET_MM)
+        d.rounded_rectangle([inset, inset, W - inset, H - inset],
+                            radius=mm(CORNER_MM - BORDER_INSET_MM), outline=ink,
+                            width=mm(0.30))
 
     pad = mm(7.2)
 
-    # --- header: bolt + company -------------------------------------------
-    bolt = bolt_mask()
-    bh = mm(10.5)
+    # --- header: bolt in a redrawn frame -----------------------------------
+    # Frame is drawn here (not taken from the logo art) so its weight is a knob.
+    bolt, bolt_frac = bolt_mask()
+    tile = mm(10.5)
+    bx, by = pad, mm(6.5)
+    d.rounded_rectangle([bx, by, bx + tile, by + tile],
+                        radius=int(tile * 0.22), outline=ink,
+                        width=mm(BOLT_FRAME_STROKE_MM))
+    bh = int(tile * bolt_frac)
     bw = int(bolt.width * bh / bolt.height)
     bolt = bolt.resize((bw, bh), Image.LANCZOS)
     bolt_solid = Image.new("RGBA", bolt.size, ink)
-    bx, by = pad, mm(6.5)
-    img.paste(bolt_solid, (bx, by), bolt)
+    img.paste(bolt_solid, (bx + (tile - bw) // 2, by + (tile - bh) // 2), bolt)
+    bw, bh = tile, tile          # header text lays out against the frame
 
     cx = bx + bw + mm(4.0)
     f_company = font("bold", 5.1)
@@ -162,8 +230,13 @@ def render(ink_rgb, bg_rgb, qr_dark_material, transparent_bg=False):
 
     f_tag = font("regular", 1.95)
     trk2 = mm(0.95)
-    draw_text(d, (cx + mm(0.3), cy + ch + mm(2.4)), CONTACT["tagline"],
-              f_tag, ink, tracking=trk2)
+    tag_y = cy + ch + mm(2.4)
+    draw_text(d, (cx + mm(0.3), tag_y), CONTACT["tagline"], f_tag, ink,
+              tracking=trk2)
+    # The tracked tagline runs into the QR column horizontally, so the QR must
+    # clear it vertically. Header is placed from the top while the QR is
+    # centered, so a shorter blank walks the QR up into this text.
+    tag_bottom = tag_y + text_h(d, CONTACT["tagline"], f_tag)
 
     # --- divider -----------------------------------------------------------
     dy = mm(22.0)
@@ -195,7 +268,7 @@ def render(ink_rgb, bg_rgb, qr_dark_material, transparent_bg=False):
     quiet = 2                       # quiet-zone modules
     cell = tile / (n + quiet * 2)
     qx = W - pad - tile
-    qy = (H - tile) // 2
+    qy = max((H - tile) // 2, tag_bottom + mm(1.2))
     body = (*bg_rgb, 255)
 
     if qr_dark_material:
@@ -218,6 +291,89 @@ def render(ink_rgb, bg_rgb, qr_dark_material, transparent_bg=False):
                     d.rectangle([x0, y0, x0 + cell + 1, y0 + cell + 1], fill=ink)
 
     # downsample for clean anti-aliased edges
+    return img.resize((mm(CARD_W_MM) // SS, mm(CARD_H_MM) // SS), Image.LANCZOS)
+
+
+# What the back sells (mode="services"). Kept short so it stays legible at
+# ~2.4mm engraved on metal.
+BACK_SERVICES = ["Websites  ·  Web Apps  ·  Local SEO",
+                 "AI Receptionists  ·  Automation"]
+
+
+def render_back(ink_rgb, bg_rgb, transparent_bg=False, mode="logo"):
+    """Back of the card, centered block, engraved on the reverse face after
+    flipping the blanks in the same jig (reads normally -> no mirroring).
+
+    mode="logo"     : bolt + CIRCUIT CODERS + tagline. Pure brand moment.
+    mode="services" : bolt + wordmark + what-we-build lines + web. Sells.
+    """
+    W, H = mm(CARD_W_MM), mm(CARD_H_MM)
+    img = Image.new("RGBA", (W, H),
+                    (0, 0, 0, 0) if transparent_bg else (*bg_rgb, 255))
+    d = ImageDraw.Draw(img)
+    ink = (*ink_rgb, 255)
+    cx = W // 2
+
+    inset = mm(BORDER_INSET_MM)
+    d.rounded_rectangle([inset, inset, W - inset, H - inset],
+                        radius=mm(CORNER_MM - BORDER_INSET_MM), outline=ink,
+                        width=mm(0.30))
+    bolt, bolt_frac = bolt_mask()
+
+    def place_bolt(x_left, y_top, size):
+        d.rounded_rectangle([x_left, y_top, x_left + size, y_top + size],
+                            radius=int(size * 0.22), outline=ink,
+                            width=mm(BOLT_FRAME_STROKE_MM * 1.25))
+        bh = int(size * bolt_frac)
+        bw = int(bolt.width * bh / bolt.height)
+        b = bolt.resize((bw, bh), Image.LANCZOS)
+        img.paste(Image.new("RGBA", b.size, ink),
+                  (x_left + (size - bw) // 2, y_top + (size - bh) // 2), b)
+
+    if mode == "services":
+        f_company = font("bold", 5.0)
+        f_svc = font("regular", 2.45)
+        tile = mm(11.0)
+        gap_top = mm(4.4)                # bolt -> wordmark
+        gap_mid = mm(4.8)                # wordmark -> services
+        line_pitch = mm(4.2)
+        f_web = font("regular", 2.35)
+        gap_web = mm(4.6)
+
+        ch = text_h(d, CONTACT["company"], f_company)
+        sh = text_h(d, BACK_SERVICES[0], f_svc)
+        wh = text_h(d, CONTACT["web"], f_web)
+        svc_block = sh + line_pitch * (len(BACK_SERVICES) - 1)
+        block_h = tile + gap_top + ch + gap_mid + svc_block + gap_web + wh
+        y = (H - block_h) // 2
+
+        place_bolt(cx - tile // 2, y, tile)
+        wy = y + tile + gap_top
+        draw_text_centered(d, cx, wy, CONTACT["company"], f_company, ink,
+                           tracking=mm(0.5))
+        sy = wy + ch + gap_mid
+        for i, line in enumerate(BACK_SERVICES):
+            draw_text_centered(d, cx, sy + i * line_pitch, line, f_svc, ink)
+        draw_text_centered(d, cx, sy + svc_block + gap_web, CONTACT["web"],
+                           f_web, ink, tracking=mm(0.3))
+    else:
+        f_company = font("bold", 5.6)
+        f_tag = font("regular", 2.2)
+        tile = mm(15.5)
+        gap1 = mm(5.0)
+        gap2 = mm(2.6)
+        ch = text_h(d, CONTACT["company"], f_company)
+        th = text_h(d, CONTACT["tagline"], f_tag)
+        block_h = tile + gap1 + ch + gap2 + th
+        y = (H - block_h) // 2
+
+        place_bolt(cx - tile // 2, y, tile)
+        wy = y + tile + gap1
+        draw_text_centered(d, cx, wy, CONTACT["company"], f_company, ink,
+                           tracking=mm(0.6))
+        draw_text_centered(d, cx, wy + ch + gap2, CONTACT["tagline"], f_tag,
+                           ink, tracking=mm(1.1))
+
     return img.resize((mm(CARD_W_MM) // SS, mm(CARD_H_MM) // SS), Image.LANCZOS)
 
 
@@ -245,7 +401,32 @@ def write_cut_svg(path):
 
 # ----------------------------------------------------------------------------- main
 def main():
-    out = HERE
+    # CC_OUT redirects the art into a subdir so a non-default CC_CARD_MM build
+    # (e.g. the 86x53 stainless set) can't clobber the default 86x54 masters
+    # that the wood/aluminum .lac projects are built from.
+    out = os.path.join(HERE, os.environ["CC_OUT"]) if os.environ.get("CC_OUT") else HERE
+    os.makedirs(out, exist_ok=True)
+
+    # CC_SIDE=back -> the branded reverse face. Same file names as the front so
+    # the jig builder is identical; put it in its own CC_OUT dir (e.g. back53).
+    if os.environ.get("CC_SIDE") == "back":
+        back_mode = os.environ.get("CC_BACK", "logo")
+        dark = render_back(ink_rgb=(0, 0, 0), bg_rgb=(255, 255, 255), mode=back_mode)
+        p = os.path.join(out, "cc-laser-DARK-engrave.png")
+        dark.convert("L").save(p, dpi=(DPI, DPI))
+        print(f"  wrote {os.path.basename(p)}  (BACK/{back_mode}, {dark.size[0]}x{dark.size[1]} px @ {DPI}dpi)")
+
+        light = render_back(ink_rgb=(0, 0, 0), bg_rgb=(255, 255, 255), mode=back_mode)
+        p = os.path.join(out, "cc-laser-LIGHT-engrave.png")
+        light.convert("L").save(p, dpi=(DPI, DPI))
+        print(f"  wrote {os.path.basename(p)}  (BACK/{back_mode})")
+
+        # truthful preview: silver mark on black anodized
+        prev = render_back(ink_rgb=(210, 210, 210), bg_rgb=(20, 20, 20), mode=back_mode)
+        p = os.path.join(out, "cc-card-PREVIEW.png")
+        prev.convert("RGB").save(p)
+        print(f"  wrote {os.path.basename(p)}  (BACK/{back_mode} preview)")
+        return
 
     # 1. Engrave master for DARK stock (black anodized aluminum / black acrylic)
     dark = render(ink_rgb=(0, 0, 0), bg_rgb=(255, 255, 255),
@@ -289,29 +470,34 @@ def main():
     write_cut_svg(p)
     print(f"  wrote {os.path.basename(p)}  (rounded-rect cut path, mm)")
 
-    # 6. "Just the card" pair, Temecula-Lanes style — single 86x54 Bambu blank
+    # 6. "Just the card" pair, Temecula-Lanes style — single blank
+    size = f"{CARD_W_MM:g} x {CARD_H_MM:g}"
     dark_master.save(os.path.join(out, "cc-card-ENGRAVE.png"), dpi=(DPI, DPI))
     metal.convert("RGB").save(os.path.join(out, "cc-card-PREVIEW.png"))
-    print("  wrote cc-card-ENGRAVE.png + cc-card-PREVIEW.png  (single 86x54 card — IMPORT THIS)")
+    print(f"  wrote cc-card-ENGRAVE.png + cc-card-PREVIEW.png  (single {size}mm card — IMPORT THIS)")
     readme = (
         "CIRCUIT CODERS - metal QR business card\n"
         "=======================================\n"
-        "Material : Bambu Lab Black Aluminum Card  86 x 54 x 0.4 mm\n"
-        "           (laser ablates dye -> bright silver)\n"
+        f"Blank    : {size} mm  (laser ablates the surface -> bright silver)\n"
         "Machine  : Bambu H2C, 40W laser, Bambu Suite\n\n"
         "FILES\n"
-        "  cc-card-ENGRAVE.png  <- IMPORT THIS. Fits the 86x54 card. Black = engrave->silver.\n"
+        f"  cc-card-ENGRAVE.png  <- IMPORT THIS. Fits the {size}mm card. Black = engrave->silver.\n"
         "  cc-card-PREVIEW.png  <- Finished look (QR verified -> https://circuitcoders.com).\n\n"
-        "BAMBU SUITE\n"
+        "PREFER THE READY-MADE PROJECT\n"
+        "  cc-card-stainless.lac already carries the proven recipe + art. Open it in\n"
+        "  Bambu Suite and hit Make - no import or sizing needed. Steps below are the\n"
+        "  manual fallback only.\n\n"
+        "BAMBU SUITE (manual fallback)\n"
         "  1. New laser project. Import cc-card-ENGRAVE.png.\n"
         "  2. Process type: Laser Image (raster) engrave.\n"
-        "  3. Size to the Bambu card: 86 x 54 mm. Wipe the blank clean first.\n"
-        "  4. Place blank flat on bed (magnets/tape). Run auto-focus / height probe.\n"
+        f"  3. Size to the blank: {size} mm. Wipe the blank clean first.\n"
+        "  4. Place blank flat on bed. Run auto-focus / height probe.\n"
         "  5. Glasses on, enclosure closed, exhaust on.\n\n"
-        "SETTINGS (black anodized - go LOW power, it ablates easily)\n"
-        "  Fill/raster: ~30-45% power, ~400-700 mm/s, 1 pass, line interval 0.05-0.06 mm.\n"
-        "  >>> Run a small power/speed TEST SQUARE in a corner first. Tune for bright,\n"
-        "      crisp silver. Too much power blooms edges and softens the QR.\n\n"
+        "SETTINGS\n"
+        "  Coated VMYTH 304 stainless: use cc-card-stainless.lac (22% / 500 mm/s /\n"
+        "  0.06 interval / per-line 2 / air ON) - the dialed-in recipe from the\n"
+        "  LaneTab run. Trim ladder: too warped -> 20, then speed 550. Too light -> 24.\n"
+        "  Bare black anodized aluminum: start ~30-45% / 400-700 mm/s and test first.\n\n"
         "QR encodes: https://circuitcoders.com  (low density - very robust)\n"
     )
     with open(os.path.join(out, "cc-card-README.txt"), "w") as f:

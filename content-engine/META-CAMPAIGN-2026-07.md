@@ -45,9 +45,20 @@ chokes, "add from URL"). All drive to the /start funnel + demo line (760) 546-91
 ### (Bench) AD 4 — After-hours → `ad-afterhours.png` — swap in if AD1 fatigues.
 
 ## CREATIVE LIBRARY
-Images (1080×1350, 4:5): out/ad-missedcall.png · ad-collision.png · ad-mapsgap.png · ad-afterhours.png
-Videos (1080×1920, 9:16): missed-call.mp4 (25s) · maps-gap.mp4 (23s) · cinematic-ad.mp4 (Higgsfield b-roll)
-Regenerate images: `bash gen_ads_v2.sh`. Edit copy = the render_ad lines.
+**VIDEO SLATE (1080×1920, 9:16, silent w/ baked captions — HERO format for Reels/Stories/Feed):**
+- `missed-call.mp4` (25s) — HERO. Regenerated 7/2 w/ TRUTHFUL copy (killed the fabricated "1 in 4 calls" stat).
+- `out/after-hours.mp4` (25s) — "It's 7pm, your shop is closed, your best customer is calling."
+- `out/near-me.mp4` (25s) — "Someone searched body shop near me. You weren't in the top 3."
+- `out/collision.mp4` (25s) — "One collision job is worth thousands. Miss the call, miss the job."
+- `maps-gap.mp4` · `cinematic-ad.mp4` (older; cinematic = Higgsfield b-roll, 1080×1350).
+All truthful (no fabricated stats), on-brand (carbon+green, CC lightning, demo line, /start footer).
+Regenerate/edit: `bash gen_slate.sh` (edit the `scenes` arrays).
+**Images (1080×1350, 4:5):** out/ad-missedcall.png · ad-collision.png · ad-mapsgap.png · ad-afterhours.png (`gen_ads_v2.sh`).
+
+## USE: paid boost + FREE organic (the durable engine)
+Post the video slate ORGANICALLY on IG/TikTok/FB Reels (free reach, self-selects shop owners) AND
+use the same files as the Meta boost creative. Lead with missed-call.mp4; rotate the others weekly.
+Caption template: hook line from the video + "Hear the AI answer a real call: (760) 546-9189 · free shop audit, link in bio → circuitcoders.com/start".
 
 ## ⚠️ PIXEL GAP (decide before launch)
 /start has NO Meta Pixel, so "Leads" optimization can't see conversions and the $200 optimizes blind.

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Brand &amp; Reputation Audit · Classic Elite Buick GMC</title>
+<style>
+
+  :root {
+    --ink:#15181f; --soft:#474d5a; --dim:#6a7080; --faint:#8a8f9c;
+    --rule:#d8dbe2; --hair:#e3e5ea; --panel:#f6f5f3;
+    --bad:#a33327; --good:#1f6e43; --accent:#05141F;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: #fff; color: var(--ink);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16.5px; line-height: 1.55; -webkit-font-smoothing: antialiased;
+  }
+  .brandbar { height: 6px; display: flex; }
+  .brandbar span { flex: 1; }
+  .page { max-width: 760px; margin: 0 auto; padding: 6px 22px 80px; }
+
+  /* Static credibility strip — the platforms actually read for this audit. */
+  .strip-wrap { max-width: 860px; margin: 0 auto; padding: 26px 22px 0; }
+  .strip {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+    gap: 14px 40px; padding: 4px 0 22px; border-bottom: 1px solid var(--hair); margin-bottom: 30px;
+  }
+  .strip img { height: 46px; width: auto; display: block; }
+
+  .kicker { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--faint); margin-bottom: 10px; }
+  h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.6px; margin: 0 0 6px; line-height: 1.15; }
+  .subtitle { font-size: 18px; color: var(--soft); margin: 0 0 14px; }
+  .meta { font-size: 14px; color: var(--dim); padding-bottom: 24px; border-bottom: 1px solid var(--rule); }
+  .meta strong { color: var(--ink); font-weight: 600; }
+
+  h2 { font-size: 21px; font-weight: 700; letter-spacing: -0.3px; margin: 40px 0 10px;
+       padding-top: 20px; border-top: 1px solid var(--rule); }
+  h2 .num { color: var(--accent); margin-right: 10px; }
+  h3 { font-size: 17px; font-weight: 700; margin: 26px 0 6px; }
+  p { margin: 0 0 12px; }
+  ul { margin: 0 0 14px; padding-left: 20px; }
+  li { margin-bottom: 6px; }
+
+  .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 14px 0 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 540px; }
+  th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+       color: var(--dim); border-bottom: 2px solid var(--ink); padding: 7px 10px 7px 0; font-weight: 600; }
+  td { border-bottom: 1px solid var(--hair); padding: 9px 10px 9px 0; vertical-align: top; }
+  td.n, th.n { text-align: right; padding-right: 16px; font-variant-numeric: tabular-nums; }
+  tr.tot td { border-top: 2px solid var(--ink); border-bottom: none; font-weight: 700; }
+  .bad { color: var(--bad); font-weight: 700; }
+  .good { color: var(--good); font-weight: 700; }
+  .hint { font-size: 13px; color: var(--dim); font-style: italic; margin-top: 4px; }
+
+  .callout { background: var(--panel); border-left: 4px solid var(--accent); padding: 16px 18px; margin: 18px 0; }
+  .callout .hd { font-weight: 700; margin-bottom: 4px; }
+  .callout p:last-child { margin-bottom: 0; }
+  blockquote { margin: 10px 0; padding-left: 14px; border-left: 3px solid var(--rule);
+               color: var(--soft); font-style: italic; }
+
+  .plan { border-top: 1px solid var(--hair); padding: 16px 0; }
+  .plan .row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .plan-name { font-weight: 700; font-size: 17px; }
+  .plan-price { font-weight: 700; font-size: 19px; white-space: nowrap; }
+  .plan p { color: var(--soft); font-size: 15px; margin: 6px 0 0; }
+
+  .alert { border: 1px solid var(--bad); border-left: 5px solid var(--bad);
+           background: #fdf6f5; padding: 18px 20px; margin: 18px 0; }
+  .alert .tag { display: inline-block; background: var(--bad); color: #fff; font-size: 11px;
+                letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
+                padding: 4px 9px; border-radius: 2px; margin-bottom: 10px; }
+  .alert .hd { font-weight: 700; font-size: 17px; margin-bottom: 6px; }
+  .alert p:last-child { margin-bottom: 0; }
+
+  .included { border: 2px solid var(--good); background: #f4faf6; padding: 16px 20px; margin: 18px 0; }
+  .included .hd { font-weight: 700; font-size: 17px; color: var(--good); margin-bottom: 4px; }
+  .included p:last-child { margin-bottom: 0; }
+
+  .calc { border: 1px solid var(--ink); margin: 22px 0; }
+  .calc-head { background: var(--ink); color: #fff; padding: 12px 18px; }
+  .calc-head .t { font-weight: 700; font-size: 16px; }
+  .calc-head .s { font-size: 13px; opacity: .75; margin-top: 2px; }
+  .calc-body { padding: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+  .sliders { display: flex; flex-direction: column; gap: 15px; }
+  .sl label { display: flex; justify-content: space-between; align-items: baseline;
+              font-size: 14px; font-weight: 600; margin-bottom: 6px; gap: 10px; }
+  .sl .v { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .sl input[type=range] { width: 100%; accent-color: var(--accent); height: 22px; }
+  .sl .cap { font-size: 12px; color: var(--dim); margin-top: 2px; }
+  .out { background: var(--panel); padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; }
+  .out .line { display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+               font-size: 14px; }
+  .out .line .n { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+  .out .big { border-top: 1px solid var(--rule); padding-top: 12px; margin-top: 2px; }
+  .out .big .l { font-weight: 700; font-size: 15px; }
+  .out .big .n { font-size: 26px; font-weight: 700; color: var(--good); letter-spacing: -.5px; }
+  .out .mult { text-align: right; font-size: 13px; color: var(--dim); }
+  .out .cost .n { color: var(--bad); }
+  @media (max-width: 640px) { .calc-body { grid-template-columns: 1fr; gap: 18px; } }
+
+  .foot { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule);
+          font-size: 13.5px; color: var(--dim); }
+  .foot strong { color: var(--ink); }
+
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    h1 { font-size: 25px; }
+    .strip img { height: 34px; }
+    .strip { gap: 12px 26px; }
+    .plan .row { flex-direction: column; gap: 2px; }
+  }
+
+</style>
+</head>
+<body>
+<div class="brandbar"><span style="background:#05141F"></span><span style="background:#0d2233"></span><span style="background:#05141F"></span><span style="background:#132c3f"></span><span style="background:#05141F"></span><span style="background:#0d2233"></span></div>
+
+<div class="strip-wrap"><div class="strip" aria-label="Platforms read for this audit">
+  <img src="marques/brand-buick.png" alt="">
+  <img src="marques/brand-gmc.png" alt="">
+  <img src="marques/plat-google.png" alt="">
+  <img src="marques/plat-yelp.png" alt="">
+  <img src="marques/plat-bbb.png" alt="">
+</div></div>
+
+<div class="page">
+
+<div class="kicker">Circuit Coders · Prepared for Classic Elite Buick GMC</div>
+<h1>Brand &amp; Reputation Audit</h1>
+<p class="subtitle">Classic Elite Buick GMC — 16835 Katy Freeway, Houston, Texas</p>
+<div class="meta">
+  <strong>Prepared for</strong> Ulises Duran · Tiffany Sebastian ·
+  <strong>Prepared by</strong> Leo Lebel, Circuit Coders ·
+  <strong>Swept live</strong> July 30, 2026 ·
+  Independent audit — no access to your systems was requested or used ·
+  Every figure re-verifiable from a browser
+</div>
+
+<h2>Executive Summary</h2>
+
+<p>This audit was not commissioned. We ran it because a national sweep of low-rated franchise
+dealerships across 54 metros surfaced this store second from the bottom, and the reason turned out to
+be more interesting than the ranking.</p>
+
+<p><strong>Of the 3,368 low-rated dealerships we measured nationwide, only one carries a worse BBB
+rating score than this rooftop. Yours is 14.0 out of 100.</strong> We expected to find a badly run
+store. The evidence says otherwise.</p>
+
+<p><strong>Your store is not badly rated. It is unevenly rated, and it is also unevenly
+<em>named</em>.</strong> On Google, the dealership at 16835 Katy Freeway holds
+<strong>4.5 stars on 4,540 reviews</strong> — a large, healthy base that took years to build. On
+Yelp, the same address holds <strong>2.4 stars on 150 reviews</strong>, claimed but unworked, with
+<strong>82 further reviews suppressed</strong> by Yelp's filter. BBB grades the same address F.</p>
+
+<p>The second finding is one we have not seen this clearly anywhere else in the sweep, and it is
+free to fix: <strong>this dealership is publishing itself under three different names, across two
+separate Google listings, at two adjacent street numbers.</strong> Section 4 lays it out. It is very
+likely costing you search visibility you have already paid for.</p>
+
+<p>One thing sits outside the reputation frame and we would rather say it than sell around it. A
+published BBB customer review alleges a specific F&amp;I sequence — an advertised price, a different
+lot price, and a <strong>$1,998 option package described as mandatory</strong> that an employee
+allegedly admitted was removable. Independent complainants describe a warranty product added without
+authorisation. Review management does not fix that. Section 3 covers it plainly, because a vendor who
+sold you review-generation and stayed quiet about it would be taking your money under false
+pretenses.</p>
+
+<h2><span class="num">1</span>The Two-Tier Reputation</h2>
+<p>Read live on July 30, 2026. All three records below resolve to
+16835 Katy Freeway and the phone number (281) 509-9097 — we checked, because the naming made it
+necessary.</p><div class="scroll">
+<table>
+<tr><th>Platform</th><th class="n">Rating</th><th class="n">Reviews</th><th>State</th></tr>
+<tr><td colspan="4" style="border-bottom:none;padding-top:14px;padding-bottom:2px;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--good);font-weight:700;">Actively managed</td></tr>
+<tr><td><strong>Google Business Profile</strong></td><td class="n good">4.5</td><td class="n">4,540</td><td>Claimed and worked. A genuinely strong base.</td></tr>
+<tr><td colspan="4" style="border-bottom:none;padding-top:18px;padding-bottom:2px;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--bad);font-weight:700;">Unmanaged</td></tr>
+<tr><td><strong>Yelp</strong></td><td class="n bad">2.4</td><td class="n">150</td><td class="bad">Claimed, unworked. <strong>82 more suppressed.</strong></td></tr><tr><td><strong>Better Business Bureau</strong></td><td class="n bad">F</td><td class="n">9 complaints</td><td class="bad">Score <strong>14.0 / 100</strong> — second lowest of 3,368 measured.</td></tr>
+</table>
+</div>
+<p class="hint">Read live 2026-07-30. Ratings drift — re-check before quoting any figure back to us.</p><div class="callout">
+  <div class="hd">The pattern is not random.</div>
+  <p>The platform at 4.5 is the one your CRM solicits automatically after a sale. The platform at 2.4
+  only receives reviews people take the trouble to leave <em>unprompted</em> — which, without a
+  pipeline pointed at it, means almost exclusively the aggrieved. You do not have a quality problem
+  on Yelp. You have an <em>absence</em> on Yelp, and absence fills with the loudest voices
+  available.</p>
+</div>
+<p>A 2.1-star spread is not a difference of opinion among customers. It is the difference between a
+platform somebody owns and a platform nobody has logged into.</p>
+<h2><span class="num">2</span>The BBB F — Second Lowest in a 3,368-Dealer Sample</h2>
+<div class="alert">
+  <span class="tag">Hard defect</span>
+  <div class="hd">A BBB rating score of 14.0 out of 100, with a Pattern of Complaints alert attached.</div>
+  <p>BBB's two stated reasons, verbatim: <strong>"Failure to respond to 5 complaint(s) filed against
+  business"</strong> and <strong>"4 complaint(s) filed against business that were not
+  resolved."</strong> Not accredited. Fifteen years in business.</p>
+</div>
+
+<p>Of the ten most recent complaints BBB publishes, <strong>five are marked Unanswered</strong> and
+two more closed Unresolved. The unanswered ones run from June 2025 through May 2026.</p>
+
+<p>BBB's algorithm punishes <em>silence</em> far more heavily than it punishes the underlying
+complaint — a business that answers every complaint and resolves none still outranks one that ignores
+five. Five unanswered disputes is not a quality failure. It is an inbox nobody owns.</p>
+
+<div class="callout">
+  <div class="hd">The Pattern of Complaints alert is the part that compounds.</div>
+  <p>BBB applies that flag when it judges a business has failed to resolve the underlying
+  <em>cause</em> of repeated complaints, rather than any single incident. It is the difference between
+  a grade you can answer your way out of and one that needs a process change. Answering the backlog
+  will move the letter; it will not lift the alert on its own.</p>
+</div>
+<h2><span class="num">3</span>What the Complaints Actually Say</h2>
+<p>We read the published texts rather than just the counts,
+because the counts alone would have led us to sell you the wrong thing.</p>
+
+<div class="callout">
+  <div class="hd">Stated plainly before anything else in this section.</div>
+  <p>Everything below is an <strong>allegation made by a member of the public</strong> on a platform
+  that publishes complaints without adjudicating them. Circuit Coders takes no position on whether any
+  of it is accurate, and we are not lawyers. We are flagging it because these are the words currently
+  sitting on a page that ranks for your store's name.</p>
+</div>
+
+<h3>Theme one — the service department</h3>
+<p>Five of the ten most recent complaints are service or repair issues, and they are the serious kind:
+a 2026 vehicle allegedly damaged while in the dealership's care during a warranty transmission repair;
+an engine failure on a 2022 AT4 with 70,000 miles; a 2023 Yukon Denali described as service
+negligence. Long, detailed, and <strong>unanswered</strong>.</p>
+
+<h3>Theme two — title and registration</h3>
+<p>A customer who purchased in <strong>late March 2025</strong> states that as of
+<strong>August 1</strong> they had still not received registration or plates, having been told to keep
+waiting. Whatever the cause, a four-month tag delay is a documentary matter with a paper trail, and it
+is the kind of complaint that escalates to a state regulator rather than staying on BBB.</p>
+
+<h3>Theme three — F&amp;I products added or described as mandatory</h3>
+<p>This is the theme we would look at first, because it appears in both a complaint and an independent
+published review:</p>
+<ul>
+  <li>A June 2025 complainant alleges <strong>"misrepresentation of vehicle features and unauthorized
+  addition of warranty product."</strong></li>
+  <li>A BBB customer review describes a vehicle advertised online at <strong>$15,622</strong> with a
+  lot tag of <strong>$15,964</strong>, then a finance office figure inflated to roughly
+  <strong>$18,000</strong> before tax by a <strong>$1,998 option package</strong>. The reviewer states
+  an employee <em>"slipped up and admitted the package could be removed"</em> while a manager
+  <em>"lied saying it was mandatory."</em></li>
+</ul>
+<p>We are not adjudicating either account. But the shape is a <strong>disclosure-timing
+problem</strong>: a qualifying charge exists somewhere, and buyers are meeting it in the finance
+office rather than in the advertisement. Moving one disclosure line from the footer into the offer is
+close to free, and it retires an entire complaint category.</p>
+
+<h3>Theme four — a promotion that did not pay out</h3>
+<p>A complainant documents a <em>"Test drive your Envision today, receive a $100 reward card"</em>
+offer, completed with an emailed and texted appointment confirmation, and states the card never
+arrived. This one is marked <strong>Resolved</strong> — which is worth noting, because it proves the
+store <em>can</em> close a complaint properly when it engages. That is the argument for doing it on
+the other nine.</p>
+<h2><span class="num">4</span>Three Names, Two Listings, Two Street Numbers</h2>
+<div class="alert">
+  <span class="tag">Verified defect — and the cheapest fix here</span>
+  <div class="hd">The same dealership is publishing itself under three different names across two Google listings at adjacent addresses.</div>
+</div>
+<div class="scroll">
+<table>
+<tr><th>Where</th><th>Name published</th><th>Address</th><th class="n">Rating</th></tr>
+<tr><td>Google listing 1</td><td>Classic Buick GMC</td><td>16835 Katy Fwy</td><td class="n good">4.5 (4,540)</td></tr>
+<tr><td class="bad">Google listing 2</td><td class="bad">Classic Elite Auto Family</td><td class="bad">16833 Katy Fwy</td><td class="n bad">3.0 (8)</td></tr>
+<tr><td>Better Business Bureau</td><td>Classic Elite Buick GMC</td><td>16835 Katy Fwy</td><td class="n bad">F</td></tr>
+<tr><td>Yelp</td><td>Classic Buick GMC</td><td>16835 Katy Fwy</td><td class="n bad">2.4 (150)</td></tr>
+<tr><td>Trade directory (HADA)</td><td>Classic Elite Buick / GMC</td><td>16835 Katy Freeway</td><td class="n">—</td></tr>
+</table>
+</div>
+<p>Name, address and phone consistency is the single input Google weighs most heavily when deciding
+whether two records describe the same real business. Right now yours disagree with each other on the
+name in three different ways, and a second listing two street numbers away is carrying
+<strong>eight reviews at 3.0</strong> under a name that reads like the parent company.</p>
+
+<p>Two consequences, both concrete:</p>
+<ul>
+  <li><strong>Review dilution.</strong> Every review that lands on the 8-review listing is a review
+  that did not land on the 4,540-review one. At that ratio the second listing contributes nothing and
+  costs you a low-rated result on your own brand name.</li>
+  <li><strong>Customers cannot name you.</strong> In the BBB complaints themselves, the same store is
+  called "Classic Elite Buick GMC," "Classic Buick GMC," and "Classic Elite GMC" by three different
+  people. One complainant opened by clarifying which dealership they even meant. When customers cannot
+  reliably name the business, neither can a search engine.</li>
+</ul>
+<p>Consolidating or clearly differentiating the second listing, then pushing one canonical name and
+address everywhere, is a week of work and requires no vendor's permission.</p>
+<h2><span class="num">5</span>What Is Genuinely Well Run</h2>
+<div class="included">
+  <div class="hd">Credit where it is earned — and the reason this is worth doing.</div>
+  <p>A store with real problems on the floor does not hold 4.5 stars across 4,540 reviews for fifteen
+  years. The operation is working.</p>
+</div>
+<ul>
+  <li><strong>4,540 Google reviews at 4.5</strong> is a top-tier base for a single Buick/GMC rooftop,
+  and it is the raw material any recovery runs on.</li>
+  <li><strong>The review pipeline clearly works.</strong> Nothing produces 4,540 reviews by accident —
+  somebody built that process. The entire proposal in this document is "point the thing you already
+  built at the platforms it is not pointed at."</li>
+  <li><strong>Reviewers name the service department positively</strong> on the Google listing, which
+  matters given that service is where the complaints cluster. Both things are true at once; the
+  unhappy ones are simply the only ones with a megaphone on Yelp and BBB.</li>
+  <li><strong>One complaint was carried to Resolved,</strong> with the complainant confirming
+  satisfaction. The capability exists. It has been used once out of ten.</li>
+  <li><strong>Fifteen years in business</strong> under a recognised Houston name.</li>
+</ul>
+<h2><span class="num">6</span>The Math</h2>
+<p>We are not going to tell you what your store grosses. The calculator below takes
+your numbers and applies one conservative assumption: some share of shoppers check a store's
+reputation before choosing it, and some share of those are deterred by what they find on the surfaces
+you are not managing. Move any slider to zero and the case disappears — that is deliberate.</p>
+<div class="calc">
+  <div class="calc-head">
+    <div class="t">Gross at risk on the unmanaged surfaces</div>
+    <div class="s">Drag any input. Defaults are deliberately conservative.</div>
+  </div>
+  <div class="calc-body">
+    <div class="sliders">
+      <div class="sl"><label for="s1">Vehicles sold per month <span class="v" id="v1">150</span></label>
+        <input type="range" id="s1" min="40" max="600" step="10" value="150"></div>
+      <div class="sl"><label for="s2">Average total gross per unit <span class="v" id="v2">$3,400</span></label>
+        <input type="range" id="s2" min="800" max="6000" step="100" value="3400"></div>
+      <div class="sl"><label for="s3">Shoppers who check reviews first <span class="v" id="v3">60%</span></label>
+        <input type="range" id="s3" min="0" max="100" step="5" value="60">
+        <div class="cap">Industry research puts this well above 90%. We use 60%.</div></div>
+      <div class="sl"><label for="s4">Of those, share deterred by Yelp / BBB <span class="v" id="v4">4%</span></label>
+        <input type="range" id="s4" min="0" max="25" step="1" value="4"></div>
+      <div class="sl"><label for="s5">Share of that we believe is recoverable <span class="v" id="v5">60%</span></label>
+        <input type="range" id="s5" min="0" max="100" step="5" value="60">
+        <div class="cap">The rest we assume is lost for reasons no vendor controls.</div></div>
+    </div>
+    <div class="out">
+      <div class="line"><span>Units deterred per month</span><span class="n" id="oUnits">0</span></div>
+      <div class="line"><span>Gross at risk, annual</span><span class="n" id="oRisk">$0</span></div>
+      <div class="big line"><span class="l">Recoverable, annual</span><span class="n" id="oRec">$0</span></div>
+    </div>
+  </div>
+</div>
+<p class="hint">A model, not a promise. It is built so you can argue with it — every assumption is a
+slider, and the conservative end of each is the default.</p>
+<h2><span class="num">7</span>The Program</h2>
+<p>Everything below is work we do, not advice we hand you.</p>
+
+<h3>Recovery sprint — the first 30 days</h3>
+<ul>
+  <li><strong>Answer the BBB backlog.</strong> All five unanswered complaints drafted, reviewed by you, filed. Where a complaint is resolvable we pursue the resolution, not just the reply — you have already proved that works once.</li>
+  <li><strong>Resolve the listing split.</strong> Consolidate or clearly differentiate the 16833 'Classic Elite Auto Family' listing, then push one canonical name, address and phone across Google, Yelp, BBB, KBB, Cars.com, DealerRater, CARFAX, Apple and Bing.</li>
+  <li><strong>Open Yelp.</strong> Response templates for the existing 150, then every new review answered inside 48 hours. Public, non-defensive, signed.</li>
+  <li><strong>Attack the suppressed pile.</strong> 82 filtered reviews are not lost — Yelp's filter re-weights as legitimate accounts gain activity, and the fix is volume from real buyers, not argument.</li>
+  <li><strong>Escalate the title-and-registration complaint out of the queue.</strong> A four-month tag delay is a documentary matter; it goes to you directly in week one with the internal question written out.</li>
+  <li><strong>Disclosure review</strong> on the option-package and warranty-product themes in Section 3. We mark up the current advertising and F&amp;I language and hand you a revised version. You decide whether to adopt it.</li>
+</ul>
+
+<h3>Ongoing, monthly</h3>
+<ul>
+  <li>Every review on every platform answered within 48 hours, in your voice, signed by a real person.</li>
+  <li>A review pipeline pointed at the <em>unmanaged</em> platforms — the fix for Yelp is not arguing
+  with the reviews you have, it is giving the next several hundred satisfied buyers somewhere to go.</li>
+  <li>BBB complaint monitoring with a named owner, so the grade never regenerates from silence.</li>
+  <li>Listing integrity monitoring — new duplicates, drifting hours, changed numbers.</li>
+  <li>Monthly written report: what moved, what did not, what we recommend next. Plain English.</li>
+</ul>
+<h2><span class="num">8</span>A Note on Scope</h2>
+<div class="callout">
+  <div class="hd">We are not going to claim things we have not checked.</div>
+  <p>The trade directory lists <strong>Ulises Duran as a contact on three Classic Elite rooftops</strong>
+  — Buick/GMC on Katy Freeway, Chevrolet on Highway 6 South, and Chevrolet in Sugar Land — with
+  Classic Chevrolet of Houston and Classic Auto Group Galveston as related records.</p>
+  <p><strong>We audited one rooftop.</strong> We have not looked at the others and we are not going to
+  imply the same findings apply to them. What we would say is narrower and, we think, more useful: the
+  listing-consistency problem in Section 4 is the type of defect that is usually created once, at the
+  group level, by whoever manages the profiles — and if that is the case here, it is worth ten minutes
+  of somebody's attention across all of them regardless of whether you ever work with us.</p>
+</div>
+<h2><span class="num">9</span>What We Need From You</h2>
+<p>Less than you would expect. The BBB and Yelp work needs credentials; the rest we can do
+from the outside.</p>
+<div class="scroll">
+<table>
+<tr><th>Item</th><th>Why</th><th>When</th></tr>
+<tr><td>BBB business login</td><td>To file the complaint responses</td><td>Day 1</td></tr>
+<tr><td>Yelp business account access</td><td>Page is already claimed — we need a seat, not a transfer</td><td>Day 1</td></tr>
+<tr><td>Google Business Profile — manager access</td><td>NAP corrections. We do not touch your reviews</td><td>Day 1</td></tr>
+<tr><td>One named person on your side</td><td>To approve complaint responses before they file</td><td>Day 1</td></tr>
+<tr><td>Current ad and F&amp;I disclosure language</td><td>For the disclosure review</td><td>Week 2</td></tr>
+</table>
+</div>
+<p>We never publish a complaint response, a review reply, or a public statement without your approval
+on the first pass. After a few weeks, most clients hand us the wheel on routine replies and keep
+approval for anything contentious. That is your call, and it stays your call.</p>
+<h2><span class="num">10</span>Why Us</h2>
+<p>We run brand and reputation management for multiple franchise dealerships — the same
+scope described here: complaint response, listing integrity, review pipeline, and monthly reporting.
+References are available once a conversation is serious.</p>
+<p>Circuit Coders is small and deliberately so. You would work with me directly — not an account
+manager, not an offshore review-response queue. That is the trade: we are not the biggest vendor you
+could hire, and we do not take on more rooftops than we can personally cover.</p>
+<h2><span class="num">11</span>Method</h2>
+<p>So you can check every number rather than trust it.</p>
+<ul>
+  <li><strong>Discovery.</strong> BBB's public search API, filtered to F-rated new- and used-car
+  dealers across 54 U.S. metros. 3,368 low-rated dealerships returned; 1,128 franchise rooftops after
+  removing national chains and manufacturer corporate records.</li>
+  <li><strong>BBB.</strong> Public profile and complaints pages, read in full. Rating reasons,
+  complaint status counts, business details and contacts quoted verbatim.</li>
+  <li><strong>Google.</strong> Business Profile and Maps listing read directly, including the review
+  summary panel, owner-response behaviour and the local competitive set.</li>
+  <li><strong>Yelp.</strong> Live listing, first page of reviews read in full, owner-response state
+  and suppressed-review count taken from the page itself.</li>
+  <li><strong>Identity check.</strong> Both Google listings, the Yelp listing, the
+  BBB record and the Houston Automobile Dealers Association directory entry were compared on name,
+  street number and phone to confirm they describe one business.</li>
+  <li><strong>No access, no scraping of private systems, no contact with your staff or customers.</strong>
+  Everything here was readable by anyone with a browser.</li>
+</ul>
+<h2><span class="num">12</span>If You Want To Talk</h2>
+<p>There is no signature block on this document on purpose. It is an audit, not a contract.</p>
+<p>If any of it is wrong, tell us and we will correct it and resend — we would rather be accurate than
+persuasive. If it is right and you would like the backlog answered, reply to the email this came
+from, or call <strong>Leo Lebel at Circuit Coders</strong> directly.</p>
+<p>And if you would rather do all of this in-house: the findings above are yours to keep. The
+BBB, Yelp and listing sections are a complete to-do list, and none of it requires hiring anyone.</p>
+
+<div class="foot">
+  <strong>Circuit Coders</strong> · Brand &amp; reputation management for franchise dealerships ·
+  circuitcoders.com<br>
+  Audit swept live July 30, 2026. All figures re-verifiable from public sources as of that date.
+  Complaint texts are public allegations published by BBB and Yelp; Circuit Coders takes no position
+  on their merits and this document is not legal advice.
+</div>
+
+</div>
+
+<script>
+var RATE = 1250;
+
+(function () {
+  var ids = ['s1','s2','s3','s4','s5'];
+  var el = {};
+  ids.forEach(function (i) { el[i] = document.getElementById(i); });
+  function money(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+  function render() {
+    var units = +el.s1.value, gross = +el.s2.value, check = +el.s3.value/100;
+    var deter = +el.s4.value/100, recov = +el.s5.value/100;
+    document.getElementById('v1').textContent = units;
+    document.getElementById('v2').textContent = money(gross);
+    document.getElementById('v3').textContent = el.s3.value + '%';
+    document.getElementById('v4').textContent = el.s4.value + '%';
+    document.getElementById('v5').textContent = el.s5.value + '%';
+    var lossRate = check * deter;
+    var lostUnits = lossRate >= 1 ? 0 : units * (lossRate / (1 - lossRate));
+    var riskAnnual = lostUnits * gross * 12;
+    var recovered = riskAnnual * recov;
+    document.getElementById('oUnits').textContent = lostUnits.toFixed(1);
+    document.getElementById('oRisk').textContent = money(riskAnnual);
+    document.getElementById('oRec').textContent = money(recovered);
+  }
+  ids.forEach(function (i) { el[i].addEventListener('input', render); });
+  render();
+})();
+
+</script>
+
+</body>
+</html>

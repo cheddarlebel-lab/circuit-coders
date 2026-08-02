@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Brand &amp; Reputation Management Proposal · Phil Smith Automotive Group</title>
+<style>
+  :root {
+    --ink:#1a1f2b; --soft:#4a5160; --dim:#6a7080; --faint:#8a8f9c;
+    --rule:#d8dbe2; --hair:#e3e5ea; --panel:#f7f5f2;
+    --bad:#a33327; --good:#1f6e43; --accent:#BB162B;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: #fff; color: var(--ink);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16.5px; line-height: 1.55; -webkit-font-smoothing: antialiased;
+  }
+  .brandbar { height: 6px; display: flex; }
+  .brandbar span { flex: 1; }
+  .page { max-width: 760px; margin: 0 auto; padding: 6px 22px 80px; }
+  .marquee-wrap { max-width: 1100px; margin: 0 auto; padding: 24px 0 0; }
+
+  /* Continuous marque strip. The track holds the full set twice; translating it
+     exactly -50% lands the copy precisely where the original began, so the loop
+     has no visible seam. Edge masks stop the hard cut at the viewport edges. */
+  .marquee {
+    position: relative; overflow: hidden; margin: 0 0 30px;
+    padding: 10px 0; border-bottom: 1px solid var(--hair);
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+  }
+  .marquee-track { display: flex; width: max-content; animation: marque 46s linear infinite; }
+  .marquee:hover .marquee-track { animation-play-state: paused; }
+  .marquee-set { display: flex; align-items: center; flex: none; }
+  .marquee img {
+    height: 52px; width: auto; margin: 0 46px; display: block;
+  }
+  @keyframes marque { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track { animation: none; }
+    .marquee { -webkit-mask-image: none; mask-image: none; }
+    .marquee-set:nth-child(2) { display: none; }
+    .marquee-set { flex-wrap: wrap; }
+    .marquee img { margin: 0 30px 14px 0; }
+  }
+
+  .kicker { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--faint); margin-bottom: 10px; }
+  h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.6px; margin: 0 0 6px; line-height: 1.15; }
+  .subtitle { font-size: 18px; color: var(--soft); margin: 0 0 14px; }
+  .meta { font-size: 14px; color: var(--dim); padding-bottom: 24px; border-bottom: 1px solid var(--rule); }
+  .meta strong { color: var(--ink); font-weight: 600; }
+
+  h2 { font-size: 21px; font-weight: 700; letter-spacing: -0.3px; margin: 40px 0 10px;
+       padding-top: 20px; border-top: 1px solid var(--rule); }
+  h2 .num { color: var(--accent); margin-right: 10px; }
+  h3 { font-size: 17px; font-weight: 700; margin: 26px 0 6px; }
+  p { margin: 0 0 12px; }
+  ul { margin: 0 0 14px; padding-left: 20px; }
+  li { margin-bottom: 6px; }
+
+  .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 14px 0 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 540px; }
+  th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+       color: var(--dim); border-bottom: 2px solid var(--ink); padding: 7px 10px 7px 0; font-weight: 600; }
+  td { border-bottom: 1px solid var(--hair); padding: 9px 10px 9px 0; }
+  td.n, th.n { text-align: right; padding-right: 16px; font-variant-numeric: tabular-nums; }
+  .bad { color: var(--bad); font-weight: 700; }
+  .good { color: var(--good); font-weight: 700; }
+  .hint { font-size: 13px; color: var(--dim); font-style: italic; margin-top: 4px; }
+
+  .callout { background: var(--panel); border-left: 4px solid var(--accent); padding: 16px 18px; margin: 18px 0; }
+  .callout .hd { font-weight: 700; margin-bottom: 4px; }
+  .callout p:last-child { margin-bottom: 0; }
+  blockquote { margin: 10px 0; padding-left: 14px; border-left: 3px solid var(--rule);
+               color: var(--soft); font-style: italic; }
+
+  .plan { border-top: 1px solid var(--hair); padding: 16px 0; }
+  .plan .row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .plan-name { font-weight: 700; font-size: 17px; }
+  .plan-price { font-weight: 700; font-size: 19px; white-space: nowrap; }
+  .plan p { color: var(--soft); font-size: 15px; margin: 6px 0 0; }
+
+  /* urgent block — reserved for the one item with a hard deadline */
+  .urgent { border: 2px solid var(--bad); background: #fdf6f5; padding: 18px 20px; margin: 22px 0; }
+  .urgent .tag { display: inline-block; background: var(--bad); color: #fff; font-size: 11px;
+                 letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
+                 padding: 4px 9px; border-radius: 2px; margin-bottom: 10px; }
+  .urgent h3 { margin: 0 0 6px; font-size: 18px; }
+  .urgent p:last-child { margin-bottom: 0; }
+
+  /* before / after matrix */
+  .matrix { width: 100%; border-collapse: collapse; margin: 18px 0 8px; font-size: 15px; min-width: 520px; }
+  .matrix th { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 8px 12px 8px 0;
+               border-bottom: 2px solid var(--ink); }
+  .matrix th.now { color: var(--bad); }
+  .matrix th.then { color: var(--good); }
+  .matrix td { padding: 9px 12px 9px 0; border-bottom: 1px solid var(--hair); vertical-align: top; }
+  .matrix td.lbl { font-weight: 600; width: 30%; }
+  .matrix td.now { color: var(--bad); }
+  .matrix td.then { color: var(--good); font-weight: 600; }
+
+  .included { border: 2px solid var(--good); background: #f4faf6; padding: 16px 20px; margin: 18px 0; }
+  .included .hd { font-weight: 700; font-size: 17px; color: var(--good); margin-bottom: 4px; }
+  .included p:last-child { margin-bottom: 0; }
+
+  /* alert — reserved for items with an outside clock */
+  .alert { border: 1px solid var(--bad); border-left: 5px solid var(--bad);
+           background: #fdf6f5; padding: 18px 20px; margin: 18px 0; }
+  .alert .tag { display: inline-block; background: var(--bad); color: #fff; font-size: 11px;
+                letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
+                padding: 4px 9px; border-radius: 2px; margin-bottom: 10px; }
+  .alert h3 { margin: 0 0 8px; }
+  .alert p:last-child { margin-bottom: 0; }
+
+  /* reply template */
+  .reply { border: 2px solid var(--ink); margin: 18px 0; }
+  .reply .hd { background: var(--ink); color: #fff; padding: 11px 18px; font-weight: 700; font-size: 15px; }
+  .reply .bd { padding: 18px; }
+  .opt { border: 1px solid var(--rule); padding: 13px 16px; margin-bottom: 10px; background: #fff; }
+  .opt:last-of-type { margin-bottom: 0; }
+  .opt .quote { font-family: var(--mono, ui-monospace, Menlo, monospace); font-size: 14.5px;
+                font-weight: 700; color: var(--ink); }
+  .opt .sub { font-size: 13px; color: var(--dim); margin-top: 4px; }
+
+  /* ROI calculator */
+  .calc { border: 1px solid var(--ink); margin: 22px 0; }
+  .calc-head { background: var(--ink); color: #fff; padding: 12px 18px; }
+  .calc-head .t { font-weight: 700; font-size: 16px; }
+  .calc-head .s { font-size: 13px; opacity: .75; margin-top: 2px; }
+  .calc-body { padding: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+  .sliders { display: flex; flex-direction: column; gap: 16px; }
+  .sl label { display: flex; justify-content: space-between; align-items: baseline;
+              font-size: 14px; font-weight: 600; margin-bottom: 6px; gap: 10px; }
+  .sl .v { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .sl input[type=range] { width: 100%; accent-color: var(--accent); height: 22px; }
+  .sl .cap { font-size: 12px; color: var(--dim); margin-top: 2px; }
+  .out { background: var(--panel); padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; }
+  .out .line { display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+               font-size: 14px; }
+  .out .line .n { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+  .out .big { border-top: 1px solid var(--rule); padding-top: 12px; margin-top: 2px; }
+  .out .big .l { font-weight: 700; font-size: 15px; }
+  .out .big .n { font-size: 26px; font-weight: 700; color: var(--good); letter-spacing: -.5px; }
+  .out .mult { text-align: right; font-size: 13px; color: var(--dim); }
+  .out .cost .n { color: var(--bad); }
+  @media (max-width: 640px) { .calc-body { grid-template-columns: 1fr; gap: 18px; } }
+
+  .total { margin-top: 22px; padding: 18px 20px; background: var(--panel); border-left: 4px solid var(--accent); }
+  .total .row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .t-label { font-weight: 700; font-size: 18px; }
+  .t-num { font-weight: 700; font-size: 24px; white-space: nowrap; letter-spacing: -0.5px; }
+  .t-sub { margin-top: 8px; font-size: 14px; color: var(--dim); }
+  .t-save { color: var(--good); font-weight: 700; white-space: nowrap; }
+  @media (max-width: 560px) {
+    .total .row { flex-direction: column; gap: 2px; }
+    .t-num { font-size: 21px; }
+    .t-save { white-space: normal; }
+  }
+
+  .foot { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule);
+          font-size: 13.5px; color: var(--dim); }
+  .foot strong { color: var(--ink); }
+
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    h1 { font-size: 25px; }
+    .marquee img { height: 38px; margin: 0 30px; }
+    .marquee-track { animation-duration: 34s; }
+    .plan .row { flex-direction: column; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="brandbar">
+  <span style="background:#EB0A1E"></span><span style="background:#05141F"></span>
+  <span style="background:#8E8E90"></span><span style="background:#E60012"></span>
+  <span style="background:#003478"></span><span style="background:#16232D"></span>
+  <span style="background:#002C5F"></span><span style="background:#C3002F"></span>
+  <span style="background:#0B2C5D"></span><span style="background:#C8102E"></span>
+  <span style="background:#97002E"></span><span style="background:#00A19B"></span>
+</div>
+
+<div class="marquee" aria-label="Brands represented across the group">
+    <div class="marquee-track">
+      <div class="marquee-set">
+      <img src="marques/brand-toyota.png" alt="Toyota">
+      <img src="marques/brand-kia.png" alt="Kia">
+      <img src="marques/brand-hyundai.png" alt="Hyundai">
+      <img src="marques/brand-ford.png" alt="Ford">
+      <img src="marques/brand-gmc.png" alt="GMC">
+      <img src="marques/brand-chevrolet.png" alt="Chevrolet">
+      <img src="marques/brand-acura.png" alt="Acura">
+      <img src="marques/brand-lincoln.png" alt="Lincoln">
+      <img src="marques/brand-nissan.png" alt="Nissan">
+      <img src="marques/brand-mitsubishi.png" alt="Mitsubishi">
+      <img src="marques/brand-mercedes.png" alt="Mercedes-Benz">
+      <img src="marques/brand-buick.png" alt="Buick">
+      </div>
+      <div class="marquee-set" aria-hidden="true">
+      <img src="marques/brand-toyota.png" alt="Toyota">
+      <img src="marques/brand-kia.png" alt="Kia">
+      <img src="marques/brand-hyundai.png" alt="Hyundai">
+      <img src="marques/brand-ford.png" alt="Ford">
+      <img src="marques/brand-gmc.png" alt="GMC">
+      <img src="marques/brand-chevrolet.png" alt="Chevrolet">
+      <img src="marques/brand-acura.png" alt="Acura">
+      <img src="marques/brand-lincoln.png" alt="Lincoln">
+      <img src="marques/brand-nissan.png" alt="Nissan">
+      <img src="marques/brand-mitsubishi.png" alt="Mitsubishi">
+      <img src="marques/brand-mercedes.png" alt="Mercedes-Benz">
+      <img src="marques/brand-buick.png" alt="Buick">
+      </div>
+    </div>
+  </div>
+
+<div class="page">
+
+  <div class="kicker">Circuit Coders · Confidential</div>
+  <h1>Brand &amp; Reputation Management Proposal</h1>
+  <p class="subtitle">Phil Smith Automotive Group — the eleven rooftops outside Vero Beach</p>
+  <p class="meta"><strong>Prepared for</strong> Phil Smith Automotive Group — attn. Jared Saunders&nbsp; ·&nbsp; <strong>Prepared by</strong> Leo Lebel, Circuit Coders&nbsp; ·&nbsp; <strong>Date</strong> July 28, 2026&nbsp; ·&nbsp; <strong>Valid</strong> 30 days</p>
+
+  <h2>Executive Summary</h2>
+  <p>Toyota and Kia of Vero Beach are already under management. This proposal covers the <strong>other eleven rooftops</strong> — Lighthouse Point, Pompano Beach, Tallahassee, Durham, Fayetteville, Pinehurst and Southern Pines.</p>
+  <p>Together they carry roughly <strong>28,400 Google reviews at an average of 4.5 stars</strong>. These are healthy, well-run stores. Their public reputation is being written by a platform holding three percent of that volume.</p>
+  <p><strong>Yelp rates these eleven stores at 2.6. Google rates the same stores at 4.5.</strong> That gap holds at every rooftop carrying a Yelp rating — nine for nine, both states, every brand. It is not one weak store or one difficult market. It is one unmanaged platform, and it is the one that surfaces when a shopper searches the dealership by name.</p>
+  <p>Alongside it: four duplicate and phantom listings splitting reviews, a brand search left undefended around the group's data-incident notice, unanswered complaint threads at two stores, and name-address-phone records that contradict each other between Google and the group's own website.</p>
+  <p>Every figure below was read directly from the public listing on <strong>July 27, 2026</strong> and is independently re-verifiable. No estimates, no modelled numbers, no third-party data brokers.</p>
+
+  <h3>Where these eleven stores are, and where they'd be in sixty days</h3>
+  <div class="scroll">
+  <table class="matrix">
+    <thead><tr><th>&nbsp;</th><th class="now">Today</th><th class="then">After the sprint — 60 days</th></tr></thead>
+    <tbody>
+      <tr><td class="lbl">Yelp average</td><td class="now">2.6 stars, unmanaged</td><td class="then">Every review answered, generation running</td></tr>
+      <tr><td class="lbl">Duplicate listings</td><td class="now">4 splitting reviews</td><td class="then">0 — filed for removal or merged</td></tr>
+      <tr><td class="lbl">Name, address, phone</td><td class="now">Google and your site disagree</td><td class="then">One verified record per rooftop, propagated</td></tr>
+      <tr><td class="lbl">Southern Pines Nissan</td><td class="now">No Yelp listing at all</td><td class="then">Claimed and managed</td></tr>
+      <tr><td class="lbl">Brand search</td><td class="now">Undefended</td><td class="then">Monitored weekly, alerts on any new page</td></tr>
+      <tr><td class="lbl">Reporting</td><td class="now">None per rooftop</td><td class="then">Monthly, per store, with a day-zero baseline</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="included">
+    <p class="hd">You already have the proof of concept</p>
+    <p>Toyota and Kia of Vero Beach are on this program now. Everything described here is the same work, run to the same standard, extended to the rooftops that don't have it yet.</p>
+  </div>
+
+  <h2><span class="num">1</span>What We Found</h2>
+  <p>We audited each of the eleven rooftops on every platform carrying a public rating. The pattern is identical everywhere: <strong>Yelp sits one-and-a-half to three stars below every other platform, at every single store.</strong></p>
+
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Store</th><th class="n">Yelp</th><th class="n">Google</th><th class="n">CARFAX</th><th class="n">KBB</th><th class="n">Cars.com</th><th class="n">Gap</th></tr></thead>
+    <tbody>
+    <tr><td>Southern Pines Kia</td><td class="n bad">1.6</td><td class="n good">4.6</td><td class="n">4.6</td><td class="n">—</td><td class="n">—</td><td class="n bad">−3.0</td></tr>
+    <tr><td>Southern Pines Chevrolet GMC</td><td class="n bad">2.1</td><td class="n good">4.2</td><td class="n">4.6</td><td class="n">4.6</td><td class="n">4.2</td><td class="n bad">−2.1</td></tr>
+    <tr><td>Pinehurst Toyota</td><td class="n bad">2.2</td><td class="n good">4.6</td><td class="n">4.6</td><td class="n">5.0</td><td class="n">4.0</td><td class="n bad">−2.4</td></tr>
+    <tr><td>Tallahassee Ford Lincoln</td><td class="n bad">2.2</td><td class="n good">4.4</td><td class="n">4.2</td><td class="n">4.7</td><td class="n">3.1</td><td class="n bad">−2.2</td></tr>
+    <tr><td>Phil Smith Mitsubishi</td><td class="n bad">2.8</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n bad">−1.9</td></tr>
+    <tr><td>Pinehurst Hyundai</td><td class="n bad">2.8</td><td class="n good">4.5</td><td class="n">—</td><td class="n">—</td><td class="n">4.0</td><td class="n bad">−1.7</td></tr>
+    <tr><td>Mark Jacobson Toyota</td><td class="n bad">2.9</td><td class="n good">4.6</td><td class="n">4.6</td><td class="n">4.8</td><td class="n">4.8</td><td class="n bad">−1.7</td></tr>
+    <tr><td>Phil Smith Kia</td><td class="n bad">3.0</td><td class="n good">4.7</td><td class="n">4.4</td><td class="n">5.0</td><td class="n">4.5</td><td class="n bad">−1.7</td></tr>
+    <tr><td>Phil Smith Acura</td><td class="n bad">3.4</td><td class="n good">4.7</td><td class="n">4.7</td><td class="n">5.0</td><td class="n">3.9</td><td class="n bad">−1.3</td></tr>
+    <tr><td>Southern Pines Nissan</td><td class="n">none</td><td class="n good">4.5</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+    <tr><td>Mercedes-Benz of Fayetteville</td><td class="n">none</td><td class="n good">4.4</td><td class="n">4.5</td><td class="n">4.6</td><td class="n">4.9</td><td class="n">—</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="hint">Yelp: 2.6 average across roughly 960 reviews. Google: 4.5 average across roughly 28,400.</p>
+
+  <h3>What this looks like at one store</h3>
+  <p>Twenty-three people on Yelp give <strong>Southern Pines Kia</strong> 1.6 stars. Meanwhile <strong>2,077 other customers</strong> — 857 on Google, 587 on CARFAX, 633 on Birdeye — rate the same store between 4.5 and 4.6. Twenty-three against two thousand.</p>
+  <p>Twenty-three reviews are beating two thousand, because Yelp ranks on a brand-name search and the others do not.</p>
+
+  <div class="callout">
+    <p class="hd">There is a mechanical reason for this</p>
+    <p>Yelp does not publish every review it receives. Each listing carries a separate, lower-visibility bucket of reviews the platform has chosen "not to recommend," and that filter leans hard against accounts with little Yelp history — exactly what a person who buys one car every six years looks like. The satisfied customer gets filtered out. The prolific reviewer does not. The published average is what survives that filter, not what your customers actually said.</p>
+  </div>
+
+  <h3>Independent evidence the stores are well run</h3>
+  <p>This matters, because the audit is not a criticism of the operation:</p>
+  <ul>
+    <li><strong>CarEdge</strong>, which grades dealers on verified out-the-door pricing, awards <strong>Grade A</strong> to Phil Smith Acura, Southern Pines Kia and Southern Pines Chevrolet. Its verdict on the Acura store: <em>"One of the good ones. You can walk in here with confidence."</em></li>
+    <li><strong>CARFAX</strong>, tied to verified service transactions, rates every store measured between <strong>4.2 and 4.7</strong>.</li>
+    <li><strong>Mercedes-Benz of Fayetteville</strong> holds the Best of the Best award from Mercedes-Benz, two years running.</li>
+  </ul>
+
+  <h2><span class="num">2</span>The Rest of What We Found</h2>
+
+  <div class="alert">
+    <span class="tag">Time-sensitive — gets harder every month</span>
+    <h3>1. Your brand search is undefended around the data-incident notice</h3>
+    <p>This is not a comment on how the incident was handled — that is settled, and the notice on philsmithauto.com is the correct and required disclosure. The issue is purely what happens on the search results page afterward.</p>
+    <p>A public breach notice is a signal plaintiff firms actively watch for. They build pages targeting the dealership's own name — <em>"Phil Smith Automotive data breach claim"</em> — and those pages rank, because nobody is competing for the term. The result is a law-firm landing page sitting directly beneath your stores on a brand search, in front of shoppers who came looking for inventory.</p>
+    <p><strong>Why this one has a clock on it:</strong> search authority compounds. A page caught in its first week can still be outranked with your own content. The same page left for six months has accumulated links and ranking history, and displacing it becomes a project rather than a task.</p>
+    <p>Right now <strong>nothing is watching that result</strong>. Weekly brand-search monitoring is included in the program at no additional cost — it simply has to be switched on before the gap widens.</p>
+  </div>
+
+  <h3>2. Unanswered complaint threads outside the review platforms</h3>
+  <p><strong>Southern Pines Kia</strong> — a thread in a national Kia owners' group, 30+ comments, built around an $8,400 market adjustment. <strong>Mark Jacobson Toyota</strong> — a local Reddit thread, 50+ comments, whose top-voted answer is "not good at all." Both surface on brand searches. Neither has a reply from the store.</p>
+  <p>These are the conversations that never reach a review platform, so they never reach a report either — and they are frequently the first thing a shopper finds.</p>
+
+  <h3>3. Four duplicate and phantom listings are splitting reviews</h3>
+  <ul>
+    <li><strong>Phil Smith Kia</strong> has a second Yelp listing filed under "Lghthse Point," rated <strong>1.0 stars</strong>, quoting the same review text as the real 3.0-star profile.</li>
+    <li><strong>Southern Pines Nissan</strong> has no Yelp listing at all, while your own site publishes it as a separate dealership.</li>
+    <li><strong>Phil Smith Mitsubishi</strong> has two listings.</li>
+    <li><strong>Southern Pines Chevrolet</strong> is published under three different names with four different phone numbers — for one building.</li>
+  </ul>
+
+  <h3>4. Your own published data contradicts itself</h3>
+  <ul>
+    <li><strong>Phil Smith Kia</strong> — Google lists (954) 427-7222; your group site lists (954) 545-7200. Two numbers, one store, from the two sources customers actually use.</li>
+    <li><strong>Four spellings of the same street</strong> on a single page of your website. Citation matching is literal — this is how aggregators create duplicate listings.</li>
+  </ul>
+
+  <h3>5. Some stores are managed. Most are not.</h3>
+  <p>Mark Jacobson Toyota runs an active Facebook page — 6,400 followers, 84% recommend across 476 reviews. Birdeye is deployed and performing at Phil Smith Kia, Southern Pines Kia and Phil Smith Mitsubishi.</p>
+  <p>Meanwhile <strong>Southern Pines Kia's own website review page reads "No reviews yet"</strong> — while that store holds 633 Birdeye reviews at 4.5 stars and 587 on CARFAX at 4.6. It publishes none of its own proof while a 1.6-star Yelp profile ranks on its name. The tools are already paid for. Nobody is holding a standard across the group.</p>
+
+  <h3>6. Not one store in the group is BBB accredited</h3>
+  <p>Verified across Phil Smith Kia, Phil Smith Acura, Phil Smith Mitsubishi and Southern Pines Chevrolet GMC — none accredited, all sitting unmanaged on brand searches. Accreditation is inexpensive and the complaint records are answerable. Both are ordinary items inside a managed program.</p>
+
+  <h2><span class="num">3</span>The Math — Protecting High-Margin Revenue</h2>
+
+  <p>Unmanaged reputation is not a PR problem. It is a <strong>conversion problem</strong>, and it does its damage in the two departments that carry your margin.</p>
+
+  <h3>Where it actually bleeds</h3>
+  <p>A sales customer will tolerate a mediocre rating if you have the exact car they want in stock. <strong>Service and trade-in customers will not.</strong> Those two decisions are made almost entirely on local reputation, on a phone, before anyone calls the store.</p>
+
+  <ul>
+    <li><strong>Service — your highest-margin department.</strong> Someone looking for a trustworthy shop for factory maintenance checks Google and Yelp first. When they see a 1.6 or a 2.2, they don't call to ask about it. They quietly book with the independent down the street, and nobody at the store ever learns the appointment existed.</li>
+    <li><strong>Trade-ins and acquisitions — where used inventory comes from.</strong> A seller deciding where to take their car for an appraisal checks your reputation before they drive. At 2.1 stars they go to CarMax or the franchise across town instead. You don't lose a customer; you lose a <em>unit of inventory</em>, in a market where acquisition is the whole game.</li>
+  </ul>
+
+  <h3>The leaky bucket under your ad spend</h3>
+  <p>The group already spends heavily every month on PPC, digital, direct mail and third-party leads — CarGurus, Cars.com, Autotrader — much of it to get shoppers to look up your stores by name.</p>
+  <p><strong>Those dollars are working. They are delivering the shopper to a brand search.</strong> What is waiting there is a 2.2-star profile, a 1.0-star phantom listing, and an undefended search result around the data-incident notice.</p>
+  <p>This is a hole at the bottom of a funnel you are already paying to fill. Fixing it does not require spending another dollar on advertising — it makes the advertising you're already buying actually convert.</p>
+
+  <h3>What break-even looks like</h3>
+  <p>Rather than estimate the loss, here is the hurdle in the other direction — what the program has to produce across <strong>all eleven rooftops combined</strong> to pay for itself:</p>
+
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Department</th><th>What one lost customer costs</th><th>Needed group-wide, per month</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>New / used sales</strong></td>
+        <td>~$3,500 front + back gross per deal</td>
+        <td class="good"><strong>3–4 vehicles</strong><br><span class="hint">across all eleven stores — one car per rooftop every ~90 days</span></td>
+      </tr>
+      <tr>
+        <td><strong>Service lane</strong></td>
+        <td>~$400 customer-pay RO</td>
+        <td class="good"><strong>~25 repair orders</strong><br><span class="hint">roughly two per store, per month</span></td>
+      </tr>
+      <tr>
+        <td><strong>Ad-spend protection</strong></td>
+        <td>Bounced traffic you already paid for</td>
+        <td class="good"><strong>Conversion on existing spend</strong><br><span class="hint">no additional media budget required</span></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="included">
+    <p class="hd">The whole hurdle, in one sentence</p>
+    <p>If this program stops <strong>one customer per store, per month</strong> from walking to a competitor, the group is net positive on day one. Everything past that is protected gross.</p>
+  </div>
+
+  <p class="hint">Gross and RO figures above are industry norms, used to size the hurdle — not claims about your stores. Swap in your own numbers and the conclusion moves in your favour, not against it: at eleven rooftops the break-even is roughly one extra car per store per quarter.</p>
+
+  <h3>Break-even is the floor. Here is the actual return.</h3>
+  <p>Break-even only proves the program doesn't cost you money. The reason to do it is what sits above that line — and at eleven rooftops the leverage is not subtle.</p>
+
+  <div class="scroll">
+  <table>
+    <thead><tr><th>If the program recovers…</th><th class="n">Monthly gross</th><th class="n">Cost</th><th class="n">Return</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Break-even</strong><br><span class="hint">3–4 cars, or ~25 ROs, group-wide</span></td>
+        <td class="n">$11,000</td><td class="n">$11,000</td><td class="n">1.0×</td>
+      </tr>
+      <tr>
+        <td><strong>Conservative</strong><br><span class="hint">1 extra car per store per month</span></td>
+        <td class="n">$38,500</td><td class="n">$11,000</td><td class="n good"><strong>3.5×</strong></td>
+      </tr>
+      <tr>
+        <td><strong>Plus the service lane</strong><br><span class="hint">1 car + 10 ROs per store per month</span></td>
+        <td class="n">$82,500</td><td class="n">$11,000</td><td class="n good"><strong>7.5×</strong></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="hint">At ~$3,500 gross per unit and ~$400 per customer-pay RO, across eleven rooftops. Substitute your real numbers — the shape does not change.</p>
+
+  <p><strong>Ten extra repair orders a month is not an ambitious target for a store rated 4.5 by thousands of customers.</strong> It is roughly one every other business day, at a store whose reputation problem is that people can't tell how good it is.</p>
+
+  <div class="calc">
+    <div class="calc-head">
+      <div class="t">Run your own numbers</div>
+      <div class="s">Eleven rooftops · $11,000 per month · move the sliders</div>
+    </div>
+    <div class="calc-body">
+      <div class="sliders">
+        <div class="sl">
+          <label for="cars">Extra vehicles sold <span class="v" id="carsV">1.0</span></label>
+          <input type="range" id="cars" min="0" max="4" step="0.5" value="1">
+          <div class="cap">per store, per month</div>
+        </div>
+        <div class="sl">
+          <label for="ros">Extra repair orders <span class="v" id="rosV">10</span></label>
+          <input type="range" id="ros" min="0" max="40" step="1" value="10">
+          <div class="cap">per store, per month</div>
+        </div>
+        <div class="sl">
+          <label for="gross">Gross per vehicle <span class="v" id="grossV">$3,500</span></label>
+          <input type="range" id="gross" min="1500" max="6000" step="100" value="3500">
+          <div class="cap">front + back end</div>
+        </div>
+        <div class="sl">
+          <label for="ro">Customer-pay RO <span class="v" id="roV">$400</span></label>
+          <input type="range" id="ro" min="200" max="900" step="25" value="400">
+          <div class="cap">average ticket</div>
+        </div>
+      </div>
+
+      <div class="out">
+        <div class="line"><span>Recovered gross — monthly</span><span class="n" id="mGross">$82,500</span></div>
+        <div class="line"><span>Recovered gross — annual</span><span class="n" id="yGross">$990,000</span></div>
+        <div class="line cost"><span>Program — annual</span><span class="n" id="yCost">−$132,000</span></div>
+        <div class="line big"><span class="l">Net annual gain</span><span class="n" id="net">$858,000</span></div>
+        <div class="mult"><span id="mult">7.5× return</span> · <span id="pct">program is 13% of the gross it protects</span></div>
+      </div>
+    </div>
+  </div>
+  <p class="hint">Illustrative, using your own inputs — not a guarantee. Defaults are deliberately conservative: one extra vehicle and ten extra repair orders per store per month, at a group already rated 4.5 by 28,400 customers.</p>
+
+  <h3>Why this is worth more than the same money in advertising</h3>
+  <p>Eleven thousand a month is a modest line item next to what the group already spends on media. The difference is what you own at the end of it.</p>
+
+  <div class="scroll">
+  <table>
+    <thead><tr><th>&nbsp;</th><th>$11,000 in paid media</th><th>$11,000 in this program</th></tr></thead>
+    <tbody>
+      <tr><td class="lbl"><strong>What it buys</strong></td><td>Impressions and clicks for 30 days</td><td class="good">Reviews, corrected listings, owned profiles</td></tr>
+      <tr><td class="lbl"><strong>When you stop paying</strong></td><td>Traffic stops that day</td><td class="good">Everything built stays and keeps working</td></tr>
+      <tr><td class="lbl"><strong>Next month</strong></td><td>Starts from zero again</td><td class="good">Starts from a higher rating than last month</td></tr>
+      <tr><td class="lbl"><strong>Who owns it</strong></td><td>The platform</td><td class="good">Phil Smith Automotive Group</td></tr>
+      <tr><td class="lbl"><strong>Effect on existing spend</strong></td><td>Competes with it</td><td class="good">Raises conversion on all of it</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>Advertising is rented. A review is permanent, a duplicate listing removed does not come back, and a corrected NAP record keeps propagating for years. <strong>This is the only line on the marketing budget that appreciates.</strong></p>
+
+  <div class="included">
+    <p class="hd">And it compounds the wrong way if nothing changes</p>
+    <p>Every month without it, more reviews land unanswered, the duplicate listings keep splitting the count, and the gap between what your customers actually think — 4.5 — and what a shopper sees — 2.6 — stays exactly where it is. The stores are already earning the reputation. They just aren't being credited with it.</p>
+  </div>
+
+  <h2><span class="num">4</span>The Program</h2>
+  <p>The work splits cleanly: a one-time cleanup that removes the structural damage, then an ongoing standard that keeps it from returning.</p>
+
+  <h3>Phase one — recovery sprint</h3>
+  <p>Six weeks, one time. Every duplicate and phantom listing filed for removal or merge. One canonical name, address and phone per rooftop, propagated to the aggregators that feed everything downstream. The Yelp response backlog cleared at all eleven stores, and Southern Pines Nissan's missing listing claimed. BBB profiles claimed and complaint records answered. A baseline captured per store, so every later gain is provable rather than asserted.</p>
+
+  <h3>Phase two — ongoing brand management</h3>
+  <p>Every new review answered within 24 hours, on every platform, at every store. Listings monitored so duplicates never quietly reappear. Monthly reporting per rooftop. Weekly brand-search monitoring so nothing ranks beside your name without you knowing first.</p>
+
+  <h3>What we answer, and what we escalate</h3>
+  <p>We write and post the response to ordinary reviews — service timing, communication, pricing questions, praise. We do not speak for the store on anything that carries real exposure.</p>
+  <p>Three categories route to a named person at the rooftop instead, same day, with a drafted holding reply for their approval: <strong>anything alleging fraud or misrepresentation</strong>, <strong>anything mentioning an attorney, a regulator or a chargeback</strong>, and <strong>any safety or recall claim</strong>. You name the contact per store — typically the GM or Service Director — and we agree the routing before a single reply goes out. Nothing contentious is posted publicly without their sign-off.</p>
+
+  <h3>How review generation actually runs</h3>
+  <p>You already own the tooling at part of the group: <strong>Birdeye is live and performing at Phil Smith Kia, Southern Pines Kia and Phil Smith Mitsubishi</strong>. Where it exists we work inside it rather than layering a second platform on top and paying twice.</p>
+  <p>Where it isn't, we claim it first. Then we add the piece that is missing everywhere: <strong>a printed service-lane kit</strong>. Per-store QR cards routed to the platform that rooftop is weakest on, a one-page script for advisors, and weekly velocity tracking per platform. That routing is the part that matters. Sending every customer to Google does nothing for a 1.6-star Yelp profile.</p>
+
+  <h2><span class="num">5</span>Reporting — You See Everything</h2>
+  <p>A monthly report per rooftop, not one report for the group. Each one carries the same four things:</p>
+  <ul>
+    <li><strong>Ratings and review volume per platform</strong>, against the day-zero baseline captured before we touch anything — so improvement is measured, not claimed.</li>
+    <li><strong>Every review received and every response posted</strong>, with links.</li>
+    <li><strong>The third-party queue</strong> — every duplicate removal, merge and correction we have filed, with the date filed and current status. Platforms move on their own clocks; nothing filed disappears quietly.</li>
+    <li><strong>A business note.</strong> Not marketing — what the reviews are actually telling you about process. Complaint patterns cluster around specific steps, and those are worth knowing.</li>
+  </ul>
+  <p>Plus an alert the same week anything new appears on a brand search for any of your stores.</p>
+
+  <h2><span class="num">6</span>Investment</h2>
+  <div class="plan">
+    <div class="row"><span class="plan-name">Standard rate</span><span class="plan-price">$1,250 / rooftop / month</span></div>
+    <p>The rate Vero Beach is on today.</p>
+  </div>
+  <div class="plan">
+    <div class="row"><span class="plan-name">Regional pilot — five rooftops</span><span class="plan-price">$1,100 / rooftop / month</span></div>
+    <p>The Southern Pines and Pinehurst cluster — Pinehurst Toyota, Pinehurst Hyundai, Southern Pines Chevrolet GMC, Southern Pines Kia and Southern Pines Nissan. One market, five rooftops, and it contains the 1.6-star store and the missing Nissan listing. <strong>$5,500/month.</strong> Ninety days, then decide on the rest with real numbers instead of a projection.</p>
+  </div>
+  <div class="plan">
+    <div class="row"><span class="plan-name">Group rate — all eleven</span><span class="plan-price">$1,000 / rooftop / month</span></div>
+    <p>Adding the remaining eleven rooftops at once drops the per-rooftop rate by $250. One standard, one team, one reporting line across both states — Vero included at the same rate from that point on.</p>
+  </div>
+
+  <div class="total">
+    <div class="row"><span class="t-label">The remaining eleven rooftops</span><span class="t-num">$11,000 / month</span></div>
+    <div class="row t-sub"><span>Against $13,750 at the standard rate</span><span class="t-save">You save $2,750 / month · $33,000 / year</span></div>
+  </div>
+
+  <div class="included">
+    <p class="hd">The recovery sprint is included — $0 setup, no money down</p>
+    <p>Every duplicate listing filed for removal, the NAP corrected across all eleven rooftops, the response backlog cleared, Southern Pines Nissan's missing listing claimed and the BBB profiles taken in hand. All of it inside the first sixty days, at no charge on top of the monthly.</p>
+  </div>
+
+  <h3>What it has to produce to pay for itself</h3>
+  <p>At $1,000 a rooftop, the arithmetic is not demanding. A shopper comparing two dealerships checks ratings before they check inventory, and a sub-3.0 profile is where a service appointment or a trade-in inquiry quietly goes to the store down the road. You never see that customer, so the loss never appears in a report.</p>
+  <p>Against that: <strong>one additional vehicle sale per store per quarter covers the retainer outright.</strong> So do roughly two extra service ROs a month. Across eleven rooftops that is a low bar — and it is measured against 28,400 reviews that already say these stores earn the business once someone walks in.</p>
+  <p class="hint">Month to month, thirty days' notice, no term commitment. Everything created — every listing, login and profile — belongs to the dealership.</p>
+
+
+  <h2><span class="num">7</span>What We Need From You</h2>
+  <p>Most of this is "add a manager by email" — you stay the owner, and no passwords change hands. Invitations go to <strong>cheddar.lebel@circuitcoders.com</strong>.</p>
+
+  <h3>Per rooftop — the ten-minute list</h3>
+  <ul>
+    <li><strong>Google Business Profile</strong> — Manager access. The single highest-leverage item.</li>
+    <li><strong>Facebook Page</strong> — Admin.</li>
+    <li><strong>Google Search Console and Analytics</strong> — read access.</li>
+  </ul>
+
+  <h3>Group level — one time</h3>
+  <ul>
+    <li><strong>Yelp for Business, DealerRater, Cars.com, CARFAX, Birdeye</strong> — dealer-panel access, or the login email so we can request it.</li>
+    <li><strong>BBB</strong> — login, or written authorization to manage the profiles.</li>
+    <li><strong>A named contact per rooftop</strong> — usually the GM or Service Director — for the escalation routing described in Section 4. This is the only item that genuinely cannot be skipped.</li>
+    <li><strong>Confirmation of the canonical phone and hours per store</strong>, so nothing wrong gets propagated. We will bring you a prepared sheet; it needs a yes or a correction, not research.</li>
+  </ul>
+
+  <p class="hint">Where a platform is held by a website vendor rather than the store, tell us which and we will go to them directly.</p>
+
+  <h2><span class="num">8</span>Timeline — Milestone by Milestone</h2>
+
+  <h3>Days 0–2 · Access and baseline</h3>
+  <p>Kickoff call. Access collected. Day-zero baseline captured for all eleven rooftops across every platform, before a single change is made — this is what every later report is measured against.</p>
+
+  <h3>Days 2–7 · Immediate wins</h3>
+  <p>Self-serve corrections filed the same week: wrong addresses, wrong categories, wrong hours. Birdeye claimed where unclaimed. Southern Pines Nissan's missing Yelp listing claimed. You get screenshots, not a status update.</p>
+
+  <h3>Days 7–21 · Everything filed</h3>
+  <p>All four duplicate and phantom listings submitted for removal or merge with evidence packs. Canonical name, address and phone locked per rooftop and pushed to the aggregators that feed everything downstream. BBB profiles claimed. The review-response backlog cleared across all eleven stores.</p>
+
+  <h3>Days 21–60 · Close-out and handover to steady state</h3>
+  <p>Review generation live in the service lane — printed kits, per-store platform routing, advisor one-pager. Weekly brand-search monitoring running. First full monthly report delivered per rooftop.</p>
+
+  <h3>Month 3 onward</h3>
+  <p>Steady state: every review answered inside 24 hours, listings monitored so duplicates never quietly return, monthly reporting per store, and the third-party queue tracked until every filed item resolves.</p>
+
+  <p class="hint">Third-party items — Yelp removals, Facebook merges, BBB updates, aggregator propagation — run on the platforms' clocks, not ours. Every one is tracked in the monthly report until it closes. We do not mark something done because we filed it.</p>
+
+  <h2><span class="num">10</span>Acceptance</h2>
+  <p>To proceed, confirm in writing which option you are taking and name the contact at each store. That is the whole process — no contract to redline, nothing to sign, nothing due today.</p>
+
+  <div class="reply">
+    <div class="hd">To activate — reply to this proposal with one line</div>
+    <div class="bd">
+      <div class="opt">
+        <div class="quote">"Option A — activate all 11 rooftops, $11,000/mo"</div>
+        <div class="sub">Full group. Recovery sprint included, $0 setup.</div>
+      </div>
+      <div class="opt">
+        <div class="quote">"Option B — start with the 5-store Southern Pines / Pinehurst pilot, $5,500/mo"</div>
+        <div class="sub">Ninety days, then decide on the rest with real numbers.</div>
+      </div>
+      <p style="margin:14px 0 0;font-size:14px">Add the name and mobile number of one contact per rooftop — usually the GM or Service Director — and we schedule the kickoff call the same week.</p>
+    </div>
+  </div>
+  <p>Billing begins on the kickoff call. The recovery sprint is included, so there is no setup fee and nothing is due up front. Month to month, thirty days' notice, cancel any time.</p>
+  <p><strong>Everything created under this agreement belongs to Phil Smith Automotive Group</strong> — every listing, login, profile and piece of content. If we part ways, it all stays with you, and we hand over access in full.</p>
+
+  <div class="included">
+    <p class="hd">Ready when you are</p>
+    <p>Leo Lebel · Circuit Coders · leo@circuitcoders.com<br>
+    Toyota and Kia of Vero Beach are already running this program — you can see the work before you decide on the rest.</p>
+  </div>
+
+  <h2><span class="num">9</span>Method</h2>
+  <p>Every figure was read directly from the public listing on <strong>July 27, 2026</strong>. No estimates, no modelled numbers, no third-party data brokers. Ratings move; anything acted on should be re-verified first.</p>
+  <p>The store roster was taken from your own site navigation and homepage rather than the /locations page, which is out of date and omits both Phil Smith Mitsubishi and Mercedes-Benz of Fayetteville. Corporate structure was confirmed against Florida Division of Corporations filings.</p>
+  <p>Toyota and Kia of Vero Beach are excluded throughout — they are already under management and are not part of this scope.</p>
+  <p>This proposal is valid for thirty days from the date above. Figures will be re-verified before any engagement begins.</p>
+
+  <div class="foot">
+    <strong>Circuit Coders</strong> · Leo Lebel · Brand &amp; Reputation Management<br>
+    Vehicle marques shown are the property of their respective manufacturers and appear here for identification only.
+  </div>
+
+</div>
+<script>
+(function () {
+  var ROOFTOPS = 11, MONTHLY = 11000;
+  var el = function (id) { return document.getElementById(id); };
+  var money = function (n) { return "$" + Math.round(n).toLocaleString("en-US"); };
+
+  function recalc() {
+    var cars  = parseFloat(el("cars").value);
+    var ros   = parseFloat(el("ros").value);
+    var gross = parseFloat(el("gross").value);
+    var ro    = parseFloat(el("ro").value);
+
+    el("carsV").textContent  = cars.toFixed(1);
+    el("rosV").textContent   = ros;
+    el("grossV").textContent = money(gross);
+    el("roV").textContent    = money(ro);
+
+    var monthly = (cars * gross + ros * ro) * ROOFTOPS;
+    var yearly  = monthly * 12;
+    var cost    = MONTHLY * 12;
+    var net     = yearly - cost;
+
+    el("mGross").textContent = money(monthly);
+    el("yGross").textContent = money(yearly);
+    el("yCost").textContent  = "−" + money(cost);
+    el("net").textContent    = (net < 0 ? "−" : "") + money(Math.abs(net));
+    el("net").style.color    = net < 0 ? "var(--bad)" : "var(--good)";
+
+    el("mult").textContent = monthly > 0
+      ? (yearly / cost).toFixed(1) + "× return"
+      : "no return at zero recovery";
+    el("pct").textContent = yearly > 0
+      ? "program is " + Math.round((cost / yearly) * 100) + "% of the gross it protects"
+      : "move a slider to model a recovery";
+  }
+
+  ["cars", "ros", "gross", "ro"].forEach(function (id) {
+    el(id).addEventListener("input", recalc);
+  });
+  recalc();
+})();
+</script>
+</body>
+</html>

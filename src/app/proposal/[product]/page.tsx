@@ -81,6 +81,32 @@ const PRODUCTS: Record<string, Cfg> = {
       freeNote: 'One flat monthly rate — no setup fees, no surprises.',
     },
   },
+  dealer_brandmgmt: {
+    brand: 'Circuit Coders', accent: '#0a7d33', accentSoft: 'rgba(10,125,51,0.10)',
+    eyebrow: 'Proposal for',
+    headline: 'Your reviews are selling against you.',
+    sub: 'Before a buyer ever calls your store, they read your last ten Google reviews and check whether anyone answered. Circuit Coders runs your dealership’s entire online presence — every review answered inside 24 hours, Google Business Profiles managed per rooftop, and your listings kept clean on every site buyers check.',
+    proof: 'Dealership brand management · Managing Toyota of Vero Beach & Kia of Vero Beach',
+    features: [
+      { icon: 'chat', title: 'Every review answered inside 24 hours', desc: 'Google, DealerRater, Cars.com, CARFAX, Yelp, and BBB — monitored daily, answered in your store’s voice, escalated to you only when a real customer issue needs a decision.' },
+      { icon: 'globe', title: 'Google Business Profiles that pull their weight', desc: 'Categories, services, photos, posts, hours, and Q&A tuned per rooftop — the listing buyers see first becomes the one that sends them to you instead of the store up the road.' },
+      { icon: 'shield', title: 'One clean identity everywhere', desc: 'Wrong phone numbers, dead pages, duplicate listings, and mismatched hours quietly bleed leads. We hunt them down across the directory ecosystem and fix them at the source.' },
+      { icon: 'chart', title: 'A monthly report you can hold us to', desc: 'Per-rooftop scorecard: review velocity and response times, local rankings, profile activity, and every third-party fix we filed — nothing disappears into a retainer black hole.' },
+    ],
+    cta: 'Get my free brand audit', email: 'leo@circuitcoders.com',
+    pricing: {
+      basePrice: 1495, baseLabel: 'Brand management',
+      unit: { label: 'Rooftops', included: 1, per: 995 },
+      baseIncludes: ['24-hour review response, every platform', 'Google Business Profile management', 'Directory & listing cleanup (NAP)', 'Monthly per-rooftop report'],
+      modules: [
+        { id: 'content', label: 'Local landing pages & content — 4 pieces/mo', price: 295, note: 'Pages built around what your market actually searches: service, trade-in, and neighborhood queries.' },
+        { id: 'social', label: 'Social posting — Google Posts, Facebook & Instagram', price: 245, note: 'A steady, on-brand cadence so your profiles look alive when buyers check.' },
+        { id: 'repair', label: 'Reputation repair — BBB & complaint backlog', price: 195, recommended: true, note: 'Old complaints answered professionally, ratings disputes filed, the backlog worked down to zero.' },
+      ],
+      offer: { badge: 'Free audit first', cta: 'Get my free brand audit →', reassure: 'No card, no commitment. We audit every rooftop’s public presence and show you exactly what’s broken before you decide anything.' },
+      freeNote: 'Month-to-month — no contract, cancel anytime.',
+    },
+  },
   lanetab: {
     brand: 'LaneTab', accent: '#d97706', accentSoft: 'rgba(217,119,6,0.10)',
     eyebrow: 'Proposal for',

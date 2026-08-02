@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Brand &amp; Reputation Management Proposal · Best Ford, Nashua NH</title>
+<style>
+
+  :root {
+    --ink:#1a1f2b; --soft:#4a5160; --dim:#6a7080; --faint:#8a8f9c;
+    --rule:#d8dbe2; --hair:#e3e5ea; --panel:#f7f5f2;
+    --bad:#a33327; --good:#1f6e43; --accent:#BB162B;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: #fff; color: var(--ink);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16.5px; line-height: 1.55; -webkit-font-smoothing: antialiased;
+  }
+  .brandbar { height: 6px; display: flex; }
+  .brandbar span { flex: 1; }
+  .page { max-width: 760px; margin: 0 auto; padding: 6px 22px 80px; }
+  .marquee-wrap { max-width: 1100px; margin: 0 auto; padding: 24px 0 0; }
+
+  /* Continuous marque strip. The track holds the full set twice; translating it
+     exactly -50% lands the copy precisely where the original began, so the loop
+     has no visible seam. Edge masks stop the hard cut at the viewport edges. */
+  .marquee {
+    position: relative; overflow: hidden; margin: 0 0 30px;
+    padding: 10px 0; border-bottom: 1px solid var(--hair);
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+  }
+  .marquee-track { display: flex; width: max-content; animation: marque 46s linear infinite; }
+  .marquee:hover .marquee-track { animation-play-state: paused; }
+  .marquee-set { display: flex; align-items: center; flex: none; }
+  .marquee img {
+    height: 52px; width: auto; margin: 0 46px; display: block;
+  }
+  @keyframes marque { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track { animation: none; }
+    .marquee { -webkit-mask-image: none; mask-image: none; }
+    .marquee-set:nth-child(2) { display: none; }
+    .marquee-set { flex-wrap: wrap; }
+    .marquee img { margin: 0 30px 14px 0; }
+  }
+
+  .kicker { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--faint); margin-bottom: 10px; }
+  h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.6px; margin: 0 0 6px; line-height: 1.15; }
+  .subtitle { font-size: 18px; color: var(--soft); margin: 0 0 14px; }
+  .meta { font-size: 14px; color: var(--dim); padding-bottom: 24px; border-bottom: 1px solid var(--rule); }
+  .meta strong { color: var(--ink); font-weight: 600; }
+
+  h2 { font-size: 21px; font-weight: 700; letter-spacing: -0.3px; margin: 40px 0 10px;
+       padding-top: 20px; border-top: 1px solid var(--rule); }
+  h2 .num { color: var(--accent); margin-right: 10px; }
+  h3 { font-size: 17px; font-weight: 700; margin: 26px 0 6px; }
+  p { margin: 0 0 12px; }
+  ul { margin: 0 0 14px; padding-left: 20px; }
+  li { margin-bottom: 6px; }
+
+  .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 14px 0 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 540px; }
+  th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+       color: var(--dim); border-bottom: 2px solid var(--ink); padding: 7px 10px 7px 0; font-weight: 600; }
+  td { border-bottom: 1px solid var(--hair); padding: 9px 10px 9px 0; }
+  td.n, th.n { text-align: right; padding-right: 16px; font-variant-numeric: tabular-nums; }
+  .bad { color: var(--bad); font-weight: 700; }
+  .good { color: var(--good); font-weight: 700; }
+  .hint { font-size: 13px; color: var(--dim); font-style: italic; margin-top: 4px; }
+
+  .callout { background: var(--panel); border-left: 4px solid var(--accent); padding: 16px 18px; margin: 18px 0; }
+  .callout .hd { font-weight: 700; margin-bottom: 4px; }
+  .callout p:last-child { margin-bottom: 0; }
+  blockquote { margin: 10px 0; padding-left: 14px; border-left: 3px solid var(--rule);
+               color: var(--soft); font-style: italic; }
+
+  .plan { border-top: 1px solid var(--hair); padding: 16px 0; }
+  .plan .row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .plan-name { font-weight: 700; font-size: 17px; }
+  .plan-price { font-weight: 700; font-size: 19px; white-space: nowrap; }
+  .plan p { color: var(--soft); font-size: 15px; margin: 6px 0 0; }
+
+  /* urgent block — reserved for the one item with a hard deadline */
+  .urgent { border: 2px solid var(--bad); background: #fdf6f5; padding: 18px 20px; margin: 22px 0; }
+  .urgent .tag { display: inline-block; background: var(--bad); color: #fff; font-size: 11px;
+                 letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
+                 padding: 4px 9px; border-radius: 2px; margin-bottom: 10px; }
+  .urgent h3 { margin: 0 0 6px; font-size: 18px; }
+  .urgent p:last-child { margin-bottom: 0; }
+
+  /* before / after matrix */
+  .matrix { width: 100%; border-collapse: collapse; margin: 18px 0 8px; font-size: 15px; min-width: 520px; }
+  .matrix th { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 8px 12px 8px 0;
+               border-bottom: 2px solid var(--ink); }
+  .matrix th.now { color: var(--bad); }
+  .matrix th.then { color: var(--good); }
+  .matrix td { padding: 9px 12px 9px 0; border-bottom: 1px solid var(--hair); vertical-align: top; }
+  .matrix td.lbl { font-weight: 600; width: 30%; }
+  .matrix td.now { color: var(--bad); }
+  .matrix td.then { color: var(--good); font-weight: 600; }
+
+  .included { border: 2px solid var(--good); background: #f4faf6; padding: 16px 20px; margin: 18px 0; }
+  .included .hd { font-weight: 700; font-size: 17px; color: var(--good); margin-bottom: 4px; }
+  .included p:last-child { margin-bottom: 0; }
+
+  /* alert — reserved for items with an outside clock */
+  .alert { border: 1px solid var(--bad); border-left: 5px solid var(--bad);
+           background: #fdf6f5; padding: 18px 20px; margin: 18px 0; }
+  .alert .tag { display: inline-block; background: var(--bad); color: #fff; font-size: 11px;
+                letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
+                padding: 4px 9px; border-radius: 2px; margin-bottom: 10px; }
+  .alert h3 { margin: 0 0 8px; }
+  .alert p:last-child { margin-bottom: 0; }
+
+  /* reply template */
+  .reply { border: 2px solid var(--ink); margin: 18px 0; }
+  .reply .hd { background: var(--ink); color: #fff; padding: 11px 18px; font-weight: 700; font-size: 15px; }
+  .reply .bd { padding: 18px; }
+  .opt { border: 1px solid var(--rule); padding: 13px 16px; margin-bottom: 10px; background: #fff; }
+  .opt:last-of-type { margin-bottom: 0; }
+  .opt .quote { font-family: var(--mono, ui-monospace, Menlo, monospace); font-size: 14.5px;
+                font-weight: 700; color: var(--ink); }
+  .opt .sub { font-size: 13px; color: var(--dim); margin-top: 4px; }
+
+  /* ROI calculator */
+  .calc { border: 1px solid var(--ink); margin: 22px 0; }
+  .calc-head { background: var(--ink); color: #fff; padding: 12px 18px; }
+  .calc-head .t { font-weight: 700; font-size: 16px; }
+  .calc-head .s { font-size: 13px; opacity: .75; margin-top: 2px; }
+  .calc-body { padding: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+  .sliders { display: flex; flex-direction: column; gap: 16px; }
+  .sl label { display: flex; justify-content: space-between; align-items: baseline;
+              font-size: 14px; font-weight: 600; margin-bottom: 6px; gap: 10px; }
+  .sl .v { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .sl input[type=range] { width: 100%; accent-color: var(--accent); height: 22px; }
+  .sl .cap { font-size: 12px; color: var(--dim); margin-top: 2px; }
+  .out { background: var(--panel); padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; }
+  .out .line { display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+               font-size: 14px; }
+  .out .line .n { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+  .out .big { border-top: 1px solid var(--rule); padding-top: 12px; margin-top: 2px; }
+  .out .big .l { font-weight: 700; font-size: 15px; }
+  .out .big .n { font-size: 26px; font-weight: 700; color: var(--good); letter-spacing: -.5px; }
+  .out .mult { text-align: right; font-size: 13px; color: var(--dim); }
+  .out .cost .n { color: var(--bad); }
+  @media (max-width: 640px) { .calc-body { grid-template-columns: 1fr; gap: 18px; } }
+
+  .total { margin-top: 22px; padding: 18px 20px; background: var(--panel); border-left: 4px solid var(--accent); }
+  .total .row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .t-label { font-weight: 700; font-size: 18px; }
+  .t-num { font-weight: 700; font-size: 24px; white-space: nowrap; letter-spacing: -0.5px; }
+  .t-sub { margin-top: 8px; font-size: 14px; color: var(--dim); }
+  .t-save { color: var(--good); font-weight: 700; white-space: nowrap; }
+  @media (max-width: 560px) {
+    .total .row { flex-direction: column; gap: 2px; }
+    .t-num { font-size: 21px; }
+    .t-save { white-space: normal; }
+  }
+
+  .foot { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule);
+          font-size: 13.5px; color: var(--dim); }
+  .foot strong { color: var(--ink); }
+
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    h1 { font-size: 25px; }
+    .marquee img { height: 38px; margin: 0 30px; }
+    .marquee-track { animation-duration: 34s; }
+    .plan .row { flex-direction: column; gap: 2px; }
+  }
+
+</style>
+</head>
+<body>
+<div class="brandbar"><span style="background:#00274d"></span><span style="background:#003478"></span><span style="background:#00274d"></span><span style="background:#1f4e79"></span><span style="background:#00274d"></span><span style="background:#0b3c66"></span></div>
+<div class="marquee-wrap"><div class="marquee"><div class="marquee-track"><div class="marquee-set"><img src="marques/brand-ford.png" alt=""><img src="marques/brand-lincoln.png" alt=""><img src="marques/plat-google.png" alt=""><img src="marques/plat-yelp.png" alt=""><img src="marques/plat-facebook.png" alt=""><img src="marques/plat-bbb.png" alt=""><img src="marques/plat-applemaps.png" alt=""><img src="marques/plat-bing.png" alt=""></div><div class="marquee-set"><img src="marques/brand-ford.png" alt=""><img src="marques/brand-lincoln.png" alt=""><img src="marques/plat-google.png" alt=""><img src="marques/plat-yelp.png" alt=""><img src="marques/plat-facebook.png" alt=""><img src="marques/plat-bbb.png" alt=""><img src="marques/plat-applemaps.png" alt=""><img src="marques/plat-bing.png" alt=""></div></div></div></div>
+<div class="page">
+
+<div class="kicker">CIRCUIT CODERS · CONFIDENTIAL</div>
+<h1>Brand &amp; Reputation Management Proposal</h1>
+<p class="subtitle">Best Ford — 579 Amherst Street, Nashua, New Hampshire</p>
+<div class="meta">
+  <strong>Prepared for</strong> Best Ford — attn. Michael Frassica, General Manager ·
+  <strong>Prepared by</strong> Leo Lebel, Circuit Coders ·
+  <strong>Date</strong> July 30, 2026 · <strong>Valid</strong> 30 days
+</div>
+
+<h2>Executive Summary</h2>
+<p>Best Ford is a well-run store with a genuinely earned reputation: <strong>4.3 on DealerRater across
+316 reviews</strong>, an <strong>A+ BBB rating</strong> accredited as of February 2026, and 27 years in
+business. This is not a rescue job, and we are not going to pretend it is.</p>
+
+<p><strong>The problem is that your listings contradict each other.</strong> Your website publishes
+three toll-free numbers. Every directory publishes your local one. Your homepage headline never says
+"Nashua". And a brand that stopped existing in 2011 is still attached to your address.</p>
+
+<p>Google reads all of that as evidence about who you are and where you are. When the evidence
+disagrees with itself, confidence in the whole record drops — which is why a store this
+well-reviewed does not own local search the way its reviews say it should.</p>
+
+<p>Every figure below was read directly from your own public listings on <strong>July 30, 2026</strong> and is
+independently re-verifiable. Where we could not read something, we say so rather than estimate it.</p>
+
+<h3>Where you are today, and where you'd be in sixty days</h3>
+<div class="scroll">
+<table class="matrix">
+<tr><th></th><th>TODAY</th><th>AFTER THE SPRINT — 60 DAYS</th></tr>
+<tr><td><strong>Phone identity</strong></td><td class="bad">3 toll-free numbers vs 1 local, contradicting</td><td class="good">One verified local record everywhere, tracking preserved</td></tr>
+<tr><td><strong>Homepage H1</strong></td><td class="bad">"Welcome To Best Ford" — no city</td><td class="good">Names Nashua, NH on every key page</td></tr>
+<tr><td><strong>"Lincoln Mercury" listings</strong></td><td class="bad">Legacy name still live on your own footer</td><td class="good">Found, merged or removed; reviews consolidated</td></tr>
+<tr><td><strong>Review response</strong></td><td class="bad">No visible response history</td><td class="good">Every review answered within 24 hours</td></tr>
+<tr><td><strong>Unclaimed profiles</strong></td><td class="bad">Unknown — never audited</td><td class="good">Every platform claimed and corrected</td></tr>
+</table>
+</div>
+
+<h2><span class="num">1</span>What We Found</h2>
+
+<h3>1.1 · Your website and your listings publish different phone numbers</h3>
+<p>Your site advertises three toll-free numbers — <strong>888-432-2696</strong> (service),
+<strong>888-810-6020</strong> (sales), <strong>888-749-3847</strong> (parts). Every directory we
+checked lists your local line, <strong>(603) 889-0161</strong>.</p>
+<p>Call tracking is normal and useful. The issue is that Google treats the number on your website as a
+primary identity signal and cross-checks it against your listings. When they disagree, confidence in
+the record falls — and a toll-free number carries <em>no local signal at all</em>, which for a store
+competing on "Ford dealer near me" is the one thing you cannot afford to give away.</p>
+<div class="alert">
+  <div class="hd">Highest-leverage fix on this page</div>
+  <p>It costs nothing, it does not mean giving up call tracking, and it is the correction most likely
+  to move local ranking on its own. The local number becomes primary; the tracked numbers stay exactly
+  where they earn their keep.</p>
+</div>
+
+<h3>1.2 · Your homepage never says "Nashua"</h3>
+<p>Your page title does its job — <em>"New &amp; Used Ford Dealership In Nashua, NH | Best Ford
+Nashua"</em>. But the headline a visitor and a crawler both read first is just <strong>"Welcome To
+Best Ford"</strong>.</p>
+<p>The H1 is the strongest single on-page statement of what a page is about. Yours says what you are
+but not where. <em>"Welcome to Best Ford in Nashua, NH"</em> is a one-line change on a Dealer Inspire
+site.</p>
+
+<h3>1.3 · "Best Ford Lincoln Mercury" is still attached to you</h3>
+<p>Your own site footer still references <strong>Best Ford Lincoln Mercury</strong>. Mercury was
+discontinued in 2011. That name almost certainly still exists as live listings and stale citations
+across directories, review sites and aggregators — every one an address record competing with your
+real one, and holding reviews that should be consolidating onto your current listing.</p>
+<p>We have fixed this exact pattern before: a legacy dual-brand name left behind after a rebrand,
+quietly splitting a store's reputation across two identities.</p>
+
+<h2><span class="num">2</span>What We Have NOT Verified</h2>
+<p>Several platforms block automated review reading. We have confirmed counts but not ratings on some
+of them, and we would rather show you an honest blank than a confident guess.</p>
+<div class="scroll">
+<table>
+<tr><th>Platform</th><th class="n">Verified</th><th>Status</th></tr>
+<tr><td>DealerRater</td><td class="n"><strong>4.3</strong> / 316</td><td class="good">Confirmed — strong</td></tr>
+<tr><td>BBB</td><td class="n"><strong>A+</strong></td><td class="good">Confirmed — accredited 2/1/2026</td></tr>
+<tr><td>Yelp</td><td class="n">140 reviews</td><td>Count confirmed · <strong>rating not read</strong></td></tr>
+<tr><td>Google Business Profile</td><td class="n">—</td><td><strong>Not read</strong> — manual check</td></tr>
+<tr><td>Cars.com · CARFAX</td><td class="n">—</td><td><strong>Not read</strong> — blocked to automation</td></tr>
+</table>
+</div>
+<p class="hint">A 20-minute manual pass closes every gap in this table. A proposal built on invented
+numbers falls apart the moment you check it.</p>
+
+<h2><span class="num">3</span>Why We Think There Is Money Here</h2>
+<p>Across every dealership we have audited, one pattern holds without exception: <strong>Yelp and the
+secondary platforms run well below Google and DealerRater, because nobody owns them.</strong> You have
+140 Yelp reviews and, on the pattern, very likely no response history. Every unanswered complaint is a
+permanent, indexed page about your store that a shopper reads before they call you.</p>
+<p>You have also been under new ownership since 2022. New ownership inherits listing debt from the
+previous regime — old hours, old names, old numbers, unclaimed profiles. It never surfaces until
+someone goes looking, and nobody has.</p>
+
+<h2><span class="num">4</span>The Program</h2>
+<div class="plan">
+  <div class="plan-name">Get-Well Sprint <span class="plan-price">$1,500 one-time</span></div>
+  <ul class="included">
+    <li>Consolidate the phone identity — local number primary everywhere, tracking preserved</li>
+    <li>H1 and on-page local signals corrected across the site's key pages</li>
+    <li>Hunt and kill every "Best Ford Lincoln Mercury" legacy listing and citation</li>
+    <li>Claim and correct every unclaimed profile — Google, Yelp, Bing, Apple Maps, CARFAX, Cars.com, Facebook</li>
+    <li>Full name-address-phone consistency sweep, with a before/after record you keep</li>
+  </ul>
+</div>
+<div class="plan">
+  <div class="plan-name">Ongoing Brand &amp; Reputation Management <span class="plan-price">$1,000 / month</span></div>
+  <ul class="included">
+    <li>Every review answered within 24 hours, every platform, in your voice</li>
+    <li>Review generation — printed QR kit routed by platform, plus a service-advisor script</li>
+    <li>Google Business Profile actively managed: posts, photos, Q&amp;A, hours</li>
+    <li>Monthly report: rating movement per platform, what shipped, what is next</li>
+    <li><strong>No contract. Cancel any month.</strong></li>
+  </ul>
+</div>
+
+<h2><span class="num">5</span>The Honest Case Against Hiring Us</h2>
+<p>You are a 4.3-star store with an A+ BBB rating and a general manager who has been there
+twenty-four years. You do not have a reputation problem. If you are looking for someone to fix a
+crisis, there isn't one to fix.</p>
+<p>What we are proposing is narrower and less dramatic: the technical hygiene underneath a good
+reputation, so the reviews you have already earned actually win you the search result. If that is not
+worth a thousand dollars a month, we would genuinely rather you kept the money.</p>
+
+<h2><span class="num">6</span>Next Step</h2>
+<p>Reply to this and we will run the 20-minute manual pass that fills in Section 2 — your Google,
+Yelp and CARFAX ratings, plus a count of the legacy listings still carrying the Lincoln Mercury name
+— and send it over with no obligation and no call required.</p>
+<p>You will know exactly what we would be fixing, and roughly what it is worth, before you decide
+anything.</p>
+
+<div class="foot">
+  Leo Lebel · Circuit Coders · Brand &amp; Reputation Management<br>
+  leo@circuitcoders.com · 442-297-8170 · circuitcoders.com
+</div>
+</div>
+</body>
+</html>

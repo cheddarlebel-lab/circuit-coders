@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Brand &amp; Reputation Audit · Crown Toyota, Ontario CA</title>
+<style>
+
+  :root {
+    --ink:#1a1f2b; --soft:#4a5160; --dim:#6a7080; --faint:#8a8f9c;
+    --rule:#d8dbe2; --hair:#e3e5ea; --panel:#f7f5f2;
+    --bad:#a33327; --good:#1f6e43; --accent:#BB162B;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: #fff; color: var(--ink);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16.5px; line-height: 1.55; -webkit-font-smoothing: antialiased;
+  }
+  .brandbar { height: 6px; display: flex; }
+  .brandbar span { flex: 1; }
+  .page { max-width: 760px; margin: 0 auto; padding: 6px 22px 80px; }
+  .marquee-wrap { max-width: 1100px; margin: 0 auto; padding: 24px 0 0; }
+
+  /* Continuous marque strip. The track holds the full set twice; translating it
+     exactly -50% lands the copy precisely where the original began, so the loop
+     has no visible seam. Edge masks stop the hard cut at the viewport edges. */
+  .marquee {
+    position: relative; overflow: hidden; margin: 0 0 30px;
+    padding: 10px 0; border-bottom: 1px solid var(--hair);
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+  }
+  .marquee-track { display: flex; width: max-content; animation: marque 46s linear infinite; }
+  .marquee:hover .marquee-track { animation-play-state: paused; }
+  .marquee-set { display: flex; align-items: center; flex: none; }
+  .marquee img {
+    height: 52px; width: auto; margin: 0 46px; display: block;
+  }
+  @keyframes marque { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track { animation: none; }
+    .marquee { -webkit-mask-image: none; mask-image: none; }
+    .marquee-set:nth-child(2) { display: none; }
+    .marquee-set { flex-wrap: wrap; }
+    .marquee img { margin: 0 30px 14px 0; }
+  }
+
+  .kicker { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--faint); margin-bottom: 10px; }
+  h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.6px; margin: 0 0 6px; line-height: 1.15; }
+  .subtitle { font-size: 18px; color: var(--soft); margin: 0 0 14px; }
+  .meta { font-size: 14px; color: var(--dim); padding-bottom: 24px; border-bottom: 1px solid var(--rule); }
+  .meta strong { color: var(--ink); font-weight: 600; }
+
+  h2 { font-size: 21px; font-weight: 700; letter-spacing: -0.3px; margin: 40px 0 10px;
+       padding-top: 20px; border-top: 1px solid var(--rule); }
+  h2 .num { color: var(--accent); margin-right: 10px; }
+  h3 { font-size: 17px; font-weight: 700; margin: 26px 0 6px; }
+  p { margin: 0 0 12px; }
+  ul { margin: 0 0 14px; padding-left: 20px; }
+  li { margin-bottom: 6px; }
+
+  .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 14px 0 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 540px; }
+  th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+       color: var(--dim); border-bottom: 2px solid var(--ink); padding: 7px 10px 7px 0; font-weight: 600; }
+  td { border-bottom: 1px solid var(--hair); padding: 9px 10px 9px 0; vertical-align: top; }
+  td.n, th.n { text-align: right; padding-right: 16px; font-variant-numeric: tabular-nums; }
+  tr.tot td { border-top: 2px solid var(--ink); border-bottom: none; font-weight: 700; }
+  .bad { color: var(--bad); font-weight: 700; }
+  .good { color: var(--good); font-weight: 700; }
+  .hint { font-size: 13px; color: var(--dim); font-style: italic; margin-top: 4px; }
+
+  .callout { background: var(--panel); border-left: 4px solid var(--accent); padding: 16px 18px; margin: 18px 0; }
+  .callout .hd { font-weight: 700; margin-bottom: 4px; }
+  .callout p:last-child { margin-bottom: 0; }
+  blockquote { margin: 10px 0; padding-left: 14px; border-left: 3px solid var(--rule);
+               color: var(--soft); font-style: italic; }
+
+  .plan { border-top: 1px solid var(--hair); padding: 16px 0; }
+  .plan .row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .plan-name { font-weight: 700; font-size: 17px; }
+  .plan-price { font-weight: 700; font-size: 19px; white-space: nowrap; }
+  .plan p { color: var(--soft); font-size: 15px; margin: 6px 0 0; }
+
+  /* alert — reserved for items with an outside clock or a hard defect */
+  .alert { border: 1px solid var(--bad); border-left: 5px solid var(--bad);
+           background: #fdf6f5; padding: 18px 20px; margin: 18px 0; }
+  .alert .tag { display: inline-block; background: var(--bad); color: #fff; font-size: 11px;
+                letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
+                padding: 4px 9px; border-radius: 2px; margin-bottom: 10px; }
+  .alert .hd { font-weight: 700; font-size: 17px; margin-bottom: 6px; }
+  .alert p:last-child { margin-bottom: 0; }
+
+  .included { border: 2px solid var(--good); background: #f4faf6; padding: 16px 20px; margin: 18px 0; }
+  .included .hd { font-weight: 700; font-size: 17px; color: var(--good); margin-bottom: 4px; }
+  .included p:last-child { margin-bottom: 0; }
+
+  /* ROI calculator */
+  .calc { border: 1px solid var(--ink); margin: 22px 0; }
+  .calc-head { background: var(--ink); color: #fff; padding: 12px 18px; }
+  .calc-head .t { font-weight: 700; font-size: 16px; }
+  .calc-head .s { font-size: 13px; opacity: .75; margin-top: 2px; }
+  .calc-body { padding: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+  .sliders { display: flex; flex-direction: column; gap: 16px; }
+  .sl label { display: flex; justify-content: space-between; align-items: baseline;
+              font-size: 14px; font-weight: 600; margin-bottom: 6px; gap: 10px; }
+  .sl .v { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .sl input[type=range] { width: 100%; accent-color: var(--accent); height: 22px; }
+  .sl .cap { font-size: 12px; color: var(--dim); margin-top: 2px; }
+  .out { background: var(--panel); padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; }
+  .out .line { display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+               font-size: 14px; }
+  .out .line .n { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+  .out .big { border-top: 1px solid var(--rule); padding-top: 12px; margin-top: 2px; }
+  .out .big .l { font-weight: 700; font-size: 15px; }
+  .out .big .n { font-size: 26px; font-weight: 700; color: var(--good); letter-spacing: -.5px; }
+  .out .mult { text-align: right; font-size: 13px; color: var(--dim); }
+  .out .cost .n { color: var(--bad); }
+  @media (max-width: 640px) { .calc-body { grid-template-columns: 1fr; gap: 18px; } }
+
+  .foot { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule);
+          font-size: 13.5px; color: var(--dim); }
+  .foot strong { color: var(--ink); }
+
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    h1 { font-size: 25px; }
+    .marquee img { height: 38px; margin: 0 30px; }
+    .marquee-track { animation-duration: 34s; }
+    .plan .row { flex-direction: column; gap: 2px; }
+  }
+
+</style>
+</head>
+<body>
+<div class="brandbar"><span style="background:#c1121f"></span><span style="background:#8d0801"></span><span style="background:#c1121f"></span><span style="background:#a20f16"></span><span style="background:#c1121f"></span><span style="background:#7a0a10"></span></div>
+<div class="marquee-wrap"><div class="marquee" aria-label="Platforms read for this audit"><div class="marquee-track"><div class="marquee-set"><img src="marques/brand-toyota.png" alt=""><img src="marques/plat-google.png" alt=""><img src="marques/plat-yelp.png" alt=""><img src="marques/plat-facebook.png" alt=""><img src="marques/plat-bbb.png" alt=""><img src="marques/plat-applemaps.png" alt=""><img src="marques/plat-bing.png" alt=""></div><div class="marquee-set" aria-hidden="true"><img src="marques/brand-toyota.png" alt=""><img src="marques/plat-google.png" alt=""><img src="marques/plat-yelp.png" alt=""><img src="marques/plat-facebook.png" alt=""><img src="marques/plat-bbb.png" alt=""><img src="marques/plat-applemaps.png" alt=""><img src="marques/plat-bing.png" alt=""></div></div></div></div>
+<div class="page">
+
+<div class="kicker">Circuit Coders · Confidential · Internal</div>
+<h1>Brand &amp; Reputation Audit</h1>
+<p class="subtitle">Crown Toyota — 1201 Kettering Drive, Ontario, California</p>
+<div class="meta">
+  <strong>Prepared by</strong> Leo Lebel, Circuit Coders · <strong>Swept live</strong> July 30, 2026 ·
+  Independent audit, no access required · Twelve surfaces read, every figure re-verifiable ·
+  <strong>Second pass. Supersedes the July 29 draft, which reached the opposite conclusion on incomplete data.</strong>
+</div>
+
+<h2>Executive Summary</h2>
+<p>The July 29 pass concluded that Crown Toyota's digital presence was <em>"genuinely clean"</em> and
+that there was no engagement worth selling. It reached that conclusion having read three platforms out
+of the twelve that matter, and having explicitly skipped the one carrying the store's public reputation.</p>
+<p>The full read says something different. <strong>The store is well run and its Google reputation is
+excellent — 4.6 on 9,573 reviews. But it carries an F from the Better Business Bureau, a 3.1 on Yelp,
+a duplicate unclaimed Yelp listing that is actively overwriting its name on other search engines, four
+different phone numbers across the review ecosystem, two different street addresses, and a listing on
+DealerRater that has carried the previous owner's name for three and a half years.</strong></p>
+<p>None of that is invented and none of it needed access to find. It is also not unique to Ontario:
+the same Yelp-versus-Google gap appears at <strong>eight of eight</strong> Swickard rooftops measured.
+That moves this from a single-store opportunity to a group-level one — which changes the recommendation,
+but not the caution about who is able to sign.</p>
+
+<h2><span class="num">1</span>Corrections to the July 29 Draft</h2>
+<p>Stated plainly, because the old numbers should not be quoted to anyone:</p>
+<div class="scroll">
+<table>
+<tr><th>July 29 claim</th><th>Verified July 30</th></tr>
+<tr><td>"Cars.com 4.3 · 20 reviews"</td><td class="bad">Wrong. Cars.com is 5.0 on 1,835 reviews.</td></tr>
+<tr><td>"Yelp — not read"</td><td class="bad">Read: 3.1 on 2,093 shown, plus 500 hidden and 80 removed.</td></tr>
+<tr><td>"One number sitewide. No toll-free split."</td><td class="bad">Four distinct numbers across the ecosystem.</td></tr>
+<tr><td>"Homepage H1 — properly configured"</td><td class="bad">Three H1 tags on the homepage.</td></tr>
+<tr><td>"Swickard runs 31+ dealerships across five states"</td><td class="bad">Swickard's own site says <strong>50+ across six states.</strong></td></tr>
+<tr><td>"We went looking for problems and did not find them"</td><td class="bad">A BBB rating of <strong>F</strong> was never checked.</td></tr>
+<tr><td>"The store is not independent — Swickard bought it in Jan 2023 for $40M"</td><td class="good">Correct, and still the single most important fact here.</td></tr>
+</table>
+</div>
+
+<h2><span class="num">2</span>The Full Read — Twelve Surfaces</h2>
+<div class="scroll">
+<table>
+<tr><th>Platform</th><th class="n">Rating</th><th class="n">Reviews</th><th>State</th></tr>
+<tr><td><strong>Google Business Profile</strong></td><td class="n good">4.6</td><td class="n">9,573</td><td>Claimed. Owner responds to reviews. Excellent.</td></tr>
+<tr><td><strong>Yelp</strong> (primary)</td><td class="n bad">3.1</td><td class="n">2,093</td><td>Claimed. <strong>+500 hidden, +80 removed for TOS.</strong></td></tr>
+<tr><td><strong>Yelp</strong> (duplicate)</td><td class="n">—</td><td class="n">0</td><td class="bad">UNCLAIMED. Same address. Named "Toyota crown".</td></tr>
+<tr><td>Facebook</td><td class="n good">86% recommend</td><td class="n">853</td><td>Managed by Swickard Corporation. Healthy.</td></tr>
+<tr><td>DealerRater</td><td class="n good">4.9</td><td class="n">1,832</td><td class="bad">Still titled "John Elway's Crown Toyota".</td></tr>
+<tr><td>Cars.com</td><td class="n good">5.0</td><td class="n">1,835</td><td>Correct name. Award seals current.</td></tr>
+<tr><td>Kelley Blue Book</td><td class="n good">4.8</td><td class="n">—</td><td class="bad">Wrong address (1155 Kettering), 4th phone, wrong hours.</td></tr>
+<tr><td>CARFAX</td><td class="n bad">2.8</td><td class="n">4</td><td class="bad">Two tracking numbers, opening time 30 min wrong.</td></tr>
+<tr><td><strong>Better Business Bureau</strong></td><td class="n bad">F</td><td class="n">10 complaints</td><td class="bad">Not accredited. 3 complaints unanswered.</td></tr>
+<tr><td>Bing</td><td class="n bad">3.0</td><td class="n">2.1k</td><td class="bad">Syndicates the <em>Yelp</em> score as the headline rating.</td></tr>
+<tr><td>DuckDuckGo / Apple ecosystem</td><td class="n">—</td><td class="n">—</td><td class="bad">Displays the business as "Toyota crown".</td></tr>
+<tr><td>Instagram</td><td class="n">—</td><td class="n">6.9k followers</td><td>Active, on-brand.</td></tr>
+</table>
+</div>
+<p class="hint">Every row read live on 2026-07-30. Ratings drift; re-verify before quoting to a client.</p>
+
+<h2><span class="num">3</span>The Finding — Yelp Is 1.5 Stars Wrong, and It Is the One That Travels</h2>
+<div class="alert">
+  <div class="hd">2,093 Yelp reviews at 3.1 are setting the public reputation of a store that 9,573 Google reviewers rate 4.6.</div>
+  <p>Yelp holds <strong>18%</strong> of this store's review volume and is <strong>1.5 stars below</strong>
+  the platform holding the other 82%. Every transaction-tied platform — Cars.com 5.0, DealerRater 4.9,
+  KBB 4.8, Google 4.6 — agrees the store is good. Yelp is the lone dissenter, and it is the one Bing
+  reprints.</p>
+</div>
+<p>Yelp's own suppression makes the number worse rather than better. Behind the 2,093 shown reviews sit
+<strong>500 "not currently recommended" reviews</strong> — 19% of the total base, filtered out of the
+score by Yelp's software — plus 80 more removed for terms-of-service violations. The filter
+disproportionately buries low-activity accounts, which is exactly what someone who buys one car every
+six years looks like.</p>
+<p>Worth crediting, because it changes the pitch: <strong>this store already responds on Yelp.</strong>
+Owner replies signed "Swickard A." appear on reviews as recent as July 21, 2026, and they are decent
+replies — specific, non-defensive. So the 3.1 is not the product of neglect. It is the product of an
+unmanaged review <em>pipeline</em>: nobody is routing satisfied buyers to Yelp, so only the aggrieved
+arrive there unprompted. That is a fixable operations problem, not a reputation problem.</p>
+
+<h2><span class="num">4</span>The BBB F</h2>
+<div class="alert">
+  <span class="tag">Hard defect</span>
+  <div class="hd">Crown Toyota holds an F from the Better Business Bureau.</div>
+  <p>BBB's stated reasons: <strong>"Failure to respond to 3 complaint(s) filed against business"</strong>
+  and 10 complaints filed. Not BBB accredited. The profile lists <strong>Swickard Auto Group</strong> as
+  an alternate business name, so the F attaches to the group's identity too.</p>
+</div>
+<p>This is the cheapest fix in the document and the most embarrassing to leave alone. Three unanswered
+complaints is not a quality problem — it is an inbox nobody owns. BBB republishes the failure-to-respond
+line verbatim on a page that ranks for the store's own name.</p>
+
+<h2><span class="num">5</span>Identity Drift — The Store Has Three Names</h2>
+<p>Swickard bought this store in January 2023. Three and a half years later the market still has not been
+told, and the platforms disagree about what the business is called:</p>
+<ul>
+  <li><strong>"John Elway's Crown Toyota"</strong> — still the live title on DealerRater, across 1,832 reviews.</li>
+  <li><strong>"Toyota crown"</strong> — the unclaimed duplicate Yelp listing at the same street address.</li>
+  <li><strong>"Crown Toyota"</strong> — the actual name, on the website, Google and Facebook.</li>
+</ul>
+<p>A stale Facebook page for "Steve Khaled — John Elway Crown Toyota" is still live as well.</p>
+<div class="callout">
+  <div class="hd">This is not cosmetic — it is already propagating</div>
+  <p>Search Crown Toyota on <strong>DuckDuckGo</strong> and the business comes back titled
+  <strong>"Toyota crown"</strong>, sourced from Yelp. The unclaimed duplicate is not sitting inert; it is
+  the record other engines are choosing. And Google's own "People also ask" for this store leads with
+  <em>"Does John Elway still own Crown Toyota?"</em> — the confusion is measurable in Google's own
+  query data.</p>
+</div>
+
+<h2><span class="num">6</span>NAP Consistency — Four Phone Numbers, Two Addresses</h2>
+<p>Name, address and phone consistency is the single largest off-site local-ranking factor. Here it is
+broken in three dimensions at once:</p>
+<div class="scroll">
+<table>
+<tr><th>Field</th><th>Canonical</th><th>Conflicting values found</th></tr>
+<tr><td>Phone</td><td>(909) 390-9700</td><td class="bad">(833) 982-2880 and (855) 616-0067 on CARFAX · (909) 563-9498 on KBB</td></tr>
+<tr><td>Street address</td><td>1201 Kettering Dr</td><td class="bad">1155 Kettering Dr on KBB</td></tr>
+<tr><td>Opening time</td><td>8:30 AM</td><td class="bad">9:00 AM on CARFAX and KBB · 7:00 AM service hours on Waze</td></tr>
+</table>
+</div>
+<p>The KBB record is the worst of them: wrong street number, a phone number that appears nowhere else,
+and hours that are wrong every day of the week — on a Cox Automotive property that feeds other listings.</p>
+
+<h2><span class="num">7</span>On-Site Defects</h2>
+<div class="scroll">
+<table>
+<tr><th>Checked</th><th>Result</th></tr>
+<tr><td>Page title</td><td class="good">"Crown Toyota: New &amp; Used Toyota Dealer in Ontario, CA" — correct and local</td></tr>
+<tr><td>Meta description</td><td class="good">Present, specific, names Ontario CA</td></tr>
+<tr><td>AutoDealer schema</td><td class="good">Present. Address, phone and hours all correct in the markup</td></tr>
+<tr><td><strong>aggregateRating in schema</strong></td><td class="bad">ABSENT — 9,573 Google reviews and not one star renders in search results</td></tr>
+<tr><td><strong>H1 tags</strong></td><td class="bad">THREE: "Welcome to Crown Toyota…", "Swickard Price Promise", "Frequently Asked Questions"</td></tr>
+<tr><td>Phone links</td><td class="bad">One empty <code>tel:</code> link with no number attached</td></tr>
+<tr><td>Platform</td><td>DealerOn + Sincro — mainstream stack, properly deployed</td></tr>
+</table>
+</div>
+<p>The missing <code>aggregateRating</code> is the one with money attached. The store has earned a 4.6 on
+nearly ten thousand reviews and throws away the rich-result stars that would show it on the search page —
+while Bing fills that same slot with the 3.1 from Yelp.</p>
+
+<h2><span class="num">8</span>It Is Systemic — Eight of Eight Swickard Rooftops</h2>
+<p>If this were only Ontario it would be a store problem. It is not. Sampling the Swickard cluster at the
+Thousand Oaks Auto Mall, the same gap appears at every single rooftop measured:</p>
+<div class="scroll">
+<table>
+<tr><th>Rooftop</th><th class="n">Yelp</th><th class="n">Yelp n</th><th class="n">Google</th><th class="n">Google n</th><th class="n">Gap</th></tr>
+<tr><td><strong>Crown Toyota, Ontario</strong></td><td class="n bad">3.1</td><td class="n">2,093</td><td class="n good">4.6</td><td class="n">9,573</td><td class="n bad">−1.5</td></tr>
+<tr><td>Swickard Chevrolet, Thousand Oaks</td><td class="n bad">2.9</td><td class="n">28</td><td class="n good">4.3</td><td class="n">1,169</td><td class="n bad">−1.4</td></tr>
+<tr><td>Mercedes-Benz of Thousand Oaks</td><td class="n bad">3.4</td><td class="n">390</td><td class="n good">4.6</td><td class="n">1,523</td><td class="n bad">−1.2</td></tr>
+<tr><td>Swickard Honda, Thousand Oaks</td><td class="n bad">3.5</td><td class="n">670</td><td class="n good">4.6</td><td class="n">2,865</td><td class="n bad">−1.1</td></tr>
+<tr><td>Lexus of Thousand Oaks</td><td class="n bad">3.8</td><td class="n">630</td><td class="n good">4.7</td><td class="n">2,100</td><td class="n bad">−0.9</td></tr>
+<tr><td>Acura of Thousand Oaks</td><td class="n">4.1</td><td class="n">251</td><td class="n good">4.7</td><td class="n">667</td><td class="n bad">−0.6</td></tr>
+<tr><td>Cadillac of Thousand Oaks</td><td class="n">3.9</td><td class="n">273</td><td class="n good">4.3</td><td class="n">459</td><td class="n bad">−0.4</td></tr>
+<tr><td>Swickard Buick GMC, Thousand Oaks</td><td class="n bad">no rating</td><td class="n">0</td><td class="n good">4.2</td><td class="n">466</td><td class="n bad">listing empty</td></tr>
+<tr class="tot"><td>Weighted average</td><td class="n bad">3.4</td><td class="n">4,335</td><td class="n good">4.6</td><td class="n">18,356</td><td class="n bad">−1.2</td></tr>
+</table>
+</div>
+<p><strong>Eight for eight. Yelp is below Google at every rooftop, by 0.4 to 1.5 stars, and holds 19% of
+the volume.</strong> Land Rover Thousand Oaks adds a ninth Yelp data point at 3.7 on 106 reviews.</p>
+<p>The naming defect repeats too. On Yelp the luxury stores are still listed as "Acura Of Thousand Oaks",
+"Mercedes-Benz of Thousand Oaks", "Cadillac of Thousand Oaks", "Lexus of Thousand Oaks" — none carry the
+Swickard name that Google shows. And Swickard Chevrolet is split across two Yelp listings (2.9 on 28 and
+3.0 on 46) against 1,169 Google reviews at 4.3 — the same duplicate-listing failure found in Ontario.</p>
+
+<h2><span class="num">9</span>What Is Genuinely Well Run</h2>
+<div class="included">
+  <div class="hd">Credit where it is due — this is not a broken dealership</div>
+  <p>Google 4.6 on 9,573 reviews with owner responses. Facebook at 86% recommend, properly managed by
+  Swickard Corporation. Cars.com 5.0, DealerRater 4.9, KBB 4.8. Correct title tag, correct meta
+  description, correct and complete AutoDealer schema. Active Instagram. Whoever runs the website and the
+  Google profile is doing it well.</p>
+</div>
+<p>That matters for how this is sold. The pitch here is not "your reputation is bad" — it demonstrably
+is not. The pitch is that a well-run store is being misrepresented on the three surfaces nobody owns:
+Yelp, BBB, and the syndicated listings.</p>
+
+<h2><span class="num">10</span>Recommendation — Reverse of the July 29 Draft</h2>
+<p><strong>There is a real engagement here. It is not a single-rooftop sale, and it should not be pitched
+at Ontario.</strong></p>
+<p>The July 29 conclusion — do not pitch — was right about the buyer and wrong about the findings. Both
+halves matter. At a 50-rooftop group, brand standards and vendor selection sit at corporate; a proposal
+walked into the Ontario store has no one inside the building who can sign it. But the finding is real,
+specific, verifiable, and repeats at every rooftop tested, which is precisely what makes it a group
+conversation rather than a store one.</p>
+<div class="callout">
+  <div class="hd">The one-sentence version to open with</div>
+  <p>"Across your Thousand Oaks cluster and Ontario, Yelp sits an average of 1.2 stars below Google on
+  every rooftop we measured — eight for eight — and Bing is reprinting the Yelp number, not yours. Ontario
+  also carries a BBB F for three unanswered complaints and a duplicate Yelp listing that has DuckDuckGo
+  calling the store 'Toyota crown'."</p>
+</div>
+
+<h3>Sizing</h3>
+<div class="plan">
+  <div class="row"><span class="plan-name">Option A · Full group</span><span class="plan-price">$50,000/mo</span></div>
+  <p>50+ rooftops at $1,000 each. List rate would be $62,500. Long procurement cycle, near-certain
+  competitive process against incumbent vendors.</p>
+</div>
+<div class="plan">
+  <div class="row"><span class="plan-name">Option B · California only</span><span class="plan-price">$19,000/mo</span></div>
+  <p>The 19 California rooftops, Ontario included. Same size as the Phil Smith group proposal, and the
+  cluster where we have already done the measurement work.</p>
+</div>
+<div class="plan">
+  <div class="row"><span class="plan-name">Option C · Proof pilot</span><span class="plan-price">$9,000/mo</span></div>
+  <p>Ontario plus the eight Thousand Oaks rooftops in the table above. Every finding in this document is
+  already evidenced for these nine stores — the audit <em>is</em> the pitch deck.</p>
+</div>
+
+<div class="calc">
+  <div class="calc-head">
+    <div class="t">What the gap is plausibly worth</div>
+    <div class="s">An assumption model, not a measurement. Move the inputs — the defaults are deliberately conservative.</div>
+  </div>
+  <div class="calc-body">
+    <div class="sliders">
+      <div class="sl">
+        <label>Rooftops in program <span class="v" id="v-roof">19</span></label>
+        <input type="range" id="s-roof" min="1" max="50" step="1" value="19">
+        <div class="cap">Option C = 9 · Option B = 19 · Option A = 50</div>
+      </div>
+      <div class="sl">
+        <label>Units sold per rooftop / month <span class="v" id="v-units">100</span></label>
+        <input type="range" id="s-units" min="25" max="250" step="5" value="100">
+      </div>
+      <div class="sl">
+        <label>Total gross per unit <span class="v" id="v-gross">$3,500</span></label>
+        <input type="range" id="s-gross" min="1500" max="6000" step="100" value="3500">
+        <div class="cap">Front-end plus F&amp;I.</div>
+      </div>
+      <div class="sl">
+        <label>Buyers deflected by the review gap <span class="v" id="v-defl">2.0%</span></label>
+        <input type="range" id="s-defl" min="1" max="80" step="1" value="20">
+        <div class="cap">Share of would-be buyers lost to a 3.1 where a 4.6 is deserved.</div>
+      </div>
+    </div>
+    <div class="out">
+      <div class="line"><span>Units at risk / month</span><span class="n" id="o-units">38</span></div>
+      <div class="line"><span>Gross at risk / month</span><span class="n" id="o-gross">$133,000</span></div>
+      <div class="line cost"><span>Program cost / month</span><span class="n" id="o-cost">$19,000</span></div>
+      <div class="line big"><span class="l">Net / month</span><span class="n" id="o-net">$114,000</span></div>
+      <div class="mult" id="o-mult">6.0× return · $1.37M net per year</div>
+    </div>
+  </div>
+</div>
+
+<h2><span class="num">11</span>Method</h2>
+<p>Read live on <strong>2026-07-30</strong> from public listings only — no client access, no credentials,
+nothing requested from the dealership. Google and Yelp were read in a real browser because both block
+automated fetchers; BBB via its public search API and profile; Facebook, KBB, Bing and DuckDuckGo read
+directly; Cars.com, DealerRater and CARFAX fetched. On-site findings come from the rendered homepage
+HTML and its JSON-LD blocks. Swickard's rooftop count and California roster are from Swickard's own site.</p>
+<p>Two figures are deliberately not asserted: Apple Maps was read through the DuckDuckGo surface rather
+than Apple's own app, and Edmunds returned 403 to every attempt. Both are open items rather than clean
+results, and neither changes the finding.</p>
+<p class="hint">Ratings move. Re-verify every number in this document before it goes in front of anyone
+outside Circuit Coders.</p>
+
+<div class="foot">
+  Leo Lebel · Circuit Coders · Brand &amp; Reputation Management<br>
+  leo@circuitcoders.com · 442-297-8170 · circuitcoders.com
+</div>
+</div>
+
+<script>
+(function () {
+  var roof = document.getElementById('s-roof'),
+      units = document.getElementById('s-units'),
+      gross = document.getElementById('s-gross'),
+      defl = document.getElementById('s-defl');
+
+  function money(n) {
+    return '$' + Math.round(n).toLocaleString('en-US');
+  }
+
+  function recalc() {
+    var r = +roof.value,
+        u = +units.value,
+        g = +gross.value,
+        d = +defl.value / 10;           // slider is in tenths of a percent
+
+    var unitsAtRisk = r * u * (d / 100),
+        grossAtRisk = unitsAtRisk * g,
+        cost = r * 1000,
+        net = grossAtRisk - cost,
+        mult = cost > 0 ? grossAtRisk / cost : 0;
+
+    document.getElementById('v-roof').textContent = r;
+    document.getElementById('v-units').textContent = u;
+    document.getElementById('v-gross').textContent = money(g);
+    document.getElementById('v-defl').textContent = d.toFixed(1) + '%';
+
+    document.getElementById('o-units').textContent = unitsAtRisk.toFixed(0);
+    document.getElementById('o-gross').textContent = money(grossAtRisk);
+    document.getElementById('o-cost').textContent = money(cost);
+    document.getElementById('o-net').textContent = money(net);
+    document.getElementById('o-mult').textContent =
+      mult.toFixed(1) + '× return · ' + money(net * 12) + ' net per year';
+  }
+
+  [roof, units, gross, defl].forEach(function (el) {
+    el.addEventListener('input', recalc);
+  });
+  recalc();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Brand &amp; Reputation Audit — Phil Smith Automotive Group</title>
+<style>
+  @page {
+    size: letter; margin: 0.85in 0.8in 0.95in;
+    @bottom-left { content: "Circuit Coders · Brand & Reputation Audit"; font-family: "Helvetica Neue", Helvetica, sans-serif; font-size: 7.5pt; color: #9aa0ac; }
+    @bottom-right { content: "Page " counter(page) " of " counter(pages); font-family: "Helvetica Neue", Helvetica, sans-serif; font-size: 7.5pt; color: #9aa0ac; }
+  }
+  * { box-sizing: border-box; }
+  body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: #1a1f2b; font-size: 10.5pt; line-height: 1.55; margin: 0; }
+
+  .brandbar { height: 5pt; margin-bottom: 22pt; display: flex; }
+  .brandbar span { flex: 1; }
+
+  .cover { margin-bottom: 26pt; border-bottom: 1pt solid #d8dbe2; padding-bottom: 20pt; }
+  /* Every marque file is pre-normalised to an identical canvas height, so one
+     CSS height renders all twelve at matched optical weight. Inline-block, not
+     flex — WeasyPrint's flex/object-fit handling clips and overlaps images. */
+  .marques { margin-bottom: 18pt; }
+  .marques img { height: 21pt; vertical-align: middle; margin: 0 22pt 13pt 0; }
+
+  .kicker { font-size: 8.5pt; letter-spacing: 2.5px; text-transform: uppercase; color: #8a8f9c; margin-bottom: 8pt; }
+  h1 { font-size: 22pt; font-weight: 700; letter-spacing: -0.5px; margin: 0 0 4pt; }
+  .subtitle { font-size: 12.5pt; color: #4a5160; font-weight: 400; margin: 0 0 12pt; }
+  .meta { font-size: 9pt; color: #6a7080; }
+  .meta strong { color: #1a1f2b; font-weight: 600; }
+
+  h2 { break-after: avoid; font-size: 13.5pt; font-weight: 700; margin: 24pt 0 8pt; padding-top: 13pt; border-top: 1pt solid #d8dbe2; letter-spacing: -0.2px; }
+  h2 .num { color: #BB162B; margin-right: 8pt; }
+  h3 { break-after: avoid; font-size: 11pt; font-weight: 700; margin: 15pt 0 5pt; }
+  p { margin: 0 0 8pt; }
+  ul { margin: 0 0 9pt; padding-left: 18pt; }
+  li { margin-bottom: 3.5pt; }
+
+  table { width: 100%; border-collapse: collapse; margin: 8pt 0 12pt; font-size: 9.5pt; }
+  th { text-align: left; font-size: 8pt; text-transform: uppercase; letter-spacing: 1px; color: #6a7080; border-bottom: 1.5pt solid #1a1f2b; padding: 4pt 8pt 4pt 0; }
+  tr { break-inside: avoid; }
+  td { border-bottom: 0.6pt solid #e3e5ea; padding: 5pt 8pt 5pt 0; vertical-align: top; }
+  td.n { text-align: right; padding-right: 14pt; font-variant-numeric: tabular-nums; }
+  th.n { text-align: right; padding-right: 14pt; }
+  .bad { color: #a33327; font-weight: 600; }
+  .good { color: #1f6e43; font-weight: 600; }
+
+  .callout { background: #f7f5f2; border-left: 3pt solid #BB162B; padding: 9pt 12pt; margin: 10pt 0 12pt; }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout .hd { font-weight: 700; margin-bottom: 3pt; }
+  blockquote { margin: 6pt 0; padding-left: 10pt; border-left: 2pt solid #d8dbe2; color: #4a5160; font-style: italic; }
+
+  .price-line { font-size: 12pt; margin: 4pt 0; }
+  .price-line strong { font-size: 13pt; }
+  .plan { break-inside: avoid; border-top: 0.6pt solid #e3e5ea; padding: 9pt 0; }
+  .plan-name { font-weight: 700; font-size: 11pt; }
+  .plan-price { float: right; font-weight: 700; font-size: 12pt; }
+  .plan p { margin: 3pt 0 0; color: #4a5160; font-size: 10pt; }
+
+  .footer { margin-top: 28pt; padding-top: 12pt; border-top: 1pt solid #d8dbe2; font-size: 9pt; color: #6a7080; }
+  .footer strong { color: #1a1f2b; }
+  .avoid-break { break-inside: avoid; }
+  .pagebreak { break-before: page; }
+  .note { font-size: 9pt; color: #6a7080; font-style: italic; }
+</style>
+</head>
+<body>
+
+<div class="brandbar">
+  <span style="background:#EB0A1E"></span><span style="background:#05141F"></span>
+  <span style="background:#8E8E90"></span><span style="background:#E60012"></span>
+  <span style="background:#003478"></span><span style="background:#16232D"></span>
+  <span style="background:#002C5F"></span><span style="background:#C3002F"></span>
+  <span style="background:#0B2C5D"></span><span style="background:#C8102E"></span>
+  <span style="background:#97002E"></span><span style="background:#00A19B"></span>
+</div>
+
+<div class="cover">
+  <div class="marques">
+    <img src="assets/brand-toyota.png" alt="Toyota">
+    <img src="assets/brand-kia.png" alt="Kia">
+    <img src="assets/brand-hyundai.png" alt="Hyundai">
+    <img src="assets/brand-ford.png" alt="Ford"><br>
+    <img src="assets/brand-gmc.png" alt="GMC">
+    <img src="assets/brand-chevrolet.png" alt="Chevrolet">
+    <img src="assets/brand-acura.png" alt="Acura">
+    <img src="assets/brand-lincoln.png" alt="Lincoln"><br>
+    <img src="assets/brand-nissan.png" alt="Nissan">
+    <img src="assets/brand-mitsubishi.png" alt="Mitsubishi">
+    <img src="assets/brand-mercedes.png" alt="Mercedes-Benz">
+    <img src="assets/brand-buick.png" alt="Buick">
+  </div>
+  <div class="kicker">Circuit Coders · Confidential</div>
+  <h1>Brand &amp; Reputation Audit</h1>
+  <p class="subtitle">Phil Smith Automotive Group — all thirteen dealerships</p>
+  <p class="meta"><strong>Prepared for</strong> Jared Saunders&nbsp;&nbsp;·&nbsp;&nbsp;<strong>Prepared by</strong> Leo Lebel, Circuit Coders&nbsp;&nbsp;·&nbsp;&nbsp;<strong>Audited</strong> July 27, 2026</p>
+</div>
+
+<h2>Executive Summary</h2>
+<p>Thirteen dealerships across Florida and North Carolina, carrying roughly 37,600 Google reviews at an average of 4.55 stars. These are healthy, well-run stores. Their public reputation is being written by a platform holding three percent of that volume.</p>
+<p><strong>Yelp rates this group at 2.4 stars. Google rates the same stores at 4.55.</strong> That gap holds at every rooftop we measured — eleven for eleven, both states, every brand. It is not one weak store or one difficult market. It is one unmanaged platform, and it is the one that surfaces when a shopper searches your dealership by name.</p>
+<p>Alongside it: six duplicate and phantom listings splitting your reviews, a data-breach notice sitting unmonitored in the footer of every store, an unanswered complaint thread on Kia of Vero Beach, and a domain carrying live staff email that expires in October.</p>
+<p>Every figure below was read directly from the public listing on <strong>July 27, 2026</strong> and is independently re-verifiable. No estimates, no modelled numbers, no third-party data brokers.</p>
+
+<h2><span class="num">1</span>The Two-Star Gap</h2>
+<p>We audited every store on every platform that carries a public rating. The pattern is identical everywhere: <strong>Yelp sits one-and-a-half to three stars below every other platform, at every single store.</strong></p>
+
+<table class="avoid-break">
+  <thead><tr><th>Store</th><th class="n">Yelp</th><th class="n">Google</th><th class="n">CARFAX</th><th class="n">KBB</th><th class="n">Cars.com</th><th class="n">Gap</th></tr></thead>
+  <tr><td>Southern Pines Kia</td><td class="n bad">1.6</td><td class="n good">4.6</td><td class="n">4.6</td><td class="n">—</td><td class="n">—</td><td class="n bad">−3.0</td></tr>
+  <tr><td>Southern Pines Chevrolet GMC</td><td class="n bad">2.1</td><td class="n good">4.2</td><td class="n">4.6</td><td class="n">4.6</td><td class="n">4.2</td><td class="n bad">−2.1</td></tr>
+  <tr><td>Pinehurst Toyota</td><td class="n bad">2.2</td><td class="n good">4.6</td><td class="n">4.6</td><td class="n">5.0</td><td class="n">4.0</td><td class="n bad">−2.4</td></tr>
+  <tr><td>Toyota of Vero Beach</td><td class="n bad">2.2</td><td class="n good">4.6</td><td class="n">4.4</td><td class="n">—</td><td class="n">3.5</td><td class="n bad">−2.4</td></tr>
+  <tr><td>Tallahassee Ford Lincoln</td><td class="n bad">2.2</td><td class="n good">4.4</td><td class="n">4.2</td><td class="n">4.7</td><td class="n">3.1</td><td class="n bad">−2.2</td></tr>
+  <tr><td>Kia of Vero Beach</td><td class="n bad">2.4</td><td class="n good">4.6</td><td class="n bad">0 rev.</td><td class="n">5.0</td><td class="n">4.0</td><td class="n bad">−2.2</td></tr>
+  <tr><td>Phil Smith Mitsubishi</td><td class="n bad">2.8</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n bad">−1.9</td></tr>
+  <tr><td>Pinehurst Hyundai</td><td class="n bad">2.8</td><td class="n good">4.5</td><td class="n">—</td><td class="n">—</td><td class="n">4.0</td><td class="n bad">−1.7</td></tr>
+  <tr><td>Mark Jacobson Toyota</td><td class="n bad">2.9</td><td class="n good">4.6</td><td class="n">4.6</td><td class="n">4.8</td><td class="n">4.8</td><td class="n bad">−1.7</td></tr>
+  <tr><td>Phil Smith Kia</td><td class="n bad">3.0</td><td class="n good">4.7</td><td class="n">4.4</td><td class="n">5.0</td><td class="n">4.5</td><td class="n bad">−1.7</td></tr>
+  <tr><td>Phil Smith Acura</td><td class="n bad">3.4</td><td class="n good">4.7</td><td class="n">4.7</td><td class="n">5.0</td><td class="n">3.9</td><td class="n bad">−1.3</td></tr>
+  <tr><td>Southern Pines Nissan</td><td class="n">none</td><td class="n good">4.5</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+  <tr><td>Mercedes-Benz of Fayetteville</td><td class="n">none</td><td class="n good">4.4</td><td class="n">4.5</td><td class="n">4.6</td><td class="n">4.9</td><td class="n">—</td></tr>
+</table>
+<p class="note">Yelp: 2.4 average across roughly 1,100 reviews. Google: 4.55 average across roughly 37,600.</p>
+
+<h3>What this looks like at one store</h3>
+<p>Twenty-three people on Yelp give <strong>Southern Pines Kia</strong> 1.6 stars. Meanwhile <strong>2,077 other customers</strong> — 857 on Google, 587 on CARFAX, 633 on Birdeye — rate the same store between 4.5 and 4.6.</p>
+<p>Twenty-three reviews are beating two thousand, because Yelp ranks on a brand-name search and the others do not.</p>
+
+<div class="callout avoid-break">
+  <p class="hd">There is a mechanical reason for this</p>
+  <p>Yelp's own listing for Toyota of Vero Beach shows <strong>114 recommended reviews and 110 more that it hides</strong> — it suppresses roughly half of everything written about the store. Its filter systematically buries reviews from low-activity accounts, which is exactly what a person who buys one car every six years looks like. Your satisfied customer is filtered out. The prolific complainer is not.</p>
+</div>
+
+<h3>Independent evidence the stores are well run</h3>
+<p>This matters, because the audit is not a criticism of the operation:</p>
+<ul>
+  <li><strong>CarEdge</strong>, which grades dealers on verified out-the-door pricing, awards <strong>Grade A</strong> to Phil Smith Acura, Southern Pines Kia and Southern Pines Chevrolet. Its verdict on the Acura store: <em>"One of the good ones. You can walk in here with confidence."</em></li>
+  <li><strong>CARFAX</strong>, tied to verified service transactions, rates every store measured between <strong>4.2 and 4.7</strong>.</li>
+  <li><strong>Mercedes-Benz of Fayetteville</strong> holds the Best of the Best award from Mercedes-Benz, two years running.</li>
+</ul>
+
+<h2 class="pagebreak"><span class="num">2</span>What Else We Found</h2>
+
+<h3>1. A data-breach notice is live in the footer of every store</h3>
+<p>philsmithauto.com/security-notice.htm carries a <strong>Notice of Data Incident</strong>. In the group's own words:</p>
+<blockquote>"…posting this substitute notice to provide customers and individuals with information about the cybersecurity incident on our systems…"</blockquote>
+<p>A <em>substitute notice</em> is the legally required public posting used when a company cannot individually notify everyone whose personal data may have been exposed. It is linked from every store's footer, and no one is monitoring what ranks beside it. Dealership breaches reliably attract class-action firms whose pages then rank on the dealership's own name — a reputation exposure an order of magnitude larger than any review score.</p>
+
+<h3>2. An unanswered complaint thread on Kia of Vero Beach</h3>
+<p>A public Facebook post from roughly a month ago, <strong>30+ comments</strong>: a recall, a full transmission failure, and a customer left in a rental for more than two months. Still active. Nobody from the store has replied.</p>
+
+<h3>3. Six duplicate and phantom listings are splitting your reviews</h3>
+<ul>
+  <li><strong>Phil Smith Kia</strong> has a second Yelp listing filed under "Lghthse Point," rated <strong>1.0 stars</strong>, quoting the same review text as the real 3.0-star profile.</li>
+  <li><strong>Kia of Vero Beach Service</strong> exists as a third Vero address, stranding a genuine five-star review where no customer will ever see it.</li>
+  <li><strong>Southern Pines Nissan</strong> has no Yelp listing at all, while your own site publishes it as a separate dealership.</li>
+  <li><strong>Phil Smith Mitsubishi</strong> has two listings.</li>
+  <li><strong>Southern Pines Chevrolet</strong> is published under three different names with four different phone numbers — for one building.</li>
+  <li>A <strong>Kia</strong> complaint sits on the <strong>Toyota</strong> of Vero Beach profile; the reviewer names the Kia division himself.</li>
+</ul>
+
+<h3>4. Your own published data contradicts itself</h3>
+<ul>
+  <li><strong>Phil Smith Kia</strong> — Google lists (954) 427-7222; your group site lists (954) 545-7200. Two numbers, one store, from the two sources customers actually use.</li>
+  <li><strong>Vero ZIP conflict</strong> — Toyota published as 32962, Kia as 32960. Two buildings thirty seconds apart on the same highway.</li>
+  <li><strong>Five domains</strong> across the two Vero rooftops. One of them, toyotaofvero.com, carries live staff email and <strong>expires October 20, 2026</strong>.</li>
+  <li><strong>Four spellings of the same street</strong> on a single page of your website. Citation matching is literal — this is how aggregators create duplicate listings.</li>
+</ul>
+
+<h3>5. Some stores are managed. Most are not.</h3>
+<p>Mark Jacobson Toyota runs an active Facebook page — 6,400 followers, 84% recommend across 476 reviews. Birdeye is deployed and performing at Phil Smith Kia, Southern Pines Kia and Phil Smith Mitsubishi.</p>
+<p>Meanwhile <strong>both Vero rooftops have unclaimed Birdeye profiles</strong>, one listing the store in the wrong state. Southern Pines Kia's own website review page reads <em>"No reviews yet"</em> while the store holds 633 Birdeye reviews at 4.5 stars. The tools are already paid for. Nobody is holding a standard across the group.</p>
+
+<h3>6. No store in the group is BBB accredited</h3>
+<p>Toyota of Vero Beach carries an <strong>F</strong>, driven by a 41-point licensing alert — and the dealership holds a valid Florida MV4029 licence through September 2027. It is a records gap, not a licensing problem, and it is correctable.</p>
+
+<h2><span class="num">3</span>The Program</h2>
+<p>The work splits cleanly: a one-time cleanup that removes the structural damage, then an ongoing standard that keeps it from returning.</p>
+
+<h3>Phase one — recovery sprint</h3>
+<p>Six weeks, one time. Every duplicate and phantom listing filed for removal or merge. One canonical name, address and phone per rooftop, propagated to the aggregators that feed everything downstream. The Yelp response backlog cleared at all thirteen stores. Both Vero Birdeye profiles claimed and corrected. The BBB licensing record challenged with your MV4029. A baseline captured per store, so every later gain is provable rather than asserted.</p>
+
+<h3>Phase two — ongoing brand management</h3>
+<p>Every new review answered within 24 hours, on every platform, at every store. Review generation running in the service lane so the volume that beats Yelp's filter actually accumulates. Listings monitored so duplicates never quietly reappear. Monthly reporting per rooftop. Brand-search monitoring — including the breach notice — so nothing ranks beside your name without you knowing first.</p>
+
+<div class="plan avoid-break">
+  <span class="plan-price">$4,500 one time</span>
+  <span class="plan-name">Recovery sprint</span>
+  <p>All thirteen stores, six weeks. Duplicate removal, NAP correction, response backlog, Birdeye claims, BBB record.</p>
+</div>
+<div class="plan avoid-break">
+  <span class="plan-price">$7,600 / month</span>
+  <span class="plan-name">Group brand management</span>
+  <p>All thirteen stores, both states, every platform. $585 per store — against $1,250 per store at the current two-rooftop rate.</p>
+</div>
+<div class="plan avoid-break">
+  <span class="plan-price">$650 / store / month</span>
+  <span class="plan-name">Or expand one store at a time</span>
+  <p>Keep the current Vero agreement and add rooftops individually as each one proves out.</p>
+</div>
+
+<p class="note" style="margin-top:12pt">Month to month, thirty days' notice, no term commitment. Everything created — every listing, login and profile — belongs to the dealership.</p>
+
+<h2><span class="num">4</span>Method</h2>
+<p>Every figure was read directly from the public listing on <strong>July 27, 2026</strong>. No estimates, no modelled numbers, no third-party data brokers. Ratings move; anything acted on should be re-verified first.</p>
+<p>The store roster was taken from your own site navigation and homepage rather than the /locations page, which is out of date and omits both Phil Smith Mitsubishi and Mercedes-Benz of Fayetteville. Corporate structure was confirmed against Florida Division of Corporations filings.</p>
+
+<div class="footer">
+  <strong>Circuit Coders</strong> · Leo Lebel · Brand &amp; Reputation Management<br>
+  Vehicle marques shown are the property of their respective manufacturers and appear here for identification only.
+</div>
+
+</body>
+</html>
