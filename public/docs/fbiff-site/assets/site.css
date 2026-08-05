@@ -1,0 +1,243 @@
+/* ─────────────────────────────────────────────────────────────
+   Fallbrook / Bonsall International Film Festival
+   Concept: "Marquee" — the Historic Mission Theater's bulb-lit
+   marquee against a night street. Warm projection light on deep
+   blue-black. One accent (amber). Everything else is type.
+   ───────────────────────────────────────────────────────────── */
+
+:root{
+  --night:#0A0C10;
+  --night-2:#0F131A;
+  --night-3:#161B24;
+  --screen:#F3F0E9;
+  --muted:rgba(243,240,233,.56);
+  --muted-2:rgba(243,240,233,.38);
+  --amber:#E3A22F;
+  --amber-2:#F5C97A;
+  --line:rgba(243,240,233,.13);
+  --line-soft:rgba(243,240,233,.07);
+  --serif:'Instrument Serif',Georgia,serif;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --gut:clamp(20px,5vw,64px);
+  --maxw:1240px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--night);color:var(--screen);
+  font-family:var(--sans);font-size:17px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--amber);color:var(--night)}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:2px}
+
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 var(--gut)}
+
+/* ── Type scale ───────────────────────────────────────────── */
+.display{font-family:var(--serif);font-weight:400;line-height:.94;letter-spacing:-.02em}
+h1.display{font-size:clamp(46px,8.4vw,116px)}
+h2.display{font-size:clamp(34px,5vw,62px);line-height:1.0}
+h3{font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.6vw,34px);line-height:1.12;letter-spacing:-.01em}
+em,.ital{font-style:italic}
+
+.label{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--amber)}
+.label--dim{color:var(--muted-2)}
+.lede{font-size:clamp(18px,2vw,22px);line-height:1.55;color:rgba(243,240,233,.80);max-width:62ch}
+p{max-width:70ch;color:rgba(243,240,233,.78)}
+p + p{margin-top:1em}
+
+/* ── Marquee bulbs — the site's one ornament, earned from the
+      venue itself. Used only to open and close major sections. ── */
+.bulbs{display:flex;gap:14px;align-items:center;margin:0 0 26px}
+.bulbs i{width:7px;height:7px;border-radius:50%;background:var(--amber);
+  box-shadow:0 0 10px rgba(227,162,47,.75);opacity:.85;flex:none}
+.bulbs i:nth-child(even){opacity:.42;box-shadow:none}
+.bulbs--rule{gap:0;flex:1;height:1px;background:var(--line);margin-left:16px}
+
+/* ── Header ───────────────────────────────────────────────── */
+.hdr{position:sticky;top:0;z-index:60;background:rgba(10,12,16,.78);
+  backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);
+  border-bottom:1px solid var(--line-soft)}
+.hdr__in{display:flex;align-items:center;gap:28px;height:66px}
+.brand{display:flex;align-items:baseline;gap:10px;flex:none}
+.brand b{font-family:var(--serif);font-weight:400;font-size:23px;letter-spacing:.01em}
+.brand span{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--muted-2);
+  text-transform:uppercase}
+.nav{display:flex;gap:26px;margin-left:auto;align-items:center}
+.nav a{font-size:14px;font-weight:500;color:rgba(243,240,233,.66);
+  padding:4px 0;border-bottom:1px solid transparent;transition:color .18s,border-color .18s}
+.nav a:hover{color:var(--screen)}
+.nav a[aria-current="page"]{color:var(--screen);border-bottom-color:var(--amber)}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--sans);
+  font-size:14px;font-weight:600;letter-spacing:.01em;padding:11px 20px;border-radius:2px;
+  border:1px solid transparent;transition:transform .16s,background .16s,border-color .16s;
+  white-space:nowrap;cursor:pointer}
+.btn--amber{background:var(--amber);color:#17120A}
+.btn--amber:hover{background:var(--amber-2);transform:translateY(-1px)}
+.btn--ghost{border-color:var(--line);color:var(--screen)}
+.btn--ghost:hover{border-color:var(--amber);color:var(--amber)}
+.btn--lg{font-size:16px;padding:15px 28px}
+.navtoggle{display:none;margin-left:auto;background:none;border:1px solid var(--line);
+  color:var(--screen);border-radius:2px;padding:8px 12px;font-size:13px;cursor:pointer}
+
+/* ── Hero: a projected title card. The vignette is light thrown
+      on a screen, not a decorative gradient. ─────────────────── */
+.hero{position:relative;padding:clamp(56px,9vw,108px) 0 clamp(34px,4vw,54px);overflow:hidden}
+.hero::before{content:"";position:absolute;left:50%;top:-28%;transform:translateX(-50%);
+  width:min(1500px,150vw);height:900px;pointer-events:none;
+  background:radial-gradient(ellipse at center,rgba(227,162,47,.17),rgba(227,162,47,.05) 42%,transparent 68%)}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(rgba(243,240,233,.055) 1px,transparent 1px);
+  background-size:24px 24px;
+  -webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 20%,transparent 74%);
+          mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 20%,transparent 74%)}
+.hero__in{position:relative;z-index:2}
+.hero h1{margin:22px 0 0;max-width:15ch}
+.hero h1 .ital{color:var(--amber-2)}
+/* Three equal tracks so the venue can't orphan onto its own row. */
+.hero__meta{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:38px 0 0;
+  border-top:1px solid var(--line)}
+.hero__meta div{padding:20px 30px 20px 0;border-right:1px solid var(--line-soft)}
+.hero__meta div:last-child{border-right:0;padding-right:0}
+.hero__meta dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--muted-2);margin-bottom:7px}
+.hero__meta dd{font-family:var(--serif);font-size:clamp(21px,2.3vw,27px);line-height:1.15}
+.hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px;align-items:center}
+.hero__note{font-size:13.5px;color:var(--muted-2)}
+
+/* ── Section rhythm ───────────────────────────────────────── */
+.sec{padding:clamp(56px,8vw,104px) 0;border-top:1px solid var(--line-soft)}
+.sec--flush{border-top:0}
+.sec__head{display:flex;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(28px,4vw,52px)}
+.sec__head .txt{flex:1;min-width:min(100%,420px)}
+.sec__head h2{margin-top:12px}
+.sec__head p{margin-top:14px}
+
+/* ── Stat strip ───────────────────────────────────────────── */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));
+  border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.stats div{padding:26px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--muted-2);margin-bottom:10px}
+.stats dd{font-family:var(--serif);font-size:clamp(28px,3.2vw,40px);line-height:1;color:var(--screen)}
+.stats dd small{display:block;font-family:var(--sans);font-size:13px;color:var(--muted);
+  margin-top:9px;line-height:1.45}
+
+/* ── Award cards ──────────────────────────────────────────── */
+.awards{display:grid;gap:1px;background:var(--line);
+  grid-template-columns:repeat(auto-fit,minmax(288px,1fr));border:1px solid var(--line)}
+.award{background:var(--night);padding:30px 28px 32px;display:flex;flex-direction:column;
+  min-height:210px;transition:background .2s}
+.award:hover{background:var(--night-2)}
+.award .cat{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--amber);margin-bottom:auto;padding-bottom:22px}
+.award .ttl{font-family:var(--serif);font-size:clamp(25px,2.5vw,32px);line-height:1.08;letter-spacing:-.01em}
+.award .dir{font-size:14px;color:var(--muted);margin-top:11px}
+.award .dir b{color:rgba(243,240,233,.86);font-weight:500}
+
+/* ── Programme table ──────────────────────────────────────── */
+.prog{border-top:1px solid var(--line)}
+.slot{display:grid;grid-template-columns:112px 1fr auto;gap:clamp(16px,3vw,40px);
+  padding:22px 0 24px;border-bottom:1px solid var(--line-soft);align-items:start}
+.slot:hover{background:linear-gradient(90deg,rgba(227,162,47,.05),transparent 60%)}
+.slot__t{font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:.04em;
+  color:var(--amber);padding-top:7px;font-variant-numeric:tabular-nums}
+.slot__b h4{font-family:var(--serif);font-weight:400;font-size:clamp(22px,2.2vw,28px);
+  line-height:1.14;letter-spacing:-.01em}
+.slot__b h4 .win{display:inline-block;vertical-align:middle;margin-left:11px;
+  font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--amber);border:1px solid rgba(227,162,47,.45);border-radius:2px;padding:3px 7px;
+  position:relative;top:-2px}
+.slot__b p{font-size:14.5px;line-height:1.58;color:var(--muted);margin-top:9px;max-width:74ch}
+.slot__d{font-family:var(--mono);font-size:12px;color:var(--muted-2);padding-top:9px;
+  white-space:nowrap;font-variant-numeric:tabular-nums}
+
+/* ── Generic panel / callout ──────────────────────────────── */
+.panel{background:var(--night-2);border:1px solid var(--line);padding:clamp(26px,4vw,44px)}
+.panel--amber{border-color:rgba(227,162,47,.34);
+  background:linear-gradient(180deg,rgba(227,162,47,.07),transparent 70%),var(--night-2)}
+.split{display:grid;gap:clamp(28px,4vw,56px);grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  align-items:start}
+
+/* ── Price / tier list ───────────────────────────────────── */
+.tiers{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);
+  grid-template-columns:repeat(auto-fit,minmax(232px,1fr))}
+.tier{background:var(--night);padding:28px 26px;display:flex;flex-direction:column;gap:9px}
+.tier .amt{font-family:var(--serif);font-size:40px;line-height:1;color:var(--amber-2)}
+.tier .nm{font-size:15px;font-weight:600}
+.tier .dt{font-size:13.5px;color:var(--muted);line-height:1.5;flex:1}
+.tier .inc{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--amber)}
+
+/* ── Steps ───────────────────────────────────────────────── */
+.steps{counter-reset:s;display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+.step{background:var(--night);padding:26px 28px;display:grid;
+  grid-template-columns:44px 1fr;gap:22px;align-items:start}
+.step::before{counter-increment:s;content:counter(s,decimal-leading-zero);
+  font-family:var(--mono);font-size:12px;color:var(--amber);letter-spacing:.1em;padding-top:6px}
+.step h4{font-family:var(--serif);font-weight:400;font-size:24px;line-height:1.15}
+.step p{font-size:14.5px;margin-top:7px;color:var(--muted)}
+
+/* ── Definition rows (venue, contact) ────────────────────── */
+.rows{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:minmax(120px,190px) 1fr;gap:clamp(16px,3vw,40px);
+  padding:17px 0;border-bottom:1px solid var(--line-soft)}
+.row dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--muted-2);padding-top:5px}
+.row dd{font-size:16px;color:rgba(243,240,233,.88)}
+.row dd a{border-bottom:1px solid rgba(227,162,47,.5);transition:color .16s}
+.row dd a:hover{color:var(--amber)}
+
+/* ── Footer ──────────────────────────────────────────────── */
+.ftr{border-top:1px solid var(--line);padding:clamp(48px,6vw,72px) 0 40px;background:var(--night-2)}
+.ftr__grid{display:grid;gap:clamp(28px,4vw,48px);
+  grid-template-columns:minmax(240px,1.6fr) repeat(auto-fit,minmax(150px,1fr))}
+.ftr h5{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--muted-2);margin-bottom:15px;font-weight:500}
+.ftr ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.ftr ul a{font-size:14.5px;color:rgba(243,240,233,.72)}
+.ftr ul a:hover{color:var(--amber)}
+.ftr__brand b{font-family:var(--serif);font-weight:400;font-size:27px;display:block;line-height:1.15}
+.ftr__brand p{font-size:14px;color:var(--muted);margin-top:13px;max-width:38ch}
+.ftr__legal{margin-top:clamp(34px,5vw,52px);padding-top:22px;border-top:1px solid var(--line-soft);
+  display:flex;flex-wrap:wrap;gap:10px 28px;font-size:12.5px;color:var(--muted-2)}
+
+/* ── Mock banner: this is a demo, and it says so. ─────────── */
+.mockbar{background:var(--amber);color:#17120A;font-family:var(--mono);font-size:11px;
+  letter-spacing:.13em;text-transform:uppercase;text-align:center;padding:8px 16px;font-weight:600}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width:860px){
+  .nav{position:fixed;inset:66px 0 auto;background:var(--night-2);flex-direction:column;
+    align-items:stretch;gap:0;padding:8px 0 18px;border-bottom:1px solid var(--line);
+    display:none}
+  .nav[data-open="true"]{display:flex}
+  .nav a{padding:14px var(--gut);font-size:16px;border-bottom:1px solid var(--line-soft)}
+  .nav .btn{margin:14px var(--gut) 0;justify-content:center}
+  .navtoggle{display:block}
+  .hero__meta{grid-template-columns:1fr;border-top:1px solid var(--line)}
+  .hero__meta div{border-right:0;padding:15px 0;width:100%;
+    border-bottom:1px solid var(--line-soft)}
+  .slot{grid-template-columns:76px 1fr;gap:16px}
+  .slot__d{grid-column:2;padding-top:0;margin-top:8px}
+  .step{grid-template-columns:1fr;gap:10px}
+  .row{grid-template-columns:1fr;gap:5px}
+  .row dt{padding-top:0}
+  /* The footer's explicit 240px track plus an auto-fit 150px track is wider
+     than a phone; stack it instead of letting the page scroll sideways. */
+  .ftr__grid{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .stats{grid-template-columns:1fr}
+  .tiers,.awards{grid-template-columns:1fr}
+  .hero__cta .btn{width:100%;justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}

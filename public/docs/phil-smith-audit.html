@@ -47,6 +47,42 @@
     .marquee img { margin: 0 30px 14px 0; }
   }
 
+
+  /* ---- Visual figures: dumbbell gap chart, ratio bars, funnel, timeline ---- */
+  figure.viz { margin: 26px 0 18px; }
+  figure.viz figcaption { font-size: 13px; color: var(--dim); margin-top: 10px; font-style: italic; }
+  .viz svg { width: 100%; height: auto; display: block; overflow: visible; }
+  .legend { display: flex; gap: 20px; flex-wrap: wrap; font-size: 12.5px;
+            color: var(--soft); margin: 0 0 12px; letter-spacing: .2px; }
+  .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%;
+              margin-right: 6px; vertical-align: -1px; }
+
+  /* Timeline */
+  .tl { position: relative; margin: 26px 0 10px; padding-left: 0; }
+  .tl-row { display: grid; grid-template-columns: 92px 26px 1fr; gap: 0 14px;
+            align-items: stretch; position: relative; }
+  .tl-when { text-align: right; font-size: 12px; font-weight: 700; letter-spacing: .4px;
+             text-transform: uppercase; color: var(--accent); padding-top: 13px; }
+  .tl-rail { position: relative; display: flex; justify-content: center;
+             align-items: flex-start; }
+  .tl-rail::before { content: ""; position: absolute; left: 50%; transform: translateX(-50%);
+                     top: 0; bottom: 0; width: 2px; background: var(--hair); }
+  .tl-row:first-child .tl-rail::before { top: 20px; }
+  .tl-row:last-child .tl-rail::before { bottom: auto; height: 20px; }
+  .tl-dot { position: relative; z-index: 1; width: 13px; height: 13px; border-radius: 50%;
+            background: #fff; border: 2.5px solid var(--accent); margin-top: 14px; flex: none; }
+  .tl-row.steady .tl-dot { border-color: var(--good); background: var(--good); }
+  .tl-body { padding: 6px 0 24px; }
+  .tl-body h4 { margin: 0 0 4px; font-size: 16px; font-weight: 700; }
+  .tl-body p { margin: 0; font-size: 14.5px; color: var(--soft); }
+  .tl-tag { display: inline-block; font-size: 10.5px; letter-spacing: 1px; text-transform: uppercase;
+            font-weight: 700; color: #fff; background: var(--good); padding: 2px 7px;
+            border-radius: 2px; margin-left: 8px; vertical-align: 2px; }
+  @media (max-width: 560px) {
+    .tl-row { grid-template-columns: 62px 22px 1fr; gap: 0 10px; }
+    .tl-when { font-size: 10.5px; }
+  }
+
   .kicker { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--faint); margin-bottom: 10px; }
   h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.6px; margin: 0 0 6px; line-height: 1.15; }
   .subtitle { font-size: 18px; color: var(--soft); margin: 0 0 14px; }
@@ -221,11 +257,11 @@
 
   <div class="kicker">Circuit Coders · Confidential</div>
   <h1>Brand &amp; Reputation Management Proposal</h1>
-  <p class="subtitle">Phil Smith Automotive Group — the eleven rooftops outside Vero Beach</p>
+  <p class="subtitle">Phil Smith Automotive Group — eleven rooftops across Florida and North Carolina</p>
   <p class="meta"><strong>Prepared for</strong> Phil Smith Automotive Group — attn. Jared Saunders&nbsp; ·&nbsp; <strong>Prepared by</strong> Leo Lebel, Circuit Coders&nbsp; ·&nbsp; <strong>Date</strong> July 28, 2026&nbsp; ·&nbsp; <strong>Valid</strong> 30 days</p>
 
   <h2>Executive Summary</h2>
-  <p>Toyota and Kia of Vero Beach are already under management. This proposal covers the <strong>other eleven rooftops</strong> — Lighthouse Point, Pompano Beach, Tallahassee, Durham, Fayetteville, Pinehurst and Southern Pines.</p>
+  <p>This proposal covers <strong>eleven rooftops</strong> — Lighthouse Point, Pompano Beach, Tallahassee, Durham, Fayetteville, Pinehurst and Southern Pines.</p>
   <p>Together they carry roughly <strong>28,400 Google reviews at an average of 4.5 stars</strong>. These are healthy, well-run stores. Their public reputation is being written by a platform holding three percent of that volume.</p>
   <p><strong>Yelp rates these eleven stores at 2.6. Google rates the same stores at 4.5.</strong> That gap holds at every rooftop carrying a Yelp rating — nine for nine, both states, every brand. It is not one weak store or one difficult market. It is one unmanaged platform, and it is the one that surfaces when a shopper searches the dealership by name.</p>
   <p>Alongside it: four duplicate and phantom listings splitting reviews, a brand search left undefended around the group's data-incident notice, unanswered complaint threads at two stores, and name-address-phone records that contradict each other between Google and the group's own website.</p>
@@ -247,35 +283,34 @@
   </div>
 
   <div class="included">
-    <p class="hd">You already have the proof of concept</p>
-    <p>Toyota and Kia of Vero Beach are on this program now. Everything described here is the same work, run to the same standard, extended to the rooftops that don't have it yet.</p>
+    <p class="hd">Nothing here is a projection</p>
+    <p>Every figure in this document was read directly off the public listings on July 27. No modelled numbers, no third-party data brokers. You can re-verify any of it from a browser before deciding anything.</p>
   </div>
 
   <h2><span class="num">1</span>What We Found</h2>
   <p>We audited each of the eleven rooftops on every platform carrying a public rating. The pattern is identical everywhere: <strong>Yelp sits one-and-a-half to three stars below every other platform, at every single store.</strong></p>
 
-  <div class="scroll">
-  <table>
-    <thead><tr><th>Store</th><th class="n">Yelp</th><th class="n">Google</th><th class="n">CARFAX</th><th class="n">KBB</th><th class="n">Cars.com</th><th class="n">Gap</th></tr></thead>
-    <tbody>
-    <tr><td>Southern Pines Kia</td><td class="n bad">1.6</td><td class="n good">4.6</td><td class="n">4.6</td><td class="n">—</td><td class="n">—</td><td class="n bad">−3.0</td></tr>
-    <tr><td>Southern Pines Chevrolet GMC</td><td class="n bad">2.1</td><td class="n good">4.2</td><td class="n">4.6</td><td class="n">4.6</td><td class="n">4.2</td><td class="n bad">−2.1</td></tr>
-    <tr><td>Pinehurst Toyota</td><td class="n bad">2.2</td><td class="n good">4.6</td><td class="n">4.6</td><td class="n">5.0</td><td class="n">4.0</td><td class="n bad">−2.4</td></tr>
-    <tr><td>Tallahassee Ford Lincoln</td><td class="n bad">2.2</td><td class="n good">4.4</td><td class="n">4.2</td><td class="n">4.7</td><td class="n">3.1</td><td class="n bad">−2.2</td></tr>
-    <tr><td>Phil Smith Mitsubishi</td><td class="n bad">2.8</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n bad">−1.9</td></tr>
-    <tr><td>Pinehurst Hyundai</td><td class="n bad">2.8</td><td class="n good">4.5</td><td class="n">—</td><td class="n">—</td><td class="n">4.0</td><td class="n bad">−1.7</td></tr>
-    <tr><td>Mark Jacobson Toyota</td><td class="n bad">2.9</td><td class="n good">4.6</td><td class="n">4.6</td><td class="n">4.8</td><td class="n">4.8</td><td class="n bad">−1.7</td></tr>
-    <tr><td>Phil Smith Kia</td><td class="n bad">3.0</td><td class="n good">4.7</td><td class="n">4.4</td><td class="n">5.0</td><td class="n">4.5</td><td class="n bad">−1.7</td></tr>
-    <tr><td>Phil Smith Acura</td><td class="n bad">3.4</td><td class="n good">4.7</td><td class="n">4.7</td><td class="n">5.0</td><td class="n">3.9</td><td class="n bad">−1.3</td></tr>
-    <tr><td>Southern Pines Nissan</td><td class="n">none</td><td class="n good">4.5</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
-    <tr><td>Mercedes-Benz of Fayetteville</td><td class="n">none</td><td class="n good">4.4</td><td class="n">4.5</td><td class="n">4.6</td><td class="n">4.9</td><td class="n">—</td></tr>
-    </tbody>
-  </table>
-  </div>
-  <p class="hint">Yelp: 2.6 average across roughly 960 reviews. Google: 4.5 average across roughly 28,400.</p>
+  <figure class="viz">
+    <div class="legend"><span><i style="background:#a33327"></i>Yelp</span><span><i style="background:#1f6e43"></i>Google</span><span style="color:#8a8f9c">Bar length = the gap</span></div>
+    <svg viewBox="0 0 746 390" role="img" aria-label="Every rooftop rates 1.3 to 3.0 stars lower on Yelp than on Google">
+      <line x1="196.0" y1="18" x2="196.0" y2="360" stroke="#e3e5ea" stroke-width="1" stroke-dasharray="2 3"/><text x="196.0" y="376" text-anchor="middle" font-size="11" fill="#8a8f9c">1.0</text><line x1="323.5" y1="18" x2="323.5" y2="360" stroke="#e3e5ea" stroke-width="1" stroke-dasharray="2 3"/><text x="323.5" y="376" text-anchor="middle" font-size="11" fill="#8a8f9c">2.0</text><line x1="451.0" y1="18" x2="451.0" y2="360" stroke="#e3e5ea" stroke-width="1" stroke-dasharray="2 3"/><text x="451.0" y="376" text-anchor="middle" font-size="11" fill="#8a8f9c">3.0</text><line x1="578.5" y1="18" x2="578.5" y2="360" stroke="#e3e5ea" stroke-width="1" stroke-dasharray="2 3"/><text x="578.5" y="376" text-anchor="middle" font-size="11" fill="#8a8f9c">4.0</text><line x1="706.0" y1="18" x2="706.0" y2="360" stroke="#e3e5ea" stroke-width="1" stroke-dasharray="2 3"/><text x="706.0" y="376" text-anchor="middle" font-size="11" fill="#8a8f9c">5.0</text>
+      <line x1="196" y1="40" x2="706" y2="40" stroke="#eef0f3" stroke-width="1"/><text x="184" y="44" text-anchor="end" font-size="12.5" fill="#4a5160">Southern Pines Kia</text><line x1="272.5" y1="40" x2="655.0" y2="40" stroke="#c9ccd4" stroke-width="3" stroke-linecap="round"/><text x="463.8" y="32" text-anchor="middle" font-size="10.5" font-weight="700" fill="#a33327">−3.0</text><circle cx="655.0" cy="40" r="6" fill="#1f6e43"/><text x="666.0" y="44" font-size="11.5" font-weight="700" fill="#1f6e43">4.6</text><circle cx="272.5" cy="40" r="6" fill="#a33327"/><text x="261.5" y="44" text-anchor="end" font-size="11.5" font-weight="700" fill="#a33327">1.6</text><line x1="196" y1="70" x2="706" y2="70" stroke="#eef0f3" stroke-width="1"/><text x="184" y="74" text-anchor="end" font-size="12.5" fill="#4a5160">Southern Pines Chevrolet GMC</text><line x1="336.2" y1="70" x2="604.0" y2="70" stroke="#c9ccd4" stroke-width="3" stroke-linecap="round"/><text x="470.1" y="62" text-anchor="middle" font-size="10.5" font-weight="700" fill="#a33327">−2.1</text><circle cx="604.0" cy="70" r="6" fill="#1f6e43"/><text x="615.0" y="74" font-size="11.5" font-weight="700" fill="#1f6e43">4.2</text><circle cx="336.2" cy="70" r="6" fill="#a33327"/><text x="325.2" y="74" text-anchor="end" font-size="11.5" font-weight="700" fill="#a33327">2.1</text><line x1="196" y1="100" x2="706" y2="100" stroke="#eef0f3" stroke-width="1"/><text x="184" y="104" text-anchor="end" font-size="12.5" fill="#4a5160">Pinehurst Toyota</text><line x1="349.0" y1="100" x2="655.0" y2="100" stroke="#c9ccd4" stroke-width="3" stroke-linecap="round"/><text x="502.0" y="92" text-anchor="middle" font-size="10.5" font-weight="700" fill="#a33327">−2.4</text><circle cx="655.0" cy="100" r="6" fill="#1f6e43"/><text x="666.0" y="104" font-size="11.5" font-weight="700" fill="#1f6e43">4.6</text><circle cx="349.0" cy="100" r="6" fill="#a33327"/><text x="338.0" y="104" text-anchor="end" font-size="11.5" font-weight="700" fill="#a33327">2.2</text><line x1="196" y1="130" x2="706" y2="130" stroke="#eef0f3" stroke-width="1"/><text x="184" y="134" text-anchor="end" font-size="12.5" fill="#4a5160">Tallahassee Ford Lincoln</text><line x1="349.0" y1="130" x2="629.5" y2="130" stroke="#c9ccd4" stroke-width="3" stroke-linecap="round"/><text x="489.2" y="122" text-anchor="middle" font-size="10.5" font-weight="700" fill="#a33327">−2.2</text><circle cx="629.5" cy="130" r="6" fill="#1f6e43"/><text x="640.5" y="134" font-size="11.5" font-weight="700" fill="#1f6e43">4.4</text><circle cx="349.0" cy="130" r="6" fill="#a33327"/><text x="338.0" y="134" text-anchor="end" font-size="11.5" font-weight="700" fill="#a33327">2.2</text><line x1="196" y1="160" x2="706" y2="160" stroke="#eef0f3" stroke-width="1"/><text x="184" y="164" text-anchor="end" font-size="12.5" fill="#4a5160">Phil Smith Mitsubishi</text><circle cx="425.5" cy="160" r="6" fill="#a33327"/><text x="414.5" y="164" text-anchor="end" font-size="11.5" font-weight="700" fill="#a33327">2.8</text><line x1="196" y1="190" x2="706" y2="190" stroke="#eef0f3" stroke-width="1"/><text x="184" y="194" text-anchor="end" font-size="12.5" fill="#4a5160">Pinehurst Hyundai</text><line x1="425.5" y1="190" x2="642.2" y2="190" stroke="#c9ccd4" stroke-width="3" stroke-linecap="round"/><text x="533.9" y="182" text-anchor="middle" font-size="10.5" font-weight="700" fill="#a33327">−1.7</text><circle cx="642.2" cy="190" r="6" fill="#1f6e43"/><text x="653.2" y="194" font-size="11.5" font-weight="700" fill="#1f6e43">4.5</text><circle cx="425.5" cy="190" r="6" fill="#a33327"/><text x="414.5" y="194" text-anchor="end" font-size="11.5" font-weight="700" fill="#a33327">2.8</text><line x1="196" y1="220" x2="706" y2="220" stroke="#eef0f3" stroke-width="1"/><text x="184" y="224" text-anchor="end" font-size="12.5" fill="#4a5160">Mark Jacobson Toyota</text><line x1="438.2" y1="220" x2="655.0" y2="220" stroke="#c9ccd4" stroke-width="3" stroke-linecap="round"/><text x="546.6" y="212" text-anchor="middle" font-size="10.5" font-weight="700" fill="#a33327">−1.7</text><circle cx="655.0" cy="220" r="6" fill="#1f6e43"/><text x="666.0" y="224" font-size="11.5" font-weight="700" fill="#1f6e43">4.6</text><circle cx="438.2" cy="220" r="6" fill="#a33327"/><text x="427.2" y="224" text-anchor="end" font-size="11.5" font-weight="700" fill="#a33327">2.9</text><line x1="196" y1="250" x2="706" y2="250" stroke="#eef0f3" stroke-width="1"/><text x="184" y="254" text-anchor="end" font-size="12.5" fill="#4a5160">Phil Smith Kia</text><line x1="451.0" y1="250" x2="667.8" y2="250" stroke="#c9ccd4" stroke-width="3" stroke-linecap="round"/><text x="559.4" y="242" text-anchor="middle" font-size="10.5" font-weight="700" fill="#a33327">−1.7</text><circle cx="667.8" cy="250" r="6" fill="#1f6e43"/><text x="678.8" y="254" font-size="11.5" font-weight="700" fill="#1f6e43">4.7</text><circle cx="451.0" cy="250" r="6" fill="#a33327"/><text x="440.0" y="254" text-anchor="end" font-size="11.5" font-weight="700" fill="#a33327">3.0</text><line x1="196" y1="280" x2="706" y2="280" stroke="#eef0f3" stroke-width="1"/><text x="184" y="284" text-anchor="end" font-size="12.5" fill="#4a5160">Phil Smith Acura</text><line x1="502.0" y1="280" x2="667.8" y2="280" stroke="#c9ccd4" stroke-width="3" stroke-linecap="round"/><text x="584.9" y="272" text-anchor="middle" font-size="10.5" font-weight="700" fill="#a33327">−1.3</text><circle cx="667.8" cy="280" r="6" fill="#1f6e43"/><text x="678.8" y="284" font-size="11.5" font-weight="700" fill="#1f6e43">4.7</text><circle cx="502.0" cy="280" r="6" fill="#a33327"/><text x="491.0" y="284" text-anchor="end" font-size="11.5" font-weight="700" fill="#a33327">3.4</text><line x1="196" y1="310" x2="706" y2="310" stroke="#eef0f3" stroke-width="1"/><text x="184" y="314" text-anchor="end" font-size="12.5" fill="#4a5160">Southern Pines Nissan</text><circle cx="642.2" cy="310" r="6" fill="#1f6e43"/><text x="653.2" y="314" font-size="11.5" font-weight="700" fill="#1f6e43">4.5</text><text x="194" y="314" font-size="10.5" fill="#8a8f9c" font-style="italic">no Yelp listing</text><line x1="196" y1="340" x2="706" y2="340" stroke="#eef0f3" stroke-width="1"/><text x="184" y="344" text-anchor="end" font-size="12.5" fill="#4a5160">Mercedes-Benz of Fayetteville</text><circle cx="629.5" cy="340" r="6" fill="#1f6e43"/><text x="640.5" y="344" font-size="11.5" font-weight="700" fill="#1f6e43">4.4</text><text x="194" y="344" font-size="10.5" fill="#8a8f9c" font-style="italic">no Yelp listing</text>
+    </svg>
+    <figcaption>Every store with a Yelp rating sits between 1.3 and 3.0 stars below its Google rating. Nine for nine, both states, every brand.</figcaption>
+  </figure>
+  <p class="hint">Yelp: 2.6 average across roughly 960 reviews. Google: 4.5 average across roughly 28,400. Full per-platform table available on request.</p>
 
   <h3>What this looks like at one store</h3>
   <p>Twenty-three people on Yelp give <strong>Southern Pines Kia</strong> 1.6 stars. Meanwhile <strong>2,077 other customers</strong> — 857 on Google, 587 on CARFAX, 633 on Birdeye — rate the same store between 4.5 and 4.6. Twenty-three against two thousand.</p>
+<figure class="viz">
+    <svg viewBox="0 0 706 92" role="img" aria-label="23 Yelp reviews against 2,077 reviews elsewhere at Southern Pines Kia">
+      <g transform="translate(0,14)"><rect x="0.0" y="0" width="7.7" height="46" fill="#a33327"/><rect x="7.7" y="0" width="288.1" height="46" fill="#1f6e43"/><text x="151.8" y="28" text-anchor="middle" font-size="12.5" font-weight="700" fill="#fff">Google 857</text><rect x="295.8" y="0" width="197.3" height="46" fill="#2f7f55"/><text x="394.5" y="28" text-anchor="middle" font-size="12.5" font-weight="700" fill="#fff">CARFAX 587</text><rect x="493.2" y="0" width="212.8" height="46" fill="#4a9a6d"/><text x="599.6" y="28" text-anchor="middle" font-size="12.5" font-weight="700" fill="#fff">Birdeye 633</text></g>
+      <line x1="0" y1="68" x2="7.7" y2="68" stroke="#a33327" stroke-width="2"/>
+      <text x="4" y="86" font-size="11.5" font-weight="700" fill="#a33327">23 reviews set the public number</text>
+      <text x="706" y="86" text-anchor="end" font-size="11.5" fill="#4a5160">2,077 customers say otherwise</text>
+    </svg>
+    <figcaption>Southern Pines Kia. The red sliver is the entire basis of the 1.6-star rating a shopper sees first.</figcaption>
+  </figure>
   <p>Twenty-three reviews are beating two thousand, because Yelp ranks on a brand-name search and the others do not.</p>
 
   <div class="callout">
@@ -496,7 +531,7 @@
   <h2><span class="num">6</span>Investment</h2>
   <div class="plan">
     <div class="row"><span class="plan-name">Standard rate</span><span class="plan-price">$1,250 / rooftop / month</span></div>
-    <p>The rate Vero Beach is on today.</p>
+    <p>Our standard per-rooftop rate for brand and reputation management.</p>
   </div>
   <div class="plan">
     <div class="row"><span class="plan-name">Regional pilot — five rooftops</span><span class="plan-price">$1,100 / rooftop / month</span></div>
@@ -504,11 +539,11 @@
   </div>
   <div class="plan">
     <div class="row"><span class="plan-name">Group rate — all eleven</span><span class="plan-price">$1,000 / rooftop / month</span></div>
-    <p>Adding the remaining eleven rooftops at once drops the per-rooftop rate by $250. One standard, one team, one reporting line across both states — Vero included at the same rate from that point on.</p>
+    <p>Taking all eleven rooftops at once drops the per-rooftop rate by $250. One standard, one team, one reporting line across both states.</p>
   </div>
 
   <div class="total">
-    <div class="row"><span class="t-label">The remaining eleven rooftops</span><span class="t-num">$11,000 / month</span></div>
+    <div class="row"><span class="t-label">All eleven rooftops</span><span class="t-num">$11,000 / month</span></div>
     <div class="row t-sub"><span>Against $13,750 at the standard rate</span><span class="t-save">You save $2,750 / month · $33,000 / year</span></div>
   </div>
 
@@ -545,22 +580,73 @@
 
   <h2><span class="num">8</span>Timeline — Milestone by Milestone</h2>
 
-  <h3>Days 0–2 · Access and baseline</h3>
-  <p>Kickoff call. Access collected. Day-zero baseline captured for all eleven rooftops across every platform, before a single change is made — this is what every later report is measured against.</p>
+  <figure class="viz" style="margin-top:22px">
+    <svg viewBox="0 0 706 74" role="img" aria-label="Sixty day program timeline">
+      <line x1="16" y1="40" x2="690" y2="40" stroke="#e3e5ea" stroke-width="3"/>
+      <line x1="16" y1="40" x2="574" y2="40" stroke="#BB162B" stroke-width="3"/>
+      <g font-size="10.5" fill="#8a8f9c" text-anchor="middle">
+        <circle cx="16"  cy="40" r="6" fill="#fff" stroke="#BB162B" stroke-width="2.5"/><text x="16"  y="64">Day 0</text>
+        <circle cx="72"  cy="40" r="6" fill="#fff" stroke="#BB162B" stroke-width="2.5"/><text x="72"  y="64">Day 2</text>
+        <circle cx="156" cy="40" r="6" fill="#fff" stroke="#BB162B" stroke-width="2.5"/><text x="156" y="64">Day 7</text>
+        <circle cx="296" cy="40" r="6" fill="#fff" stroke="#BB162B" stroke-width="2.5"/><text x="296" y="64">Day 21</text>
+        <circle cx="574" cy="40" r="7" fill="#BB162B"/><text x="574" y="64" fill="#BB162B" font-weight="700">Day 60</text>
+        <circle cx="690" cy="40" r="6" fill="#1f6e43"/><text x="672" y="64" fill="#1f6e43" font-weight="700">Month 3+</text>
+      </g>
+      <g font-size="11" font-weight="700" fill="#4a5160" text-anchor="middle">
+        <text x="44"  y="22">baseline</text>
+        <text x="114" y="22">quick wins</text>
+        <text x="226" y="22">everything filed</text>
+        <text x="435" y="22">close-out</text>
+        <text x="638" y="22" fill="#1f6e43">steady state</text>
+      </g>
+    </svg>
+    <figcaption>The recovery sprint runs days 0&ndash;60 and is included at no additional cost. Steady state begins month three.</figcaption>
+  </figure>
 
-  <h3>Days 2–7 · Immediate wins</h3>
-  <p>Self-serve corrections filed the same week: wrong addresses, wrong categories, wrong hours. Birdeye claimed where unclaimed. Southern Pines Nissan's missing Yelp listing claimed. You get screenshots, not a status update.</p>
+  <div class="tl">
+    <div class="tl-row">
+      <div class="tl-when">Days 0&ndash;2</div>
+      <div class="tl-rail"><span class="tl-dot"></span></div>
+      <div class="tl-body">
+        <h4>Access and baseline</h4>
+        <p>Kickoff call. Access collected. Day-zero baseline captured for all eleven rooftops across every platform, <em>before</em> a single change is made &mdash; this is what every later report is measured against.</p>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-when">Days 2&ndash;7</div>
+      <div class="tl-rail"><span class="tl-dot"></span></div>
+      <div class="tl-body">
+        <h4>Immediate wins</h4>
+        <p>Self-serve corrections filed the same week: wrong addresses, categories, hours. Birdeye claimed where unclaimed. Southern Pines Nissan's missing Yelp listing claimed. <strong>You get screenshots, not a status update.</strong></p>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-when">Days 7&ndash;21</div>
+      <div class="tl-rail"><span class="tl-dot"></span></div>
+      <div class="tl-body">
+        <h4>Everything filed</h4>
+        <p>All four duplicate and phantom listings submitted for removal or merge with evidence packs. Canonical name, address and phone locked per rooftop and pushed to the aggregators that feed everything downstream. BBB profiles claimed. Review-response backlog cleared across all eleven stores.</p>
+      </div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-when">Days 21&ndash;60</div>
+      <div class="tl-rail"><span class="tl-dot"></span></div>
+      <div class="tl-body">
+        <h4>Close-out and handover</h4>
+        <p>Review generation live in the service lane &mdash; printed kits, per-store platform routing, advisor one-pager. Weekly brand-search monitoring running. First full monthly report delivered per rooftop.</p>
+      </div>
+    </div>
+    <div class="tl-row steady">
+      <div class="tl-when">Month 3+</div>
+      <div class="tl-rail"><span class="tl-dot"></span></div>
+      <div class="tl-body">
+        <h4>Steady state<span class="tl-tag">ongoing</span></h4>
+        <p>Every review answered inside 24 hours. Listings monitored so duplicates never quietly return. Monthly reporting per store, and the third-party queue tracked until every filed item resolves.</p>
+      </div>
+    </div>
+  </div>
 
-  <h3>Days 7–21 · Everything filed</h3>
-  <p>All four duplicate and phantom listings submitted for removal or merge with evidence packs. Canonical name, address and phone locked per rooftop and pushed to the aggregators that feed everything downstream. BBB profiles claimed. The review-response backlog cleared across all eleven stores.</p>
-
-  <h3>Days 21–60 · Close-out and handover to steady state</h3>
-  <p>Review generation live in the service lane — printed kits, per-store platform routing, advisor one-pager. Weekly brand-search monitoring running. First full monthly report delivered per rooftop.</p>
-
-  <h3>Month 3 onward</h3>
-  <p>Steady state: every review answered inside 24 hours, listings monitored so duplicates never quietly return, monthly reporting per store, and the third-party queue tracked until every filed item resolves.</p>
-
-  <p class="hint">Third-party items — Yelp removals, Facebook merges, BBB updates, aggregator propagation — run on the platforms' clocks, not ours. Every one is tracked in the monthly report until it closes. We do not mark something done because we filed it.</p>
+  <p class="hint">Third-party items &mdash; Yelp removals, Facebook merges, BBB updates, aggregator propagation &mdash; run on the platforms' clocks, not ours. Every one is tracked in the monthly report until it closes. <strong>We do not mark something done because we filed it.</strong></p>
 
   <h2><span class="num">10</span>Acceptance</h2>
   <p>To proceed, confirm in writing which option you are taking and name the contact at each store. That is the whole process — no contract to redline, nothing to sign, nothing due today.</p>
@@ -585,13 +671,12 @@
   <div class="included">
     <p class="hd">Ready when you are</p>
     <p>Leo Lebel · Circuit Coders · leo@circuitcoders.com<br>
-    Toyota and Kia of Vero Beach are already running this program — you can see the work before you decide on the rest.</p>
+    Start with the five-store pilot and judge the program on ninety days of real numbers before committing to the rest.</p>
   </div>
 
   <h2><span class="num">9</span>Method</h2>
   <p>Every figure was read directly from the public listing on <strong>July 27, 2026</strong>. No estimates, no modelled numbers, no third-party data brokers. Ratings move; anything acted on should be re-verified first.</p>
   <p>The store roster was taken from your own site navigation and homepage rather than the /locations page, which is out of date and omits both Phil Smith Mitsubishi and Mercedes-Benz of Fayetteville. Corporate structure was confirmed against Florida Division of Corporations filings.</p>
-  <p>Toyota and Kia of Vero Beach are excluded throughout — they are already under management and are not part of this scope.</p>
   <p>This proposal is valid for thirty days from the date above. Figures will be re-verified before any engagement begins.</p>
 
   <div class="foot">

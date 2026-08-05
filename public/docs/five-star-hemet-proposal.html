@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Website &amp; Customer App Proposal · 5 Star Plumbing, Heating &amp; Air and 5 Star Water &amp; Ice</title>
+<style>
+  :root {
+    --ink:#1a1f2b; --soft:#4a5160; --dim:#6a7080; --faint:#8a8f9c;
+    --rule:#d8dbe2; --hair:#e3e5ea; --panel:#f7f5f2;
+    --bad:#a33327; --good:#1f6e43; --accent:#B0602A; --water:#17727C;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0; background: #fff; color: var(--ink);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16.5px; line-height: 1.55; -webkit-font-smoothing: antialiased;
+  }
+  .brandbar { height: 6px; display: flex; }
+  .brandbar span { flex: 1; }
+  .page { max-width: 760px; margin: 0 auto; padding: 26px 22px 80px; }
+
+  .kicker { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--faint); margin-bottom: 10px; }
+  h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.6px; margin: 0 0 6px; line-height: 1.15; }
+  .subtitle { font-size: 18px; color: var(--soft); margin: 0 0 14px; }
+  .meta { font-size: 14px; color: var(--dim); padding-bottom: 24px; border-bottom: 1px solid var(--rule); }
+  .meta strong { color: var(--ink); font-weight: 600; }
+
+  h2 { font-size: 21px; font-weight: 700; letter-spacing: -0.3px; margin: 40px 0 10px;
+       padding-top: 20px; border-top: 1px solid var(--rule); scroll-margin-top: 14px; }
+  h2 .num { color: var(--accent); margin-right: 10px; }
+  h2.w .num { color: var(--water); }
+  h3 { font-size: 17px; font-weight: 700; margin: 26px 0 6px; }
+  h4 { font-size: 15px; font-weight: 700; margin: 20px 0 4px; }
+  p { margin: 0 0 12px; }
+  ul, ol { margin: 0 0 14px; padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); }
+
+  /* contents */
+  .toc { background: var(--panel); padding: 18px 22px; margin: 24px 0 8px; }
+  .toc .hd { font-size: 11px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--dim); margin-bottom: 10px; }
+  .toc ol { margin: 0; padding-left: 18px; columns: 2; column-gap: 28px; font-size: 14.5px; }
+  .toc li { margin-bottom: 5px; break-inside: avoid; }
+  .toc a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule); }
+  .toc a:hover { border-bottom-color: var(--accent); }
+  @media (max-width: 560px) { .toc ol { columns: 1; } }
+
+  .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 14px 0 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 540px; }
+  th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+       color: var(--dim); border-bottom: 2px solid var(--ink); padding: 7px 10px 7px 0; font-weight: 600; }
+  td { border-bottom: 1px solid var(--hair); padding: 9px 10px 9px 0; vertical-align: top; }
+  td.n, th.n { text-align: right; padding-right: 16px; font-variant-numeric: tabular-nums; }
+  .bad { color: var(--bad); font-weight: 700; }
+  .good { color: var(--good); font-weight: 700; }
+  .hint { font-size: 13px; color: var(--dim); font-style: italic; margin-top: 4px; }
+  code { font-family: ui-monospace, Menlo, monospace; font-size: .86em; background: var(--panel); padding: 1px 5px; }
+
+  .callout { background: var(--panel); border-left: 4px solid var(--accent); padding: 16px 18px; margin: 18px 0; }
+  .callout.w { border-left-color: var(--water); }
+  .callout .hd { font-weight: 700; margin-bottom: 4px; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .alert { border: 1px solid var(--bad); border-left: 5px solid var(--bad);
+           background: #fdf6f5; padding: 18px 20px; margin: 18px 0; }
+  .alert .tag { display: inline-block; background: var(--bad); color: #fff; font-size: 11px;
+                letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
+                padding: 4px 9px; border-radius: 2px; margin-bottom: 10px; }
+  .alert h3 { margin: 0 0 8px; }
+  .alert p:last-child { margin-bottom: 0; }
+
+  .included { border: 2px solid var(--good); background: #f4faf6; padding: 16px 20px; margin: 18px 0; }
+  .included .hd { font-weight: 700; font-size: 17px; color: var(--good); margin-bottom: 4px; }
+  .included p:last-child { margin-bottom: 0; }
+
+  /* live-site banner */
+  .live { border: 2px solid var(--ink); margin: 22px 0; }
+  .live .hd { background: var(--ink); color: #fff; padding: 12px 18px; font-weight: 700; font-size: 15px;
+              display: flex; align-items: center; gap: 9px; }
+  .live .dot { width: 8px; height: 8px; border-radius: 50%; background: #4ED08A; flex: none; }
+  .live .bd { padding: 18px; }
+  .live .url { font-family: ui-monospace, Menlo, monospace; font-size: 17px; font-weight: 700;
+               word-break: break-all; display: inline-block; margin-bottom: 6px; }
+  .live .bd p:last-child { margin-bottom: 0; }
+
+  /* before / after matrix */
+  .matrix { width: 100%; border-collapse: collapse; margin: 18px 0 8px; font-size: 15px; min-width: 540px; }
+  .matrix th { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 8px 12px 8px 0;
+               border-bottom: 2px solid var(--ink); }
+  .matrix th.now { color: var(--bad); }
+  .matrix th.then { color: var(--good); }
+  .matrix td { padding: 9px 12px 9px 0; border-bottom: 1px solid var(--hair); vertical-align: top; }
+  .matrix td.lbl { font-weight: 600; width: 26%; }
+  .matrix td.now { color: var(--bad); }
+  .matrix td.then { color: var(--good); font-weight: 600; }
+
+  /* screens */
+  .screens { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px 20px; margin: 22px 0 10px; }
+  @media (max-width: 640px) { .screens { grid-template-columns: repeat(2, 1fr); gap: 20px 14px; } }
+  .screens figure { margin: 0; }
+  .screens img { width: 100%; height: auto; display: block; border-radius: 10px; }
+  .screens figcaption { font-size: 13px; color: var(--soft); margin-top: 9px; line-height: 1.45; }
+  .screens figcaption b { display: block; color: var(--ink); font-size: 13.5px; margin-bottom: 2px; }
+
+  /* pricing */
+  .plan { border-top: 1px solid var(--hair); padding: 16px 0; }
+  .plan .row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .plan-name { font-weight: 700; font-size: 17px; }
+  .plan-price { font-weight: 700; font-size: 19px; white-space: nowrap; }
+  .plan p { color: var(--soft); font-size: 15px; margin: 6px 0 0; }
+  .plan ul { margin: 8px 0 0; font-size: 14.5px; color: var(--soft); }
+  @media (max-width: 560px) { .plan .row { flex-direction: column; gap: 2px; } }
+
+  .total { margin-top: 22px; padding: 18px 20px; background: var(--panel); border-left: 4px solid var(--accent); }
+  .total .row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .t-label { font-weight: 700; font-size: 18px; }
+  .t-num { font-weight: 700; font-size: 24px; white-space: nowrap; letter-spacing: -0.5px; }
+  .t-sub { margin-top: 8px; font-size: 14px; color: var(--dim); }
+  @media (max-width: 560px) { .total .row { flex-direction: column; gap: 2px; } .t-num { font-size: 21px; } }
+
+  /* timeline */
+  .tl { position: relative; margin: 26px 0 10px; }
+  .tl-row { display: grid; grid-template-columns: 92px 26px 1fr; gap: 0 14px; align-items: stretch; position: relative; }
+  .tl-when { text-align: right; font-size: 12px; font-weight: 700; letter-spacing: .4px;
+             text-transform: uppercase; color: var(--accent); padding-top: 13px; }
+  .tl-rail { position: relative; display: flex; justify-content: center; align-items: flex-start; }
+  .tl-rail::before { content: ""; position: absolute; left: 50%; transform: translateX(-50%);
+                     top: 0; bottom: 0; width: 2px; background: var(--hair); }
+  .tl-row:first-child .tl-rail::before { top: 20px; }
+  .tl-row:last-child .tl-rail::before { bottom: auto; height: 20px; }
+  .tl-dot { position: relative; z-index: 1; width: 13px; height: 13px; border-radius: 50%;
+            background: #fff; border: 2.5px solid var(--accent); margin-top: 14px; flex: none; }
+  .tl-row.steady .tl-dot { border-color: var(--good); background: var(--good); }
+  .tl-row.done .tl-dot { border-color: var(--good); background: var(--good); }
+  .tl-body { padding: 6px 0 24px; }
+  .tl-body h4 { margin: 0 0 4px; font-size: 16px; font-weight: 700; }
+  .tl-body p { margin: 0; font-size: 14.5px; color: var(--soft); }
+  .tl-tag { display: inline-block; font-size: 10.5px; letter-spacing: 1px; text-transform: uppercase;
+            font-weight: 700; color: #fff; background: var(--good); padding: 2px 7px;
+            border-radius: 2px; margin-left: 8px; vertical-align: 2px; }
+  @media (max-width: 560px) {
+    .tl-row { grid-template-columns: 62px 22px 1fr; gap: 0 10px; }
+    .tl-when { font-size: 10.5px; }
+  }
+
+  /* reply template */
+  .reply { border: 2px solid var(--ink); margin: 18px 0; }
+  .reply .hd { background: var(--ink); color: #fff; padding: 11px 18px; font-weight: 700; font-size: 15px; }
+  .reply .bd { padding: 18px; }
+  .opt { border: 1px solid var(--rule); padding: 13px 16px; margin-bottom: 10px; background: #fff; }
+  .opt:last-of-type { margin-bottom: 0; }
+  .opt .quote { font-family: ui-monospace, Menlo, monospace; font-size: 14.5px; font-weight: 700; color: var(--ink); }
+  .opt .sub { font-size: 13px; color: var(--dim); margin-top: 4px; }
+
+  .foot { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule);
+          font-size: 13.5px; color: var(--dim); }
+  .foot strong { color: var(--ink); }
+
+  @media (max-width: 560px) { body { font-size: 16px; } h1 { font-size: 25px; } }
+</style>
+</head>
+<body>
+
+<div class="brandbar">
+  <span style="background:#0D1117"></span><span style="background:#B0602A"></span>
+  <span style="background:#E7C39C"></span><span style="background:#BE3227"></span>
+  <span style="background:#17727C"></span><span style="background:#2FA3AF"></span>
+</div>
+
+<div class="page">
+
+  <div class="kicker">Circuit Coders &middot; Confidential</div>
+  <h1>Website &amp; Customer App Proposal</h1>
+  <p class="subtitle">5 Star Plumbing, Heating &amp; Air &mdash; and 5 Star Water &amp; Ice &mdash; Hemet, California</p>
+  <div class="meta">
+    Prepared for <strong>Gabriel Reyes</strong> &middot; August 4, 2026 &middot; valid 30 days<br>
+    Leo Lebel &middot; Circuit Coders &middot; leo@circuitcoders.com<br>
+    <strong>The website in section 2 is already built and live.</strong> The app in section 5 is a specification, not a quote &mdash; it is not priced here. Nothing has been invoiced.
+  </div>
+
+  <div class="toc">
+    <div class="hd">Contents</div>
+    <ol>
+      <li><a href="#s1">What we found</a></li>
+      <li><a href="#s2">The website &mdash; already live</a></li>
+      <li><a href="#s3">The water store's real problem</a></li>
+      <li><a href="#s4">The app, in one page</a></li>
+      <li><a href="#s5">Full product requirements</a></li>
+      <li><a href="#s6">The math</a></li>
+      <li><a href="#s7">Investment</a></li>
+      <li><a href="#s8">What we need from you</a></li>
+      <li><a href="#s9">Timeline</a></li>
+      <li><a href="#s10">Method</a></li>
+      <li><a href="#s11">Acceptance</a></li>
+    </ol>
+  </div>
+
+  <h2 style="border-top:0;padding-top:8px">Executive Summary</h2>
+  <p>
+    You run two businesses out of Hemet. <strong>5 Star Plumbing, Heating &amp; Air</strong> has
+    twenty-five years in the trade, a 4.8 on Google and two yards covering the valley and the 215.
+    <strong>5 Star Water &amp; Ice</strong>, on East Florida Avenue, has been an LLC since October 2024.
+    This proposal covers one thing for each, and they are deliberately different things.
+    <strong>The plumbing business gets a website</strong> &mdash; already built, link below.
+    <strong>The water store gets an app, not a website.</strong> A store people drive to does not need
+    a brochure site; it needs the thing that keeps regulars coming back, and that is a balance in
+    their pocket. Only the website carries a price here. The app is specified in full so you can
+    decide whether you want it at all before anyone talks about money.
+  </p>
+  <p>
+    The plumbing business does not have a reputation problem &mdash; that is the unusual part. The 4.8
+    is real and the BBB downgrade is for a single unanswered complaint, not for the work. What it has
+    is a <em>presentation</em> problem: the licence number appears nowhere on the current site, two
+    addresses of record have already split the business across two Yelp listings, and the site does not
+    convert an emergency caller in the ten seconds they will give it.
+  </p>
+  <p>
+    The water store's problem is different and simpler. Prepaid water runs on paper. Nobody &mdash;
+    customer or counter &mdash; can say what is left without asking, and every lost punch card is a
+    small argument the store loses on purpose because arguing is worse. An app fixes that by giving
+    both sides the same number.
+  </p>
+
+  <div class="live">
+    <div class="hd"><span class="dot"></span>The new website is live right now</div>
+    <div class="bd">
+      <a class="url" href="https://five-star-plumbing-eight.vercel.app/">five-star-plumbing-eight.vercel.app</a>
+      <p style="margin:6px 0 0;font-size:14.5px;color:var(--soft)">
+        Seven pages, built and deployed. Open it on your phone &mdash; that is where three quarters of
+        plumbing traffic lands. Nothing is charged unless you decide to keep it.
+      </p>
+    </div>
+  </div>
+
+  <div class="alert">
+    <span class="tag">Read this before launch</span>
+    <h3>Your CSLB licence number is not on your website</h3>
+    <p>
+      California requires a contractor's licence number on advertising, and a website is advertising.
+      It is also the gate on Google Local Services Ads &mdash; the "Google Guaranteed" placement that
+      sits above the map pack, which is the single best position a residential plumber can hold, and
+      verification for it requires a clean current licence plus proof of insurance.
+    </p>
+    <p style="margin-top:10px">
+      The new site is built to display it and currently <strong>hides the badge rather than print a
+      number we could not verify</strong>. Send us the licence number and it appears in the footer, on
+      the About page and in the search-engine data automatically.
+    </p>
+  </div>
+
+  <!-- ================================================================= -->
+  <h2 id="s1"><span class="num">1</span>What We Found</h2>
+  <p>
+    Read live from public sources on August 3&ndash;4, 2026. Nothing here is modelled or estimated, and
+    §10 lists what could not be verified rather than guessing at it.
+  </p>
+
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr><th>What we checked</th><th>What is there now</th><th class="n">Assessment</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Google rating</td><td>4.8 across 54 reviews</td><td class="n good">Strong</td></tr>
+        <tr><td>Licence number on the website</td><td>Not present anywhere</td><td class="n bad">Required by law</td></tr>
+        <tr><td>Address of record</td><td>Two &mdash; Tanya Ct 92542 on your site, Tanya Ave 92545 at BBB</td><td class="n bad">Splitting you</td></tr>
+        <tr><td>Yelp</td><td>Two separate listings, one per address</td><td class="n bad">Reviews divided</td></tr>
+        <tr><td>BBB</td><td>B&minus;, not accredited &mdash; for one unanswered complaint</td><td class="n bad">One week's work</td></tr>
+        <tr><td>Emergency conversion path</td><td>Contact form; phone number not the primary action</td><td class="n bad">Costs after-hours calls</td></tr>
+        <tr><td>Spanish</td><td>"Se habla espa&ntilde;ol" stated; site is English only</td><td class="n">Opportunity</td></tr>
+        <tr><td>Water store online</td><td>Facebook and Instagram only</td><td class="n">Fine for now &mdash; see below</td></tr>
+        <tr><td>Water store prepaid system</td><td>Paper, by all appearances</td><td class="n bad">Unmeasurable</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>The address question is the expensive one</h3>
+  <p>
+    Two addresses have already produced two Yelp listings, which means whatever reputation the second
+    one collects never reaches a customer looking at the first. It gets worse if it is not settled soon:
+    Google will not verify a second Business Profile at a second address for the same business, and
+    picking the wrong one to build on is expensive to undo once reviews have accumulated against it.
+  </p>
+  <p>
+    <strong>This is a two-minute decision that has to happen before anything else.</strong> Which one is
+    the real business address? Everything &mdash; the site, the Google profile, the Yelp consolidation
+    &mdash; keys off that answer.
+  </p>
+
+  <h3>The BBB grade is worth fixing this month</h3>
+  <p>
+    The B&minus; is specifically for "failure to respond to 1 complaint." It is not a judgement on the
+    work. Answering that one complaint is roughly a week of back-and-forth and very likely restores the
+    A, at which point it stops being something to hide and becomes a badge worth putting on the site
+    next to the licence number. We do not currently display the BBB grade anywhere, for that reason.
+  </p>
+
+  <div class="included">
+    <p class="hd">What is genuinely good, and why it matters</p>
+    <p>
+      Twenty-five years in the trade, a 4.8 on Google, plumbing and HVAC under one roof, two yards, and
+      Sunday closed for God and family. That last one is not a marketing line &mdash; it is the kind of
+      detail that makes a local business feel like a person instead of a franchise, and the new site
+      leads with it rather than burying it. <strong>None of the work proposed here is repair.</strong>
+      It is putting a good business where people can find it.
+    </p>
+  </div>
+
+  <!-- ================================================================= -->
+  <h2 id="s2"><span class="num">2</span>The Website &mdash; Already Live</h2>
+  <p>
+    Rather than describe a website, we built it. Seven pages, deployed, working on a phone. Open it
+    before you read the rest of this section:
+    <a href="https://five-star-plumbing-eight.vercel.app/">five-star-plumbing-eight.vercel.app</a>
+  </p>
+
+  <h3>What it does that a brochure site does not</h3>
+  <ul>
+    <li>
+      <strong>It knows what time it is.</strong> The dispatch panel shows "Office open now &mdash;
+      booking until 6pm" during hours and "After hours &mdash; dispatch is live" outside them, computed
+      on Hemet's clock. Sunday says <em>closed for God and family, emergency line still answered</em>.
+    </li>
+    <li>
+      <strong>It answers "do you come out here?" in five seconds.</strong> A ZIP checker with three
+      honest tiers &mdash; same-day in the valley, covered daily on the 215 corridor, call-to-confirm
+      for Anza and Aguanga. Not a marketing map that claims all of Southern California and then
+      declines the drive.
+    </li>
+    <li>
+      <strong>The service-area map is real.</strong> Every town is plotted from its actual latitude and
+      longitude, so the run from Riverside down to Temecula is the shape it really is.
+    </li>
+    <li>
+      <strong>The booking form interrupts itself.</strong> Choose "Right now" and it says: <em>then do
+      not fill in a form &mdash; shut the main off and call.</em> A form sitting in an inbox does not
+      dispatch a truck, and pretending otherwise costs the customer a floor.
+    </li>
+    <li>
+      <strong>The phone is never more than one tap away.</strong> Both numbers in the header, a sticky
+      call bar on mobile, tap-to-dial everywhere.
+    </li>
+    <li>
+      <strong>Search engines are told what you are.</strong> Structured data for a plumbing business
+      with both addresses, both phone numbers, hours, service area, the full service list and the FAQ
+      &mdash; which is what makes questions like "emergency plumber Hemet" able to surface you directly.
+    </li>
+  </ul>
+
+  <div class="scroll">
+    <table class="matrix">
+      <thead>
+        <tr><th></th><th class="now">Today</th><th class="then">The new site</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="lbl">Licence number</td><td class="now">Nowhere</td><td class="then">Footer, About page and search data &mdash; one edit away</td></tr>
+        <tr><td class="lbl">Emergency at 9pm</td><td class="now">Contact form</td><td class="then">Call bar, live dispatch status, triage that says dial</td></tr>
+        <tr><td class="lbl">"Do you serve my town?"</td><td class="now">A list of four cities</td><td class="then">ZIP checker, tiered, 21 towns mapped</td></tr>
+        <tr><td class="lbl">Two trades</td><td class="now">Two menus</td><td class="then">One company, one invoice &mdash; stated as the argument it is</td></tr>
+        <tr><td class="lbl">Trust signals</td><td class="now">"25+ years"</td><td class="then">Rating with its review count and the date it was verified</td></tr>
+        <tr><td class="lbl">Water store</td><td class="now">Unmentioned</td><td class="then">Named, with address and phone, on the plumbing site</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>What is deliberately not on it</h3>
+  <p>
+    No stock photography. Nothing on the site pretends to be a photo of your crew, your truck or your
+    work &mdash; a smiling model in a clean uniform reads as exactly what it is, and customers in this
+    trade are unusually good at spotting it. <strong>Send real job photos and a portrait of you and the
+    site improves considerably</strong>; the service and About pages have obvious homes for them.
+  </p>
+  <p>
+    No invented statistics either. Every number on the site traces to a source we recorded, and anything
+    we could not verify &mdash; your Yelp rating, the BBB grade &mdash; is simply absent rather than
+    approximated.
+  </p>
+
+  <div class="callout">
+    <p class="hd">Four things must be settled before it goes on your domain</p>
+    <p>
+      The licence number &middot; which address is the real one &middot; where booking-form submissions
+      should be sent &middot; your actual office hours, of which only the Sunday closure is sourced.
+      All four are single edits on our side. None require you to do anything technical.
+    </p>
+  </div>
+
+  <!-- ================================================================= -->
+  <h2 id="s3" class="w"><span class="num">3</span>The Water Store&rsquo;s Real Problem</h2>
+  <div class="callout w">
+    <p class="hd">And it is not a website</p>
+    <p>
+      We are not proposing one for the water store, and would talk you out of it if you asked. Nobody
+      researches where to refill a five-gallon bottle; they go to the one near them and they keep
+      going until something makes them stop. A website does not change that. What changes it is being
+      the store the customer has already paid, with a balance they can see.
+    </p>
+  </div>
+  <p>
+    The store sells water two ways: by the gallon at the counter, and &mdash; for regulars &mdash; in
+    bulk that gets drawn down over weeks. The second one runs on memory and punch cards. That produces
+    four small frictions, and they are all the same missing thing.
+  </p>
+
+  <div class="scroll">
+    <table>
+      <thead><tr><th>The friction</th><th>What it costs</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>The balance lives in a drawer</td>
+          <td>Cards get lost, soaked, left in the other car. Staff give the customer the benefit of the doubt, which is the right call and a slow leak of revenue.</td>
+        </tr>
+        <tr>
+          <td>Nobody buys a second block on purpose</td>
+          <td>Customers discover they are empty at the counter with the bottles already in the cart &mdash; the worst possible moment to be sold a hundred-gallon pack.</td>
+        </tr>
+        <tr>
+          <td>Regulars are invisible until they stop coming</td>
+          <td>No way to know a weekly customer has not been in for a month. The first signal is an empty till, by which point they have found another store.</td>
+        </tr>
+        <tr>
+          <td>The cash flow runs backwards</td>
+          <td>Pay-per-fill means the store carries filtration, power and rent, then collects three dollars at a time. Prepaid blocks flip that &mdash; money first, water after.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    An app is only worth building if it fixes all four at once, which it does, because each is a symptom
+    of one thing: <strong>there is no balance both sides can see.</strong>
+  </p>
+
+  <!-- ================================================================= -->
+  <h2 id="s4" class="w"><span class="num">4</span>The App, In One Page</h2>
+  <p>
+    A customer buys a block of gallons or joins a monthly plan. From then on, the number in their pocket
+    and the number at your register are the same number. At the counter they show a code; your staff
+    scan it on a tablet and type the gallons drawn. Both balances update at once and a receipt lands in
+    their history immediately.
+  </p>
+  <p>
+    <strong>Phase one needs no new hardware and changes nothing about how you dispense water.</strong>
+    One tablet at the counter is the entire equipment list. Self-serve at the machine is a later phase
+    and depends on what your dispenser's manufacturer allows.
+  </p>
+  <p>
+    <strong>There is no price on the app in this document, deliberately.</strong> Five answers change
+    the size of the build materially &mdash; they are listed in 5.12 &mdash; and quoting before you have
+    given them would mean either padding the number to cover the unknowns or revising it upward later.
+    Read the specification, tell us what is in and what is out, and we will price the version you
+    actually want.
+  </p>
+
+  <div class="callout w">
+    <p class="hd">One thing your brief conflated, and it matters</p>
+    <p>
+      "How much water they bought" and "what is left on their membership" are two different balances
+      with different rules. Gallons bought are stored value &mdash; permanent, they do not reset. A
+      membership allowance refreshes every month and does not roll over. A customer can hold both, and
+      the app always draws the perishable one first and shows them which bucket empties next. Treating
+      these as one number is the single most likely way this product goes wrong, so it is designed with
+      them separate from the beginning.
+    </p>
+  </div>
+
+  <!-- ================================================================= -->
+  <h2 id="s5" class="w"><span class="num">5</span>Full Product Requirements</h2>
+  <p>
+    This is the complete specification, included so you can see exactly what is being agreed to before
+    any money changes hands. It is also the document a developer builds from &mdash; there is no second,
+    more detailed version held back.
+  </p>
+
+  <h3>5.1 &nbsp;Goals</h3>
+  <ol>
+    <li>A customer can see their gallon balance and membership status <strong>in under three seconds</strong>, without calling the store.</li>
+    <li>A fill is <strong>recorded accurately at the moment it happens</strong>, with a receipt both sides can point at later.</li>
+    <li><strong>Buying more gallons takes one tap</strong>, and the prompt arrives before the customer is standing at the counter empty.</li>
+    <li><strong>Staff spend no more time per transaction than they do today.</strong> If the app slows the line down it will not get used, and an unused app is worse than no app.</li>
+  </ol>
+
+  <h4>Not in version one</h4>
+  <ul>
+    <li>Not a general online store &mdash; no shipping, no ice delivery, no accessories catalogue.</li>
+    <li>Not a replacement for your register. Your POS stays the record for cash and card takings; the app owns the gallon ledger only.</li>
+    <li>Not unattended self-serve dispensing (see 5.5).</li>
+    <li>Not a plumbing app, and not a website for the store. The two businesses reference each other and share nothing else.</li>
+  </ul>
+
+  <h3>5.2 &nbsp;How we will know it worked</h3>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Measure</th><th>Why it matters</th><th class="n">By day 90</th></tr></thead>
+      <tbody>
+        <tr><td>Enrolled customers</td><td>Worthless without the regulars on it</td><td class="n">150 accounts</td></tr>
+        <tr><td>Share of fills scanned</td><td>Whether staff use it under pressure</td><td class="n">70%</td></tr>
+        <tr><td>Prepaid share of water revenue</td><td>The cash-flow reason this exists</td><td class="n">35%</td></tr>
+        <tr><td>30-day repeat rate</td><td>Balance visibility should pull people back</td><td class="n">+10 points</td></tr>
+        <tr><td>Top-ups made before hitting zero</td><td>Proves the low-balance nudge works</td><td class="n">50%</td></tr>
+        <tr><td>Seconds added per transaction</td><td>The guardrail. Breach it and we simplify, not add</td><td class="n">under 8</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="hint">
+    Today's baselines are unknown &mdash; the store has no digital record of repeat rate or revenue mix.
+    Phase zero exists to measure them before anything is built, so these are compared against something
+    real instead of a guess.
+  </p>
+
+  <h3>5.3 &nbsp;Who uses it</h3>
+  <ul>
+    <li><strong>The weekly regular.</strong> Three to five five-gallon bottles a week for a household. Cares about not running out mid-month. Will prepay if the per-gallon price is visibly better. Often over 55, may prefer Spanish.</li>
+    <li><strong>The household organiser.</strong> Buys the water; someone else usually collects it. Needs the balance shared and needs to see who drew it down. This is who pays for the plan.</li>
+    <li><strong>Your counter staff.</strong> Serving somebody else while the app customer walks up. Needs a scan and a number, in that order, on a device already in their hand.</li>
+  </ul>
+  <p>
+    That first profile makes <strong>large type, high contrast, full Spanish and a login with no
+    password functional requirements, not polish.</strong> Sign-in is a phone number and a texted code
+    &mdash; no email a seventy-year-old has to remember, nothing to forget.
+  </p>
+
+  <h3>5.4 &nbsp;The journey that carries the product</h3>
+  <div class="tl">
+    <div class="tl-row"><div class="tl-when">At home</div><div class="tl-rail"><div class="tl-dot"></div></div>
+      <div class="tl-body"><h4>Opens the app</h4><p>Out of habit, or from a low-balance notification. Sees 62 gallons left and 18 days on the plan.</p></div></div>
+    <div class="tl-row"><div class="tl-when">Decides</div><div class="tl-rail"><div class="tl-dot"></div></div>
+      <div class="tl-body"><h4>Goes, or tops up first</h4><p>Buys a hundred-gallon block from the couch because it is cheaper per gallon &mdash; the sale you currently never make.</p></div></div>
+    <div class="tl-row"><div class="tl-when">At the counter</div><div class="tl-rail"><div class="tl-dot"></div></div>
+      <div class="tl-body"><h4>Taps "Scan to fill"</h4><p>A code appears. Valid five minutes, good for one transaction, and it works with no signal in the store.</p></div></div>
+    <div class="tl-row"><div class="tl-when">Staff</div><div class="tl-rail"><div class="tl-dot"></div></div>
+      <div class="tl-body"><h4>Scans and confirms</h4><p>Tablet reads the code, staff taps the gallons and the water type. Two taps. No lookup, no spelling a name.</p></div></div>
+    <div class="tl-row steady"><div class="tl-when">Done</div><div class="tl-rail"><div class="tl-dot"></div></div>
+      <div class="tl-body"><h4>Both screens agree<span class="tl-tag">The whole point</span></h4><p>Balance drops on both at once. Receipt in their history immediately, with the amount, the time and which staff member entered it.</p></div></div>
+  </div>
+
+  <h3>5.5 &nbsp;The hard part &mdash; authorising a fill</h3>
+  <p>
+    Everything else in this app is a solved problem. This one decision sets the cost and the timeline,
+    so here are the three options honestly.
+  </p>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Option</th><th>How it works</th><th>Hardware</th><th class="n">Verdict</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>A &middot; Staff-scanned</td>
+          <td>Customer shows a rotating code; staff scan it and enter the gallons.</td>
+          <td>One tablet (~$180 if you do not already have one)</td>
+          <td class="n good">Phase 1</td>
+        </tr>
+        <tr>
+          <td>B &middot; Machine-integrated</td>
+          <td>Customer scans at the dispenser and the machine meters the draw against their balance.</td>
+          <td>A controller tapped into your existing dispenser</td>
+          <td class="n">Phase 3, after a survey</td>
+        </tr>
+        <tr>
+          <td>C &middot; Physical card</td>
+          <td>An RFID card carries the account; the app just displays it.</td>
+          <td>Card printer and readers</td>
+          <td class="n bad">Rejected</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Option B is the one everyone wants and it is the one nobody can price honestly without knowing your
+    dispenser's make and model &mdash; it could be a weekend of work or it could be impossible,
+    depending entirely on what the manufacturer exposes. <strong>We are not quoting it in this
+    proposal.</strong> Option C reintroduces exactly the object we are trying to eliminate.
+  </p>
+
+  <h4>How the phase-one code works</h4>
+  <ul>
+    <li>The code carries a <strong>short-lived signed token</strong>, not an account number. Screenshotting it and sending it to a friend buys them five minutes, not an account.</li>
+    <li>It <strong>rotates every 30 seconds</strong> and is <strong>single-use</strong> &mdash; the first redemption invalidates it.</li>
+    <li>It <strong>works offline</strong> on the customer's phone, generated on the device itself.</li>
+    <li>Redemption is <strong>idempotent</strong>: if the tablet loses signal and retries, the same code cannot debit twice. This is the most important correctness rule in the whole system.</li>
+    <li>A fully offline tablet <strong>queues fills and syncs later</strong>, and the customer sees them as <em>pending</em> rather than silently missing.</li>
+  </ul>
+
+  <h3>5.6 &nbsp;The screens</h3>
+  <p>
+    Twelve screens make up version one &mdash; ten for customers, two for staff. These are specification
+    designs at real device proportions: the layout, hierarchy and wording are what is being agreed.
+    <strong>Every price and gallon count shown is a placeholder</strong> until you give us yours.
+  </p>
+
+  <div class="screens">
+    <figure><img src="five-star-app/01-sign-in.png" alt="Sign-in screen: phone number and a texted code">
+      <figcaption><b>01 &middot; Sign in</b>Phone plus a texted code. No password to forget. Spanish is offered on the first screen, not buried in settings.</figcaption></figure>
+    <figure><img src="five-star-app/02-home.png" alt="Home screen showing 62 gallons remaining and membership status">
+      <figcaption><b>02 &middot; Home</b>Gallons left, plan status, two actions. "&asymp; 4 weeks left" is the useful number &mdash; a gallon count means nothing without a rate.</figcaption></figure>
+    <figure><img src="five-star-app/03-scan-to-fill.png" alt="Scan to fill screen with a rotating QR code">
+      <figcaption><b>03 &middot; Scan to fill</b>Brightness ramps automatically. "Drawing from" is the line that prevents arguments at the counter.</figcaption></figure>
+    <figure><img src="five-star-app/04-fill-recorded.png" alt="Confirmation screen after a five gallon fill">
+      <figcaption><b>04 &middot; Fill recorded</b>Shows both balances after the draw, not just the one that changed. The dispute link sits here, in the open.</figcaption></figure>
+    <figure><img src="five-star-app/05-buy-a-block.png" alt="Buy gallons screen with four block sizes">
+      <figcaption><b>05 &middot; Buy a block</b>Price per gallon on every option, so the value of the bigger block is arithmetic rather than a claim.</figcaption></figure>
+    <figure><img src="five-star-app/06-plans.png" alt="Plans screen comparing three membership tiers">
+      <figcaption><b>06 &middot; Plans</b>Ends by telling the customer which plan is cheaper <em>for them</em>, from their own usage. Recommending down is the trust play.</figcaption></figure>
+    <figure><img src="five-star-app/07-membership.png" alt="Membership detail with allowance used and renewal date">
+      <figcaption><b>07 &middot; Membership</b>"Pause a month" sits where most apps hide cancel. Vacations are why people cancel a water plan.</figcaption></figure>
+    <figure><img src="five-star-app/08-activity.png" alt="Activity history with running balance">
+      <figcaption><b>08 &middot; Activity</b>Running balance down the right and the staff member's name on every fill, so disagreements are settled by looking.</figcaption></figure>
+    <figure><img src="five-star-app/09-household.png" alt="Household members sharing one balance">
+      <figcaption><b>09 &middot; Household</b>Per-person usage answers the question the payer actually has. Members can fill; they cannot see the card or change the plan.</figcaption></figure>
+    <figure><img src="five-star-app/10-store.png" alt="Store page with hours and what is in stock">
+      <figcaption><b>10 &middot; Store</b>"Today at the store" is yours to toggle. It stops a wasted trip &mdash; the fastest way to lose a regular.</figcaption></figure>
+    <figure><img src="five-star-app/11-notifications.png" alt="Low balance notification and notification settings">
+      <figcaption><b>11 &middot; Notifications</b>Low balance expressed in weeks, not gallons. Offers default to <em>off</em>, which keeps the useful alerts switched on longer.</figcaption></figure>
+    <figure><img src="five-star-app/12-staff-redeem.png" alt="Staff tablet screen for redeeming a fill">
+      <figcaption><b>12 &middot; Staff redeem</b>Three taps at most, common amounts as buttons. The offline badge is loud so nobody assumes a failed sync is a free fill.</figcaption></figure>
+  </div>
+
+  <p class="hint">
+    Specified in writing but not drawn: your owner dashboard (daily gallons, prepaid balance owed, plan
+    churn, dispute queue), the profile screen, and the receipt detail view.
+  </p>
+
+  <h3>5.7 &nbsp;How the balance is stored</h3>
+  <p>
+    The balance is never a number sitting in a field that gets overwritten. It is the running total of a
+    permanent, append-only record of every credit and every draw. <strong>This is the one technical
+    decision in this document that should not be negotiated</strong>, because every serious way this
+    could fail &mdash; a double charge, a lost offline fill, a dispute nobody can reconstruct &mdash; is
+    a symptom of a balance that can be overwritten.
+  </p>
+  <p>
+    A correction is a new entry, never an edit. The history is what you and the customer both look at,
+    so it has to be the truth including the mistakes. If the displayed number ever drifts, it can be
+    rebuilt from the record exactly.
+  </p>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Record</th><th>What it holds</th></tr></thead>
+      <tbody>
+        <tr><td>Customer</td><td>Phone, name, language. Phone is the identity &mdash; no email required, no password stored anywhere.</td></tr>
+        <tr><td>Household</td><td>Owner, members, invitations. Up to four people on one balance.</td></tr>
+        <tr><td>Plan &amp; subscription</td><td>Name, price, monthly allowance, perks, cycle dates, status. Price changes never rewrite existing subscriptions.</td></tr>
+        <tr><td>Ledger entry</td><td>Every &plusmn; gallon movement with its bucket, reason, who did it, and a unique key that makes a retry harmless. <strong>Append-only.</strong></td></tr>
+        <tr><td>Fill</td><td>Water type, staff member, store, device, and status: pending, posted, disputed or reversed.</td></tr>
+        <tr><td>Purchase</td><td>The Stripe payment and the gallons it bought. Gallons credit only once the payment actually succeeds.</td></tr>
+        <tr><td>Dispute</td><td>Reason, who raised it, resolution. Resolving writes a new correcting entry; the original stays visible.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>5.8 &nbsp;Money, and one thing a lawyer has to look at</h3>
+  <p>
+    Card payments run through <strong>Stripe</strong>. Card numbers never touch your systems &mdash;
+    Apple Pay, Google Pay and saved cards are all handled inside Stripe, which keeps your compliance
+    obligation to a short self-assessment rather than an audit. Subscriptions use Stripe's billing, so
+    failed-card retries and receipts are not something we hand-build and can get wrong.
+  </p>
+
+  <div class="alert">
+    <span class="tag">Get an attorney to read this &mdash; we are not lawyers</span>
+    <h3>Prepaid gallons are stored value, and California regulates that</h3>
+    <p>
+      Selling water up front creates a balance the customer owns. Depending on how the packs are worded,
+      that can be treated like a gift certificate &mdash; and in California those generally
+      <strong>cannot carry an expiry date</strong>, small remaining balances may be redeemable in cash,
+      and dormant accounts can raise unclaimed-property obligations.
+    </p>
+    <p style="margin-top:10px">
+      This is inexpensive to get right at the start and expensive to retrofit after a thousand customers
+      hold balances. Have a California attorney read the pack terms before the first sale. Until told
+      otherwise <strong>we build assuming gallons never expire</strong>, which is the conservative
+      default.
+    </p>
+  </div>
+
+  <h4>Rules the app enforces on your behalf</h4>
+  <ul>
+    <li>Gallons are credited only after a payment actually clears, never before.</li>
+    <li>A refund reverses gallons and can never push a balance below what was already drawn.</li>
+    <li>A failed monthly charge suspends the <em>plan allowance</em> only. Water somebody already paid for is never held hostage to a declined card.</li>
+    <li>Outstanding prepaid gallons are reported to you as a <strong>liability</strong>, because that is what they are &mdash; water owed, not revenue banked. This is the number that quietly hurts businesses who sell prepaid without tracking it.</li>
+  </ul>
+
+  <h3>5.9 &nbsp;Requirements that are not features</h3>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Requirement</th><th>The standard</th></tr></thead>
+      <tbody>
+        <tr><td>Spanish, in full</td><td>Every word, including receipts, notifications and the staff app. Half-translated is worse than English-only.</td></tr>
+        <tr><td>Legible for your actual customer</td><td>Large minimum text, high contrast, works at the biggest accessibility text size, large touch targets.</td></tr>
+        <tr><td>Works without signal</td><td>Fill code generates on the phone. Last balance cached and stamped with when it was fetched. Staff app queues and shows the depth.</td></tr>
+        <tr><td>Fast where it counts</td><td>Balance visible within 1.5 seconds on a four-year-old phone. Scan to confirmed fill under 3 seconds.</td></tr>
+        <tr><td>Private by default</td><td>Phone numbers never shared or sold. No location tracking. No third-party trackers.</td></tr>
+        <tr><td>Recoverable</td><td>Continuous backup with point-in-time restore. A lost phone costs one text message; no balance lives on the device.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>5.10 &nbsp;What gets built, in what order</h3>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Capability</th><th class="n">Phase</th><th>Considered done when</th></tr></thead>
+      <tbody>
+        <tr><td>Phone sign-in with a texted code</td><td class="n">1</td><td>A new customer reaches their balance in under a minute with no help</td></tr>
+        <tr><td>Gallon balance and permanent record</td><td class="n">1</td><td>The balance always equals the record, and a rebuild matches to the gallon</td></tr>
+        <tr><td>Rotating fill code</td><td class="n">1</td><td>Works offline, expires in five minutes, cannot be used twice</td></tr>
+        <tr><td>Staff scan and redeem</td><td class="n">1</td><td>Typical redemption under eight seconds, measured at your counter</td></tr>
+        <tr><td>Buying a gallon block</td><td class="n">1</td><td>Apple Pay credits the balance within two seconds</td></tr>
+        <tr><td>Activity and receipts</td><td class="n">1</td><td>Every entry shows amount, running balance, staff member and time</td></tr>
+        <tr><td>Spanish</td><td class="n">1</td><td>No English text reachable in Spanish mode, receipts included</td></tr>
+        <tr><td>Your owner dashboard</td><td class="n">1</td><td>Daily gallons, prepaid liability outstanding, disputes waiting</td></tr>
+        <tr><td>Memberships and allowances</td><td class="n">2</td><td>Allowance draws first, resets each cycle, pause works without a phone call</td></tr>
+        <tr><td>Household sharing</td><td class="n">2</td><td>Up to four people on one balance with per-person attribution</td></tr>
+        <tr><td>Low-balance notifications</td><td class="n">2</td><td>Fires on their usage rate, not a fixed number</td></tr>
+        <tr><td>Disputes</td><td class="n">2</td><td>One tap from a receipt; resolution writes a correcting entry</td></tr>
+        <tr><td>Store status board</td><td class="n">2</td><td>Staff flip a product to Low or Out in two taps and customers see it</td></tr>
+        <tr><td>Referrals</td><td class="n">3</td><td>Both sides credited in gallons, not dollars</td></tr>
+        <tr><td>Self-serve at the machine</td><td class="n">3</td><td>Only after the dispenser survey in 5.5 &mdash; not quoted here</td></tr>
+        <tr><td>Delivery scheduling</td><td class="n">3</td><td>Only if you want to run routes; needs its own scoping</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>5.11 &nbsp;What could go wrong</h3>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Risk</th><th>Why it is plausible</th><th>What we do about it</th></tr></thead>
+      <tbody>
+        <tr><td>Staff stop scanning</td><td>Busy counter, old habit, one more thing to do</td><td>Fewer taps than the paper card, and the scan is the only route to the discount &mdash; so customers enforce it for you</td></tr>
+        <tr><td>The balance drifts from reality</td><td>Offline queues, retries, manual corrections</td><td>Append-only record, single-use codes, and a nightly reconciliation against your till that alerts on any variance</td></tr>
+        <tr><td>Older customers will not install it</td><td>Real, and they are the core segment</td><td>Paper cards keep working. The app is an addition, not a replacement &mdash; nothing is taken away, and staff can sign someone up at the counter in a minute</td></tr>
+        <tr><td>Prepaid becomes an untracked liability</td><td>Cash arrives early, water is owed later</td><td>Outstanding gallons shown on your dashboard as a liability from day one</td></tr>
+        <tr><td>Expiry terms turn out to be unlawful</td><td>California stored-value rules are strict</td><td>Non-expiring by default, plus the attorney review in 5.8 before the first sale</td></tr>
+        <tr><td>App store review friction</td><td>First submission, and stores have rules about physical goods</td><td>Physical goods sold through your own payment rail are permitted. We budget two review cycles rather than one</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>5.12 &nbsp;Five answers we need from you</h3>
+  <p>Nothing else can be finalised without these. Everything above is written to hold whichever way they land, but the first two block the build.</p>
+  <ol>
+    <li><strong>Pack pricing.</strong> What does a gallon cost today at the counter, and what should 25 / 50 / 100 / 250 cost prepaid? Every price in the screens is a placeholder.</li>
+    <li><strong>Do prepaid gallons expire?</strong> Our recommendation is no &mdash; and 5.8 explains why it may not even be your choice.</li>
+    <li><strong>What shape is a membership?</strong> An allowance of gallons, a discount on the per-gallon rate, or unlimited with a fair-use cap? The screens assume an allowance.</li>
+    <li><strong>Store hours, and the make and model of your dispenser.</strong> Hours are not published anywhere we could verify. The model number decides whether phase 3 is even possible.</li>
+    <li><strong>Who runs the counter tablet, and does the store have wifi?</strong> Both change how much has to work offline.</li>
+  </ol>
+
+  <!-- ================================================================= -->
+  <h2 id="s6"><span class="num">6</span>The Math</h2>
+  <p>
+    Rather than estimate what you are losing, here is the hurdle in the other direction: what each piece
+    has to produce to pay for itself. If it clears that, everything above it is profit.
+  </p>
+
+  <h3>The website</h3>
+  <p>
+    At a $450 average ticket, the site and its care plan pay for themselves at
+    <strong>roughly one extra job a month</strong> &mdash; and that is before the licence number unlocks
+    Google Local Services Ads, which is the placement that actually moves emergency volume for a
+    residential plumber. Being absent from a customer's shortlist at 9pm costs a job whether or not
+    anyone ever counts it.
+  </p>
+
+  <h3>The app &mdash; and one thing worth saying plainly</h3>
+  <p>
+    <strong>An app like this is not justified by selling more gallons.</strong> A water-store regular
+    spends something in the region of twenty dollars a month, so no realistic bump in volume across a
+    couple of hundred customers pays for custom software on its own. If someone tells you otherwise
+    they are selling you something.
+  </p>
+  <p>
+    What justifies it is <em>keeping the customers you already have</em>. Regulars drift &mdash; they
+    get a countertop filter, they try the store closer to work, they simply get out of the habit
+    &mdash; and today the first you know about it is an empty till. A balance sitting in their pocket,
+    a nudge before it runs out, and money already spent with you are all retention mechanics, and
+    retention compounds in a way extra gallons do not. The second effect is cash: prepaid means money
+    arrives weeks before the water leaves, which is a permanent improvement to your working capital
+    rather than a monthly gain.
+  </p>
+  <p>
+    We have not put a payback model in this document, because a payback model needs a price and a
+    price needs the answers in 5.12. Once we have those, the honest version of this section is one
+    page of arithmetic using your own numbers &mdash; what a regular actually spends, how many drift
+    in a year, and what share of them a balance would hold. If that arithmetic does not work, we will
+    tell you so rather than build it.
+  </p>
+
+  <!-- ================================================================= -->
+  <h2 id="s7"><span class="num">7</span>Investment</h2>
+  <p>
+    Only the website is priced here. It exists, you can open it, and the number covers finishing and
+    launching it properly. Nothing has a contract to sign and nothing is due today.
+  </p>
+
+  <div class="plan">
+    <div class="row"><span class="plan-name">The website</span><span class="plan-price">$2,500 one time</span></div>
+    <p>Already built and live. The fee covers the build, the four launch items settled, your domain pointed at it, the Google Business Profile created and verified on the correct address, and the duplicate Yelp listings consolidated.</p>
+    <ul>
+      <li>Seven pages, written and designed for this business specifically</li>
+      <li>Licence number, hours and address published correctly everywhere at once</li>
+      <li>Google Business Profile created and verified &mdash; the gate on Local Services Ads</li>
+      <li>Duplicate listings consolidated so reviews stop being split</li>
+      <li>Your real job photos added when you send them</li>
+    </ul>
+  </div>
+
+  <div class="plan">
+    <div class="row"><span class="plan-name">Website care plan</span><span class="plan-price">$149 / month</span></div>
+    <p>Hosting, security, backups, edits when your hours or services change, and the Google profile kept current. Month to month, thirty days&rsquo; notice, cancel any time.</p>
+  </div>
+
+  <div class="total">
+    <div class="row">
+      <span class="t-label">Website, all in</span>
+      <span class="t-num">$2,500 one time &middot; $149/mo</span>
+    </div>
+    <div class="t-sub">
+      Invoiced in halves &mdash; half at kickoff, half when it is live on your domain. Monthly billing
+      starts the day it goes live, not at signing.
+    </div>
+  </div>
+
+  <div class="callout">
+    <p class="hd">The app is not priced in this document</p>
+    <p>
+      Section 5 is a specification, not a quote. Five answers change the size of the build materially
+      &mdash; pack pricing, whether gallons expire, what shape a membership takes, your dispenser, and
+      whether the store has wifi. Quoting before you have given them would mean padding the number to
+      cover the unknowns, or revising it upward later. Neither is a good way to start.
+    </p>
+    <p style="margin-top:10px">
+      Read section 5, mark what you want in and what you want out, and we will price that version.
+      Reading it costs you nothing and commits you to nothing.
+    </p>
+  </div>
+
+  <!-- ================================================================= -->
+  <h2 id="s8"><span class="num">8</span>What We Need From You</h2>
+  <p>Most of this is a short phone call. None of it is technical.</p>
+
+  <h3>To launch the website &mdash; four items</h3>
+  <ol>
+    <li><strong>Your CSLB licence number.</strong> Required by law on advertising and the gate on Google Local Services Ads.</li>
+    <li><strong>Which address is the real one</strong> &mdash; Tanya Ct 92542 or Tanya Ave 92545. This decides the Google profile and the Yelp consolidation, and it is expensive to change later.</li>
+    <li><strong>Where booking requests should go</strong> &mdash; an email address, a text to a mobile, or both.</li>
+    <li><strong>Your actual office hours.</strong> We only have the Sunday closure from your current site; the rest are placeholders.</li>
+  </ol>
+
+  <h3>Also useful, when you have a minute</h3>
+  <ul>
+    <li>Manager access to the Google Business Profile once it exists &mdash; you stay the owner throughout.</li>
+    <li>Photos: real jobs, real trucks, and one of you. This makes more difference to the site than any other single thing.</li>
+    <li>Your financing provider's name, if you want it linked from the site.</li>
+    <li>Whether you want the BBB complaint answered as part of this. It is about a week of back-and-forth and probably restores the A.</li>
+  </ul>
+
+  <h3>For the app &mdash; the five answers in 5.12</h3>
+  <p>
+    Pack pricing and the expiry decision block the build. The other three change details, not direction.
+  </p>
+
+  <!-- ================================================================= -->
+  <h2 id="s9"><span class="num">9</span>Timeline</h2>
+  <div class="tl">
+    <div class="tl-row done">
+      <div class="tl-when">Done</div><div class="tl-rail"><div class="tl-dot"></div></div>
+      <div class="tl-body"><h4>Website built and deployed<span class="tl-tag">Complete</span></h4>
+        <p>Seven pages live at the preview link, tested on desktop and phone. Built before this proposal so you could judge it instead of imagining it.</p></div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-when">Week 1</div><div class="tl-rail"><div class="tl-dot"></div></div>
+      <div class="tl-body"><h4>Website launch</h4>
+        <p>Licence number, address decision, hours and form destination applied. Domain pointed. Google Business Profile submitted for verification &mdash; that step runs on Google's clock, usually a postcard, typically one to two weeks.</p></div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-when">Weeks 2&ndash;4</div><div class="tl-rail"><div class="tl-dot"></div></div>
+      <div class="tl-body"><h4>Listings cleaned up</h4>
+        <p>Duplicate Yelp listings consolidated, name/address/phone made identical across every directory that carries you, BBB complaint answered if you want it in scope.</p></div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-when">Weeks 1&ndash;2</div><div class="tl-rail"><div class="tl-dot"></div></div>
+      <div class="tl-body"><h4>App phase zero &mdash; measure first <span class="tl-tag" style="background:var(--dim)">If you want it</span></h4>
+        <p>Nothing customer-facing, and nothing billed. We record what the store does today so the targets in 5.2 are compared against something real rather than a guess. Cheap, useful even if the app never happens, and it runs in parallel with the website work.</p></div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-when">Weeks 3&ndash;9</div><div class="tl-rail"><div class="tl-dot"></div></div>
+      <div class="tl-body"><h4>App phase one built <span class="tl-tag" style="background:var(--dim)">Once scoped and priced</span></h4>
+        <p>Indicative only &mdash; the schedule firms up once section 5 is marked up and quoted. Customer app, staff app, dashboard, payments, Spanish. Working version to look at around week six, then app store submission &mdash; budget two review cycles.</p></div>
+    </div>
+    <div class="tl-row">
+      <div class="tl-when">Weeks 10&ndash;14</div><div class="tl-rail"><div class="tl-dot"></div></div>
+      <div class="tl-body"><h4>Twenty regulars, one tablet</h4>
+        <p>A deliberately small pilot. The risk here is not technical, it is whether staff scan every time when the counter is busy &mdash; and twenty customers answers that far cheaper than finding out after everything is built on top of it.</p></div>
+    </div>
+    <div class="tl-row steady">
+      <div class="tl-when">Week 15+</div><div class="tl-rail"><div class="tl-dot"></div></div>
+      <div class="tl-body"><h4>Open to everyone<span class="tl-tag">Steady state</span></h4>
+        <p>Public launch once the pilot holds: 70% of fills scanned and no balance discrepancies over thirty days. Phase 2 is decided then, with real numbers rather than assumptions.</p></div>
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <h2 id="s10"><span class="num">10</span>Method</h2>
+  <p>
+    Everything in section 1 was read directly from public sources on <strong>August 3&ndash;4, 2026</strong>.
+    No estimates, no purchased data. Ratings move; anything acted on should be re-checked first.
+  </p>
+
+  <h4>Verified</h4>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Fact</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>5 Star Water &amp; Ice LLC, entity #202464216440, active, formed 16 October 2024, Gabriel Reyes manager</td><td>California Secretary of State</td></tr>
+        <tr><td>BBB profile: B&minus;, not accredited, one unanswered complaint, principal Gabriel Reyes</td><td>bbb.org</td></tr>
+        <tr><td>Both addresses, both phone numbers, service list, Sunday closure, "se habla espa&ntilde;ol"</td><td>plumbinganddrainsolution.com</td></tr>
+        <tr><td>Google 4.8 across 54 reviews</td><td>Read 30 July 2026 &mdash; re-check before relying on it</td></tr>
+        <tr><td>Water store address, phone, email, social accounts</td><td>State filing and the store's own Facebook and Instagram</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4>Not verified, and therefore not claimed anywhere</h4>
+  <ul>
+    <li><strong>Your CSLB licence number and status.</strong> Not pulled. The website hides the badge rather than print something unconfirmed.</li>
+    <li><strong>Yelp ratings.</strong> Yelp blocked us mid-session. Two listings are confirmed to exist; their star ratings were not read and appear nowhere on the site or in this document.</li>
+    <li><strong>Office hours.</strong> Only the Sunday closure is sourced.</li>
+    <li><strong>"25+ years."</strong> Your site says 25+ years; the corporation registered in 2016. The new site says <em>25+ years in the trade</em>, which is almost certainly the accurate framing &mdash; confirm it holds if a customer asks.</li>
+    <li><strong>The water store's products, prices and hours,</strong> and whether a prepaid or punch-card arrangement exists today. The app proposal assumes it does. If it does not, this is a new-product launch rather than a replacement and phase 1 changes &mdash; tell us and we will re-scope before you commit.</li>
+  </ul>
+  <p>This proposal is valid for thirty days from the date above.</p>
+
+  <!-- ================================================================= -->
+  <h2 id="s11"><span class="num">11</span>Acceptance</h2>
+  <p>
+    To proceed, reply with one line saying which you are taking. That is the whole process &mdash; no
+    contract to redline, nothing to sign, nothing due today.
+  </p>
+
+  <div class="reply">
+    <div class="hd">To activate &mdash; reply with one line</div>
+    <div class="bd">
+      <div class="opt">
+        <div class="quote">"Launch the website &mdash; $2,500 and $149/mo"</div>
+        <div class="sub">Send the licence number and the address decision with your reply and it can be on your own domain the same week.</div>
+      </div>
+      <div class="opt">
+        <div class="quote">"Website yes, and let&rsquo;s scope the app"</div>
+        <div class="sub">Same as above, plus a call to work through the five questions in 5.12. We come back with a fixed price for the version you marked up.</div>
+      </div>
+      <div class="opt">
+        <div class="quote">"Just the app &mdash; scope it"</div>
+        <div class="sub">If the water store is the priority and the plumbing site can wait. Still needs 5.12 answered before a number exists.</div>
+      </div>
+      <p style="margin:14px 0 0;font-size:14px">
+        There is no option here that costs you anything to choose. The app quote follows the
+        conversation; it does not precede it.
+      </p>
+    </div>
+  </div>
+
+  <p>
+    Website billing starts at the kickoff call, invoiced in halves. Monthly fees are month to month,
+    thirty days&rsquo; notice, cancel any time.
+  </p>
+  <p>
+    <strong>Everything created under this agreement belongs to you</strong> &mdash; the website, the app,
+    the source code, every listing and login and profile. If we part ways it all stays with you and we
+    hand over access in full. No lock-in, and nothing built here is rented back to you.
+  </p>
+
+  <div class="included">
+    <p class="hd">Ready when you are</p>
+    <p>
+      Leo Lebel &middot; Circuit Coders &middot; leo@circuitcoders.com<br>
+      If you only do one thing this month, get the licence number onto your advertising. That one is not
+      about us.
+    </p>
+  </div>
+
+  <div class="foot">
+    <strong>Circuit Coders</strong> &middot; Leo Lebel &middot; Websites, brand management and software<br>
+    Prepared for 5 Star Plumbing, Heating &amp; Air and 5 Star Water &amp; Ice, Hemet, California.
+    App screens are specification designs; figures shown in them are placeholders.
+  </div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Submit — Fallbrook / Bonsall International Film Festival</title>
+<meta name="description" content="Submit your film to the Fallbrook / Bonsall International Film Festival through FilmFreeway. All genres and mediums considered.">
+<meta property="og:title" content="Submit — FBIFF">
+<meta property="og:description" content="Submit your film to the Fallbrook / Bonsall International Film Festival through FilmFreeway. All genres and mediums considered.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="mockbar">Design concept by Circuit Coders · not the live festival site</div>
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="index.html"><b>FBIFF</b><span>Est. 2007</span></a>
+    <button class="navtoggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav"><a href="index.html">Festival</a><a href="program.html">Program</a><a href="awards.html">Awards</a><a href="submit.html" aria-current="page">Submit</a><a href="support.html">Support</a><a href="visit.html">Visit</a>
+      <a class="btn btn--amber" href="https://square.link/u/LkBDq3Jg">Day Pass · $20</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="sec sec--flush" style="padding-top:clamp(48px,7vw,90px)">
+  <div class="wrap">
+    <div class="bulbs"><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="sec__head">
+    <div class="txt"><div class="label">Submit</div><h2 class="display">Send us your film.</h2><p class='lede'>FBIFF exists to give independent and emerging filmmakers a screened, juried platform. We accept all genres and all mediums — animation, horror, sci-fi, documentary and everything between.</p></div>
+    <a class="btn btn--amber btn--lg" href="https://filmfreeway.com/FBIFF">Submit on FilmFreeway</a>
+  </div>
+    <div class="steps">
+      <div class="step"><div><h4>Open your FilmFreeway entry</h4>
+        <p>All submissions, deadlines and entry fees are handled on our FilmFreeway listing.
+        Current deadlines and fee tiers are always shown there.</p></div></div>
+      <div class="step"><div><h4>Pick your category</h4>
+        <p>Feature, Short, Documentary Feature, Documentary Short, Student or Animation. If you are
+        unsure which fits, submit to the closest one and tell us in the notes.</p></div></div>
+      <div class="step"><div><h4>We watch every entry</h4>
+        <p>This is a one-screen festival with a real jury. Selections are programmed into a single
+        Saturday running 10 AM to 8 PM.</p></div></div>
+      <div class="step"><div><h4>Selected filmmakers are invited</h4>
+        <p>Come to Fallbrook, sit in the room, and meet the audience watching your film. It is a
+        small theater, and that is the point.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="panel split">
+      <div>
+        <div class="label">Questions</div>
+        <h3 style="margin-top:14px">Talk to a person.</h3>
+        <p style="margin-top:14px">Submissions questions, print traffic, accessibility needs, or a
+        note about your film — write to us directly.</p>
+      </div>
+      <div>
+        <dl class="rows" style="border-top:0">
+          <div class="row"><dt>Email</dt><dd><a href="mailto:Leo@FBIFF.org">Leo@FBIFF.org</a></dd></div>
+          <div class="row"><dt>Phone</dt><dd>(760) 638-1732</dd></div>
+          <div class="row"><dt>Submissions</dt><dd><a href="https://filmfreeway.com/FBIFF">filmfreeway.com/FBIFF</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__grid">
+      <div class="ftr__brand">
+        <b>Fallbrook / Bonsall<br>International Film Festival</b>
+        <p>An independent film festival in Fallbrook, California, presented by the
+        Fallbrook Film Society — a 501(c)(3) nonprofit corporation.</p>
+      </div>
+      <div><h5>Festival</h5><ul><li><a href="program.html">2025 Program</a></li><li><a href="awards.html">Award Winners</a></li><li><a href="visit.html">Venue &amp; Travel</a></li></ul></div><div><h5>Take Part</h5><ul><li><a href="submit.html">Submit a Film</a></li><li><a href="support.html">Sponsor</a></li><li><a href="https://square.link/u/pQwZH5k">Donate</a></li></ul></div><div><h5>Tickets</h5><ul><li><a href="https://square.link/u/LkBDq3Jg">Day Pass · $20</a></li><li><a href="https://square.link/u/xEBc9Vy6">Guitar Raffle</a></li><li><a href="https://filmfreeway.com/FBIFF">FilmFreeway</a></li></ul></div>
+    </div>
+    <div class="ftr__legal">
+      <span>The Historic Mission Theater · 231 N. Main Ave, Fallbrook, CA 92028</span>
+      <span><a href="mailto:Leo@FBIFF.org">Leo@FBIFF.org</a></span>
+      <span>(760) 638-1732</span>
+      <span>Fallbrook Film Society · 501(c)(3) · EIN 20-5921360</span>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  var t = document.querySelector('.navtoggle'), n = document.getElementById('nav');
+  if (!t || !n) return;
+  t.addEventListener('click', function () {
+    var open = n.getAttribute('data-open') === 'true';
+    n.setAttribute('data-open', String(!open));
+    t.setAttribute('aria-expanded', String(!open));
+    t.textContent = open ? 'Menu' : 'Close';
+  });
+})();
+</script>
+</body>
+</html>

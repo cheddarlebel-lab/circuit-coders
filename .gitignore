@@ -19,3 +19,6 @@ clients/tsm/review-engine/.env
 # Confidential client files — never commit to the (public until private) repo
 clients/
 SECURITY-INCIDENT-*.md
+
+# Editor/backup scratch in the docs folder
+public/docs/*.bak

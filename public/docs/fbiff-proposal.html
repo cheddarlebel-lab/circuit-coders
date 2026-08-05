@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Festival Website &amp; Event Advertising Proposal &middot; Fallbrook / Bonsall International Film Festival</title>
+<meta name="description" content="Website and event advertising proposal for the Fallbrook / Bonsall International Film Festival.">
+<style>
+
+  :root {
+    --ink:#1a1f2b; --soft:#4a5160; --dim:#6a7080; --faint:#8a8f9c;
+    --rule:#d8dbe2; --hair:#e3e5ea; --panel:#f7f5f2;
+    --bad:#a33327; --good:#1f6e43; --accent:#B0602A; --water:#17727C;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0; background: #fff; color: var(--ink);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16.5px; line-height: 1.55; -webkit-font-smoothing: antialiased;
+  }
+  .brandbar { height: 6px; display: flex; }
+  .brandbar span { flex: 1; }
+  .page { max-width: 760px; margin: 0 auto; padding: 26px 22px 80px; }
+
+  .kicker { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--faint); margin-bottom: 10px; }
+  h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.6px; margin: 0 0 6px; line-height: 1.15; }
+  .subtitle { font-size: 18px; color: var(--soft); margin: 0 0 14px; }
+  .meta { font-size: 14px; color: var(--dim); padding-bottom: 24px; border-bottom: 1px solid var(--rule); }
+  .meta strong { color: var(--ink); font-weight: 600; }
+
+  h2 { font-size: 21px; font-weight: 700; letter-spacing: -0.3px; margin: 40px 0 10px;
+       padding-top: 20px; border-top: 1px solid var(--rule); scroll-margin-top: 14px; }
+  h2 .num { color: var(--accent); margin-right: 10px; }
+  h2.w .num { color: var(--water); }
+  h3 { font-size: 17px; font-weight: 700; margin: 26px 0 6px; }
+  h4 { font-size: 15px; font-weight: 700; margin: 20px 0 4px; }
+  p { margin: 0 0 12px; }
+  ul, ol { margin: 0 0 14px; padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); }
+
+  /* contents */
+  .toc { background: var(--panel); padding: 18px 22px; margin: 24px 0 8px; }
+  .toc .hd { font-size: 11px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--dim); margin-bottom: 10px; }
+  .toc ol { margin: 0; padding-left: 18px; columns: 2; column-gap: 28px; font-size: 14.5px; }
+  .toc li { margin-bottom: 5px; break-inside: avoid; }
+  .toc a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule); }
+  .toc a:hover { border-bottom-color: var(--accent); }
+  @media (max-width: 560px) { .toc ol { columns: 1; } }
+
+  .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 14px 0 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 540px; }
+  th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+       color: var(--dim); border-bottom: 2px solid var(--ink); padding: 7px 10px 7px 0; font-weight: 600; }
+  td { border-bottom: 1px solid var(--hair); padding: 9px 10px 9px 0; vertical-align: top; }
+  td.n, th.n { text-align: right; padding-right: 16px; font-variant-numeric: tabular-nums; }
+  .bad { color: var(--bad); font-weight: 700; }
+  .good { color: var(--good); font-weight: 700; }
+  .hint { font-size: 13px; color: var(--dim); font-style: italic; margin-top: 4px; }
+  code { font-family: ui-monospace, Menlo, monospace; font-size: .86em; background: var(--panel); padding: 1px 5px; }
+
+  .callout { background: var(--panel); border-left: 4px solid var(--accent); padding: 16px 18px; margin: 18px 0; }
+  .callout.w { border-left-color: var(--water); }
+  .callout .hd { font-weight: 700; margin-bottom: 4px; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .alert { border: 1px solid var(--bad); border-left: 5px solid var(--bad);
+           background: #fdf6f5; padding: 18px 20px; margin: 18px 0; }
+  .alert .tag { display: inline-block; background: var(--bad); color: #fff; font-size: 11px;
+                letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700;
+                padding: 4px 9px; border-radius: 2px; margin-bottom: 10px; }
+  .alert h3 { margin: 0 0 8px; }
+  .alert p:last-child { margin-bottom: 0; }
+
+  .included { border: 2px solid var(--good); background: #f4faf6; padding: 16px 20px; margin: 18px 0; }
+  .included .hd { font-weight: 700; font-size: 17px; color: var(--good); margin-bottom: 4px; }
+  .included p:last-child { margin-bottom: 0; }
+
+  /* live-site banner */
+  .live { border: 2px solid var(--ink); margin: 22px 0; }
+  .live .hd { background: var(--ink); color: #fff; padding: 12px 18px; font-weight: 700; font-size: 15px;
+              display: flex; align-items: center; gap: 9px; }
+  .live .dot { width: 8px; height: 8px; border-radius: 50%; background: #4ED08A; flex: none; }
+  .live .bd { padding: 18px; }
+  .live .url { font-family: ui-monospace, Menlo, monospace; font-size: 17px; font-weight: 700;
+               word-break: break-all; display: inline-block; margin-bottom: 6px; }
+  .live .bd p:last-child { margin-bottom: 0; }
+
+  /* before / after matrix */
+  .matrix { width: 100%; border-collapse: collapse; margin: 18px 0 8px; font-size: 15px; min-width: 540px; }
+  .matrix th { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 8px 12px 8px 0;
+               border-bottom: 2px solid var(--ink); }
+  .matrix th.now { color: var(--bad); }
+  .matrix th.then { color: var(--good); }
+  .matrix td { padding: 9px 12px 9px 0; border-bottom: 1px solid var(--hair); vertical-align: top; }
+  .matrix td.lbl { font-weight: 600; width: 26%; }
+  .matrix td.now { color: var(--bad); }
+  .matrix td.then { color: var(--good); font-weight: 600; }
+
+  /* screens */
+  .screens { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px 20px; margin: 22px 0 10px; }
+  @media (max-width: 640px) { .screens { grid-template-columns: repeat(2, 1fr); gap: 20px 14px; } }
+  .screens figure { margin: 0; }
+  .screens img { width: 100%; height: auto; display: block; border-radius: 10px; }
+  .screens figcaption { font-size: 13px; color: var(--soft); margin-top: 9px; line-height: 1.45; }
+  .screens figcaption b { display: block; color: var(--ink); font-size: 13.5px; margin-bottom: 2px; }
+
+  /* pricing */
+  .plan { border-top: 1px solid var(--hair); padding: 16px 0; }
+  .plan .row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .plan-name { font-weight: 700; font-size: 17px; }
+  .plan-price { font-weight: 700; font-size: 19px; white-space: nowrap; }
+  .plan p { color: var(--soft); font-size: 15px; margin: 6px 0 0; }
+  .plan ul { margin: 8px 0 0; font-size: 14.5px; color: var(--soft); }
+  @media (max-width: 560px) { .plan .row { flex-direction: column; gap: 2px; } }
+
+  .total { margin-top: 22px; padding: 18px 20px; background: var(--panel); border-left: 4px solid var(--accent); }
+  .total .row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+  .t-label { font-weight: 700; font-size: 18px; }
+  .t-num { font-weight: 700; font-size: 24px; white-space: nowrap; letter-spacing: -0.5px; }
+  .t-sub { margin-top: 8px; font-size: 14px; color: var(--dim); }
+  .t-save { color: var(--good); font-weight: 700; white-space: nowrap; }
+  @media (max-width: 560px) { .total .row { flex-direction: column; gap: 2px; } .t-num { font-size: 21px; } }
+
+  /* ROI calculator */
+  .calc { border: 1px solid var(--ink); margin: 22px 0; }
+  .calc-head { background: var(--ink); color: #fff; padding: 12px 18px; }
+  .calc-head .t { font-weight: 700; font-size: 16px; }
+  .calc-head .s { font-size: 13px; opacity: .75; margin-top: 2px; }
+  .calc-body { padding: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+  .sliders { display: flex; flex-direction: column; gap: 16px; }
+  .sl label { display: flex; justify-content: space-between; align-items: baseline;
+              font-size: 14px; font-weight: 600; margin-bottom: 6px; gap: 10px; }
+  .sl .v { font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .sl input[type=range] { width: 100%; accent-color: var(--accent); height: 22px; }
+  .sl .cap { font-size: 12px; color: var(--dim); margin-top: 2px; }
+  .out { background: var(--panel); padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; }
+  .out .line { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 14px; }
+  .out .line .n { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+  .out .big { border-top: 1px solid var(--rule); padding-top: 12px; margin-top: 2px; }
+  .out .big .l { font-weight: 700; font-size: 15px; }
+  .out .big .n { font-size: 26px; font-weight: 700; color: var(--good); letter-spacing: -.5px; }
+  .out .mult { text-align: right; font-size: 13px; color: var(--dim); }
+  .out .cost .n { color: var(--bad); }
+  @media (max-width: 640px) { .calc-body { grid-template-columns: 1fr; gap: 18px; } }
+
+  /* timeline */
+  .tl { position: relative; margin: 26px 0 10px; }
+  .tl-row { display: grid; grid-template-columns: 92px 26px 1fr; gap: 0 14px; align-items: stretch; position: relative; }
+  .tl-when { text-align: right; font-size: 12px; font-weight: 700; letter-spacing: .4px;
+             text-transform: uppercase; color: var(--accent); padding-top: 13px; }
+  .tl-rail { position: relative; display: flex; justify-content: center; align-items: flex-start; }
+  .tl-rail::before { content: ""; position: absolute; left: 50%; transform: translateX(-50%);
+                     top: 0; bottom: 0; width: 2px; background: var(--hair); }
+  .tl-row:first-child .tl-rail::before { top: 20px; }
+  .tl-row:last-child .tl-rail::before { bottom: auto; height: 20px; }
+  .tl-dot { position: relative; z-index: 1; width: 13px; height: 13px; border-radius: 50%;
+            background: #fff; border: 2.5px solid var(--accent); margin-top: 14px; flex: none; }
+  .tl-row.steady .tl-dot { border-color: var(--good); background: var(--good); }
+  .tl-row.done .tl-dot { border-color: var(--good); background: var(--good); }
+  .tl-body { padding: 6px 0 24px; }
+  .tl-body h4 { margin: 0 0 4px; font-size: 16px; font-weight: 700; }
+  .tl-body p { margin: 0; font-size: 14.5px; color: var(--soft); }
+  .tl-tag { display: inline-block; font-size: 10.5px; letter-spacing: 1px; text-transform: uppercase;
+            font-weight: 700; color: #fff; background: var(--good); padding: 2px 7px;
+            border-radius: 2px; margin-left: 8px; vertical-align: 2px; }
+  @media (max-width: 560px) {
+    .tl-row { grid-template-columns: 62px 22px 1fr; gap: 0 10px; }
+    .tl-when { font-size: 10.5px; }
+  }
+
+  /* reply template */
+  .reply { border: 2px solid var(--ink); margin: 18px 0; }
+  .reply .hd { background: var(--ink); color: #fff; padding: 11px 18px; font-weight: 700; font-size: 15px; }
+  .reply .bd { padding: 18px; }
+  .opt { border: 1px solid var(--rule); padding: 13px 16px; margin-bottom: 10px; background: #fff; }
+  .opt:last-of-type { margin-bottom: 0; }
+  .opt .quote { font-family: ui-monospace, Menlo, monospace; font-size: 14.5px; font-weight: 700; color: var(--ink); }
+  .opt .sub { font-size: 13px; color: var(--dim); margin-top: 4px; }
+
+  .foot { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule);
+          font-size: 13.5px; color: var(--dim); }
+  .foot strong { color: var(--ink); }
+
+  @media (max-width: 560px) { body { font-size: 16px; } h1 { font-size: 25px; } }
+
+  /* ── Client logo on the cover ──────────────────────────────
+     Added 2026-08-05. The mark sits above the kicker at a fixed
+     height so wide wordmarks and square badges both sit right. */
+  .logo { display: flex; align-items: center; gap: 16px; margin: 4px 0 22px; flex-wrap: wrap; }
+  .logo img { height: 76px; width: auto; display: block; }
+  .logo img.tall { height: 92px; }
+  .logo .by { font-size: 12px; letter-spacing: 1.6px; text-transform: uppercase;
+              color: var(--faint); border-left: 1px solid var(--rule); padding-left: 16px; }
+  @media (max-width: 520px) {
+    .logo img { height: 60px; }
+    .logo img.tall { height: 70px; }
+    .logo .by { border-left: 0; padding-left: 0; width: 100%; }
+  }
+
+  /* Creative contact sheet — the ad sizes shown at true ratio. */
+  .creatives { display: grid; gap: 14px; grid-template-columns: repeat(3, 1fr); margin: 18px 0 6px; }
+  .creatives figure { margin: 0; }
+  .creatives img { width: 100%; border: 1px solid var(--rule); display: block; }
+  .creatives figcaption { font-size: 12px; color: var(--dim); margin-top: 6px; }
+  @media (max-width: 620px) { .creatives { grid-template-columns: 1fr; } }
+
+  /* Signature block. */
+  .sig { display: flex; gap: 32px; margin: 26px 0 6px; flex-wrap: wrap; }
+  .sig > div { flex: 1; min-width: 240px; font-size: 14px; }
+  .sig .line { display: block; border-bottom: 1px solid var(--ink); height: 34px; margin-bottom: 6px; }
+  .sig .sub { color: var(--dim); font-size: 13px; }
+
+  /* Long bare domains and URLs must wrap, or one <code> pushes the whole
+     document sideways on a phone. */
+  code { overflow-wrap: anywhere; word-break: break-word; }
+
+</style>
+</head>
+<body>
+<div class="brandbar">
+  <span style="background:#0A0C10"></span><span style="background:#4A5D23"></span>
+  <span style="background:#A8C93A"></span><span style="background:#E3A22F"></span>
+  <span style="background:#D64828"></span><span style="background:#0A0C10"></span>
+</div>
+
+<div class="page">
+
+  <div class="logo">
+    <img class="tall" src="fbiff/logo.png" alt="Fallbrook / Bonsall International Film Festival">
+    <span class="by">Website &amp; Event<br>Advertising &middot; Oct 3, 2026</span>
+  </div>
+
+  <div class="kicker">Circuit Coders &middot; Confidential</div>
+  <h1>Festival Website &amp; Event Advertising Proposal</h1>
+  <p class="subtitle">Fallbrook / Bonsall International Film Festival &mdash; October 3, 2026</p>
+  <div class="meta">
+    Prepared for <strong>Leo Romero</strong>, Fallbrook Film Society &middot; August 5, 2026 &middot; valid 30 days<br>
+    Leo Lebel &middot; Circuit Coders &middot; leo@circuitcoders.com<br>
+    <strong>The website in section 3 is already built and you can walk through it now.</strong>
+    Nothing has been invoiced and no account of yours has been touched.
+  </div>
+
+  <div class="toc">
+    <div class="hd">Contents</div>
+    <ol>
+      <li><a href="#s1">What we found</a></li>
+      <li><a href="#s2">What it costs you today</a></li>
+      <li><a href="#s3">The website &mdash; already built</a></li>
+      <li><a href="#s4">The advertising plan</a></li>
+      <li><a href="#s5">The Google Ad Grant</a></li>
+      <li><a href="#s6">Timeline to October 3</a></li>
+      <li><a href="#s7">Investment</a></li>
+      <li><a href="#s8">What we need from you</a></li>
+      <li><a href="#s9">Acceptance</a></li>
+    </ol>
+  </div>
+
+  <h2 id="s0">Executive Summary</h2>
+  <p>You have <strong>under 60 days until the festival</strong> and a genuinely good product:
+  nineteen years of history, a 501(c)(3) behind it, a historic single-screen venue, twenty-three
+  juried films last October, and a celebrity guest. What you do not have is a way for anyone to
+  find it or buy into it without friction.</p>
+  <p>Every finding below was independently verified on <strong>August 4, 2026</strong> against your
+  own live pages. The headline one is not a design problem &mdash; it is that <strong>a Turkish
+  online-casino affiliate is currently operating a website at fallbrookfilmfestival.com</strong>,
+  using your festival's former name, claiming to have run "since 2001," and inventing award
+  categories you have never given.</p>
+  <p>This proposal covers two things, delivered together and timed to October 3: <strong>a new
+  festival website</strong> (already built &mdash; the link is below) and <strong>an event advertising
+  campaign</strong> that runs from launch through festival day. Total is <strong>$2,950</strong> at the
+  nonprofit bundle rate, with ad spend paid directly to the platforms and never through us.</p>
+  <p>One item, in section 5, is worth more than everything else here combined: as a registered
+  501(c)(3), <strong>you are eligible for the Google Ad Grant &mdash; $10,000 per month in free Google
+  Search advertising</strong>. You are not using it. We file that application as part of this
+  engagement whether or not you take the advertising scope.</p>
+
+  <div class="live">
+    <div class="hd"><span class="dot"></span>The new festival website is built &mdash; walk through it now</div>
+    <div class="bd">
+      <a class="url" href="fbiff-site/index.html">circuitcoders.com/docs/fbiff-site</a>
+      <p style="margin:6px 0 0;font-size:14.5px;color:var(--soft)">
+        Six real pages, populated with your actual 2025 program, your real award winners, your real
+        sponsorship rates and your real venue details. Open it on your phone &mdash; that is where
+        most of your ad traffic will land. Nothing is charged unless you decide to keep it.
+      </p>
+    </div>
+  </div>
+
+  <h2 id="s1"><span class="num">1</span>What We Found</h2>
+
+  <div class="alert">
+    <div class="tag">Verified August 4, 2026</div>
+    <h3>A gambling site has taken your former name, and it is live right now</h3>
+    <p><code>fallbrookfilmfestival.com</code> is a live, indexed website presenting itself as the
+    "Fallbrook International Film Festival," "celebrating independent cinema in the heart of
+    Fallbrook, California since 2001." It lists awards &mdash; the "Frank Capra Award," the "Golden
+    Lens Honor," the "People's Pick Trophy" &mdash; that your festival has never presented. Every
+    outbound link on the page goes to an online casino: <code>betgitgiris.vip</code> and its
+    <code>/casino</code> and <code>/bonus</code> pages, plus the affiliate tracker
+    <code>trk.giris.betgitportal.com</code>.</p>
+  </div>
+
+  <p>"Fallbrook Film Festival" is the name you operated under for years, and it is still how a
+  large share of your local audience searches for you. That search currently has a decent chance
+  of landing a Fallbrook resident on a gambling affiliate page wearing your festival's name.</p>
+  <div class="callout">
+    <div class="hd">Why this matters beyond embarrassment</div>
+    <p>You are a 501(c)(3). A nonprofit's name pointing at an offshore betting operation is a
+    sponsor-relations problem, a grant-application problem, and a reputational problem &mdash; and
+    right now nobody is contesting it. There is a defined process (registrar abuse complaint,
+    Google spam report, and a trademark-based UDRP claim on the strength of your prior use of the
+    name). We file all three.</p>
+  </div>
+
+  <h3>2. The entire festival lives on one page</h3>
+  <p><code>fbiff.org</code> is a single GoDaddy Website Builder page weighing <strong>264 KB</strong>.
+  Your history, the full 2025 program, the award winners, the raffle, four separate ticket links,
+  sponsorship rates, the donation ask, the partner logos and the contact form are all stacked on
+  that one URL.</p>
+  <ul>
+    <li>There is no separate page for the program, the awards, submissions, sponsorship or the
+    venue &mdash; so there is nothing for Google to rank for any of those searches, and nowhere
+    specific to send an ad click.</li>
+    <li><strong>13 of the 19 images carry no alt text</strong>, which is both an accessibility
+    failure and dead weight for search.</li>
+    <li>Several content blocks render with the heading <em>"Our Programming"</em> repeated four
+    times in a row, where the card titles were never filled in.</li>
+  </ul>
+
+  <h3>3. Your phone number is missing a digit</h3>
+  <p>The contact block at the bottom of fbiff.org reads <span class="bad">(760) 638-173</span> &mdash;
+  nine digits. The correct number, which appears on your own FilmFreeway listing, is
+  (760) 638-1732. <strong>Anyone who copies the number off your website cannot call you.</strong></p>
+
+  <h3>4. Ticketing is four loose payment links</h3>
+  <p>Passes, the guitar raffle, program-book ads and donations are each a bare
+  <code>square.link</code> URL pasted into the page. There is no cart, no order confirmation that
+  names the festival, no way to buy a pass and a raffle ticket in one transaction, and no record
+  connecting a buyer to anything you can email later. For a one-day event, <strong>the mailing
+  list you fail to build in 2026 is the audience you have to buy again in 2027.</strong></p>
+
+  <h3>5. A second domain you own is blank</h3>
+  <p><code>fallbrookbonsallinternationalfilmfestival.org</code> resolves, loads, and shows nothing
+  &mdash; its page title is literally the domain name. It is splitting whatever authority your
+  brand has instead of redirecting into it.</p>
+
+  <h3>6. Copy that undercuts a nineteen-year-old festival</h3>
+  <p>Small things, but they are the first impression a filmmaker or sponsor gets:
+  <em>"Clink on Link"</em> for "Click on Link"; <em>"PURCHASE!!!!!"</em> and
+  <em>"BECOME A SPONSOR!!!!"</em>; <em>"The Mosley's"</em> for "The Mosleys"; and the festival's own
+  name written three different ways across one page.</p>
+
+  <div class="included">
+    <div class="hd">What is working, and what we are not touching</div>
+    <p>The festival itself. The 2025 program was strong and well-paced, the six-category jury
+    structure is right, <strong>FilmFreeway is the correct submissions platform and stays exactly
+    where it is</strong>, <strong>Square is a perfectly good processor and stays</strong>, and the
+    Mission Theater is a better venue story than most festivals three times your size can tell.
+    Your tagline &mdash; <em>Experience the Art of Cinema</em> &mdash; is already right.
+    <strong>The product is not the problem. The shopfront is.</strong></p>
+  </div>
+
+  <h2 id="s2"><span class="num">2</span>What It Costs You Today</h2>
+  <div class="scroll">
+  <table class="matrix">
+    <tr><th class="lbl">Gap</th><th>What it costs</th></tr>
+    <tr><td class="lbl">No program / awards / submit pages</td><td>Nothing to rank, and nowhere specific to send an ad click. Every ad dollar lands on the same crowded page.</td></tr>
+    <tr><td class="lbl">Casino site on your former name</td><td>Direct-search traffic lost, plus reputational exposure in front of sponsors and grantmakers.</td></tr>
+    <tr><td class="lbl">Broken phone number</td><td>Every call that starts on your website fails.</td></tr>
+    <tr><td class="lbl">No email capture at checkout</td><td>Last year's audience has to be re-acquired from scratch every year.</td></tr>
+    <tr><td class="lbl">Google Ad Grant never claimed</td><td class="bad">Up to $10,000/month in free Search advertising, unused, for as long as it stays unclaimed.</td></tr>
+  </table>
+  </div>
+
+  <h2 id="s3"><span class="num">3</span>The Website &mdash; Already Built</h2>
+  <p>Six real pages, populated with your actual content. It is not a mockup image: it runs, it is
+  responsive, and it was verified at desktop and phone widths. <strong>Open it before you decide
+  anything &mdash; <a href="fbiff-site/index.html">circuitcoders.com/docs/fbiff-site</a></strong></p>
+
+  <div class="scroll">
+  <table class="matrix">
+    <tr><th class="lbl">Page</th><th>What it does</th></tr>
+    <tr><td class="lbl"><strong>Festival</strong></td><td>Date, doors, venue and pass price above the fold. Winners, program preview, sponsorship and history below it.</td></tr>
+    <tr><td class="lbl"><strong>Program</strong></td><td>Your full 2025 running order as a real timetable &mdash; time, title, runtime, synopsis, winner badges. Rebuilds each year from one data file.</td></tr>
+    <tr><td class="lbl"><strong>Awards</strong></td><td>All six 2025 winners by category, plus what each category means.</td></tr>
+    <tr><td class="lbl"><strong>Submit</strong></td><td>A real submissions funnel routing to FilmFreeway, with the four-step process spelled out.</td></tr>
+    <tr><td class="lbl"><strong>Support</strong></td><td>Your program-book rates as a proper pricing table, the donation ask, and the guitar raffle &mdash; each with its Square link attached.</td></tr>
+    <tr><td class="lbl"><strong>Visit</strong></td><td>Venue, address, hours, admission, concessions, parking &mdash; the page a ticket-buyer needs the week of the festival.</td></tr>
+  </table>
+  </div>
+
+  <h3>Included in the build</h3>
+  <ul>
+    <li>Mobile-first, verified at 390px and desktop &mdash; <strong>most of your ad traffic arrives on a phone</strong></li>
+    <li>Self-hosted fonts and no third-party trackers, so it loads fast on a rural connection</li>
+    <li>Correct titles and descriptions per page, plus <code>Event</code> and <code>LocalBusiness</code>
+    structured data so Google can show your date and venue directly in search results</li>
+    <li>Email capture wired into the ticket flow, so you finish 2026 owning your audience list</li>
+    <li>Your existing Square links kept and correctly labelled &mdash; no processor migration, no new fees</li>
+    <li>Alt text on every image, keyboard-navigable, reduced-motion respected</li>
+    <li><code>fallbrookbonsallinternationalfilmfestival.org</code> redirected into the main site</li>
+    <li><strong>You own the site, the domain and the code.</strong> No proprietary builder lock-in.</li>
+  </ul>
+  <div class="hint">The concept currently carries a banner identifying it as a design concept and
+  not the live festival site. That banner is removed at launch.</div>
+
+  <h2 id="s4"><span class="num">4</span>The Advertising Plan</h2>
+  <p>This is an <strong>event campaign, not an always-on program</strong>. It has a hard deadline, a
+  fixed inventory (one day, one screen) and a defined local catchment. It is paced accordingly and
+  it ends the week after the festival.</p>
+
+  <h3>Who we target</h3>
+  <ul>
+    <li><strong>Core radius:</strong> Fallbrook, Bonsall, Rainbow, De Luz, Temecula, Murrieta,
+    Oceanside, Vista, San Marcos, Escondido &mdash; roughly a 25-mile drive-in ring. This is a $20
+    day pass; nobody is driving from downtown San Diego.</li>
+    <li><strong>Interests:</strong> independent film, documentary, film festivals, arthouse cinema,
+    plus local-community and Fallbrook-specific audiences.</li>
+    <li><strong>Filmmakers,</strong> targeted separately and earlier, for submissions rather than
+    tickets &mdash; different message, different landing page.</li>
+    <li><strong>Retargeting:</strong> everyone who hits the program or visit page and does not buy.
+    Consistently the cheapest ticket you will sell.</li>
+  </ul>
+
+  <h3>The creative</h3>
+  <p>Built at all three placement ratios so nothing gets auto-cropped. Three angles run against
+  each other: <strong>the program</strong> (twenty-three films from around the world in one day is
+  the actual offer, and it is a strong one), <strong>the venue</strong> (a historic single-screen
+  house is a reason to come that a multiplex cannot copy), and <strong>the price</strong> ($20 for a
+  full day &mdash; the closer in the final two weeks).</p>
+
+  <h3>Channels and budget</h3>
+  <div class="scroll">
+  <table class="matrix">
+    <tr><th class="lbl">Channel</th><th>Role</th><th>Suggested spend</th></tr>
+    <tr><td class="lbl">Meta (Instagram + Facebook)</td><td>Primary. Local awareness &rarr; traffic &rarr; retargeting, weighted to the final three weeks.</td><td>$600</td></tr>
+    <tr><td class="lbl">Google Search (paid)</td><td>Catches "film festival near me" and, importantly, your own name &mdash; including the former one.</td><td>$200</td></tr>
+    <tr><td class="lbl">Google Ad Grant</td><td>Free Search inventory once approved. Replaces most paid Search over time.</td><td>$0</td></tr>
+    <tr><td class="lbl">Local earned</td><td>Village News, Fallbrook and Bonsall Chambers, Friends of Fallbrook, KPBS events, SoCal Spotlight &mdash; filed, not bought.</td><td>$0</td></tr>
+    <tr><td class="lbl"><strong>Recommended total</strong></td><td>&mdash;</td><td><strong>$800</strong></td></tr>
+  </table>
+  </div>
+  <div class="callout">
+    <div class="hd">Ad spend is yours and is never marked up</div>
+    <p>It is billed directly to your card by Meta and Google. It does not pass through Circuit
+    Coders and we do not take a percentage of it. <strong>$800 is a recommendation for a
+    $20-ticket local event, not a requirement</strong> &mdash; the campaign works at $400 and scales
+    cleanly to $1,500 if early results justify it.</p>
+  </div>
+
+  <h2 id="s5"><span class="num">5</span>The Google Ad Grant</h2>
+  <p>Google gives registered 501(c)(3) nonprofits <strong>up to $10,000 per month in free Google
+  Search advertising</strong>. You qualify: you are a 501(c)(3) in good standing with a federal tax
+  ID (20-5921360).</p>
+  <p>The application requires a website that meets Google's policy bar &mdash; substantive content
+  across multiple pages, a clear mission description, no broken links, secure hosting.
+  <strong>Your current single page would very likely fail that review; the new site is built to
+  pass it.</strong></p>
+  <p>We prepare and file the application, set up the required conversion tracking, and build the
+  initial campaigns. Approval typically takes two to four weeks and is <strong>not guaranteed by us
+  or by anyone else</strong> &mdash; it is Google's decision. But it is free money for a nonprofit
+  running an annual event, it renews every month, and it is the highest-leverage item here.</p>
+  <div class="hint">The grant carries ongoing compliance rules (a minimum click-through rate,
+  active campaign management, an annual survey). Maintaining it is what the optional monthly
+  retainer in section 7 is for.</div>
+
+  <h2 id="s6"><span class="num">6</span>Timeline to October 3</h2>
+  <p>Dates assume a signed start on or before <strong>August 11, 2026</strong>.</p>
+  <div class="scroll">
+  <table class="matrix">
+    <tr><th class="lbl">Window</th><th>What happens</th><th>Whose clock</th></tr>
+    <tr><td class="lbl"><strong>Week 1</strong><br>Aug 11&ndash;17</td><td>Kickoff and access. Content pass on all six pages. Phone number corrected everywhere. Registrar abuse complaint + Google spam report filed against the casino domain. Ad Grant application prepared.</td><td>Ours</td></tr>
+    <tr><td class="lbl"><strong>Week 2</strong><br>Aug 18&ndash;24</td><td>Site finalised against your content. Structured data, analytics and conversion tracking in. Photography collected. <strong>Site launches by Aug 24.</strong></td><td>Ours</td></tr>
+    <tr><td class="lbl"><strong>Week 3</strong><br>Aug 25&ndash;31</td><td>Ad Grant submitted. Meta pixel verified. Filmmaker ads live first. Second domain redirected. Local listings and event calendars filed.</td><td>Mixed</td></tr>
+    <tr><td class="lbl"><strong>Weeks 4&ndash;6</strong><br>Sep 1&ndash;21</td><td>Ticket campaign live and building. Creative tested three ways. Retargeting on once the pixel has an audience. Ad Grant campaigns live on approval.</td><td>Ours</td></tr>
+    <tr><td class="lbl"><strong>Weeks 7&ndash;8</strong><br>Sep 22&ndash;Oct 2</td><td>Final push weighted here &mdash; this is when local event tickets actually sell. Price-angle creative leads. Daily budget monitoring.</td><td>Ours</td></tr>
+    <tr><td class="lbl"><strong>Oct 3</strong></td><td><strong>Festival day.</strong> Day-of social, live story coverage, raffle push.</td><td>Together</td></tr>
+    <tr><td class="lbl"><strong>Oct 6&ndash;10</strong></td><td>Close-out report: spend, reach, clicks, pass sales attributed where attributable, list growth, and a written 2027 recommendation while it is all still fresh.</td><td>Ours</td></tr>
+  </table>
+  </div>
+  <div class="alert">
+    <div class="tag">Stated up front</div>
+    <h3>What could slow us down</h3>
+    <p>Google Ad Grant approval is Google's timeline, not ours (2&ndash;4 weeks typical, and it can
+    be rejected on a technicality we then fix and refile). UDRP action against the casino domain is
+    a formal proceeding that runs weeks and carries a filing fee we would discuss with you before
+    spending &mdash; the free registrar and Google reports go out in week 1 regardless. And the
+    honest one: <strong>this timeline is tight.</strong> Content turnaround from your side in week 1
+    is the difference between launching on Aug 24 and launching in September.</p>
+  </div>
+
+  <h2 id="s7"><span class="num">7</span>Investment</h2>
+  <div class="scroll">
+  <table class="matrix">
+    <tr><th class="lbl">Item</th><th>Standard</th><th>This proposal</th></tr>
+    <tr><td class="lbl"><strong>Festival website</strong> &mdash; six pages, built, launched, yours to keep</td><td>$2,500</td><td class="good">included</td></tr>
+    <tr><td class="lbl"><strong>Event ad campaign</strong> &mdash; build and management, Aug 25 through Oct 10</td><td>$1,200</td><td class="good">included</td></tr>
+    <tr><td class="lbl"><strong>Google Ad Grant application</strong> &mdash; prepared, filed, campaigns built</td><td>$450</td><td class="good">included</td></tr>
+    <tr><td class="lbl"><strong>Domain defense</strong> &mdash; registrar abuse + Google spam reports, second domain redirected</td><td>$300</td><td class="good">included</td></tr>
+    <tr><td class="lbl"><strong>Festival Package &mdash; nonprofit bundle rate</strong></td><td>$4,450</td><td><strong>$2,950</strong></td></tr>
+  </table>
+  </div>
+  <p><strong>Payment terms:</strong> $1,475 to start, $1,475 on site launch. No monthly commitment,
+  and nothing is owed after October 10 unless you choose the retainer below. <strong>Ad spend</strong>
+  (recommended $800) is separate, billed by Meta and Google directly to your card, never marked up.</p>
+
+  <div class="plan">
+    <div class="row"><span class="plan-name">Optional &mdash; after the festival</span><span class="plan-price">$199 / month</span></div>
+    <p>Month-to-month, 30 days' notice. Keeps the Ad Grant compliant and spending &mdash; this is the
+    item that protects $10,000/month of free inventory &mdash; keeps the site updated through
+    submissions season, and builds the 2027 program pages as selections come in. Starts November 1
+    if you want it. Genuinely optional: the site works untouched without it.</p>
+  </div>
+
+  <h2 id="s8"><span class="num">8</span>What We Need From You</h2>
+  <ol>
+    <li>Access to the <code>fbiff.org</code> registrar (GoDaddy) &mdash; for DNS only. We do not need
+    your GoDaddy password; a delegate invite is enough.</li>
+    <li>Access to the second domain, <code>fallbrookbonsallinternationalfilmfestival.org</code>.</li>
+    <li>Admin on the Facebook Page and Instagram account. Your Square account stays exactly as it
+    is &mdash; we only need the payment link URLs, which are already public.</li>
+    <li>Your 501(c)(3) determination letter and EIN documentation, for the Ad Grant application.</li>
+    <li><strong>Photography:</strong> the theater, the marquee, and festival-day photos from 2024 or
+    2025. You clearly have some &mdash; there are festival photos on your current homepage slide.
+    We need the originals, not the composite.</li>
+    <li>One named decision-maker for content sign-off, and about two hours of their time in week 1.</li>
+  </ol>
+
+  <h2 id="s9"><span class="num">9</span>Acceptance</h2>
+  <p>This document is the full scope: the Festival Package at <strong>$2,950</strong> &mdash; website,
+  event advertising through October 10, the Google Ad Grant application, and domain defense &mdash;
+  payable $1,475 at start and $1,475 at launch, with ad spend paid directly to the platforms.
+  Signature confirms acceptance of the scope, payment terms and access requirements above.</p>
+  <div class="sig">
+    <div><span class="line"></span><strong>For the Fallbrook Film Society</strong><br><span class="sub">Name, title &amp; date</span></div>
+    <div><span class="line"></span><strong>Leo Lebel, Circuit Coders</strong><br><span class="sub">Date</span></div>
+  </div>
+  <p class="hint" style="margin-top:14px">To hold the October 3 launch timeline, this needs to be
+  signed on or before <strong>August 11, 2026</strong>.</p>
+
+  <div class="foot">
+    <strong>Leo Lebel</strong> &middot; Circuit Coders &middot; leo@circuitcoders.com &middot; circuitcoders.com<br>
+    All findings independently verified August 4, 2026 against fbiff.org, fallbrookfilmfestival.com,
+    fallbrookbonsallinternationalfilmfestival.org and the festival's FilmFreeway listing. The
+    festival logo is reproduced for identification of the subject organisation. Prepared exclusively
+    for the Fallbrook Film Society.
+  </div>
+
+</div>
+
+</body>
+</html>

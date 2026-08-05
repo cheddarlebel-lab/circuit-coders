@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Visit — Fallbrook / Bonsall International Film Festival</title>
+<meta name="description" content="The Fallbrook / Bonsall International Film Festival is held at The Historic Mission Theater, 231 N. Main Ave, Fallbrook, CA 92028.">
+<meta property="og:title" content="Visit — FBIFF">
+<meta property="og:description" content="The Fallbrook / Bonsall International Film Festival is held at The Historic Mission Theater, 231 N. Main Ave, Fallbrook, CA 92028.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="mockbar">Design concept by Circuit Coders · not the live festival site</div>
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="index.html"><b>FBIFF</b><span>Est. 2007</span></a>
+    <button class="navtoggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav"><a href="index.html">Festival</a><a href="program.html">Program</a><a href="awards.html">Awards</a><a href="submit.html">Submit</a><a href="support.html">Support</a><a href="visit.html" aria-current="page">Visit</a>
+      <a class="btn btn--amber" href="https://square.link/u/LkBDq3Jg">Day Pass · $20</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="sec sec--flush" style="padding-top:clamp(48px,7vw,90px)">
+  <div class="wrap">
+    <div class="bulbs"><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="sec__head">
+    <div class="txt"><div class="label">Visit</div><h2 class="display">One screen on<br>Main Avenue.</h2><p class='lede'>The festival is held at The Historic Mission Theater in downtown Fallbrook — a historic single-screen house on Main Avenue, an hour north of San Diego and twenty minutes from Temecula.</p></div>
+    <a class="btn btn--amber btn--lg" href="https://square.link/u/LkBDq3Jg">Day pass · $20</a>
+  </div>
+    <div class="split">
+      <div>
+        <dl class="rows" style="border-top:0">
+          <div class="row"><dt>Venue</dt><dd>The Historic Mission Theater</dd></div>
+          <div class="row"><dt>Address</dt><dd><a href="https://maps.google.com/?q=231+N.+Main+Ave+Fallbrook+CA+92028">231 N. Main Ave, Fallbrook, CA 92028</a></dd></div>
+          <div class="row"><dt>Date</dt><dd>Saturday, October 3, 2026</dd></div>
+          <div class="row"><dt>Hours</dt><dd>10:00 AM – 8:00 PM PDT</dd></div>
+          <div class="row"><dt>Admission</dt><dd>$20 one-day pass — covers every screening</dd></div>
+          <div class="row"><dt>Concessions</dt><dd>Beer and wine, plus pizza, nachos and hot dogs, available for purchase</dd></div>
+        </dl>
+      </div>
+      <div class="panel">
+        <div class="label">Plan your day</div>
+        <h3 style="margin:14px 0 18px">Drop in, or stay<br>for all of it.</h3>
+        <p>One pass covers the whole day, so you can come for a single block and come back after
+        dinner. Shorts run through the morning and afternoon; the features anchor the middle and
+        the end of the evening.</p>
+        <p>Downtown Fallbrook is walkable from the theater, with parking on and around Main Avenue.</p>
+        <div style="margin-top:24px"><a class="btn btn--ghost" href="program.html">See how 2025 ran</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__grid">
+      <div class="ftr__brand">
+        <b>Fallbrook / Bonsall<br>International Film Festival</b>
+        <p>An independent film festival in Fallbrook, California, presented by the
+        Fallbrook Film Society — a 501(c)(3) nonprofit corporation.</p>
+      </div>
+      <div><h5>Festival</h5><ul><li><a href="program.html">2025 Program</a></li><li><a href="awards.html">Award Winners</a></li><li><a href="visit.html">Venue &amp; Travel</a></li></ul></div><div><h5>Take Part</h5><ul><li><a href="submit.html">Submit a Film</a></li><li><a href="support.html">Sponsor</a></li><li><a href="https://square.link/u/pQwZH5k">Donate</a></li></ul></div><div><h5>Tickets</h5><ul><li><a href="https://square.link/u/LkBDq3Jg">Day Pass · $20</a></li><li><a href="https://square.link/u/xEBc9Vy6">Guitar Raffle</a></li><li><a href="https://filmfreeway.com/FBIFF">FilmFreeway</a></li></ul></div>
+    </div>
+    <div class="ftr__legal">
+      <span>The Historic Mission Theater · 231 N. Main Ave, Fallbrook, CA 92028</span>
+      <span><a href="mailto:Leo@FBIFF.org">Leo@FBIFF.org</a></span>
+      <span>(760) 638-1732</span>
+      <span>Fallbrook Film Society · 501(c)(3) · EIN 20-5921360</span>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  var t = document.querySelector('.navtoggle'), n = document.getElementById('nav');
+  if (!t || !n) return;
+  t.addEventListener('click', function () {
+    var open = n.getAttribute('data-open') === 'true';
+    n.setAttribute('data-open', String(!open));
+    t.setAttribute('aria-expanded', String(!open));
+    t.textContent = open ? 'Menu' : 'Close';
+  });
+})();
+</script>
+</body>
+</html>
